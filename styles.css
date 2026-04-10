@@ -7,7 +7,7 @@
   --muted: #6b7488;
   --line: #b5bbc8;
   --white: #fbfcff;
-  --ban: #ff5f61;
+  --ban: #ff4148;
   --pick: #0f9f45;
   --decider: #2e61ff;
   --opp-tint: #d9dbe2;
@@ -92,10 +92,51 @@ body {
   padding-top: 18px;
 }
 
+.control-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
+}
+
 .team-switch {
   display: inline-flex;
   gap: 10px;
   flex-wrap: wrap;
+}
+
+.timeframe-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.timeframe-button,
+.timeframe-reset,
+.timeframe-input {
+  border: 1px solid rgba(16, 32, 61, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--ink);
+  font: inherit;
+}
+
+.timeframe-button,
+.timeframe-reset {
+  padding: 10px 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.timeframe-button:hover,
+.timeframe-reset:hover {
+  border-color: rgba(16, 32, 61, 0.24);
+}
+
+.timeframe-input {
+  padding: 9px 14px;
+  min-width: 158px;
 }
 
 .team-button {
@@ -266,6 +307,12 @@ body {
   font-weight: 600;
 }
 
+.score-tag {
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
 .source-link {
   display: inline-block;
   margin-top: 4px;
@@ -335,6 +382,10 @@ body {
 
   .table-note {
     text-align: left;
+  }
+
+  .control-group {
+    width: 100%;
   }
 }
 

@@ -20,6 +20,14 @@ const startDateInput = document.getElementById("start-date");
 const resetDateButton = document.getElementById("reset-date");
 const heroTeam = document.getElementById("hero-team");
 
+function getStepMeta(rowSource, stepKey) {
+  return vetoPickMeta?.[activeTeam]?.[rowSource]?.[stepKey] ?? {};
+}
+
+function formatMapScore(score) {
+  return score ? score.replace("-", ":") : "";
+}
+
 function formatDate(dateString) {
   const date = new Date(`${dateString}T00:00:00`);
   const parts = new Intl.DateTimeFormat("en-US", {
@@ -35,13 +43,27 @@ function getFilteredRows(team) {
   return team.rows.filter((row) => !startDateFilter || row.date >= startDateFilter);
 }
 
-function makeStepCell(step) {
+function makeStepCell(step, rowSource, stepKey) {
   const ownerText = step.ownerLabel === "-" ? "-" : step.ownerLabel;
-  const mapText = step.score ? `${step.map} - ${step.score}` : step.map;
+  if (step.type === "pick") {
+    const stepMeta = getStepMeta(rowSource, stepKey);
+    const scoreText = formatMapScore(step.score);
+    const pickLabel = step.ownerKind === "team" ? `${vetoHistoryData[activeTeam].ownerLabel} PICK` : "OPPONENT PICK";
+    return `
+      <td class="map-cell">
+        <div class="map-pill ${step.type} ${step.ownerKind}">
+          ${scoreText ? `<p class="map-score">${scoreText}</p>` : ""}
+          <p class="map-name">${step.map}</p>
+          <div class="step-meta">${pickLabel}</div>
+          ${stepMeta.teamStartSide ? `<div class="step-side">${stepMeta.teamStartSide}</div>` : ""}
+        </div>
+      </td>
+    `;
+  }
   return `
     <td class="map-cell">
       <div class="map-pill ${step.type} ${step.ownerKind}">
-        <p class="map-name">${mapText}</p>
+        <p class="map-name">${step.map}</p>
         <div class="owner-tag">${ownerText}</div>
       </div>
     </td>
@@ -52,6 +74,8 @@ function renderTable(team) {
   historyBody.innerHTML = getFilteredRows(team)
     .map((row) => {
       const { month, day } = formatDate(row.date);
+      const deciderMeta = getStepMeta(row.source, "decider");
+      const deciderScore = formatMapScore(row.deciderScore);
       return `
         <tr>
           <td>
@@ -66,11 +90,13 @@ function renderTable(team) {
               <a class="source-link" href="${row.source}" target="_blank" rel="noreferrer">match page</a>
             </div>
           </td>
-          ${stepConfig.map(({ key }) => makeStepCell(row[key])).join("")}
+          ${stepConfig.map(({ key }) => makeStepCell(row[key], row.source, key)).join("")}
           <td class="map-cell">
             <div class="map-pill decider">
-              <p class="map-name">${row.deciderScore ? `${row.decider} - ${row.deciderScore}` : row.decider}</p>
-              <div class="owner-tag">remaining</div>
+              ${deciderScore ? `<p class="map-score">${deciderScore}</p>` : ""}
+              <p class="map-name">${row.decider}</p>
+              <div class="step-meta">${deciderScore ? "DECIDER" : "REMAINING"}</div>
+              ${deciderMeta.teamStartSide ? `<div class="step-side">${deciderMeta.teamStartSide}</div>` : ""}
             </div>
           </td>
         </tr>

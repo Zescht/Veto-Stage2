@@ -306,7 +306,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 14px 10px 12px;
+  padding: 12px 10px 10px;
   text-align: center;
   background-clip: padding-box;
 }
@@ -333,14 +333,52 @@ body {
 
 .map-name {
   margin: 0;
-  font-size: 1.12rem;
-  line-height: 1.14;
+  font-size: 0.98rem;
+  line-height: 1.02;
   letter-spacing: -0.04em;
   color: #111111;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .map-pill.team.ban .map-name,
 .map-pill.team.pick .map-name {
+  color: #ffffff;
+}
+
+.map-score {
+  margin: 0 0 6px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.9rem;
+  line-height: 0.9;
+  letter-spacing: -0.08em;
+  font-weight: 700;
+  color: #111111;
+}
+
+.map-pill.team.pick .map-score {
+  color: #ffffff;
+}
+
+.step-meta,
+.step-side {
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #000000;
+  font-weight: 700;
+}
+
+.step-meta {
+  margin-top: 8px;
+}
+
+.step-side {
+  margin-top: 4px;
+}
+
+.map-pill.team.pick .step-meta,
+.map-pill.team.pick .step-side {
   color: #ffffff;
 }
 

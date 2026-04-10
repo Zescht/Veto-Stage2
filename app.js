@@ -101,7 +101,7 @@ function renderSummary(team) {
     {
       label: "Most Common Decider",
       value: topDecider ?? "n/a",
-      meta: topDecider && latest ? `${topDeciderCount} times, latest vs ${latest.opponent}` : "No data"
+      meta: topDecider && latest ? `${topDeciderCount} times, latest vs ${latest.opponentAbbr ?? latest.opponent}` : "No data"
     }
   ];
 
@@ -129,7 +129,7 @@ function renderTable(team) {
             <span class="year-tag">${row.date.slice(0, 4)}</span>
           </td>
           <td class="opponent-cell">
-            <p class="opponent-name">${row.opponent} <span class="score-tag">(${row.score})</span></p>
+            <p class="opponent-name" title="${row.opponent}">${row.opponentAbbr ?? row.opponent} <span class="score-tag">(${row.score})</span></p>
             <a class="source-link" href="${row.source}" target="_blank" rel="noreferrer">match page</a>
           </td>
           ${stepConfig.map(({ key }) => makeStepCell(row[key])).join("")}

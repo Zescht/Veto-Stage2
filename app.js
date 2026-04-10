@@ -12,13 +12,13 @@ let activeTeam = teamOrder[0];
 let startDateFilter = "";
 
 const teamSwitch = document.getElementById("team-switch");
-const summaryGrid = document.getElementById("summary-grid");
 const historyBody = document.getElementById("history-body");
 const tableTitle = document.getElementById("table-title");
 const tableSubtitle = document.getElementById("table-subtitle");
 const startButton = document.getElementById("start-button");
 const startDateInput = document.getElementById("start-date");
 const resetDateButton = document.getElementById("reset-date");
+const heroTeam = document.getElementById("hero-team");
 
 function formatDate(dateString) {
   const date = new Date(`${dateString}T00:00:00`);
@@ -35,88 +35,17 @@ function getFilteredRows(team) {
   return team.rows.filter((row) => !startDateFilter || row.date >= startDateFilter);
 }
 
-function getTeamOwnedMaps(rows, predicate) {
-  const maps = [];
-  for (const row of rows) {
-    for (const { key } of stepConfig) {
-      const step = row[key];
-      if (!step || step.map === "-" || step.ownerKind !== "team") continue;
-      if (predicate(step)) {
-        maps.push(step.map);
-      }
-    }
-  }
-  return maps;
-}
-
-function topFrequency(values) {
-  const counts = new Map();
-  for (const value of values) {
-    counts.set(value, (counts.get(value) ?? 0) + 1);
-  }
-  return [...counts.entries()].sort((a, b) => b[1] - a[1])[0] ?? [null, 0];
-}
-
 function makeStepCell(step) {
   const ownerText = step.ownerLabel === "-" ? "-" : step.ownerLabel;
   const mapText = step.score ? `${step.map} - ${step.score}` : step.map;
   return `
-    <td>
+    <td class="map-cell">
       <div class="map-pill ${step.type} ${step.ownerKind}">
         <p class="map-name">${mapText}</p>
         <div class="owner-tag">${ownerText}</div>
       </div>
     </td>
   `;
-}
-
-function renderSummary(team) {
-  const filteredRows = getFilteredRows(team);
-  const [topBan, topBanCount] = topFrequency(
-    getTeamOwnedMaps(filteredRows, (step) => step.type === "ban")
-  );
-  const [topPick, topPickCount] = topFrequency(
-    getTeamOwnedMaps(filteredRows, (step) => step.type === "pick")
-  );
-  const [topDecider, topDeciderCount] = topFrequency(
-    filteredRows.map((row) => row.decider).filter((value) => value && value !== "-")
-  );
-  const latest = filteredRows[0];
-
-  const cards = [
-    {
-      label: "Series Logged",
-      value: String(filteredRows.length),
-      meta: "Liquipedia match pages"
-    },
-    {
-      label: "Most Common Team Ban",
-      value: topBan ?? "n/a",
-      meta: topBan ? `${topBanCount} times` : "No data"
-    },
-    {
-      label: "Most Common Team Pick",
-      value: topPick ?? "n/a",
-      meta: topPick ? `${topPickCount} times` : "No data"
-    },
-    {
-      label: "Most Common Decider",
-      value: topDecider ?? "n/a",
-      meta: topDecider && latest ? `${topDeciderCount} times, latest vs ${latest.opponentAbbr ?? latest.opponent}` : "No data"
-    }
-  ];
-
-  summaryGrid.innerHTML = cards
-    .map(
-      (card) => `
-        <article class="summary-card">
-          <p class="label">${card.label}</p>
-          <p class="value">${card.value}</p>
-          <p class="meta">${card.meta}</p>
-        </article>
-      `
-    )
-    .join("");
 }
 
 function renderTable(team) {
@@ -126,15 +55,19 @@ function renderTable(team) {
       return `
         <tr>
           <td>
-            <span class="date-label">${month} ${day}</span>
-            <span class="year-tag">${row.date.slice(0, 4)}</span>
+            <div class="date-cell">
+              <span class="date-label">${month} ${day}</span>
+              <span class="year-tag">${row.date.slice(0, 4)}</span>
+            </div>
           </td>
           <td class="opponent-cell">
-            <p class="opponent-name" title="${row.opponent}">${row.opponentAbbr ?? row.opponent}</p>
-            <a class="source-link" href="${row.source}" target="_blank" rel="noreferrer">match page</a>
+            <div class="opponent-cell-wrap">
+              <p class="opponent-name" title="${row.opponent}">${row.opponentAbbr ?? row.opponent}</p>
+              <a class="source-link" href="${row.source}" target="_blank" rel="noreferrer">match page</a>
+            </div>
           </td>
           ${stepConfig.map(({ key }) => makeStepCell(row[key])).join("")}
-          <td>
+          <td class="map-cell">
             <div class="map-pill decider">
               <p class="map-name">${row.deciderScore ? `${row.decider} - ${row.deciderScore}` : row.decider}</p>
               <div class="owner-tag">remaining</div>
@@ -172,9 +105,9 @@ function render() {
   tableSubtitle.textContent = startDateFilter
     ? `${team.subtitle} starting ${startDateFilter}`
     : team.subtitle;
+  heroTeam.textContent = team.name;
   startDateInput.value = startDateFilter;
   renderSwitch();
-  renderSummary(team);
   renderTable(team);
 }
 

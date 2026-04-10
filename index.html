@@ -13,12 +13,24 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <header class="topbar">
+      <div class="topbar-shell">
+        <div class="brand">VETO_ARCHITECT</div>
+        <nav class="topnav">
+          <a href="#">Dashboard</a>
+          <a href="#">Analytics</a>
+          <a class="active" href="#">Team History</a>
+          <a href="#">Live Feed</a>
+        </nav>
+      </div>
+    </header>
+
     <div class="page-shell">
       <header class="hero">
-        <p class="eyebrow">2026 Liquipedia Match Pages</p>
         <h1>Veto History</h1>
-        <p class="hero-copy">
-          A structured readout for scanning year-to-date veto behavior with the original Liquipedia slot order preserved.
+        <p class="status-line">
+          <span class="status-dot"></span>
+          Historical pick/ban performance for <span class="team-accent" id="hero-team">FOKUS</span>
         </p>
       </header>
 
@@ -32,14 +44,10 @@
               <button class="timeframe-reset" id="reset-date" type="button">All</button>
             </div>
           </div>
-          <div class="legend">
-            <span class="legend-pill legend-opp">Opponent</span>
-            <span class="legend-pill legend-team">Team</span>
-            <span class="legend-pill legend-decider">Decider</span>
-          </div>
+          <p class="table-note">
+            Exact slot order from the match page. Team labels show who owned each veto step.
+          </p>
         </section>
-
-        <section class="summary-grid" id="summary-grid"></section>
 
         <section class="table-wrap">
           <div class="table-headline">
@@ -47,9 +55,6 @@
               <p class="eyebrow" id="table-subtitle">2026 series</p>
               <h2 id="table-title">Veto History</h2>
             </div>
-            <p class="table-note">
-              Exact slot order from the match page. Team labels show who owned each veto step.
-            </p>
           </div>
 
           <div class="table-scroll">
@@ -69,6 +74,14 @@
               </thead>
               <tbody id="history-body"></tbody>
             </table>
+          </div>
+
+          <div class="legend legend-bottom">
+            <span class="legend-item"><span class="legend-swatch legend-team"></span>Team Map Pick</span>
+            <span class="legend-item"><span class="legend-swatch legend-opp-pick"></span>Opponent Pick</span>
+            <span class="legend-item"><span class="legend-swatch legend-team-ban"></span>Team Ban</span>
+            <span class="legend-item"><span class="legend-swatch legend-opp-ban"></span>Opponent Ban</span>
+            <span class="legend-item"><span class="legend-swatch legend-decider"></span>Decider Map</span>
           </div>
         </section>
       </main>

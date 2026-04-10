@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veto History Viewer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">2026 Liquipedia Match Pages</p>
+        <h1>FOKUS and Eintracht Frankfurt Veto History</h1>
+        <p class="hero-copy">
+          A static GitHub Pages-ready viewer for scanning year-to-date veto behavior, normalized from each team's point of view.
+        </p>
+      </header>
+
+      <main class="panel">
+        <section class="toolbar">
+          <div class="team-switch" id="team-switch"></div>
+          <div class="legend">
+            <span class="legend-pill legend-opp">Opponent</span>
+            <span class="legend-pill legend-team">Team</span>
+            <span class="legend-pill legend-decider">Decider</span>
+          </div>
+        </section>
+
+        <section class="summary-grid" id="summary-grid"></section>
+
+        <section class="table-wrap">
+          <div class="table-headline">
+            <div>
+              <p class="eyebrow" id="table-subtitle">2026 series</p>
+              <h2 id="table-title">Veto History</h2>
+            </div>
+            <p class="table-note">
+              Normalized view: `opp ban / team ban / opp pick / team pick / opp final ban / team final ban / decider`
+            </p>
+          </div>
+
+          <div class="table-scroll">
+            <table class="history-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Opponent</th>
+                  <th>Ban 1</th>
+                  <th>Ban 2</th>
+                  <th>Pick 1</th>
+                  <th>Pick 2</th>
+                  <th>Ban 3</th>
+                  <th>Ban 4</th>
+                  <th>Decider</th>
+                </tr>
+              </thead>
+              <tbody id="history-body"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

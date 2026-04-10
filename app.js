@@ -59,10 +59,11 @@ function topFrequency(values) {
 
 function makeStepCell(step) {
   const ownerText = step.ownerLabel === "-" ? "-" : step.ownerLabel;
+  const mapText = step.score ? `${step.map} - ${step.score}` : step.map;
   return `
     <td>
       <div class="map-pill ${step.type} ${step.ownerKind}">
-        <p class="map-name">${step.map}</p>
+        <p class="map-name">${mapText}</p>
         <div class="owner-tag">${ownerText}</div>
       </div>
     </td>
@@ -129,13 +130,13 @@ function renderTable(team) {
             <span class="year-tag">${row.date.slice(0, 4)}</span>
           </td>
           <td class="opponent-cell">
-            <p class="opponent-name" title="${row.opponent}">${row.opponentAbbr ?? row.opponent} <span class="score-tag">(${row.score})</span></p>
+            <p class="opponent-name" title="${row.opponent}">${row.opponentAbbr ?? row.opponent}</p>
             <a class="source-link" href="${row.source}" target="_blank" rel="noreferrer">match page</a>
           </td>
           ${stepConfig.map(({ key }) => makeStepCell(row[key])).join("")}
           <td>
             <div class="map-pill decider">
-              <p class="map-name">${row.decider}</p>
+              <p class="map-name">${row.deciderScore ? `${row.decider} - ${row.deciderScore}` : row.decider}</p>
               <div class="owner-tag">remaining</div>
             </div>
           </td>

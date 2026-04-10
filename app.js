@@ -1,30 +1,24 @@
 const stepConfig = [
-  { key: "ban1", label: "Ban 1", type: "ban", owner: "opp" },
-  { key: "ban2", label: "Ban 2", type: "ban", owner: "team" },
-  { key: "pick1", label: "Pick 1", type: "pick", owner: "opp" },
-  { key: "pick2", label: "Pick 2", type: "pick", owner: "team" },
-  { key: "ban3", label: "Ban 3", type: "ban", owner: "opp" },
-  { key: "ban4", label: "Ban 4", type: "ban", owner: "team" }
+  { key: "ban1", label: "Ban 1" },
+  { key: "ban2", label: "Ban 2" },
+  { key: "pick1", label: "Pick 1" },
+  { key: "pick2", label: "Pick 2" },
+  { key: "ban3", label: "Ban 3" },
+  { key: "ban4", label: "Ban 4" }
 ];
 
 const teamOrder = ["fokus", "eintracht"];
 let activeTeam = teamOrder[0];
+let startDateFilter = "";
 
 const teamSwitch = document.getElementById("team-switch");
 const summaryGrid = document.getElementById("summary-grid");
 const historyBody = document.getElementById("history-body");
 const tableTitle = document.getElementById("table-title");
 const tableSubtitle = document.getElementById("table-subtitle");
-
-function frequency(rows, key) {
-  const counts = new Map();
-  for (const row of rows) {
-    const value = row[key];
-    if (!value || value === "-") continue;
-    counts.set(value, (counts.get(value) ?? 0) + 1);
-  }
-  return [...counts.entries()].sort((a, b) => b[1] - a[1])[0] ?? [null, 0];
-}
+const startButton = document.getElementById("start-button");
+const startDateInput = document.getElementById("start-date");
+const resetDateButton = document.getElementById("reset-date");
 
 function formatDate(dateString) {
   const date = new Date(`${dateString}T00:00:00`);
@@ -37,13 +31,38 @@ function formatDate(dateString) {
   return { month, day };
 }
 
-function makeStepCell(row, config) {
-  const map = row[config.key] || "-";
-  const ownerText = config.owner === "team" ? "team" : "opp";
+function getFilteredRows(team) {
+  return team.rows.filter((row) => !startDateFilter || row.date >= startDateFilter);
+}
+
+function getTeamOwnedMaps(rows, predicate) {
+  const maps = [];
+  for (const row of rows) {
+    for (const { key } of stepConfig) {
+      const step = row[key];
+      if (!step || step.map === "-" || step.ownerKind !== "team") continue;
+      if (predicate(step)) {
+        maps.push(step.map);
+      }
+    }
+  }
+  return maps;
+}
+
+function topFrequency(values) {
+  const counts = new Map();
+  for (const value of values) {
+    counts.set(value, (counts.get(value) ?? 0) + 1);
+  }
+  return [...counts.entries()].sort((a, b) => b[1] - a[1])[0] ?? [null, 0];
+}
+
+function makeStepCell(step) {
+  const ownerText = step.ownerLabel === "-" ? "-" : step.ownerLabel;
   return `
     <td>
-      <div class="map-pill ${config.type} ${config.owner}">
-        <p class="map-name">${map}</p>
+      <div class="map-pill ${step.type} ${step.ownerKind}">
+        <p class="map-name">${step.map}</p>
         <div class="owner-tag">${ownerText}</div>
       </div>
     </td>
@@ -51,31 +70,38 @@ function makeStepCell(row, config) {
 }
 
 function renderSummary(team) {
-  const [topBan, topBanCount] = frequency(team.rows, "ban2");
-  const [topPick, topPickCount] = frequency(team.rows, "pick2");
-  const [topDecider, topDeciderCount] = frequency(team.rows, "decider");
-  const latest = team.rows[0];
+  const filteredRows = getFilteredRows(team);
+  const [topBan, topBanCount] = topFrequency(
+    getTeamOwnedMaps(filteredRows, (step) => step.type === "ban")
+  );
+  const [topPick, topPickCount] = topFrequency(
+    getTeamOwnedMaps(filteredRows, (step) => step.type === "pick")
+  );
+  const [topDecider, topDeciderCount] = topFrequency(
+    filteredRows.map((row) => row.decider).filter((value) => value && value !== "-")
+  );
+  const latest = filteredRows[0];
 
   const cards = [
     {
       label: "Series Logged",
-      value: String(team.rows.length),
+      value: String(filteredRows.length),
       meta: "Liquipedia match pages"
     },
     {
       label: "Most Common Team Ban",
-      value: topBan ?? "—",
+      value: topBan ?? "n/a",
       meta: topBan ? `${topBanCount} times` : "No data"
     },
     {
       label: "Most Common Team Pick",
-      value: topPick ?? "—",
+      value: topPick ?? "n/a",
       meta: topPick ? `${topPickCount} times` : "No data"
     },
     {
       label: "Most Common Decider",
-      value: topDecider ?? "—",
-      meta: topDecider ? `${topDeciderCount} times, latest vs ${latest.opponent}` : "No data"
+      value: topDecider ?? "n/a",
+      meta: topDecider && latest ? `${topDeciderCount} times, latest vs ${latest.opponent}` : "No data"
     }
   ];
 
@@ -93,7 +119,7 @@ function renderSummary(team) {
 }
 
 function renderTable(team) {
-  historyBody.innerHTML = team.rows
+  historyBody.innerHTML = getFilteredRows(team)
     .map((row) => {
       const { month, day } = formatDate(row.date);
       return `
@@ -103,10 +129,10 @@ function renderTable(team) {
             <span class="year-tag">${row.date.slice(0, 4)}</span>
           </td>
           <td class="opponent-cell">
-            <p class="opponent-name">${row.opponent}</p>
+            <p class="opponent-name">${row.opponent} <span class="score-tag">(${row.score})</span></p>
             <a class="source-link" href="${row.source}" target="_blank" rel="noreferrer">match page</a>
           </td>
-          ${stepConfig.map((config) => makeStepCell(row, config)).join("")}
+          ${stepConfig.map(({ key }) => makeStepCell(row[key])).join("")}
           <td>
             <div class="map-pill decider">
               <p class="map-name">${row.decider}</p>
@@ -142,10 +168,28 @@ function renderSwitch() {
 function render() {
   const team = vetoHistoryData[activeTeam];
   tableTitle.textContent = `${team.name} Veto History`;
-  tableSubtitle.textContent = team.subtitle;
+  tableSubtitle.textContent = startDateFilter
+    ? `${team.subtitle} starting ${startDateFilter}`
+    : team.subtitle;
+  startDateInput.value = startDateFilter;
   renderSwitch();
   renderSummary(team);
   renderTable(team);
 }
+
+startButton.addEventListener("click", () => {
+  startDateInput.showPicker?.();
+  startDateInput.focus();
+});
+
+startDateInput.addEventListener("change", (event) => {
+  startDateFilter = event.target.value;
+  render();
+});
+
+resetDateButton.addEventListener("click", () => {
+  startDateFilter = "";
+  render();
+});
 
 render();

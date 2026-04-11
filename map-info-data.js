@@ -158,8 +158,8 @@ const mapInfoData = {
               "opponent": "ECO",
               "player": "DXG zery",
               "score": "13-8",
-              "normX": 89.75,
-              "normY": 42.78
+              "normX": 53.03500000000001,
+              "normY": 12.320300000000007
             },
             {
               "x": -3237,
@@ -169,8 +169,8 @@ const mapInfoData = {
               "opponent": "ECO",
               "player": "DXG zery",
               "score": "13-8",
-              "normX": 10.18,
-              "normY": 30.34
+              "normX": 39.1225,
+              "normY": 88.5503
             },
             {
               "x": 1596,
@@ -180,8 +180,8 @@ const mapInfoData = {
               "opponent": "SGE",
               "player": "DXG zery",
               "score": "13-9",
-              "normX": 48.02,
-              "normY": 34.63
+              "normX": 43.92250000000001,
+              "normY": 52.30279999999999
             },
             {
               "x": -2570,
@@ -191,8 +191,8 @@ const mapInfoData = {
               "opponent": "RZN",
               "player": "DXG DWJ",
               "score": "9-13",
-              "normX": 15.41,
-              "normY": 26.72
+              "normX": 35.072500000000005,
+              "normY": 83.5478
             }
           ]
         },
@@ -219,8 +219,8 @@ const mapInfoData = {
               "opponent": "SGE",
               "player": "DXG zery",
               "score": "7-13",
-              "normX": 84.85,
-              "normY": 31.77
+              "normX": 31.0645,
+              "normY": 55.8616
             }
           ]
         },

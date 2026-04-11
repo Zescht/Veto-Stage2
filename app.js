@@ -263,6 +263,15 @@ function applyHeatmapBackground(target, mapName) {
   }
 }
 
+function projectHeatmapPoint(point) {
+  // Our local minimap PNGs are rotated relative to Riot's normalized coordinate plane.
+  // Remap points into the image orientation instead of mutating the raw source data.
+  return {
+    x: 100 - point.normY,
+    y: 100 - point.normX
+  };
+}
+
 function renderHeatmap(target, points, sideLabel, mapName) {
   applyHeatmapBackground(target, mapName);
   if (!points.length) {
@@ -277,17 +286,18 @@ function renderHeatmap(target, points, sideLabel, mapName) {
   target.innerHTML = `
     <div class="heat-layer">
       ${points
-        .map(
-          (point) => `
+        .map((point) => {
+          const projected = projectHeatmapPoint(point);
+          return `
             <button
               class="heat-point"
               type="button"
-              style="left:${point.normX}%; top:${point.normY}%"
+              style="left:${projected.x}%; top:${projected.y}%"
               title="${point.player} | ${point.date} vs ${point.opponent} | R${point.roundNum} | ${point.score}"
               aria-label="${point.player} ${point.date} versus ${point.opponent}"
             ></button>
-          `
-        )
+          `;
+        })
         .join("")}
     </div>
   `;

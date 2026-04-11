@@ -278,6 +278,7 @@ body {
   min-width: 1180px;
   border-collapse: collapse;
   background: var(--surface);
+  table-layout: fixed;
 }
 
 .history-table th,
@@ -328,7 +329,7 @@ body {
 }
 
 .opponent-cell {
-  min-width: 190px;
+  width: 150px;
 }
 
 .opponent-name {
@@ -351,7 +352,7 @@ body {
 }
 
 .map-cell {
-  min-width: 128px;
+  min-width: 144px;
 }
 
 .map-pill {
@@ -403,7 +404,7 @@ body {
 .map-score {
   margin: 0 0 6px;
   font-family: "Space Grotesk", sans-serif;
-  font-size: 1.52rem;
+  font-size: 0.86rem;
   line-height: 0.9;
   letter-spacing: -0.08em;
   font-weight: 700;
@@ -438,7 +439,7 @@ body {
 
 .owner-tag {
   margin-top: 8px;
-  font-size: 0.66rem;
+  font-size: 0.79rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: #000000;

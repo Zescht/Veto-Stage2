@@ -630,6 +630,16 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
+.heatmap-canvas.has-map {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08)),
+    var(--map-image),
+    #0b1014;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover, contain, cover;
+}
+
 .heat-layer {
   position: absolute;
   inset: 0;
@@ -673,6 +683,19 @@ body {
   color: #677076;
   font-size: 0.95rem;
   line-height: 1.45;
+}
+
+.heatmap-canvas.has-map .heatmap-empty {
+  color: #eff5f9;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.65);
+}
+
+.heatmap-canvas.has-map .heatmap-empty p {
+  max-width: 260px;
+  margin: 0;
+  padding: 12px 14px;
+  background: rgba(7, 11, 15, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 .legend-bottom {

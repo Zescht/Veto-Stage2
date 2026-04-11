@@ -22,6 +22,16 @@ const allRowMeta = {
   ...(typeof extraVetoRowMeta !== "undefined" ? extraVetoRowMeta : {})
 };
 const allMapInfo = typeof mapInfoData !== "undefined" ? mapInfoData : {};
+const MAP_IMAGE_PATHS = {
+  Bind: "./maps/Bind.png",
+  Breeze: "./maps/Breeze.png",
+  Fracture: "./maps/Fracture.png",
+  Haven: "./maps/Haven.png",
+  Lotus: "./maps/Lotus.png",
+  Pearl: "./maps/Pearl.png",
+  Split: "./maps/Split.png",
+  Corrode: "./maps/Corrode.png"
+};
 
 const teamOrder = ["fokus", "eintracht", "attax", "dortmund"].filter((key) => allVetoHistoryData[key]);
 let activeTeam = teamOrder[0];
@@ -242,7 +252,19 @@ function makeSampleChip(item) {
   return `<span class="sample-chip">${item.date.slice(5)} ${item.map} vs ${item.opponent}</span>`;
 }
 
-function renderHeatmap(target, points, sideLabel) {
+function applyHeatmapBackground(target, mapName) {
+  const mapImage = MAP_IMAGE_PATHS[mapName];
+  if (mapImage) {
+    target.style.setProperty("--map-image", `url("${mapImage}")`);
+    target.classList.add("has-map");
+  } else {
+    target.style.removeProperty("--map-image");
+    target.classList.remove("has-map");
+  }
+}
+
+function renderHeatmap(target, points, sideLabel, mapName) {
+  applyHeatmapBackground(target, mapName);
   if (!points.length) {
     target.innerHTML = `
       <div class="heatmap-empty">
@@ -339,8 +361,8 @@ function renderMapInfo() {
 
   ctCount.textContent = pluralizeSamples(ctPoints.length);
   tCount.textContent = pluralizeSamples(tPoints.length);
-  renderHeatmap(ctHeatmap, ctPoints, "CT-side");
-  renderHeatmap(tHeatmap, tPoints, "T-side");
+  renderHeatmap(ctHeatmap, ctPoints, "CT-side", activeMap);
+  renderHeatmap(tHeatmap, tPoints, "T-side", activeMap);
 }
 
 function renderHero(team) {

@@ -18,6 +18,9 @@ const allPickMeta = {
 const allScoreMeta = {
   ...(typeof extraVetoScoreMeta !== "undefined" ? extraVetoScoreMeta : {})
 };
+const allRowMeta = {
+  ...(typeof extraVetoRowMeta !== "undefined" ? extraVetoRowMeta : {})
+};
 const teamOrder = ["fokus", "eintracht", "attax", "dortmund"].filter((key) => allVetoHistoryData[key]);
 let activeTeam = teamOrder[0];
 let startDateFilter = "";
@@ -34,12 +37,23 @@ const firstBanList = document.getElementById("first-ban-list");
 const firstPickList = document.getElementById("first-pick-list");
 const mostPlayedList = document.getElementById("most-played-list");
 
-function getStepMeta(rowSource, stepKey) {
-  return allPickMeta?.[activeTeam]?.[rowSource]?.[stepKey] ?? {};
+function getRowLookupKey(row) {
+  return `${row.date}|${row.opponentAbbr ?? row.opponent}`;
 }
 
-function getStepScore(rowSource, stepKey, fallbackScore = "") {
-  return allScoreMeta?.[activeTeam]?.[rowSource]?.[stepKey]?.score ?? fallbackScore ?? "";
+function getStepMeta(row, stepKey) {
+  const sourceMeta = allPickMeta?.[activeTeam]?.[row.source]?.[stepKey];
+  if (sourceMeta && Object.keys(sourceMeta).length) return sourceMeta;
+  return allRowMeta?.[activeTeam]?.[getRowLookupKey(row)]?.[stepKey] ?? {};
+}
+
+function getStepScore(row, stepKey, fallbackScore = "") {
+  return (
+    allScoreMeta?.[activeTeam]?.[row.source]?.[stepKey]?.score ??
+    allRowMeta?.[activeTeam]?.[getRowLookupKey(row)]?.[stepKey]?.score ??
+    fallbackScore ??
+    ""
+  );
 }
 
 function formatMapScore(score) {
@@ -95,7 +109,7 @@ function collectPlayedMaps(row) {
     const step = row[key];
     if (step?.map && step.map !== "-") played.push(step.map);
   }
-  if (row.decider && getStepScore(row.source, "decider", row.deciderScore)) {
+  if (row.decider && getStepScore(row, "decider", row.deciderScore)) {
     played.push(row.decider);
   }
   return played;
@@ -130,11 +144,11 @@ function renderInsights(team) {
   renderInsightList(mostPlayedList, playedCounts);
 }
 
-function makeStepCell(step, rowSource, stepKey) {
+function makeStepCell(step, row, stepKey) {
   const ownerText = step.ownerLabel === "-" ? "-" : step.ownerLabel;
   if (step.type === "pick") {
-    const stepMeta = getStepMeta(rowSource, stepKey);
-    const scoreText = formatMapScore(getStepScore(rowSource, stepKey, step.score));
+    const stepMeta = getStepMeta(row, stepKey);
+    const scoreText = formatMapScore(getStepScore(row, stepKey, step.score));
     const pickLabel = step.ownerKind === "team" ? `${allVetoHistoryData[activeTeam].ownerLabel} PICK` : "OPPONENT PICK";
     return `
       <td class="map-cell">
@@ -161,8 +175,8 @@ function renderTable(team) {
   historyBody.innerHTML = getFilteredRows(team)
     .map((row) => {
       const { month, day } = formatDate(row.date);
-      const deciderMeta = getStepMeta(row.source, "decider");
-      const deciderScore = formatMapScore(getStepScore(row.source, "decider", row.deciderScore));
+      const deciderMeta = getStepMeta(row, "decider");
+      const deciderScore = formatMapScore(getStepScore(row, "decider", row.deciderScore));
       return `
         <tr>
           <td>
@@ -177,7 +191,7 @@ function renderTable(team) {
               <a class="source-link" href="${row.source}" target="_blank" rel="noreferrer">${row.sourceLabel ?? "match page"}</a>
             </div>
           </td>
-          ${stepConfig.map(({ key }) => makeStepCell(row[key], row.source, key)).join("")}
+          ${stepConfig.map(({ key }) => makeStepCell(row[key], row, key)).join("")}
           <td class="map-cell">
             <div class="map-pill decider">
               ${deciderScore ? `<p class="map-score">${deciderScore}</p>` : ""}

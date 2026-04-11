@@ -14,11 +14,8 @@ const extraVetoScoreMeta = {
     "https://liquipedia.net/valorant/Match:ID_M9q1qtJfeA_0002": { "pick1": { "score": "13:9" }, "pick2": { "score": "10:13" }, "decider": { "score": "10:13" } }
   },
   "dortmund": {
-    "https://liquipedia.net/valorant/Match:ID_niybrYP7EN_0005": { "pick1": { "score": "15:17" }, "pick2": { "score": "5:13" } },
     "https://liquipedia.net/valorant/Match:ID_GI5qn6P4FC_0004": { "pick1": { "score": "13:8" }, "pick2": { "score": "13:10" } },
-    "https://liquipedia.net/valorant/Match:ID_YSTO3zWRWX_0006": { "pick1": { "score": "14:12" }, "pick2": { "score": "16:14" } },
     "https://liquipedia.net/valorant/Match:ID_OD9cIDru7o_0003": { "pick1": { "score": "6:13" }, "pick2": { "score": "13:9" }, "decider": { "score": "7:13" } },
-    "https://liquipedia.net/valorant/Match:ID_lurfT64ZuJ_0007": { "pick1": { "score": "6:13" }, "pick2": { "score": "2:13" } },
     "https://liquipedia.net/valorant/Match:ID_F4iuzfGlHv_0007": { "pick1": { "score": "13:9" }, "pick2": { "score": "13:15" }, "decider": { "score": "5:13" } },
     "https://liquipedia.net/valorant/Match:ID_IXPYGy0JtV_0006": { "pick1": { "score": "13:8" }, "pick2": { "score": "2:13" }, "decider": { "score": "13:3" } },
     "https://liquipedia.net/valorant/Match:ID_6Nsy0bt9Fe_R03-M001": { "pick1": { "score": "13:11" }, "pick2": { "score": "9:13" }, "decider": { "score": "9:13" } },

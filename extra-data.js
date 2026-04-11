@@ -601,55 +601,6 @@ const extraVetoHistoryData = {
     "rows": [
       {
         "date": "2026-04-07",
-        "opponent": "Reveal Multigaming",
-        "opponentAbbr": "RVM",
-        "score": "0 - 2",
-        "source": "https://liquipedia.net/valorant/Match:ID_niybrYP7EN_0005",
-        "decider": "Haven",
-        "deciderScore": "",
-        "ban1": {
-          "map": "Split",
-          "type": "ban",
-          "ownerLabel": "DoeS",
-          "ownerKind": "team"
-        },
-        "ban2": {
-          "map": "Fracture",
-          "type": "ban",
-          "ownerLabel": "RVM",
-          "ownerKind": "opp"
-        },
-        "pick1": {
-          "map": "Breeze",
-          "type": "pick",
-          "ownerLabel": "DoeS",
-          "ownerKind": "team",
-          "score": "15:17",
-          "teamStartSide": "DoeS CT-SIDE"
-        },
-        "pick2": {
-          "map": "Lotus",
-          "type": "pick",
-          "ownerLabel": "RVM",
-          "ownerKind": "opp",
-          "score": "5:13",
-          "teamStartSide": "DoeS T-SIDE"
-        },
-        "ban3": {
-          "map": "Bind",
-          "type": "ban",
-          "ownerLabel": "DoeS",
-          "ownerKind": "team"
-        },
-        "ban4": {
-          "map": "Pearl",
-          "type": "ban",
-          "ownerLabel": "RVM",
-          "ownerKind": "opp"
-        }
-      },
-      {
-        "date": "2026-04-07",
         "opponent": "ESports Cologne",
         "opponentAbbr": "ECO",
         "score": "2 - 0",
@@ -695,55 +646,6 @@ const extraVetoHistoryData = {
           "type": "ban",
           "ownerLabel": "ECO",
           "ownerKind": "opp"
-        }
-      },
-      {
-        "date": "2026-04-06",
-        "opponent": "THE ONE",
-        "opponentAbbr": "ONE",
-        "score": "2 - 0",
-        "source": "https://liquipedia.net/valorant/Match:ID_YSTO3zWRWX_0006",
-        "decider": "Bind",
-        "deciderScore": "",
-        "ban1": {
-          "map": "Breeze",
-          "type": "ban",
-          "ownerLabel": "ONE",
-          "ownerKind": "opp"
-        },
-        "ban2": {
-          "map": "Haven",
-          "type": "ban",
-          "ownerLabel": "DoeS",
-          "ownerKind": "team"
-        },
-        "pick1": {
-          "map": "Pearl",
-          "type": "pick",
-          "ownerLabel": "ONE",
-          "ownerKind": "opp",
-          "score": "14:12",
-          "teamStartSide": "DoeS CT-SIDE"
-        },
-        "pick2": {
-          "map": "Split",
-          "type": "pick",
-          "ownerLabel": "DoeS",
-          "ownerKind": "team",
-          "score": "16:14",
-          "teamStartSide": "DoeS T-SIDE"
-        },
-        "ban3": {
-          "map": "Lotus",
-          "type": "ban",
-          "ownerLabel": "ONE",
-          "ownerKind": "opp"
-        },
-        "ban4": {
-          "map": "Fracture",
-          "type": "ban",
-          "ownerLabel": "DoeS",
-          "ownerKind": "team"
         }
       },
       {
@@ -793,55 +695,6 @@ const extraVetoHistoryData = {
           "type": "ban",
           "ownerLabel": "SGE",
           "ownerKind": "opp"
-        }
-      },
-      {
-        "date": "2026-03-31",
-        "opponent": "Sissi State Punks",
-        "opponentAbbr": "SSP",
-        "score": "0 - 2",
-        "source": "https://liquipedia.net/valorant/Match:ID_lurfT64ZuJ_0007",
-        "decider": "Haven",
-        "deciderScore": "",
-        "ban1": {
-          "map": "Breeze",
-          "type": "ban",
-          "ownerLabel": "SSP",
-          "ownerKind": "opp"
-        },
-        "ban2": {
-          "map": "Fracture",
-          "type": "ban",
-          "ownerLabel": "DoeS",
-          "ownerKind": "team"
-        },
-        "pick1": {
-          "map": "Lotus",
-          "type": "pick",
-          "ownerLabel": "SSP",
-          "ownerKind": "opp",
-          "score": "6:13",
-          "teamStartSide": "DoeS T-SIDE"
-        },
-        "pick2": {
-          "map": "Split",
-          "type": "pick",
-          "ownerLabel": "DoeS",
-          "ownerKind": "team",
-          "score": "2:13",
-          "teamStartSide": "DoeS T-SIDE"
-        },
-        "ban3": {
-          "map": "Bind",
-          "type": "ban",
-          "ownerLabel": "SSP",
-          "ownerKind": "opp"
-        },
-        "ban4": {
-          "map": "Pearl",
-          "type": "ban",
-          "ownerLabel": "DoeS",
-          "ownerKind": "team"
         }
       },
       {

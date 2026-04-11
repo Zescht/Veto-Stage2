@@ -170,20 +170,6 @@ const extraVetoRowMeta = {
     }
   },
   "dortmund": {
-    "2026-04-07|RVM": {
-      "pick1": {
-        "score": "15:17",
-        "teamStartSide": "DoeS CT-SIDE"
-      },
-      "pick2": {
-        "score": "5:13",
-        "teamStartSide": "DoeS T-SIDE"
-      },
-      "decider": {
-        "score": "",
-        "teamStartSide": ""
-      }
-    },
     "2026-04-07|ECO": {
       "pick1": {
         "score": "13:8",
@@ -191,20 +177,6 @@ const extraVetoRowMeta = {
       },
       "pick2": {
         "score": "13:10",
-        "teamStartSide": "DoeS T-SIDE"
-      },
-      "decider": {
-        "score": "",
-        "teamStartSide": ""
-      }
-    },
-    "2026-04-06|ONE": {
-      "pick1": {
-        "score": "14:12",
-        "teamStartSide": "DoeS CT-SIDE"
-      },
-      "pick2": {
-        "score": "16:14",
         "teamStartSide": "DoeS T-SIDE"
       },
       "decider": {
@@ -223,20 +195,6 @@ const extraVetoRowMeta = {
       },
       "decider": {
         "score": "7:13",
-        "teamStartSide": ""
-      }
-    },
-    "2026-03-31|SSP": {
-      "pick1": {
-        "score": "6:13",
-        "teamStartSide": "DoeS T-SIDE"
-      },
-      "pick2": {
-        "score": "2:13",
-        "teamStartSide": "DoeS T-SIDE"
-      },
-      "decider": {
-        "score": "",
         "teamStartSide": ""
       }
     },

@@ -145,28 +145,6 @@ const extraVetoPickMeta = {
         "teamStartSide": ""
       }
     },
-    "https://liquipedia.net/valorant/Match:ID_niybrYP7EN_0005": {
-      "pick1": {
-        "teamStartSide": "DoeS CT-SIDE"
-      },
-      "pick2": {
-        "teamStartSide": "DoeS T-SIDE"
-      },
-      "decider": {
-        "teamStartSide": ""
-      }
-    },
-    "https://liquipedia.net/valorant/Match:ID_YSTO3zWRWX_0006": {
-      "pick1": {
-        "teamStartSide": "DoeS CT-SIDE"
-      },
-      "pick2": {
-        "teamStartSide": "DoeS T-SIDE"
-      },
-      "decider": {
-        "teamStartSide": ""
-      }
-    },
     "https://liquipedia.net/valorant/Match:ID_OD9cIDru7o_0003": {
       "pick1": {
         "teamStartSide": "DoeS T-SIDE"
@@ -176,17 +154,6 @@ const extraVetoPickMeta = {
       },
       "decider": {
         "teamStartSide": "DoeS CT-SIDE"
-      }
-    },
-    "https://liquipedia.net/valorant/Match:ID_lurfT64ZuJ_0007": {
-      "pick1": {
-        "teamStartSide": "DoeS T-SIDE"
-      },
-      "pick2": {
-        "teamStartSide": "DoeS T-SIDE"
-      },
-      "decider": {
-        "teamStartSide": ""
       }
     },
     "https://liquipedia.net/valorant/Match:ID_F4iuzfGlHv_0007": {

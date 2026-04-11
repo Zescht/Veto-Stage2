@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260411e" />
+    <link rel="stylesheet" href="./styles.css?v=20260411f" />
   </head>
   <body>
     <div class="page-shell">
@@ -18,33 +18,36 @@
         <div class="brand-row">
           <div class="brand">VETO_ARCHITECT</div>
           <nav class="topnav" aria-label="Primary">
-            <a href="#">Dashboard</a>
-            <a href="#">Analytics</a>
-            <a class="active" href="#">Team History</a>
-            <a href="#">Live Feed</a>
+            <button class="view-tab active" id="view-veto" type="button">Veto</button>
+            <button class="view-tab" id="view-map" type="button">Map-Info</button>
           </nav>
         </div>
       </header>
 
       <header class="hero">
-        <h1>Veto History</h1>
+        <h1 id="hero-title">Veto History</h1>
         <p class="status-line">
           <span class="status-dot"></span>
-          Historical pick/ban performance for <span class="team-accent" id="hero-team">FOKUS</span>
+          <span id="hero-copy">Historical pick/ban performance for <span class="team-accent" id="hero-team">FOKUS</span></span>
         </p>
       </header>
 
       <main class="panel">
         <section class="toolbar">
-          <div class="team-switch" id="team-switch"></div>
-          <div class="timeframe-controls">
+          <div class="toolbar-left">
+            <label class="team-select-shell" for="team-select">
+              <span class="team-select-label">Team Selection</span>
+              <select class="team-select" id="team-select"></select>
+            </label>
+          </div>
+          <div class="timeframe-controls" id="timeframe-controls">
             <button class="timeframe-button" id="start-button" type="button">Starting</button>
             <input class="timeframe-input" id="start-date" type="date" />
             <button class="timeframe-reset" id="reset-date" type="button">All</button>
           </div>
         </section>
 
-        <section class="table-wrap">
+        <section class="table-wrap" id="veto-view">
           <div class="insight-grid" id="insight-grid">
             <article class="insight-card">
               <p class="insight-label">Prio First Ban</p>
@@ -94,15 +97,62 @@
             <span class="legend-item"><span class="legend-swatch legend-decider"></span>Decider Map</span>
           </div>
         </section>
+
+        <section class="map-info-view hidden" id="map-view">
+          <div class="map-info-toolbar">
+            <div>
+              <p class="eyebrow">Operator First-Kill Heatmaps</p>
+              <h2 class="map-info-title" id="map-info-title">Map Info</h2>
+              <p class="map-info-copy" id="map-info-copy"></p>
+            </div>
+            <label class="map-select-shell" for="map-select">
+              <span class="map-select-label">Map</span>
+              <select class="map-select" id="map-select"></select>
+            </label>
+          </div>
+
+          <div class="map-sample-card" id="map-sample-card"></div>
+          <div class="map-warning hidden" id="map-warning"></div>
+          <div class="map-placeholder hidden" id="map-placeholder"></div>
+
+          <div class="heatmap-grid" id="heatmap-grid">
+            <article class="heatmap-card">
+              <div class="heatmap-card-head">
+                <div>
+                  <p class="heatmap-side-label">CT-side</p>
+                  <h3>Operator First-Kill Positions</h3>
+                </div>
+                <p class="heatmap-count" id="ct-count">0 samples</p>
+              </div>
+              <div class="heatmap-canvas-wrap">
+                <div class="heatmap-canvas" id="ct-heatmap"></div>
+              </div>
+            </article>
+
+            <article class="heatmap-card">
+              <div class="heatmap-card-head">
+                <div>
+                  <p class="heatmap-side-label">T-side</p>
+                  <h3>Operator First-Kill Positions</h3>
+                </div>
+                <p class="heatmap-count" id="t-count">0 samples</p>
+              </div>
+              <div class="heatmap-canvas-wrap">
+                <div class="heatmap-canvas" id="t-heatmap"></div>
+              </div>
+            </article>
+          </div>
+        </section>
       </main>
     </div>
 
-    <script src="./data.js?v=20260411e"></script>
-    <script src="./pick-meta.js?v=20260411e"></script>
-    <script src="./extra-data.js?v=20260411e"></script>
-    <script src="./extra-pick-meta.js?v=20260411e"></script>
-    <script src="./extra-score-meta.js?v=20260411e"></script>
-    <script src="./extra-row-meta.js?v=20260411e"></script>
-    <script src="./app.js?v=20260411e"></script>
+    <script src="./data.js?v=20260411f"></script>
+    <script src="./pick-meta.js?v=20260411f"></script>
+    <script src="./extra-data.js?v=20260411f"></script>
+    <script src="./extra-pick-meta.js?v=20260411f"></script>
+    <script src="./extra-score-meta.js?v=20260411f"></script>
+    <script src="./extra-row-meta.js?v=20260411f"></script>
+    <script src="./map-info-data.js?v=20260411f"></script>
+    <script src="./app.js?v=20260411f"></script>
   </body>
 </html>

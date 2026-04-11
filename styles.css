@@ -34,14 +34,12 @@ body {
 }
 
 .brand,
-.topnav a,
 .hero h1,
 .table-headline h2,
 .history-table th,
 .date-label,
 .opponent-name,
-.map-name,
-.team-button {
+.map-name {
   font-family: "Space Grotesk", sans-serif;
 }
 
@@ -54,19 +52,25 @@ body {
 .topnav {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 10px;
 }
 
-.topnav a {
-  color: #74787d;
-  text-decoration: none;
-  font-size: 0.98rem;
+.view-tab {
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  background: rgba(255, 255, 255, 0.94);
+  color: #6c7378;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  padding: 10px 14px;
+  cursor: pointer;
 }
 
-.topnav a.active {
+.view-tab.active {
   color: var(--ink);
-  border-bottom: 2px solid #90d53f;
-  padding-bottom: 8px;
+  background: #eef6e7;
+  border-color: rgba(53, 107, 0, 0.35);
 }
 
 .page-shell {
@@ -134,13 +138,14 @@ body {
   margin-bottom: 14px;
 }
 
-.team-switch {
-  display: inline-flex;
-  gap: 10px;
-  flex-wrap: wrap;
+.toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 260px;
 }
 
-.team-button,
+.team-select-shell,
 .timeframe-button,
 .timeframe-reset,
 .timeframe-input {
@@ -151,22 +156,41 @@ body {
   color: var(--ink);
 }
 
-.team-button {
-  padding: 9px 15px;
-  font-size: 0.98rem;
-  letter-spacing: -0.02em;
-  cursor: pointer;
+.team-select-shell {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 7px 10px 7px 12px;
 }
 
-.team-button:hover,
+.team-select-label,
+.map-select-label {
+  color: #7b8287;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.team-select,
+.map-select {
+  border: none;
+  background: transparent;
+  color: var(--ink);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  min-width: 190px;
+}
+
+.team-select:focus,
+.map-select:focus {
+  outline: none;
+}
+
 .timeframe-button:hover,
 .timeframe-reset:hover {
   border-color: rgba(53, 107, 0, 0.28);
-}
-
-.team-button.active {
-  background: #f1f6ea;
-  border-color: rgba(53, 107, 0, 0.35);
 }
 
 .timeframe-controls {
@@ -404,7 +428,7 @@ body {
 .map-score {
   margin: 0 0 6px;
   font-family: "Space Grotesk", sans-serif;
-  font-size: 12px;
+  font-size: 12.7px;
   line-height: 0.9;
   letter-spacing: -0.08em;
   font-weight: 700;
@@ -448,6 +472,207 @@ body {
 .map-pill.team.ban .owner-tag,
 .map-pill.team.pick .owner-tag {
   color: #ffffff;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.map-info-view {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.map-info-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.map-info-title {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2.7rem;
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.map-info-copy {
+  margin: 10px 0 0;
+  color: #61686d;
+  font-size: 0.98rem;
+}
+
+.map-select-shell {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  border-radius: 4px;
+}
+
+.map-sample-card,
+.map-warning,
+.map-placeholder {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  padding: 16px 18px;
+}
+
+.map-sample-label {
+  margin: 0 0 12px;
+  color: #70777c;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.sample-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.sample-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 6px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  background: #f4f6f7;
+  font-size: 0.82rem;
+  color: #303538;
+}
+
+.map-warning {
+  color: #9b2d2d;
+  background: #fff4f4;
+  border-color: rgba(155, 45, 45, 0.22);
+  line-height: 1.45;
+}
+
+.map-placeholder h3 {
+  margin: 0 0 8px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: -0.04em;
+}
+
+.map-placeholder p {
+  margin: 0;
+  color: #62696f;
+}
+
+.heatmap-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.heatmap-card {
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  padding: 16px;
+}
+
+.heatmap-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.heatmap-card-head h3 {
+  margin: 4px 0 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.4rem;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.heatmap-side-label {
+  margin: 0;
+  color: #768086;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.heatmap-count {
+  margin: 0;
+  color: #1c4f17;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.heatmap-canvas-wrap {
+  position: relative;
+}
+
+.heatmap-canvas {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  min-height: 360px;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.07) 1px, transparent 1px),
+    radial-gradient(circle at 50% 50%, rgba(141, 219, 87, 0.2), transparent 44%),
+    #f7f9fa;
+  background-size: 12.5% 12.5%, 12.5% 12.5%, auto, auto;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.heat-layer {
+  position: absolute;
+  inset: 0;
+}
+
+.heat-point {
+  position: absolute;
+  width: 78px;
+  height: 78px;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  background:
+    radial-gradient(circle, rgba(255, 73, 73, 0.82) 0%, rgba(255, 73, 73, 0.4) 24%, rgba(255, 73, 73, 0.16) 48%, rgba(255, 73, 73, 0) 72%);
+}
+
+.heat-point::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+  background: #ad1414;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.86);
+}
+
+.heat-point:hover {
+  filter: saturate(1.15);
+}
+
+.heatmap-empty {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  padding: 24px;
+  text-align: center;
+  color: #677076;
+  font-size: 0.95rem;
+  line-height: 1.45;
 }
 
 .legend-bottom {
@@ -503,6 +728,12 @@ body {
   .insight-grid {
     grid-template-columns: 1fr;
   }
+
+  .map-info-toolbar,
+  .heatmap-grid {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
 }
 
 @media (max-width: 820px) {
@@ -517,5 +748,9 @@ body {
 
   .hero h1 {
     font-size: clamp(3rem, 14vw, 4.4rem);
+  }
+
+  .heatmap-canvas {
+    min-height: 280px;
   }
 }

@@ -21,21 +21,42 @@ const allScoreMeta = {
 const allRowMeta = {
   ...(typeof extraVetoRowMeta !== "undefined" ? extraVetoRowMeta : {})
 };
+const allMapInfo = typeof mapInfoData !== "undefined" ? mapInfoData : {};
+
 const teamOrder = ["fokus", "eintracht", "attax", "dortmund"].filter((key) => allVetoHistoryData[key]);
 let activeTeam = teamOrder[0];
+let activeView = "veto";
 let startDateFilter = "";
+let activeMap = "Bind";
 
-const teamSwitch = document.getElementById("team-switch");
+const viewVetoButton = document.getElementById("view-veto");
+const viewMapButton = document.getElementById("view-map");
+const teamSelect = document.getElementById("team-select");
 const historyBody = document.getElementById("history-body");
 const tableTitle = document.getElementById("table-title");
 const tableSubtitle = document.getElementById("table-subtitle");
 const startButton = document.getElementById("start-button");
 const startDateInput = document.getElementById("start-date");
 const resetDateButton = document.getElementById("reset-date");
-const heroTeam = document.getElementById("hero-team");
+const heroTitle = document.getElementById("hero-title");
+const heroCopy = document.getElementById("hero-copy");
 const firstBanList = document.getElementById("first-ban-list");
 const firstPickList = document.getElementById("first-pick-list");
 const mostPlayedList = document.getElementById("most-played-list");
+const timeframeControls = document.getElementById("timeframe-controls");
+const vetoView = document.getElementById("veto-view");
+const mapView = document.getElementById("map-view");
+const mapInfoTitle = document.getElementById("map-info-title");
+const mapInfoCopy = document.getElementById("map-info-copy");
+const mapSelect = document.getElementById("map-select");
+const mapSampleCard = document.getElementById("map-sample-card");
+const mapWarning = document.getElementById("map-warning");
+const mapPlaceholder = document.getElementById("map-placeholder");
+const heatmapGrid = document.getElementById("heatmap-grid");
+const ctCount = document.getElementById("ct-count");
+const tCount = document.getElementById("t-count");
+const ctHeatmap = document.getElementById("ct-heatmap");
+const tHeatmap = document.getElementById("t-heatmap");
 
 function getRowLookupKey(row) {
   return `${row.date}|${row.opponentAbbr ?? row.opponent}`;
@@ -206,38 +227,179 @@ function renderTable(team) {
     .join("");
 }
 
-function renderSwitch() {
-  teamSwitch.innerHTML = teamOrder
-    .map((key) => {
-      const team = allVetoHistoryData[key];
-      return `
-        <button class="team-button ${key === activeTeam ? "active" : ""}" data-team="${key}">
-          ${team.name}
-        </button>
-      `;
-    })
+function renderTeamSelect() {
+  teamSelect.innerHTML = teamOrder
+    .map((key) => `<option value="${key}">${allVetoHistoryData[key].name}</option>`)
     .join("");
-
-  teamSwitch.querySelectorAll(".team-button").forEach((button) => {
-    button.addEventListener("click", () => {
-      activeTeam = button.dataset.team;
-      render();
-    });
-  });
+  teamSelect.value = activeTeam;
 }
 
-function render() {
+function pluralizeSamples(count) {
+  return `${count} sample${count === 1 ? "" : "s"}`;
+}
+
+function makeSampleChip(item) {
+  return `<span class="sample-chip">${item.date.slice(5)} ${item.map} vs ${item.opponent}</span>`;
+}
+
+function renderHeatmap(target, points, sideLabel) {
+  if (!points.length) {
+    target.innerHTML = `
+      <div class="heatmap-empty">
+        <p>No ${sideLabel} Operator first-kill samples in the last 10 maps.</p>
+      </div>
+    `;
+    return;
+  }
+
+  target.innerHTML = `
+    <div class="heat-layer">
+      ${points
+        .map(
+          (point) => `
+            <button
+              class="heat-point"
+              type="button"
+              style="left:${point.normX}%; top:${point.normY}%"
+              title="${point.player} | ${point.date} vs ${point.opponent} | R${point.roundNum} | ${point.score}"
+              aria-label="${point.player} ${point.date} versus ${point.opponent}"
+            ></button>
+          `
+        )
+        .join("")}
+    </div>
+  `;
+}
+
+function renderMapInfo() {
+  const info = allMapInfo?.[activeTeam];
   const team = allVetoHistoryData[activeTeam];
+
+  if (!info) {
+    mapPlaceholder.classList.remove("hidden");
+    heatmapGrid.classList.add("hidden");
+    mapWarning.classList.add("hidden");
+    mapSampleCard.classList.add("hidden");
+    mapSelect.innerHTML = "";
+    mapSelect.disabled = true;
+    mapPlaceholder.innerHTML = `
+      <h3>Map-Info is not wired for this team yet.</h3>
+      <p>Right now the Operator first-kill heatmap module is available for Dortmund only.</p>
+    `;
+    mapInfoTitle.textContent = `${team.name} Map Info`;
+    mapInfoCopy.textContent = "Operator first-kill positioning module.";
+    return;
+  }
+
+  mapPlaceholder.classList.add("hidden");
+  heatmapGrid.classList.remove("hidden");
+  mapSampleCard.classList.remove("hidden");
+  mapSelect.disabled = false;
+
+  const allowedMaps = info.currentMapPool ?? [];
+  const preferredMap =
+    allowedMaps.find((mapName) => {
+      const mapData = info.maps?.[mapName];
+      return (mapData?.ct?.points?.length ?? 0) + (mapData?.t?.points?.length ?? 0) > 0;
+    }) ?? allowedMaps[0] ?? "Bind";
+
+  if (!allowedMaps.includes(activeMap)) {
+    activeMap = preferredMap;
+  }
+
+  mapSelect.innerHTML = allowedMaps
+    .map((mapName) => `<option value="${mapName}">${mapName}</option>`)
+    .join("");
+  mapSelect.value = activeMap;
+
+  mapInfoTitle.textContent = `${team.name} Map Info`;
+  mapInfoCopy.textContent = `Operator first-kill heatmaps from the last ${info.sampleSize} Dortmund maps.`;
+
+  mapSampleCard.innerHTML = `
+    <p class="map-sample-label">Last ${info.sampleSize} maps in sample</p>
+    <div class="sample-chip-list">
+      ${info.sampleMaps.map(makeSampleChip).join("")}
+    </div>
+  `;
+
+  if (info.missingCurrentPoolMaps?.length) {
+    mapWarning.classList.remove("hidden");
+    mapWarning.innerHTML = `
+      <strong>Coverage warning:</strong> the last ${info.sampleSize} Dortmund maps do not include
+      ${info.missingCurrentPoolMaps.join(", ")} from the current map pool.
+    `;
+  } else {
+    mapWarning.classList.add("hidden");
+    mapWarning.innerHTML = "";
+  }
+
+  const mapData = info.maps?.[activeMap] ?? { ct: { points: [] }, t: { points: [] } };
+  const ctPoints = mapData.ct?.points ?? [];
+  const tPoints = mapData.t?.points ?? [];
+
+  ctCount.textContent = pluralizeSamples(ctPoints.length);
+  tCount.textContent = pluralizeSamples(tPoints.length);
+  renderHeatmap(ctHeatmap, ctPoints, "CT-side");
+  renderHeatmap(tHeatmap, tPoints, "T-side");
+}
+
+function renderHero(team) {
+  if (activeView === "veto") {
+    heroTitle.textContent = "Veto History";
+    heroCopy.innerHTML = `Historical pick/ban performance for <span class="team-accent" id="hero-team">${team.name}</span>`;
+  } else {
+    heroTitle.textContent = "Map Info";
+    heroCopy.innerHTML = `Operator first-kill heatmaps for <span class="team-accent" id="hero-team">${team.name}</span>`;
+  }
+}
+
+function renderVisibility() {
+  const mapMode = activeView === "map";
+  viewVetoButton.classList.toggle("active", !mapMode);
+  viewMapButton.classList.toggle("active", mapMode);
+  vetoView.classList.toggle("hidden", mapMode);
+  mapView.classList.toggle("hidden", !mapMode);
+  timeframeControls.classList.toggle("hidden", mapMode);
+}
+
+function renderVeto(team) {
   tableTitle.textContent = `${team.name} Veto History`;
   tableSubtitle.textContent = startDateFilter
     ? `${team.subtitle} starting ${startDateFilter}`
     : team.subtitle;
-  heroTeam.textContent = team.name;
   startDateInput.value = startDateFilter;
-  renderSwitch();
   renderInsights(team);
   renderTable(team);
 }
+
+function render() {
+  const team = allVetoHistoryData[activeTeam];
+  renderTeamSelect();
+  renderHero(team);
+  renderVisibility();
+  renderVeto(team);
+  renderMapInfo();
+}
+
+viewVetoButton.addEventListener("click", () => {
+  activeView = "veto";
+  render();
+});
+
+viewMapButton.addEventListener("click", () => {
+  activeView = "map";
+  render();
+});
+
+teamSelect.addEventListener("change", (event) => {
+  activeTeam = event.target.value;
+  render();
+});
+
+mapSelect.addEventListener("change", (event) => {
+  activeMap = event.target.value;
+  renderMapInfo();
+});
 
 startButton.addEventListener("click", () => {
   startDateInput.showPicker?.();

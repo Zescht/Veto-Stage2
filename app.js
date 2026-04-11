@@ -7,7 +7,15 @@ const stepConfig = [
   { key: "ban4", label: "Ban 4" }
 ];
 
-const teamOrder = ["fokus", "eintracht"];
+const allVetoHistoryData = {
+  ...vetoHistoryData,
+  ...(typeof extraVetoHistoryData !== "undefined" ? extraVetoHistoryData : {})
+};
+const allPickMeta = {
+  ...vetoPickMeta,
+  ...(typeof extraVetoPickMeta !== "undefined" ? extraVetoPickMeta : {})
+};
+const teamOrder = ["fokus", "eintracht", "attax", "dortmund"].filter((key) => allVetoHistoryData[key]);
 let activeTeam = teamOrder[0];
 let startDateFilter = "";
 
@@ -21,7 +29,7 @@ const resetDateButton = document.getElementById("reset-date");
 const heroTeam = document.getElementById("hero-team");
 
 function getStepMeta(rowSource, stepKey) {
-  return vetoPickMeta?.[activeTeam]?.[rowSource]?.[stepKey] ?? {};
+  return allPickMeta?.[activeTeam]?.[rowSource]?.[stepKey] ?? {};
 }
 
 function formatMapScore(score) {
@@ -43,12 +51,34 @@ function getFilteredRows(team) {
   return team.rows.filter((row) => !startDateFilter || row.date >= startDateFilter);
 }
 
+function getTeamOwnedMaps(rows, predicate) {
+  const maps = [];
+  for (const row of rows) {
+    for (const { key } of stepConfig) {
+      const step = row[key];
+      if (!step || step.map === "-" || step.ownerKind !== "team") continue;
+      if (predicate(step)) {
+        maps.push(step.map);
+      }
+    }
+  }
+  return maps;
+}
+
+function topFrequency(values) {
+  const counts = new Map();
+  for (const value of values) {
+    counts.set(value, (counts.get(value) ?? 0) + 1);
+  }
+  return [...counts.entries()].sort((a, b) => b[1] - a[1])[0] ?? [null, 0];
+}
+
 function makeStepCell(step, rowSource, stepKey) {
   const ownerText = step.ownerLabel === "-" ? "-" : step.ownerLabel;
   if (step.type === "pick") {
     const stepMeta = getStepMeta(rowSource, stepKey);
     const scoreText = formatMapScore(step.score);
-    const pickLabel = step.ownerKind === "team" ? `${vetoHistoryData[activeTeam].ownerLabel} PICK` : "OPPONENT PICK";
+    const pickLabel = step.ownerKind === "team" ? `${allVetoHistoryData[activeTeam].ownerLabel} PICK` : "OPPONENT PICK";
     return `
       <td class="map-cell">
         <div class="map-pill ${step.type} ${step.ownerKind}">
@@ -87,7 +117,7 @@ function renderTable(team) {
           <td class="opponent-cell">
             <div class="opponent-cell-wrap">
               <p class="opponent-name" title="${row.opponent}">${row.opponentAbbr ?? row.opponent}</p>
-              <a class="source-link" href="${row.source}" target="_blank" rel="noreferrer">match page</a>
+              <a class="source-link" href="${row.source}" target="_blank" rel="noreferrer">${row.sourceLabel ?? "match page"}</a>
             </div>
           </td>
           ${stepConfig.map(({ key }) => makeStepCell(row[key], row.source, key)).join("")}
@@ -108,7 +138,7 @@ function renderTable(team) {
 function renderSwitch() {
   teamSwitch.innerHTML = teamOrder
     .map((key) => {
-      const team = vetoHistoryData[key];
+      const team = allVetoHistoryData[key];
       return `
         <button class="team-button ${key === activeTeam ? "active" : ""}" data-team="${key}">
           ${team.name}
@@ -126,7 +156,7 @@ function renderSwitch() {
 }
 
 function render() {
-  const team = vetoHistoryData[activeTeam];
+  const team = allVetoHistoryData[activeTeam];
   tableTitle.textContent = `${team.name} Veto History`;
   tableSubtitle.textContent = startDateFilter
     ? `${team.subtitle} starting ${startDateFilter}`

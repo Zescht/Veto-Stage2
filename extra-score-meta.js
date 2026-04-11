@@ -1,0 +1,43 @@
+const extraVetoScoreMeta = {
+  "attax": {
+    "https://liquipedia.net/valorant/Match:ID_GI5qn6P4FC_0003": { "pick1": { "score": "7:13" }, "pick2": { "score": "14:12" }, "decider": { "score": "5:13" } },
+    "https://liquipedia.net/valorant/Match:ID_OD9cIDru7o_0004": { "pick1": { "score": "8:13" }, "pick2": { "score": "6:13" } },
+    "https://liquipedia.net/valorant/Match:ID_6Nsy0bt9Fe_R02-M006": { "pick1": { "score": "9:13" }, "pick2": { "score": "7:13" } },
+    "https://liquipedia.net/valorant/Match:ID_6Nsy0bt9Fe_R02-M003": { "pick1": { "score": "6:13" }, "pick2": { "score": "4:13" } },
+    "https://liquipedia.net/valorant/Match:ID_6Nsy0bt9Fe_R01-M006": { "pick1": { "score": "13:9" }, "pick2": { "score": "13:9" } },
+    "https://liquipedia.net/valorant/Match:ID_hmBgwVJNKY_R02-M004": { "pick1": { "score": "7:13" }, "pick2": { "score": "4:13" } },
+    "https://liquipedia.net/valorant/Match:ID_hmBgwVJNKY_R02-M001": { "pick1": { "score": "13:6" }, "pick2": { "score": "4:13" }, "decider": { "score": "5:13" } },
+    "https://liquipedia.net/valorant/Match:ID_hmBgwVJNKY_R01-M001": { "pick1": { "score": "13:11" }, "pick2": { "score": "11:13" }, "decider": { "score": "13:7" } },
+    "https://liquipedia.net/valorant/Match:ID_ylxtiT5LAl_R02-M001": { "pick1": { "score": "13:11" }, "pick2": { "score": "10:13" }, "decider": { "score": "16:14" } },
+    "https://liquipedia.net/valorant/Match:ID_kWkF3mE2WY_0002": { "pick1": { "score": "13:10" }, "pick2": { "score": "13:3" } },
+    "https://liquipedia.net/valorant/Match:ID_196MdYozhM_0004": { "pick1": { "score": "7:13" }, "pick2": { "score": "15:13" }, "decider": { "score": "8:13" } },
+    "https://liquipedia.net/valorant/Match:ID_M9q1qtJfeA_0002": { "pick1": { "score": "13:9" }, "pick2": { "score": "10:13" }, "decider": { "score": "10:13" } }
+  },
+  "dortmund": {
+    "https://liquipedia.net/valorant/Match:ID_niybrYP7EN_0005": { "pick1": { "score": "15:17" }, "pick2": { "score": "5:13" } },
+    "https://liquipedia.net/valorant/Match:ID_GI5qn6P4FC_0004": { "pick1": { "score": "13:8" }, "pick2": { "score": "13:10" } },
+    "https://liquipedia.net/valorant/Match:ID_YSTO3zWRWX_0006": { "pick1": { "score": "14:12" }, "pick2": { "score": "16:14" } },
+    "https://liquipedia.net/valorant/Match:ID_OD9cIDru7o_0003": { "pick1": { "score": "6:13" }, "pick2": { "score": "13:9" }, "decider": { "score": "7:13" } },
+    "https://liquipedia.net/valorant/Match:ID_lurfT64ZuJ_0007": { "pick1": { "score": "6:13" }, "pick2": { "score": "2:13" } },
+    "https://liquipedia.net/valorant/Match:ID_F4iuzfGlHv_0007": { "pick1": { "score": "13:9" }, "pick2": { "score": "13:15" }, "decider": { "score": "5:13" } },
+    "https://liquipedia.net/valorant/Match:ID_IXPYGy0JtV_0006": { "pick1": { "score": "13:8" }, "pick2": { "score": "2:13" }, "decider": { "score": "13:3" } },
+    "https://liquipedia.net/valorant/Match:ID_6Nsy0bt9Fe_R03-M001": { "pick1": { "score": "13:11" }, "pick2": { "score": "9:13" }, "decider": { "score": "9:13" } },
+    "https://liquipedia.net/valorant/Match:ID_6Nsy0bt9Fe_R02-M006": { "pick1": { "score": "13:9" }, "pick2": { "score": "13:7" } },
+    "https://liquipedia.net/valorant/Match:ID_6Nsy0bt9Fe_R01-M010": {},
+    "https://liquipedia.net/valorant/Match:ID_6Nsy0bt9Fe_R01-M004": { "pick1": { "score": "12:14" }, "pick2": { "score": "5:13" } },
+    "https://liquipedia.net/valorant/Match:ID_hmBgwVJNKY_R03-M001": { "pick1": { "score": "5:13" }, "pick2": { "score": "4:13" } },
+    "https://liquipedia.net/valorant/Match:ID_hmBgwVJNKY_R02-M004": { "pick1": { "score": "13:7" }, "pick2": { "score": "13:4" } },
+    "https://liquipedia.net/valorant/Match:ID_hmBgwVJNKY_R01-M002": { "pick1": { "score": "0:13" }, "pick2": { "score": "3:13" } },
+    "https://liquipedia.net/valorant/Match:ID_ylxtiT5LAl_R02-M002": { "pick2": { "score": "12:14" }, "decider": { "score": "15:13" } },
+    "https://liquipedia.net/valorant/Match:ID_ylxtiT5LAl_R02-M001": { "pick1": { "score": "11:13" }, "pick2": { "score": "13:10" }, "decider": { "score": "14:16" } },
+    "https://liquipedia.net/valorant/Match:ID_c7slxOxY1U_0001": { "pick1": { "score": "13:3" }, "pick2": { "score": "16:18" }, "decider": { "score": "8:13" } },
+    "https://liquipedia.net/valorant/Match:ID_YOvic0dfCc_0002": { "pick1": { "score": "13:10" }, "pick2": { "score": "13:8" } },
+    "https://liquipedia.net/valorant/Match:ID_kWkF3mE2WY_0004": { "pick1": { "score": "13:11" }, "pick2": { "score": "13:7" } },
+    "https://liquipedia.net/valorant/Match:ID_fMlz2MJMpE_0003": { "pick1": { "score": "13:11" }, "pick2": { "score": "13:5" } },
+    "https://liquipedia.net/valorant/Match:ID_4gwzLDGHYH_0004": { "pick1": { "score": "8:13" }, "pick2": { "score": "11:13" } },
+    "https://liquipedia.net/valorant/Match:ID_Pp0TOAnqOV_0003": { "pick1": { "score": "13:9" }, "pick2": { "score": "13:7" } },
+    "https://liquipedia.net/valorant/Match:ID_DR2rzfbMg7_0004": { "pick1": { "score": "13:15" }, "pick2": { "score": "10:13" } },
+    "https://liquipedia.net/valorant/Match:ID_196MdYozhM_0001": { "pick1": { "score": "10:13" }, "pick2": { "score": "1:13" } },
+    "https://liquipedia.net/valorant/Match:ID_M9q1qtJfeA_0003": { "pick1": { "score": "4:13" }, "pick2": { "score": "3:13" } }
+  }
+};

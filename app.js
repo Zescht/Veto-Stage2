@@ -15,6 +15,9 @@ const allPickMeta = {
   ...vetoPickMeta,
   ...(typeof extraVetoPickMeta !== "undefined" ? extraVetoPickMeta : {})
 };
+const allScoreMeta = {
+  ...(typeof extraVetoScoreMeta !== "undefined" ? extraVetoScoreMeta : {})
+};
 const teamOrder = ["fokus", "eintracht", "attax", "dortmund"].filter((key) => allVetoHistoryData[key]);
 let activeTeam = teamOrder[0];
 let startDateFilter = "";
@@ -30,6 +33,10 @@ const heroTeam = document.getElementById("hero-team");
 
 function getStepMeta(rowSource, stepKey) {
   return allPickMeta?.[activeTeam]?.[rowSource]?.[stepKey] ?? {};
+}
+
+function getStepScore(rowSource, stepKey, fallbackScore = "") {
+  return allScoreMeta?.[activeTeam]?.[rowSource]?.[stepKey]?.score ?? fallbackScore ?? "";
 }
 
 function formatMapScore(score) {
@@ -77,7 +84,7 @@ function makeStepCell(step, rowSource, stepKey) {
   const ownerText = step.ownerLabel === "-" ? "-" : step.ownerLabel;
   if (step.type === "pick") {
     const stepMeta = getStepMeta(rowSource, stepKey);
-    const scoreText = formatMapScore(step.score);
+    const scoreText = formatMapScore(getStepScore(rowSource, stepKey, step.score));
     const pickLabel = step.ownerKind === "team" ? `${allVetoHistoryData[activeTeam].ownerLabel} PICK` : "OPPONENT PICK";
     return `
       <td class="map-cell">
@@ -105,7 +112,7 @@ function renderTable(team) {
     .map((row) => {
       const { month, day } = formatDate(row.date);
       const deciderMeta = getStepMeta(row.source, "decider");
-      const deciderScore = formatMapScore(row.deciderScore);
+      const deciderScore = formatMapScore(getStepScore(row.source, "decider", row.deciderScore));
       return `
         <tr>
           <td>

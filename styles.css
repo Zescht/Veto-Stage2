@@ -618,8 +618,8 @@ body {
 
 .heatmap-canvas {
   position: relative;
-  aspect-ratio: 1 / 1;
-  min-height: 360px;
+  aspect-ratio: 1318 / 772;
+  min-height: 0;
   overflow: hidden;
   background:
     linear-gradient(rgba(0, 0, 0, 0.07) 1px, transparent 1px),
@@ -774,6 +774,6 @@ body {
   }
 
   .heatmap-canvas {
-    min-height: 280px;
+    min-height: 0;
   }
 }

@@ -194,6 +194,60 @@ body {
   background: transparent;
 }
 
+.insight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.insight-card {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  padding: 14px 16px;
+  min-height: 118px;
+}
+
+.insight-label {
+  margin: 0 0 12px;
+  color: #6d757a;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.insight-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.insight-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.insight-map {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.insight-count {
+  color: #5e656b;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.insight-empty {
+  color: #7a8086;
+  font-size: 0.9rem;
+}
+
 .table-headline {
   margin-bottom: 14px;
 }
@@ -333,8 +387,8 @@ body {
 
 .map-name {
   margin: 0;
-  font-size: 0.98rem;
-  line-height: 1.02;
+  font-size: 1.28rem;
+  line-height: 0.96;
   letter-spacing: -0.04em;
   color: #111111;
   text-transform: uppercase;
@@ -370,7 +424,7 @@ body {
 }
 
 .step-meta {
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 .step-side {
@@ -443,6 +497,10 @@ body {
   .toolbar {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .insight-grid {
+    grid-template-columns: 1fr;
   }
 }
 

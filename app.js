@@ -30,6 +30,9 @@ const startButton = document.getElementById("start-button");
 const startDateInput = document.getElementById("start-date");
 const resetDateButton = document.getElementById("reset-date");
 const heroTeam = document.getElementById("hero-team");
+const firstBanList = document.getElementById("first-ban-list");
+const firstPickList = document.getElementById("first-pick-list");
+const mostPlayedList = document.getElementById("most-played-list");
 
 function getStepMeta(rowSource, stepKey) {
   return allPickMeta?.[activeTeam]?.[rowSource]?.[stepKey] ?? {};
@@ -58,26 +61,73 @@ function getFilteredRows(team) {
   return team.rows.filter((row) => !startDateFilter || row.date >= startDateFilter);
 }
 
-function getTeamOwnedMaps(rows, predicate) {
-  const maps = [];
-  for (const row of rows) {
-    for (const { key } of stepConfig) {
-      const step = row[key];
-      if (!step || step.map === "-" || step.ownerKind !== "team") continue;
-      if (predicate(step)) {
-        maps.push(step.map);
-      }
-    }
-  }
-  return maps;
-}
-
-function topFrequency(values) {
+function countMaps(values) {
   const counts = new Map();
   for (const value of values) {
+    if (!value || value === "-") continue;
     counts.set(value, (counts.get(value) ?? 0) + 1);
   }
-  return [...counts.entries()].sort((a, b) => b[1] - a[1])[0] ?? [null, 0];
+  return [...counts.entries()].sort((a, b) => {
+    if (b[1] !== a[1]) return b[1] - a[1];
+    return a[0].localeCompare(b[0]);
+  });
+}
+
+function collectFirstTeamBan(row) {
+  for (const key of ["ban1", "ban2"]) {
+    const step = row[key];
+    if (step?.ownerKind === "team" && step.map !== "-") return step.map;
+  }
+  return null;
+}
+
+function collectFirstTeamPick(row) {
+  for (const key of ["pick1", "pick2"]) {
+    const step = row[key];
+    if (step?.ownerKind === "team" && step.map !== "-") return step.map;
+  }
+  return null;
+}
+
+function collectPlayedMaps(row) {
+  const played = [];
+  for (const key of ["pick1", "pick2"]) {
+    const step = row[key];
+    if (step?.map && step.map !== "-") played.push(step.map);
+  }
+  if (row.decider && getStepScore(row.source, "decider", row.deciderScore)) {
+    played.push(row.decider);
+  }
+  return played;
+}
+
+function renderInsightList(target, entries, fallbackText = "No data") {
+  if (!entries.length) {
+    target.innerHTML = `<div class="insight-empty">${fallbackText}</div>`;
+    return;
+  }
+
+  target.innerHTML = entries
+    .map(
+      ([map, count]) => `
+        <div class="insight-row">
+          <span class="insight-map">${map}</span>
+          <span class="insight-count">${count}x</span>
+        </div>
+      `
+    )
+    .join("");
+}
+
+function renderInsights(team) {
+  const rows = getFilteredRows(team);
+  const firstBanCounts = countMaps(rows.map(collectFirstTeamBan)).slice(0, 3);
+  const firstPickCounts = countMaps(rows.map(collectFirstTeamPick)).slice(0, 3);
+  const playedCounts = countMaps(rows.flatMap(collectPlayedMaps)).slice(0, 3);
+
+  renderInsightList(firstBanList, firstBanCounts);
+  renderInsightList(firstPickList, firstPickCounts);
+  renderInsightList(mostPlayedList, playedCounts);
 }
 
 function makeStepCell(step, rowSource, stepKey) {
@@ -171,6 +221,7 @@ function render() {
   heroTeam.textContent = team.name;
   startDateInput.value = startDateFilter;
   renderSwitch();
+  renderInsights(team);
   renderTable(team);
 }
 

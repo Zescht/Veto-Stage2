@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260412f" />
+    <link rel="stylesheet" href="./styles.css?v=20260412h" />
   </head>
   <body>
     <div class="page-shell">
@@ -120,32 +120,14 @@
             </div>
           </div>
 
-          <div class="map-sample-card" id="map-sample-card"></div>
           <div class="map-warning hidden" id="map-warning"></div>
-          <section class="calibration-panel hidden" id="calibration-panel">
-            <div class="calibration-head">
-              <div>
-                <p class="eyebrow">Calibration Mode</p>
-                <h3 class="calibration-title">Drag dots to their real callout positions</h3>
-                <p class="calibration-copy">Local only. Use this to calibrate a map before we push any fix.</p>
-              </div>
-              <div class="calibration-actions">
-                <button class="calibration-button" id="calibration-toggle" type="button">Enable Calibration</button>
-                <button class="calibration-button secondary" id="calibration-reset" type="button">Reset Current Map</button>
-              </div>
-            </div>
-            <div class="calibration-export-wrap">
-              <label class="calibration-export-label" for="calibration-export">Current map overrides</label>
-              <textarea class="calibration-export" id="calibration-export" readonly></textarea>
-            </div>
-          </section>
           <div class="map-placeholder hidden" id="map-placeholder"></div>
 
           <div class="heatmap-grid" id="heatmap-grid">
             <article class="heatmap-card">
               <div class="heatmap-card-head">
                 <div>
-                  <p class="heatmap-side-label">CT-side</p>
+                  <p class="heatmap-side-label heatmap-side-label-ct" id="ct-side-label">CT-SIDE</p>
                   <h3 id="ct-heat-title">Operator First-Kill Positions</h3>
                 </div>
                 <p class="heatmap-count" id="ct-count">0 samples</p>
@@ -158,7 +140,7 @@
             <article class="heatmap-card">
               <div class="heatmap-card-head">
                 <div>
-                  <p class="heatmap-side-label">T-side</p>
+                  <p class="heatmap-side-label heatmap-side-label-t" id="t-side-label">T-SIDE</p>
                   <h3 id="t-heat-title">Operator First-Kill Positions</h3>
                 </div>
                 <p class="heatmap-count" id="t-count">0 samples</p>
@@ -168,6 +150,8 @@
               </div>
             </article>
           </div>
+
+          <div class="map-sample-card" id="map-sample-card"></div>
         </section>
       </main>
     </div>
@@ -179,6 +163,6 @@
     <script src="./extra-score-meta.js?v=20260412f"></script>
     <script src="./extra-row-meta.js?v=20260412f"></script>
     <script src="./map-info-data.js?v=20260412f"></script>
-    <script src="./app.js?v=20260412f"></script>
+    <script src="./app.js?v=20260412h"></script>
   </body>
 </html>

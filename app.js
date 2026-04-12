@@ -43,6 +43,7 @@ const allMapInfo = typeof mapInfoData !== "undefined" ? mapInfoData : {};
     Split: `./maps/Split.png?v=${MAP_IMAGE_VERSION}`,
     Corrode: `./maps/Corrode.png?v=${MAP_IMAGE_VERSION}`
   };
+const ROTATED_MAPS_CW = new Set(["Split", "Haven"]);
 const calibrationOverrides = {
   "dortmund|Haven|ct": [
     { x: 29.842180774748922, y: 54.85201460119412 },
@@ -374,6 +375,9 @@ function buildCalibrationExport() {
 }
 
 function updateCalibrationPanel(infoAvailable) {
+  if (!calibrationPanel || !calibrationToggle || !calibrationExport) {
+    return;
+  }
   const visible = activeView === "map" && infoAvailable;
   calibrationPanel.classList.toggle("hidden", !visible);
   if (!visible) return;
@@ -390,7 +394,9 @@ function setCalibrationOverride(sideKey, index, x, y) {
     x: clamp(Number(x), 0, 100),
     y: clamp(Number(y), 0, 100)
   };
-  calibrationExport.value = buildCalibrationExport();
+  if (calibrationExport) {
+    calibrationExport.value = buildCalibrationExport();
+  }
 }
 
 function beginHeatmapDrag(event) {
@@ -425,9 +431,19 @@ function endHeatmapDrag() {
   function renderHeatmap(target, points, sideLabel, mapName, sideKey, metricLabel) {
     applyHeatmapBackground(target, mapName);
     const frameStyle = getContainedFrameStyle(mapName);
+    const mapImage = MAP_IMAGE_PATHS[mapName] ?? "";
+    const frameClassList = [
+      "heat-layer-frame",
+      mapImage ? "has-map" : "",
+      ROTATED_MAPS_CW.has(mapName) ? "rotate-cw" : ""
+    ]
+      .filter(Boolean)
+      .join(" ");
+    const frameMapStyle = mapImage ? `--frame-map-image:url("${mapImage}");` : "";
+    const frameInlineStyle = `${frameStyle}${frameMapStyle}`;
     if (!points.length) {
       target.innerHTML = `
-        <div class="heat-layer-frame" style="${frameStyle}">
+        <div class="${frameClassList}" style="${frameInlineStyle}">
           <div class="heatmap-empty">
           <p>No ${sideLabel} ${metricLabel.toLowerCase()} samples in the last 10 maps.</p>
           </div>
@@ -450,7 +466,7 @@ function endHeatmapDrag() {
     });
 
     target.innerHTML = `
-      <div class="heat-layer-frame" style="${frameStyle}">
+      <div class="${frameClassList}" style="${frameInlineStyle}">
         <div class="heat-layer">
           <svg class="heat-links" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
             ${visualPoints
@@ -500,7 +516,7 @@ function renderMapInfo() {
     heatmapGrid.classList.add("hidden");
     mapWarning.classList.add("hidden");
     mapSampleCard.classList.add("hidden");
-    calibrationPanel.classList.add("hidden");
+    calibrationPanel?.classList.add("hidden");
     mapSelect.innerHTML = "";
     mapSelect.disabled = true;
     mapPlaceholder.innerHTML = `
@@ -639,18 +655,22 @@ fkTypeSelect.addEventListener("change", (event) => {
   renderHero(allVetoHistoryData[activeTeam]);
 });
 
-calibrationToggle.addEventListener("click", () => {
-  calibrationMode = !calibrationMode;
-  renderMapInfo();
-});
+if (calibrationToggle) {
+  calibrationToggle.addEventListener("click", () => {
+    calibrationMode = !calibrationMode;
+    renderMapInfo();
+  });
+}
 
-calibrationReset.addEventListener("click", () => {
-  delete calibrationOverrides[getCalibrationKey(activeTeam, activeMap, "ct")];
-  delete calibrationOverrides[getCalibrationKey(activeTeam, activeMap, "t")];
-  delete calibrationOverrides[getLegacyCalibrationKey(activeTeam, activeMap, "ct")];
-  delete calibrationOverrides[getLegacyCalibrationKey(activeTeam, activeMap, "t")];
-  renderMapInfo();
-});
+if (calibrationReset) {
+  calibrationReset.addEventListener("click", () => {
+    delete calibrationOverrides[getCalibrationKey(activeTeam, activeMap, "ct")];
+    delete calibrationOverrides[getCalibrationKey(activeTeam, activeMap, "t")];
+    delete calibrationOverrides[getLegacyCalibrationKey(activeTeam, activeMap, "ct")];
+    delete calibrationOverrides[getLegacyCalibrationKey(activeTeam, activeMap, "t")];
+    renderMapInfo();
+  });
+}
 
 startButton.addEventListener("click", () => {
   startDateInput.showPicker?.();

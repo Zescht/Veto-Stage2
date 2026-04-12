@@ -290,14 +290,12 @@ function getCalibrationKey(teamKey, mapName, sideKey) {
   return `${teamKey}|${mapName}|${sideKey}`;
 }
 
-function projectHeatmapPoint(point) {
-  // Our local minimap PNGs are rotated relative to Riot's normalized coordinate plane.
-  // Remap points into the image orientation instead of mutating the raw source data.
-  return {
-    x: 100 - point.normY,
-    y: 100 - point.normX
-  };
-}
+  function projectHeatmapPoint(point) {
+    return {
+      x: point.normX,
+      y: point.normY
+    };
+  }
 
 function getCalibratedPoint(point, mapName, sideKey, index) {
   const override = calibrationOverrides[getCalibrationKey(activeTeam, mapName, sideKey)]?.[index];

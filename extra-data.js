@@ -1923,6 +1923,54 @@ const extraVetoHistoryData = {
           "ownerLabel": "ECO",
           "ownerKind": "team"
         }
+      },
+      {
+        "date": "2026-03-22",
+        "opponent": "Playing Ducks",
+        "opponentAbbr": "PD",
+        "score": "2 - 0",
+        "source": "",
+        "sourceLabel": "manual screenshot",
+        "decider": "Split",
+        "deciderScore": "",
+        "ban1": {
+          "map": "Haven",
+          "type": "ban",
+          "ownerLabel": "ECO",
+          "ownerKind": "team"
+        },
+        "ban2": {
+          "map": "Corrode",
+          "type": "ban",
+          "ownerLabel": "PD",
+          "ownerKind": "opp"
+        },
+        "pick1": {
+          "map": "Abyss",
+          "type": "pick",
+          "ownerLabel": "ECO",
+          "ownerKind": "team",
+          "score": "13:10"
+        },
+        "pick2": {
+          "map": "Pearl",
+          "type": "pick",
+          "ownerLabel": "PD",
+          "ownerKind": "opp",
+          "score": "13:7"
+        },
+        "ban3": {
+          "map": "Breeze",
+          "type": "ban",
+          "ownerLabel": "ECO",
+          "ownerKind": "team"
+        },
+        "ban4": {
+          "map": "Bind",
+          "type": "ban",
+          "ownerLabel": "PD",
+          "ownerKind": "opp"
+        }
       }
     ]
   }

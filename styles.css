@@ -746,18 +746,18 @@ body {
 
 .heat-link {
   stroke: rgba(63, 201, 255, 0.95);
-  stroke-width: 1.1;
+  stroke-width: 2.2;
   vector-effect: non-scaling-stroke;
   stroke-linecap: round;
 }
 
 .heat-victim-point {
   position: absolute;
-  width: 14px;
-  height: 14px;
+  width: 10px;
+  height: 10px;
   transform: translate(-50%, -50%);
   border-radius: 999px;
-  border: 1.5px solid rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(255, 255, 255, 0.98);
   background: rgba(39, 198, 255, 0.95);
   box-shadow: 0 0 26px rgba(39, 198, 255, 0.78);
   pointer-events: none;
@@ -765,15 +765,7 @@ body {
 }
 
 .heat-victim-point::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 4.5px;
-  height: 4.5px;
-  transform: translate(-50%, -50%);
-  border-radius: 999px;
-  background: rgba(3, 17, 26, 0.9);
+  content: none;
 }
 
 .heat-point {
@@ -823,12 +815,12 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 7.5px;
-  height: 7.5px;
+  width: 5px;
+  height: 5px;
   transform: translate(-50%, -50%);
   border-radius: 999px;
   background: #ad1414;
-  box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 0.86);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.86);
 }
 
 .heat-point:hover {

@@ -540,7 +540,7 @@ function renderMapInfo() {
   const metricLabel = getFkTypeLabel();
   mapModuleEyebrow.textContent = `${metricLabel} Heatmaps`;
   mapInfoTitle.textContent = `${team.name} Map Info`;
-  mapInfoCopy.textContent = `${metricLabel} heatmaps from the last ${info.sampleSize} ${team.name} maps.`;
+  mapInfoCopy.textContent = `${metricLabel} heatmaps from the last ${info.sampleSize} ${team.name} maps. Red = killer, blue = victim, line = kill trajectory.`;
   ctHeatTitle.textContent = `${metricLabel} Positions`;
   tHeatTitle.textContent = `${metricLabel} Positions`;
 

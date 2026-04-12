@@ -22,16 +22,17 @@ const allRowMeta = {
   ...(typeof extraVetoRowMeta !== "undefined" ? extraVetoRowMeta : {})
 };
 const allMapInfo = typeof mapInfoData !== "undefined" ? mapInfoData : {};
-const MAP_IMAGE_PATHS = {
-  Bind: "./maps/Bind.png",
-  Breeze: "./maps/Breeze.png",
-  Fracture: "./maps/Fracture.png",
-  Haven: "./maps/Haven.png",
-  Lotus: "./maps/Lotus.png",
-  Pearl: "./maps/Pearl.png",
-  Split: "./maps/Split.png",
-  Corrode: "./maps/Corrode.png"
-};
+  const MAP_IMAGE_VERSION = "20260412-riot";
+  const MAP_IMAGE_PATHS = {
+    Bind: `./maps/Bind.png?v=${MAP_IMAGE_VERSION}`,
+    Breeze: `./maps/Breeze.png?v=${MAP_IMAGE_VERSION}`,
+    Fracture: `./maps/Fracture.png?v=${MAP_IMAGE_VERSION}`,
+    Haven: `./maps/Haven.png?v=${MAP_IMAGE_VERSION}`,
+    Lotus: `./maps/Lotus.png?v=${MAP_IMAGE_VERSION}`,
+    Pearl: `./maps/Pearl.png?v=${MAP_IMAGE_VERSION}`,
+    Split: `./maps/Split.png?v=${MAP_IMAGE_VERSION}`,
+    Corrode: `./maps/Corrode.png?v=${MAP_IMAGE_VERSION}`
+  };
 const calibrationOverrides = {
   "dortmund|Haven|ct": [
     { x: 29.842180774748922, y: 54.85201460119412 },

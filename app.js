@@ -439,11 +439,14 @@ function endHeatmapDrag() {
     ]
       .filter(Boolean)
       .join(" ");
-    const frameMapStyle = mapImage ? `--frame-map-image:url("${mapImage}");` : "";
-    const frameInlineStyle = `${frameStyle}${frameMapStyle}`;
+    const frameInlineStyle = frameStyle;
+    const mapImageMarkup = mapImage
+      ? `<img class="heat-map-image" src="${mapImage}" alt="${mapName} map" loading="lazy" decoding="async" />`
+      : "";
     if (!points.length) {
       target.innerHTML = `
         <div class="${frameClassList}" style="${frameInlineStyle}">
+          ${mapImageMarkup}
           <div class="heatmap-empty">
           <p>No ${sideLabel} ${metricLabel.toLowerCase()} samples in the last 10 maps.</p>
           </div>
@@ -467,6 +470,7 @@ function endHeatmapDrag() {
 
     target.innerHTML = `
       <div class="${frameClassList}" style="${frameInlineStyle}">
+        ${mapImageMarkup}
         <div class="heat-layer">
           <svg class="heat-links" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
             ${visualPoints

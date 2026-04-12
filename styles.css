@@ -736,17 +736,25 @@ body {
 .heat-layer-frame.has-map {
   background:
     linear-gradient(rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08)),
-    var(--frame-map-image),
     #0b1014;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover, contain, cover;
 }
 
 .heat-layer {
   position: absolute;
   inset: 0;
   z-index: 2;
+}
+
+.heat-map-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
 }
 
 .heat-layer-frame {
@@ -794,15 +802,15 @@ body {
 
 .heat-point {
   position: absolute;
-  width: 78px;
-  height: 78px;
+  width: 10px;
+  height: 10px;
   transform: translate(-50%, -50%);
-  border: none;
+  border: 1.5px solid rgba(255, 255, 255, 0.92);
   border-radius: 999px;
   cursor: pointer;
   z-index: 4;
-  background:
-      radial-gradient(circle, rgba(255, 73, 73, 0.82) 0%, rgba(255, 73, 73, 0.4) 24%, rgba(255, 73, 73, 0.16) 48%, rgba(255, 73, 73, 0) 72%);
+  background: #d61f1f;
+  box-shadow: none;
 }
 
 .heat-point.calibration-enabled {
@@ -835,16 +843,7 @@ body {
 }
 
 .heat-point::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 5px;
-  height: 5px;
-  transform: translate(-50%, -50%);
-  border-radius: 999px;
-  background: #ad1414;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.86);
+  content: none;
 }
 
 .heat-point:hover {

@@ -491,6 +491,13 @@ body {
   gap: 20px;
 }
 
+.map-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
 .map-info-title {
   margin: 0;
   font-family: "Space Grotesk", sans-serif;
@@ -866,6 +873,10 @@ body {
   .heatmap-grid {
     grid-template-columns: 1fr;
     display: grid;
+  }
+
+  .map-controls {
+    justify-content: flex-start;
   }
 
   .calibration-head {

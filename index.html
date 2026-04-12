@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260412a" />
+    <link rel="stylesheet" href="./styles.css?v=20260412b" />
   </head>
   <body>
     <div class="page-shell">
@@ -101,14 +101,23 @@
         <section class="map-info-view hidden" id="map-view">
           <div class="map-info-toolbar">
             <div>
-              <p class="eyebrow">Operator First-Kill Heatmaps</p>
+              <p class="eyebrow" id="map-module-eyebrow">Operator First-Kill Heatmaps</p>
               <h2 class="map-info-title" id="map-info-title">Map Info</h2>
               <p class="map-info-copy" id="map-info-copy"></p>
             </div>
-            <label class="map-select-shell" for="map-select">
-              <span class="map-select-label">Map</span>
-              <select class="map-select" id="map-select"></select>
-            </label>
+            <div class="map-controls">
+              <label class="map-select-shell" for="fk-type-select">
+                <span class="map-select-label">FK Type</span>
+                <select class="map-select" id="fk-type-select">
+                  <option value="operator">OP FK</option>
+                  <option value="all">All FK</option>
+                </select>
+              </label>
+              <label class="map-select-shell" for="map-select">
+                <span class="map-select-label">Map</span>
+                <select class="map-select" id="map-select"></select>
+              </label>
+            </div>
           </div>
 
           <div class="map-sample-card" id="map-sample-card"></div>
@@ -137,7 +146,7 @@
               <div class="heatmap-card-head">
                 <div>
                   <p class="heatmap-side-label">CT-side</p>
-                  <h3>Operator First-Kill Positions</h3>
+                  <h3 id="ct-heat-title">Operator First-Kill Positions</h3>
                 </div>
                 <p class="heatmap-count" id="ct-count">0 samples</p>
               </div>
@@ -150,7 +159,7 @@
               <div class="heatmap-card-head">
                 <div>
                   <p class="heatmap-side-label">T-side</p>
-                  <h3>Operator First-Kill Positions</h3>
+                  <h3 id="t-heat-title">Operator First-Kill Positions</h3>
                 </div>
                 <p class="heatmap-count" id="t-count">0 samples</p>
               </div>
@@ -163,13 +172,13 @@
       </main>
     </div>
 
-    <script src="./data.js?v=20260412a"></script>
-    <script src="./pick-meta.js?v=20260412a"></script>
-    <script src="./extra-data.js?v=20260412a"></script>
-    <script src="./extra-pick-meta.js?v=20260412a"></script>
-    <script src="./extra-score-meta.js?v=20260412a"></script>
-    <script src="./extra-row-meta.js?v=20260412a"></script>
-    <script src="./map-info-data.js?v=20260412a"></script>
-    <script src="./app.js?v=20260412a"></script>
+    <script src="./data.js?v=20260412b"></script>
+    <script src="./pick-meta.js?v=20260412b"></script>
+    <script src="./extra-data.js?v=20260412b"></script>
+    <script src="./extra-pick-meta.js?v=20260412b"></script>
+    <script src="./extra-score-meta.js?v=20260412b"></script>
+    <script src="./extra-row-meta.js?v=20260412b"></script>
+    <script src="./map-info-data.js?v=20260412b"></script>
+    <script src="./app.js?v=20260412b"></script>
   </body>
 </html>

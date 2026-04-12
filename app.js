@@ -58,6 +58,7 @@ let activeTeam = teamOrder[0];
 let activeView = "veto";
 let startDateFilter = "";
 let activeMap = "Bind";
+let activeFkType = "operator";
 
 const viewVetoButton = document.getElementById("view-veto");
 const viewMapButton = document.getElementById("view-map");
@@ -76,8 +77,10 @@ const mostPlayedList = document.getElementById("most-played-list");
 const timeframeControls = document.getElementById("timeframe-controls");
 const vetoView = document.getElementById("veto-view");
 const mapView = document.getElementById("map-view");
+const mapModuleEyebrow = document.getElementById("map-module-eyebrow");
 const mapInfoTitle = document.getElementById("map-info-title");
 const mapInfoCopy = document.getElementById("map-info-copy");
+const fkTypeSelect = document.getElementById("fk-type-select");
 const mapSelect = document.getElementById("map-select");
 const mapSampleCard = document.getElementById("map-sample-card");
 const mapWarning = document.getElementById("map-warning");
@@ -89,6 +92,8 @@ const mapPlaceholder = document.getElementById("map-placeholder");
 const heatmapGrid = document.getElementById("heatmap-grid");
 const ctCount = document.getElementById("ct-count");
 const tCount = document.getElementById("t-count");
+const ctHeatTitle = document.getElementById("ct-heat-title");
+const tHeatTitle = document.getElementById("t-heat-title");
 const ctHeatmap = document.getElementById("ct-heatmap");
 const tHeatmap = document.getElementById("t-heatmap");
 let calibrationMode = false;
@@ -297,7 +302,28 @@ function clamp(value, min, max) {
 }
 
 function getCalibrationKey(teamKey, mapName, sideKey) {
+  return `${teamKey}|${mapName}|${sideKey}|${activeFkType}`;
+}
+
+function getLegacyCalibrationKey(teamKey, mapName, sideKey) {
   return `${teamKey}|${mapName}|${sideKey}`;
+}
+
+function getFkTypeLabel() {
+  return activeFkType === "all" ? "All First-Kill" : "Operator First-Kill";
+}
+
+function getMapPointsByType(mapData) {
+  if (activeFkType === "all") {
+    return {
+      ct: mapData?.all_ct?.points ?? [],
+      t: mapData?.all_t?.points ?? []
+    };
+  }
+  return {
+    ct: mapData?.ct?.points ?? [],
+    t: mapData?.t?.points ?? []
+  };
 }
 
   function projectHeatmapPoint(point) {
@@ -327,7 +353,9 @@ function getCalibrationKey(teamKey, mapName, sideKey) {
   }
 
 function getCalibratedPoint(point, mapName, sideKey, index) {
-  const override = calibrationOverrides[getCalibrationKey(activeTeam, mapName, sideKey)]?.[index];
+  const override =
+    calibrationOverrides[getCalibrationKey(activeTeam, mapName, sideKey)]?.[index] ??
+    calibrationOverrides[getLegacyCalibrationKey(activeTeam, mapName, sideKey)]?.[index];
   return override ?? projectHeatmapPoint(point);
 }
 
@@ -336,6 +364,7 @@ function buildCalibrationExport() {
     {
       team: activeTeam,
       map: activeMap,
+      fkType: activeFkType,
       ct: calibrationOverrides[getCalibrationKey(activeTeam, activeMap, "ct")] ?? [],
       t: calibrationOverrides[getCalibrationKey(activeTeam, activeMap, "t")] ?? []
     },
@@ -393,14 +422,14 @@ function endHeatmapDrag() {
   dragState = null;
 }
 
-  function renderHeatmap(target, points, sideLabel, mapName, sideKey) {
+  function renderHeatmap(target, points, sideLabel, mapName, sideKey, metricLabel) {
     applyHeatmapBackground(target, mapName);
     const frameStyle = getContainedFrameStyle(mapName);
     if (!points.length) {
       target.innerHTML = `
         <div class="heat-layer-frame" style="${frameStyle}">
           <div class="heatmap-empty">
-          <p>No ${sideLabel} Operator first-kill samples in the last 10 maps.</p>
+          <p>No ${sideLabel} ${metricLabel.toLowerCase()} samples in the last 10 maps.</p>
           </div>
         </div>
       `;
@@ -461,7 +490,10 @@ function renderMapInfo() {
   const preferredMap =
     allowedMaps.find((mapName) => {
       const mapData = info.maps?.[mapName];
-      return (mapData?.ct?.points?.length ?? 0) + (mapData?.t?.points?.length ?? 0) > 0;
+      const metricPoints = activeFkType === "all"
+        ? (mapData?.all_ct?.points?.length ?? 0) + (mapData?.all_t?.points?.length ?? 0)
+        : (mapData?.ct?.points?.length ?? 0) + (mapData?.t?.points?.length ?? 0);
+      return metricPoints > 0;
     }) ?? allowedMaps[0] ?? "Bind";
 
   if (!allowedMaps.includes(activeMap)) {
@@ -472,9 +504,14 @@ function renderMapInfo() {
     .map((mapName) => `<option value="${mapName}">${mapName}</option>`)
     .join("");
   mapSelect.value = activeMap;
+  fkTypeSelect.value = activeFkType;
 
+  const metricLabel = getFkTypeLabel();
+  mapModuleEyebrow.textContent = `${metricLabel} Heatmaps`;
   mapInfoTitle.textContent = `${team.name} Map Info`;
-  mapInfoCopy.textContent = `Operator first-kill heatmaps from the last ${info.sampleSize} ${team.name} maps.`;
+  mapInfoCopy.textContent = `${metricLabel} heatmaps from the last ${info.sampleSize} ${team.name} maps.`;
+  ctHeatTitle.textContent = `${metricLabel} Positions`;
+  tHeatTitle.textContent = `${metricLabel} Positions`;
 
   mapSampleCard.innerHTML = `
     <p class="map-sample-label">Last ${info.sampleSize} maps in sample</p>
@@ -494,15 +531,16 @@ function renderMapInfo() {
     mapWarning.innerHTML = "";
   }
 
-  const mapData = info.maps?.[activeMap] ?? { ct: { points: [] }, t: { points: [] } };
-  const ctPoints = mapData.ct?.points ?? [];
-  const tPoints = mapData.t?.points ?? [];
+  const mapData = info.maps?.[activeMap] ?? { ct: { points: [] }, t: { points: [] }, all_ct: { points: [] }, all_t: { points: [] } };
+  const metricPoints = getMapPointsByType(mapData);
+  const ctPoints = metricPoints.ct;
+  const tPoints = metricPoints.t;
 
   ctCount.textContent = pluralizeSamples(ctPoints.length);
   tCount.textContent = pluralizeSamples(tPoints.length);
   updateCalibrationPanel(true);
-  renderHeatmap(ctHeatmap, ctPoints, "CT-side", activeMap, "ct");
-  renderHeatmap(tHeatmap, tPoints, "T-side", activeMap, "t");
+  renderHeatmap(ctHeatmap, ctPoints, "CT-side", activeMap, "ct", metricLabel);
+  renderHeatmap(tHeatmap, tPoints, "T-side", activeMap, "t", metricLabel);
 }
 
 function renderHero(team) {
@@ -511,7 +549,7 @@ function renderHero(team) {
     heroCopy.innerHTML = `Historical pick/ban performance for <span class="team-accent" id="hero-team">${team.name}</span>`;
   } else {
     heroTitle.textContent = "Map Info";
-    heroCopy.innerHTML = `Operator first-kill heatmaps for <span class="team-accent" id="hero-team">${team.name}</span>`;
+    heroCopy.innerHTML = `${getFkTypeLabel()} heatmaps for <span class="team-accent" id="hero-team">${team.name}</span>`;
   }
 }
 
@@ -555,12 +593,19 @@ viewMapButton.addEventListener("click", () => {
 
 teamSelect.addEventListener("change", (event) => {
   activeTeam = event.target.value;
+  activeFkType = activeTeam === "eco" ? "all" : "operator";
   render();
 });
 
 mapSelect.addEventListener("change", (event) => {
   activeMap = event.target.value;
   renderMapInfo();
+});
+
+fkTypeSelect.addEventListener("change", (event) => {
+  activeFkType = event.target.value;
+  renderMapInfo();
+  renderHero(allVetoHistoryData[activeTeam]);
 });
 
 calibrationToggle.addEventListener("click", () => {
@@ -571,6 +616,8 @@ calibrationToggle.addEventListener("click", () => {
 calibrationReset.addEventListener("click", () => {
   delete calibrationOverrides[getCalibrationKey(activeTeam, activeMap, "ct")];
   delete calibrationOverrides[getCalibrationKey(activeTeam, activeMap, "t")];
+  delete calibrationOverrides[getLegacyCalibrationKey(activeTeam, activeMap, "ct")];
+  delete calibrationOverrides[getLegacyCalibrationKey(activeTeam, activeMap, "t")];
   renderMapInfo();
 });
 

@@ -436,18 +436,49 @@ function endHeatmapDrag() {
       return;
     }
   
+    const visualPoints = points.map((point, index) => {
+      const killer = getCalibratedPoint(point, mapName, sideKey, index);
+      const hasVictimCoords =
+        point.victimNormX !== undefined &&
+        point.victimNormY !== undefined &&
+        point.victimNormX !== null &&
+        point.victimNormY !== null;
+      const victim = hasVictimCoords
+        ? projectHeatmapPoint({ normX: point.victimNormX, normY: point.victimNormY })
+        : null;
+      return { point, index, killer, victim };
+    });
+
     target.innerHTML = `
       <div class="heat-layer-frame" style="${frameStyle}">
         <div class="heat-layer">
-        ${points
-          .map((point, index) => {
-            const projected = getCalibratedPoint(point, mapName, sideKey, index);
+          <svg class="heat-links" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+            ${visualPoints
+              .filter((entry) => entry.victim)
+              .map(
+                (entry) => `
+              <line class="heat-link" x1="${entry.killer.x}" y1="${entry.killer.y}" x2="${entry.victim.x}" y2="${entry.victim.y}"></line>
+            `
+              )
+              .join("")}
+          </svg>
+          ${visualPoints
+            .filter((entry) => entry.victim)
+            .map(
+              (entry) => `
+            <span class="heat-victim-point" style="left:${entry.victim.x}%; top:${entry.victim.y}%"></span>
+          `
+            )
+            .join("")}
+        ${visualPoints
+          .map((entry) => {
+            const { point, index, killer } = entry;
             return `
             <button
               class="heat-point ${calibrationMode ? "calibration-enabled" : ""}"
               type="button"
-              style="left:${projected.x}%; top:${projected.y}%"
-              title="${point.player} | ${point.date} vs ${point.opponent} | R${point.roundNum} | ${point.score}"
+              style="left:${killer.x}%; top:${killer.y}%"
+              title="${point.player} -> ${point.victim ?? "?"} | ${point.date} vs ${point.opponent} | R${point.roundNum} | ${point.score}"
               aria-label="${point.player} ${point.date} versus ${point.opponent}"
               data-side-key="${sideKey}"
               data-point-index="${index}"

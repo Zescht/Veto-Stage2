@@ -23,6 +23,16 @@ const allRowMeta = {
 };
 const allMapInfo = typeof mapInfoData !== "undefined" ? mapInfoData : {};
   const MAP_IMAGE_VERSION = "20260412-riot";
+  const MAP_IMAGE_ASPECTS = {
+    Bind: 1,
+    Breeze: 1,
+    Corrode: 1,
+    Fracture: 1,
+    Haven: 1,
+    Lotus: 1,
+    Pearl: 1,
+    Split: 1
+  };
   const MAP_IMAGE_PATHS = {
     Bind: `./maps/Bind.png?v=${MAP_IMAGE_VERSION}`,
     Breeze: `./maps/Breeze.png?v=${MAP_IMAGE_VERSION}`,
@@ -297,6 +307,25 @@ function getCalibrationKey(teamKey, mapName, sideKey) {
     };
   }
 
+  function getContainedFrameStyle(mapName) {
+    const imageAspect = MAP_IMAGE_ASPECTS[mapName] ?? 1;
+    const canvasAspect = 1318 / 772;
+    let width = 100;
+    let height = 100;
+    let left = 0;
+    let top = 0;
+
+    if (canvasAspect > imageAspect) {
+      width = (imageAspect / canvasAspect) * 100;
+      left = (100 - width) / 2;
+    } else if (canvasAspect < imageAspect) {
+      height = (canvasAspect / imageAspect) * 100;
+      top = (100 - height) / 2;
+    }
+
+    return `left:${left}%; top:${top}%; width:${width}%; height:${height}%;`;
+  }
+
 function getCalibratedPoint(point, mapName, sideKey, index) {
   const override = calibrationOverrides[getCalibrationKey(activeTeam, mapName, sideKey)]?.[index];
   return override ?? projectHeatmapPoint(point);
@@ -364,23 +393,27 @@ function endHeatmapDrag() {
   dragState = null;
 }
 
-function renderHeatmap(target, points, sideLabel, mapName, sideKey) {
-  applyHeatmapBackground(target, mapName);
-  if (!points.length) {
+  function renderHeatmap(target, points, sideLabel, mapName, sideKey) {
+    applyHeatmapBackground(target, mapName);
+    const frameStyle = getContainedFrameStyle(mapName);
+    if (!points.length) {
+      target.innerHTML = `
+        <div class="heat-layer-frame" style="${frameStyle}">
+          <div class="heatmap-empty">
+          <p>No ${sideLabel} Operator first-kill samples in the last 10 maps.</p>
+          </div>
+        </div>
+      `;
+      return;
+    }
+  
     target.innerHTML = `
-      <div class="heatmap-empty">
-        <p>No ${sideLabel} Operator first-kill samples in the last 10 maps.</p>
-      </div>
-    `;
-    return;
-  }
-
-  target.innerHTML = `
-    <div class="heat-layer">
-      ${points
-        .map((point, index) => {
-          const projected = getCalibratedPoint(point, mapName, sideKey, index);
-          return `
+      <div class="heat-layer-frame" style="${frameStyle}">
+        <div class="heat-layer">
+        ${points
+          .map((point, index) => {
+            const projected = getCalibratedPoint(point, mapName, sideKey, index);
+            return `
             <button
               class="heat-point ${calibrationMode ? "calibration-enabled" : ""}"
               type="button"
@@ -390,12 +423,13 @@ function renderHeatmap(target, points, sideLabel, mapName, sideKey) {
               data-side-key="${sideKey}"
               data-point-index="${index}"
             >${calibrationMode ? `<span class="heat-point-label">${index + 1}</span>` : ""}</button>
-          `;
-        })
-        .join("")}
-    </div>
-  `;
-}
+            `;
+          })
+          .join("")}
+        </div>
+      </div>
+    `;
+  }
 
 function renderMapInfo() {
   const info = allMapInfo?.[activeTeam];

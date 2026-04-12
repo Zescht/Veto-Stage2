@@ -723,6 +723,10 @@ body {
   inset: 0;
 }
 
+.heat-layer-frame {
+  position: absolute;
+}
+
 .heat-point {
   position: absolute;
   width: 78px;

@@ -32,8 +32,17 @@ const MAP_IMAGE_PATHS = {
   Split: "./maps/Split.png",
   Corrode: "./maps/Corrode.png"
 };
+const calibrationOverrides = {
+  "dortmund|Haven|ct": [
+    { x: 29.842180774748922, y: 54.85201460119412 },
+    { x: 47.77618364418939, y: 91.34925893677281 },
+    { x: 67.57532281205165, y: 59.01612972672995 },
+    { x: 42.03730272596843, y: 48.973263835731785 }
+  ],
+  "dortmund|Haven|t": []
+};
 
-const teamOrder = ["fokus", "eintracht", "attax", "dortmund"].filter((key) => allVetoHistoryData[key]);
+const teamOrder = ["fokus", "eintracht", "attax", "dortmund", "eco"].filter((key) => allVetoHistoryData[key]);
 let activeTeam = teamOrder[0];
 let activeView = "veto";
 let startDateFilter = "";
@@ -61,12 +70,18 @@ const mapInfoCopy = document.getElementById("map-info-copy");
 const mapSelect = document.getElementById("map-select");
 const mapSampleCard = document.getElementById("map-sample-card");
 const mapWarning = document.getElementById("map-warning");
+const calibrationPanel = document.getElementById("calibration-panel");
+const calibrationToggle = document.getElementById("calibration-toggle");
+const calibrationReset = document.getElementById("calibration-reset");
+const calibrationExport = document.getElementById("calibration-export");
 const mapPlaceholder = document.getElementById("map-placeholder");
 const heatmapGrid = document.getElementById("heatmap-grid");
 const ctCount = document.getElementById("ct-count");
 const tCount = document.getElementById("t-count");
 const ctHeatmap = document.getElementById("ct-heatmap");
 const tHeatmap = document.getElementById("t-heatmap");
+let calibrationMode = false;
+let dragState = null;
 
 function getRowLookupKey(row) {
   return `${row.date}|${row.opponentAbbr ?? row.opponent}`;
@@ -208,6 +223,9 @@ function renderTable(team) {
       const { month, day } = formatDate(row.date);
       const deciderMeta = getStepMeta(row, "decider");
       const deciderScore = formatMapScore(getStepScore(row, "decider", row.deciderScore));
+      const sourceMarkup = row.source
+        ? `<a class="source-link" href="${row.source}" target="_blank" rel="noreferrer">${row.sourceLabel ?? "match page"}</a>`
+        : `<span class="source-link source-text">${row.sourceLabel ?? "manual"}</span>`;
       return `
         <tr>
           <td>
@@ -219,7 +237,7 @@ function renderTable(team) {
           <td class="opponent-cell">
             <div class="opponent-cell-wrap">
               <p class="opponent-name" title="${row.opponent}">${row.opponentAbbr ?? row.opponent}</p>
-              <a class="source-link" href="${row.source}" target="_blank" rel="noreferrer">${row.sourceLabel ?? "match page"}</a>
+              ${sourceMarkup}
             </div>
           </td>
           ${stepConfig.map(({ key }) => makeStepCell(row[key], row, key)).join("")}
@@ -263,6 +281,14 @@ function applyHeatmapBackground(target, mapName) {
   }
 }
 
+function clamp(value, min, max) {
+  return Math.min(Math.max(value, min), max);
+}
+
+function getCalibrationKey(teamKey, mapName, sideKey) {
+  return `${teamKey}|${mapName}|${sideKey}`;
+}
+
 function projectHeatmapPoint(point) {
   // Our local minimap PNGs are rotated relative to Riot's normalized coordinate plane.
   // Remap points into the image orientation instead of mutating the raw source data.
@@ -272,7 +298,74 @@ function projectHeatmapPoint(point) {
   };
 }
 
-function renderHeatmap(target, points, sideLabel, mapName) {
+function getCalibratedPoint(point, mapName, sideKey, index) {
+  const override = calibrationOverrides[getCalibrationKey(activeTeam, mapName, sideKey)]?.[index];
+  return override ?? projectHeatmapPoint(point);
+}
+
+function buildCalibrationExport() {
+  return JSON.stringify(
+    {
+      team: activeTeam,
+      map: activeMap,
+      ct: calibrationOverrides[getCalibrationKey(activeTeam, activeMap, "ct")] ?? [],
+      t: calibrationOverrides[getCalibrationKey(activeTeam, activeMap, "t")] ?? []
+    },
+    null,
+    2
+  );
+}
+
+function updateCalibrationPanel(infoAvailable) {
+  const visible = activeView === "map" && infoAvailable;
+  calibrationPanel.classList.toggle("hidden", !visible);
+  if (!visible) return;
+
+  calibrationToggle.textContent = calibrationMode ? "Disable Calibration" : "Enable Calibration";
+  calibrationToggle.classList.toggle("active", calibrationMode);
+  calibrationExport.value = buildCalibrationExport();
+}
+
+function setCalibrationOverride(sideKey, index, x, y) {
+  const key = getCalibrationKey(activeTeam, activeMap, sideKey);
+  calibrationOverrides[key] ||= [];
+  calibrationOverrides[key][index] = {
+    x: clamp(Number(x), 0, 100),
+    y: clamp(Number(y), 0, 100)
+  };
+  calibrationExport.value = buildCalibrationExport();
+}
+
+function beginHeatmapDrag(event) {
+  if (!calibrationMode) return;
+  const pointButton = event.target.closest(".heat-point.calibration-enabled");
+  if (!pointButton) return;
+  const canvas = pointButton.closest(".heatmap-canvas");
+  if (!canvas) return;
+  event.preventDefault();
+  dragState = {
+    canvas,
+    sideKey: pointButton.dataset.sideKey,
+    pointIndex: Number(pointButton.dataset.pointIndex),
+    pointButton
+  };
+}
+
+function updateHeatmapDrag(event) {
+  if (!dragState) return;
+  const rect = dragState.canvas.getBoundingClientRect();
+  const x = clamp(((event.clientX - rect.left) / rect.width) * 100, 0, 100);
+  const y = clamp(((event.clientY - rect.top) / rect.height) * 100, 0, 100);
+  dragState.pointButton.style.left = `${x}%`;
+  dragState.pointButton.style.top = `${y}%`;
+  setCalibrationOverride(dragState.sideKey, dragState.pointIndex, x, y);
+}
+
+function endHeatmapDrag() {
+  dragState = null;
+}
+
+function renderHeatmap(target, points, sideLabel, mapName, sideKey) {
   applyHeatmapBackground(target, mapName);
   if (!points.length) {
     target.innerHTML = `
@@ -286,16 +379,18 @@ function renderHeatmap(target, points, sideLabel, mapName) {
   target.innerHTML = `
     <div class="heat-layer">
       ${points
-        .map((point) => {
-          const projected = projectHeatmapPoint(point);
+        .map((point, index) => {
+          const projected = getCalibratedPoint(point, mapName, sideKey, index);
           return `
             <button
-              class="heat-point"
+              class="heat-point ${calibrationMode ? "calibration-enabled" : ""}"
               type="button"
               style="left:${projected.x}%; top:${projected.y}%"
               title="${point.player} | ${point.date} vs ${point.opponent} | R${point.roundNum} | ${point.score}"
               aria-label="${point.player} ${point.date} versus ${point.opponent}"
-            ></button>
+              data-side-key="${sideKey}"
+              data-point-index="${index}"
+            >${calibrationMode ? `<span class="heat-point-label">${index + 1}</span>` : ""}</button>
           `;
         })
         .join("")}
@@ -312,11 +407,12 @@ function renderMapInfo() {
     heatmapGrid.classList.add("hidden");
     mapWarning.classList.add("hidden");
     mapSampleCard.classList.add("hidden");
+    calibrationPanel.classList.add("hidden");
     mapSelect.innerHTML = "";
     mapSelect.disabled = true;
     mapPlaceholder.innerHTML = `
       <h3>Map-Info is not wired for this team yet.</h3>
-      <p>Right now the Operator first-kill heatmap module is available for Dortmund only.</p>
+      <p>This team does not have a map-info export yet.</p>
     `;
     mapInfoTitle.textContent = `${team.name} Map Info`;
     mapInfoCopy.textContent = "Operator first-kill positioning module.";
@@ -345,7 +441,7 @@ function renderMapInfo() {
   mapSelect.value = activeMap;
 
   mapInfoTitle.textContent = `${team.name} Map Info`;
-  mapInfoCopy.textContent = `Operator first-kill heatmaps from the last ${info.sampleSize} Dortmund maps.`;
+  mapInfoCopy.textContent = `Operator first-kill heatmaps from the last ${info.sampleSize} ${team.name} maps.`;
 
   mapSampleCard.innerHTML = `
     <p class="map-sample-label">Last ${info.sampleSize} maps in sample</p>
@@ -357,7 +453,7 @@ function renderMapInfo() {
   if (info.missingCurrentPoolMaps?.length) {
     mapWarning.classList.remove("hidden");
     mapWarning.innerHTML = `
-      <strong>Coverage warning:</strong> the last ${info.sampleSize} Dortmund maps do not include
+      <strong>Coverage warning:</strong> the last ${info.sampleSize} ${team.name} maps do not include
       ${info.missingCurrentPoolMaps.join(", ")} from the current map pool.
     `;
   } else {
@@ -371,8 +467,9 @@ function renderMapInfo() {
 
   ctCount.textContent = pluralizeSamples(ctPoints.length);
   tCount.textContent = pluralizeSamples(tPoints.length);
-  renderHeatmap(ctHeatmap, ctPoints, "CT-side", activeMap);
-  renderHeatmap(tHeatmap, tPoints, "T-side", activeMap);
+  updateCalibrationPanel(true);
+  renderHeatmap(ctHeatmap, ctPoints, "CT-side", activeMap, "ct");
+  renderHeatmap(tHeatmap, tPoints, "T-side", activeMap, "t");
 }
 
 function renderHero(team) {
@@ -433,6 +530,17 @@ mapSelect.addEventListener("change", (event) => {
   renderMapInfo();
 });
 
+calibrationToggle.addEventListener("click", () => {
+  calibrationMode = !calibrationMode;
+  renderMapInfo();
+});
+
+calibrationReset.addEventListener("click", () => {
+  delete calibrationOverrides[getCalibrationKey(activeTeam, activeMap, "ct")];
+  delete calibrationOverrides[getCalibrationKey(activeTeam, activeMap, "t")];
+  renderMapInfo();
+});
+
 startButton.addEventListener("click", () => {
   startDateInput.showPicker?.();
   startDateInput.focus();
@@ -447,5 +555,11 @@ resetDateButton.addEventListener("click", () => {
   startDateFilter = "";
   render();
 });
+
+ctHeatmap.addEventListener("pointerdown", beginHeatmapDrag);
+tHeatmap.addEventListener("pointerdown", beginHeatmapDrag);
+window.addEventListener("pointermove", updateHeatmapDrag);
+window.addEventListener("pointerup", endHeatmapDrag);
+window.addEventListener("pointercancel", endHeatmapDrag);
 
 render();

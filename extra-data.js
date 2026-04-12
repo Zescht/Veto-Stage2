@@ -1678,5 +1678,252 @@ const extraVetoHistoryData = {
         }
       }
     ]
+  },
+  "eco": {
+    "name": "eSports Cologne",
+    "ownerLabel": "ECO",
+    "subtitle": "2026 raw-order veto history",
+    "rows": [
+      {
+        "date": "2026-04-04",
+        "opponent": "RIZON",
+        "opponentAbbr": "RZN",
+        "score": "1 - 2",
+        "source": "",
+        "sourceLabel": "manual screenshot",
+        "decider": "Bind",
+        "deciderScore": "5:13",
+        "ban1": {
+          "map": "Fracture",
+          "type": "ban",
+          "ownerLabel": "RZN",
+          "ownerKind": "opp"
+        },
+        "ban2": {
+          "map": "Breeze",
+          "type": "ban",
+          "ownerLabel": "ECO",
+          "ownerKind": "team"
+        },
+        "pick1": {
+          "map": "Haven",
+          "type": "pick",
+          "ownerLabel": "RZN",
+          "ownerKind": "opp",
+          "score": "13:10"
+        },
+        "pick2": {
+          "map": "Split",
+          "type": "pick",
+          "ownerLabel": "ECO",
+          "ownerKind": "team",
+          "score": "2:13"
+        },
+        "ban3": {
+          "map": "Pearl",
+          "type": "ban",
+          "ownerLabel": "RZN",
+          "ownerKind": "opp"
+        },
+        "ban4": {
+          "map": "Lotus",
+          "type": "ban",
+          "ownerLabel": "ECO",
+          "ownerKind": "team"
+        }
+      },
+      {
+        "date": "2026-04-07",
+        "opponent": "Dortmund eSports",
+        "opponentAbbr": "DoeS",
+        "score": "0 - 2",
+        "source": "",
+        "sourceLabel": "manual screenshot",
+        "decider": "Fracture",
+        "deciderScore": "",
+        "ban1": {
+          "map": "Breeze",
+          "type": "ban",
+          "ownerLabel": "ECO",
+          "ownerKind": "team"
+        },
+        "ban2": {
+          "map": "Bind",
+          "type": "ban",
+          "ownerLabel": "DoeS",
+          "ownerKind": "opp"
+        },
+        "pick1": {
+          "map": "Haven",
+          "type": "pick",
+          "ownerLabel": "ECO",
+          "ownerKind": "team",
+          "score": "8:13"
+        },
+        "pick2": {
+          "map": "Lotus",
+          "type": "pick",
+          "ownerLabel": "DoeS",
+          "ownerKind": "opp",
+          "score": "10:13"
+        },
+        "ban3": {
+          "map": "Pearl",
+          "type": "ban",
+          "ownerLabel": "ECO",
+          "ownerKind": "team"
+        },
+        "ban4": {
+          "map": "Split",
+          "type": "ban",
+          "ownerLabel": "DoeS",
+          "ownerKind": "opp"
+        }
+      },
+      {
+        "date": "2026-03-18",
+        "opponent": "Sissi State Punks",
+        "opponentAbbr": "SSP",
+        "score": "2 - 0",
+        "source": "",
+        "sourceLabel": "manual screenshot",
+        "decider": "Split",
+        "deciderScore": "",
+        "ban1": {
+          "map": "Haven",
+          "type": "ban",
+          "ownerLabel": "ECO",
+          "ownerKind": "team"
+        },
+        "ban2": {
+          "map": "Corrode",
+          "type": "ban",
+          "ownerLabel": "SSP",
+          "ownerKind": "opp"
+        },
+        "pick1": {
+          "map": "Abyss",
+          "type": "pick",
+          "ownerLabel": "ECO",
+          "ownerKind": "team",
+          "score": "13:5"
+        },
+        "pick2": {
+          "map": "Bind",
+          "type": "pick",
+          "ownerLabel": "SSP",
+          "ownerKind": "opp",
+          "score": "13:6"
+        },
+        "ban3": {
+          "map": "Pearl",
+          "type": "ban",
+          "ownerLabel": "ECO",
+          "ownerKind": "team"
+        },
+        "ban4": {
+          "map": "Breeze",
+          "type": "ban",
+          "ownerLabel": "SSP",
+          "ownerKind": "opp"
+        }
+      },
+      {
+        "date": "2026-03-19",
+        "opponent": "Playing Ducks",
+        "opponentAbbr": "PD",
+        "score": "2 - 0",
+        "source": "",
+        "sourceLabel": "manual screenshot",
+        "decider": "Split",
+        "deciderScore": "",
+        "ban1": {
+          "map": "Haven",
+          "type": "ban",
+          "ownerLabel": "ECO",
+          "ownerKind": "team"
+        },
+        "ban2": {
+          "map": "Corrode",
+          "type": "ban",
+          "ownerLabel": "PD",
+          "ownerKind": "opp"
+        },
+        "pick1": {
+          "map": "Abyss",
+          "type": "pick",
+          "ownerLabel": "ECO",
+          "ownerKind": "team",
+          "score": "13:5"
+        },
+        "pick2": {
+          "map": "Pearl",
+          "type": "pick",
+          "ownerLabel": "PD",
+          "ownerKind": "opp",
+          "score": "16:14"
+        },
+        "ban3": {
+          "map": "Breeze",
+          "type": "ban",
+          "ownerLabel": "ECO",
+          "ownerKind": "team"
+        },
+        "ban4": {
+          "map": "Bind",
+          "type": "ban",
+          "ownerLabel": "PD",
+          "ownerKind": "opp"
+        }
+      },
+      {
+        "date": "2026-03-21",
+        "opponent": "AKA HERO",
+        "opponentAbbr": "AH",
+        "score": "0 - 2",
+        "source": "",
+        "sourceLabel": "manual screenshot",
+        "decider": "Corrode",
+        "deciderScore": "",
+        "ban1": {
+          "map": "Pearl",
+          "type": "ban",
+          "ownerLabel": "AH",
+          "ownerKind": "opp"
+        },
+        "ban2": {
+          "map": "Haven",
+          "type": "ban",
+          "ownerLabel": "ECO",
+          "ownerKind": "team"
+        },
+        "pick1": {
+          "map": "Split",
+          "type": "pick",
+          "ownerLabel": "AH",
+          "ownerKind": "opp",
+          "score": "7:13"
+        },
+        "pick2": {
+          "map": "Abyss",
+          "type": "pick",
+          "ownerLabel": "ECO",
+          "ownerKind": "team",
+          "score": "6:13"
+        },
+        "ban3": {
+          "map": "Breeze",
+          "type": "ban",
+          "ownerLabel": "AH",
+          "ownerKind": "opp"
+        },
+        "ban4": {
+          "map": "Bind",
+          "type": "ban",
+          "ownerLabel": "ECO",
+          "ownerKind": "team"
+        }
+      }
+    ]
   }
 };

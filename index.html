@@ -113,6 +113,23 @@
 
           <div class="map-sample-card" id="map-sample-card"></div>
           <div class="map-warning hidden" id="map-warning"></div>
+          <section class="calibration-panel hidden" id="calibration-panel">
+            <div class="calibration-head">
+              <div>
+                <p class="eyebrow">Calibration Mode</p>
+                <h3 class="calibration-title">Drag dots to their real callout positions</h3>
+                <p class="calibration-copy">Local only. Use this to calibrate a map before we push any fix.</p>
+              </div>
+              <div class="calibration-actions">
+                <button class="calibration-button" id="calibration-toggle" type="button">Enable Calibration</button>
+                <button class="calibration-button secondary" id="calibration-reset" type="button">Reset Current Map</button>
+              </div>
+            </div>
+            <div class="calibration-export-wrap">
+              <label class="calibration-export-label" for="calibration-export">Current map overrides</label>
+              <textarea class="calibration-export" id="calibration-export" readonly></textarea>
+            </div>
+          </section>
           <div class="map-placeholder hidden" id="map-placeholder"></div>
 
           <div class="heatmap-grid" id="heatmap-grid">

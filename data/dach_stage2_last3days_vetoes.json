@@ -1,0 +1,347 @@
+﻿{
+    "tournament":  "VCL/2026/DACH/Stage_2/Regular_Season",
+    "selected_dates":  [
+                           "2026-04-12",
+                           "2026-04-11",
+                           "2026-04-07"
+                       ],
+    "match_count":  8,
+    "matches":  [
+                    {
+                        "date":  "2026-04-12",
+                        "time":  "20:20",
+                        "dateRaw":  "April 12, 2026 - 20:20 {{Abbr/CEST}} \t|twitch=valorantleague_dach|youtube=ChallengersDACH|vlr=651547     |caster1=Headshinsky|caster2=tänk     |opponent1={{TeamOpponent|Eintracht Frankfurt}}     |opponent2={{TeamOpponent|FOKUS}}     |mapveto={{MapVeto         |firstpick=2         |types=ban,pick,ban,decider         |t1map1=Fracture|t2map1=Haven         |t1map2=Lotus|t2map2=Breeze         |t1map3=Pearl|t2map3=Bind         |decider=Split     }}     |map1={{ApiMap         |matchid=431fd751-99a6-4b71-a48f-41297e5fe01d         |vod=https://youtu.be/WQW26LB1U5g?t=15025     }}     |map2={{ApiMap         |matchid=7ee45a1e-1257-4b2b-97b6-2face254d0f1         |reversed=y         |vod=https://youtu.be/WQW26LB1U5g?t=18677     }}     |map3={{ApiMap|map=Split|finished=skip}} }}",
+                        "matchUrl":  "https://liquipedia.net/valorant/Match:ID_GI5qn6P4FC_0008",
+                        "team1":  "Eintracht Frankfurt",
+                        "team2":  "FOKUS",
+                        "firstpick":  2,
+                        "veto":  [
+                                     {
+                                         "slot":  "ban1",
+                                         "team":  "FOKUS",
+                                         "map":  "Haven"
+                                     },
+                                     {
+                                         "slot":  "ban2",
+                                         "team":  "Eintracht Frankfurt",
+                                         "map":  "Fracture"
+                                     },
+                                     {
+                                         "slot":  "pick1",
+                                         "team":  "FOKUS",
+                                         "map":  "Breeze"
+                                     },
+                                     {
+                                         "slot":  "pick2",
+                                         "team":  "Eintracht Frankfurt",
+                                         "map":  "Lotus"
+                                     },
+                                     {
+                                         "slot":  "ban3",
+                                         "team":  "FOKUS",
+                                         "map":  "Bind"
+                                     },
+                                     {
+                                         "slot":  "ban4",
+                                         "team":  "Eintracht Frankfurt",
+                                         "map":  "Pearl"
+                                     }
+                                 ],
+                        "decider":  "Split"
+                    },
+                    {
+                        "date":  "2026-04-12",
+                        "time":  "17:00",
+                        "dateRaw":  "April 12, 2026 - 17:00 {{Abbr/CEST}} \t|twitch=valorantleague_dach|youtube=ChallengersDACH|vlr=651546     |caster1=Headshinsky|caster2=tänk     |opponent1={{TeamOpponent|eSports Cologne}}     |opponent2={{TeamOpponent|ALTERNATE aTTaX}}     |mapveto={{MapVeto         |firstpick=1         |types=ban,pick,ban,decider         |t1map1=Breeze|t2map1=Pearl         |t1map2=Haven|t2map2=Split         |t1map3=Bind|t2map3=Lotus         |decider=Fracture     }}     |map1={{ApiMap         |matchid=d4846430-968f-4b85-ac8d-1d05b5b71a0a         |reversed=y         |vod=https://youtu.be/WQW26LB1U5g?t=2832     }}     |map2={{ApiMap         |matchid=244abb36-ed3a-440f-96b3-f837800248c3         |reversed=y         |vod=https://youtu.be/WQW26LB1U5g?t=6557     }}     |map3={{ApiMap         |matchid=ffd0f215-baae-4f46-9632-b653eab44552         |reversed=y         |vod=https://youtu.be/WQW26LB1U5g?t=10920     }} }}",
+                        "matchUrl":  "https://liquipedia.net/valorant/Match:ID_GI5qn6P4FC_0007",
+                        "team1":  "eSports Cologne",
+                        "team2":  "ALTERNATE aTTaX",
+                        "firstpick":  1,
+                        "veto":  [
+                                     {
+                                         "slot":  "ban1",
+                                         "team":  "eSports Cologne",
+                                         "map":  "Breeze"
+                                     },
+                                     {
+                                         "slot":  "ban2",
+                                         "team":  "ALTERNATE aTTaX",
+                                         "map":  "Pearl"
+                                     },
+                                     {
+                                         "slot":  "pick1",
+                                         "team":  "eSports Cologne",
+                                         "map":  "Haven"
+                                     },
+                                     {
+                                         "slot":  "pick2",
+                                         "team":  "ALTERNATE aTTaX",
+                                         "map":  "Split"
+                                     },
+                                     {
+                                         "slot":  "ban3",
+                                         "team":  "eSports Cologne",
+                                         "map":  "Bind"
+                                     },
+                                     {
+                                         "slot":  "ban4",
+                                         "team":  "ALTERNATE aTTaX",
+                                         "map":  "Lotus"
+                                     }
+                                 ],
+                        "decider":  "Fracture"
+                    },
+                    {
+                        "date":  "2026-04-11",
+                        "time":  "19:40",
+                        "dateRaw":  "April 11, 2026 - 19:40 {{Abbr/CEST}} \t|twitch=valorantleague_dach|youtube=ChallengersDACH|vlr=651545     |caster1=headshinsky |caster2=tänk     |opponent1={{TeamOpponent|AKA HERO}}     |opponent2={{TeamOpponent|RIZON}}     |mapveto={{MapVeto         |firstpick=1         |types=ban,pick,ban,decider         |t1map1=Haven|t2map1=Fracture         |t1map2=Bind|t2map2=Lotus         |t1map3=Pearl|t2map3=Breeze         |decider=Split     }}     |map1={{ApiMap         |matchid=6a31aae8-bf63-4e8f-ad67-761499578a66         |vod=https://youtu.be/ep0X28uZ8q0?t=11097     }}     |map2={{ApiMap         |matchid=ac2960a5-2503-4ca5-8973-b699a39ed09d         |reversed=y         |vod=https://youtu.be/ep0X28uZ8q0?t=15057     }}     |map3={{ApiMap|map=Split|finished=skip}} }}",
+                        "matchUrl":  "https://liquipedia.net/valorant/Match:ID_GI5qn6P4FC_0006",
+                        "team1":  "AKA HERO",
+                        "team2":  "RIZON",
+                        "firstpick":  1,
+                        "veto":  [
+                                     {
+                                         "slot":  "ban1",
+                                         "team":  "AKA HERO",
+                                         "map":  "Haven"
+                                     },
+                                     {
+                                         "slot":  "ban2",
+                                         "team":  "RIZON",
+                                         "map":  "Fracture"
+                                     },
+                                     {
+                                         "slot":  "pick1",
+                                         "team":  "AKA HERO",
+                                         "map":  "Bind"
+                                     },
+                                     {
+                                         "slot":  "pick2",
+                                         "team":  "RIZON",
+                                         "map":  "Lotus"
+                                     },
+                                     {
+                                         "slot":  "ban3",
+                                         "team":  "AKA HERO",
+                                         "map":  "Pearl"
+                                     },
+                                     {
+                                         "slot":  "ban4",
+                                         "team":  "RIZON",
+                                         "map":  "Breeze"
+                                     }
+                                 ],
+                        "decider":  "Split"
+                    },
+                    {
+                        "date":  "2026-04-11",
+                        "time":  "17:00",
+                        "dateRaw":  "April 11, 2026 - 17:00 {{Abbr/CEST}} \t|twitch=valorantleague_dach|youtube=ChallengersDACH|vlr=651544     |caster1=headshinsky |caster2=tänk     |opponent1={{TeamOpponent|Dortmund eSports}}     |opponent2={{TeamOpponent|CGN Esports}}     |mapveto={{MapVeto         |firstpick=1         |types=ban,pick,ban,decider         |t1map1=Split|t2map1=Haven         |t1map2=Fracture|t2map2=Breeze         |t1map3=Pearl|t2map3=Lotus         |decider=Bind     }}     |map1={{ApiMap         |matchid=48e0c873-6f15-41ba-bc60-591686ac968f         |reversed=y         |vod=https://youtu.be/ep0X28uZ8q0?t=3063     }}     |map2={{ApiMap         |matchid=029ff2ba-58f2-4405-8d74-00d0c4578d02         |reversed=y         |vod=https://youtu.be/ep0X28uZ8q0?t=7013     }}     |map3={{ApiMap|map=Bind|finished=skip}} }}",
+                        "matchUrl":  "https://liquipedia.net/valorant/Match:ID_GI5qn6P4FC_0005",
+                        "team1":  "Dortmund eSports",
+                        "team2":  "CGN Esports",
+                        "firstpick":  1,
+                        "veto":  [
+                                     {
+                                         "slot":  "ban1",
+                                         "team":  "Dortmund eSports",
+                                         "map":  "Split"
+                                     },
+                                     {
+                                         "slot":  "ban2",
+                                         "team":  "CGN Esports",
+                                         "map":  "Haven"
+                                     },
+                                     {
+                                         "slot":  "pick1",
+                                         "team":  "Dortmund eSports",
+                                         "map":  "Fracture"
+                                     },
+                                     {
+                                         "slot":  "pick2",
+                                         "team":  "CGN Esports",
+                                         "map":  "Breeze"
+                                     },
+                                     {
+                                         "slot":  "ban3",
+                                         "team":  "Dortmund eSports",
+                                         "map":  "Pearl"
+                                     },
+                                     {
+                                         "slot":  "ban4",
+                                         "team":  "CGN Esports",
+                                         "map":  "Lotus"
+                                     }
+                                 ],
+                        "decider":  "Bind"
+                    },
+                    {
+                        "date":  "2026-04-07",
+                        "time":  "21:10",
+                        "dateRaw":  "April 7, 2026 - 21:10 {{Abbr/CEST}} \t|twitch=valorantleague_dach|youtube=ChallengersDACH|vlr=651542     |caster1=Headshinsky|caster2=Crafty     |opponent1={{TeamOpponent|ALTERNATE aTTaX}}     |opponent2={{TeamOpponent|Eintracht Frankfurt}}     |mapveto={{MapVeto         |firstpick=2         |types=ban,pick,ban,decider         |t1map1=Pearl|t2map1=Fracture         |t1map2=Split|t2map2=Lotus         |t1map3=Haven|t2map3=Breeze         |decider=Bind     }}     |map1={{ApiMap         |matchid=c14c46b0-b36d-48be-8335-3919de851652         |reversed=y         |vod=https://youtu.be/tDOjsRqlg_U?t=14130     }}     |map2={{ApiMap         |matchid=ecf86908-47b8-4c31-9da5-3456da435626         |vod=https://youtu.be/tDOjsRqlg_U?t=18184     }}     |map3={{ApiMap         |matchid=84691e05-9363-4a3d-bd9b-56d2e0290c68         |vod=https://youtu.be/tDOjsRqlg_U?t=22545     }} }}",
+                        "matchUrl":  "https://liquipedia.net/valorant/Match:ID_GI5qn6P4FC_0003",
+                        "team1":  "ALTERNATE aTTaX",
+                        "team2":  "Eintracht Frankfurt",
+                        "firstpick":  2,
+                        "veto":  [
+                                     {
+                                         "slot":  "ban1",
+                                         "team":  "Eintracht Frankfurt",
+                                         "map":  "Fracture"
+                                     },
+                                     {
+                                         "slot":  "ban2",
+                                         "team":  "ALTERNATE aTTaX",
+                                         "map":  "Pearl"
+                                     },
+                                     {
+                                         "slot":  "pick1",
+                                         "team":  "Eintracht Frankfurt",
+                                         "map":  "Lotus"
+                                     },
+                                     {
+                                         "slot":  "pick2",
+                                         "team":  "ALTERNATE aTTaX",
+                                         "map":  "Split"
+                                     },
+                                     {
+                                         "slot":  "ban3",
+                                         "team":  "Eintracht Frankfurt",
+                                         "map":  "Breeze"
+                                     },
+                                     {
+                                         "slot":  "ban4",
+                                         "team":  "ALTERNATE aTTaX",
+                                         "map":  "Haven"
+                                     }
+                                 ],
+                        "decider":  "Bind"
+                    },
+                    {
+                        "date":  "2026-04-07",
+                        "time":  "20:20",
+                        "dateRaw":  "April 7, 2026 - 20:20 {{Abbr/CEST}} \t|vlr=651543     |opponent1={{TeamOpponent|eSports Cologne}}     |opponent2={{TeamOpponent|Dortmund Esports}}     |mapveto={{MapVeto         |firstpick=1         |types=ban,pick,ban,decider         |t1map1=Breeze|t2map1=Bind         |t1map2=Haven|t2map2=Lotus         |t1map3=Pearl|t2map3=Split         |decider=Fracture     }}     |map1={{ApiMap         |matchid=17b587c4-8ba5-40ad-905e-70bbf068c263         |reversed=         |vod=     }}     |map2={{ApiMap         |matchid=7ca35e2f-b8ee-4388-9867-a3fe93debe5c         |reversed=y         |vod=     }}     |map3={{ApiMap|map=Fracture|finished=skip}} }}",
+                        "matchUrl":  "https://liquipedia.net/valorant/Match:ID_GI5qn6P4FC_0004",
+                        "team1":  "eSports Cologne",
+                        "team2":  "Dortmund Esports",
+                        "firstpick":  1,
+                        "veto":  [
+                                     {
+                                         "slot":  "ban1",
+                                         "team":  "eSports Cologne",
+                                         "map":  "Breeze"
+                                     },
+                                     {
+                                         "slot":  "ban2",
+                                         "team":  "Dortmund Esports",
+                                         "map":  "Bind"
+                                     },
+                                     {
+                                         "slot":  "pick1",
+                                         "team":  "eSports Cologne",
+                                         "map":  "Haven"
+                                     },
+                                     {
+                                         "slot":  "pick2",
+                                         "team":  "Dortmund Esports",
+                                         "map":  "Lotus"
+                                     },
+                                     {
+                                         "slot":  "ban3",
+                                         "team":  "eSports Cologne",
+                                         "map":  "Pearl"
+                                     },
+                                     {
+                                         "slot":  "ban4",
+                                         "team":  "Dortmund Esports",
+                                         "map":  "Split"
+                                     }
+                                 ],
+                        "decider":  "Fracture"
+                    },
+                    {
+                        "date":  "2026-04-07",
+                        "time":  "18:00",
+                        "dateRaw":  "April 7, 2026 - 18:00 {{Abbr/CEST}} \t|vlr=651541     |opponent1={{TeamOpponent|AKA HERO}}     |opponent2={{TeamOpponent|FOKUS}}     |mapveto={{MapVeto         |firstpick=2         |types=ban,pick,ban,decider         |t1map1=Pearl|t2map1=Haven         |t1map2=Lotus|t2map2=Breeze         |t1map3=Bind|t2map3=Fracture         |decider=Split     }}     |map1={{ApiMap         |matchid=1a003f2b-d451-4ba9-aab9-cf6f6c27bba0         |reversed=y         |vod=     }}     |map2={{ApiMap         |matchid=6bb0be28-309f-4f6e-a2a3-86a5a8d646bc         |reversed=y         |vod=     }}     |map3={{ApiMap|map=Split|finished=skip}} }}",
+                        "matchUrl":  "https://liquipedia.net/valorant/Match:ID_GI5qn6P4FC_0002",
+                        "team1":  "AKA HERO",
+                        "team2":  "FOKUS",
+                        "firstpick":  2,
+                        "veto":  [
+                                     {
+                                         "slot":  "ban1",
+                                         "team":  "FOKUS",
+                                         "map":  "Haven"
+                                     },
+                                     {
+                                         "slot":  "ban2",
+                                         "team":  "AKA HERO",
+                                         "map":  "Pearl"
+                                     },
+                                     {
+                                         "slot":  "pick1",
+                                         "team":  "FOKUS",
+                                         "map":  "Breeze"
+                                     },
+                                     {
+                                         "slot":  "pick2",
+                                         "team":  "AKA HERO",
+                                         "map":  "Lotus"
+                                     },
+                                     {
+                                         "slot":  "ban3",
+                                         "team":  "FOKUS",
+                                         "map":  "Fracture"
+                                     },
+                                     {
+                                         "slot":  "ban4",
+                                         "team":  "AKA HERO",
+                                         "map":  "Bind"
+                                     }
+                                 ],
+                        "decider":  "Split"
+                    },
+                    {
+                        "date":  "2026-04-07",
+                        "time":  "18:00",
+                        "dateRaw":  "April 7, 2026 - 18:00 {{Abbr/CEST}} \t|twitch=valorantleague_dach|youtube=ChallengersDACH|vlr=651540     |caster1=Headshinsky|caster2=Crafty     |opponent1={{TeamOpponent|RIZON}}     |opponent2={{TeamOpponent|CGN Esports}}     |mapveto={{MapVeto         |firstpick=1         |types=ban,pick,ban,decider         |t1map1=Fracture|t2map1=Lotus         |t1map2=Haven|t2map2=Split         |t1map3=Breeze|t2map3=Pearl         |decider=Bind     }}     |map1={{ApiMap         |matchid=66514075-1283-4122-85cb-4d3a7b6e2d8a         |reversed=y         |vod=https://youtu.be/tDOjsRqlg_U?t=2743     }}     |map2={{ApiMap         |matchid=56aec96e-d9c4-4e20-99b4-c64fd3cf8215         |reversed=y         |vod=https://youtu.be/tDOjsRqlg_U?t=6595     }}     |map3={{ApiMap         |matchid=f6c3a1e8-4268-4caf-8b26-463c1557640b         |reversed=y         |vod=https://youtu.be/tDOjsRqlg_U?t=9993     }} }}",
+                        "matchUrl":  "https://liquipedia.net/valorant/Match:ID_GI5qn6P4FC_0001",
+                        "team1":  "RIZON",
+                        "team2":  "CGN Esports",
+                        "firstpick":  1,
+                        "veto":  [
+                                     {
+                                         "slot":  "ban1",
+                                         "team":  "RIZON",
+                                         "map":  "Fracture"
+                                     },
+                                     {
+                                         "slot":  "ban2",
+                                         "team":  "CGN Esports",
+                                         "map":  "Lotus"
+                                     },
+                                     {
+                                         "slot":  "pick1",
+                                         "team":  "RIZON",
+                                         "map":  "Haven"
+                                     },
+                                     {
+                                         "slot":  "pick2",
+                                         "team":  "CGN Esports",
+                                         "map":  "Split"
+                                     },
+                                     {
+                                         "slot":  "ban3",
+                                         "team":  "RIZON",
+                                         "map":  "Breeze"
+                                     },
+                                     {
+                                         "slot":  "ban4",
+                                         "team":  "CGN Esports",
+                                         "map":  "Pearl"
+                                     }
+                                 ],
+                        "decider":  "Bind"
+                    }
+                ]
+}

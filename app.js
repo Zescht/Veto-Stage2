@@ -527,7 +527,7 @@ function renderMapInfo() {
       <h3>Map-Info is not wired for this team yet.</h3>
       <p>This team does not have a map-info export yet.</p>
     `;
-    mapInfoTitle.textContent = `${team.name} Map Info`;
+    mapInfoTitle.textContent = team.name;
     mapInfoCopy.textContent = "Operator first-kill positioning module.";
     return;
   }
@@ -559,8 +559,8 @@ function renderMapInfo() {
 
   const metricLabel = getFkTypeLabel();
   mapModuleEyebrow.textContent = `${metricLabel} Heatmaps`;
-  mapInfoTitle.textContent = `${team.name} Map Info`;
-  mapInfoCopy.textContent = `${metricLabel} heatmaps from the last ${info.sampleSize} ${team.name} maps. Red = killer, blue = victim, line = kill trajectory.`;
+  mapInfoTitle.textContent = team.name;
+  mapInfoCopy.textContent = `${metricLabel} heatmaps from the last ${info.sampleSize} ${team.name} maps.`;
   ctHeatTitle.textContent = `${metricLabel} Positions`;
   tHeatTitle.textContent = `${metricLabel} Positions`;
 

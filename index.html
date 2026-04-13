@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260413a" />
+    <link rel="stylesheet" href="./styles.css?v=20260413b" />
   </head>
   <body>
     <div class="page-shell">
@@ -106,21 +106,19 @@
               <h2 class="map-info-title" id="map-info-title">Map Info</h2>
               <p class="map-info-copy" id="map-info-copy"></p>
             </div>
-            <div class="map-controls-stack">
-              <div class="map-kill-legend-box">RED = Killer - BLUE = Victim</div>
-              <div class="map-controls">
-                <label class="map-select-shell" for="fk-type-select">
-                  <span class="map-select-label">FK Type</span>
-                  <select class="map-select" id="fk-type-select">
-                    <option value="operator">OP FK</option>
-                    <option value="all">All FK</option>
-                  </select>
-                </label>
-                <label class="map-select-shell" for="map-select">
-                  <span class="map-select-label">Map</span>
-                  <select class="map-select" id="map-select"></select>
-                </label>
-              </div>
+            <div class="map-controls">
+              <div class="map-kill-legend-box"><span class="kill-legend-red">RED</span> = KILLER - <span class="kill-legend-blue">BLUE</span> = VICTIM</div>
+              <label class="map-select-shell" for="fk-type-select">
+                <span class="map-select-label">FK Type</span>
+                <select class="map-select" id="fk-type-select">
+                  <option value="operator">OP FK</option>
+                  <option value="all">All FK</option>
+                </select>
+              </label>
+              <label class="map-select-shell" for="map-select">
+                <span class="map-select-label">Map</span>
+                <select class="map-select" id="map-select"></select>
+              </label>
             </div>
           </div>
 

@@ -491,13 +491,6 @@ body {
   gap: 20px;
 }
 
-.map-controls-stack {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 10px;
-}
-
 .map-controls {
   display: inline-flex;
   align-items: center;
@@ -520,6 +513,14 @@ body {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.kill-legend-red {
+  color: #d61f1f;
+}
+
+.kill-legend-blue {
+  color: #1d64d6;
 }
 
 .map-info-title {
@@ -962,10 +963,6 @@ body {
 
   .map-controls {
     justify-content: flex-start;
-  }
-
-  .map-controls-stack {
-    align-items: flex-start;
   }
 
   .calibration-head {

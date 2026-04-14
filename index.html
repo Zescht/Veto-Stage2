@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260413b" />
+    <link rel="stylesheet" href="./styles.css?v=20260414b" />
   </head>
   <body>
     <div class="page-shell">
@@ -39,6 +39,10 @@
               <span class="team-select-label">Team Selection</span>
               <select class="team-select" id="team-select"></select>
             </label>
+          </div>
+          <div class="side-controls hidden" id="side-controls" aria-label="Side view selector">
+            <button class="side-button active" id="side-ct" type="button">CT</button>
+            <button class="side-button" id="side-t" type="button">T</button>
           </div>
           <div class="timeframe-controls" id="timeframe-controls">
             <button class="timeframe-button" id="start-button" type="button">Starting</button>
@@ -100,7 +104,7 @@
 
         <section class="map-info-view hidden" id="map-view">
           <div class="map-warning hidden" id="map-warning"></div>
-          <div class="map-info-toolbar">
+          <div class="map-info-toolbar" id="map-info-toolbar">
             <div>
               <p class="eyebrow" id="map-module-eyebrow">Operator First-Kill Heatmaps</p>
               <h2 class="map-info-title" id="map-info-title">Map Info</h2>
@@ -108,6 +112,19 @@
             </div>
             <div class="map-controls">
               <div class="map-kill-legend-box"><span class="kill-legend-red">RED</span> = KILLER - <span class="kill-legend-blue">BLUE</span> = VICTIM</div>
+              <details class="player-filter-shell" id="player-filter-shell">
+                <summary class="player-filter-summary-row">
+                  <span class="map-select-label">Players</span>
+                  <span class="player-filter-summary" id="player-filter-summary">All</span>
+                </summary>
+                <div class="player-filter-menu">
+                  <div class="player-filter-actions">
+                    <button class="player-filter-action" id="player-filter-all" type="button">All</button>
+                    <button class="player-filter-action" id="player-filter-none" type="button">None</button>
+                  </div>
+                  <div class="player-filter-list" id="player-filter-list"></div>
+                </div>
+              </details>
               <label class="map-select-shell" for="fk-type-select">
                 <span class="map-select-label">FK Type</span>
                 <select class="map-select" id="fk-type-select">
@@ -153,6 +170,37 @@
           </div>
 
           <div class="map-sample-card" id="map-sample-card"></div>
+
+          <div class="defensive-module hidden" id="defensive-module">
+            <div class="defensive-header">
+              <div>
+                <p class="eyebrow" id="defensive-eyebrow">Defensive Early Positioning</p>
+                <h2 class="map-info-title" id="defensive-title">Eintracht Frankfurt</h2>
+                <p class="map-info-copy" id="defensive-copy"></p>
+              </div>
+              <div class="defensive-controls">
+                <label class="map-select-shell" for="defensive-fk-select">
+                  <span class="map-select-label">FK Source</span>
+                  <select class="map-select" id="defensive-fk-select">
+                    <option value="all">All FK</option>
+                    <option value="team">Team FK</option>
+                    <option value="enemy">Enemy FK</option>
+                  </select>
+                </label>
+                <label class="map-select-shell" for="defensive-map-select">
+                  <span class="map-select-label">Map</span>
+                  <select class="map-select" id="defensive-map-select"></select>
+                </label>
+              </div>
+            </div>
+            <div class="defensive-panels" id="defensive-panels"></div>
+            <div class="defensive-player-controls" id="defensive-player-controls">
+              <button class="defensive-player-action" id="defensive-player-all" type="button">All</button>
+              <button class="defensive-player-action" id="defensive-player-none" type="button">None</button>
+              <div class="defensive-player-row" id="defensive-player-row"></div>
+            </div>
+            <div class="map-sample-card" id="defensive-sample-card"></div>
+          </div>
         </section>
       </main>
     </div>
@@ -164,6 +212,8 @@
     <script src="./extra-score-meta.js?v=20260412f"></script>
     <script src="./extra-row-meta.js?v=20260412f"></script>
     <script src="./map-info-data.js?v=20260412f"></script>
-    <script src="./app.js?v=20260413a"></script>
+    <script src="./extra-map-info-data.js?v=20260414a"></script>
+    <script src="./defensive-early-data.js?v=20260414b"></script>
+    <script src="./app.js?v=20260414h"></script>
   </body>
 </html>

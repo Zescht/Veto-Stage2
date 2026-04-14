@@ -782,6 +782,10 @@ function renderMapInfo() {
   const team = allVetoHistoryData[activeTeam];
   const info = allMapInfo?.[activeTeam];
   const defensiveTeamPack = allDefensiveEarly?.[activeTeam];
+  const hasDefensiveMode = Boolean(
+    defensiveTeamPack &&
+      (Object.keys(defensiveTeamPack.ct ?? {}).length > 0 || Object.keys(defensiveTeamPack.t ?? {}).length > 0)
+  );
   const defensiveSidePackRaw = defensiveTeamPack?.[activeSideView];
   const defensiveMapPack = getDefensiveMapPack(defensiveSidePackRaw);
   const availableDefensiveMaps = sortDefensiveMapNames(Object.keys(defensiveMapPack));
@@ -792,7 +796,7 @@ function renderMapInfo() {
 
   renderSideButtons();
 
-  if (activeTeam === "eintracht") {
+  if (hasDefensiveMode) {
     mapInfoToolbar.classList.add("hidden");
     heatmapGrid.classList.add("hidden");
     mapSampleCard.classList.add("hidden");

@@ -21,7 +21,10 @@ const allScoreMeta = {
 const allRowMeta = {
   ...(typeof extraVetoRowMeta !== "undefined" ? extraVetoRowMeta : {})
 };
-const allMapInfo = typeof mapInfoData !== "undefined" ? mapInfoData : {};
+const allMapInfo = {
+  ...(typeof mapInfoData !== "undefined" ? mapInfoData : {}),
+  ...(typeof extraMapInfoData !== "undefined" ? extraMapInfoData : {})
+};
   const MAP_IMAGE_VERSION = "20260412-riot";
   const MAP_IMAGE_ASPECTS = {
     Bind: 1,

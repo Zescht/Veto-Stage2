@@ -43,7 +43,7 @@ const allMapInfo = typeof mapInfoData !== "undefined" ? mapInfoData : {};
     Split: `./maps/Split.png?v=${MAP_IMAGE_VERSION}`,
     Corrode: `./maps/Corrode.png?v=${MAP_IMAGE_VERSION}`
   };
-const ROTATED_MAPS_CW = new Set(["Split", "Haven"]);
+const ROTATED_MAPS_CW = new Set(["Haven"]);
 const calibrationOverrides = {
   "dortmund|Haven|ct": [
     { x: 29.842180774748922, y: 54.85201460119412 },

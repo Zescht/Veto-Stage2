@@ -21,7 +21,11 @@ const allScoreMeta = {
 const allRowMeta = {
   ...(typeof extraVetoRowMeta !== "undefined" ? extraVetoRowMeta : {})
 };
-const allMapInfo = typeof mapInfoData !== "undefined" ? mapInfoData : {};
+const allMapInfo = {
+  ...(typeof mapInfoData !== "undefined" ? mapInfoData : {}),
+  ...(typeof extraMapInfoData !== "undefined" ? extraMapInfoData : {})
+};
+const allDefensiveEarly = typeof defensiveEarlyData !== "undefined" ? defensiveEarlyData : {};
   const MAP_IMAGE_VERSION = "20260412-riot";
   const MAP_IMAGE_ASPECTS = {
     Bind: 1,
@@ -43,7 +47,7 @@ const allMapInfo = typeof mapInfoData !== "undefined" ? mapInfoData : {};
     Split: `./maps/Split.png?v=${MAP_IMAGE_VERSION}`,
     Corrode: `./maps/Corrode.png?v=${MAP_IMAGE_VERSION}`
   };
-const ROTATED_MAPS_CW = new Set(["Split", "Haven"]);
+const ROTATED_MAPS_CW = new Set(["Haven"]);
 const calibrationOverrides = {
   "dortmund|Haven|ct": [
     { x: 29.842180774748922, y: 54.85201460119412 },
@@ -60,9 +64,17 @@ let activeView = "veto";
 let startDateFilter = "";
 let activeMap = "Bind";
 let activeFkType = "operator";
+let activeSideView = "ct";
+let activeDefensiveFkFilter = "all";
+let activeDefensiveMap = "Bind";
+const selectedPlayerFilters = {};
+const selectedDefensivePlayerFilters = {};
 
 const viewVetoButton = document.getElementById("view-veto");
 const viewMapButton = document.getElementById("view-map");
+const sideControls = document.getElementById("side-controls");
+const sideCtButton = document.getElementById("side-ct");
+const sideTButton = document.getElementById("side-t");
 const teamSelect = document.getElementById("team-select");
 const historyBody = document.getElementById("history-body");
 const tableTitle = document.getElementById("table-title");
@@ -78,11 +90,17 @@ const mostPlayedList = document.getElementById("most-played-list");
 const timeframeControls = document.getElementById("timeframe-controls");
 const vetoView = document.getElementById("veto-view");
 const mapView = document.getElementById("map-view");
+const mapInfoToolbar = document.getElementById("map-info-toolbar");
 const mapModuleEyebrow = document.getElementById("map-module-eyebrow");
 const mapInfoTitle = document.getElementById("map-info-title");
 const mapInfoCopy = document.getElementById("map-info-copy");
 const fkTypeSelect = document.getElementById("fk-type-select");
 const mapSelect = document.getElementById("map-select");
+const playerFilterShell = document.getElementById("player-filter-shell");
+const playerFilterSummary = document.getElementById("player-filter-summary");
+const playerFilterList = document.getElementById("player-filter-list");
+const playerFilterAll = document.getElementById("player-filter-all");
+const playerFilterNone = document.getElementById("player-filter-none");
 const mapSampleCard = document.getElementById("map-sample-card");
 const mapWarning = document.getElementById("map-warning");
 const calibrationPanel = document.getElementById("calibration-panel");
@@ -91,6 +109,17 @@ const calibrationReset = document.getElementById("calibration-reset");
 const calibrationExport = document.getElementById("calibration-export");
 const mapPlaceholder = document.getElementById("map-placeholder");
 const heatmapGrid = document.getElementById("heatmap-grid");
+const defensiveModule = document.getElementById("defensive-module");
+const defensiveTitle = document.getElementById("defensive-title");
+const defensiveCopy = document.getElementById("defensive-copy");
+const defensivePanels = document.getElementById("defensive-panels");
+const defensiveSampleCard = document.getElementById("defensive-sample-card");
+const defensiveFkSelect = document.getElementById("defensive-fk-select");
+const defensiveMapSelect = document.getElementById("defensive-map-select");
+const defensivePlayerControls = document.getElementById("defensive-player-controls");
+const defensivePlayerRow = document.getElementById("defensive-player-row");
+const defensivePlayerAll = document.getElementById("defensive-player-all");
+const defensivePlayerNone = document.getElementById("defensive-player-none");
 const ctCount = document.getElementById("ct-count");
 const tCount = document.getElementById("t-count");
 const ctHeatTitle = document.getElementById("ct-heat-title");
@@ -99,6 +128,8 @@ const ctHeatmap = document.getElementById("ct-heatmap");
 const tHeatmap = document.getElementById("t-heatmap");
 let calibrationMode = false;
 let dragState = null;
+
+const DEFENSIVE_MAP_ORDER = ["Bind", "Breeze", "Lotus", "Split", "Pearl", "Haven", "Fracture", "Corrode", "Abyss", "Sunset", "Icebox"];
 
 function getRowLookupKey(row) {
   return `${row.date}|${row.opponentAbbr ?? row.opponent}`;
@@ -327,6 +358,175 @@ function getMapPointsByType(mapData) {
   };
 }
 
+function getPlayerFilterKey() {
+  return `${activeTeam}|${activeMap}|${activeFkType}`;
+}
+
+function getPlayerDisplayName(playerName) {
+  const match = String(playerName ?? "").match(/^[A-Z0-9]{2,6}\s+(.+)$/);
+  return match ? match[1] : String(playerName ?? "");
+}
+
+function collectPlayersFromPoints(ctPoints, tPoints) {
+  return [...new Set([...ctPoints, ...tPoints].map((point) => point.player).filter(Boolean))].sort((a, b) =>
+    getPlayerDisplayName(a).localeCompare(getPlayerDisplayName(b))
+  );
+}
+
+function ensurePlayerFilterState(players) {
+  const key = getPlayerFilterKey();
+  if (!selectedPlayerFilters[key]) {
+    selectedPlayerFilters[key] = {};
+  }
+  const state = selectedPlayerFilters[key];
+
+  const validPlayers = new Set(players);
+  Object.keys(state).forEach((player) => {
+    if (!validPlayers.has(player)) {
+      delete state[player];
+    }
+  });
+
+  players.forEach((player) => {
+    if (!(player in state)) {
+      state[player] = true;
+    }
+  });
+
+  return state;
+}
+
+function getSelectedPlayerSet(players) {
+  const state = ensurePlayerFilterState(players);
+  return new Set(players.filter((player) => state[player]));
+}
+
+function renderPlayerFilter(players) {
+  if (!playerFilterShell || !playerFilterSummary || !playerFilterList || !playerFilterAll || !playerFilterNone) {
+    return;
+  }
+
+  if (!players.length) {
+    playerFilterShell.classList.add("hidden");
+    return;
+  }
+
+  playerFilterShell.classList.remove("hidden");
+  const state = ensurePlayerFilterState(players);
+  const selectedCount = players.filter((player) => state[player]).length;
+  playerFilterSummary.textContent = selectedCount === players.length ? "All" : `${selectedCount}/${players.length}`;
+
+  playerFilterList.innerHTML = players
+    .map((player) => {
+      const checked = state[player] ? "checked" : "";
+      const safeValue = encodeURIComponent(player);
+      return `
+        <label class="player-filter-item">
+          <input type="checkbox" data-player-name="${safeValue}" ${checked} />
+          <span>${getPlayerDisplayName(player)}</span>
+        </label>
+      `;
+    })
+    .join("");
+
+  playerFilterAll.disabled = players.length === 0;
+  playerFilterNone.disabled = players.length === 0;
+}
+
+function getDefensiveFilterKey(defensiveInfo) {
+  return `${activeTeam}|${activeSideView}|${defensiveInfo?.map ?? "Bind"}|defensive`;
+}
+
+function collectDefensivePlayers(defensiveInfo) {
+  const legendPlayers = (defensiveInfo?.legend ?? []).map((row) => row.player).filter(Boolean);
+  if (legendPlayers.length) return legendPlayers;
+  const seen = new Set();
+  const out = [];
+  ["lt10s", "lt20s", "lt30s"].forEach((key) => {
+    (defensiveInfo?.thresholds?.[key]?.points ?? []).forEach((point) => {
+      if (point?.player && !seen.has(point.player)) {
+        seen.add(point.player);
+        out.push(point.player);
+      }
+    });
+  });
+  return out;
+}
+
+function ensureDefensiveFilterState(defensiveInfo, players) {
+  const key = getDefensiveFilterKey(defensiveInfo);
+  if (!selectedDefensivePlayerFilters[key]) {
+    selectedDefensivePlayerFilters[key] = {};
+  }
+  const state = selectedDefensivePlayerFilters[key];
+  const valid = new Set(players);
+  Object.keys(state).forEach((player) => {
+    if (!valid.has(player)) delete state[player];
+  });
+  players.forEach((player) => {
+    if (!(player in state)) state[player] = true;
+  });
+  return state;
+}
+
+function getSelectedDefensiveSet(defensiveInfo, players) {
+  const state = ensureDefensiveFilterState(defensiveInfo, players);
+  return new Set(players.filter((player) => state[player]));
+}
+
+function renderDefensivePlayerChips(defensiveInfo, players) {
+  if (!defensivePlayerControls || !defensivePlayerRow || !defensivePlayerAll || !defensivePlayerNone) {
+    return;
+  }
+  if (!players.length) {
+    defensivePlayerControls.classList.add("hidden");
+    defensivePlayerRow.innerHTML = "";
+    return;
+  }
+  defensivePlayerControls.classList.remove("hidden");
+  const state = ensureDefensiveFilterState(defensiveInfo, players);
+  const colorByPlayer = Object.fromEntries((defensiveInfo?.legend ?? []).map((row) => [row.player, row.color]));
+  defensivePlayerRow.innerHTML = players
+    .map((player) => {
+      const enabled = state[player] !== false;
+      const color = colorByPlayer[player] ?? "#555";
+      return `
+        <button
+          type="button"
+          class="defensive-player-chip ${enabled ? "" : "off"}"
+          data-def-player="${encodeURIComponent(player)}"
+          aria-pressed="${enabled ? "true" : "false"}"
+        >
+          <span class="defensive-player-chip-dot" style="background:${color};"></span>
+          <span>${getPlayerDisplayName(player)}</span>
+        </button>
+      `;
+    })
+    .join("");
+  defensivePlayerAll.disabled = players.length === 0;
+  defensivePlayerNone.disabled = players.length === 0;
+}
+
+function sortDefensiveMapNames(mapNames) {
+  return [...mapNames].sort((a, b) => {
+    const ai = DEFENSIVE_MAP_ORDER.indexOf(a);
+    const bi = DEFENSIVE_MAP_ORDER.indexOf(b);
+    if (ai !== -1 && bi !== -1) return ai - bi;
+    if (ai !== -1) return -1;
+    if (bi !== -1) return 1;
+    return a.localeCompare(b);
+  });
+}
+
+function getDefensiveMapPack(sidePack) {
+  if (!sidePack) return {};
+  if (sidePack.thresholds) {
+    const mapKey = sidePack.map ?? "Bind";
+    return { [mapKey]: sidePack };
+  }
+  return sidePack;
+}
+
   function projectHeatmapPoint(point) {
     return {
       x: point.normX,
@@ -334,9 +534,8 @@ function getMapPointsByType(mapData) {
     };
   }
 
-  function getContainedFrameStyle(mapName) {
+  function getContainedFrameStyle(mapName, canvasAspect = 1318 / 772) {
     const imageAspect = MAP_IMAGE_ASPECTS[mapName] ?? 1;
-    const canvasAspect = 1318 / 772;
     let width = 100;
     let height = 100;
     let left = 0;
@@ -511,15 +710,165 @@ function endHeatmapDrag() {
     `;
   }
 
+function renderDefensivePanels(info, selectedPlayers, fkOwnerFilter = "all") {
+  if (!defensivePanels) return;
+  const mapName = info.map || "Bind";
+  const mapImage = MAP_IMAGE_PATHS[mapName] ?? "";
+  const frameStyle = getContainedFrameStyle(mapName, 1);
+  const frameClassList = [
+    "heat-layer-frame",
+    mapImage ? "has-map" : "",
+    ROTATED_MAPS_CW.has(mapName) ? "rotate-cw" : ""
+  ]
+    .filter(Boolean)
+    .join(" ");
+  const mapImageMarkup = mapImage
+    ? `<img class="heat-map-image" src="${mapImage}" alt="${mapName} map" loading="lazy" decoding="async" />`
+    : "";
+  const legend = info.legend ?? [];
+  const colorByPlayer = Object.fromEntries(legend.map((row) => [row.player, row.color]));
+  const thresholds = [
+    ["lt10s", "<10s"],
+    ["lt20s", "<20s"],
+    ["lt30s", "<30s"]
+  ];
+  const panelTitleBase =
+    activeSideView === "ct" ? "Defending Team Positioning at the first kill" : "Attacking Team Positioning at the first kill";
+
+  defensivePanels.innerHTML = thresholds
+    .map(([key, label]) => {
+      const bucket = info.thresholds?.[key] ?? { roundCount: 0, pointCount: 0, points: [] };
+      const allPoints = bucket.points ?? [];
+      const fkScopedPoints =
+        fkOwnerFilter === "all" ? allPoints : allPoints.filter((point) => point.fkOwner === fkOwnerFilter);
+      const points = fkScopedPoints.filter((point) => selectedPlayers.has(point.player));
+      const roundCount = new Set(fkScopedPoints.map((point) => `${point.matchId}|${point.roundNum}`)).size;
+      const pointsMarkup = points
+        .map((point) => {
+          const p = projectHeatmapPoint(point);
+          const color = colorByPlayer[point.player] ?? "#444444";
+          return `<span class="heat-point" style="left:${p.x}%; top:${p.y}%; background:${color};" title="${point.player} | ${point.date} vs ${point.opponent} | R${point.roundNum}"></span>`;
+        })
+        .join("");
+
+      return `
+        <article class="defensive-card">
+          <div class="defensive-card-head">
+            <h3>${panelTitleBase} (${label})</h3>
+            <p class="defensive-card-meta">Rounds: ${roundCount} | Points: ${points.length}/${fkScopedPoints.length}</p>
+          </div>
+          <div class="defensive-map-wrap">
+            <div class="defensive-map">
+              <div class="${frameClassList}" style="${frameStyle}">
+                ${mapImageMarkup}
+                <div class="heat-layer">
+                  ${pointsMarkup || '<div class="heatmap-empty"><p>No samples.</p></div>'}
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      `;
+    })
+    .join("");
+}
+
+function renderSideButtons() {
+  sideCtButton?.classList.toggle("active", activeSideView === "ct");
+  sideTButton?.classList.toggle("active", activeSideView === "t");
+}
+
 function renderMapInfo() {
-  const info = allMapInfo?.[activeTeam];
   const team = allVetoHistoryData[activeTeam];
+  const info = allMapInfo?.[activeTeam];
+  const defensiveTeamPack = allDefensiveEarly?.[activeTeam];
+  const defensiveSidePackRaw = defensiveTeamPack?.[activeSideView];
+  const defensiveMapPack = getDefensiveMapPack(defensiveSidePackRaw);
+  const availableDefensiveMaps = sortDefensiveMapNames(Object.keys(defensiveMapPack));
+  if (availableDefensiveMaps.length && !defensiveMapPack[activeDefensiveMap]) {
+    activeDefensiveMap = availableDefensiveMaps[0];
+  }
+  const defensiveInfo = defensiveMapPack?.[activeDefensiveMap];
+
+  renderSideButtons();
+
+  if (activeTeam === "eintracht") {
+    mapInfoToolbar.classList.add("hidden");
+    heatmapGrid.classList.add("hidden");
+    mapSampleCard.classList.add("hidden");
+    mapPlaceholder.classList.add("hidden");
+    playerFilterShell?.classList.add("hidden");
+    defensivePlayerControls?.classList.add("hidden");
+    calibrationPanel?.classList.add("hidden");
+    if (playerFilterShell) playerFilterShell.open = false;
+
+    if (!defensiveInfo) {
+      defensiveModule.classList.add("hidden");
+      mapWarning.classList.add("hidden");
+      mapPlaceholder.classList.remove("hidden");
+      mapPlaceholder.innerHTML = `
+        <h3>${activeSideView.toUpperCase()}-side early positioning is not wired for this team yet.</h3>
+        <p>Switch side or load the corresponding export.</p>
+      `;
+      mapInfoTitle.textContent = team.name;
+      mapInfoCopy.textContent = `${activeSideView.toUpperCase()}-side module unavailable.`;
+      return;
+    }
+
+    defensiveModule.classList.remove("hidden");
+    if (defensiveFkSelect) {
+      const teamLabel = team.ownerLabel ?? team.name;
+      if (defensiveFkSelect.options[1]) defensiveFkSelect.options[1].textContent = `${teamLabel} FK`;
+      if (defensiveFkSelect.options[2]) defensiveFkSelect.options[2].textContent = "Enemy FK";
+      defensiveFkSelect.value = activeDefensiveFkFilter;
+    }
+    if (defensiveMapSelect) {
+      defensiveMapSelect.innerHTML = availableDefensiveMaps.map((mapName) => `<option value="${mapName}">${mapName}</option>`).join("");
+      defensiveMapSelect.value = activeDefensiveMap;
+      defensiveMapSelect.disabled = availableDefensiveMaps.length === 0;
+    }
+    const defensivePlayers = collectDefensivePlayers(defensiveInfo);
+    renderDefensivePlayerChips(defensiveInfo, defensivePlayers);
+    const selectedDefensivePlayers = getSelectedDefensiveSet(defensiveInfo, defensivePlayers);
+    const defensiveTeamName = defensiveInfo.name ?? defensiveInfo.team ?? team.name;
+    defensiveTitle.textContent = defensiveTeamName;
+    const sampleMaps = defensiveInfo.sampleMaps ?? defensiveInfo.selectedMaps ?? [];
+    const sampleSize = defensiveInfo.sampleSize ?? sampleMaps.length;
+    const mapName = defensiveInfo.map ?? "Bind";
+    const sideCopyWord = activeSideView === "ct" ? "Defender" : "Attacker";
+    defensiveCopy.textContent = `${sideCopyWord} positions at first-kill time from the last ${sampleSize} ${defensiveTeamName} ${mapName} maps.`;
+
+    mapWarning.classList.remove("hidden");
+    mapWarning.innerHTML = `
+      <strong>Coverage warning:</strong> ${activeSideView.toUpperCase()} early-positioning currently covers ${mapName} only.
+    `;
+
+    renderDefensivePanels(defensiveInfo, selectedDefensivePlayers, activeDefensiveFkFilter);
+
+    defensiveSampleCard.innerHTML = `
+      <p class="map-sample-label">Last ${sampleSize} maps in sample</p>
+      <div class="sample-chip-list">
+        ${sampleMaps
+          .map((item) => `<span class="sample-chip">${item.date.slice(5)} ${mapName} vs ${item.opponent}</span>`)
+          .join("")}
+      </div>
+    `;
+    return;
+  }
+
+  defensiveModule.classList.add("hidden");
+  defensivePlayerControls?.classList.add("hidden");
 
   if (!info) {
+    mapInfoToolbar.classList.remove("hidden");
     mapPlaceholder.classList.remove("hidden");
     heatmapGrid.classList.add("hidden");
     mapWarning.classList.add("hidden");
     mapSampleCard.classList.add("hidden");
+    playerFilterShell?.classList.add("hidden");
+    if (playerFilterShell) {
+      playerFilterShell.open = false;
+    }
     calibrationPanel?.classList.add("hidden");
     mapSelect.innerHTML = "";
     mapSelect.disabled = true;
@@ -528,10 +877,11 @@ function renderMapInfo() {
       <p>This team does not have a map-info export yet.</p>
     `;
     mapInfoTitle.textContent = team.name;
-    mapInfoCopy.textContent = "Operator first-kill positioning module.";
+    mapInfoCopy.textContent = `${activeSideView.toUpperCase()} side map module.`;
     return;
   }
 
+  mapInfoToolbar.classList.remove("hidden");
   mapPlaceholder.classList.add("hidden");
   heatmapGrid.classList.remove("hidden");
   mapSampleCard.classList.remove("hidden");
@@ -556,11 +906,22 @@ function renderMapInfo() {
     .join("");
   mapSelect.value = activeMap;
   fkTypeSelect.value = activeFkType;
+  fkTypeSelect.disabled = false;
+
+  const mapData = info.maps?.[activeMap] ?? { ct: { points: [] }, t: { points: [] }, all_ct: { points: [] }, all_t: { points: [] } };
+  const metricPoints = getMapPointsByType(mapData);
+  const allPlayers = collectPlayersFromPoints(metricPoints.ct, metricPoints.t);
+  renderPlayerFilter(allPlayers);
+  const selectedPlayers = getSelectedPlayerSet(allPlayers);
+  const ctPointsFull = metricPoints.ct.filter((point) => selectedPlayers.has(point.player));
+  const tPointsFull = metricPoints.t.filter((point) => selectedPlayers.has(point.player));
+  const ctPoints = activeSideView === "ct" ? ctPointsFull : [];
+  const tPoints = activeSideView === "t" ? tPointsFull : [];
 
   const metricLabel = getFkTypeLabel();
-  mapModuleEyebrow.textContent = `${metricLabel} Heatmaps`;
+  mapModuleEyebrow.textContent = `${activeSideView.toUpperCase()} - ${metricLabel} Heatmaps`;
   mapInfoTitle.textContent = team.name;
-  mapInfoCopy.textContent = `${metricLabel} heatmaps from the last ${info.sampleSize} ${team.name} maps.`;
+  mapInfoCopy.textContent = `${activeSideView.toUpperCase()} side ${metricLabel.toLowerCase()} heatmaps from the last ${info.sampleSize} ${team.name} maps.`;
   ctHeatTitle.textContent = `${metricLabel} Positions`;
   tHeatTitle.textContent = `${metricLabel} Positions`;
 
@@ -582,11 +943,6 @@ function renderMapInfo() {
     mapWarning.innerHTML = "";
   }
 
-  const mapData = info.maps?.[activeMap] ?? { ct: { points: [] }, t: { points: [] }, all_ct: { points: [] }, all_t: { points: [] } };
-  const metricPoints = getMapPointsByType(mapData);
-  const ctPoints = metricPoints.ct;
-  const tPoints = metricPoints.t;
-
   ctCount.textContent = pluralizeSamples(ctPoints.length);
   tCount.textContent = pluralizeSamples(tPoints.length);
   updateCalibrationPanel(true);
@@ -600,7 +956,7 @@ function renderHero(team) {
     heroCopy.innerHTML = `Historical pick/ban performance for <span class="team-accent" id="hero-team">${team.name}</span>`;
   } else {
     heroTitle.textContent = "Map Info";
-    heroCopy.innerHTML = `${getFkTypeLabel()} heatmaps for <span class="team-accent" id="hero-team">${team.name}</span>`;
+    heroCopy.innerHTML = `${activeSideView.toUpperCase()} side analytics for <span class="team-accent" id="hero-team">${team.name}</span>`;
   }
 }
 
@@ -611,6 +967,7 @@ function renderVisibility() {
   vetoView.classList.toggle("hidden", mapMode);
   mapView.classList.toggle("hidden", !mapMode);
   timeframeControls.classList.toggle("hidden", mapMode);
+  sideControls?.classList.toggle("hidden", !mapMode);
 }
 
 function renderVeto(team) {
@@ -644,8 +1001,28 @@ viewMapButton.addEventListener("click", () => {
 
 teamSelect.addEventListener("change", (event) => {
   activeTeam = event.target.value;
-  activeFkType = activeTeam === "eco" ? "all" : "operator";
+  activeDefensiveFkFilter = "all";
+  activeDefensiveMap = "Bind";
+  if (activeTeam === "eco") {
+    activeFkType = "all";
+  } else if (activeFkType !== "operator" && activeFkType !== "all") {
+    activeFkType = "operator";
+  }
   render();
+});
+
+sideCtButton?.addEventListener("click", () => {
+  activeSideView = "ct";
+  renderHero(allVetoHistoryData[activeTeam]);
+  renderMapInfo();
+  renderSideButtons();
+});
+
+sideTButton?.addEventListener("click", () => {
+  activeSideView = "t";
+  renderHero(allVetoHistoryData[activeTeam]);
+  renderMapInfo();
+  renderSideButtons();
 });
 
 mapSelect.addEventListener("change", (event) => {
@@ -658,6 +1035,103 @@ fkTypeSelect.addEventListener("change", (event) => {
   renderMapInfo();
   renderHero(allVetoHistoryData[activeTeam]);
 });
+
+if (playerFilterList) {
+  playerFilterList.addEventListener("change", (event) => {
+    const input = event.target.closest("input[data-player-name]");
+    if (!input) return;
+    const key = getPlayerFilterKey();
+    selectedPlayerFilters[key] ||= {};
+    const playerName = decodeURIComponent(input.dataset.playerName ?? "");
+    selectedPlayerFilters[key][playerName] = input.checked;
+    renderMapInfo();
+  });
+}
+
+if (playerFilterAll) {
+  playerFilterAll.addEventListener("click", () => {
+    const key = getPlayerFilterKey();
+    selectedPlayerFilters[key] ||= {};
+    Object.keys(selectedPlayerFilters[key]).forEach((player) => {
+      selectedPlayerFilters[key][player] = true;
+    });
+    renderMapInfo();
+  });
+}
+
+if (playerFilterNone) {
+  playerFilterNone.addEventListener("click", () => {
+    const key = getPlayerFilterKey();
+    selectedPlayerFilters[key] ||= {};
+    Object.keys(selectedPlayerFilters[key]).forEach((player) => {
+      selectedPlayerFilters[key][player] = false;
+    });
+    renderMapInfo();
+  });
+}
+
+if (defensivePlayerRow) {
+  defensivePlayerRow.addEventListener("click", (event) => {
+    const button = event.target.closest("button[data-def-player]");
+    if (!button) return;
+    const info = allDefensiveEarly?.[activeTeam];
+    if (!info) return;
+    const sideInfo = info?.[activeSideView];
+    if (!sideInfo) return;
+    const key = getDefensiveFilterKey(sideInfo);
+    selectedDefensivePlayerFilters[key] ||= {};
+    const playerName = decodeURIComponent(button.dataset.defPlayer ?? "");
+    const current = selectedDefensivePlayerFilters[key][playerName] !== false;
+    selectedDefensivePlayerFilters[key][playerName] = !current;
+    renderMapInfo();
+  });
+}
+
+if (defensivePlayerAll) {
+  defensivePlayerAll.addEventListener("click", () => {
+    const info = allDefensiveEarly?.[activeTeam];
+    if (!info) return;
+    const sideInfo = info?.[activeSideView];
+    if (!sideInfo) return;
+    const players = collectDefensivePlayers(sideInfo);
+    const key = getDefensiveFilterKey(sideInfo);
+    selectedDefensivePlayerFilters[key] ||= {};
+    players.forEach((player) => {
+      selectedDefensivePlayerFilters[key][player] = true;
+    });
+    renderMapInfo();
+  });
+}
+
+if (defensivePlayerNone) {
+  defensivePlayerNone.addEventListener("click", () => {
+    const info = allDefensiveEarly?.[activeTeam];
+    if (!info) return;
+    const sideInfo = info?.[activeSideView];
+    if (!sideInfo) return;
+    const players = collectDefensivePlayers(sideInfo);
+    const key = getDefensiveFilterKey(sideInfo);
+    selectedDefensivePlayerFilters[key] ||= {};
+    players.forEach((player) => {
+      selectedDefensivePlayerFilters[key][player] = false;
+    });
+    renderMapInfo();
+  });
+}
+
+if (defensiveFkSelect) {
+  defensiveFkSelect.addEventListener("change", (event) => {
+    activeDefensiveFkFilter = event.target.value;
+    renderMapInfo();
+  });
+}
+
+if (defensiveMapSelect) {
+  defensiveMapSelect.addEventListener("change", (event) => {
+    activeDefensiveMap = event.target.value;
+    renderMapInfo();
+  });
+}
 
 if (calibrationToggle) {
   calibrationToggle.addEventListener("click", () => {

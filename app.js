@@ -26,6 +26,29 @@ const allMapInfo = {
   ...(typeof extraMapInfoData !== "undefined" ? extraMapInfoData : {})
 };
 const allDefensiveEarly = typeof defensiveEarlyData !== "undefined" ? defensiveEarlyData : {};
+const allDefensiveRetake = {};
+const allPostPlantData = {};
+const allSiteStats = {};
+const RETAKE_DATA_VERSION = "20260416e";
+const RETAKE_DATA_SOURCES = [
+  { team: "eintracht", side: "ct", map: "Bind",   url: `./data/sge_bind_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "eintracht", side: "ct", map: "Breeze", url: `./data/sge_breeze_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "eintracht", side: "ct", map: "Lotus",  url: `./data/sge_lotus_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "eintracht", side: "ct", map: "Pearl",  url: `./data/sge_pearl_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "eintracht", side: "ct", map: "Split",  url: `./data/sge_split_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+];
+const POSTPLANT_DATA_SOURCES = [
+  { team: "eintracht", map: "Lotus", url: `./data/sge_lotus_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "eintracht", map: "Bind",  url: `./data/sge_bind_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "eintracht", map: "Pearl", url: `./data/sge_pearl_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "eintracht", map: "Split", url: `./data/sge_split_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+];
+const SITE_STATS_SOURCES = [
+  { team: "eintracht", map: "Lotus", url: `./data/sge_lotus_site_stats.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "eintracht", map: "Bind",  url: `./data/sge_bind_site_stats.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "eintracht", map: "Pearl", url: `./data/sge_pearl_site_stats.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "eintracht", map: "Split", url: `./data/sge_split_site_stats.json?v=${RETAKE_DATA_VERSION}` },
+];
   const MAP_IMAGE_VERSION = "20260412-riot";
   const MAP_IMAGE_ASPECTS = {
     Bind: 1,
@@ -58,20 +81,28 @@ const calibrationOverrides = {
   "dortmund|Haven|t": []
 };
 
-const teamOrder = ["fokus", "eintracht", "attax", "dortmund", "eco"].filter((key) => allVetoHistoryData[key]);
+const teamOrder = ["fokus", "eintracht", "attax"].filter((key) => allVetoHistoryData[key]);
 let activeTeam = teamOrder[0];
 let activeView = "veto";
 let startDateFilter = "";
 let activeMap = "Bind";
 let activeFkType = "operator";
 let activeSideView = "ct";
-let activeDefensiveFkFilter = "all";
 let activeDefensiveMap = "Bind";
+let ppActiveSite = "All";
+let rtActiveSite = "All";
+let retakeActiveSites = new Set(["A", "B", "C"]);
+let ppInlineActiveSites = new Set(["A", "B", "C"]);
+let lastDefensiveInfo = null;
+let activeRotationTrail = null;
 const selectedPlayerFilters = {};
 const selectedDefensivePlayerFilters = {};
 
 const viewVetoButton = document.getElementById("view-veto");
 const viewMapButton = document.getElementById("view-map");
+const viewPostPlantButton = document.getElementById("view-postplant");
+const postplantView = document.getElementById("postplant-view");
+const mainToolbar = document.getElementById("main-toolbar");
 const sideControls = document.getElementById("side-controls");
 const sideCtButton = document.getElementById("side-ct");
 const sideTButton = document.getElementById("side-t");
@@ -114,7 +145,6 @@ const defensiveTitle = document.getElementById("defensive-title");
 const defensiveCopy = document.getElementById("defensive-copy");
 const defensivePanels = document.getElementById("defensive-panels");
 const defensiveSampleCard = document.getElementById("defensive-sample-card");
-const defensiveFkSelect = document.getElementById("defensive-fk-select");
 const defensiveMapSelect = document.getElementById("defensive-map-select");
 const defensivePlayerControls = document.getElementById("defensive-player-controls");
 const defensivePlayerRow = document.getElementById("defensive-player-row");
@@ -453,6 +483,33 @@ function collectDefensivePlayers(defensiveInfo) {
   return out;
 }
 
+function getRetakeInfo(teamKey, sideKey, mapName) {
+  return allDefensiveRetake?.[teamKey]?.[sideKey]?.[mapName] ?? null;
+}
+
+function collectRetakePoints(retakeInfo) {
+  if (!retakeInfo?.sites) return [];
+  const siteOrder = ["A", "B", "C"];
+  return siteOrder.flatMap((site) => retakeInfo.sites?.[site]?.points ?? []);
+}
+
+function collectAllDefensivePlayers(defensiveInfo) {
+  const seen = new Set();
+  const out = [];
+  const fromEarly = collectDefensivePlayers(defensiveInfo);
+  const fromSniper = collectPlayersFromPoints(defensiveInfo?.sniper?.points ?? [], []);
+  const mapName = defensiveInfo?.map ?? "Bind";
+  const retakeInfo = getRetakeInfo(activeTeam, activeSideView, mapName);
+  const fromRetake = collectPlayersFromPoints(collectRetakePoints(retakeInfo), []);
+  [...fromEarly, ...fromSniper, ...fromRetake].forEach((player) => {
+    if (player && !seen.has(player)) {
+      seen.add(player);
+      out.push(player);
+    }
+  });
+  return sortByPlayerOrder(out);
+}
+
 function ensureDefensiveFilterState(defensiveInfo, players) {
   const key = getDefensiveFilterKey(defensiveInfo);
   if (!selectedDefensivePlayerFilters[key]) {
@@ -485,11 +542,10 @@ function renderDefensivePlayerChips(defensiveInfo, players) {
   }
   defensivePlayerControls.classList.remove("hidden");
   const state = ensureDefensiveFilterState(defensiveInfo, players);
-  const colorByPlayer = Object.fromEntries((defensiveInfo?.legend ?? []).map((row) => [row.player, row.color]));
   defensivePlayerRow.innerHTML = players
     .map((player) => {
       const enabled = state[player] !== false;
-      const color = colorByPlayer[player] ?? "#555";
+      const color = getPlayerColor(player);
       return `
         <button
           type="button"
@@ -697,7 +753,7 @@ function endHeatmapDrag() {
               class="heat-point ${calibrationMode ? "calibration-enabled" : ""}"
               type="button"
               style="left:${killer.x}%; top:${killer.y}%"
-              title="${point.player} -> ${point.victim ?? "?"} | ${point.date} vs ${point.opponent} | R${point.roundNum} | ${point.score}"
+              title="${point.player} -> ${point.victim ?? "?"} | ${point.date} vs ${point.opponent} | R${point.roundNum + 1} | ${point.score}"
               aria-label="${point.player} ${point.date} versus ${point.opponent}"
               data-side-key="${sideKey}"
               data-point-index="${index}"
@@ -710,8 +766,129 @@ function endHeatmapDrag() {
     `;
   }
 
-function renderDefensivePanels(info, selectedPlayers, fkOwnerFilter = "all") {
+function fmtRoundTime(ms) {
+  const s = Math.max(0, 100 - Math.round(ms / 1000));
+  return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+}
+
+function buildPlayerLegendMarkup(players) {
+  if (!players.length) return "";
+  return `<div class="retake-player-legend">${players.map(p =>
+    `<span class="retake-legend-item">
+      <span class="retake-legend-dot" style="background:${getPlayerColor(p)};"></span>
+      <span class="retake-legend-name">${p.replace(/^SGE\s+/, "")}</span>
+    </span>`
+  ).join("")}</div>`;
+}
+
+function buildMapControlMarkup(mapName, side, frameClassList, frameStyle, mapImageMarkup, selectedPlayers, sidebarMarkup) {
+  const mcSide = mapControlData?.[mapName]?.[side];
+  if (!mcSide) return "";
+
+  const windows = [
+    { key: "0_10",  label: "0–10s" },
+    { key: "10_20", label: "10–20s" },
+    { key: "20_30", label: "20–30s" },
+  ];
+
+  const cards = windows.map(({ key, label }) => {
+    const allPoints = mcSide.mapControl?.[key] ?? [];
+    const points = allPoints.filter(pt => selectedPlayers.has(pt.player));
+    const roundCount = new Set(allPoints.map(pt => `${pt.matchId}|${pt.roundNum}`)).size;
+    const dotsMarkup = points.map(pt =>
+      `<span class="heat-point" style="left:${pt.normX}%;top:${pt.normY}%;background:${getPlayerColor(pt.player)};" title="${pt.player} | R${pt.roundNum + 1} | ${pt.date} vs ${pt.opponent} | ${fmtRoundTime(pt.timeMs)}"></span>`
+    ).join("");
+    return `
+      <article class="defensive-card">
+        <div class="defensive-card-head">
+          <h3>${label}</h3>
+          <p class="defensive-card-meta">Rounds: ${roundCount} | Points: ${points.length}/${allPoints.length}</p>
+        </div>
+        <div class="defensive-map-wrap">
+          <div class="defensive-map">
+            <div class="${frameClassList}" style="${frameStyle}">
+              ${mapImageMarkup}
+              <div class="heat-layer">
+                ${dotsMarkup || '<div class="heatmap-empty"><p>No samples.</p></div>'}
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>`;
+  }).join("");
+
+  return `
+    <div class="defensive-topic-divider" role="presentation"></div>
+    <section class="defensive-topic">
+      <h3 class="defensive-topic-title">Map Control</h3>
+      <div class="early-positioning-layout">
+        ${sidebarMarkup}
+        <div class="defensive-topic-grid">${cards}</div>
+      </div>
+    </section>`;
+}
+
+function buildRotationMarkup(mapName, side, frameClassList, frameStyle, mapImageMarkup, selectedPlayers, sidebarMarkup) {
+  const mcSide = mapControlData?.[mapName]?.[side];
+  if (!mcSide) return "";
+
+  const rounds = mcSide.rotations ?? [];
+  if (!rounds.length) return "";
+
+  const hasSelection = activeRotationTrail !== null;
+  let svgLines = "";
+  let dotsMarkup = "";
+  const visiblePlayers = new Set();
+
+  for (const roundTrails of rounds) {
+    for (const trail of roundTrails) {
+      if (!selectedPlayers.has(trail.player)) continue;
+      visiblePlayers.add(trail.player);
+      const color = getPlayerColor(trail.player);
+      const snaps = trail.snapshots;
+      const trailId = `${trail.matchId}|${trail.roundNum}`;
+      const isActive = activeRotationTrail === trailId;
+      const lineOpacity = hasSelection ? (isActive ? 1.0 : 0.06) : 0.35;
+      const dotOpacity  = hasSelection ? (isActive ? 1.0 : 0.1)  : 0.75;
+      const strokeW     = isActive ? 0.6 : 0.35;
+
+      if (snaps.length >= 2) {
+        const pts = snaps.map(s => `${s.normX},${s.normY}`).join(" ");
+        svgLines += `<polyline points="${pts}" fill="none" stroke="${color}" stroke-width="${strokeW}" opacity="${lineOpacity}"/>`;
+      }
+      for (const snap of snaps) {
+        dotsMarkup += `<span class="heat-point rotation-dot" data-trail-id="${trailId}" style="left:${snap.normX}%;top:${snap.normY}%;background:${color};opacity:${dotOpacity};cursor:pointer;" title="${trail.player} | R${trail.roundNum + 1} | ${fmtRoundTime(snap.timeMs)} | ${trail.date} vs ${trail.opponent}"></span>`;
+      }
+    }
+  }
+
+  const legendMarkup = buildPlayerLegendMarkup(sortByPlayerOrder([...visiblePlayers]));
+
+  const roundCount = new Set(
+    rounds.flatMap(rt => rt.filter(t => selectedPlayers.has(t.player)).map(t => `${t.matchId}|${t.roundNum}`))
+  ).size;
+  // Returns just the article card — outer layout is handled by the caller
+  return `
+    <article class="defensive-card">
+      <div class="defensive-card-head">
+        <p class="defensive-card-meta">Rounds: ${roundCount}</p>
+      </div>
+      <div class="defensive-map-wrap">
+        <div class="defensive-map">
+          <div class="${frameClassList}" style="${frameStyle}">
+            ${mapImageMarkup}
+            <svg class="rotation-svg" viewBox="0 0 100 100" preserveAspectRatio="none">${svgLines}</svg>
+            <div class="heat-layer">${dotsMarkup}</div>
+            ${legendMarkup}
+          </div>
+        </div>
+      </div>
+    </article>`;
+}
+
+function renderDefensivePanels(info) {
   if (!defensivePanels) return;
+  lastDefensiveInfo = info;
   const mapName = info.map || "Bind";
   const mapImage = MAP_IMAGE_PATHS[mapName] ?? "";
   const frameStyle = getContainedFrameStyle(mapName, 1);
@@ -725,37 +902,59 @@ function renderDefensivePanels(info, selectedPlayers, fkOwnerFilter = "all") {
   const mapImageMarkup = mapImage
     ? `<img class="heat-map-image" src="${mapImage}" alt="${mapName} map" loading="lazy" decoding="async" />`
     : "";
-  const legend = info.legend ?? [];
-  const colorByPlayer = Object.fromEntries(legend.map((row) => [row.player, row.color]));
-  const thresholds = [
+  // Only early-positioning players drive the sidebar filter
+  const earlyPlayers = collectDefensivePlayers(info);
+  const selectedPlayers = getSelectedDefensiveSet(info, earlyPlayers);
+  const earlyFilterState = ensureDefensiveFilterState(info, earlyPlayers);
+  const sidebarChipsMarkup = earlyPlayers
+    .map((player) => {
+      const enabled = earlyFilterState[player] !== false;
+      const color = getPlayerColor(player);
+      return `
+        <button type="button" class="defensive-player-chip ${enabled ? "" : "off"}" data-def-player="${encodeURIComponent(player)}" aria-pressed="${enabled}">
+          <span class="defensive-player-chip-dot" style="background:${color};"></span>
+          <span>${getPlayerDisplayName(player)}</span>
+        </button>
+      `;
+    })
+    .join("");
+  const sidebarMarkup = earlyPlayers.length
+    ? `<div class="early-player-sidebar">
+        <div class="early-player-actions">
+          <button type="button" class="defensive-player-action" data-early-all>All</button>
+          <button type="button" class="defensive-player-action" data-early-none>None</button>
+        </div>
+        ${sidebarChipsMarkup}
+      </div>`
+    : "";
+  const timingPanels = [
     ["lt10s", "<10s"],
     ["lt20s", "<20s"],
     ["lt30s", "<30s"]
   ];
-  const panelTitleBase =
-    activeSideView === "ct" ? "Defending Team Positioning at the first kill" : "Attacking Team Positioning at the first kill";
+  const earlyTopicTitle = activeSideView === "ct" ? "Position at First Kill" : "Position at First Kill";
+  const earlyTopicTooltip = "Player positions on the map at the exact moment the first kill of the round occurs. Grouped by when that kill happened: \u003C10s, \u003C20s, \u003C30s from round start. Each colored dot is one player\u2019s location. Use the player menu on the left to isolate individuals.";
+  const sniperTopicTitle = activeSideView === "ct" ? "Position OP-Kill" : "Position OP-Kill";
+  const sniperTopicTooltip = "Map positions where the defending team landed a kill with the Operator (sniper rifle). Each colored dot represents one kill, colored by the player who made it. All rounds in the sample are shown \u2014 no player filter applied.";
 
-  defensivePanels.innerHTML = thresholds
+  const timingMarkup = timingPanels
     .map(([key, label]) => {
-      const bucket = info.thresholds?.[key] ?? { roundCount: 0, pointCount: 0, points: [] };
-      const allPoints = bucket.points ?? [];
-      const fkScopedPoints =
-        fkOwnerFilter === "all" ? allPoints : allPoints.filter((point) => point.fkOwner === fkOwnerFilter);
-      const points = fkScopedPoints.filter((point) => selectedPlayers.has(point.player));
-      const roundCount = new Set(fkScopedPoints.map((point) => `${point.matchId}|${point.roundNum}`)).size;
+      const allPoints = info.thresholds?.[key]?.points ?? [];
+      const points = allPoints.filter((point) => selectedPlayers.has(point.player));
+      const roundCount = new Set(allPoints.map((point) => `${point.matchId}|${point.roundNum}`)).size;
       const pointsMarkup = points
         .map((point) => {
           const p = projectHeatmapPoint(point);
-          const color = colorByPlayer[point.player] ?? "#444444";
-          return `<span class="heat-point" style="left:${p.x}%; top:${p.y}%; background:${color};" title="${point.player} | ${point.date} vs ${point.opponent} | R${point.roundNum}"></span>`;
+          const color = getPlayerColor(point.player);
+          return `<span class="heat-point" style="left:${p.x}%; top:${p.y}%; background:${color};" title="${point.player} | ${point.date} vs ${point.opponent} | R${point.roundNum + 1}"></span>`;
         })
         .join("");
 
       return `
         <article class="defensive-card">
           <div class="defensive-card-head">
-            <h3>${panelTitleBase} (${label})</h3>
-            <p class="defensive-card-meta">Rounds: ${roundCount} | Points: ${points.length}/${fkScopedPoints.length}</p>
+            <h3>${label}</h3>
+            <p class="defensive-card-meta">Rounds: ${roundCount} | Points: ${points.length}/${allPoints.length}</p>
           </div>
           <div class="defensive-map-wrap">
             <div class="defensive-map">
@@ -771,7 +970,343 @@ function renderDefensivePanels(info, selectedPlayers, fkOwnerFilter = "all") {
       `;
     })
     .join("");
+
+  const sniperAllPoints = info?.sniper?.points ?? [];
+  const sniperPoints = sniperAllPoints; // unfiltered — sidebar only affects early positioning
+  const sniperRoundCount = new Set(sniperAllPoints.map((point) => `${point.matchId}|${point.roundNum}`)).size;
+  const sniperVisual = sniperPoints.map((point) => {
+    const killer = projectHeatmapPoint(point);
+    const hasVictim = point.victimNormX != null && point.victimNormY != null;
+    const victim = hasVictim ? projectHeatmapPoint({ normX: point.victimNormX, normY: point.victimNormY }) : null;
+    return { point, killer, victim };
+  });
+
+  const sniperSvgLines = sniperVisual
+    .filter(e => e.victim)
+    .map(e => `<line class="heat-link" x1="${e.killer.x}" y1="${e.killer.y}" x2="${e.victim.x}" y2="${e.victim.y}"></line>`)
+    .join("");
+
+  const sniperVictimDots = sniperVisual
+    .filter(e => e.victim)
+    .map(e => `<span class="heat-victim-point" style="left:${e.victim.x}%; top:${e.victim.y}%;" title="Victim: ${e.point.victim ?? "?"} | R${e.point.roundNum + 1} | ${e.point.date} vs ${e.point.opponent}"></span>`)
+    .join("");
+
+  const sniperKillerDots = sniperVisual
+    .map(e => {
+      const color = getPlayerColor(e.point.player);
+      return `<span class="heat-point" style="left:${e.killer.x}%; top:${e.killer.y}%; background:${color};" title="${e.point.player} -> ${e.point.victim ?? "?"} | ${e.point.date} vs ${e.point.opponent} | R${e.point.roundNum + 1}"></span>`;
+    })
+    .join("");
+
+  const sniperLegendPlayers = sortByPlayerOrder([...new Set(sniperPoints.map(pt => pt.player))]);
+  const sniperLegendMarkup = sniperLegendPlayers.length
+    ? `<div class="retake-player-legend">${sniperLegendPlayers.map(p =>
+        `<span class="retake-legend-item"><span class="retake-legend-dot" style="background:${getPlayerColor(p)};"></span><span class="retake-legend-name">${p.replace(/^SGE\s+/, "")}</span></span>`
+      ).join("")}</div>`
+    : "";
+
+  const sniperMarkup = `
+    <article class="defensive-card">
+      <div class="defensive-card-head">
+        <h3>All Sniper Kills</h3>
+        <p class="defensive-card-meta">Rounds: ${sniperRoundCount} | Points: ${sniperPoints.length}/${sniperAllPoints.length}</p>
+      </div>
+      <div class="defensive-map-wrap">
+        <div class="defensive-map">
+          <div class="${frameClassList}" style="${frameStyle}">
+            ${mapImageMarkup}
+            ${sniperPoints.length ? `
+            <div class="heat-layer">
+              <svg class="heat-links" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">${sniperSvgLines}</svg>
+              ${sniperVictimDots}
+              ${sniperKillerDots}
+            </div>` : '<div class="heatmap-empty"><p>No samples.</p></div>'}
+            ${sniperLegendMarkup}
+          </div>
+        </div>
+      </div>
+    </article>
+  `;
+
+  // ── All SGE First Kills ─────────────────────────────────────────
+  const allFkAllPoints = info?.all_fk?.points ?? [];
+  const allFkRoundCount = new Set(allFkAllPoints.map(p => `${p.matchId}|${p.roundNum}`)).size;
+  const allFkVisual = allFkAllPoints.map(point => {
+    const killer = projectHeatmapPoint(point);
+    const hasVictim = point.victimNormX != null && point.victimNormY != null;
+    const victim = hasVictim ? projectHeatmapPoint({ normX: point.victimNormX, normY: point.victimNormY }) : null;
+    return { point, killer, victim };
+  });
+  const allFkSvgLines = allFkVisual.filter(e => e.victim)
+    .map(e => `<line class="heat-link" x1="${e.killer.x}" y1="${e.killer.y}" x2="${e.victim.x}" y2="${e.victim.y}"></line>`).join("");
+  const allFkVictimDots = allFkVisual.filter(e => e.victim)
+    .map(e => `<span class="heat-victim-point" style="left:${e.victim.x}%; top:${e.victim.y}%;" title="Victim: ${e.point.victim ?? "?"} | R${e.point.roundNum + 1} | ${e.point.date} vs ${e.point.opponent}"></span>`).join("");
+  const allFkKillerDots = allFkVisual
+    .map(e => {
+      const color = getPlayerColor(e.point.player);
+      return `<span class="heat-point" style="left:${e.killer.x}%; top:${e.killer.y}%; background:${color};" title="${e.point.player} -> ${e.point.victim ?? "?"} | ${e.point.date} vs ${e.point.opponent} | R${e.point.roundNum + 1} | ${fmtRoundTime(e.point.timeSinceRoundStartMillis)}"></span>`;
+    }).join("");
+  const allFkLegendPlayers = sortByPlayerOrder([...new Set(allFkAllPoints.map(p => p.player))]);
+  const allFkLegendMarkup = allFkLegendPlayers.length
+    ? `<div class="retake-player-legend">${allFkLegendPlayers.map(p =>
+        `<span class="retake-legend-item"><span class="retake-legend-dot" style="background:${getPlayerColor(p)};"></span><span class="retake-legend-name">${p.replace(/^SGE\s+/, "")}</span></span>`
+      ).join("")}</div>`
+    : "";
+  const allFkMarkup = `
+    <article class="defensive-card">
+      <div class="defensive-card-head">
+        <h3>All First Kills</h3>
+        <p class="defensive-card-meta">Rounds: ${allFkRoundCount} | Points: ${allFkAllPoints.length}</p>
+      </div>
+      <div class="defensive-map-wrap">
+        <div class="defensive-map">
+          <div class="${frameClassList}" style="${frameStyle}">
+            ${mapImageMarkup}
+            ${allFkAllPoints.length ? `
+            <div class="heat-layer">
+              <svg class="heat-links" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">${allFkSvgLines}</svg>
+              ${allFkVictimDots}
+              ${allFkKillerDots}
+            </div>` : '<div class="heatmap-empty"><p>No samples.</p></div>'}
+            ${allFkLegendMarkup}
+          </div>
+        </div>
+      </div>
+    </article>
+  `;
+
+  const retakeInfo = getRetakeInfo(activeTeam, activeSideView, mapName);
+  const retakeAllPoints = collectRetakePoints(retakeInfo);
+  const retakeSiteOrder = ["A", "B", "C"];
+  const siteColor = { A: "#df3a3a", B: "#2f68e8", C: "#0d8d52" };
+  const retakeSiteChips = retakeSiteOrder
+    .map((site) => {
+      const rounds = retakeInfo?.sites?.[site]?.roundCount ?? 0;
+      const points = retakeInfo?.sites?.[site]?.pointCount ?? 0;
+      const isActive = retakeActiveSites.has(site);
+      const opacity = isActive ? "1" : "0.35";
+      return `<span class="retake-site-chip retake-site-chip-${site}" data-site="${site}" onclick="toggleRetakeSite('${site}')" style="cursor:pointer;opacity:${opacity};" title="Click to toggle Site ${site}">${site}: ${rounds}R / ${points}P</span>`;
+    })
+    .join("");
+  const retakePoints = retakeAllPoints.filter((point) => retakeActiveSites.has(String(point.site || "").toUpperCase()));
+  const retakeRoundCount = new Set(retakePoints.map((point) => `${point.matchId}|${point.roundNum}`)).size;
+  const retakePointsMarkup = retakePoints
+    .map((point) => {
+      const p = projectHeatmapPoint(point);
+      const color = getPlayerColor(point.player);
+      const site = String(point.site || "").toUpperCase();
+      const ring = siteColor[site] ?? "#888";
+      return `
+        <span class="heat-point retake-point" style="left:${p.x}%; top:${p.y}%; background:${color}; box-shadow: 0 0 0 1.4px ${ring};" title="${point.player} | Site ${site || "?"} | ${point.date} vs ${point.opponent} | R${point.roundNum + 1}"></span>
+        <span class="retake-site-tag retake-site-tag-${site}" style="left:calc(${p.x}% + 6px); top:calc(${p.y}% - 8px);">${site || "?"}</span>
+      `;
+    })
+    .join("");
+  const retakeLegendPlayers = sortByPlayerOrder([...new Set(retakePoints.map(pt => pt.player))]);
+  const retakeLegendMarkup = retakeLegendPlayers.length
+    ? `<div class="retake-player-legend">${retakeLegendPlayers.map(p =>
+        `<span class="retake-legend-item"><span class="retake-legend-dot" style="background:${ppGetColor(p)};"></span><span class="retake-legend-name">${ppShortName(p)}</span></span>`
+      ).join("")}</div>`
+    : "";
+
+  const retakeMarkup = retakeInfo && activeSideView === "ct"
+    ? `
+    <article class="defensive-card">
+      <div class="retake-site-chip-row">${retakeSiteChips}</div>
+      <div class="defensive-map-wrap">
+        <div class="defensive-map">
+          <div class="${frameClassList}" style="${frameStyle}">
+            ${mapImageMarkup}
+            <div class="heat-layer">
+              ${retakePointsMarkup || '<div class="heatmap-empty"><p>No samples.</p></div>'}
+            </div>
+            ${retakeLegendMarkup}
+          </div>
+        </div>
+      </div>
+    </article>
+    `
+    : "";
+
+  // Post-Plant Positioning: T-side only (SGE planted the spike)
+  let ppInlineMarkup = "";
+  const ppData = allPostPlantData?.eintracht?.[mapName];
+  if (ppData && activeSideView === "t") {
+    const ppSiteColor = { A: "#df3a3a", B: "#2f68e8", C: "#0d8d52" };
+    const ppSites = Object.keys(ppData.sites).sort();
+
+    const ppSiteChips = ppSites.map((site) => {
+      const sitePts = ppData.sites[site]?.points ?? [];
+      const rounds = ppData.sites[site]?.roundCount ?? 0;
+      const pts = sitePts.length;
+      const isActive = ppInlineActiveSites.has(site);
+      const opacity = isActive ? "1" : "0.35";
+      return `<span class="retake-site-chip retake-site-chip-${site}" data-site="${site}" onclick="togglePpInlineSite('${site}')" style="cursor:pointer;opacity:${opacity};" title="Click to toggle Site ${site}">${site}: ${rounds}R / ${pts}P</span>`;
+    }).join("");
+
+    const allPpPts = ppSites
+      .filter(s => ppInlineActiveSites.has(s))
+      .flatMap(s => ppData.sites[s]?.points ?? []);
+
+    const ppDotsMarkup = allPpPts.length
+      ? allPpPts.map(pt => {
+          const p = projectHeatmapPoint(pt);
+          const color = ppGetColor(pt.player);
+          const ring = ppSiteColor[pt.site] ?? "#888";
+          const site = pt.site ?? "";
+          return `
+            <span class="heat-point retake-point" style="left:${p.x}%;top:${p.y}%;background:${color};box-shadow:0 0 0 1.4px ${ring};" title="${ppShortName(pt.player)} | Site ${site} | R${pt.roundNum + 1} | ${pt.date} vs ${pt.opponent}"></span>
+            <span class="retake-site-tag retake-site-tag-${site}" style="left:calc(${p.x}% + 6px);top:calc(${p.y}% - 8px);">${site}</span>
+          `;
+        }).join("")
+      : '<div class="heatmap-empty"><p>No samples.</p></div>';
+
+    const ppLegendPlayers = sortByPlayerOrder([...new Set(allPpPts.map(pt => pt.player))]);
+    const ppLegendMarkup = ppLegendPlayers.length
+      ? `<div class="retake-player-legend">${ppLegendPlayers.map(p =>
+          `<span class="retake-legend-item"><span class="retake-legend-dot" style="background:${ppGetColor(p)};"></span><span class="retake-legend-name">${ppShortName(p)}</span></span>`
+        ).join("")}</div>`
+      : "";
+
+    ppInlineMarkup = `
+      <article class="defensive-card">
+        <div class="retake-site-chip-row">${ppSiteChips}</div>
+        <div class="defensive-map-wrap">
+          <div class="defensive-map">
+            <div class="${frameClassList}" style="${frameStyle}">
+              ${mapImageMarkup}
+              <div class="heat-layer">${ppDotsMarkup}</div>
+              ${ppLegendMarkup}
+            </div>
+          </div>
+        </div>
+      </article>
+    `;
+  }
+
+  // ── Site stats table ─────────────────────────────────────────────
+  let siteStatsMarkup = "";
+  const statsData = allSiteStats?.eintracht?.[mapName];
+  if (statsData) {
+    const fmt = (v, suffix = "") => v != null ? `${v}${suffix}` : "—";
+    const fmtTime = (v) => v != null ? `${v}s` : "—";
+
+    if (activeSideView === "t") {
+      const ts = statsData.t_side;
+      const sites = Object.keys(ts.sites).sort();
+      const rows = sites.map((site) => {
+        const s = ts.sites[site];
+        return `<tr>
+          <td class="sst-site sst-site-${site}">${site}</td>
+          <td>${fmt(s.pct_plant, "%")}</td>
+          <td>${fmt(s.pct_win, "%")}</td>
+          <td>${fmtTime(s.avg_plant_time)}</td>
+          <td>${fmtTime(s.min_plant_time)} / ${fmtTime(s.max_plant_time)}</td>
+          <td>${fmtTime(s.fk_to_plant_avg)}</td>
+        </tr>`;
+      }).join("");
+      siteStatsMarkup = `
+        <div class="site-stats-wrap">
+          <table class="site-stats-table">
+            <thead><tr>
+              <th>SITE</th><th>% PLANT</th><th>% WIN</th>
+              <th>TIME TO PLANT</th><th>MIN / MAX</th><th>FK → PLANT</th>
+            </tr></thead>
+            <tbody>${rows}</tbody>
+          </table>
+        </div>`;
+    } else {
+      const cs = statsData.ct_side;
+      const sites = Object.keys(cs.sites).sort();
+      const rows = sites.map((site) => {
+        const s = cs.sites[site];
+        return `<tr>
+          <td class="sst-site sst-site-${site}">${site}</td>
+          <td>${fmt(s.pct_defuse_share, "%")}</td>
+          <td>${fmt(s.pct_defuse_win, "%")}</td>
+          <td>${fmtTime(s.avg_defuse_time)}</td>
+          <td>${fmtTime(s.fk_after_plant_avg)}</td>
+        </tr>`;
+      }).join("");
+      siteStatsMarkup = `
+        <div class="site-stats-wrap">
+          <table class="site-stats-table">
+            <thead><tr>
+              <th>SITE</th><th>% DEFUSE</th><th>% DEFUSEWIN</th>
+              <th>TIME TO DEFUSE</th><th>FK AFTER PLANT</th>
+            </tr></thead>
+            <tbody>${rows}</tbody>
+          </table>
+        </div>`;
+    }
+  }
+
+  defensivePanels.innerHTML = `
+    ${siteStatsMarkup}
+    <section class="defensive-topic">
+      <h3 class="defensive-topic-title" title="${earlyTopicTooltip}">${earlyTopicTitle}</h3>
+      <div class="early-positioning-layout">
+        ${sidebarMarkup}
+        <div class="defensive-topic-grid">
+          ${timingMarkup}
+        </div>
+      </div>
+    </section>
+    <div class="defensive-topic-divider" role="presentation"></div>
+    <div class="defensive-support-columns">
+      <section class="defensive-topic">
+        <h3 class="defensive-topic-title" title="${sniperTopicTooltip}">${sniperTopicTitle}</h3>
+        ${sniperMarkup}
+      </section>
+      <section class="defensive-topic">
+        <h3 class="defensive-topic-title">All First Kills</h3>
+        ${allFkMarkup}
+      </section>
+    </div>
+    ${buildMapControlMarkup(mapName, activeSideView, frameClassList, frameStyle, mapImageMarkup, selectedPlayers, sidebarMarkup)}
+    ${(() => {
+      const rotationCard = buildRotationMarkup(mapName, activeSideView, frameClassList, frameStyle, mapImageMarkup, selectedPlayers, sidebarMarkup);
+      if (!rotationCard) return "";
+      const secondaryCard = retakeMarkup
+        ? `<div><h3 class="defensive-topic-title">Retake positions</h3>${retakeMarkup}</div>`
+        : ppInlineMarkup
+        ? `<div><h3 class="defensive-topic-title">Post-Plant positioning</h3>${ppInlineMarkup}</div>`
+        : "";
+      return `
+        <div class="defensive-topic-divider" role="presentation"></div>
+        <div class="early-positioning-layout">
+          ${sidebarMarkup}
+          <div class="${secondaryCard ? "defensive-support-columns" : ""}">
+            <div>
+              <h3 class="defensive-topic-title">Rotation Patterns</h3>
+              ${rotationCard}
+            </div>
+            ${secondaryCard}
+          </div>
+        </div>`;
+    })()}
+  `;
 }
+
+function toggleRetakeSite(site) {
+  if (retakeActiveSites.has(site)) {
+    retakeActiveSites.delete(site);
+  } else {
+    retakeActiveSites.add(site);
+  }
+  if (lastDefensiveInfo) renderDefensivePanels(lastDefensiveInfo);
+}
+window.toggleRetakeSite = toggleRetakeSite;
+
+function togglePpInlineSite(site) {
+  if (ppInlineActiveSites.has(site)) {
+    ppInlineActiveSites.delete(site);
+  } else {
+    ppInlineActiveSites.add(site);
+  }
+  if (lastDefensiveInfo) renderDefensivePanels(lastDefensiveInfo);
+}
+window.togglePpInlineSite = togglePpInlineSite;
 
 function renderSideButtons() {
   sideCtButton?.classList.toggle("active", activeSideView === "ct");
@@ -820,34 +1355,27 @@ function renderMapInfo() {
     }
 
     defensiveModule.classList.remove("hidden");
-    if (defensiveFkSelect) {
-      const teamLabel = team.ownerLabel ?? team.name;
-      if (defensiveFkSelect.options[1]) defensiveFkSelect.options[1].textContent = `${teamLabel} FK`;
-      if (defensiveFkSelect.options[2]) defensiveFkSelect.options[2].textContent = "Enemy FK";
-      defensiveFkSelect.value = activeDefensiveFkFilter;
-    }
     if (defensiveMapSelect) {
       defensiveMapSelect.innerHTML = availableDefensiveMaps.map((mapName) => `<option value="${mapName}">${mapName}</option>`).join("");
       defensiveMapSelect.value = activeDefensiveMap;
       defensiveMapSelect.disabled = availableDefensiveMaps.length === 0;
     }
-    const defensivePlayers = collectDefensivePlayers(defensiveInfo);
-    renderDefensivePlayerChips(defensiveInfo, defensivePlayers);
-    const selectedDefensivePlayers = getSelectedDefensiveSet(defensiveInfo, defensivePlayers);
     const defensiveTeamName = defensiveInfo.name ?? defensiveInfo.team ?? team.name;
     defensiveTitle.textContent = defensiveTeamName;
     const sampleMaps = defensiveInfo.sampleMaps ?? defensiveInfo.selectedMaps ?? [];
     const sampleSize = defensiveInfo.sampleSize ?? sampleMaps.length;
     const mapName = defensiveInfo.map ?? "Bind";
     const sideCopyWord = activeSideView === "ct" ? "Defender" : "Attacker";
-    defensiveCopy.textContent = `${sideCopyWord} positions at first-kill time from the last ${sampleSize} ${defensiveTeamName} ${mapName} maps.`;
+    const retakeInfo = getRetakeInfo(activeTeam, activeSideView, mapName);
+    defensiveCopy.textContent = retakeInfo
+      ? `${sideCopyWord} positions at first-kill time, sniper-kill positions, and retake (spike planted) positions from the last ${sampleSize} ${defensiveTeamName} ${mapName} maps.`
+      : `${sideCopyWord} positions at first-kill time and sniper-kill positions from the last ${sampleSize} ${defensiveTeamName} ${mapName} maps.`;
 
     mapWarning.classList.remove("hidden");
     mapWarning.innerHTML = `
-      <strong>Coverage warning:</strong> ${activeSideView.toUpperCase()} early-positioning currently covers ${mapName} only.
+      <strong>Coverage warning:</strong> ${activeSideView.toUpperCase()} early-positioning${retakeInfo ? ", retake-positioning," : ""} and sniper-kill views currently cover ${mapName} only.
     `;
-
-    renderDefensivePanels(defensiveInfo, selectedDefensivePlayers, activeDefensiveFkFilter);
+    renderDefensivePanels(defensiveInfo);
 
     defensiveSampleCard.innerHTML = `
       <p class="map-sample-label">Last ${sampleSize} maps in sample</p>
@@ -965,13 +1493,15 @@ function renderHero(team) {
 }
 
 function renderVisibility() {
+  const vetoMode = activeView === "veto";
   const mapMode = activeView === "map";
-  viewVetoButton.classList.toggle("active", !mapMode);
+  viewVetoButton.classList.toggle("active", vetoMode);
   viewMapButton.classList.toggle("active", mapMode);
-  vetoView.classList.toggle("hidden", mapMode);
+  vetoView.classList.toggle("hidden", !vetoMode);
   mapView.classList.toggle("hidden", !mapMode);
-  timeframeControls.classList.toggle("hidden", mapMode);
+  timeframeControls.classList.toggle("hidden", !vetoMode);
   sideControls?.classList.toggle("hidden", !mapMode);
+  mainToolbar?.classList.remove("hidden");
 }
 
 function renderVeto(team) {
@@ -993,6 +1523,207 @@ function render() {
   renderMapInfo();
 }
 
+/* ── Post-Plant / Retake Module ── */
+
+// Canonical player colors — keyed by short name (without "SGE " prefix).
+// Used everywhere: early positioning, sniper kills, retake, post-plant.
+const SGE_PLAYER_COLORS = {
+  "Jamelinho": "#e53935",
+  "Fizzy":     "#f1d500",
+  "MONSTEERR": "#00e676",
+  "azury":     "#ff4dac",
+  "musashi":   "#1f4fd6",
+  "Ben1":      "#ff7f0e",
+};
+const SGE_PLAYER_ORDER = ["Jamelinho", "Fizzy", "MONSTEERR", "azury", "musashi", "Ben1"];
+
+function sortByPlayerOrder(players) {
+  return [...players].sort((a, b) => {
+    const ai = SGE_PLAYER_ORDER.indexOf(a.replace(/^SGE\s+/, ""));
+    const bi = SGE_PLAYER_ORDER.indexOf(b.replace(/^SGE\s+/, ""));
+    if (ai === -1 && bi === -1) return a.localeCompare(b);
+    if (ai === -1) return 1;
+    if (bi === -1) return -1;
+    return ai - bi;
+  });
+}
+
+function getPlayerColor(name) {
+  const short = name.replace(/^SGE\s+/, "");
+  return SGE_PLAYER_COLORS[short] ?? "#888888";
+}
+
+function ppGetColor(player) {
+  return getPlayerColor(player);
+}
+
+function ppShortName(player) {
+  return player.replace(/^SGE\s+/, "");
+}
+
+function ppGetPoints(category, site) {
+  if (!postPlantData) return [];
+  const cat = postPlantData[category];
+  if (site === "All") {
+    return ["A", "B", "C"].flatMap(s => cat[s]?.points ?? []);
+  }
+  return cat[site]?.points ?? [];
+}
+
+function positionPpTooltip(e) {
+  const tip = document.getElementById("pp-tooltip");
+  if (!tip) return;
+  let x = e.clientX + 14, y = e.clientY + 14;
+  if (x + 230 > window.innerWidth) x = e.clientX - 230;
+  tip.style.left = x + "px";
+  tip.style.top = y + "px";
+}
+
+function renderPpDots(containerId, points) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  if (!points.length) {
+    container.innerHTML = '<div class="pp-map-empty">No data for this selection.</div>';
+    return;
+  }
+  container.innerHTML = points.map((pt, i) => {
+    const color = ppGetColor(pt.player);
+    return `<span class="pp-dot"
+      style="left:${pt.normX * 100}%;top:${pt.normY * 100}%;background:${color};"
+      data-pp-i="${i}"
+    ></span>`;
+  }).join("");
+  container.querySelectorAll(".pp-dot").forEach(dot => {
+    dot.addEventListener("mouseenter", (e) => {
+      const pt = points[+dot.dataset.ppI];
+      const tip = document.getElementById("pp-tooltip");
+      if (!tip) return;
+      tip.style.display = "block";
+      tip.innerHTML =
+        `<strong>${ppShortName(pt.player)}</strong><br>` +
+        `Site ${pt.site} · Round ${pt.roundNum + 1}<br>` +
+        `${pt.date} vs ${pt.opponent}`;
+      positionPpTooltip(e);
+    });
+    dot.addEventListener("mouseleave", () => {
+      const tip = document.getElementById("pp-tooltip");
+      if (tip) tip.style.display = "none";
+    });
+  });
+}
+
+function renderPpStats(containerId, points) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  const rounds = new Set(points.map(pt => `${pt.matchId}|${pt.roundNum}`)).size;
+  el.innerHTML = `<span>Rounds: <strong>${rounds}</strong></span><span>Points: <strong>${points.length}</strong></span>`;
+}
+
+function renderPpSiteTabs(containerId, category, activeLocal, setActive, isOrange) {
+  const el = document.getElementById(containerId);
+  if (!el || !postPlantData) return;
+  el.innerHTML = ["All", "A", "B", "C"].map(s => {
+    const count = s === "All"
+      ? ["A", "B", "C"].reduce((n, x) => n + (postPlantData[category][x]?.count ?? 0), 0)
+      : (postPlantData[category][s]?.count ?? 0);
+    const cls = s === activeLocal
+      ? `active${isOrange ? " pp-tab--orange" : ""}`
+      : "";
+    return `<button class="pp-site-tab ${cls}" data-pp-cat="${category}" data-pp-site="${s}">${s} (${count})</button>`;
+  }).join("");
+  el.querySelectorAll(".pp-site-tab").forEach(btn => {
+    btn.addEventListener("click", () => {
+      setActive(btn.dataset.ppSite);
+      renderPostPlant();
+    });
+  });
+}
+
+function renderPpLegend(players) {
+  const el = document.getElementById("pp-legend");
+  if (!el) return;
+  el.innerHTML = players.map(p =>
+    `<span class="pp-legend-item">
+      <span class="pp-legend-dot" style="background:${ppGetColor(p)};"></span>
+      <span>${ppShortName(p)}</span>
+    </span>`
+  ).join("");
+}
+
+function renderPostPlant() {
+  if (!postPlantData) return;
+
+  const ppSubtitleEl = document.getElementById("pp-subtitle");
+  if (ppSubtitleEl) {
+    ppSubtitleEl.textContent =
+      `${postPlantData.sampleSize} Lotus maps · ${postPlantData.matches.map(m => m.date).join(", ")}`;
+  }
+  const ppMatchChipsEl = document.getElementById("pp-match-chips");
+  if (ppMatchChipsEl) {
+    ppMatchChipsEl.innerHTML = postPlantData.matches.map(m =>
+      `<span class="pp-match-chip">${m.date} vs ${m.opponent}</span>`
+    ).join("");
+  }
+
+  const allPlayers = [...new Set([
+    ...Object.values(postPlantData.postPlant).flatMap(s => s.points.map(p => p.player)),
+    ...Object.values(postPlantData.retake).flatMap(s => s.points.map(p => p.player)),
+  ])].sort();
+  renderPpLegend(allPlayers);
+
+  const ppPoints = ppGetPoints("postPlant", ppActiveSite);
+  const rtPoints = ppGetPoints("retake", rtActiveSite);
+
+  renderPpDots("pp-dots", ppPoints);
+  renderPpDots("rt-dots", rtPoints);
+  renderPpStats("pp-stats", ppPoints);
+  renderPpStats("rt-stats", rtPoints);
+
+  const ppCountEl = document.getElementById("pp-count");
+  if (ppCountEl) ppCountEl.textContent = `${ppPoints.length} pts`;
+  const rtCountEl = document.getElementById("rt-count");
+  if (rtCountEl) rtCountEl.textContent = `${rtPoints.length} pts`;
+
+  renderPpSiteTabs("pp-tabs", "postPlant", ppActiveSite, (s) => { ppActiveSite = s; }, true);
+  renderPpSiteTabs("rt-tabs", "retake", rtActiveSite, (s) => { rtActiveSite = s; }, false);
+}
+
+async function preloadLotusStats() {
+  try {
+    const resp = await fetch("./data/sge_lotus_site_stats.json");
+    if (!resp.ok) return;
+    lotusStatsData = await resp.json();
+    if (activeView === "map") renderMapInfo();
+  } catch (_) { /* non-critical */ }
+}
+
+async function preloadPostPlantData() {
+  try {
+    const resp = await fetch("./data/sge_lotus_postplant_retake.json");
+    if (!resp.ok) return;
+    postPlantData = await resp.json();
+    if (activeView === "map") renderMapInfo();
+  } catch (_error) {
+    // Non-critical; site stays usable without this data.
+  }
+}
+
+async function preloadRetakeData() {
+  for (const source of RETAKE_DATA_SOURCES) {
+    try {
+      const resp = await fetch(source.url, { cache: "no-store" });
+      if (!resp.ok) continue;
+      const payload = await resp.json();
+      allDefensiveRetake[source.team] ||= {};
+      allDefensiveRetake[source.team][source.side] ||= {};
+      allDefensiveRetake[source.team][source.side][source.map] = payload;
+    } catch (_error) {
+      // Keep site usable even if optional retake overlays fail to load.
+    }
+  }
+  renderMapInfo();
+}
+
 viewVetoButton.addEventListener("click", () => {
   activeView = "veto";
   render();
@@ -1003,10 +1734,17 @@ viewMapButton.addEventListener("click", () => {
   render();
 });
 
+
+document.addEventListener("mousemove", (e) => {
+  const tip = document.getElementById("pp-tooltip");
+  if (tip?.style.display === "block") positionPpTooltip(e);
+});
+
 teamSelect.addEventListener("change", (event) => {
   activeTeam = event.target.value;
-  activeDefensiveFkFilter = "all";
   activeDefensiveMap = "Bind";
+  retakeActiveSites = new Set(["A", "B", "C"]);
+  ppInlineActiveSites = new Set(["A", "B", "C"]);
   if (activeTeam === "eco") {
     activeFkType = "all";
   } else if (activeFkType !== "operator" && activeFkType !== "all") {
@@ -1017,6 +1755,9 @@ teamSelect.addEventListener("change", (event) => {
 
 sideCtButton?.addEventListener("click", () => {
   activeSideView = "ct";
+  activeRotationTrail = null;
+  retakeActiveSites = new Set(["A", "B", "C"]);
+  ppInlineActiveSites = new Set(["A", "B", "C"]);
   renderHero(allVetoHistoryData[activeTeam]);
   renderMapInfo();
   renderSideButtons();
@@ -1024,6 +1765,9 @@ sideCtButton?.addEventListener("click", () => {
 
 sideTButton?.addEventListener("click", () => {
   activeSideView = "t";
+  activeRotationTrail = null;
+  retakeActiveSites = new Set(["A", "B", "C"]);
+  ppInlineActiveSites = new Set(["A", "B", "C"]);
   renderHero(allVetoHistoryData[activeTeam]);
   renderMapInfo();
   renderSideButtons();
@@ -1074,16 +1818,40 @@ if (playerFilterNone) {
   });
 }
 
-if (defensivePlayerRow) {
-  defensivePlayerRow.addEventListener("click", (event) => {
+if (defensivePanels) {
+  defensivePanels.addEventListener("click", (event) => {
+    const teamPack = allDefensiveEarly?.[activeTeam];
+    if (!teamPack) return;
+    const sidePack = getDefensiveMapPack(teamPack?.[activeSideView]);
+    const activeInfo = sidePack?.[activeDefensiveMap] ?? Object.values(sidePack ?? {})[0];
+    if (!activeInfo) return;
+    const key = getDefensiveFilterKey(activeInfo);
+    selectedDefensivePlayerFilters[key] ||= {};
+
+    if (event.target.closest("[data-early-all]")) {
+      collectDefensivePlayers(activeInfo).forEach((player) => {
+        selectedDefensivePlayerFilters[key][player] = true;
+      });
+      renderMapInfo();
+      return;
+    }
+    if (event.target.closest("[data-early-none]")) {
+      collectDefensivePlayers(activeInfo).forEach((player) => {
+        selectedDefensivePlayerFilters[key][player] = false;
+      });
+      renderMapInfo();
+      return;
+    }
+    const rotationDot = event.target.closest(".rotation-dot[data-trail-id]");
+    if (rotationDot) {
+      const trailId = rotationDot.dataset.trailId;
+      activeRotationTrail = activeRotationTrail === trailId ? null : trailId;
+      renderMapInfo();
+      return;
+    }
+
     const button = event.target.closest("button[data-def-player]");
     if (!button) return;
-    const info = allDefensiveEarly?.[activeTeam];
-    if (!info) return;
-    const sideInfo = info?.[activeSideView];
-    if (!sideInfo) return;
-    const key = getDefensiveFilterKey(sideInfo);
-    selectedDefensivePlayerFilters[key] ||= {};
     const playerName = decodeURIComponent(button.dataset.defPlayer ?? "");
     const current = selectedDefensivePlayerFilters[key][playerName] !== false;
     selectedDefensivePlayerFilters[key][playerName] = !current;
@@ -1091,48 +1859,10 @@ if (defensivePlayerRow) {
   });
 }
 
-if (defensivePlayerAll) {
-  defensivePlayerAll.addEventListener("click", () => {
-    const info = allDefensiveEarly?.[activeTeam];
-    if (!info) return;
-    const sideInfo = info?.[activeSideView];
-    if (!sideInfo) return;
-    const players = collectDefensivePlayers(sideInfo);
-    const key = getDefensiveFilterKey(sideInfo);
-    selectedDefensivePlayerFilters[key] ||= {};
-    players.forEach((player) => {
-      selectedDefensivePlayerFilters[key][player] = true;
-    });
-    renderMapInfo();
-  });
-}
-
-if (defensivePlayerNone) {
-  defensivePlayerNone.addEventListener("click", () => {
-    const info = allDefensiveEarly?.[activeTeam];
-    if (!info) return;
-    const sideInfo = info?.[activeSideView];
-    if (!sideInfo) return;
-    const players = collectDefensivePlayers(sideInfo);
-    const key = getDefensiveFilterKey(sideInfo);
-    selectedDefensivePlayerFilters[key] ||= {};
-    players.forEach((player) => {
-      selectedDefensivePlayerFilters[key][player] = false;
-    });
-    renderMapInfo();
-  });
-}
-
-if (defensiveFkSelect) {
-  defensiveFkSelect.addEventListener("change", (event) => {
-    activeDefensiveFkFilter = event.target.value;
-    renderMapInfo();
-  });
-}
-
 if (defensiveMapSelect) {
   defensiveMapSelect.addEventListener("change", (event) => {
     activeDefensiveMap = event.target.value;
+    activeRotationTrail = null;
     renderMapInfo();
   });
 }
@@ -1176,3 +1906,6 @@ window.addEventListener("pointerup", endHeatmapDrag);
 window.addEventListener("pointercancel", endHeatmapDrag);
 
 render();
+preloadRetakeData();
+preloadPostPlantData();
+preloadLotusStats();

@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260414b" />
+    <link rel="stylesheet" href="./styles.css?v=20260416d" />
   </head>
   <body>
     <div class="page-shell">
@@ -33,7 +33,7 @@
       </header>
 
       <main class="panel">
-        <section class="toolbar">
+        <section class="toolbar" id="main-toolbar">
           <div class="toolbar-left">
             <label class="team-select-shell" for="team-select">
               <span class="team-select-label">Team Selection</span>
@@ -179,14 +179,6 @@
                 <p class="map-info-copy" id="defensive-copy"></p>
               </div>
               <div class="defensive-controls">
-                <label class="map-select-shell" for="defensive-fk-select">
-                  <span class="map-select-label">FK Source</span>
-                  <select class="map-select" id="defensive-fk-select">
-                    <option value="all">All FK</option>
-                    <option value="team">Team FK</option>
-                    <option value="enemy">Enemy FK</option>
-                  </select>
-                </label>
                 <label class="map-select-shell" for="defensive-map-select">
                   <span class="map-select-label">Map</span>
                   <select class="map-select" id="defensive-map-select"></select>
@@ -202,6 +194,7 @@
             <div class="map-sample-card" id="defensive-sample-card"></div>
           </div>
         </section>
+
       </main>
     </div>
 
@@ -213,7 +206,8 @@
     <script src="./extra-row-meta.js?v=20260412f"></script>
     <script src="./map-info-data.js?v=20260412f"></script>
     <script src="./extra-map-info-data.js?v=20260414a"></script>
-    <script src="./defensive-early-data.js?v=20260414b"></script>
-    <script src="./app.js?v=20260414h"></script>
+    <script src="./defensive-early-data.js?v=20260416c"></script>
+    <script src="./map-control-data.js?v=20260416a"></script>
+    <script src="./app.js?v=20260416b"></script>
   </body>
 </html>

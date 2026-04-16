@@ -1371,10 +1371,7 @@ function renderMapInfo() {
       ? `${sideCopyWord} positions at first-kill time, sniper-kill positions, and retake (spike planted) positions from the last ${sampleSize} ${defensiveTeamName} ${mapName} maps.`
       : `${sideCopyWord} positions at first-kill time and sniper-kill positions from the last ${sampleSize} ${defensiveTeamName} ${mapName} maps.`;
 
-    mapWarning.classList.remove("hidden");
-    mapWarning.innerHTML = `
-      <strong>Coverage warning:</strong> ${activeSideView.toUpperCase()} early-positioning${retakeInfo ? ", retake-positioning," : ""} and sniper-kill views currently cover ${mapName} only.
-    `;
+    mapWarning.classList.add("hidden");
     renderDefensivePanels(defensiveInfo);
 
     defensiveSampleCard.innerHTML = `
@@ -1688,24 +1685,32 @@ function renderPostPlant() {
   renderPpSiteTabs("rt-tabs", "retake", rtActiveSite, (s) => { rtActiveSite = s; }, false);
 }
 
-async function preloadLotusStats() {
-  try {
-    const resp = await fetch("./data/sge_lotus_site_stats.json");
-    if (!resp.ok) return;
-    lotusStatsData = await resp.json();
-    if (activeView === "map") renderMapInfo();
-  } catch (_) { /* non-critical */ }
+async function preloadSiteStats() {
+  for (const source of SITE_STATS_SOURCES) {
+    try {
+      const resp = await fetch(source.url, { cache: "no-store" });
+      if (!resp.ok) continue;
+      const payload = await resp.json();
+      allSiteStats[source.team] ||= {};
+      allSiteStats[source.team][source.map] = payload;
+    } catch (_) { /* non-critical */ }
+  }
+  if (activeView === "map") renderMapInfo();
 }
 
 async function preloadPostPlantData() {
-  try {
-    const resp = await fetch("./data/sge_lotus_postplant_retake.json");
-    if (!resp.ok) return;
-    postPlantData = await resp.json();
-    if (activeView === "map") renderMapInfo();
-  } catch (_error) {
-    // Non-critical; site stays usable without this data.
+  for (const source of POSTPLANT_DATA_SOURCES) {
+    try {
+      const resp = await fetch(source.url, { cache: "no-store" });
+      if (!resp.ok) continue;
+      const payload = await resp.json();
+      allPostPlantData[source.team] ||= {};
+      allPostPlantData[source.team][source.map] = payload;
+    } catch (_error) {
+      // Non-critical; site stays usable without this data.
+    }
   }
+  if (activeView === "map") renderMapInfo();
 }
 
 async function preloadRetakeData() {
@@ -1908,4 +1913,4 @@ window.addEventListener("pointercancel", endHeatmapDrag);
 render();
 preloadRetakeData();
 preloadPostPlantData();
-preloadLotusStats();
+preloadSiteStats();

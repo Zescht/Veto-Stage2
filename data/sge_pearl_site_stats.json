@@ -1,0 +1,72 @@
+{
+  "team": "Eintracht Frankfurt",
+  "map": "Pearl",
+  "t_side": {
+    "total_rounds": 31,
+    "sites": {
+      "A": {
+        "plant_count": 15,
+        "pct_plant": 48.4,
+        "pct_win": 60.0,
+        "avg_plant_time": 69.2,
+        "min_plant_time": 24.1,
+        "max_plant_time": 98.6,
+        "fk_to_plant_avg": 28.7,
+        "fk_to_plant_n": 14
+      },
+      "B": {
+        "plant_count": 12,
+        "pct_plant": 38.7,
+        "pct_win": 83.3,
+        "avg_plant_time": 62.0,
+        "min_plant_time": 26.1,
+        "max_plant_time": 98.9,
+        "fk_to_plant_avg": 35.1,
+        "fk_to_plant_n": 10
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 35,
+    "sites": {
+      "A": {
+        "plant_count": 10,
+        "defuse_count": 3,
+        "pct_defuse_win": 30.0,
+        "pct_defuse_share": 42.9,
+        "avg_defuse_time": 33.8,
+        "fk_after_plant_avg": 3.6,
+        "fk_after_plant_n": 7
+      },
+      "B": {
+        "plant_count": 12,
+        "defuse_count": 4,
+        "pct_defuse_win": 33.3,
+        "pct_defuse_share": 57.1,
+        "avg_defuse_time": 27.0,
+        "fk_after_plant_avg": 15.5,
+        "fk_after_plant_n": 8
+      }
+    }
+  },
+  "matches": [
+    {
+      "date": "2026-03-21",
+      "opponent": "TL",
+      "matchId": "a5530bd1-1aa3-48f2-be69-ba2875d12fb7",
+      "score": "13-5"
+    },
+    {
+      "date": "2026-03-08",
+      "opponent": "FKS",
+      "matchId": "80ca0e19-cd00-4b28-a36d-d62c1e6371e7",
+      "score": "13-9"
+    },
+    {
+      "date": "2026-03-01",
+      "opponent": "CGN",
+      "matchId": "7ac890ea-0c7f-4dc2-898c-b35446ada8c3",
+      "score": "12-14"
+    }
+  ]
+}

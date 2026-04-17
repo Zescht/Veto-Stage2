@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SGE Lotus — Post-Plant & Retake Positioning</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: #0b1014;
+      color: #e8edf0;
+      min-height: 100vh;
+      padding: 32px 24px;
+    }
+
+    .page-header {
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #6baadc;
+      margin-bottom: 6px;
+    }
+
+    h1 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      font-size: 0.88rem;
+      color: #8a9ba8;
+    }
+
+    .match-chips {
+      display: flex;
+      gap: 8px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .match-chip {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 3px 10px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    /* Controls */
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .site-filter {
+      display: flex;
+      gap: 6px;
+    }
+
+    .site-btn {
+      font: inherit;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      padding: 5px 14px;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: transparent;
+      color: #c8d6e0;
+      cursor: pointer;
+    }
+
+    .site-btn.active {
+      background: #6baadc;
+      border-color: #6baadc;
+      color: #0b1014;
+    }
+
+    .legend {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .legend-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #6b7e8a;
+      margin-right: 4px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.3);
+      flex-shrink: 0;
+    }
+
+    /* Grid */
+    .panels-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    @media (max-width: 900px) {
+      .panels-grid { grid-template-columns: 1fr; }
+    }
+
+    .panel-section {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .section-title {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .section-title.post-plant { color: #f1a93c; }
+    .section-title.retake { color: #6baadc; }
+
+    .section-count {
+      font-size: 0.78rem;
+      color: #6b7e8a;
+      font-weight: 600;
+    }
+
+    .site-tabs {
+      display: flex;
+      gap: 4px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding-bottom: 0;
+    }
+
+    .site-tab {
+      font: inherit;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 5px 14px;
+      border: none;
+      border-bottom: 2px solid transparent;
+      background: transparent;
+      color: #6b7e8a;
+      cursor: pointer;
+      margin-bottom: -1px;
+    }
+
+    .site-tab.active {
+      color: #e8edf0;
+      border-bottom-color: #6baadc;
+    }
+
+    .site-tab.active.post-plant { border-bottom-color: #f1a93c; }
+
+    /* Map canvas */
+    .map-canvas-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: #1a2530;
+      border: 1px solid rgba(255,255,255,0.1);
+      overflow: hidden;
+    }
+
+    .map-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      opacity: 0.85;
+    }
+
+    .dot-layer {
+      position: absolute;
+      inset: 0;
+    }
+
+    .dot {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(255,255,255,0.7);
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      transition: transform 0.1s;
+    }
+
+    .dot:hover {
+      transform: translate(-50%, -50%) scale(1.8);
+      z-index: 10;
+    }
+
+    .map-empty {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      color: #4a5e6a;
+    }
+
+    .stat-row {
+      display: flex;
+      gap: 16px;
+      font-size: 0.78rem;
+      color: #6b7e8a;
+    }
+
+    .stat-row strong {
+      color: #c8d6e0;
+    }
+
+    .tooltip {
+      position: fixed;
+      background: rgba(10,16,22,0.97);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 10px;
+      font-size: 0.76rem;
+      line-height: 1.5;
+      pointer-events: none;
+      z-index: 100;
+      max-width: 220px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-header">
+  <p class="eyebrow">Post-Plant &amp; Retake Positioning · Lotus · Last 3 matches</p>
+  <h1>Eintracht Frankfurt</h1>
+  <p class="subtitle" id="subtitle">Loading...</p>
+  <div class="match-chips" id="match-chips"></div>
+</div>
+
+<div class="controls">
+  <div class="site-filter">
+    <button class="site-btn active" data-site="All">All</button>
+    <button class="site-btn" data-site="A">A</button>
+    <button class="site-btn" data-site="B">B</button>
+    <button class="site-btn" data-site="C">C</button>
+  </div>
+  <div class="legend">
+    <span class="legend-label">Players</span>
+    <div id="legend-items"></div>
+  </div>
+</div>
+
+<div class="panels-grid">
+  <div class="panel-section" id="postplant-panel">
+    <div class="section-head">
+      <h2 class="section-title post-plant">Post-Plant Positioning</h2>
+      <span class="section-count" id="pp-count"></span>
+    </div>
+    <p style="font-size:0.78rem;color:#6b7e8a;">SGE attacker positions at the moment the spike is planted.</p>
+    <div class="site-tabs" id="pp-tabs"></div>
+    <div class="map-canvas-wrap" id="pp-map">
+      <img class="map-img" src="./maps/Lotus.png" alt="Lotus" />
+      <div class="dot-layer" id="pp-dots"></div>
+    </div>
+    <div class="stat-row" id="pp-stats"></div>
+  </div>
+
+  <div class="panel-section" id="retake-panel">
+    <div class="section-head">
+      <h2 class="section-title retake">Retake Positioning</h2>
+      <span class="section-count" id="rt-count"></span>
+    </div>
+    <p style="font-size:0.78rem;color:#6b7e8a;">SGE defender positions at the moment the opponent plants the spike.</p>
+    <div class="site-tabs" id="rt-tabs"></div>
+    <div class="map-canvas-wrap" id="rt-map">
+      <img class="map-img" src="./maps/Lotus.png" alt="Lotus" />
+      <div class="dot-layer" id="rt-dots"></div>
+    </div>
+    <div class="stat-row" id="rt-stats"></div>
+  </div>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+const PLAYER_COLORS = {
+  "SGE Jamelinho":  "#e53935",
+  "SGE Fizzy":      "#f1d500",
+  "SGE MONSTEERR":  "#76d7ff",
+  "SGE azury":      "#111111",
+  "SGE musashi":    "#1f4fd6",
+  "SGE Ben1":       "#ff7f0e",
+};
+
+function getColor(player) {
+  return PLAYER_COLORS[player] ?? "#aaaaaa";
+}
+
+function shortName(player) {
+  return player.replace(/^SGE\s+/, "");
+}
+
+let data = null;
+let activeSite = "All";
+let ppActiveSite = "All";
+let rtActiveSite = "All";
+
+const tooltip = document.getElementById("tooltip");
+
+function showTooltip(e, text) {
+  tooltip.style.display = "block";
+  tooltip.innerHTML = text;
+  positionTooltip(e);
+}
+
+function positionTooltip(e) {
+  let x = e.clientX + 14, y = e.clientY + 14;
+  if (x + 230 > window.innerWidth) x = e.clientX - 230;
+  tooltip.style.left = x + "px";
+  tooltip.style.top = y + "px";
+}
+
+document.addEventListener("mousemove", (e) => {
+  if (tooltip.style.display === "block") positionTooltip(e);
+});
+document.addEventListener("mouseleave", () => { tooltip.style.display = "none"; });
+
+function getPoints(category, site) {
+  if (!data) return [];
+  const cat = data[category];
+  if (site === "All") {
+    return ["A", "B", "C"].flatMap(s => cat[s]?.points ?? []);
+  }
+  return cat[site]?.points ?? [];
+}
+
+function renderDots(containerId, points) {
+  const container = document.getElementById(containerId);
+  if (!points.length) {
+    container.innerHTML = '<div class="map-empty">No data for this selection.</div>';
+    return;
+  }
+  container.innerHTML = points.map((pt, i) => {
+    const color = getColor(pt.player);
+    return `<span class="dot"
+      style="left:${pt.normX * 100}%;top:${pt.normY * 100}%;background:${color};"
+      data-i="${i}"
+      title="${shortName(pt.player)} | Site ${pt.site} | R${pt.roundNum} | ${pt.date} vs ${pt.opponent}"
+    ></span>`;
+  }).join("");
+
+  container.querySelectorAll(".dot").forEach(dot => {
+    dot.addEventListener("mouseenter", (e) => {
+      const i = +dot.dataset.i;
+      const pt = points[i];
+      showTooltip(e,
+        `<strong>${shortName(pt.player)}</strong><br>` +
+        `Site ${pt.site} · Round ${pt.roundNum}<br>` +
+        `${pt.date} vs ${pt.opponent}`
+      );
+    });
+    dot.addEventListener("mouseleave", () => { tooltip.style.display = "none"; });
+  });
+}
+
+function renderStats(containerId, points) {
+  const el = document.getElementById(containerId);
+  const rounds = new Set(points.map(pt => `${pt.matchId}|${pt.roundNum}`)).size;
+  const byPlayer = {};
+  points.forEach(pt => { byPlayer[shortName(pt.player)] = (byPlayer[shortName(pt.player)] ?? 0) + 1; });
+  el.innerHTML = `<span>Rounds: <strong>${rounds}</strong></span><span>Points: <strong>${points.length}</strong></span>`;
+}
+
+function renderSiteTabs(containerId, category, activeLocal, setActive, cssClass) {
+  const el = document.getElementById(containerId);
+  el.innerHTML = ["All","A","B","C"].map(s => {
+    const count = s === "All"
+      ? ["A","B","C"].reduce((n, x) => n + (data[category][x]?.count ?? 0), 0)
+      : (data[category][s]?.count ?? 0);
+    return `<button class="site-tab ${s === activeLocal ? "active " + cssClass : ""}" data-cat="${category}" data-site="${s}">${s} (${count})</button>`;
+  }).join("");
+  el.querySelectorAll(".site-tab").forEach(btn => {
+    btn.addEventListener("click", () => {
+      setActive(btn.dataset.site);
+      renderAll();
+    });
+  });
+}
+
+function renderLegend(players) {
+  const el = document.getElementById("legend-items");
+  el.style.display = "flex";
+  el.style.gap = "14px";
+  el.style.flexWrap = "wrap";
+  el.innerHTML = players.map(p =>
+    `<span class="legend-item">
+      <span class="legend-dot" style="background:${getColor(p)};"></span>
+      <span>${shortName(p)}</span>
+    </span>`
+  ).join("");
+}
+
+function renderAll() {
+  const ppPoints = getPoints("postPlant", ppActiveSite);
+  const rtPoints = getPoints("retake", rtActiveSite);
+
+  renderDots("pp-dots", ppPoints);
+  renderDots("rt-dots", rtPoints);
+  renderStats("pp-stats", ppPoints);
+  renderStats("rt-stats", rtPoints);
+
+  document.getElementById("pp-count").textContent = `${ppPoints.length} pts`;
+  document.getElementById("rt-count").textContent = `${rtPoints.length} pts`;
+
+  renderSiteTabs("pp-tabs", "postPlant", ppActiveSite, (s) => { ppActiveSite = s; }, "post-plant");
+  renderSiteTabs("rt-tabs", "retake", rtActiveSite, (s) => { rtActiveSite = s; }, "");
+}
+
+fetch("./data/sge_lotus_postplant_retake.json")
+  .then(r => r.json())
+  .then(d => {
+    data = d;
+
+    document.getElementById("subtitle").textContent =
+      `${d.sampleSize} Lotus maps · ${d.matches.map(m => m.date).join(", ")}`;
+
+    document.getElementById("match-chips").innerHTML = d.matches.map(m =>
+      `<span class="match-chip">${m.date} vs ${m.opponent}</span>`
+    ).join("");
+
+    const allPlayers = [...new Set([
+      ...Object.values(d.postPlant).flatMap(s => s.points.map(p => p.player)),
+      ...Object.values(d.retake).flatMap(s => s.points.map(p => p.player)),
+    ])].sort();
+    renderLegend(allPlayers);
+
+    renderAll();
+  });
+</script>
+</body>
+</html>

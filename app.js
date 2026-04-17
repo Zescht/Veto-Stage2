@@ -95,6 +95,15 @@ let retakeActiveSites = new Set(["A", "B", "C"]);
 let ppInlineActiveSites = new Set(["A", "B", "C"]);
 let lastDefensiveInfo = null;
 let activeRotationTrail = null;
+let activeRotationBuckets = new Set(); // empty = show all
+
+const ROTATION_BUCKETS = [
+  { key: "1:40-1:20", min:     0, max:  20000, label: "1:40–1:20" },
+  { key: "1:20-1:00", min: 20000, max:  40000, label: "1:20–1:00" },
+  { key: "1:00-0:40", min: 40000, max:  60000, label: "1:00–0:40" },
+  { key: "0:40-0:00", min: 60000, max: 100000, label: "0:40–0:00" },
+  { key: "afterplant", min: null, max: null,   label: "Afterplant" },
+];
 const selectedPlayerFilters = {};
 const selectedDefensivePlayerFilters = {};
 
@@ -828,6 +837,19 @@ function buildMapControlMarkup(mapName, side, frameClassList, frameStyle, mapIma
     </section>`;
 }
 
+function snapMatchesBuckets(snapTimeMs, plantTimeMs) {
+  if (activeRotationBuckets.size === 0) return true;
+  for (const key of activeRotationBuckets) {
+    if (key === "afterplant") {
+      if (plantTimeMs != null && snapTimeMs >= plantTimeMs) return true;
+    } else {
+      const b = ROTATION_BUCKETS.find(b => b.key === key);
+      if (b && snapTimeMs >= b.min && snapTimeMs < b.max) return true;
+    }
+  }
+  return false;
+}
+
 function buildRotationMarkup(mapName, side, frameClassList, frameStyle, mapImageMarkup, selectedPlayers, sidebarMarkup) {
   const mcSide = mapControlData?.[mapName]?.[side];
   if (!mcSide) return "";
@@ -843,20 +865,45 @@ function buildRotationMarkup(mapName, side, frameClassList, frameStyle, mapImage
   for (const roundTrails of rounds) {
     for (const trail of roundTrails) {
       if (!selectedPlayers.has(trail.player)) continue;
+      const plantTimeMs = trail.plantTimeMs ?? null;
+      const snaps = trail.snapshots;
+      const visibleSnaps = snaps.filter(s => snapMatchesBuckets(s.timeMs, plantTimeMs));
+      if (!visibleSnaps.length) continue;
+
       visiblePlayers.add(trail.player);
       const color = getPlayerColor(trail.player);
-      const snaps = trail.snapshots;
       const trailId = `${trail.matchId}|${trail.roundNum}`;
       const isActive = activeRotationTrail === trailId;
       const lineOpacity = hasSelection ? (isActive ? 1.0 : 0.06) : 0.35;
       const dotOpacity  = hasSelection ? (isActive ? 1.0 : 0.1)  : 0.75;
       const strokeW     = isActive ? 0.6 : 0.35;
 
-      if (snaps.length >= 2) {
+      // Build polyline segments — only connect consecutive visible snaps
+      if (activeRotationBuckets.size === 0 && snaps.length >= 2) {
+        // No filter: single polyline through all snaps
         const pts = snaps.map(s => `${s.normX},${s.normY}`).join(" ");
         svgLines += `<polyline points="${pts}" fill="none" stroke="${color}" stroke-width="${strokeW}" opacity="${lineOpacity}"/>`;
+      } else {
+        // Filtered: split into segments of consecutive visible snaps
+        let segment = [];
+        for (let i = 0; i < snaps.length; i++) {
+          if (snapMatchesBuckets(snaps[i].timeMs, plantTimeMs)) {
+            segment.push(snaps[i]);
+          } else {
+            if (segment.length >= 2) {
+              const pts = segment.map(s => `${s.normX},${s.normY}`).join(" ");
+              svgLines += `<polyline points="${pts}" fill="none" stroke="${color}" stroke-width="${strokeW}" opacity="${lineOpacity}"/>`;
+            }
+            segment = [];
+          }
+        }
+        if (segment.length >= 2) {
+          const pts = segment.map(s => `${s.normX},${s.normY}`).join(" ");
+          svgLines += `<polyline points="${pts}" fill="none" stroke="${color}" stroke-width="${strokeW}" opacity="${lineOpacity}"/>`;
+        }
       }
-      for (const snap of snaps) {
+
+      for (const snap of visibleSnaps) {
         dotsMarkup += `<span class="heat-point rotation-dot" data-trail-id="${trailId}" style="left:${snap.normX}%;top:${snap.normY}%;background:${color};opacity:${dotOpacity};cursor:pointer;" title="${trail.player} | R${trail.roundNum + 1} | ${fmtRoundTime(snap.timeMs)} | ${trail.date} vs ${trail.opponent}"></span>`;
       }
     }
@@ -867,12 +914,18 @@ function buildRotationMarkup(mapName, side, frameClassList, frameStyle, mapImage
   const roundCount = new Set(
     rounds.flatMap(rt => rt.filter(t => selectedPlayers.has(t.player)).map(t => `${t.matchId}|${t.roundNum}`))
   ).size;
-  // Returns just the article card — outer layout is handled by the caller
+
+  const bucketButtons = ROTATION_BUCKETS.map(b => {
+    const active = activeRotationBuckets.has(b.key);
+    return `<button type="button" class="rotation-bucket-btn${active ? " active" : ""}" data-rotation-bucket="${b.key}">${b.label}</button>`;
+  }).join("");
+
   return `
     <article class="defensive-card">
       <div class="defensive-card-head">
         <p class="defensive-card-meta">Rounds: ${roundCount}</p>
       </div>
+      <div class="rotation-bucket-row">${bucketButtons}</div>
       <div class="defensive-map-wrap">
         <div class="defensive-map">
           <div class="${frameClassList}" style="${frameStyle}">
@@ -1761,6 +1814,7 @@ teamSelect.addEventListener("change", (event) => {
 sideCtButton?.addEventListener("click", () => {
   activeSideView = "ct";
   activeRotationTrail = null;
+  activeRotationBuckets = new Set();
   retakeActiveSites = new Set(["A", "B", "C"]);
   ppInlineActiveSites = new Set(["A", "B", "C"]);
   renderHero(allVetoHistoryData[activeTeam]);
@@ -1771,6 +1825,7 @@ sideCtButton?.addEventListener("click", () => {
 sideTButton?.addEventListener("click", () => {
   activeSideView = "t";
   activeRotationTrail = null;
+  activeRotationBuckets = new Set();
   retakeActiveSites = new Set(["A", "B", "C"]);
   ppInlineActiveSites = new Set(["A", "B", "C"]);
   renderHero(allVetoHistoryData[activeTeam]);
@@ -1854,6 +1909,17 @@ if (defensivePanels) {
       renderMapInfo();
       return;
     }
+    const bucketBtn = event.target.closest(".rotation-bucket-btn[data-rotation-bucket]");
+    if (bucketBtn) {
+      const key = bucketBtn.dataset.rotationBucket;
+      if (activeRotationBuckets.has(key)) {
+        activeRotationBuckets.delete(key);
+      } else {
+        activeRotationBuckets.add(key);
+      }
+      renderMapInfo();
+      return;
+    }
 
     const button = event.target.closest("button[data-def-player]");
     if (!button) return;
@@ -1868,6 +1934,7 @@ if (defensiveMapSelect) {
   defensiveMapSelect.addEventListener("change", (event) => {
     activeDefensiveMap = event.target.value;
     activeRotationTrail = null;
+    activeRotationBuckets = new Set();
     renderMapInfo();
   });
 }

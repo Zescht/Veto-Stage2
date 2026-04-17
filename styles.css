@@ -588,6 +588,43 @@ body {
   gap: 10px;
 }
 
+.rotation-bucket-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 6px;
+}
+
+.rotation-bucket-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.22);
+  background: rgba(0, 0, 0, 0.06);
+  color: rgba(0, 0, 0, 0.55);
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.rotation-bucket-btn:hover {
+  background: rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.rotation-bucket-btn.active {
+  background: #1a1f23;
+  color: #ffffff;
+  border-color: transparent;
+}
+
 .rotation-player-chip-row {
   display: flex;
   flex-wrap: wrap;

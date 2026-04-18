@@ -588,43 +588,6 @@ body {
   gap: 10px;
 }
 
-.rotation-bucket-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  margin-top: 6px;
-}
-
-.rotation-bucket-btn {
-  display: inline-flex;
-  align-items: center;
-  padding: 3px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(0, 0, 0, 0.22);
-  background: rgba(0, 0, 0, 0.06);
-  color: rgba(0, 0, 0, 0.55);
-  font-family: inherit;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: background 0.12s, color 0.12s, border-color 0.12s;
-  -webkit-appearance: none;
-  appearance: none;
-}
-
-.rotation-bucket-btn:hover {
-  background: rgba(0, 0, 0, 0.12);
-  color: rgba(0, 0, 0, 0.8);
-}
-
-.rotation-bucket-btn.active {
-  background: #1a1f23;
-  color: #ffffff;
-  border-color: transparent;
-}
-
 .rotation-player-chip-row {
   display: flex;
   flex-wrap: wrap;
@@ -639,6 +602,40 @@ body {
 .rotation-player-chip-row .early-player-actions {
   display: flex;
   gap: 4px;
+}
+
+.rotation-window-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.rotation-window-btn {
+  padding: 4px 10px;
+  font-size: 0.72rem;
+  font-family: inherit;
+  font-weight: 600;
+  border: 1.5px solid rgba(0,0,0,0.3);
+  border-radius: 4px;
+  background: rgba(0,0,0,0.07);
+  color: rgba(0,0,0,0.7);
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.rotation-window-btn:hover {
+  background: rgba(0,0,0,0.13);
+  border-color: rgba(0,0,0,0.5);
+  color: rgba(0,0,0,0.9);
+}
+
+.rotation-window-btn.active {
+  background: #2563eb;
+  border-color: #1d4ed8;
+  color: #fff;
+  box-shadow: 0 0 0 1px #2563eb;
 }
 
 .rotation-svg {

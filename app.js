@@ -84,6 +84,7 @@ let ppInlineActiveSites = new Set(["A", "B", "C"]);
 let lastDefensiveInfo = null;
 let allSiteStats = {};
 let activeRotationTrail = null;
+let activeRotationWindow = null; // "140_120" | "120_100" | "100_end" | "afterplant" | null
 const selectedPlayerFilters = {};
 const selectedDefensivePlayerFilters = {};
 
@@ -818,13 +819,27 @@ function buildMapControlMarkup(mapName, side, frameClassList, frameStyle, mapIma
     </section>`;
 }
 
-function buildRotationMarkup(mapName, side, frameClassList, frameStyle, mapImageMarkup, selectedPlayers, sidebarMarkup) {
+const ROTATION_WINDOWS = [
+  { key: "140_120", label: "1:40–1:20", minMs: 0,     maxMs: 20000  },
+  { key: "120_100", label: "1:20–1:00", minMs: 20000, maxMs: 40000  },
+  { key: "100_end", label: "1:00–End",  minMs: 40000, maxMs: Infinity },
+  { key: "afterplant", label: "Afterplant / Retake", minMs: null, maxMs: null },
+];
+
+function filterSnapshotsByWindow(snaps, windowKey, plantTimeMs) {
+  if (!windowKey) return snaps;
+  if (windowKey === "afterplant") {
+    if (!plantTimeMs) return [];
+    return snaps.filter(s => s.timeMs >= plantTimeMs);
+  }
+  const w = ROTATION_WINDOWS.find(w => w.key === windowKey);
+  if (!w) return snaps;
+  return snaps.filter(s => s.timeMs >= w.minMs && s.timeMs < w.maxMs);
+}
+
+function computeRotationLayers(mapName, side, selectedPlayers) {
   const mcSide = mapControlData?.[mapName]?.[side];
-  if (!mcSide) return "";
-
-  const rounds = mcSide.rotations ?? [];
-  if (!rounds.length) return "";
-
+  const rounds = mcSide?.rotations ?? [];
   const hasSelection = activeRotationTrail !== null;
   let svgLines = "";
   let dotsMarkup = "";
@@ -833,9 +848,10 @@ function buildRotationMarkup(mapName, side, frameClassList, frameStyle, mapImage
   for (const roundTrails of rounds) {
     for (const trail of roundTrails) {
       if (!selectedPlayers.has(trail.player)) continue;
+      const snaps = filterSnapshotsByWindow(trail.snapshots, activeRotationWindow, trail.plantTimeMs);
+      if (!snaps.length) continue;
       visiblePlayers.add(trail.player);
       const color = getPlayerColor(trail.player);
-      const snaps = trail.snapshots;
       const trailId = `${trail.matchId}|${trail.roundNum}`;
       const isActive = activeRotationTrail === trailId;
       const lineOpacity = hasSelection ? (isActive ? 1.0 : 0.06) : 0.35;
@@ -852,15 +868,52 @@ function buildRotationMarkup(mapName, side, frameClassList, frameStyle, mapImage
     }
   }
 
-  const legendMarkup = buildPlayerLegendMarkup(sortByPlayerOrder([...visiblePlayers]));
-
   const roundCount = new Set(
     rounds.flatMap(rt => rt.filter(t => selectedPlayers.has(t.player)).map(t => `${t.matchId}|${t.roundNum}`))
   ).size;
-  // Returns just the article card — outer layout is handled by the caller
+
+  return { svgLines, dotsMarkup, visiblePlayers, roundCount };
+}
+
+function updateRotationCardInPlace(mapName, side, selectedPlayers) {
+  const card = document.getElementById("rotation-panel-card");
+  if (!card) { renderMapInfo(); return; }
+
+  const { svgLines, dotsMarkup, visiblePlayers, roundCount } = computeRotationLayers(mapName, side, selectedPlayers);
+
+  card.querySelector(".rotation-svg").innerHTML = svgLines;
+  card.querySelector(".heat-layer").innerHTML = dotsMarkup;
+  card.querySelector(".defensive-card-meta").textContent = `Rounds: ${roundCount}`;
+
+  const legendEl = card.querySelector(".retake-player-legend");
+  const newLegend = buildPlayerLegendMarkup(sortByPlayerOrder([...visiblePlayers]));
+  if (legendEl) legendEl.outerHTML = newLegend;
+  else if (newLegend) card.querySelector(".heat-layer-frame").insertAdjacentHTML("beforeend", newLegend);
+
+  card.querySelectorAll(".rotation-window-btn").forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.rotationWindow === activeRotationWindow);
+  });
+}
+
+function buildRotationMarkup(mapName, side, frameClassList, frameStyle, mapImageMarkup, selectedPlayers, sidebarMarkup) {
+  const mcSide = mapControlData?.[mapName]?.[side];
+  if (!mcSide) return "";
+
+  const rounds = mcSide.rotations ?? [];
+  if (!rounds.length) return "";
+
+  const { svgLines, dotsMarkup, visiblePlayers, roundCount } = computeRotationLayers(mapName, side, selectedPlayers);
+  const legendMarkup = buildPlayerLegendMarkup(sortByPlayerOrder([...visiblePlayers]));
+
+  const windowButtonsMarkup = ROTATION_WINDOWS.map(w => {
+    const isActive = activeRotationWindow === w.key;
+    return `<button class="rotation-window-btn${isActive ? " active" : ""}" data-rotation-window="${w.key}" type="button">${w.label}</button>`;
+  }).join("");
+
   return `
-    <article class="defensive-card">
+    <article class="defensive-card" id="rotation-panel-card">
       <div class="defensive-card-head">
+        <div class="rotation-window-controls">${windowButtonsMarkup}</div>
         <p class="defensive-card-meta">Rounds: ${roundCount}</p>
       </div>
       <div class="defensive-map-wrap">
@@ -1766,6 +1819,7 @@ teamSelect.addEventListener("change", (event) => {
 sideCtButton?.addEventListener("click", () => {
   activeSideView = "ct";
   activeRotationTrail = null;
+  activeRotationWindow = null;
   retakeActiveSites = new Set(["A", "B", "C"]);
   ppInlineActiveSites = new Set(["A", "B", "C"]);
   renderHero(allVetoHistoryData[activeTeam]);
@@ -1776,6 +1830,7 @@ sideCtButton?.addEventListener("click", () => {
 sideTButton?.addEventListener("click", () => {
   activeSideView = "t";
   activeRotationTrail = null;
+  activeRotationWindow = null;
   retakeActiveSites = new Set(["A", "B", "C"]);
   ppInlineActiveSites = new Set(["A", "B", "C"]);
   renderHero(allVetoHistoryData[activeTeam]);
@@ -1852,11 +1907,19 @@ if (defensivePanels) {
       renderMapInfo();
       return;
     }
+    const rotationWindowBtn = event.target.closest(".rotation-window-btn[data-rotation-window]");
+    if (rotationWindowBtn) {
+      const windowKey = rotationWindowBtn.dataset.rotationWindow;
+      activeRotationWindow = activeRotationWindow === windowKey ? null : windowKey;
+      activeRotationTrail = null;
+      updateRotationCardInPlace(activeInfo.map, activeSideView, getSelectedDefensiveSet(activeInfo, collectDefensivePlayers(activeInfo)));
+      return;
+    }
     const rotationDot = event.target.closest(".rotation-dot[data-trail-id]");
     if (rotationDot) {
       const trailId = rotationDot.dataset.trailId;
       activeRotationTrail = activeRotationTrail === trailId ? null : trailId;
-      renderMapInfo();
+      updateRotationCardInPlace(activeInfo.map, activeSideView, getSelectedDefensiveSet(activeInfo, collectDefensivePlayers(activeInfo)));
       return;
     }
 
@@ -1873,6 +1936,7 @@ if (defensiveMapSelect) {
   defensiveMapSelect.addEventListener("change", (event) => {
     activeDefensiveMap = event.target.value;
     activeRotationTrail = null;
+    activeRotationWindow = null;
     renderMapInfo();
   });
 }

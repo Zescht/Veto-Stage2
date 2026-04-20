@@ -6,7 +6,7 @@
     "sites": {
       "A": {
         "plant_count": 7,
-        "pct_plant": 19.4,
+        "pct_plant": 35.0,
         "pct_win": 85.7,
         "avg_plant_time": 58.4,
         "min_plant_time": 26.6,
@@ -16,7 +16,7 @@
       },
       "B": {
         "plant_count": 13,
-        "pct_plant": 36.1,
+        "pct_plant": 65.0,
         "pct_win": 46.2,
         "avg_plant_time": 71.3,
         "min_plant_time": 24.7,

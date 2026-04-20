@@ -1,0 +1,488 @@
+{
+  "map": "Lotus",
+  "side": "ct",
+  "selectedMaps": [
+    {
+      "date": "2026-04-18",
+      "opponent": "RZN",
+      "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+      "score": "13-11"
+    },
+    {
+      "date": "2026-04-12",
+      "opponent": "SGE",
+      "matchId": "7ee45a1e-1257-4b2b-97b6-2face254d0f1",
+      "score": "3-13"
+    },
+    {
+      "date": "2026-04-07",
+      "opponent": "AKA",
+      "matchId": "6bb0be28-309f-4f6e-a2a3-86a5a8d646bc",
+      "score": "13-5"
+    }
+  ],
+  "sites": {
+    "A": {
+      "roundCount": 5,
+      "pointCount": 17,
+      "points": [
+        {
+          "site": "A",
+          "player": "Serial",
+          "normX": 23.2237,
+          "normY": 65.9416,
+          "roundNum": 12,
+          "plantRoundTimeMs": 45395,
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "score": "13-11"
+        },
+        {
+          "site": "A",
+          "player": "pa1ze",
+          "normX": 52.6573,
+          "normY": 40.4392,
+          "roundNum": 12,
+          "plantRoundTimeMs": 45395,
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "score": "13-11"
+        },
+        {
+          "site": "A",
+          "player": "MOLSI",
+          "normX": 58.8277,
+          "normY": 31.9288,
+          "roundNum": 12,
+          "plantRoundTimeMs": 45395,
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "score": "13-11"
+        },
+        {
+          "site": "A",
+          "player": "cullum",
+          "normX": 64.0117,
+          "normY": 28.3504,
+          "roundNum": 12,
+          "plantRoundTimeMs": 45395,
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "score": "13-11"
+        },
+        {
+          "site": "A",
+          "player": "shinnok",
+          "normX": 57.6253,
+          "normY": 31.3384,
+          "roundNum": 12,
+          "plantRoundTimeMs": 45395,
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "score": "13-11"
+        },
+        {
+          "site": "A",
+          "player": "Serial",
+          "normX": 92.3725,
+          "normY": 33.2248,
+          "roundNum": 13,
+          "plantRoundTimeMs": 66065,
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "score": "13-11"
+        },
+        {
+          "site": "A",
+          "player": "pa1ze",
+          "normX": 15.9229,
+          "normY": 48.3016,
+          "roundNum": 13,
+          "plantRoundTimeMs": 66065,
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "score": "13-11"
+        },
+        {
+          "site": "A",
+          "player": "MOLSI",
+          "normX": 59.0437,
+          "normY": 34.0888,
+          "roundNum": 13,
+          "plantRoundTimeMs": 66065,
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "score": "13-11"
+        },
+        {
+          "site": "A",
+          "player": "shinnok",
+          "normX": 81.7885,
+          "normY": 23.1664,
+          "roundNum": 13,
+          "plantRoundTimeMs": 66065,
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "score": "13-11"
+        },
+        {
+          "site": "A",
+          "player": "Serial",
+          "normX": 79.6789,
+          "normY": 21.7336,
+          "roundNum": 21,
+          "plantRoundTimeMs": 90974,
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "score": "13-11"
+        },
+        {
+          "site": "A",
+          "player": "MOLSI",
+          "normX": 58.8421,
+          "normY": 34.1248,
+          "roundNum": 21,
+          "plantRoundTimeMs": 90974,
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "score": "13-11"
+        },
+        {
+          "site": "A",
+          "player": "Serial",
+          "normX": 75.0925,
+          "normY": 23.2168,
+          "roundNum": 13,
+          "plantRoundTimeMs": 68323,
+          "date": "2026-04-12",
+          "opponent": "SGE",
+          "matchId": "7ee45a1e-1257-4b2b-97b6-2face254d0f1",
+          "score": "3-13"
+        },
+        {
+          "site": "A",
+          "player": "pyrolll",
+          "normX": 62.0029,
+          "normY": 26.8384,
+          "roundNum": 13,
+          "plantRoundTimeMs": 68323,
+          "date": "2026-04-12",
+          "opponent": "SGE",
+          "matchId": "7ee45a1e-1257-4b2b-97b6-2face254d0f1",
+          "score": "3-13"
+        },
+        {
+          "site": "A",
+          "player": "MOLSI",
+          "normX": 70.4629,
+          "normY": 21.3736,
+          "roundNum": 13,
+          "plantRoundTimeMs": 68323,
+          "date": "2026-04-12",
+          "opponent": "SGE",
+          "matchId": "7ee45a1e-1257-4b2b-97b6-2face254d0f1",
+          "score": "3-13"
+        },
+        {
+          "site": "A",
+          "player": "pa1ze",
+          "normX": 60.3469,
+          "normY": 27.3568,
+          "roundNum": 13,
+          "plantRoundTimeMs": 68323,
+          "date": "2026-04-12",
+          "opponent": "SGE",
+          "matchId": "7ee45a1e-1257-4b2b-97b6-2face254d0f1",
+          "score": "3-13"
+        },
+        {
+          "site": "A",
+          "player": "Serial",
+          "normX": 62.6005,
+          "normY": 44.4784,
+          "roundNum": 16,
+          "plantRoundTimeMs": 37304,
+          "date": "2026-04-07",
+          "opponent": "AKA",
+          "matchId": "6bb0be28-309f-4f6e-a2a3-86a5a8d646bc",
+          "score": "13-5"
+        },
+        {
+          "site": "A",
+          "player": "pyrolll",
+          "normX": 82.2997,
+          "normY": 28.8688,
+          "roundNum": 16,
+          "plantRoundTimeMs": 37304,
+          "date": "2026-04-07",
+          "opponent": "AKA",
+          "matchId": "6bb0be28-309f-4f6e-a2a3-86a5a8d646bc",
+          "score": "13-5"
+        }
+      ]
+    },
+    "B": {
+      "roundCount": 3,
+      "pointCount": 8,
+      "points": [
+        {
+          "site": "B",
+          "player": "Serial",
+          "normX": 32.7133,
+          "normY": 55.3648,
+          "roundNum": 19,
+          "plantRoundTimeMs": 88309,
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "score": "13-11"
+        },
+        {
+          "site": "B",
+          "player": "shinnok",
+          "normX": 72.8533,
+          "normY": 45.112,
+          "roundNum": 19,
+          "plantRoundTimeMs": 88309,
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "score": "13-11"
+        },
+        {
+          "site": "B",
+          "player": "Serial",
+          "normX": 25.1893,
+          "normY": 47.5096,
+          "roundNum": 20,
+          "plantRoundTimeMs": 42647,
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "score": "13-11"
+        },
+        {
+          "site": "B",
+          "player": "pa1ze",
+          "normX": 61.7437,
+          "normY": 74.1352,
+          "roundNum": 20,
+          "plantRoundTimeMs": 42647,
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "score": "13-11"
+        },
+        {
+          "site": "B",
+          "player": "MOLSI",
+          "normX": 20.2645,
+          "normY": 56.1568,
+          "roundNum": 20,
+          "plantRoundTimeMs": 42647,
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "score": "13-11"
+        },
+        {
+          "site": "B",
+          "player": "Serial",
+          "normX": 41.7781,
+          "normY": 36.9832,
+          "roundNum": 23,
+          "plantRoundTimeMs": 71905,
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "score": "13-11"
+        },
+        {
+          "site": "B",
+          "player": "cullum",
+          "normX": 43.6789,
+          "normY": 38.0128,
+          "roundNum": 23,
+          "plantRoundTimeMs": 71905,
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "score": "13-11"
+        },
+        {
+          "site": "B",
+          "player": "shinnok",
+          "normX": 41.4397,
+          "normY": 39.8632,
+          "roundNum": 23,
+          "plantRoundTimeMs": 71905,
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "score": "13-11"
+        }
+      ]
+    },
+    "C": {
+      "roundCount": 4,
+      "pointCount": 12,
+      "points": [
+        {
+          "site": "C",
+          "player": "Serial",
+          "normX": 36.9901,
+          "normY": 78.5632,
+          "roundNum": 14,
+          "plantRoundTimeMs": 50079,
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "score": "13-11"
+        },
+        {
+          "site": "C",
+          "player": "pa1ze",
+          "normX": 65.0773,
+          "normY": 70.0096,
+          "roundNum": 14,
+          "plantRoundTimeMs": 50079,
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "score": "13-11"
+        },
+        {
+          "site": "C",
+          "player": "shinnok",
+          "normX": 46.3717,
+          "normY": 22.9792,
+          "roundNum": 14,
+          "plantRoundTimeMs": 50079,
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "score": "13-11"
+        },
+        {
+          "site": "C",
+          "player": "pa1ze",
+          "normX": 29.7469,
+          "normY": 26.428,
+          "roundNum": 15,
+          "plantRoundTimeMs": 79022,
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "score": "13-11"
+        },
+        {
+          "site": "C",
+          "player": "Serial",
+          "normX": 20.7181,
+          "normY": 31.2664,
+          "roundNum": 17,
+          "plantRoundTimeMs": 28458,
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "score": "13-11"
+        },
+        {
+          "site": "C",
+          "player": "pa1ze",
+          "normX": 38.2933,
+          "normY": 35.0608,
+          "roundNum": 17,
+          "plantRoundTimeMs": 28458,
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "score": "13-11"
+        },
+        {
+          "site": "C",
+          "player": "cullum",
+          "normX": 22.8493,
+          "normY": 31.3168,
+          "roundNum": 17,
+          "plantRoundTimeMs": 28458,
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "score": "13-11"
+        },
+        {
+          "site": "C",
+          "player": "shinnok",
+          "normX": 55.5661,
+          "normY": 49.5184,
+          "roundNum": 17,
+          "plantRoundTimeMs": 28458,
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "score": "13-11"
+        },
+        {
+          "site": "C",
+          "player": "pa1ze",
+          "normX": 39.7045,
+          "normY": 54.2992,
+          "roundNum": 18,
+          "plantRoundTimeMs": 32097,
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "score": "13-11"
+        },
+        {
+          "site": "C",
+          "player": "MOLSI",
+          "normX": 36.4069,
+          "normY": 37.372,
+          "roundNum": 18,
+          "plantRoundTimeMs": 32097,
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "score": "13-11"
+        },
+        {
+          "site": "C",
+          "player": "cullum",
+          "normX": 34.1389,
+          "normY": 37.6888,
+          "roundNum": 18,
+          "plantRoundTimeMs": 32097,
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "score": "13-11"
+        },
+        {
+          "site": "C",
+          "player": "shinnok",
+          "normX": 37.6813,
+          "normY": 31.9648,
+          "roundNum": 18,
+          "plantRoundTimeMs": 32097,
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "score": "13-11"
+        }
+      ]
+    }
+  }
+}

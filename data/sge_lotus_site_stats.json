@@ -1,12 +1,38 @@
 {
   "team": "Eintracht Frankfurt",
   "map": "Lotus",
+  "matches": [
+    {
+      "date": "2026-04-14",
+      "opponent": "RZN",
+      "matchId": "31bd242d-e54f-4f6f-a0db-df046cd33a60",
+      "score": "13-9"
+    },
+    {
+      "date": "2026-04-12",
+      "opponent": "FKS",
+      "matchId": "7ee45a1e-1257-4b2b-97b6-2face254d0f1",
+      "score": "13-3"
+    },
+    {
+      "date": "2026-04-07",
+      "opponent": "ATN",
+      "matchId": "c14c46b0-b36d-48be-8335-3919de851652",
+      "score": "13-7"
+    },
+    {
+      "date": "2026-04-05",
+      "opponent": "DXG",
+      "matchId": "86c38d84-f780-4eea-8172-8a361ef0b84a",
+      "score": "13-7"
+    }
+  ],
   "t_side": {
     "total_rounds": 38,
     "sites": {
       "A": {
         "plant_count": 8,
-        "pct_plant": 21.1,
+        "pct_plant": 27.6,
         "pct_win": 75.0,
         "avg_plant_time": 56.1,
         "min_plant_time": 27.2,
@@ -16,7 +42,7 @@
       },
       "B": {
         "plant_count": 7,
-        "pct_plant": 18.4,
+        "pct_plant": 24.1,
         "pct_win": 71.4,
         "avg_plant_time": 72.4,
         "min_plant_time": 33.3,
@@ -26,7 +52,7 @@
       },
       "C": {
         "plant_count": 14,
-        "pct_plant": 36.8,
+        "pct_plant": 48.3,
         "pct_win": 92.9,
         "avg_plant_time": 55.4,
         "min_plant_time": 26.3,
@@ -67,31 +93,5 @@
         "fk_after_plant_n": 7
       }
     }
-  },
-  "matches": [
-    {
-      "date": "2026-04-14",
-      "opponent": "RZN",
-      "matchId": "31bd242d-e54f-4f6f-a0db-df046cd33a60",
-      "score": "13-9"
-    },
-    {
-      "date": "2026-04-12",
-      "opponent": "FKS",
-      "matchId": "7ee45a1e-1257-4b2b-97b6-2face254d0f1",
-      "score": "13-3"
-    },
-    {
-      "date": "2026-04-07",
-      "opponent": "ATN",
-      "matchId": "c14c46b0-b36d-48be-8335-3919de851652",
-      "score": "13-7"
-    },
-    {
-      "date": "2026-04-05",
-      "opponent": "DXG",
-      "matchId": "86c38d84-f780-4eea-8172-8a361ef0b84a",
-      "score": "13-7"
-    }
-  ]
+  }
 }

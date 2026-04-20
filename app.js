@@ -26,14 +26,32 @@ const allMapInfo = {
   ...(typeof extraMapInfoData !== "undefined" ? extraMapInfoData : {})
 };
 const allDefensiveEarly = typeof defensiveEarlyData !== "undefined" ? defensiveEarlyData : {};
+const safeFksMapControlData = typeof fksMapControlData !== "undefined" ? fksMapControlData : {};
 const allDefensiveRetake = {};
 const RETAKE_DATA_VERSION = "20260415a";
 const RETAKE_DATA_SOURCES = [
-  { team: "eintracht", side: "ct", map: "Bind",   url: `./data/sge_bind_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "eintracht", side: "ct", map: "Breeze", url: `./data/sge_breeze_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "eintracht", side: "ct", map: "Lotus",  url: `./data/sge_lotus_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "eintracht", side: "ct", map: "Pearl",  url: `./data/sge_pearl_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "eintracht", side: "ct", map: "Split",  url: `./data/sge_split_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "eintracht", side: "ct", map: "Bind",     url: `./data/sge_bind_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "eintracht", side: "ct", map: "Breeze",   url: `./data/sge_breeze_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "eintracht", side: "ct", map: "Lotus",    url: `./data/sge_lotus_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "eintracht", side: "ct", map: "Pearl",    url: `./data/sge_pearl_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "eintracht", side: "ct", map: "Split",    url: `./data/sge_split_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "eintracht", side: "t",  map: "Bind",     url: `./data/sge_bind_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "eintracht", side: "t",  map: "Breeze",   url: `./data/sge_breeze_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "eintracht", side: "t",  map: "Lotus",    url: `./data/sge_lotus_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "eintracht", side: "t",  map: "Pearl",    url: `./data/sge_pearl_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "eintracht", side: "t",  map: "Split",    url: `./data/sge_split_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "fokus",     side: "ct", map: "Bind",     url: `./data/fks_bind_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "fokus",     side: "ct", map: "Breeze",   url: `./data/fks_breeze_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "fokus",     side: "ct", map: "Fracture", url: `./data/fks_fracture_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "fokus",     side: "ct", map: "Lotus",    url: `./data/fks_lotus_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "fokus",     side: "ct", map: "Pearl",    url: `./data/fks_pearl_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "fokus",     side: "ct", map: "Split",    url: `./data/fks_split_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "fokus",     side: "t",  map: "Bind",     url: `./data/fks_bind_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "fokus",     side: "t",  map: "Breeze",   url: `./data/fks_breeze_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "fokus",     side: "t",  map: "Fracture", url: `./data/fks_fracture_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "fokus",     side: "t",  map: "Lotus",    url: `./data/fks_lotus_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "fokus",     side: "t",  map: "Pearl",    url: `./data/fks_pearl_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "fokus",     side: "t",  map: "Split",    url: `./data/fks_split_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
 ];
   const MAP_IMAGE_VERSION = "20260412-riot";
   const MAP_IMAGE_ASPECTS = {
@@ -56,7 +74,9 @@ const RETAKE_DATA_SOURCES = [
     Split: `./maps/Split.png?v=${MAP_IMAGE_VERSION}`,
     Corrode: `./maps/Corrode.png?v=${MAP_IMAGE_VERSION}`
   };
-const ROTATED_MAPS_CW = new Set(["Haven"]);
+const ROTATED_MAPS_CW = new Set(["Haven", "Split"]);
+const MAP_ROTATE_COORDS_CW = new Set([]);
+function rotCW90(x, y) { return [y, 100 - x]; }
 const calibrationOverrides = {
   "dortmund|Haven|ct": [
     { x: 29.842180774748922, y: 54.85201460119412 },
@@ -363,7 +383,7 @@ function getLegacyCalibrationKey(teamKey, mapName, sideKey) {
 }
 
 function getFkTypeLabel() {
-  return activeFkType === "all" ? "All First-Kill" : "Operator First-Kill";
+  return activeFkType === "all" ? "All First-Kill" : "Sniper First-Kill";
 }
 
 function getMapPointsByType(mapData) {
@@ -574,11 +594,10 @@ function getDefensiveMapPack(sidePack) {
   return sidePack;
 }
 
-  function projectHeatmapPoint(point) {
-    return {
-      x: point.normX,
-      y: point.normY
-    };
+  function projectHeatmapPoint(point, mapName) {
+    let x = point.normX, y = point.normY;
+    if (MAP_ROTATE_COORDS_CW.has(mapName)) [x, y] = rotCW90(x, y);
+    return { x, y };
   }
 
   function getContainedFrameStyle(mapName, canvasAspect = 1318 / 772) {
@@ -603,7 +622,7 @@ function getCalibratedPoint(point, mapName, sideKey, index) {
   const override =
     calibrationOverrides[getCalibrationKey(activeTeam, mapName, sideKey)]?.[index] ??
     calibrationOverrides[getLegacyCalibrationKey(activeTeam, mapName, sideKey)]?.[index];
-  return override ?? projectHeatmapPoint(point);
+  return override ?? projectHeatmapPoint(point, mapName);
 }
 
 function buildCalibrationExport() {
@@ -709,7 +728,7 @@ function endHeatmapDrag() {
         point.victimNormX !== null &&
         point.victimNormY !== null;
       const victim = hasVictimCoords
-        ? projectHeatmapPoint({ normX: point.victimNormX, normY: point.victimNormY })
+        ? projectHeatmapPoint({ normX: point.victimNormX, normY: point.victimNormY }, mapName)
         : null;
       return { point, index, killer, victim };
     });
@@ -767,13 +786,13 @@ function buildPlayerLegendMarkup(players) {
   return `<div class="retake-player-legend">${players.map(p =>
     `<span class="retake-legend-item">
       <span class="retake-legend-dot" style="background:${getPlayerColor(p)};"></span>
-      <span class="retake-legend-name">${p.replace(/^SGE\s+/, "")}</span>
+      <span class="retake-legend-name">${stripTeamPrefix(p)}</span>
     </span>`
   ).join("")}</div>`;
 }
 
 function buildMapControlMarkup(mapName, side, frameClassList, frameStyle, mapImageMarkup, selectedPlayers, sidebarMarkup) {
-  const mcSide = mapControlData?.[mapName]?.[side];
+  const mcSide = (activeTeam === "fokus" ? safeFksMapControlData : mapControlData)?.[mapName]?.[side];
   if (!mcSide) return "";
 
   const windows = [
@@ -786,9 +805,10 @@ function buildMapControlMarkup(mapName, side, frameClassList, frameStyle, mapIma
     const allPoints = mcSide.mapControl?.[key] ?? [];
     const points = allPoints.filter(pt => selectedPlayers.has(pt.player));
     const roundCount = new Set(allPoints.map(pt => `${pt.matchId}|${pt.roundNum}`)).size;
-    const dotsMarkup = points.map(pt =>
-      `<span class="heat-point" style="left:${pt.normX}%;top:${pt.normY}%;background:${getPlayerColor(pt.player)};" title="${pt.player} | R${pt.roundNum + 1} | ${pt.date} vs ${pt.opponent} | ${fmtRoundTime(pt.timeMs)}"></span>`
-    ).join("");
+    const dotsMarkup = points.map(pt => {
+      const [rx, ry] = MAP_ROTATE_COORDS_CW.has(mapName) ? rotCW90(pt.normX, pt.normY) : [pt.normX, pt.normY];
+      return `<span class="heat-point" style="left:${rx}%;top:${ry}%;background:${getPlayerColor(pt.player)};" title="${pt.player} | R${pt.roundNum + 1} | ${pt.date} vs ${pt.opponent} | ${fmtRoundTime(pt.timeMs)}"></span>`;
+    }).join("");
     return `
       <article class="defensive-card">
         <div class="defensive-card-head">
@@ -838,7 +858,7 @@ function filterSnapshotsByWindow(snaps, windowKey, plantTimeMs) {
 }
 
 function computeRotationLayers(mapName, side, selectedPlayers) {
-  const mcSide = mapControlData?.[mapName]?.[side];
+  const mcSide = (activeTeam === "fokus" ? safeFksMapControlData : mapControlData)?.[mapName]?.[side];
   const rounds = mcSide?.rotations ?? [];
   const hasSelection = activeRotationTrail !== null;
   let svgLines = "";
@@ -859,11 +879,15 @@ function computeRotationLayers(mapName, side, selectedPlayers) {
       const strokeW     = isActive ? 0.6 : 0.35;
 
       if (snaps.length >= 2) {
-        const pts = snaps.map(s => `${s.normX},${s.normY}`).join(" ");
+        const pts = snaps.map(s => {
+          const [rx, ry] = MAP_ROTATE_COORDS_CW.has(mapName) ? rotCW90(s.normX, s.normY) : [s.normX, s.normY];
+          return `${rx},${ry}`;
+        }).join(" ");
         svgLines += `<polyline points="${pts}" fill="none" stroke="${color}" stroke-width="${strokeW}" opacity="${lineOpacity}"/>`;
       }
       for (const snap of snaps) {
-        dotsMarkup += `<span class="heat-point rotation-dot" data-trail-id="${trailId}" style="left:${snap.normX}%;top:${snap.normY}%;background:${color};opacity:${dotOpacity};cursor:pointer;" title="${trail.player} | R${trail.roundNum + 1} | ${fmtRoundTime(snap.timeMs)} | ${trail.date} vs ${trail.opponent}"></span>`;
+        const [rx, ry] = MAP_ROTATE_COORDS_CW.has(mapName) ? rotCW90(snap.normX, snap.normY) : [snap.normX, snap.normY];
+        dotsMarkup += `<span class="heat-point rotation-dot" data-trail-id="${trailId}" style="left:${rx}%;top:${ry}%;background:${color};opacity:${dotOpacity};cursor:pointer;" title="${trail.player} | R${trail.roundNum + 1} | ${fmtRoundTime(snap.timeMs)} | ${trail.date} vs ${trail.opponent}"></span>`;
       }
     }
   }
@@ -888,7 +912,7 @@ function updateRotationCardInPlace(mapName, side, selectedPlayers) {
   const legendEl = card.querySelector(".retake-player-legend");
   const newLegend = buildPlayerLegendMarkup(sortByPlayerOrder([...visiblePlayers]));
   if (legendEl) legendEl.outerHTML = newLegend;
-  else if (newLegend) card.querySelector(".heat-layer-frame").insertAdjacentHTML("beforeend", newLegend);
+  else if (newLegend) card.querySelector(".defensive-map").insertAdjacentHTML("beforeend", newLegend);
 
   card.querySelectorAll(".rotation-window-btn").forEach(btn => {
     btn.classList.toggle("active", btn.dataset.rotationWindow === activeRotationWindow);
@@ -896,7 +920,7 @@ function updateRotationCardInPlace(mapName, side, selectedPlayers) {
 }
 
 function buildRotationMarkup(mapName, side, frameClassList, frameStyle, mapImageMarkup, selectedPlayers, sidebarMarkup) {
-  const mcSide = mapControlData?.[mapName]?.[side];
+  const mcSide = (activeTeam === "fokus" ? safeFksMapControlData : mapControlData)?.[mapName]?.[side];
   if (!mcSide) return "";
 
   const rounds = mcSide.rotations ?? [];
@@ -922,8 +946,8 @@ function buildRotationMarkup(mapName, side, frameClassList, frameStyle, mapImage
             ${mapImageMarkup}
             <svg class="rotation-svg" viewBox="0 0 100 100" preserveAspectRatio="none">${svgLines}</svg>
             <div class="heat-layer">${dotsMarkup}</div>
-            ${legendMarkup}
           </div>
+          ${legendMarkup}
         </div>
       </div>
     </article>`;
@@ -977,8 +1001,8 @@ function renderDefensivePanels(info) {
   ];
   const earlyTopicTitle = activeSideView === "ct" ? "Position at First Kill" : "Position at First Kill";
   const earlyTopicTooltip = "Player positions on the map at the exact moment the first kill of the round occurs. Grouped by when that kill happened: \u003C10s, \u003C20s, \u003C30s from round start. Each colored dot is one player\u2019s location. Use the player menu on the left to isolate individuals.";
-  const sniperTopicTitle = activeSideView === "ct" ? "Position OP-Kill" : "Position OP-Kill";
-  const sniperTopicTooltip = "Map positions where the defending team landed a kill with the Operator (sniper rifle). Each colored dot represents one kill, colored by the player who made it. All rounds in the sample are shown \u2014 no player filter applied.";
+  const sniperTopicTitle = "Sniper Kills";
+  const sniperTopicTooltip = "Map positions where the team landed a kill with the Operator, Outlaw, or Marshal. Each colored dot represents one kill, colored by the player who made it. All rounds in the sample are shown \u2014 no player filter applied.";
 
   const timingMarkup = timingPanels
     .map(([key, label]) => {
@@ -987,7 +1011,7 @@ function renderDefensivePanels(info) {
       const roundCount = new Set(allPoints.map((point) => `${point.matchId}|${point.roundNum}`)).size;
       const pointsMarkup = points
         .map((point) => {
-          const p = projectHeatmapPoint(point);
+          const p = projectHeatmapPoint(point, mapName);
           const color = getPlayerColor(point.player);
           return `<span class="heat-point" style="left:${p.x}%; top:${p.y}%; background:${color};" title="${point.player} | ${point.date} vs ${point.opponent} | R${point.roundNum + 1}"></span>`;
         })
@@ -1018,9 +1042,9 @@ function renderDefensivePanels(info) {
   const sniperPoints = sniperAllPoints; // unfiltered — sidebar only affects early positioning
   const sniperRoundCount = new Set(sniperAllPoints.map((point) => `${point.matchId}|${point.roundNum}`)).size;
   const sniperVisual = sniperPoints.map((point) => {
-    const killer = projectHeatmapPoint(point);
+    const killer = projectHeatmapPoint(point, mapName);
     const hasVictim = point.victimNormX != null && point.victimNormY != null;
-    const victim = hasVictim ? projectHeatmapPoint({ normX: point.victimNormX, normY: point.victimNormY }) : null;
+    const victim = hasVictim ? projectHeatmapPoint({ normX: point.victimNormX, normY: point.victimNormY }, mapName) : null;
     return { point, killer, victim };
   });
 
@@ -1044,7 +1068,7 @@ function renderDefensivePanels(info) {
   const sniperLegendPlayers = sortByPlayerOrder([...new Set(sniperPoints.map(pt => pt.player))]);
   const sniperLegendMarkup = sniperLegendPlayers.length
     ? `<div class="retake-player-legend">${sniperLegendPlayers.map(p =>
-        `<span class="retake-legend-item"><span class="retake-legend-dot" style="background:${getPlayerColor(p)};"></span><span class="retake-legend-name">${p.replace(/^SGE\s+/, "")}</span></span>`
+        `<span class="retake-legend-item"><span class="retake-legend-dot" style="background:${getPlayerColor(p)};"></span><span class="retake-legend-name">${stripTeamPrefix(p)}</span></span>`
       ).join("")}</div>`
     : "";
 
@@ -1064,8 +1088,8 @@ function renderDefensivePanels(info) {
               ${sniperVictimDots}
               ${sniperKillerDots}
             </div>` : '<div class="heatmap-empty"><p>No samples.</p></div>'}
-            ${sniperLegendMarkup}
           </div>
+          ${sniperLegendMarkup}
         </div>
       </div>
     </article>
@@ -1075,9 +1099,9 @@ function renderDefensivePanels(info) {
   const allFkAllPoints = info?.all_fk?.points ?? [];
   const allFkRoundCount = new Set(allFkAllPoints.map(p => `${p.matchId}|${p.roundNum}`)).size;
   const allFkVisual = allFkAllPoints.map(point => {
-    const killer = projectHeatmapPoint(point);
+    const killer = projectHeatmapPoint(point, mapName);
     const hasVictim = point.victimNormX != null && point.victimNormY != null;
-    const victim = hasVictim ? projectHeatmapPoint({ normX: point.victimNormX, normY: point.victimNormY }) : null;
+    const victim = hasVictim ? projectHeatmapPoint({ normX: point.victimNormX, normY: point.victimNormY }, mapName) : null;
     return { point, killer, victim };
   });
   const allFkSvgLines = allFkVisual.filter(e => e.victim)
@@ -1092,7 +1116,7 @@ function renderDefensivePanels(info) {
   const allFkLegendPlayers = sortByPlayerOrder([...new Set(allFkAllPoints.map(p => p.player))]);
   const allFkLegendMarkup = allFkLegendPlayers.length
     ? `<div class="retake-player-legend">${allFkLegendPlayers.map(p =>
-        `<span class="retake-legend-item"><span class="retake-legend-dot" style="background:${getPlayerColor(p)};"></span><span class="retake-legend-name">${p.replace(/^SGE\s+/, "")}</span></span>`
+        `<span class="retake-legend-item"><span class="retake-legend-dot" style="background:${getPlayerColor(p)};"></span><span class="retake-legend-name">${stripTeamPrefix(p)}</span></span>`
       ).join("")}</div>`
     : "";
   const allFkMarkup = `
@@ -1111,8 +1135,8 @@ function renderDefensivePanels(info) {
               ${allFkVictimDots}
               ${allFkKillerDots}
             </div>` : '<div class="heatmap-empty"><p>No samples.</p></div>'}
-            ${allFkLegendMarkup}
           </div>
+          ${allFkLegendMarkup}
         </div>
       </div>
     </article>
@@ -1135,7 +1159,7 @@ function renderDefensivePanels(info) {
   const retakeRoundCount = new Set(retakePoints.map((point) => `${point.matchId}|${point.roundNum}`)).size;
   const retakePointsMarkup = retakePoints
     .map((point) => {
-      const p = projectHeatmapPoint(point);
+      const p = projectHeatmapPoint(point, mapName);
       const color = getPlayerColor(point.player);
       const site = String(point.site || "").toUpperCase();
       const ring = siteColor[site] ?? "#888";
@@ -1163,8 +1187,8 @@ function renderDefensivePanels(info) {
             <div class="heat-layer">
               ${retakePointsMarkup || '<div class="heatmap-empty"><p>No samples.</p></div>'}
             </div>
-            ${retakeLegendMarkup}
           </div>
+          ${retakeLegendMarkup}
         </div>
       </div>
     </article>
@@ -1173,7 +1197,7 @@ function renderDefensivePanels(info) {
 
   // Post-Plant Positioning: T-side only (attackers plant the spike)
   let ppInlineMarkup = "";
-  const ppInlineData = allPostPlantData[mapName];
+  const ppInlineData = allDefensiveRetake?.[activeTeam]?.["t"]?.[mapName] ?? allPostPlantData[mapName];
   if (ppInlineData && activeSideView === "t") {
     const ppSiteColor = { A: "#df3a3a", B: "#2f68e8", C: "#0d8d52" };
     const mapImage = MAP_IMAGE_PATHS[mapName] ?? "";
@@ -1209,9 +1233,10 @@ function renderDefensivePanels(info) {
           const color = ppGetColor(pt.player);
           const ring = ppSiteColor[pt.site] ?? "#888";
           const site = pt.site ?? "";
+          const [rx, ry] = MAP_ROTATE_COORDS_CW.has(mapName) ? rotCW90(pt.normX, pt.normY) : [pt.normX, pt.normY];
           return `
-            <span class="heat-point retake-point" style="left:${pt.normX}%;top:${pt.normY}%;background:${color};box-shadow:0 0 0 1.4px ${ring};" title="${ppShortName(pt.player)} | Site ${site} | R${pt.roundNum + 1} | ${pt.date} vs ${pt.opponent}"></span>
-            <span class="retake-site-tag retake-site-tag-${site}" style="left:calc(${pt.normX}% + 6px);top:calc(${pt.normY}% - 8px);">${site}</span>
+            <span class="heat-point retake-point" style="left:${rx}%;top:${ry}%;background:${color};box-shadow:0 0 0 1.4px ${ring};" title="${ppShortName(pt.player)} | Site ${site} | R${pt.roundNum + 1} | ${pt.date} vs ${pt.opponent}"></span>
+            <span class="retake-site-tag retake-site-tag-${site}" style="left:calc(${rx}% + 6px);top:calc(${ry}% - 8px);">${site}</span>
           `;
         }).join("")
       : '<div class="heatmap-empty"><p>No samples.</p></div>';
@@ -1232,8 +1257,8 @@ function renderDefensivePanels(info) {
             <div class="${frameClass}" style="${frameStyle}">
               ${imgMarkup}
               <div class="heat-layer">${ppDotsMarkup}</div>
-              ${ppLegendMarkup}
             </div>
+            ${ppLegendMarkup}
           </div>
         </div>
       </article>
@@ -1573,7 +1598,7 @@ function render() {
 
 /* ── Post-Plant / Retake Module ── */
 
-// Canonical player colors — keyed by short name (without "SGE " prefix).
+// Canonical player colors — keyed by short name (without team prefix).
 // Used everywhere: early positioning, sniper kills, retake, post-plant.
 const SGE_PLAYER_COLORS = {
   "Jamelinho": "#e53935",
@@ -1584,6 +1609,20 @@ const SGE_PLAYER_COLORS = {
   "Ben1":      "#ff7f0e",
 };
 const SGE_PLAYER_ORDER = ["Jamelinho", "Fizzy", "MONSTEERR", "azury", "musashi", "Ben1"];
+
+const FKS_PLAYER_COLORS = {
+  "MOLSI":   "#e53935",
+  "shinnok": "#f1d500",
+  "Serial":  "#00e676",
+  "pyrolll": "#ff4dac",
+  "pa1ze":   "#1f4fd6",
+  "cullum":  "#ff7f0e",
+};
+const FKS_PLAYER_ORDER = ["MOLSI", "shinnok", "Serial", "pyrolll", "pa1ze", "cullum"];
+
+function stripTeamPrefix(name) {
+  return name.replace(/^(?:SGE|FKS)\s+/, "");
+}
 
 function sortByPlayerOrder(players) {
   return [...players].sort((a, b) => {
@@ -1597,8 +1636,8 @@ function sortByPlayerOrder(players) {
 }
 
 function getPlayerColor(name) {
-  const short = name.replace(/^SGE\s+/, "");
-  return SGE_PLAYER_COLORS[short] ?? "#888888";
+  const short = stripTeamPrefix(name);
+  return SGE_PLAYER_COLORS[short] ?? FKS_PLAYER_COLORS[short] ?? "#888888";
 }
 
 function ppGetColor(player) {
@@ -1606,7 +1645,7 @@ function ppGetColor(player) {
 }
 
 function ppShortName(player) {
-  return player.replace(/^SGE\s+/, "");
+  return stripTeamPrefix(player);
 }
 
 function ppGetPoints(category, site) {
@@ -1636,8 +1675,9 @@ function renderPpDots(containerId, points) {
   }
   container.innerHTML = points.map((pt, i) => {
     const color = ppGetColor(pt.player);
+    const [rx, ry] = MAP_ROTATE_COORDS_CW.has(activeDefensiveMap) ? [pt.normY, 1 - pt.normX] : [pt.normX, pt.normY];
     return `<span class="pp-dot"
-      style="left:${pt.normX * 100}%;top:${pt.normY * 100}%;background:${color};"
+      style="left:${rx * 100}%;top:${ry * 100}%;background:${color};"
       data-pp-i="${i}"
     ></span>`;
   }).join("");

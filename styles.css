@@ -538,9 +538,9 @@ body {
 }
 
 .fks-new-roster-btn {
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  background: #f7f9fa;
-  color: #21292d;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: #f0f0f0;
+  color: #aaa;
   font: inherit;
   font-size: 0.78rem;
   font-weight: 700;
@@ -552,9 +552,9 @@ body {
 }
 
 .fks-new-roster-btn.active {
-  background: #111;
+  background: #22c55e;
   color: #fff;
-  border-color: #111;
+  border-color: #16a34a;
 }
 
 .defensive-panels {

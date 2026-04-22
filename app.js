@@ -1022,16 +1022,17 @@ function renderDefensivePanels(info) {
       const allPoints = applyNewRosterFilter(info.thresholds?.[key]?.points ?? []);
       const points = allPoints.filter((point) => selectedPlayers.has(point.player));
       const roundCount = new Set(allPoints.map((point) => `${point.matchId}|${point.roundNum}`)).size;
-      const pointsMarkup = points
+      const pointsMarkup = allPoints
         .map((point) => {
           const p = projectHeatmapPoint(point, mapName);
           const color = getPlayerColor(point.player);
-          return `<span class="heat-point" style="left:${p.x}%; top:${p.y}%; background:${color};" title="${point.player} | ${point.date} vs ${point.opponent} | R${point.roundNum + 1}"></span>`;
+          const hidden = selectedPlayers.has(point.player) ? "" : ' style="display:none"';
+          return `<span class="heat-point" data-player="${encodeURIComponent(point.player)}" style="left:${p.x}%; top:${p.y}%; background:${color};"${hidden} title="${point.player} | ${point.date} vs ${point.opponent} | R${point.roundNum + 1}"></span>`;
         })
         .join("");
 
       return `
-        <article class="defensive-card">
+        <article class="defensive-card" data-threshold="${key}">
           <div class="defensive-card-head">
             <h3>${label}</h3>
             <p class="defensive-card-meta">Rounds: ${roundCount} | Points: ${points.length}/${allPoints.length}</p>
@@ -1380,6 +1381,33 @@ function renderDefensivePanels(info) {
         </div>`;
     })()}
   `;
+}
+
+function updateEarlyDotsInPlace(info, selectedPlayers) {
+  const panels = document.getElementById("defensive-panels");
+  if (!panels) return;
+
+  panels.querySelectorAll(".heat-point[data-player]").forEach(dot => {
+    const player = decodeURIComponent(dot.dataset.player);
+    dot.style.display = selectedPlayers.has(player) ? "" : "none";
+  });
+
+  [["lt10s"], ["lt20s"], ["lt30s"]].forEach(([key]) => {
+    const card = panels.querySelector(`[data-threshold="${key}"]`);
+    if (!card) return;
+    const allPoints = applyNewRosterFilter(info.thresholds?.[key]?.points ?? []);
+    const visibleCount = allPoints.filter(p => selectedPlayers.has(p.player)).length;
+    const roundCount = new Set(allPoints.map(p => `${p.matchId}|${p.roundNum}`)).size;
+    const meta = card.querySelector(".defensive-card-meta");
+    if (meta) meta.textContent = `Rounds: ${roundCount} | Points: ${visibleCount}/${allPoints.length}`;
+  });
+
+  panels.querySelectorAll(".defensive-player-chip[data-def-player]").forEach(chip => {
+    const player = decodeURIComponent(chip.dataset.defPlayer);
+    const enabled = selectedPlayers.has(player);
+    chip.classList.toggle("off", !enabled);
+    chip.setAttribute("aria-pressed", String(enabled));
+  });
 }
 
 function toggleRetakeSite(site) {
@@ -1972,14 +2000,14 @@ if (defensivePanels) {
       collectDefensivePlayers(activeInfo).forEach((player) => {
         selectedDefensivePlayerFilters[key][player] = true;
       });
-      renderMapInfo();
+      updateEarlyDotsInPlace(activeInfo, getSelectedDefensiveSet(activeInfo, collectDefensivePlayers(activeInfo)));
       return;
     }
     if (event.target.closest("[data-early-none]")) {
       collectDefensivePlayers(activeInfo).forEach((player) => {
         selectedDefensivePlayerFilters[key][player] = false;
       });
-      renderMapInfo();
+      updateEarlyDotsInPlace(activeInfo, getSelectedDefensiveSet(activeInfo, collectDefensivePlayers(activeInfo)));
       return;
     }
     const rotationWindowBtn = event.target.closest(".rotation-window-btn[data-rotation-window]");
@@ -2003,7 +2031,7 @@ if (defensivePanels) {
     const playerName = decodeURIComponent(button.dataset.defPlayer ?? "");
     const current = selectedDefensivePlayerFilters[key][playerName] !== false;
     selectedDefensivePlayerFilters[key][playerName] = !current;
-    renderMapInfo();
+    updateEarlyDotsInPlace(activeInfo, getSelectedDefensiveSet(activeInfo, collectDefensivePlayers(activeInfo)));
   });
 }
 

@@ -105,6 +105,7 @@ let lastDefensiveInfo = null;
 let allSiteStats = {};
 let activeRotationTrail = null;
 let activeRotationWindow = null; // "140_120" | "120_100" | "100_end" | "afterplant" | null
+let fksNewRosterFilter = false;
 const selectedPlayerFilters = {};
 const selectedDefensivePlayerFilters = {};
 
@@ -161,6 +162,7 @@ const defensivePlayerControls = document.getElementById("defensive-player-contro
 const defensivePlayerRow = document.getElementById("defensive-player-row");
 const defensivePlayerAll = document.getElementById("defensive-player-all");
 const defensivePlayerNone = document.getElementById("defensive-player-none");
+const fksNewRosterBtn = document.getElementById("fks-new-roster-btn");
 const ctCount = document.getElementById("ct-count");
 const tCount = document.getElementById("t-count");
 const ctHeatTitle = document.getElementById("ct-heat-title");
@@ -171,6 +173,8 @@ let calibrationMode = false;
 let dragState = null;
 
 const DEFENSIVE_MAP_ORDER = ["Bind", "Breeze", "Lotus", "Split", "Pearl", "Haven", "Fracture", "Corrode", "Abyss", "Sunset", "Icebox"];
+const FKS_NEW_ROSTER_MAPS = new Set(["Bind", "Lotus", "Fracture"]);
+const FKS_NEW_ROSTER_OPPONENTS = new Set(["RZN", "DXG"]);
 
 function getRowLookupKey(row) {
   return `${row.date}|${row.opponentAbbr ?? row.opponent}`;
@@ -492,6 +496,11 @@ function collectDefensivePlayers(defensiveInfo) {
     });
   });
   return out;
+}
+
+function applyNewRosterFilter(points) {
+  if (!fksNewRosterFilter || activeTeam !== "fokus" || !FKS_NEW_ROSTER_MAPS.has(activeDefensiveMap)) return points;
+  return points.filter(p => FKS_NEW_ROSTER_OPPONENTS.has(p.opponent));
 }
 
 function getRetakeInfo(teamKey, sideKey, mapName) {
@@ -1006,7 +1015,7 @@ function renderDefensivePanels(info) {
 
   const timingMarkup = timingPanels
     .map(([key, label]) => {
-      const allPoints = info.thresholds?.[key]?.points ?? [];
+      const allPoints = applyNewRosterFilter(info.thresholds?.[key]?.points ?? []);
       const points = allPoints.filter((point) => selectedPlayers.has(point.player));
       const roundCount = new Set(allPoints.map((point) => `${point.matchId}|${point.roundNum}`)).size;
       const pointsMarkup = points
@@ -1038,7 +1047,7 @@ function renderDefensivePanels(info) {
     })
     .join("");
 
-  const sniperAllPoints = info?.sniper?.points ?? [];
+  const sniperAllPoints = applyNewRosterFilter(info?.sniper?.points ?? []);
   const sniperPoints = sniperAllPoints; // unfiltered — sidebar only affects early positioning
   const sniperRoundCount = new Set(sniperAllPoints.map((point) => `${point.matchId}|${point.roundNum}`)).size;
   const sniperVisual = sniperPoints.map((point) => {
@@ -1096,7 +1105,7 @@ function renderDefensivePanels(info) {
   `;
 
   // ── All SGE First Kills ─────────────────────────────────────────
-  const allFkAllPoints = info?.all_fk?.points ?? [];
+  const allFkAllPoints = applyNewRosterFilter(info?.all_fk?.points ?? []);
   const allFkRoundCount = new Set(allFkAllPoints.map(p => `${p.matchId}|${p.roundNum}`)).size;
   const allFkVisual = allFkAllPoints.map(point => {
     const killer = projectHeatmapPoint(point, mapName);
@@ -1143,7 +1152,7 @@ function renderDefensivePanels(info) {
   `;
 
   const retakeInfo = getRetakeInfo(activeTeam, activeSideView, mapName);
-  const retakeAllPoints = collectRetakePoints(retakeInfo);
+  const retakeAllPoints = applyNewRosterFilter(collectRetakePoints(retakeInfo));
   const retakeSiteOrder = ["A", "B", "C"];
   const siteColor = { A: "#df3a3a", B: "#2f68e8", C: "#0d8d52" };
   const retakeSiteChips = retakeSiteOrder
@@ -1395,6 +1404,7 @@ function renderSideButtons() {
 }
 
 function renderMapInfo() {
+  if (fksNewRosterBtn) fksNewRosterBtn.classList.add("hidden");
   const team = allVetoHistoryData[activeTeam];
   const info = allMapInfo?.[activeTeam];
   const defensiveTeamPack = allDefensiveEarly?.[activeTeam];
@@ -1443,14 +1453,24 @@ function renderMapInfo() {
     }
     const defensiveTeamName = defensiveInfo.name ?? defensiveInfo.team ?? team.name;
     defensiveTitle.textContent = defensiveTeamName;
-    const sampleMaps = defensiveInfo.sampleMaps ?? defensiveInfo.selectedMaps ?? [];
-    const sampleSize = defensiveInfo.sampleSize ?? sampleMaps.length;
+    const rawSampleMaps = defensiveInfo.sampleMaps ?? defensiveInfo.selectedMaps ?? [];
+    const sampleSize = defensiveInfo.sampleSize ?? rawSampleMaps.length;
     const mapName = defensiveInfo.map ?? "Bind";
     const sideCopyWord = activeSideView === "ct" ? "Defender" : "Attacker";
+
+    const showNewRosterBtn = activeTeam === "fokus" && FKS_NEW_ROSTER_MAPS.has(activeDefensiveMap);
+    if (fksNewRosterBtn) {
+      fksNewRosterBtn.classList.toggle("hidden", !showNewRosterBtn);
+      fksNewRosterBtn.classList.toggle("active", fksNewRosterFilter && showNewRosterBtn);
+    }
+    const sampleMaps = (fksNewRosterFilter && showNewRosterBtn)
+      ? rawSampleMaps.filter(m => FKS_NEW_ROSTER_OPPONENTS.has(m.opponent))
+      : rawSampleMaps;
+
     renderDefensivePanels(defensiveInfo);
 
     defensiveSampleCard.innerHTML = `
-      <p class="map-sample-label">Last ${sampleSize} maps in sample</p>
+      <p class="map-sample-label">${fksNewRosterFilter && showNewRosterBtn ? `New Roster (${sampleMaps.length} maps)` : `Last ${sampleSize} maps in sample`}</p>
       <div class="sample-chip-list">
         ${sampleMaps
           .map((item) => `<span class="sample-chip">${item.date.slice(5)} ${mapName} vs ${item.opponent}</span>`)
@@ -1843,9 +1863,15 @@ document.addEventListener("mousemove", (e) => {
   if (tip?.style.display === "block") positionPpTooltip(e);
 });
 
+fksNewRosterBtn?.addEventListener("click", () => {
+  fksNewRosterFilter = !fksNewRosterFilter;
+  renderMapInfo();
+});
+
 teamSelect.addEventListener("change", (event) => {
   activeTeam = event.target.value;
   activeDefensiveMap = "Bind";
+  fksNewRosterFilter = false;
   retakeActiveSites = new Set(["A", "B", "C"]);
   ppInlineActiveSites = new Set(["A", "B", "C"]);
   if (activeTeam === "eco") {

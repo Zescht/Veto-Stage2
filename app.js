@@ -163,6 +163,7 @@ const defensivePlayerRow = document.getElementById("defensive-player-row");
 const defensivePlayerAll = document.getElementById("defensive-player-all");
 const defensivePlayerNone = document.getElementById("defensive-player-none");
 const fksNewRosterBtn = document.getElementById("fks-new-roster-btn");
+const fksNewRosterHint = document.getElementById("fks-new-roster-hint");
 const ctCount = document.getElementById("ct-count");
 const tCount = document.getElementById("t-count");
 const ctHeatTitle = document.getElementById("ct-heat-title");
@@ -500,7 +501,10 @@ function collectDefensivePlayers(defensiveInfo) {
 
 function applyNewRosterFilter(points) {
   if (!fksNewRosterFilter || activeTeam !== "fokus" || !FKS_NEW_ROSTER_MAPS.has(activeDefensiveMap)) return points;
-  return points.filter(p => FKS_NEW_ROSTER_OPPONENTS.has(p.opponent));
+  return points.filter(p => {
+    const opponent = Array.isArray(p) ? p[0]?.opponent : p.opponent;
+    return FKS_NEW_ROSTER_OPPONENTS.has(opponent);
+  });
 }
 
 function getRetakeInfo(teamKey, sideKey, mapName) {
@@ -811,7 +815,7 @@ function buildMapControlMarkup(mapName, side, frameClassList, frameStyle, mapIma
   ];
 
   const cards = windows.map(({ key, label }) => {
-    const allPoints = mcSide.mapControl?.[key] ?? [];
+    const allPoints = applyNewRosterFilter(mcSide.mapControl?.[key] ?? []);
     const points = allPoints.filter(pt => selectedPlayers.has(pt.player));
     const roundCount = new Set(allPoints.map(pt => `${pt.matchId}|${pt.roundNum}`)).size;
     const dotsMarkup = points.map(pt => {
@@ -868,7 +872,7 @@ function filterSnapshotsByWindow(snaps, windowKey, plantTimeMs) {
 
 function computeRotationLayers(mapName, side, selectedPlayers) {
   const mcSide = (activeTeam === "fokus" ? safeFksMapControlData : mapControlData)?.[mapName]?.[side];
-  const rounds = mcSide?.rotations ?? [];
+  const rounds = applyNewRosterFilter(mcSide?.rotations ?? []);
   const hasSelection = activeRotationTrail !== null;
   let svgLines = "";
   let dotsMarkup = "";
@@ -1405,6 +1409,7 @@ function renderSideButtons() {
 
 function renderMapInfo() {
   if (fksNewRosterBtn) fksNewRosterBtn.classList.add("hidden");
+  if (fksNewRosterHint) fksNewRosterHint.classList.add("hidden");
   const team = allVetoHistoryData[activeTeam];
   const info = allMapInfo?.[activeTeam];
   const defensiveTeamPack = allDefensiveEarly?.[activeTeam];
@@ -1463,6 +1468,7 @@ function renderMapInfo() {
       fksNewRosterBtn.classList.toggle("hidden", !showNewRosterBtn);
       fksNewRosterBtn.classList.toggle("active", fksNewRosterFilter && showNewRosterBtn);
     }
+    if (fksNewRosterHint) fksNewRosterHint.classList.toggle("hidden", !showNewRosterBtn);
     const sampleMaps = (fksNewRosterFilter && showNewRosterBtn)
       ? rawSampleMaps.filter(m => FKS_NEW_ROSTER_OPPONENTS.has(m.opponent))
       : rawSampleMaps;
@@ -1849,11 +1855,13 @@ async function preloadRetakeData() {
 
 viewVetoButton.addEventListener("click", () => {
   activeView = "veto";
+  setHash();
   render();
 });
 
 viewMapButton.addEventListener("click", () => {
   activeView = "map";
+  setHash();
   render();
 });
 
@@ -1879,6 +1887,7 @@ teamSelect.addEventListener("change", (event) => {
   } else if (activeFkType !== "operator" && activeFkType !== "all") {
     activeFkType = "operator";
   }
+  setHash();
   render();
 });
 
@@ -2045,6 +2054,36 @@ window.addEventListener("pointermove", updateHeatmapDrag);
 window.addEventListener("pointerup", endHeatmapDrag);
 window.addEventListener("pointercancel", endHeatmapDrag);
 
+// ── Hash routing ──────────────────────────────────────────────────────────────
+function parseHash() {
+  const parts = window.location.hash.slice(1).split("/");
+  const viewSlug = parts[0];
+  const teamSlug = parts[1];
+  return {
+    view: viewSlug === "map-info" ? "map" : viewSlug === "veto" ? "veto" : null,
+    team: allVetoHistoryData[teamSlug] ? teamSlug : null,
+  };
+}
+
+function setHash() {
+  const viewSlug = activeView === "map" ? "map-info" : "veto";
+  window.location.hash = `${viewSlug}/${activeTeam}`;
+}
+
+function applyHash() {
+  const { view, team } = parseHash();
+  if (team) activeTeam = team;
+  if (view) activeView = view;
+}
+
+window.addEventListener("hashchange", () => {
+  const { view, team } = parseHash();
+  if (view === activeView && team === activeTeam) return;
+  applyHash();
+  render();
+});
+
+applyHash();
 render();
 preloadRetakeData();
 preloadPostPlantData();

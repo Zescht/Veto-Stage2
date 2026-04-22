@@ -530,6 +530,13 @@ body {
   justify-content: flex-end;
 }
 
+.fks-new-roster-hint {
+  font-size: 0.75rem;
+  color: #667;
+  font-style: italic;
+  white-space: nowrap;
+}
+
 .fks-new-roster-btn {
   border: 1px solid rgba(0, 0, 0, 0.2);
   background: #f7f9fa;

@@ -1,0 +1,458 @@
+{
+  "map": "Split",
+  "side": "t",
+  "selectedMaps": [
+    {
+      "date": "2026-04-14",
+      "opponent": "SGE",
+      "matchId": "3cc1127c-3135-4a5c-a503-f09d664c602d",
+      "score": "10-13"
+    },
+    {
+      "date": "2026-04-07",
+      "opponent": "CGN",
+      "matchId": "56aec96e-d9c4-4e20-99b4-c64fd3cf8215",
+      "score": "6-13"
+    },
+    {
+      "date": "2026-04-04",
+      "opponent": "ECO",
+      "matchId": "895733bb-a2ab-4a25-95e1-85d469a2e7a8",
+      "score": "13-2"
+    }
+  ],
+  "sites": {
+    "A": {
+      "roundCount": 5,
+      "pointCount": 17,
+      "points": [
+        {
+          "site": "A",
+          "player": "BarcK",
+          "normX": 48.6742,
+          "normY": 18.5508,
+          "roundNum": 1,
+          "plantRoundTimeMs": 23650,
+          "date": "2026-04-14",
+          "opponent": "SGE",
+          "matchId": "3cc1127c-3135-4a5c-a503-f09d664c602d",
+          "score": "10-13"
+        },
+        {
+          "site": "A",
+          "player": "Opex",
+          "normX": 18.0592,
+          "normY": 22.8564,
+          "roundNum": 1,
+          "plantRoundTimeMs": 23650,
+          "date": "2026-04-14",
+          "opponent": "SGE",
+          "matchId": "3cc1127c-3135-4a5c-a503-f09d664c602d",
+          "score": "10-13"
+        },
+        {
+          "site": "A",
+          "player": "Bumbibjorn1",
+          "normX": 50.281,
+          "normY": 29.0028,
+          "roundNum": 1,
+          "plantRoundTimeMs": 23650,
+          "date": "2026-04-14",
+          "opponent": "SGE",
+          "matchId": "3cc1127c-3135-4a5c-a503-f09d664c602d",
+          "score": "10-13"
+        },
+        {
+          "site": "A",
+          "player": "Puggy",
+          "normX": 30.196,
+          "normY": 15.0096,
+          "roundNum": 1,
+          "plantRoundTimeMs": 23650,
+          "date": "2026-04-14",
+          "opponent": "SGE",
+          "matchId": "3cc1127c-3135-4a5c-a503-f09d664c602d",
+          "score": "10-13"
+        },
+        {
+          "site": "A",
+          "player": "deyten",
+          "normX": 25.2898,
+          "normY": 11.1798,
+          "roundNum": 10,
+          "plantRoundTimeMs": 26874,
+          "date": "2026-04-14",
+          "opponent": "SGE",
+          "matchId": "3cc1127c-3135-4a5c-a503-f09d664c602d",
+          "score": "10-13"
+        },
+        {
+          "site": "A",
+          "player": "BarcK",
+          "normX": 30.235,
+          "normY": 25.3914,
+          "roundNum": 10,
+          "plantRoundTimeMs": 26874,
+          "date": "2026-04-14",
+          "opponent": "SGE",
+          "matchId": "3cc1127c-3135-4a5c-a503-f09d664c602d",
+          "score": "10-13"
+        },
+        {
+          "site": "A",
+          "player": "deyten",
+          "normX": 18.067,
+          "normY": 26.421,
+          "roundNum": 11,
+          "plantRoundTimeMs": 21819,
+          "date": "2026-04-14",
+          "opponent": "SGE",
+          "matchId": "3cc1127c-3135-4a5c-a503-f09d664c602d",
+          "score": "10-13"
+        },
+        {
+          "site": "A",
+          "player": "BarcK",
+          "normX": 59.68,
+          "normY": 22.2948,
+          "roundNum": 11,
+          "plantRoundTimeMs": 21819,
+          "date": "2026-04-14",
+          "opponent": "SGE",
+          "matchId": "3cc1127c-3135-4a5c-a503-f09d664c602d",
+          "score": "10-13"
+        },
+        {
+          "site": "A",
+          "player": "Opex",
+          "normX": 13.6444,
+          "normY": 30.8748,
+          "roundNum": 11,
+          "plantRoundTimeMs": 21819,
+          "date": "2026-04-14",
+          "opponent": "SGE",
+          "matchId": "3cc1127c-3135-4a5c-a503-f09d664c602d",
+          "score": "10-13"
+        },
+        {
+          "site": "A",
+          "player": "Bumbibjorn1",
+          "normX": 24.9622,
+          "normY": 12.03,
+          "roundNum": 11,
+          "plantRoundTimeMs": 21819,
+          "date": "2026-04-14",
+          "opponent": "SGE",
+          "matchId": "3cc1127c-3135-4a5c-a503-f09d664c602d",
+          "score": "10-13"
+        },
+        {
+          "site": "A",
+          "player": "Puggy",
+          "normX": 28.6828,
+          "normY": 5.5482,
+          "roundNum": 11,
+          "plantRoundTimeMs": 21819,
+          "date": "2026-04-14",
+          "opponent": "SGE",
+          "matchId": "3cc1127c-3135-4a5c-a503-f09d664c602d",
+          "score": "10-13"
+        },
+        {
+          "site": "A",
+          "player": "deyten",
+          "normX": 32.0992,
+          "normY": 26.6784,
+          "roundNum": 16,
+          "plantRoundTimeMs": 93112,
+          "date": "2026-04-07",
+          "opponent": "CGN",
+          "matchId": "56aec96e-d9c4-4e20-99b4-c64fd3cf8215",
+          "score": "6-13"
+        },
+        {
+          "site": "A",
+          "player": "BarcK",
+          "normX": 28.0432,
+          "normY": 5.5404,
+          "roundNum": 16,
+          "plantRoundTimeMs": 93112,
+          "date": "2026-04-07",
+          "opponent": "CGN",
+          "matchId": "56aec96e-d9c4-4e20-99b4-c64fd3cf8215",
+          "score": "6-13"
+        },
+        {
+          "site": "A",
+          "player": "BarcK",
+          "normX": 40.96,
+          "normY": 25.1496,
+          "roundNum": 14,
+          "plantRoundTimeMs": 36301,
+          "date": "2026-04-04",
+          "opponent": "ECO",
+          "matchId": "895733bb-a2ab-4a25-95e1-85d469a2e7a8",
+          "score": "13-2"
+        },
+        {
+          "site": "A",
+          "player": "Opex",
+          "normX": 19.861,
+          "normY": 19.7988,
+          "roundNum": 14,
+          "plantRoundTimeMs": 36301,
+          "date": "2026-04-04",
+          "opponent": "ECO",
+          "matchId": "895733bb-a2ab-4a25-95e1-85d469a2e7a8",
+          "score": "13-2"
+        },
+        {
+          "site": "A",
+          "player": "Puggy",
+          "normX": 57.5272,
+          "normY": 13.7616,
+          "roundNum": 14,
+          "plantRoundTimeMs": 36301,
+          "date": "2026-04-04",
+          "opponent": "ECO",
+          "matchId": "895733bb-a2ab-4a25-95e1-85d469a2e7a8",
+          "score": "13-2"
+        },
+        {
+          "site": "A",
+          "player": "deyten",
+          "normX": 26.1244,
+          "normY": 5.3532,
+          "roundNum": 14,
+          "plantRoundTimeMs": 36301,
+          "date": "2026-04-04",
+          "opponent": "ECO",
+          "matchId": "895733bb-a2ab-4a25-95e1-85d469a2e7a8",
+          "score": "13-2"
+        }
+      ]
+    },
+    "B": {
+      "roundCount": 6,
+      "pointCount": 18,
+      "points": [
+        {
+          "site": "B",
+          "player": "BarcK",
+          "normX": 39.322,
+          "normY": 83.7354,
+          "roundNum": 0,
+          "plantRoundTimeMs": 24284,
+          "date": "2026-04-14",
+          "opponent": "SGE",
+          "matchId": "3cc1127c-3135-4a5c-a503-f09d664c602d",
+          "score": "10-13"
+        },
+        {
+          "site": "B",
+          "player": "Bumbibjorn1",
+          "normX": 24.424,
+          "normY": 93.9066,
+          "roundNum": 0,
+          "plantRoundTimeMs": 24284,
+          "date": "2026-04-14",
+          "opponent": "SGE",
+          "matchId": "3cc1127c-3135-4a5c-a503-f09d664c602d",
+          "score": "10-13"
+        },
+        {
+          "site": "B",
+          "player": "Puggy",
+          "normX": 35.1334,
+          "normY": 86.4654,
+          "roundNum": 0,
+          "plantRoundTimeMs": 24284,
+          "date": "2026-04-14",
+          "opponent": "SGE",
+          "matchId": "3cc1127c-3135-4a5c-a503-f09d664c602d",
+          "score": "10-13"
+        },
+        {
+          "site": "B",
+          "player": "deyten",
+          "normX": 21.9748,
+          "normY": 73.1352,
+          "roundNum": 4,
+          "plantRoundTimeMs": 34123,
+          "date": "2026-04-14",
+          "opponent": "SGE",
+          "matchId": "3cc1127c-3135-4a5c-a503-f09d664c602d",
+          "score": "10-13"
+        },
+        {
+          "site": "B",
+          "player": "Opex",
+          "normX": 39.4624,
+          "normY": 69.867,
+          "roundNum": 4,
+          "plantRoundTimeMs": 34123,
+          "date": "2026-04-14",
+          "opponent": "SGE",
+          "matchId": "3cc1127c-3135-4a5c-a503-f09d664c602d",
+          "score": "10-13"
+        },
+        {
+          "site": "B",
+          "player": "Puggy",
+          "normX": 33.0898,
+          "normY": 87.2454,
+          "roundNum": 4,
+          "plantRoundTimeMs": 34123,
+          "date": "2026-04-14",
+          "opponent": "SGE",
+          "matchId": "3cc1127c-3135-4a5c-a503-f09d664c602d",
+          "score": "10-13"
+        },
+        {
+          "site": "B",
+          "player": "deyten",
+          "normX": 35.1334,
+          "normY": 86.4654,
+          "roundNum": 8,
+          "plantRoundTimeMs": 77886,
+          "date": "2026-04-14",
+          "opponent": "SGE",
+          "matchId": "3cc1127c-3135-4a5c-a503-f09d664c602d",
+          "score": "10-13"
+        },
+        {
+          "site": "B",
+          "player": "Opex",
+          "normX": 32.146,
+          "normY": 88.5012,
+          "roundNum": 8,
+          "plantRoundTimeMs": 77886,
+          "date": "2026-04-14",
+          "opponent": "SGE",
+          "matchId": "3cc1127c-3135-4a5c-a503-f09d664c602d",
+          "score": "10-13"
+        },
+        {
+          "site": "B",
+          "player": "Puggy",
+          "normX": 43.1128,
+          "normY": 69.5004,
+          "roundNum": 8,
+          "plantRoundTimeMs": 77886,
+          "date": "2026-04-14",
+          "opponent": "SGE",
+          "matchId": "3cc1127c-3135-4a5c-a503-f09d664c602d",
+          "score": "10-13"
+        },
+        {
+          "site": "B",
+          "player": "Bumbibjorn1",
+          "normX": 19.4242,
+          "normY": 73.7592,
+          "roundNum": 12,
+          "plantRoundTimeMs": 79255,
+          "date": "2026-04-07",
+          "opponent": "CGN",
+          "matchId": "56aec96e-d9c4-4e20-99b4-c64fd3cf8215",
+          "score": "6-13"
+        },
+        {
+          "site": "B",
+          "player": "Puggy",
+          "normX": 34.72,
+          "normY": 86.7462,
+          "roundNum": 12,
+          "plantRoundTimeMs": 79255,
+          "date": "2026-04-07",
+          "opponent": "CGN",
+          "matchId": "56aec96e-d9c4-4e20-99b4-c64fd3cf8215",
+          "score": "6-13"
+        },
+        {
+          "site": "B",
+          "player": "deyten",
+          "normX": 31.3426,
+          "normY": 76.3254,
+          "roundNum": 15,
+          "plantRoundTimeMs": 24278,
+          "date": "2026-04-07",
+          "opponent": "CGN",
+          "matchId": "56aec96e-d9c4-4e20-99b4-c64fd3cf8215",
+          "score": "6-13"
+        },
+        {
+          "site": "B",
+          "player": "Opex",
+          "normX": 38.2612,
+          "normY": 90.4122,
+          "roundNum": 15,
+          "plantRoundTimeMs": 24278,
+          "date": "2026-04-07",
+          "opponent": "CGN",
+          "matchId": "56aec96e-d9c4-4e20-99b4-c64fd3cf8215",
+          "score": "6-13"
+        },
+        {
+          "site": "B",
+          "player": "Puggy",
+          "normX": 35.1334,
+          "normY": 86.4654,
+          "roundNum": 15,
+          "plantRoundTimeMs": 24278,
+          "date": "2026-04-07",
+          "opponent": "CGN",
+          "matchId": "56aec96e-d9c4-4e20-99b4-c64fd3cf8215",
+          "score": "6-13"
+        },
+        {
+          "site": "B",
+          "player": "BarcK",
+          "normX": 66.5908,
+          "normY": 33.9714,
+          "roundNum": 13,
+          "plantRoundTimeMs": 28548,
+          "date": "2026-04-04",
+          "opponent": "ECO",
+          "matchId": "895733bb-a2ab-4a25-95e1-85d469a2e7a8",
+          "score": "13-2"
+        },
+        {
+          "site": "B",
+          "player": "Opex",
+          "normX": 35.1334,
+          "normY": 86.4654,
+          "roundNum": 13,
+          "plantRoundTimeMs": 28548,
+          "date": "2026-04-04",
+          "opponent": "ECO",
+          "matchId": "895733bb-a2ab-4a25-95e1-85d469a2e7a8",
+          "score": "13-2"
+        },
+        {
+          "site": "B",
+          "player": "Bumbibjorn1",
+          "normX": 38.0506,
+          "normY": 89.7648,
+          "roundNum": 13,
+          "plantRoundTimeMs": 28548,
+          "date": "2026-04-04",
+          "opponent": "ECO",
+          "matchId": "895733bb-a2ab-4a25-95e1-85d469a2e7a8",
+          "score": "13-2"
+        },
+        {
+          "site": "B",
+          "player": "deyten",
+          "normX": 35.0008,
+          "normY": 76.4736,
+          "roundNum": 13,
+          "plantRoundTimeMs": 28548,
+          "date": "2026-04-04",
+          "opponent": "ECO",
+          "matchId": "895733bb-a2ab-4a25-95e1-85d469a2e7a8",
+          "score": "13-2"
+        }
+      ]
+    }
+  }
+}

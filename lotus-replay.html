@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lotus Replay — SGE vs CGN · 2026-04-19</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: #0b1014;
+      color: #e8edf0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Header ─────────────────────────────── */
+    .page-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 18px 24px 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .header-left { display: flex; flex-direction: column; gap: 2px; }
+
+    .eyebrow {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #4e7e9b;
+    }
+
+    .match-title {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .score-block {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    .score-team {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .score-tag {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #6b7e8a;
+    }
+
+    .score-num {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .score-sge { color: #6baadc; }
+    .score-cgn { color: #f97316; }
+
+    .score-sep {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #3a4e5c;
+      margin-top: 14px;
+    }
+
+    .score-context {
+      font-size: 0.72rem;
+      color: #4e7e9b;
+      font-style: italic;
+      margin-top: 4px;
+    }
+
+    /* ── Round bar ───────────────────────────── */
+    .round-bar {
+      display: flex;
+      gap: 4px;
+      padding: 10px 24px;
+      overflow-x: auto;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255,255,255,0.1) transparent;
+    }
+
+    .round-btn {
+      flex-shrink: 0;
+      width: 40px;
+      height: 44px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.03);
+      color: #8a9ba8;
+      font: inherit;
+      font-size: 0.75rem;
+      font-weight: 700;
+      cursor: pointer;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      padding-top: 2px;
+      transition: background 0.1s, border-color 0.1s;
+      position: relative;
+    }
+
+    .round-btn::after {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 3px;
+      border-radius: 2px;
+      background: var(--winner-color, #3a4e5c);
+    }
+
+    .round-btn:hover {
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(255,255,255,0.25);
+    }
+
+    .round-btn.active {
+      background: rgba(107,170,220,0.15);
+      border-color: #6baadc;
+      color: #e8edf0;
+    }
+
+    /* ── Main layout ─────────────────────────── */
+    .main-layout {
+      display: flex;
+      flex: 1;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    /* ── Map column ──────────────────────────── */
+    .map-col {
+      flex: 0 0 58%;
+      display: flex;
+      flex-direction: column;
+      padding: 16px 12px 16px 24px;
+      gap: 12px;
+      border-right: 1px solid rgba(255,255,255,0.08);
+      min-height: 0;
+    }
+
+    .map-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: #111c24;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .map-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.82;
+    }
+
+    .dot-layer {
+      position: absolute;
+      inset: 0;
+    }
+
+    /* Player dots */
+    .pdot {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .pdot-circle {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--pc);
+      border: 1.5px solid rgba(255,255,255,0.75);
+      flex-shrink: 0;
+    }
+
+    .pdot.is-killer .pdot-circle {
+      width: 15px;
+      height: 15px;
+      border-width: 2px;
+      border-color: #fff;
+      box-shadow: 0 0 8px var(--pc), 0 0 2px #fff;
+    }
+
+    .pdot.is-victim .pdot-circle {
+      opacity: 0.4;
+      border-color: #ef4444;
+      border-style: dashed;
+    }
+
+    .pdot-label {
+      font-size: 9px;
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 0 0 3px #000, 0 1px 3px #000;
+      white-space: nowrap;
+      margin-top: 2px;
+      letter-spacing: 0.02em;
+      line-height: 1;
+    }
+
+    /* Kill line */
+    .kill-line {
+      position: absolute;
+      top: 0; left: 0;
+      pointer-events: none;
+      overflow: visible;
+      z-index: 1;
+    }
+
+    /* Plant / defuse marker */
+    .event-marker {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    .event-marker-plant {
+      width: 14px;
+      height: 14px;
+      border-radius: 2px;
+      background: #f59e0b;
+      box-shadow: 0 0 8px #f59e0b;
+      border: 1.5px solid #fff;
+    }
+
+    /* Legend */
+    .legend {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .legend-section {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .legend-team-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 2px 6px;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .legend-team-sge { background: rgba(107,170,220,0.2); color: #6baadc; }
+    .legend-team-cgn { background: rgba(249,115,22,0.2); color: #f97316; }
+
+    .legend-player {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #c8d6e0;
+    }
+
+    .legend-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(255,255,255,0.5);
+      flex-shrink: 0;
+    }
+
+    /* ── Events column ───────────────────────── */
+    .events-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    .round-info-bar {
+      padding: 12px 20px 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .round-label {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .round-meta {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      font-size: 0.75rem;
+    }
+
+    .round-badge {
+      padding: 2px 8px;
+      border-radius: 3px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .badge-win-sge { background: rgba(107,170,220,0.2); color: #6baadc; }
+    .badge-win-cgn { background: rgba(249,115,22,0.2); color: #f97316; }
+    .badge-plant   { background: rgba(245,158,11,0.2); color: #f59e0b; }
+    .badge-defuse  { background: rgba(34,197,94,0.2);  color: #22c55e; }
+
+    /* Event nav */
+    .event-nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .nav-btn {
+      font: inherit;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.04);
+      color: #c8d6e0;
+      cursor: pointer;
+      border-radius: 3px;
+      transition: background 0.1s;
+    }
+
+    .nav-btn:hover { background: rgba(255,255,255,0.1); }
+    .nav-btn:disabled { opacity: 0.3; cursor: default; }
+
+    .nav-label {
+      font-size: 0.72rem;
+      color: #6b7e8a;
+      flex: 1;
+      text-align: center;
+    }
+
+    /* Event list */
+    .event-list {
+      flex: 1;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255,255,255,0.1) transparent;
+    }
+
+    .event-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 20px;
+      cursor: pointer;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      border-left: 3px solid transparent;
+      transition: background 0.08s;
+      font-size: 0.82rem;
+    }
+
+    .event-item:hover { background: rgba(255,255,255,0.04); }
+    .event-item.active {
+      background: rgba(107,170,220,0.1);
+      border-left-color: #6baadc;
+    }
+    .event-item.active.ev-plant  { border-left-color: #f59e0b; background: rgba(245,158,11,0.08); }
+    .event-item.active.ev-defuse { border-left-color: #22c55e; background: rgba(34,197,94,0.08); }
+
+    .ev-time {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #6b7e8a;
+      min-width: 32px;
+      flex-shrink: 0;
+      letter-spacing: 0.02em;
+    }
+
+    .ev-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .ev-player {
+      font-weight: 700;
+    }
+
+    .ev-weapon {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      padding: 1px 5px;
+      border-radius: 2px;
+      background: rgba(255,255,255,0.07);
+      color: #8a9ba8;
+      flex-shrink: 0;
+    }
+
+    .ev-arrow {
+      color: #3a4e5c;
+      flex-shrink: 0;
+      font-size: 0.8rem;
+    }
+
+    .ev-icon {
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .ev-label { color: #c8d6e0; }
+
+    /* No-positions note */
+    .no-positions {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      color: #4a5e6a;
+    }
+
+    @media (max-width: 800px) {
+      .main-layout { flex-direction: column; }
+      .map-col { flex: none; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+      .events-col { flex: none; height: 340px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="page-header">
+  <div class="header-left">
+    <p class="eyebrow">2D Replay · Lotus · VCL EMEA 2026</p>
+    <h1 class="match-title">Eintracht Frankfurt vs CGN Esports</h1>
+  </div>
+  <div class="score-block">
+    <div class="score-team">
+      <span class="score-tag">SGE</span>
+      <span class="score-num score-sge" id="score-sge">0</span>
+    </div>
+    <span class="score-sep">–</span>
+    <div class="score-team">
+      <span class="score-tag">CGN</span>
+      <span class="score-num score-cgn" id="score-cgn">0</span>
+    </div>
+    <div class="score-context" id="score-context"></div>
+  </div>
+</div>
+
+<!-- Round selector -->
+<div class="round-bar" id="round-bar"></div>
+
+<!-- Main content -->
+<div class="main-layout">
+
+  <!-- Left: Map -->
+  <div class="map-col">
+    <div class="map-wrap" id="map-wrap">
+      <img class="map-img" src="./maps/Lotus.png" alt="Lotus" />
+      <div class="dot-layer" id="dot-layer"></div>
+    </div>
+    <div class="legend" id="legend"></div>
+  </div>
+
+  <!-- Right: Events -->
+  <div class="events-col">
+    <div class="round-info-bar" id="round-info-bar">
+      <span class="round-label" id="round-label">Round 1</span>
+      <div class="round-meta" id="round-meta"></div>
+    </div>
+    <div class="event-nav">
+      <button class="nav-btn" id="prev-btn">← Prev</button>
+      <span class="nav-label" id="nav-label">0 / 0</span>
+      <button class="nav-btn" id="next-btn">Next →</button>
+    </div>
+    <div class="event-list" id="event-list"></div>
+  </div>
+
+</div>
+
+<script src="./lotus-replay-data.js"></script>
+<script>
+const d = lotusReplayData;
+
+// Build puuid→player map
+const puuidToPlayer = {};
+d.players.forEach(p => { puuidToPlayer[p.puuid] = p; });
+
+const SGE_LABEL = d.teams.Blue.name; // "SGE"
+const CGN_LABEL = d.teams.Red.name;  // "CGN"
+
+// State
+let activeRound = 0;  // index into d.rounds
+let activeEvent = 0;  // index into d.rounds[activeRound].events
+
+// ── Score computation ─────────────────────────────────────────────────────────
+function scoreAtRound(upToIdx) {
+  let sge = 0, cgn = 0;
+  for (let i = 0; i <= upToIdx && i < d.rounds.length; i++) {
+    if (d.rounds[i].winnerTeam === "SGE") sge++;
+    else cgn++;
+  }
+  return { sge, cgn };
+}
+
+// ── Round bar ─────────────────────────────────────────────────────────────────
+function buildRoundBar() {
+  const bar = document.getElementById("round-bar");
+  bar.innerHTML = d.rounds.map((r, i) => {
+    const winColor = r.winnerTeam === "SGE" ? "#6baadc" : "#f97316";
+    return `<button class="round-btn" data-idx="${i}" style="--winner-color:${winColor}" aria-label="Round ${r.roundNum}">${r.roundNum}</button>`;
+  }).join("");
+  bar.querySelectorAll(".round-btn").forEach(btn => {
+    btn.addEventListener("click", () => selectRound(+btn.dataset.idx));
+  });
+}
+
+function updateRoundBar() {
+  document.querySelectorAll(".round-btn").forEach(btn => {
+    btn.classList.toggle("active", +btn.dataset.idx === activeRound);
+  });
+  // Scroll active button into view
+  const activeBtn = document.querySelector(`.round-btn[data-idx="${activeRound}"]`);
+  activeBtn?.scrollIntoView({ block: "nearest", inline: "center" });
+}
+
+// ── Score display ─────────────────────────────────────────────────────────────
+function updateScore() {
+  const { sge, cgn } = scoreAtRound(activeRound);
+  document.getElementById("score-sge").textContent = sge;
+  document.getElementById("score-cgn").textContent = cgn;
+  const isFinal = activeRound === d.rounds.length - 1;
+  document.getElementById("score-context").textContent = isFinal
+    ? `Final score`
+    : `After round ${d.rounds[activeRound].roundNum}`;
+}
+
+// ── Round info bar ────────────────────────────────────────────────────────────
+function updateRoundInfo() {
+  const r = d.rounds[activeRound];
+  document.getElementById("round-label").textContent = `Round ${r.roundNum}`;
+  const meta = document.getElementById("round-meta");
+  const winClass = r.winnerTeam === "SGE" ? "badge-win-sge" : "badge-win-cgn";
+  let badges = `<span class="round-badge ${winClass}">${r.winnerTeam} win</span>`;
+  if (r.planted)  badges += `<span class="round-badge badge-plant">Plant${r.site ? " · " + r.site : ""}</span>`;
+  if (r.defused)  badges += `<span class="round-badge badge-defuse">Defuse</span>`;
+  meta.innerHTML = badges;
+}
+
+// ── Event list ────────────────────────────────────────────────────────────────
+function buildEventList() {
+  const r = d.rounds[activeRound];
+  const list = document.getElementById("event-list");
+
+  list.innerHTML = r.events.map((ev, i) => {
+    let inner = `<span class="ev-time">${ev.time}</span>`;
+    if (ev.type === "kill") {
+      const killer = puuidToPlayer[ev.killer];
+      const victim = puuidToPlayer[ev.victim];
+      const kColor = killer?.color ?? "#888";
+      const vColor = victim?.color ?? "#888";
+      inner += `<span class="ev-dot" style="background:${kColor}"></span>
+        <span class="ev-player" style="color:${kColor}">${killer?.short ?? "?"}</span>
+        <span class="ev-weapon">${ev.weapon}</span>
+        <span class="ev-arrow">→</span>
+        <span class="ev-dot" style="background:${vColor}; opacity:0.5"></span>
+        <span class="ev-player" style="color:${vColor}; opacity:0.7">${victim?.short ?? "?"}</span>`;
+    } else if (ev.type === "plant") {
+      inner += `<span class="ev-icon">🔴</span><span class="ev-label">Plant · ${ev.site}</span>`;
+    } else if (ev.type === "defuse") {
+      inner += `<span class="ev-icon">🟢</span><span class="ev-label">Defuse</span>`;
+    }
+
+    const evClass = ev.type === "plant" ? "ev-plant" : ev.type === "defuse" ? "ev-defuse" : "";
+    return `<div class="event-item ${evClass}" data-idx="${i}" role="button" tabindex="0">${inner}</div>`;
+  }).join("");
+
+  list.querySelectorAll(".event-item").forEach(item => {
+    item.addEventListener("click", () => selectEvent(+item.dataset.idx));
+    item.addEventListener("keydown", e => { if (e.key === "Enter") selectEvent(+item.dataset.idx); });
+  });
+}
+
+function updateEventHighlight() {
+  const list = document.getElementById("event-list");
+  list.querySelectorAll(".event-item").forEach(item => {
+    item.classList.toggle("active", +item.dataset.idx === activeEvent);
+  });
+  const activeItem = list.querySelector(`.event-item[data-idx="${activeEvent}"]`);
+  activeItem?.scrollIntoView({ block: "nearest" });
+}
+
+// ── Nav buttons ───────────────────────────────────────────────────────────────
+function updateNav() {
+  const r = d.rounds[activeRound];
+  document.getElementById("prev-btn").disabled = activeEvent === 0;
+  document.getElementById("next-btn").disabled = activeEvent === r.events.length - 1;
+  document.getElementById("nav-label").textContent = `Event ${activeEvent + 1} / ${r.events.length}`;
+}
+
+document.getElementById("prev-btn").addEventListener("click", () => {
+  if (activeEvent > 0) { activeEvent--; onEventChange(); }
+});
+document.getElementById("next-btn").addEventListener("click", () => {
+  const r = d.rounds[activeRound];
+  if (activeEvent < r.events.length - 1) { activeEvent++; onEventChange(); }
+});
+
+// Keyboard navigation
+document.addEventListener("keydown", e => {
+  if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+    if (activeEvent > 0) { activeEvent--; onEventChange(); }
+  } else if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+    const r = d.rounds[activeRound];
+    if (activeEvent < r.events.length - 1) { activeEvent++; onEventChange(); }
+  }
+});
+
+// ── Map rendering ─────────────────────────────────────────────────────────────
+function renderMap() {
+  const layer = document.getElementById("dot-layer");
+  const r = d.rounds[activeRound];
+  const ev = r.events[activeEvent];
+  const positions = ev?.positions ?? [];
+
+  if (!positions.length) {
+    layer.innerHTML = `<div class="no-positions">No position data for this event</div>`;
+    return;
+  }
+
+  // SVG kill line (killer → victim on kill events)
+  let killLineSvg = "";
+  if (ev.type === "kill") {
+    const killerPos = positions.find(p => p.puuid === ev.killer);
+    const victimPos = positions.find(p => p.puuid === ev.victim);
+    if (killerPos && victimPos) {
+      killLineSvg = `<svg class="kill-line" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <line x1="${killerPos.x}" y1="${killerPos.y}" x2="${victimPos.x}" y2="${victimPos.y}"
+          stroke="rgba(255,255,255,0.2)" stroke-width="0.5" stroke-dasharray="1,1.5"/>
+      </svg>`;
+    }
+  }
+
+  // Plant marker
+  let plantMarker = "";
+  if (ev.type === "plant" && positions.length) {
+    // Show a square in the center-ish of clustered plant positions
+    const cx = positions.reduce((s, p) => s + p.x, 0) / positions.length;
+    const cy = positions.reduce((s, p) => s + p.y, 0) / positions.length;
+    plantMarker = `<div class="event-marker" style="left:${cx}%;top:${cy}%">
+      <div class="event-marker-plant"></div>
+    </div>`;
+  }
+
+  const dots = positions.map(pos => {
+    const player = puuidToPlayer[pos.puuid];
+    if (!player) return "";
+    const isKiller = ev.type === "kill" && pos.puuid === ev.killer;
+    const isVictim = ev.type === "kill" && pos.puuid === ev.victim;
+    return `<div class="pdot ${isKiller ? "is-killer" : ""} ${isVictim ? "is-victim" : ""}"
+      style="left:${pos.x}%;top:${pos.y}%;--pc:${player.color}">
+      <div class="pdot-circle"></div>
+      <div class="pdot-label">${player.short}</div>
+    </div>`;
+  }).join("");
+
+  layer.innerHTML = killLineSvg + plantMarker + dots;
+}
+
+// ── Legend ────────────────────────────────────────────────────────────────────
+function buildLegend() {
+  const el = document.getElementById("legend");
+  const sge = d.players.filter(p => p.team === "Blue");
+  const cgn = d.players.filter(p => p.team === "Red");
+
+  function section(players, cls, label) {
+    const items = players.map(p =>
+      `<span class="legend-player">
+        <span class="legend-dot" style="background:${p.color}"></span>${p.short}
+      </span>`
+    ).join("");
+    return `<div class="legend-section">
+      <span class="legend-team-label ${cls}">${label}</span>${items}
+    </div>`;
+  }
+
+  el.innerHTML = section(sge, "legend-team-sge", "SGE") + section(cgn, "legend-team-cgn", "CGN");
+}
+
+// ── Select helpers ────────────────────────────────────────────────────────────
+function selectRound(idx) {
+  activeRound = idx;
+  activeEvent = 0;
+  updateRoundBar();
+  updateScore();
+  updateRoundInfo();
+  buildEventList();
+  updateEventHighlight();
+  updateNav();
+  renderMap();
+}
+
+function selectEvent(idx) {
+  activeEvent = idx;
+  onEventChange();
+}
+
+function onEventChange() {
+  updateEventHighlight();
+  updateNav();
+  renderMap();
+}
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+buildLegend();
+buildRoundBar();
+selectRound(0);
+</script>
+</body>
+</html>

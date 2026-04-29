@@ -27,8 +27,9 @@ const allMapInfo = {
 };
 const allDefensiveEarly = typeof defensiveEarlyData !== "undefined" ? defensiveEarlyData : {};
 const safeFksMapControlData = typeof fksMapControlData !== "undefined" ? fksMapControlData : {};
+const safeRznMapControlData = typeof rznMapControlData !== "undefined" ? rznMapControlData : {};
 const allDefensiveRetake = {};
-const RETAKE_DATA_VERSION = "20260415a";
+const RETAKE_DATA_VERSION = "20260428a";
 const RETAKE_DATA_SOURCES = [
   { team: "eintracht", side: "ct", map: "Bind",     url: `./data/sge_bind_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
   { team: "eintracht", side: "ct", map: "Breeze",   url: `./data/sge_breeze_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
@@ -52,6 +53,16 @@ const RETAKE_DATA_SOURCES = [
   { team: "fokus",     side: "t",  map: "Lotus",    url: `./data/fks_lotus_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
   { team: "fokus",     side: "t",  map: "Pearl",    url: `./data/fks_pearl_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
   { team: "fokus",     side: "t",  map: "Split",    url: `./data/fks_split_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "rizon",     side: "ct", map: "Bind",     url: `./data/rzn_bind_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "rizon",     side: "ct", map: "Breeze",   url: `./data/rzn_breeze_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "rizon",     side: "ct", map: "Haven",    url: `./data/rzn_haven_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "rizon",     side: "ct", map: "Lotus",    url: `./data/rzn_lotus_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "rizon",     side: "ct", map: "Split",    url: `./data/rzn_split_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "rizon",     side: "t",  map: "Bind",     url: `./data/rzn_bind_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "rizon",     side: "t",  map: "Breeze",   url: `./data/rzn_breeze_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "rizon",     side: "t",  map: "Haven",    url: `./data/rzn_haven_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "rizon",     side: "t",  map: "Lotus",    url: `./data/rzn_lotus_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "rizon",     side: "t",  map: "Split",    url: `./data/rzn_split_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
 ];
   const MAP_IMAGE_VERSION = "20260412-riot";
   const MAP_IMAGE_ASPECTS = {
@@ -87,7 +98,7 @@ const calibrationOverrides = {
   "dortmund|Haven|t": []
 };
 
-const teamOrder = ["fokus", "eintracht", "attax"].filter((key) => allVetoHistoryData[key]);
+const teamOrder = ["fokus", "eintracht", "attax", "rizon"].filter((key) => allVetoHistoryData[key]);
 let activeTeam = teamOrder[0];
 let activeView = "veto";
 let startDateFilter = "";
@@ -106,11 +117,16 @@ let allSiteStats = {};
 let activeRotationTrail = null;
 let activeRotationWindow = null; // "140_120" | "120_100" | "100_end" | "afterplant" | null
 let fksNewRosterFilter = false;
+let isTestMode = false;
+let sniperFilterFK = false;
+let sniperFilterAllFK = false;
+let sniperFilterRotation = false;
 const selectedPlayerFilters = {};
 const selectedDefensivePlayerFilters = {};
 
 const viewVetoButton = document.getElementById("view-veto");
 const viewMapButton = document.getElementById("view-map");
+const viewTestButton = document.getElementById("view-test");
 const viewPostPlantButton = document.getElementById("view-postplant");
 const postplantView = document.getElementById("postplant-view");
 const mainToolbar = document.getElementById("main-toolbar");
@@ -805,7 +821,7 @@ function buildPlayerLegendMarkup(players) {
 }
 
 function buildMapControlMarkup(mapName, side, frameClassList, frameStyle, mapImageMarkup, selectedPlayers, sidebarMarkup) {
-  const mcSide = (activeTeam === "fokus" ? safeFksMapControlData : mapControlData)?.[mapName]?.[side];
+  const mcSide = (activeTeam === "fokus" ? safeFksMapControlData : activeTeam === "rizon" ? safeRznMapControlData : mapControlData)?.[mapName]?.[side];
   if (!mcSide) return "";
 
   const windows = [
@@ -871,8 +887,12 @@ function filterSnapshotsByWindow(snaps, windowKey, plantTimeMs) {
 }
 
 function computeRotationLayers(mapName, side, selectedPlayers) {
-  const mcSide = (activeTeam === "fokus" ? safeFksMapControlData : mapControlData)?.[mapName]?.[side];
-  const rounds = applyNewRosterFilter(mcSide?.rotations ?? []);
+  const mcSide = (activeTeam === "fokus" ? safeFksMapControlData : activeTeam === "rizon" ? safeRznMapControlData : mapControlData)?.[mapName]?.[side];
+  const rotSniperKeySet = new Set(mcSide?.sniperRoundKeys ?? []);
+  const allRotRounds = applyNewRosterFilter(mcSide?.rotations ?? []);
+  const rounds = (isTestMode && sniperFilterRotation)
+    ? allRotRounds.filter(rt => rt[0] && rotSniperKeySet.has(`${rt[0].matchId}|${rt[0].roundNum}`))
+    : allRotRounds;
   const hasSelection = activeRotationTrail !== null;
   let svgLines = "";
   let dotsMarkup = "";
@@ -928,7 +948,11 @@ function updateRotationCardInPlace(mapName, side, selectedPlayers) {
   else if (newLegend) card.querySelector(".defensive-map").insertAdjacentHTML("beforeend", newLegend);
 
   card.querySelectorAll(".rotation-window-btn").forEach(btn => {
-    btn.classList.toggle("active", btn.dataset.rotationWindow === activeRotationWindow);
+    if (btn.dataset.sniperPanel) {
+      btn.classList.toggle("active", sniperFilterRotation);
+    } else {
+      btn.classList.toggle("active", btn.dataset.rotationWindow === activeRotationWindow);
+    }
   });
 }
 
@@ -946,11 +970,14 @@ function buildRotationMarkup(mapName, side, frameClassList, frameStyle, mapImage
     const isActive = activeRotationWindow === w.key;
     return `<button class="rotation-window-btn${isActive ? " active" : ""}" data-rotation-window="${w.key}" type="button">${w.label}</button>`;
   }).join("");
+  const rotSniperBtnMarkup = isTestMode
+    ? `<button class="rotation-window-btn${sniperFilterRotation ? ' active' : ''}" data-sniper-panel="rotation" type="button">SNIPER</button>`
+    : '';
 
   return `
     <article class="defensive-card" id="rotation-panel-card">
       <div class="defensive-card-head">
-        <div class="rotation-window-controls">${windowButtonsMarkup}</div>
+        <div class="rotation-window-controls">${windowButtonsMarkup}${rotSniperBtnMarkup}</div>
         <p class="defensive-card-meta">Rounds: ${roundCount}</p>
       </div>
       <div class="defensive-map-wrap">
@@ -969,6 +996,7 @@ function buildRotationMarkup(mapName, side, frameClassList, frameStyle, mapImage
 function renderDefensivePanels(info) {
   if (!defensivePanels) return;
   lastDefensiveInfo = info;
+  const sniperRoundKeySet = new Set(info?.sniperRoundKeys ?? []);
   const mapName = info.map || "Bind";
   const mapImage = MAP_IMAGE_PATHS[mapName] ?? "";
   const frameStyle = getContainedFrameStyle(mapName, 1);
@@ -1019,7 +1047,10 @@ function renderDefensivePanels(info) {
 
   const timingMarkup = timingPanels
     .map(([key, label]) => {
-      const allPoints = applyNewRosterFilter(info.thresholds?.[key]?.points ?? []);
+      const basePoints = applyNewRosterFilter(info.thresholds?.[key]?.points ?? []);
+      const allPoints = (isTestMode && sniperFilterFK)
+        ? basePoints.filter(p => sniperRoundKeySet.has(`${p.matchId}|${p.roundNum}`))
+        : basePoints;
       const points = allPoints.filter((point) => selectedPlayers.has(point.player));
       const roundCount = new Set(allPoints.map((point) => `${point.matchId}|${point.roundNum}`)).size;
       const pointsMarkup = allPoints
@@ -1110,7 +1141,10 @@ function renderDefensivePanels(info) {
   `;
 
   // ── All SGE First Kills ─────────────────────────────────────────
-  const allFkAllPoints = applyNewRosterFilter(info?.all_fk?.points ?? []);
+  const allFkBasePoints = applyNewRosterFilter(info?.all_fk?.points ?? []);
+  const allFkAllPoints = (isTestMode && sniperFilterAllFK)
+    ? allFkBasePoints.filter(p => sniperRoundKeySet.has(`${p.matchId}|${p.roundNum}`))
+    : allFkBasePoints;
   const allFkRoundCount = new Set(allFkAllPoints.map(p => `${p.matchId}|${p.roundNum}`)).size;
   const allFkVisual = allFkAllPoints.map(point => {
     const killer = projectHeatmapPoint(point, mapName);
@@ -1136,7 +1170,10 @@ function renderDefensivePanels(info) {
   const allFkMarkup = `
     <article class="defensive-card">
       <div class="defensive-card-head">
-        <h3>All First Kills</h3>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <h3>All First Kills</h3>
+          ${isTestMode ? `<button class="rotation-window-btn${sniperFilterAllFK ? ' active' : ''}" data-sniper-panel="allfk" type="button">SNIPER</button>` : ''}
+        </div>
         <p class="defensive-card-meta">Rounds: ${allFkRoundCount} | Points: ${allFkAllPoints.length}</p>
       </div>
       <div class="defensive-map-wrap">
@@ -1339,7 +1376,10 @@ function renderDefensivePanels(info) {
   defensivePanels.innerHTML = `
     ${siteStatsMarkup}
     <section class="defensive-topic">
-      <h3 class="defensive-topic-title" title="${earlyTopicTooltip}">${earlyTopicTitle}</h3>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <h3 class="defensive-topic-title" title="${earlyTopicTooltip}">${earlyTopicTitle}</h3>
+        ${isTestMode ? `<button class="rotation-window-btn${sniperFilterFK ? ' active' : ''}" data-sniper-panel="fk" type="button">SNIPER</button>` : ''}
+      </div>
       <div class="early-positioning-layout">
         ${sidebarMarkup}
         <div class="defensive-topic-grid">
@@ -1674,8 +1714,17 @@ const FKS_PLAYER_COLORS = {
 };
 const FKS_PLAYER_ORDER = ["MOLSI", "shinnok", "Serial", "pyrolll", "pa1ze", "cullum"];
 
+const RZN_PLAYER_COLORS = {
+  "Puggy":       "#e53935",
+  "BarcK":       "#f1d500",
+  "deyten":      "#00e676",
+  "Opex":        "#ff4dac",
+  "Bumbibjorn1": "#1f4fd6",
+};
+const RZN_PLAYER_ORDER = ["Puggy", "BarcK", "deyten", "Opex", "Bumbibjorn1"];
+
 function stripTeamPrefix(name) {
-  return name.replace(/^(?:SGE|FKS)\s+/, "");
+  return name.replace(/^(?:SGE|FKS|RZN)\s+/, "");
 }
 
 function sortByPlayerOrder(players) {
@@ -1691,7 +1740,7 @@ function sortByPlayerOrder(players) {
 
 function getPlayerColor(name) {
   const short = stripTeamPrefix(name);
-  return SGE_PLAYER_COLORS[short] ?? FKS_PLAYER_COLORS[short] ?? "#888888";
+  return SGE_PLAYER_COLORS[short] ?? FKS_PLAYER_COLORS[short] ?? RZN_PLAYER_COLORS[short] ?? "#888888";
 }
 
 function ppGetColor(player) {
@@ -1893,6 +1942,12 @@ viewMapButton.addEventListener("click", () => {
   render();
 });
 
+viewTestButton?.addEventListener("click", () => {
+  isTestMode = !isTestMode;
+  viewTestButton.classList.toggle("active", isTestMode);
+  render();
+});
+
 
 document.addEventListener("mousemove", (e) => {
   const tip = document.getElementById("pp-tooltip");
@@ -2010,6 +2065,20 @@ if (defensivePanels) {
       updateEarlyDotsInPlace(activeInfo, getSelectedDefensiveSet(activeInfo, collectDefensivePlayers(activeInfo)));
       return;
     }
+    const sniperPanelBtn = event.target.closest("[data-sniper-panel]");
+    if (sniperPanelBtn) {
+      const panel = sniperPanelBtn.dataset.sniperPanel;
+      if (panel === "fk") sniperFilterFK = !sniperFilterFK;
+      else if (panel === "allfk") sniperFilterAllFK = !sniperFilterAllFK;
+      else if (panel === "rotation") {
+        sniperFilterRotation = !sniperFilterRotation;
+        updateRotationCardInPlace(activeInfo.map, activeSideView, getSelectedDefensiveSet(activeInfo, collectDefensivePlayers(activeInfo)));
+        return;
+      }
+      renderDefensivePanels(activeInfo);
+      return;
+    }
+
     const rotationWindowBtn = event.target.closest(".rotation-window-btn[data-rotation-window]");
     if (rotationWindowBtn) {
       const windowKey = rotationWindowBtn.dataset.rotationWindow;

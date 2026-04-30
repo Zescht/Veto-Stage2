@@ -3,6 +3,12 @@
   "side": "ct",
   "selectedMaps": [
     {
+      "date": "2026-04-25",
+      "opponent": "CGN",
+      "matchId": "6cb09b8a-77ef-4431-b36a-19ba6a861425",
+      "score": "5-13"
+    },
+    {
       "date": "2026-04-14",
       "opponent": "DXG",
       "matchId": "b2e410f9-1787-4e62-afea-4d43cc8e54e0",
@@ -11,9 +17,81 @@
   ],
   "sites": {
     "A": {
-      "roundCount": 4,
-      "pointCount": 14,
+      "roundCount": 6,
+      "pointCount": 20,
       "points": [
+        {
+          "site": "A",
+          "player": "Serial",
+          "normX": 28.6292,
+          "normY": 47.3074,
+          "roundNum": 12,
+          "plantRoundTimeMs": 27217,
+          "date": "2026-04-25",
+          "opponent": "CGN",
+          "matchId": "6cb09b8a-77ef-4431-b36a-19ba6a861425",
+          "score": "5-13"
+        },
+        {
+          "site": "A",
+          "player": "pa1ze",
+          "normX": 32.4044,
+          "normY": 22.597,
+          "roundNum": 12,
+          "plantRoundTimeMs": 27217,
+          "date": "2026-04-25",
+          "opponent": "CGN",
+          "matchId": "6cb09b8a-77ef-4431-b36a-19ba6a861425",
+          "score": "5-13"
+        },
+        {
+          "site": "A",
+          "player": "MOLSI",
+          "normX": 68.0972,
+          "normY": 56.1604,
+          "roundNum": 12,
+          "plantRoundTimeMs": 27217,
+          "date": "2026-04-25",
+          "opponent": "CGN",
+          "matchId": "6cb09b8a-77ef-4431-b36a-19ba6a861425",
+          "score": "5-13"
+        },
+        {
+          "site": "A",
+          "player": "shinnok",
+          "normX": 23.9492,
+          "normY": 45.3652,
+          "roundNum": 12,
+          "plantRoundTimeMs": 27217,
+          "date": "2026-04-25",
+          "opponent": "CGN",
+          "matchId": "6cb09b8a-77ef-4431-b36a-19ba6a861425",
+          "score": "5-13"
+        },
+        {
+          "site": "A",
+          "player": "Serial",
+          "normX": 50.828,
+          "normY": 43.618,
+          "roundNum": 13,
+          "plantRoundTimeMs": 57594,
+          "date": "2026-04-25",
+          "opponent": "CGN",
+          "matchId": "6cb09b8a-77ef-4431-b36a-19ba6a861425",
+          "score": "5-13"
+        },
+        {
+          "site": "A",
+          "player": "MOLSI",
+          "normX": 58.004,
+          "normY": 59.335,
+          "roundNum": 13,
+          "plantRoundTimeMs": 57594,
+          "date": "2026-04-25",
+          "opponent": "CGN",
+          "matchId": "6cb09b8a-77ef-4431-b36a-19ba6a861425",
+          "score": "5-13"
+        },
         {
           "site": "A",
           "player": "Serial",
@@ -185,9 +263,45 @@
       ]
     },
     "B": {
-      "roundCount": 1,
-      "pointCount": 1,
+      "roundCount": 2,
+      "pointCount": 4,
       "points": [
+        {
+          "site": "B",
+          "player": "pa1ze",
+          "normX": 10.4708,
+          "normY": 63.4924,
+          "roundNum": 14,
+          "plantRoundTimeMs": 41344,
+          "date": "2026-04-25",
+          "opponent": "CGN",
+          "matchId": "6cb09b8a-77ef-4431-b36a-19ba6a861425",
+          "score": "5-13"
+        },
+        {
+          "site": "B",
+          "player": "YaBoiLewis",
+          "normX": 23.723,
+          "normY": 57.8218,
+          "roundNum": 14,
+          "plantRoundTimeMs": 41344,
+          "date": "2026-04-25",
+          "opponent": "CGN",
+          "matchId": "6cb09b8a-77ef-4431-b36a-19ba6a861425",
+          "score": "5-13"
+        },
+        {
+          "site": "B",
+          "player": "shinnok",
+          "normX": 20.0258,
+          "normY": 74.0146,
+          "roundNum": 14,
+          "plantRoundTimeMs": 41344,
+          "date": "2026-04-25",
+          "opponent": "CGN",
+          "matchId": "6cb09b8a-77ef-4431-b36a-19ba6a861425",
+          "score": "5-13"
+        },
         {
           "site": "B",
           "player": "shinnok",

@@ -3,6 +3,12 @@
   "side": "ct",
   "selectedMaps": [
     {
+      "date": "2026-04-26",
+      "opponent": "ECO",
+      "matchId": "403b0617-7109-4477-846c-a7c0e5c89d76",
+      "score": "13-0"
+    },
+    {
       "date": "2026-04-18",
       "opponent": "RZN",
       "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
@@ -13,12 +19,6 @@
       "opponent": "SGE",
       "matchId": "7ee45a1e-1257-4b2b-97b6-2face254d0f1",
       "score": "3-13"
-    },
-    {
-      "date": "2026-04-07",
-      "opponent": "AKA",
-      "matchId": "6bb0be28-309f-4f6e-a2a3-86a5a8d646bc",
-      "score": "13-5"
     }
   ],
   "sites": {
@@ -26,6 +26,30 @@
       "roundCount": 5,
       "pointCount": 17,
       "points": [
+        {
+          "site": "A",
+          "player": "Serial",
+          "normX": 69.2893,
+          "normY": 49.468,
+          "roundNum": 12,
+          "plantRoundTimeMs": 31258,
+          "date": "2026-04-26",
+          "opponent": "ECO",
+          "matchId": "403b0617-7109-4477-846c-a7c0e5c89d76",
+          "score": "13-0"
+        },
+        {
+          "site": "A",
+          "player": "pa1ze",
+          "normX": 75.0133,
+          "normY": 47.272,
+          "roundNum": 12,
+          "plantRoundTimeMs": 31258,
+          "date": "2026-04-26",
+          "opponent": "ECO",
+          "matchId": "403b0617-7109-4477-846c-a7c0e5c89d76",
+          "score": "13-0"
+        },
         {
           "site": "A",
           "player": "Serial",
@@ -205,30 +229,6 @@
           "opponent": "SGE",
           "matchId": "7ee45a1e-1257-4b2b-97b6-2face254d0f1",
           "score": "3-13"
-        },
-        {
-          "site": "A",
-          "player": "Serial",
-          "normX": 62.6005,
-          "normY": 44.4784,
-          "roundNum": 16,
-          "plantRoundTimeMs": 37304,
-          "date": "2026-04-07",
-          "opponent": "AKA",
-          "matchId": "6bb0be28-309f-4f6e-a2a3-86a5a8d646bc",
-          "score": "13-5"
-        },
-        {
-          "site": "A",
-          "player": "pyrolll",
-          "normX": 82.2997,
-          "normY": 28.8688,
-          "roundNum": 16,
-          "plantRoundTimeMs": 37304,
-          "date": "2026-04-07",
-          "opponent": "AKA",
-          "matchId": "6bb0be28-309f-4f6e-a2a3-86a5a8d646bc",
-          "score": "13-5"
         }
       ]
     },

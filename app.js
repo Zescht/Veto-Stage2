@@ -834,9 +834,10 @@ function buildMapControlMarkup(mapName, side, frameClassList, frameStyle, mapIma
     const allPoints = applyNewRosterFilter(mcSide.mapControl?.[key] ?? []);
     const points = allPoints.filter(pt => selectedPlayers.has(pt.player));
     const roundCount = new Set(allPoints.map(pt => `${pt.matchId}|${pt.roundNum}`)).size;
-    const dotsMarkup = points.map(pt => {
+    const dotsMarkup = allPoints.map(pt => {
       const [rx, ry] = MAP_ROTATE_COORDS_CW.has(mapName) ? rotCW90(pt.normX, pt.normY) : [pt.normX, pt.normY];
-      return `<span class="heat-point" style="left:${rx}%;top:${ry}%;background:${getPlayerColor(pt.player)};" title="${pt.player} | R${pt.roundNum + 1} | ${pt.date} vs ${pt.opponent} | ${fmtRoundTime(pt.timeMs)}"></span>`;
+      const hidden = selectedPlayers.has(pt.player) ? "" : "display:none;";
+      return `<span class="heat-point" data-player="${encodeURIComponent(pt.player)}" style="${hidden}left:${rx}%;top:${ry}%;background:${getPlayerColor(pt.player)};" title="${pt.player} | R${pt.roundNum + 1} | ${pt.date} vs ${pt.opponent} | ${fmtRoundTime(pt.timeMs)}"></span>`;
     }).join("");
     return `
       <article class="defensive-card">
@@ -957,7 +958,7 @@ function updateRotationCardInPlace(mapName, side, selectedPlayers) {
 }
 
 function buildRotationMarkup(mapName, side, frameClassList, frameStyle, mapImageMarkup, selectedPlayers, sidebarMarkup) {
-  const mcSide = (activeTeam === "fokus" ? safeFksMapControlData : mapControlData)?.[mapName]?.[side];
+  const mcSide = (activeTeam === "fokus" ? safeFksMapControlData : activeTeam === "rizon" ? safeRznMapControlData : mapControlData)?.[mapName]?.[side];
   if (!mcSide) return "";
 
   const rounds = mcSide.rotations ?? [];

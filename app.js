@@ -109,11 +109,18 @@ let activeDefensiveMap = "Bind";
 let ppActiveSite = "All";
 let rtActiveSite = "All";
 let postPlantData = null;
-let allPostPlantData = {};
 let retakeActiveSites = new Set(["A", "B", "C"]);
 let ppInlineActiveSites = new Set(["A", "B", "C"]);
 let lastDefensiveInfo = null;
-let allSiteStats = {};
+let allSiteStats = {}; // { teamKey: { mapName: data } }
+const TEAM_FILE_PREFIX = {
+  eintracht: "sge",
+  fokus: "fks",
+  attax: "atn",
+  rizon: "rzn",
+  eco: "eco",
+};
+const TEAMS_WITH_SITE_STATS = new Set(["eintracht"]);
 let activeRotationTrail = null;
 let activeRotationWindow = null; // "140_120" | "120_100" | "100_end" | "afterplant" | null
 let fksNewRosterFilter = false;
@@ -190,6 +197,17 @@ let calibrationMode = false;
 let dragState = null;
 
 const DEFENSIVE_MAP_ORDER = ["Bind", "Breeze", "Lotus", "Split", "Pearl", "Haven", "Fracture", "Corrode", "Abyss", "Sunset", "Icebox"];
+
+const dataLoadErrors = [];
+function reportDataError(msg) {
+  dataLoadErrors.push(msg);
+  const bar = document.getElementById("data-error-bar");
+  const msgEl = document.getElementById("data-error-msg");
+  if (!bar || !msgEl) return;
+  bar.classList.remove("hidden");
+  const count = dataLoadErrors.length;
+  msgEl.textContent = `${count > 1 ? `${count} data load failures` : "Data load failure"}: ${dataLoadErrors.join(" · ")}`;
+}
 const FKS_NEW_ROSTER_MAPS = new Set(["Bind", "Lotus", "Fracture"]);
 const FKS_NEW_ROSTER_OPPONENTS = new Set(["RZN", "DXG"]);
 
@@ -821,7 +839,7 @@ function buildPlayerLegendMarkup(players) {
 }
 
 function buildMapControlMarkup(mapName, side, frameClassList, frameStyle, mapImageMarkup, selectedPlayers, sidebarMarkup) {
-  const mcSide = (activeTeam === "fokus" ? safeFksMapControlData : activeTeam === "rizon" ? safeRznMapControlData : mapControlData)?.[mapName]?.[side];
+  const mcSide = (activeTeam === "fokus" ? safeFksMapControlData : activeTeam === "rizon" ? safeRznMapControlData : activeTeam === "eintracht" ? mapControlData : null)?.[mapName]?.[side];
   if (!mcSide) return "";
 
   const windows = [
@@ -888,7 +906,7 @@ function filterSnapshotsByWindow(snaps, windowKey, plantTimeMs) {
 }
 
 function computeRotationLayers(mapName, side, selectedPlayers) {
-  const mcSide = (activeTeam === "fokus" ? safeFksMapControlData : activeTeam === "rizon" ? safeRznMapControlData : mapControlData)?.[mapName]?.[side];
+  const mcSide = (activeTeam === "fokus" ? safeFksMapControlData : activeTeam === "rizon" ? safeRznMapControlData : activeTeam === "eintracht" ? mapControlData : null)?.[mapName]?.[side];
   const rotSniperKeySet = new Set(mcSide?.sniperRoundKeys ?? []);
   const allRotRounds = applyNewRosterFilter(mcSide?.rotations ?? []);
   const rounds = (isTestMode && sniperFilterRotation)
@@ -958,7 +976,7 @@ function updateRotationCardInPlace(mapName, side, selectedPlayers) {
 }
 
 function buildRotationMarkup(mapName, side, frameClassList, frameStyle, mapImageMarkup, selectedPlayers, sidebarMarkup) {
-  const mcSide = (activeTeam === "fokus" ? safeFksMapControlData : activeTeam === "rizon" ? safeRznMapControlData : mapControlData)?.[mapName]?.[side];
+  const mcSide = (activeTeam === "fokus" ? safeFksMapControlData : activeTeam === "rizon" ? safeRznMapControlData : activeTeam === "eintracht" ? mapControlData : null)?.[mapName]?.[side];
   if (!mcSide) return "";
 
   const rounds = mcSide.rotations ?? [];
@@ -1249,7 +1267,7 @@ function renderDefensivePanels(info) {
 
   // Post-Plant Positioning: T-side only (attackers plant the spike)
   let ppInlineMarkup = "";
-  const ppInlineData = allDefensiveRetake?.[activeTeam]?.["t"]?.[mapName] ?? allPostPlantData[mapName];
+  const ppInlineData = allDefensiveRetake?.[activeTeam]?.["t"]?.[mapName];
   if (ppInlineData && activeSideView === "t") {
     const ppSiteColor = { A: "#df3a3a", B: "#2f68e8", C: "#0d8d52" };
     const mapImage = MAP_IMAGE_PATHS[mapName] ?? "";
@@ -1319,7 +1337,7 @@ function renderDefensivePanels(info) {
 
   // ── Site stats table ─────────────────────────────────────────────
   let siteStatsMarkup = "";
-  const mapStats = allSiteStats[mapName];
+  const mapStats = allSiteStats[activeTeam]?.[mapName];
   if (mapStats) {
     const fmt = (v, suffix = "") => v != null ? `${v}${suffix}` : "—";
     const fmtTime = (v) => v != null ? `${v}s` : "—";
@@ -1880,29 +1898,26 @@ function renderPostPlant() {
   renderPpSiteTabs("rt-tabs", "retake", rtActiveSite, (s) => { rtActiveSite = s; }, false);
 }
 
-async function preloadSiteStats() {
+async function preloadSiteStats(teamKey) {
+  const prefix = TEAM_FILE_PREFIX[teamKey];
+  if (!prefix) return;
   const maps = ["Bind", "Breeze", "Lotus", "Pearl", "Split"];
+  allSiteStats[teamKey] = allSiteStats[teamKey] ?? {};
   await Promise.all(maps.map(async (map) => {
     try {
-      const resp = await fetch(`./data/sge_${map.toLowerCase()}_site_stats.json`);
-      if (!resp.ok) return;
-      allSiteStats[map] = await resp.json();
-    } catch (_) { /* non-critical */ }
+      const resp = await fetch(`./data/${prefix}_${map.toLowerCase()}_site_stats.json`);
+      if (!resp.ok) {
+        if (TEAMS_WITH_SITE_STATS.has(teamKey)) reportDataError(`${teamKey} site-stats/${map} (HTTP ${resp.status})`);
+        return;
+      }
+      allSiteStats[teamKey][map] = await resp.json();
+    } catch (_) {
+      reportDataError(`${teamKey} site-stats/${map} (network error)`);
+    }
   }));
-  if (activeView === "map") renderMapInfo();
+  if (activeView === "map" && activeTeam === teamKey) renderMapInfo();
 }
 
-async function preloadPostPlantDataAllMaps() {
-  const maps = ["Bind", "Lotus", "Pearl", "Split"];
-  await Promise.all(maps.map(async (map) => {
-    try {
-      const resp = await fetch(`./data/sge_${map.toLowerCase()}_t_postplant_positions_last3.json`);
-      if (!resp.ok) return;
-      allPostPlantData[map] = await resp.json();
-    } catch (_) { /* non-critical */ }
-  }));
-  if (activeView === "map") renderMapInfo();
-}
 
 async function preloadPostPlantData() {
   try {
@@ -1919,13 +1934,16 @@ async function preloadRetakeData() {
   for (const source of RETAKE_DATA_SOURCES) {
     try {
       const resp = await fetch(source.url, { cache: "no-store" });
-      if (!resp.ok) continue;
+      if (!resp.ok) {
+        reportDataError(`${source.team} retake/${source.side}/${source.map} (HTTP ${resp.status})`);
+        continue;
+      }
       const payload = await resp.json();
       allDefensiveRetake[source.team] ||= {};
       allDefensiveRetake[source.team][source.side] ||= {};
       allDefensiveRetake[source.team][source.side][source.map] = payload;
     } catch (_error) {
-      // Keep site usable even if optional retake overlays fail to load.
+      reportDataError(`${source.team} retake/${source.side}/${source.map} (network error)`);
     }
   }
   renderMapInfo();
@@ -1941,6 +1959,10 @@ viewMapButton.addEventListener("click", () => {
   activeView = "map";
   setHash();
   render();
+});
+
+document.getElementById("data-error-dismiss")?.addEventListener("click", () => {
+  document.getElementById("data-error-bar")?.classList.add("hidden");
 });
 
 viewTestButton?.addEventListener("click", () => {
@@ -2185,5 +2207,4 @@ applyHash();
 render();
 preloadRetakeData();
 preloadPostPlantData();
-preloadPostPlantDataAllMaps();
-preloadSiteStats();
+teamOrder.forEach(teamKey => preloadSiteStats(teamKey));

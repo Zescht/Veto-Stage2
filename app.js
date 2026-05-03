@@ -26,6 +26,7 @@ const allMapInfo = {
   ...(typeof extraMapInfoData !== "undefined" ? extraMapInfoData : {})
 };
 const allDefensiveEarly = typeof defensiveEarlyData !== "undefined" ? defensiveEarlyData : {};
+const safeSgeMapControlData = typeof mapControlData !== "undefined" ? mapControlData : {};
 const safeFksMapControlData = typeof fksMapControlData !== "undefined" ? fksMapControlData : {};
 const safeRznMapControlData = typeof rznMapControlData !== "undefined" ? rznMapControlData : {};
 const allDefensiveRetake = {};
@@ -839,7 +840,7 @@ function buildPlayerLegendMarkup(players) {
 }
 
 function buildMapControlMarkup(mapName, side, frameClassList, frameStyle, mapImageMarkup, selectedPlayers, sidebarMarkup) {
-  const mcSide = (activeTeam === "fokus" ? safeFksMapControlData : activeTeam === "rizon" ? safeRznMapControlData : activeTeam === "eintracht" ? mapControlData : null)?.[mapName]?.[side];
+  const mcSide = (activeTeam === "fokus" ? safeFksMapControlData : activeTeam === "rizon" ? safeRznMapControlData : activeTeam === "eintracht" ? safeSgeMapControlData : null)?.[mapName]?.[side];
   if (!mcSide) return "";
 
   const windows = [
@@ -906,7 +907,7 @@ function filterSnapshotsByWindow(snaps, windowKey, plantTimeMs) {
 }
 
 function computeRotationLayers(mapName, side, selectedPlayers) {
-  const mcSide = (activeTeam === "fokus" ? safeFksMapControlData : activeTeam === "rizon" ? safeRznMapControlData : activeTeam === "eintracht" ? mapControlData : null)?.[mapName]?.[side];
+  const mcSide = (activeTeam === "fokus" ? safeFksMapControlData : activeTeam === "rizon" ? safeRznMapControlData : activeTeam === "eintracht" ? safeSgeMapControlData : null)?.[mapName]?.[side];
   const rotSniperKeySet = new Set(mcSide?.sniperRoundKeys ?? []);
   const allRotRounds = applyNewRosterFilter(mcSide?.rotations ?? []);
   const rounds = (isTestMode && sniperFilterRotation)
@@ -976,7 +977,7 @@ function updateRotationCardInPlace(mapName, side, selectedPlayers) {
 }
 
 function buildRotationMarkup(mapName, side, frameClassList, frameStyle, mapImageMarkup, selectedPlayers, sidebarMarkup) {
-  const mcSide = (activeTeam === "fokus" ? safeFksMapControlData : activeTeam === "rizon" ? safeRznMapControlData : activeTeam === "eintracht" ? mapControlData : null)?.[mapName]?.[side];
+  const mcSide = (activeTeam === "fokus" ? safeFksMapControlData : activeTeam === "rizon" ? safeRznMapControlData : activeTeam === "eintracht" ? safeSgeMapControlData : null)?.[mapName]?.[side];
   if (!mcSide) return "";
 
   const rounds = mcSide.rotations ?? [];

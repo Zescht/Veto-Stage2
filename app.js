@@ -99,7 +99,7 @@ const calibrationOverrides = {
   "dortmund|Haven|t": []
 };
 
-const teamOrder = ["fokus", "eintracht", "attax", "rizon"].filter((key) => allVetoHistoryData[key]);
+const teamOrder = ["fokus", "eintracht", "rizon"].filter((key) => allVetoHistoryData[key]);
 let activeTeam = teamOrder[0];
 let activeView = "veto";
 let startDateFilter = "";

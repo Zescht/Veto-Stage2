@@ -1,0 +1,72 @@
+{
+  "t_side": {
+    "total_rounds": 22,
+    "sites": {
+      "A": {
+        "plant_count": 5,
+        "pct_plant": 45.5,
+        "pct_win": 60.0,
+        "avg_plant_time": 40.4,
+        "min_plant_time": 21.8,
+        "max_plant_time": 93.1,
+        "fk_to_plant_avg": 15.6,
+        "fk_to_plant_n": 4
+      },
+      "B": {
+        "plant_count": 6,
+        "pct_plant": 54.5,
+        "pct_win": 83.3,
+        "avg_plant_time": 44.7,
+        "min_plant_time": 24.3,
+        "max_plant_time": 79.3,
+        "fk_to_plant_avg": 16.6,
+        "fk_to_plant_n": 6
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 35,
+    "sites": {
+      "A": {
+        "plant_count": 8,
+        "defuse_count": 3,
+        "pct_defuse_win": 37.5,
+        "pct_defuse_share": 75.0,
+        "avg_defuse_time": 26.3,
+        "fk_after_plant_avg": 15.0,
+        "fk_after_plant_n": 5
+      },
+      "B": {
+        "plant_count": 11,
+        "defuse_count": 1,
+        "pct_defuse_win": 9.1,
+        "pct_defuse_share": 25.0,
+        "avg_defuse_time": 26.2,
+        "fk_after_plant_avg": 11.3,
+        "fk_after_plant_n": 3
+      }
+    }
+  },
+  "team": "Rasenmaeher",
+  "map": "Split",
+  "matches": [
+    {
+      "date": "2026-04-14",
+      "opponent": "SGE",
+      "matchId": "3cc1127c-3135-4a5c-a503-f09d664c602d",
+      "score": "10-13"
+    },
+    {
+      "date": "2026-04-07",
+      "opponent": "CGN",
+      "matchId": "56aec96e-d9c4-4e20-99b4-c64fd3cf8215",
+      "score": "6-13"
+    },
+    {
+      "date": "2026-04-04",
+      "opponent": "ECO",
+      "matchId": "895733bb-a2ab-4a25-95e1-85d469a2e7a8",
+      "score": "13-2"
+    }
+  ]
+}

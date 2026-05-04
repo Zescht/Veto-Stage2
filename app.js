@@ -37,11 +37,13 @@ const RETAKE_DATA_SOURCES = [
   { team: "eintracht", side: "ct", map: "Lotus",    url: `./data/sge_lotus_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
   { team: "eintracht", side: "ct", map: "Pearl",    url: `./data/sge_pearl_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
   { team: "eintracht", side: "ct", map: "Split",    url: `./data/sge_split_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "eintracht", side: "ct", map: "Fracture", url: `./data/sge_fracture_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
   { team: "eintracht", side: "t",  map: "Bind",     url: `./data/sge_bind_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
   { team: "eintracht", side: "t",  map: "Breeze",   url: `./data/sge_breeze_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
   { team: "eintracht", side: "t",  map: "Lotus",    url: `./data/sge_lotus_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
   { team: "eintracht", side: "t",  map: "Pearl",    url: `./data/sge_pearl_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
   { team: "eintracht", side: "t",  map: "Split",    url: `./data/sge_split_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
+  { team: "eintracht", side: "t",  map: "Fracture", url: `./data/sge_fracture_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
   { team: "fokus",     side: "ct", map: "Bind",     url: `./data/fks_bind_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
   { team: "fokus",     side: "ct", map: "Breeze",   url: `./data/fks_breeze_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
   { team: "fokus",     side: "ct", map: "Fracture", url: `./data/fks_fracture_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
@@ -121,7 +123,12 @@ const TEAM_FILE_PREFIX = {
   rizon: "rzn",
   eco: "eco",
 };
-const TEAMS_WITH_SITE_STATS = new Set(["eintracht"]);
+const TEAMS_WITH_SITE_STATS = new Set(["eintracht", "fokus", "rizon"]);
+const TEAM_STAT_MAPS = {
+  eintracht: ["Bind", "Breeze", "Fracture", "Lotus", "Pearl", "Split"],
+  fokus:     ["Bind", "Breeze", "Fracture", "Lotus", "Pearl", "Split"],
+  rizon:     ["Bind", "Breeze", "Haven", "Lotus", "Split"],
+};
 let activeRotationTrail = null;
 let activeRotationWindow = null; // "140_120" | "120_100" | "100_end" | "afterplant" | null
 let fksNewRosterFilter = false;
@@ -1902,7 +1909,7 @@ function renderPostPlant() {
 async function preloadSiteStats(teamKey) {
   const prefix = TEAM_FILE_PREFIX[teamKey];
   if (!prefix) return;
-  const maps = ["Bind", "Breeze", "Lotus", "Pearl", "Split"];
+  const maps = TEAM_STAT_MAPS[teamKey] ?? ["Bind", "Breeze", "Fracture", "Lotus", "Pearl", "Split"];
   allSiteStats[teamKey] = allSiteStats[teamKey] ?? {};
   await Promise.all(maps.map(async (map) => {
     try {

@@ -1,0 +1,91 @@
+{
+  "t_side": {
+    "total_rounds": 36,
+    "sites": {
+      "A": {
+        "plant_count": 13,
+        "pct_plant": 50.0,
+        "pct_win": 76.9,
+        "avg_plant_time": 59.0,
+        "min_plant_time": 30.8,
+        "max_plant_time": 92.8,
+        "fk_to_plant_avg": 38.0,
+        "fk_to_plant_n": 12
+      },
+      "B": {
+        "plant_count": 4,
+        "pct_plant": 15.4,
+        "pct_win": 100.0,
+        "avg_plant_time": 80.2,
+        "min_plant_time": 65.1,
+        "max_plant_time": 91.6,
+        "fk_to_plant_avg": 44.3,
+        "fk_to_plant_n": 4
+      },
+      "C": {
+        "plant_count": 9,
+        "pct_plant": 34.6,
+        "pct_win": 66.7,
+        "avg_plant_time": 60.4,
+        "min_plant_time": 34.7,
+        "max_plant_time": 86.0,
+        "fk_to_plant_avg": 23.1,
+        "fk_to_plant_n": 9
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 17,
+    "sites": {
+      "A": {
+        "plant_count": 5,
+        "defuse_count": 4,
+        "pct_defuse_win": 80.0,
+        "pct_defuse_share": 66.7,
+        "avg_defuse_time": 25.9,
+        "fk_after_plant_avg": 4.5,
+        "fk_after_plant_n": 4
+      },
+      "B": {
+        "plant_count": 3,
+        "defuse_count": 1,
+        "pct_defuse_win": 33.3,
+        "pct_defuse_share": 16.7,
+        "avg_defuse_time": 22.9,
+        "fk_after_plant_avg": 5.0,
+        "fk_after_plant_n": 3
+      },
+      "C": {
+        "plant_count": 5,
+        "defuse_count": 1,
+        "pct_defuse_win": 20.0,
+        "pct_defuse_share": 16.7,
+        "avg_defuse_time": 25.0,
+        "fk_after_plant_avg": 15.7,
+        "fk_after_plant_n": 3
+      }
+    }
+  },
+  "team": "FOKUS",
+  "map": "Lotus",
+  "matches": [
+    {
+      "date": "2026-04-26",
+      "opponent": "ECO",
+      "matchId": "403b0617-7109-4477-846c-a7c0e5c89d76",
+      "score": "13-0"
+    },
+    {
+      "date": "2026-04-18",
+      "opponent": "RZN",
+      "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+      "score": "13-11"
+    },
+    {
+      "date": "2026-04-12",
+      "opponent": "SGE",
+      "matchId": "7ee45a1e-1257-4b2b-97b6-2face254d0f1",
+      "score": "3-13"
+    }
+  ]
+}

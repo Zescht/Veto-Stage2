@@ -1,0 +1,66 @@
+{
+  "t_side": {
+    "total_rounds": 24,
+    "sites": {
+      "A": {
+        "plant_count": 8,
+        "pct_plant": 47.1,
+        "pct_win": 62.5,
+        "avg_plant_time": 52.4,
+        "min_plant_time": 29.7,
+        "max_plant_time": 90.9,
+        "fk_to_plant_avg": 27.6,
+        "fk_to_plant_n": 5
+      },
+      "B": {
+        "plant_count": 9,
+        "pct_plant": 52.9,
+        "pct_win": 66.7,
+        "avg_plant_time": 53.6,
+        "min_plant_time": 37.5,
+        "max_plant_time": 74.9,
+        "fk_to_plant_avg": 27.8,
+        "fk_to_plant_n": 8
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 14,
+    "sites": {
+      "A": {
+        "plant_count": 6,
+        "defuse_count": 2,
+        "pct_defuse_win": 33.3,
+        "pct_defuse_share": 100.0,
+        "avg_defuse_time": 31.8,
+        "fk_after_plant_avg": 17.4,
+        "fk_after_plant_n": 6
+      },
+      "B": {
+        "plant_count": 2,
+        "defuse_count": 0,
+        "pct_defuse_win": 0.0,
+        "pct_defuse_share": 0.0,
+        "avg_defuse_time": null,
+        "fk_after_plant_avg": 11.4,
+        "fk_after_plant_n": 1
+      }
+    }
+  },
+  "team": "FOKUS",
+  "map": "Fracture",
+  "matches": [
+    {
+      "date": "2026-04-25",
+      "opponent": "CGN",
+      "matchId": "6cb09b8a-77ef-4431-b36a-19ba6a861425",
+      "score": "5-13"
+    },
+    {
+      "date": "2026-04-14",
+      "opponent": "DXG",
+      "matchId": "b2e410f9-1787-4e62-afea-4d43cc8e54e0",
+      "score": "13-7"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "team": "Eintracht Frankfurt",
+  "map": "Fracture",
+  "t_side": {
+    "total_rounds": 12,
+    "sites": {
+      "A": {
+        "plant_count": 3,
+        "pct_plant": 42.9,
+        "pct_win": 66.7,
+        "avg_plant_time": 56.3,
+        "min_plant_time": 36.0,
+        "max_plant_time": 66.6,
+        "fk_to_plant_avg": 18.7,
+        "fk_to_plant_n": 2
+      },
+      "B": {
+        "plant_count": 4,
+        "pct_plant": 57.1,
+        "pct_win": 75.0,
+        "avg_plant_time": 66.5,
+        "min_plant_time": 30.7,
+        "max_plant_time": 98.3,
+        "fk_to_plant_avg": 45.4,
+        "fk_to_plant_n": 4
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 12,
+    "sites": {
+      "A": {
+        "plant_count": 5,
+        "defuse_count": 1,
+        "pct_defuse_win": 20.0,
+        "pct_defuse_share": 100.0,
+        "avg_defuse_time": 24.7,
+        "fk_after_plant_avg": 21.0,
+        "fk_after_plant_n": 4
+      },
+      "B": {
+        "plant_count": 3,
+        "defuse_count": 0,
+        "pct_defuse_win": 0.0,
+        "pct_defuse_share": 0.0,
+        "avg_defuse_time": null,
+        "fk_after_plant_avg": 22.0,
+        "fk_after_plant_n": 2
+      }
+    }
+  },
+  "matches": [
+    {
+      "date": "2026-04-19",
+      "opponent": "CGN",
+      "matchId": "f492d91b-bd8a-489c-b2f8-7f194783c6c6",
+      "score": "11-13"
+    }
+  ]
+}

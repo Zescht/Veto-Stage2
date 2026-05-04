@@ -1,0 +1,72 @@
+{
+  "t_side": {
+    "total_rounds": 27,
+    "sites": {
+      "A": {
+        "plant_count": 9,
+        "pct_plant": 50.0,
+        "pct_win": 77.8,
+        "avg_plant_time": 47.0,
+        "min_plant_time": 26.5,
+        "max_plant_time": 88.1,
+        "fk_to_plant_avg": 13.2,
+        "fk_to_plant_n": 7
+      },
+      "B": {
+        "plant_count": 9,
+        "pct_plant": 50.0,
+        "pct_win": 100.0,
+        "avg_plant_time": 54.6,
+        "min_plant_time": 24.0,
+        "max_plant_time": 92.2,
+        "fk_to_plant_avg": 39.1,
+        "fk_to_plant_n": 8
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 37,
+    "sites": {
+      "A": {
+        "plant_count": 16,
+        "defuse_count": 6,
+        "pct_defuse_win": 37.5,
+        "pct_defuse_share": 85.7,
+        "avg_defuse_time": 27.2,
+        "fk_after_plant_avg": 11.3,
+        "fk_after_plant_n": 12
+      },
+      "B": {
+        "plant_count": 12,
+        "defuse_count": 1,
+        "pct_defuse_win": 8.3,
+        "pct_defuse_share": 14.3,
+        "avg_defuse_time": 21.6,
+        "fk_after_plant_avg": 14.7,
+        "fk_after_plant_n": 8
+      }
+    }
+  },
+  "team": "FOKUS",
+  "map": "Breeze",
+  "matches": [
+    {
+      "date": "2026-04-25",
+      "opponent": "CGN",
+      "matchId": "7547a3f3-723a-490c-af39-c21290d314bd",
+      "score": "13-7"
+    },
+    {
+      "date": "2026-04-12",
+      "opponent": "SGE",
+      "matchId": "431fd751-99a6-4b71-a48f-41297e5fe01d",
+      "score": "5-13"
+    },
+    {
+      "date": "2026-04-07",
+      "opponent": "AKA",
+      "matchId": "1a003f2b-d451-4ba9-aab9-cf6f6c27bba0",
+      "score": "14-12"
+    }
+  ]
+}

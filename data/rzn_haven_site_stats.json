@@ -1,0 +1,97 @@
+{
+  "t_side": {
+    "total_rounds": 37,
+    "sites": {
+      "A": {
+        "plant_count": 6,
+        "pct_plant": 24.0,
+        "pct_win": 83.3,
+        "avg_plant_time": 52.3,
+        "min_plant_time": 24.9,
+        "max_plant_time": 78.3,
+        "fk_to_plant_avg": 33.2,
+        "fk_to_plant_n": 6
+      },
+      "B": {
+        "plant_count": 10,
+        "pct_plant": 40.0,
+        "pct_win": 70.0,
+        "avg_plant_time": 37.1,
+        "min_plant_time": 13.5,
+        "max_plant_time": 89.6,
+        "fk_to_plant_avg": 29.9,
+        "fk_to_plant_n": 5
+      },
+      "C": {
+        "plant_count": 9,
+        "pct_plant": 36.0,
+        "pct_win": 77.8,
+        "avg_plant_time": 37.0,
+        "min_plant_time": 19.1,
+        "max_plant_time": 72.2,
+        "fk_to_plant_avg": 14.2,
+        "fk_to_plant_n": 7
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 39,
+    "sites": {
+      "A": {
+        "plant_count": 12,
+        "defuse_count": 3,
+        "pct_defuse_win": 25.0,
+        "pct_defuse_share": 42.9,
+        "avg_defuse_time": 28.2,
+        "fk_after_plant_avg": 12.5,
+        "fk_after_plant_n": 8
+      },
+      "B": {
+        "plant_count": 3,
+        "defuse_count": 1,
+        "pct_defuse_win": 33.3,
+        "pct_defuse_share": 14.3,
+        "avg_defuse_time": 35.9,
+        "fk_after_plant_avg": 15.6,
+        "fk_after_plant_n": 2
+      },
+      "C": {
+        "plant_count": 10,
+        "defuse_count": 3,
+        "pct_defuse_win": 30.0,
+        "pct_defuse_share": 42.9,
+        "avg_defuse_time": 28.6,
+        "fk_after_plant_avg": 16.8,
+        "fk_after_plant_n": 9
+      }
+    }
+  },
+  "team": "Rasenmaeher",
+  "map": "Haven",
+  "matches": [
+    {
+      "date": "2026-04-26",
+      "opponent": "DXG",
+      "matchId": "ba0cf320-229d-47a0-9029-49740aa21229",
+      "score": "3-13"
+    },
+    {
+      "date": "2026-04-25",
+      "opponent": "ATN",
+      "matchId": "0a4eac40-0b98-4fda-a1ea-cf49d9522d13",
+      "score": "13-3"
+    },
+    {
+      "date": "2026-04-07",
+      "opponent": "CGN",
+      "matchId": "66514075-1283-4122-85cb-4d3a7b6e2d8a",
+      "score": "13-8"
+    },
+    {
+      "date": "2026-04-04",
+      "opponent": "ECO",
+      "matchId": "a8d5abe2-4ac1-48d1-a5c2-4de4517f94b7",
+      "score": "10-13"
+    }
+  ]
+}

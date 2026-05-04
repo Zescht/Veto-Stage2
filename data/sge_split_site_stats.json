@@ -2,71 +2,71 @@
   "team": "Eintracht Frankfurt",
   "map": "Split",
   "t_side": {
-    "total_rounds": 36,
+    "total_rounds": 23,
     "sites": {
       "A": {
-        "plant_count": 7,
-        "pct_plant": 35.0,
-        "pct_win": 85.7,
-        "avg_plant_time": 58.4,
+        "plant_count": 9,
+        "pct_plant": 56.2,
+        "pct_win": 66.7,
+        "avg_plant_time": 56.2,
         "min_plant_time": 26.6,
         "max_plant_time": 97.1,
-        "fk_to_plant_avg": 24.8,
-        "fk_to_plant_n": 7
+        "fk_to_plant_avg": 29.9,
+        "fk_to_plant_n": 9
       },
       "B": {
-        "plant_count": 13,
-        "pct_plant": 65.0,
-        "pct_win": 46.2,
-        "avg_plant_time": 71.3,
-        "min_plant_time": 24.7,
-        "max_plant_time": 99.6,
-        "fk_to_plant_avg": 30.8,
-        "fk_to_plant_n": 13
+        "plant_count": 7,
+        "pct_plant": 43.8,
+        "pct_win": 85.7,
+        "avg_plant_time": 70.0,
+        "min_plant_time": 46.5,
+        "max_plant_time": 93.6,
+        "fk_to_plant_avg": 40.1,
+        "fk_to_plant_n": 7
       }
     }
   },
   "ct_side": {
-    "total_rounds": 30,
+    "total_rounds": 36,
     "sites": {
       "A": {
-        "plant_count": 8,
-        "defuse_count": 2,
-        "pct_defuse_win": 25.0,
-        "pct_defuse_share": 66.7,
-        "avg_defuse_time": 38.6,
-        "fk_after_plant_avg": 18.7,
-        "fk_after_plant_n": 8
+        "plant_count": 10,
+        "defuse_count": 5,
+        "pct_defuse_win": 50.0,
+        "pct_defuse_share": 100.0,
+        "avg_defuse_time": 32.3,
+        "fk_after_plant_avg": 12.9,
+        "fk_after_plant_n": 10
       },
       "B": {
-        "plant_count": 7,
-        "defuse_count": 1,
-        "pct_defuse_win": 14.3,
-        "pct_defuse_share": 33.3,
-        "avg_defuse_time": 36.0,
-        "fk_after_plant_avg": 12.9,
-        "fk_after_plant_n": 5
+        "plant_count": 4,
+        "defuse_count": 0,
+        "pct_defuse_win": 0.0,
+        "pct_defuse_share": 0.0,
+        "avg_defuse_time": null,
+        "fk_after_plant_avg": 18.7,
+        "fk_after_plant_n": 3
       }
     }
   },
   "matches": [
     {
+      "date": "2026-04-26",
+      "opponent": "AKA",
+      "matchId": "b24bbb8a-3af9-4357-b7e5-2b6851114a2f",
+      "score": "13-7"
+    },
+    {
+      "date": "2026-04-21",
+      "opponent": "ECO",
+      "matchId": "f88d58be-7201-4599-8e46-6587b42622ed",
+      "score": "13-3"
+    },
+    {
       "date": "2026-04-14",
       "opponent": "RZN",
       "matchId": "3cc1127c-3135-4a5c-a503-f09d664c602d",
       "score": "13-10"
-    },
-    {
-      "date": "2026-04-07",
-      "opponent": "ATN",
-      "matchId": "ecf86908-47b8-4c31-9da5-3456da435626",
-      "score": "12-14"
-    },
-    {
-      "date": "2026-03-21",
-      "opponent": "TL",
-      "matchId": "2b9b6bed-7707-4a59-bf95-855f953053e2",
-      "score": "4-13"
     }
   ]
 }

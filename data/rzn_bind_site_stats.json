@@ -1,0 +1,78 @@
+{
+  "t_side": {
+    "total_rounds": 33,
+    "sites": {
+      "A": {
+        "plant_count": 16,
+        "pct_plant": 61.5,
+        "pct_win": 37.5,
+        "avg_plant_time": 54.7,
+        "min_plant_time": 20.1,
+        "max_plant_time": 96.4,
+        "fk_to_plant_avg": 21.7,
+        "fk_to_plant_n": 16
+      },
+      "B": {
+        "plant_count": 10,
+        "pct_plant": 38.5,
+        "pct_win": 30.0,
+        "avg_plant_time": 48.0,
+        "min_plant_time": 19.7,
+        "max_plant_time": 94.0,
+        "fk_to_plant_avg": 22.9,
+        "fk_to_plant_n": 7
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 48,
+    "sites": {
+      "A": {
+        "plant_count": 17,
+        "defuse_count": 4,
+        "pct_defuse_win": 23.5,
+        "pct_defuse_share": 44.4,
+        "avg_defuse_time": 24.3,
+        "fk_after_plant_avg": 9.9,
+        "fk_after_plant_n": 12
+      },
+      "B": {
+        "plant_count": 9,
+        "defuse_count": 5,
+        "pct_defuse_win": 55.6,
+        "pct_defuse_share": 55.6,
+        "avg_defuse_time": 22.4,
+        "fk_after_plant_avg": 7.2,
+        "fk_after_plant_n": 9
+      }
+    }
+  },
+  "team": "Rasenmaeher",
+  "map": "Bind",
+  "matches": [
+    {
+      "date": "2026-04-18",
+      "opponent": "FKS",
+      "matchId": "6f46764b-09e1-404e-b195-398aae7ff291",
+      "score": "9-13"
+    },
+    {
+      "date": "2026-04-11",
+      "opponent": "AKA",
+      "matchId": "6a31aae8-bf63-4e8f-ad67-761499578a66",
+      "score": "13-11"
+    },
+    {
+      "date": "2026-04-07",
+      "opponent": "CGN",
+      "matchId": "f6c3a1e8-4268-4caf-8b26-463c1557640b",
+      "score": "4-13"
+    },
+    {
+      "date": "2026-04-04",
+      "opponent": "ECO",
+      "matchId": "40a10cb2-2c5b-48ce-a3f0-9915cd8dda09",
+      "score": "13-5"
+    }
+  ]
+}

@@ -1,0 +1,290 @@
+{
+  "map": "Fracture",
+  "side": "t",
+  "selectedMaps": [
+    {
+      "date": "2026-04-19",
+      "opponent": "CGN",
+      "matchId": "f492d91b-bd8a-489c-b2f8-7f194783c6c6",
+      "score": "11-13"
+    }
+  ],
+  "sites": {
+    "A": {
+      "roundCount": 3,
+      "pointCount": 11,
+      "points": [
+        {
+          "site": "A",
+          "player": "MONSTEERR",
+          "normX": 74.1734,
+          "normY": 48.8206,
+          "roundNum": 1,
+          "plantRoundTimeMs": 66162,
+          "date": "2026-04-19",
+          "opponent": "CGN",
+          "matchId": "f492d91b-bd8a-489c-b2f8-7f194783c6c6",
+          "score": "11-13"
+        },
+        {
+          "site": "A",
+          "player": "azury",
+          "normX": 83.588,
+          "normY": 54.4288,
+          "roundNum": 1,
+          "plantRoundTimeMs": 66162,
+          "date": "2026-04-19",
+          "opponent": "CGN",
+          "matchId": "f492d91b-bd8a-489c-b2f8-7f194783c6c6",
+          "score": "11-13"
+        },
+        {
+          "site": "A",
+          "player": "Fizzy",
+          "normX": 65.6558,
+          "normY": 58.2976,
+          "roundNum": 1,
+          "plantRoundTimeMs": 66162,
+          "date": "2026-04-19",
+          "opponent": "CGN",
+          "matchId": "f492d91b-bd8a-489c-b2f8-7f194783c6c6",
+          "score": "11-13"
+        },
+        {
+          "site": "A",
+          "player": "Jamelinho",
+          "normX": 20.2598,
+          "normY": 43.7506,
+          "roundNum": 2,
+          "plantRoundTimeMs": 36019,
+          "date": "2026-04-19",
+          "opponent": "CGN",
+          "matchId": "f492d91b-bd8a-489c-b2f8-7f194783c6c6",
+          "score": "11-13"
+        },
+        {
+          "site": "A",
+          "player": "MONSTEERR",
+          "normX": 91.9652,
+          "normY": 53.5396,
+          "roundNum": 2,
+          "plantRoundTimeMs": 36019,
+          "date": "2026-04-19",
+          "opponent": "CGN",
+          "matchId": "f492d91b-bd8a-489c-b2f8-7f194783c6c6",
+          "score": "11-13"
+        },
+        {
+          "site": "A",
+          "player": "musashi",
+          "normX": 84.524,
+          "normY": 56.8546,
+          "roundNum": 2,
+          "plantRoundTimeMs": 36019,
+          "date": "2026-04-19",
+          "opponent": "CGN",
+          "matchId": "f492d91b-bd8a-489c-b2f8-7f194783c6c6",
+          "score": "11-13"
+        },
+        {
+          "site": "A",
+          "player": "azury",
+          "normX": 68.7758,
+          "normY": 25.6,
+          "roundNum": 2,
+          "plantRoundTimeMs": 36019,
+          "date": "2026-04-19",
+          "opponent": "CGN",
+          "matchId": "f492d91b-bd8a-489c-b2f8-7f194783c6c6",
+          "score": "11-13"
+        },
+        {
+          "site": "A",
+          "player": "MONSTEERR",
+          "normX": 76.1156,
+          "normY": 41.0908,
+          "roundNum": 10,
+          "plantRoundTimeMs": 66601,
+          "date": "2026-04-19",
+          "opponent": "CGN",
+          "matchId": "f492d91b-bd8a-489c-b2f8-7f194783c6c6",
+          "score": "11-13"
+        },
+        {
+          "site": "A",
+          "player": "azury",
+          "normX": 71.1782,
+          "normY": 58.0558,
+          "roundNum": 10,
+          "plantRoundTimeMs": 66601,
+          "date": "2026-04-19",
+          "opponent": "CGN",
+          "matchId": "f492d91b-bd8a-489c-b2f8-7f194783c6c6",
+          "score": "11-13"
+        },
+        {
+          "site": "A",
+          "player": "Fizzy",
+          "normX": 58.4798,
+          "normY": 54.577,
+          "roundNum": 10,
+          "plantRoundTimeMs": 66601,
+          "date": "2026-04-19",
+          "opponent": "CGN",
+          "matchId": "f492d91b-bd8a-489c-b2f8-7f194783c6c6",
+          "score": "11-13"
+        },
+        {
+          "site": "A",
+          "player": "musashi",
+          "normX": 83.5646,
+          "normY": 56.0902,
+          "roundNum": 10,
+          "plantRoundTimeMs": 66601,
+          "date": "2026-04-19",
+          "opponent": "CGN",
+          "matchId": "f492d91b-bd8a-489c-b2f8-7f194783c6c6",
+          "score": "11-13"
+        }
+      ]
+    },
+    "B": {
+      "roundCount": 4,
+      "pointCount": 11,
+      "points": [
+        {
+          "site": "B",
+          "player": "MONSTEERR",
+          "normX": 24.8384,
+          "normY": 37.6666,
+          "roundNum": 0,
+          "plantRoundTimeMs": 30722,
+          "date": "2026-04-19",
+          "opponent": "CGN",
+          "matchId": "f492d91b-bd8a-489c-b2f8-7f194783c6c6",
+          "score": "11-13"
+        },
+        {
+          "site": "B",
+          "player": "musashi",
+          "normX": 16.8044,
+          "normY": 49.0546,
+          "roundNum": 0,
+          "plantRoundTimeMs": 30722,
+          "date": "2026-04-19",
+          "opponent": "CGN",
+          "matchId": "f492d91b-bd8a-489c-b2f8-7f194783c6c6",
+          "score": "11-13"
+        },
+        {
+          "site": "B",
+          "player": "azury",
+          "normX": 14.4176,
+          "normY": 51.6442,
+          "roundNum": 0,
+          "plantRoundTimeMs": 30722,
+          "date": "2026-04-19",
+          "opponent": "CGN",
+          "matchId": "f492d91b-bd8a-489c-b2f8-7f194783c6c6",
+          "score": "11-13"
+        },
+        {
+          "site": "B",
+          "player": "Fizzy",
+          "normX": 23.3252,
+          "normY": 50.4274,
+          "roundNum": 0,
+          "plantRoundTimeMs": 30722,
+          "date": "2026-04-19",
+          "opponent": "CGN",
+          "matchId": "f492d91b-bd8a-489c-b2f8-7f194783c6c6",
+          "score": "11-13"
+        },
+        {
+          "site": "B",
+          "player": "MONSTEERR",
+          "normX": 34.1516,
+          "normY": 82.4074,
+          "roundNum": 5,
+          "plantRoundTimeMs": 56915,
+          "date": "2026-04-19",
+          "opponent": "CGN",
+          "matchId": "f492d91b-bd8a-489c-b2f8-7f194783c6c6",
+          "score": "11-13"
+        },
+        {
+          "site": "B",
+          "player": "azury",
+          "normX": 8.3648,
+          "normY": 59.3896,
+          "roundNum": 5,
+          "plantRoundTimeMs": 56915,
+          "date": "2026-04-19",
+          "opponent": "CGN",
+          "matchId": "f492d91b-bd8a-489c-b2f8-7f194783c6c6",
+          "score": "11-13"
+        },
+        {
+          "site": "B",
+          "player": "Fizzy",
+          "normX": 39.4712,
+          "normY": 32.425,
+          "roundNum": 5,
+          "plantRoundTimeMs": 56915,
+          "date": "2026-04-19",
+          "opponent": "CGN",
+          "matchId": "f492d91b-bd8a-489c-b2f8-7f194783c6c6",
+          "score": "11-13"
+        },
+        {
+          "site": "B",
+          "player": "MONSTEERR",
+          "normX": 23.723,
+          "normY": 40.9894,
+          "roundNum": 6,
+          "plantRoundTimeMs": 80079,
+          "date": "2026-04-19",
+          "opponent": "CGN",
+          "matchId": "f492d91b-bd8a-489c-b2f8-7f194783c6c6",
+          "score": "11-13"
+        },
+        {
+          "site": "B",
+          "player": "azury",
+          "normX": 14.4176,
+          "normY": 51.9718,
+          "roundNum": 6,
+          "plantRoundTimeMs": 80079,
+          "date": "2026-04-19",
+          "opponent": "CGN",
+          "matchId": "f492d91b-bd8a-489c-b2f8-7f194783c6c6",
+          "score": "11-13"
+        },
+        {
+          "site": "B",
+          "player": "MONSTEERR",
+          "normX": 12.257,
+          "normY": 51.1216,
+          "roundNum": 9,
+          "plantRoundTimeMs": 98321,
+          "date": "2026-04-19",
+          "opponent": "CGN",
+          "matchId": "f492d91b-bd8a-489c-b2f8-7f194783c6c6",
+          "score": "11-13"
+        },
+        {
+          "site": "B",
+          "player": "musashi",
+          "normX": 14.4176,
+          "normY": 50.5834,
+          "roundNum": 9,
+          "plantRoundTimeMs": 98321,
+          "date": "2026-04-19",
+          "opponent": "CGN",
+          "matchId": "f492d91b-bd8a-489c-b2f8-7f194783c6c6",
+          "score": "11-13"
+        }
+      ]
+    }
+  }
+}

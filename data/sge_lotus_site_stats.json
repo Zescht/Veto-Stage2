@@ -1,97 +1,91 @@
 {
   "team": "Eintracht Frankfurt",
   "map": "Lotus",
-  "matches": [
-    {
-      "date": "2026-04-14",
-      "opponent": "RZN",
-      "matchId": "31bd242d-e54f-4f6f-a0db-df046cd33a60",
-      "score": "13-9"
-    },
-    {
-      "date": "2026-04-12",
-      "opponent": "FKS",
-      "matchId": "7ee45a1e-1257-4b2b-97b6-2face254d0f1",
-      "score": "13-3"
-    },
-    {
-      "date": "2026-04-07",
-      "opponent": "ATN",
-      "matchId": "c14c46b0-b36d-48be-8335-3919de851652",
-      "score": "13-7"
-    },
-    {
-      "date": "2026-04-05",
-      "opponent": "DXG",
-      "matchId": "86c38d84-f780-4eea-8172-8a361ef0b84a",
-      "score": "13-7"
-    }
-  ],
   "t_side": {
-    "total_rounds": 38,
+    "total_rounds": 26,
     "sites": {
       "A": {
-        "plant_count": 8,
-        "pct_plant": 27.6,
-        "pct_win": 75.0,
-        "avg_plant_time": 56.1,
-        "min_plant_time": 27.2,
-        "max_plant_time": 88.3,
-        "fk_to_plant_avg": 40.3,
-        "fk_to_plant_n": 6
+        "plant_count": 5,
+        "pct_plant": 23.8,
+        "pct_win": 100.0,
+        "avg_plant_time": 57.7,
+        "min_plant_time": 28.9,
+        "max_plant_time": 83.7,
+        "fk_to_plant_avg": 39.8,
+        "fk_to_plant_n": 3
       },
       "B": {
         "plant_count": 7,
-        "pct_plant": 24.1,
-        "pct_win": 71.4,
-        "avg_plant_time": 72.4,
-        "min_plant_time": 33.3,
+        "pct_plant": 33.3,
+        "pct_win": 57.1,
+        "avg_plant_time": 64.8,
+        "min_plant_time": 47.5,
         "max_plant_time": 98.5,
-        "fk_to_plant_avg": 24.1,
-        "fk_to_plant_n": 6
+        "fk_to_plant_avg": 27.5,
+        "fk_to_plant_n": 7
       },
       "C": {
-        "plant_count": 14,
-        "pct_plant": 48.3,
-        "pct_win": 92.9,
-        "avg_plant_time": 55.4,
-        "min_plant_time": 26.3,
-        "max_plant_time": 91.0,
-        "fk_to_plant_avg": 32.3,
-        "fk_to_plant_n": 13
+        "plant_count": 9,
+        "pct_plant": 42.9,
+        "pct_win": 88.9,
+        "avg_plant_time": 60.9,
+        "min_plant_time": 29.4,
+        "max_plant_time": 93.9,
+        "fk_to_plant_avg": 32.9,
+        "fk_to_plant_n": 9
       }
     }
   },
   "ct_side": {
-    "total_rounds": 40,
+    "total_rounds": 35,
     "sites": {
       "A": {
-        "plant_count": 10,
-        "defuse_count": 3,
-        "pct_defuse_win": 30.0,
-        "pct_defuse_share": 30.0,
-        "avg_defuse_time": 37.2,
-        "fk_after_plant_avg": 11.9,
+        "plant_count": 9,
+        "defuse_count": 1,
+        "pct_defuse_win": 11.1,
+        "pct_defuse_share": 14.3,
+        "avg_defuse_time": 31.2,
+        "fk_after_plant_avg": 17.9,
         "fk_after_plant_n": 6
       },
       "B": {
-        "plant_count": 8,
-        "defuse_count": 3,
-        "pct_defuse_win": 37.5,
-        "pct_defuse_share": 30.0,
-        "avg_defuse_time": 31.0,
-        "fk_after_plant_avg": 19.3,
-        "fk_after_plant_n": 6
+        "plant_count": 4,
+        "defuse_count": 2,
+        "pct_defuse_win": 50.0,
+        "pct_defuse_share": 28.6,
+        "avg_defuse_time": 22.2,
+        "fk_after_plant_avg": 9.7,
+        "fk_after_plant_n": 3
       },
       "C": {
         "plant_count": 8,
         "defuse_count": 4,
         "pct_defuse_win": 50.0,
-        "pct_defuse_share": 40.0,
-        "avg_defuse_time": 31.6,
-        "fk_after_plant_avg": 18.1,
+        "pct_defuse_share": 57.1,
+        "avg_defuse_time": 28.6,
+        "fk_after_plant_avg": 14.1,
         "fk_after_plant_n": 7
       }
     }
-  }
+  },
+  "matches": [
+    {
+      "date": "2026-04-21",
+      "opponent": "ECO",
+      "matchId": "9f000a73-12ec-4d33-8ef9-b991d42aec23",
+      "score": "13-10"
+    },
+    {
+      "date": "2026-04-19",
+      "opponent": "CGN",
+      "matchId": "885a842b-a596-407a-b1e8-82c503ae2323",
+      "score": "13-3"
+    },
+    {
+      "date": "2026-04-14",
+      "opponent": "RZN",
+      "matchId": "31bd242d-e54f-4f6f-a0db-df046cd33a60",
+      "score": "13-9"
+    }
+  ]
 }

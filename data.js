@@ -5,112 +5,6 @@ const vetoHistoryData = {
     "subtitle": "2026 raw-order veto history",
     "rows": [
       {
-        "date": "2026-04-18",
-        "opponent": "RIZON",
-        "opponentAbbr": "RZN",
-        "score": "2 - 0",
-        "source": "https://liquipedia.net/valorant/Match:ID_zImnPwBQYE_0006",
-        "decider": "Split",
-        "deciderScore": "",
-        "deciderLabel": "DECIDER",
-        "deciderTeamStartSide": "",
-        "ban1": {
-          "map": "Fracture",
-          "type": "ban",
-          "ownerLabel": "RZN",
-          "ownerKind": "opp"
-        },
-        "ban2": {
-          "map": "Haven",
-          "type": "ban",
-          "ownerLabel": "FKS",
-          "ownerKind": "team"
-        },
-        "pick1": {
-          "map": "Lotus",
-          "type": "pick",
-          "ownerLabel": "RZN",
-          "ownerKind": "opp",
-          "score": "13:11",
-          "pickLabel": "OPPONENT PICK",
-          "teamStartSide": ""
-        },
-        "pick2": {
-          "map": "Bind",
-          "type": "pick",
-          "ownerLabel": "FKS",
-          "ownerKind": "team",
-          "score": "13:9",
-          "pickLabel": "FKS PICK",
-          "teamStartSide": ""
-        },
-        "ban3": {
-          "map": "Pearl",
-          "type": "ban",
-          "ownerLabel": "RZN",
-          "ownerKind": "opp"
-        },
-        "ban4": {
-          "map": "Breeze",
-          "type": "ban",
-          "ownerLabel": "FKS",
-          "ownerKind": "team"
-        }
-      },
-      {
-        "date": "2026-04-14",
-        "opponent": "Dortmund eSports",
-        "opponentAbbr": "DXG",
-        "score": "2 - 0",
-        "source": "https://liquipedia.net/valorant/Match:ID_zImnPwBQYE_0001",
-        "decider": "Lotus",
-        "deciderScore": "",
-        "deciderLabel": "DECIDER",
-        "deciderTeamStartSide": "",
-        "ban1": {
-          "map": "Haven",
-          "type": "ban",
-          "ownerLabel": "FKS",
-          "ownerKind": "team"
-        },
-        "ban2": {
-          "map": "Breeze",
-          "type": "ban",
-          "ownerLabel": "DXG",
-          "ownerKind": "opp"
-        },
-        "pick1": {
-          "map": "Bind",
-          "type": "pick",
-          "ownerLabel": "FKS",
-          "ownerKind": "team",
-          "score": "13:7",
-          "pickLabel": "FKS PICK",
-          "teamStartSide": "FKS T-SIDE"
-        },
-        "pick2": {
-          "map": "Fracture",
-          "type": "pick",
-          "ownerLabel": "DXG",
-          "ownerKind": "opp",
-          "score": "13:7",
-          "pickLabel": "OPPONENT PICK",
-          "teamStartSide": "FKS CT-SIDE"
-        },
-        "ban3": {
-          "map": "Pearl",
-          "type": "ban",
-          "ownerLabel": "FKS",
-          "ownerKind": "team"
-        },
-        "ban4": {
-          "map": "Split",
-          "type": "ban",
-          "ownerLabel": "DXG",
-          "ownerKind": "opp"
-        }
-      },
-      {
         "date": "2026-04-12",
         "opponent": "Eintracht Frankfurt",
         "opponentAbbr": "SGE",
@@ -1230,6 +1124,218 @@ const vetoHistoryData = {
     "ownerLabel": "SGE",
     "subtitle": "2026 raw-order veto history",
     "rows": [
+      {
+        "date": "2026-04-26",
+        "opponent": "AKA HERO",
+        "opponentAbbr": "AH",
+        "score": "2 - 0",
+        "source": "https://liquipedia.net/valorant/Match:ID_jjOnq0lqza_0007",
+        "decider": "Breeze",
+        "deciderScore": "",
+        "deciderLabel": "DECIDER",
+        "deciderTeamStartSide": "",
+        "ban1": {
+          "map": "Lotus",
+          "type": "ban",
+          "ownerLabel": "AH",
+          "ownerKind": "opp"
+        },
+        "ban2": {
+          "map": "Fracture",
+          "type": "ban",
+          "ownerLabel": "SGE",
+          "ownerKind": "team"
+        },
+        "pick1": {
+          "map": "Split",
+          "type": "pick",
+          "ownerLabel": "AH",
+          "ownerKind": "opp",
+          "score": "13:7",
+          "pickLabel": "OPPONENT PICK",
+          "teamStartSide": ""
+        },
+        "pick2": {
+          "map": "Bind",
+          "type": "pick",
+          "ownerLabel": "SGE",
+          "ownerKind": "team",
+          "score": "13:7",
+          "pickLabel": "SGE PICK",
+          "teamStartSide": ""
+        },
+        "ban3": {
+          "map": "Haven",
+          "type": "ban",
+          "ownerLabel": "AH",
+          "ownerKind": "opp"
+        },
+        "ban4": {
+          "map": "Pearl",
+          "type": "ban",
+          "ownerLabel": "SGE",
+          "ownerKind": "team"
+        }
+      },
+      {
+        "date": "2026-04-21",
+        "opponent": "eSports Cologne",
+        "opponentAbbr": "ECO",
+        "score": "2 - 0",
+        "source": "https://liquipedia.net/valorant/Match:ID_jjOnq0lqza_0001",
+        "decider": "Bind",
+        "deciderScore": "",
+        "deciderLabel": "DECIDER",
+        "deciderTeamStartSide": "",
+        "ban1": {
+          "map": "Breeze",
+          "type": "ban",
+          "ownerLabel": "ECO",
+          "ownerKind": "opp"
+        },
+        "ban2": {
+          "map": "Haven",
+          "type": "ban",
+          "ownerLabel": "SGE",
+          "ownerKind": "team"
+        },
+        "pick1": {
+          "map": "Split",
+          "type": "pick",
+          "ownerLabel": "ECO",
+          "ownerKind": "opp",
+          "score": "13:3",
+          "pickLabel": "OPPONENT PICK",
+          "teamStartSide": ""
+        },
+        "pick2": {
+          "map": "Lotus",
+          "type": "pick",
+          "ownerLabel": "SGE",
+          "ownerKind": "team",
+          "score": "13:10",
+          "pickLabel": "SGE PICK",
+          "teamStartSide": ""
+        },
+        "ban3": {
+          "map": "Fracture",
+          "type": "ban",
+          "ownerLabel": "ECO",
+          "ownerKind": "opp"
+        },
+        "ban4": {
+          "map": "Pearl",
+          "type": "ban",
+          "ownerLabel": "SGE",
+          "ownerKind": "team"
+        }
+      },
+      {
+        "date": "2026-04-19",
+        "opponent": "CGN Esports",
+        "opponentAbbr": "CGN",
+        "score": "1 - 2",
+        "source": "https://liquipedia.net/valorant/Match:ID_zImnPwBQYE_0007",
+        "decider": "Breeze",
+        "deciderScore": "8:13",
+        "deciderLabel": "DECIDER",
+        "deciderTeamStartSide": "",
+        "ban1": {
+          "map": "Split",
+          "type": "ban",
+          "ownerLabel": "SGE",
+          "ownerKind": "team"
+        },
+        "ban2": {
+          "map": "Haven",
+          "type": "ban",
+          "ownerLabel": "CGN",
+          "ownerKind": "opp"
+        },
+        "pick1": {
+          "map": "Lotus",
+          "type": "pick",
+          "ownerLabel": "SGE",
+          "ownerKind": "team",
+          "score": "13:3",
+          "pickLabel": "SGE PICK",
+          "teamStartSide": ""
+        },
+        "pick2": {
+          "map": "Fracture",
+          "type": "pick",
+          "ownerLabel": "CGN",
+          "ownerKind": "opp",
+          "score": "11:13",
+          "pickLabel": "OPPONENT PICK",
+          "teamStartSide": ""
+        },
+        "ban3": {
+          "map": "Bind",
+          "type": "ban",
+          "ownerLabel": "SGE",
+          "ownerKind": "team"
+        },
+        "ban4": {
+          "map": "Pearl",
+          "type": "ban",
+          "ownerLabel": "CGN",
+          "ownerKind": "opp"
+        }
+      },
+      {
+        "date": "2026-04-14",
+        "opponent": "RIZON",
+        "opponentAbbr": "RZN",
+        "score": "2 - 0",
+        "source": "https://liquipedia.net/valorant/Match:ID_zImnPwBQYE_0003",
+        "decider": "Haven",
+        "deciderScore": "",
+        "deciderLabel": "DECIDER",
+        "deciderTeamStartSide": "",
+        "ban1": {
+          "map": "Fracture",
+          "type": "ban",
+          "ownerLabel": "SGE",
+          "ownerKind": "team"
+        },
+        "ban2": {
+          "map": "Breeze",
+          "type": "ban",
+          "ownerLabel": "RZN",
+          "ownerKind": "opp"
+        },
+        "pick1": {
+          "map": "Lotus",
+          "type": "pick",
+          "ownerLabel": "SGE",
+          "ownerKind": "team",
+          "score": "13:9",
+          "pickLabel": "SGE PICK",
+          "teamStartSide": ""
+        },
+        "pick2": {
+          "map": "Split",
+          "type": "pick",
+          "ownerLabel": "RZN",
+          "ownerKind": "opp",
+          "score": "13:10",
+          "pickLabel": "OPPONENT PICK",
+          "teamStartSide": ""
+        },
+        "ban3": {
+          "map": "Pearl",
+          "type": "ban",
+          "ownerLabel": "SGE",
+          "ownerKind": "team"
+        },
+        "ban4": {
+          "map": "Bind",
+          "type": "ban",
+          "ownerLabel": "RZN",
+          "ownerKind": "opp"
+        }
+      },
       {
         "date": "2026-04-12",
         "opponent": "FOKUS",

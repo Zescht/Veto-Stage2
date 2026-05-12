@@ -26,47 +26,52 @@ const allMapInfo = {
   ...(typeof extraMapInfoData !== "undefined" ? extraMapInfoData : {})
 };
 const allDefensiveEarly = typeof defensiveEarlyData !== "undefined" ? defensiveEarlyData : {};
-const safeSgeMapControlData = typeof mapControlData !== "undefined" ? mapControlData : {};
-const safeFksMapControlData = typeof fksMapControlData !== "undefined" ? fksMapControlData : {};
-const safeRznMapControlData = typeof rznMapControlData !== "undefined" ? rznMapControlData : {};
+// ── Team Config ──────────────────────────────────────────────────────────────
+// To add a new team: add one entry here. All panels, player colors, retake
+// loading, site stats, and map control data derive from this automatically.
+// Nothing else in this file needs to change for a new team.
+const TEAMS_CONFIG = {
+  fokus: {
+    filePrefix:   "fks",
+    mapControl:   typeof fksMapControlData !== "undefined" ? fksMapControlData : {},
+    statMaps:     ["Bind", "Breeze", "Fracture", "Lotus", "Pearl", "Split"],
+    retakeMaps:   ["Bind", "Breeze", "Fracture", "Lotus", "Pearl", "Split"],
+    playerColors: { "MOLSI": "#e53935", "shinnok": "#f1d500", "Serial": "#00e676", "pyrolll": "#ff4dac", "pa1ze": "#1f4fd6", "cullum": "#ff7f0e" },
+    playerOrder:  ["MOLSI", "shinnok", "Serial", "pyrolll", "pa1ze", "cullum"],
+  },
+  eintracht: {
+    filePrefix:   "sge",
+    mapControl:   typeof mapControlData    !== "undefined" ? mapControlData    : {},
+    statMaps:     ["Bind", "Breeze", "Fracture", "Lotus", "Pearl", "Split"],
+    retakeMaps:   ["Bind", "Breeze", "Lotus", "Pearl", "Split", "Fracture"],
+    playerColors: { "Jamelinho": "#e53935", "Fizzy": "#f1d500", "MONSTEERR": "#00e676", "azury": "#ff4dac", "musashi": "#1f4fd6", "Ben1": "#ff7f0e" },
+    playerOrder:  ["Jamelinho", "Fizzy", "MONSTEERR", "azury", "musashi", "Ben1"],
+  },
+  rizon: {
+    filePrefix:   "rzn",
+    mapControl:   typeof rznMapControlData !== "undefined" ? rznMapControlData : {},
+    statMaps:     ["Bind", "Breeze", "Haven", "Lotus", "Split"],
+    retakeMaps:   ["Bind", "Breeze", "Haven", "Lotus", "Split"],
+    playerColors: { "Puggy": "#e53935", "BarcK": "#f1d500", "deyten": "#00e676", "Opex": "#ff4dac", "Bumbibjorn1": "#1f4fd6" },
+    playerOrder:  ["Puggy", "BarcK", "deyten", "Opex", "Bumbibjorn1"],
+  },
+};
+// Derived — do not edit these directly; update TEAMS_CONFIG above instead
+const TEAM_MAP_CONTROL_DATA = Object.fromEntries(
+  Object.entries(TEAMS_CONFIG).map(([key, cfg]) => [key, cfg.mapControl])
+);
 const allDefensiveRetake = {};
 const RETAKE_DATA_VERSION = "20260428a";
-const RETAKE_DATA_SOURCES = [
-  { team: "eintracht", side: "ct", map: "Bind",     url: `./data/sge_bind_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "eintracht", side: "ct", map: "Breeze",   url: `./data/sge_breeze_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "eintracht", side: "ct", map: "Lotus",    url: `./data/sge_lotus_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "eintracht", side: "ct", map: "Pearl",    url: `./data/sge_pearl_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "eintracht", side: "ct", map: "Split",    url: `./data/sge_split_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "eintracht", side: "ct", map: "Fracture", url: `./data/sge_fracture_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "eintracht", side: "t",  map: "Bind",     url: `./data/sge_bind_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "eintracht", side: "t",  map: "Breeze",   url: `./data/sge_breeze_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "eintracht", side: "t",  map: "Lotus",    url: `./data/sge_lotus_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "eintracht", side: "t",  map: "Pearl",    url: `./data/sge_pearl_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "eintracht", side: "t",  map: "Split",    url: `./data/sge_split_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "eintracht", side: "t",  map: "Fracture", url: `./data/sge_fracture_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "fokus",     side: "ct", map: "Bind",     url: `./data/fks_bind_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "fokus",     side: "ct", map: "Breeze",   url: `./data/fks_breeze_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "fokus",     side: "ct", map: "Fracture", url: `./data/fks_fracture_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "fokus",     side: "ct", map: "Lotus",    url: `./data/fks_lotus_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "fokus",     side: "ct", map: "Pearl",    url: `./data/fks_pearl_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "fokus",     side: "ct", map: "Split",    url: `./data/fks_split_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "fokus",     side: "t",  map: "Bind",     url: `./data/fks_bind_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "fokus",     side: "t",  map: "Breeze",   url: `./data/fks_breeze_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "fokus",     side: "t",  map: "Fracture", url: `./data/fks_fracture_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "fokus",     side: "t",  map: "Lotus",    url: `./data/fks_lotus_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "fokus",     side: "t",  map: "Pearl",    url: `./data/fks_pearl_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "fokus",     side: "t",  map: "Split",    url: `./data/fks_split_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "rizon",     side: "ct", map: "Bind",     url: `./data/rzn_bind_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "rizon",     side: "ct", map: "Breeze",   url: `./data/rzn_breeze_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "rizon",     side: "ct", map: "Haven",    url: `./data/rzn_haven_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "rizon",     side: "ct", map: "Lotus",    url: `./data/rzn_lotus_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "rizon",     side: "ct", map: "Split",    url: `./data/rzn_split_ct_retake_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "rizon",     side: "t",  map: "Bind",     url: `./data/rzn_bind_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "rizon",     side: "t",  map: "Breeze",   url: `./data/rzn_breeze_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "rizon",     side: "t",  map: "Haven",    url: `./data/rzn_haven_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "rizon",     side: "t",  map: "Lotus",    url: `./data/rzn_lotus_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-  { team: "rizon",     side: "t",  map: "Split",    url: `./data/rzn_split_t_postplant_positions_last3.json?v=${RETAKE_DATA_VERSION}` },
-];
+const RETAKE_DATA_SOURCES = Object.entries(TEAMS_CONFIG).flatMap(([team, cfg]) =>
+  ["ct", "t"].flatMap(side =>
+    cfg.retakeMaps.map(map => ({
+      team,
+      side,
+      map,
+      url: `./data/${cfg.filePrefix}_${map.toLowerCase()}_${side === "ct" ? "ct_retake" : "t_postplant"}_positions_last3.json?v=${RETAKE_DATA_VERSION}`,
+    }))
+  )
+);
   const MAP_IMAGE_VERSION = "20260412-riot";
   const MAP_IMAGE_ASPECTS = {
     Bind: 1,
@@ -101,7 +106,7 @@ const calibrationOverrides = {
   "dortmund|Haven|t": []
 };
 
-const teamOrder = ["fokus", "eintracht", "rizon"].filter((key) => allVetoHistoryData[key]);
+const teamOrder = Object.keys(TEAMS_CONFIG).filter((key) => allVetoHistoryData[key]);
 let activeTeam = teamOrder[0];
 let activeView = "veto";
 let startDateFilter = "";
@@ -117,18 +122,14 @@ let ppInlineActiveSites = new Set(["A", "B", "C"]);
 let lastDefensiveInfo = null;
 let allSiteStats = {}; // { teamKey: { mapName: data } }
 const TEAM_FILE_PREFIX = {
-  eintracht: "sge",
-  fokus: "fks",
+  ...Object.fromEntries(Object.entries(TEAMS_CONFIG).map(([key, cfg]) => [key, cfg.filePrefix])),
   attax: "atn",
-  rizon: "rzn",
-  eco: "eco",
+  eco:   "eco",
 };
-const TEAMS_WITH_SITE_STATS = new Set(["eintracht", "fokus", "rizon"]);
-const TEAM_STAT_MAPS = {
-  eintracht: ["Bind", "Breeze", "Fracture", "Lotus", "Pearl", "Split"],
-  fokus:     ["Bind", "Breeze", "Fracture", "Lotus", "Pearl", "Split"],
-  rizon:     ["Bind", "Breeze", "Haven", "Lotus", "Split"],
-};
+const TEAMS_WITH_SITE_STATS = new Set(Object.keys(TEAMS_CONFIG));
+const TEAM_STAT_MAPS = Object.fromEntries(
+  Object.entries(TEAMS_CONFIG).map(([key, cfg]) => [key, cfg.statMaps])
+);
 let activeRotationTrail = null;
 let activeRotationWindow = null; // "140_120" | "120_100" | "100_end" | "afterplant" | null
 let fksNewRosterFilter = false;
@@ -847,7 +848,7 @@ function buildPlayerLegendMarkup(players) {
 }
 
 function buildMapControlMarkup(mapName, side, frameClassList, frameStyle, mapImageMarkup, selectedPlayers, sidebarMarkup) {
-  const mcSide = (activeTeam === "fokus" ? safeFksMapControlData : activeTeam === "rizon" ? safeRznMapControlData : activeTeam === "eintracht" ? safeSgeMapControlData : null)?.[mapName]?.[side];
+  const mcSide = TEAM_MAP_CONTROL_DATA[activeTeam]?.[mapName]?.[side];
   if (!mcSide) return "";
 
   const windows = [
@@ -914,7 +915,7 @@ function filterSnapshotsByWindow(snaps, windowKey, plantTimeMs) {
 }
 
 function computeRotationLayers(mapName, side, selectedPlayers) {
-  const mcSide = (activeTeam === "fokus" ? safeFksMapControlData : activeTeam === "rizon" ? safeRznMapControlData : activeTeam === "eintracht" ? safeSgeMapControlData : null)?.[mapName]?.[side];
+  const mcSide = TEAM_MAP_CONTROL_DATA[activeTeam]?.[mapName]?.[side];
   const rotSniperKeySet = new Set(mcSide?.sniperRoundKeys ?? []);
   const allRotRounds = applyNewRosterFilter(mcSide?.rotations ?? []);
   const rounds = (isTestMode && sniperFilterRotation)
@@ -984,7 +985,7 @@ function updateRotationCardInPlace(mapName, side, selectedPlayers) {
 }
 
 function buildRotationMarkup(mapName, side, frameClassList, frameStyle, mapImageMarkup, selectedPlayers, sidebarMarkup) {
-  const mcSide = (activeTeam === "fokus" ? safeFksMapControlData : activeTeam === "rizon" ? safeRznMapControlData : activeTeam === "eintracht" ? safeSgeMapControlData : null)?.[mapName]?.[side];
+  const mcSide = TEAM_MAP_CONTROL_DATA[activeTeam]?.[mapName]?.[side];
   if (!mcSide) return "";
 
   const rounds = mcSide.rotations ?? [];
@@ -1719,45 +1720,20 @@ function render() {
 
 /* ── Post-Plant / Retake Module ── */
 
-// Canonical player colors — keyed by short name (without team prefix).
-// Used everywhere: early positioning, sniper kills, retake, post-plant.
-const SGE_PLAYER_COLORS = {
-  "Jamelinho": "#e53935",
-  "Fizzy":     "#f1d500",
-  "MONSTEERR": "#00e676",
-  "azury":     "#ff4dac",
-  "musashi":   "#1f4fd6",
-  "Ben1":      "#ff7f0e",
-};
-const SGE_PLAYER_ORDER = ["Jamelinho", "Fizzy", "MONSTEERR", "azury", "musashi", "Ben1"];
-
-const FKS_PLAYER_COLORS = {
-  "MOLSI":   "#e53935",
-  "shinnok": "#f1d500",
-  "Serial":  "#00e676",
-  "pyrolll": "#ff4dac",
-  "pa1ze":   "#1f4fd6",
-  "cullum":  "#ff7f0e",
-};
-const FKS_PLAYER_ORDER = ["MOLSI", "shinnok", "Serial", "pyrolll", "pa1ze", "cullum"];
-
-const RZN_PLAYER_COLORS = {
-  "Puggy":       "#e53935",
-  "BarcK":       "#f1d500",
-  "deyten":      "#00e676",
-  "Opex":        "#ff4dac",
-  "Bumbibjorn1": "#1f4fd6",
-};
-const RZN_PLAYER_ORDER = ["Puggy", "BarcK", "deyten", "Opex", "Bumbibjorn1"];
+// Team prefix strip pattern derived from TEAMS_CONFIG — updates automatically for new teams
+const _TEAM_PREFIX_RE = new RegExp(
+  `^(?:${Object.values(TEAMS_CONFIG).map(c => c.filePrefix.toUpperCase()).join("|")})\\s+`
+);
 
 function stripTeamPrefix(name) {
-  return name.replace(/^(?:SGE|FKS|RZN)\s+/, "");
+  return String(name ?? "").replace(_TEAM_PREFIX_RE, "");
 }
 
 function sortByPlayerOrder(players) {
+  const order = TEAMS_CONFIG[activeTeam]?.playerOrder ?? [];
   return [...players].sort((a, b) => {
-    const ai = SGE_PLAYER_ORDER.indexOf(a.replace(/^SGE\s+/, ""));
-    const bi = SGE_PLAYER_ORDER.indexOf(b.replace(/^SGE\s+/, ""));
+    const ai = order.indexOf(stripTeamPrefix(a));
+    const bi = order.indexOf(stripTeamPrefix(b));
     if (ai === -1 && bi === -1) return a.localeCompare(b);
     if (ai === -1) return 1;
     if (bi === -1) return -1;
@@ -1767,7 +1743,10 @@ function sortByPlayerOrder(players) {
 
 function getPlayerColor(name) {
   const short = stripTeamPrefix(name);
-  return SGE_PLAYER_COLORS[short] ?? FKS_PLAYER_COLORS[short] ?? RZN_PLAYER_COLORS[short] ?? "#888888";
+  for (const cfg of Object.values(TEAMS_CONFIG)) {
+    if (cfg.playerColors[short]) return cfg.playerColors[short];
+  }
+  return "#888888";
 }
 
 function ppGetColor(player) {

@@ -39,22 +39,6 @@ const TEAMS_CONFIG = {
     playerColors: { "MOLSI": "#e53935", "shinnok": "#f1d500", "Serial": "#00e676", "pyrolll": "#ff4dac", "pa1ze": "#1f4fd6", "cullum": "#ff7f0e" },
     playerOrder:  ["MOLSI", "shinnok", "Serial", "pyrolll", "pa1ze", "cullum"],
   },
-  eintracht: {
-    filePrefix:   "sge",
-    mapControl:   typeof mapControlData    !== "undefined" ? mapControlData    : {},
-    statMaps:     ["Bind", "Breeze", "Fracture", "Lotus", "Pearl", "Split"],
-    retakeMaps:   ["Bind", "Breeze", "Lotus", "Pearl", "Split", "Fracture"],
-    playerColors: { "Jamelinho": "#e53935", "Fizzy": "#f1d500", "MONSTEERR": "#00e676", "azury": "#ff4dac", "musashi": "#1f4fd6", "Ben1": "#ff7f0e" },
-    playerOrder:  ["Jamelinho", "Fizzy", "MONSTEERR", "azury", "musashi", "Ben1"],
-  },
-  rizon: {
-    filePrefix:   "rzn",
-    mapControl:   typeof rznMapControlData !== "undefined" ? rznMapControlData : {},
-    statMaps:     ["Bind", "Breeze", "Haven", "Lotus", "Split"],
-    retakeMaps:   ["Bind", "Breeze", "Haven", "Lotus", "Split"],
-    playerColors: { "Puggy": "#e53935", "BarcK": "#f1d500", "deyten": "#00e676", "Opex": "#ff4dac", "Bumbibjorn1": "#1f4fd6" },
-    playerOrder:  ["Puggy", "BarcK", "deyten", "Opex", "Bumbibjorn1"],
-  },
   enterprise: {
     filePrefix:   "ep",
     mapControl:   typeof epMapControlData !== "undefined" ? epMapControlData : {},
@@ -130,7 +114,7 @@ const TEAMS_CONFIG = {
   ucam: {
     filePrefix:   "ucam",
     mapControl:   typeof ucamMapControlData !== "undefined" ? ucamMapControlData : {},
-    statMaps:     ["Bind", "Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
+    statMaps:     ["Bind", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
     retakeMaps:   ["Bind", "Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
     playerColors: { "B1SK": "#1565C0", "BULD": "#F9A825", "Famsii": "#C62828", "Jesse": "#2E7D32", "OLIZERA": "#E91E63" },
     playerOrder:  ["B1SK", "BULD", "Famsii", "Jesse", "OLIZERA"],

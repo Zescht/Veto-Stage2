@@ -392,6 +392,7 @@ function renderInsights(team) {
 }
 
 function makeStepCell(step, row, stepKey) {
+  if (!step) return `<td class="map-cell"><div class="map-pill ban empty"><p class="map-name">—</p></div></td>`;
   const ownerText = step.ownerLabel === "-" ? "-" : step.ownerLabel;
   if (step.type === "pick") {
     const stepMeta = getStepMeta(row, stepKey);

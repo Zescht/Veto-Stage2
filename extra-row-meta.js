@@ -1,4 +1,61 @@
 const extraVetoRowMeta = {
+  "nvjunior": {
+    "2026-04-06|BAIG": {
+      "pick1": { "teamStartSide": "NVJ T-SIDE" },
+      "pick2": { "teamStartSide": "NVJ CT-SIDE" }
+    },
+    "2026-04-11|LP": {
+      "pick1": { "teamStartSide": "NVJ CT-SIDE" },
+      "pick2": { "teamStartSide": "NVJ T-SIDE" }
+    },
+    "2026-04-12|LEO": {
+      "pick1": { "teamStartSide": "NVJ T-SIDE" }
+    },
+    "2026-04-13|PXL": {
+      "pick1": { "teamStartSide": "NVJ T-SIDE" },
+      "pick2": { "teamStartSide": "NVJ CT-SIDE" },
+      "decider": { "teamStartSide": "NVJ CT-SIDE" }
+    },
+    "2026-04-14|FMG": {
+      "pick1": { "teamStartSide": "NVJ T-SIDE" },
+      "pick2": { "teamStartSide": "NVJ CT-SIDE" }
+    },
+    "2026-04-21|TL": {
+      "pick1": { "teamStartSide": "NVJ CT-SIDE" },
+      "pick2": { "teamStartSide": "NVJ T-SIDE" }
+    },
+    "2026-04-05|EP": {
+      "pick1": { "teamStartSide": "NVJ CT-SIDE" },
+      "pick2": { "teamStartSide": "NVJ CT-SIDE" }
+    }
+  },
+  "enterprise": {
+    "2026-05-07|M1R": {
+      "pick1": { "teamStartSide": "EP T-SIDE" },
+      "pick2": { "teamStartSide": "EP CT-SIDE" }
+    },
+    "2026-05-05|TL": {
+      "pick1": { "teamStartSide": "EP T-SIDE" },
+      "pick2": { "teamStartSide": "EP CT-SIDE" },
+      "decider": { "teamStartSide": "EP T-SIDE" }
+    },
+    "2026-04-27|BONK": {
+      "pick1": { "teamStartSide": "EP T-SIDE" },
+      "pick2": { "teamStartSide": "EP T-SIDE" }
+    },
+    "2026-04-13|BAIG": {
+      "pick1": { "teamStartSide": "EP CT-SIDE" },
+      "pick2": { "teamStartSide": "EP T-SIDE" }
+    },
+    "2026-04-11|LEO": {
+      "pick1": { "teamStartSide": "EP T-SIDE" },
+      "pick2": { "teamStartSide": "EP CT-SIDE" }
+    },
+    "2026-04-05|NVJ": {
+      "pick1": { "teamStartSide": "EP T-SIDE" },
+      "pick2": { "teamStartSide": "EP T-SIDE" }
+    }
+  },
   "attax": {
     "2026-04-07|SGE": {
       "pick1": {

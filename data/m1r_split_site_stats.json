@@ -1,0 +1,78 @@
+{
+  "t_side": {
+    "total_rounds": 34,
+    "sites": {
+      "A": {
+        "plant_count": 12,
+        "pct_plant": 54.5,
+        "pct_win": 58.3,
+        "avg_plant_time": 61.2,
+        "min_plant_time": 23.1,
+        "max_plant_time": 100.1,
+        "fk_to_plant_avg": 44.2,
+        "fk_to_plant_n": 8
+      },
+      "B": {
+        "plant_count": 10,
+        "pct_plant": 45.5,
+        "pct_win": 60.0,
+        "avg_plant_time": 66.3,
+        "min_plant_time": 30.3,
+        "max_plant_time": 92.2,
+        "fk_to_plant_avg": 42.1,
+        "fk_to_plant_n": 9
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 43,
+    "won_by_kills": 10,
+    "pct_won_by_kills": 23.3,
+    "won_by_defuse": 7,
+    "pct_won_by_defuse": 16.3,
+    "sites": {
+      "A": {
+        "plant_count": 16,
+        "defuse_count": 6,
+        "pct_defuse_win": 37.5,
+        "pct_defuse_share": 85.7,
+        "avg_defuse_time": 32.8,
+        "fk_after_plant_avg": 16.9,
+        "fk_after_plant_n": 13
+      },
+      "B": {
+        "plant_count": 17,
+        "defuse_count": 1,
+        "pct_defuse_win": 5.9,
+        "pct_defuse_share": 14.3,
+        "avg_defuse_time": 26.9,
+        "fk_after_plant_avg": 18.6,
+        "fk_after_plant_n": 8
+      }
+    }
+  },
+  "team": "MIR",
+  "map": "Split",
+  "matches": [
+    {
+      "date": "2026-05-07",
+      "opponent": "EP",
+      "matchId": "cecf19a2-5a5e-4b9d-886c-7b24702013c1"
+    },
+    {
+      "date": "2026-04-21",
+      "opponent": "EP",
+      "matchId": "7321301a-9c28-4075-8015-1703a8356a40"
+    },
+    {
+      "date": "2026-04-13",
+      "opponent": "XD",
+      "matchId": "a51d04ac-e062-4bbe-8b76-2b89776e6724"
+    },
+    {
+      "date": "2026-04-04",
+      "opponent": "TL",
+      "matchId": "f9695786-9224-4d51-9489-246d045f34ae"
+    }
+  ]
+}

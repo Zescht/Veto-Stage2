@@ -1,0 +1,73 @@
+{
+  "t_side": {
+    "total_rounds": 32,
+    "sites": {
+      "A": {
+        "plant_count": 18,
+        "pct_plant": 72.0,
+        "pct_win": 66.7,
+        "avg_plant_time": 49.7,
+        "min_plant_time": 22.1,
+        "max_plant_time": 84.4,
+        "fk_to_plant_avg": 26.2,
+        "fk_to_plant_n": 17
+      },
+      "B": {
+        "plant_count": 7,
+        "pct_plant": 28.0,
+        "pct_win": 57.1,
+        "avg_plant_time": 46.7,
+        "min_plant_time": 20.6,
+        "max_plant_time": 86.4,
+        "fk_to_plant_avg": 31.4,
+        "fk_to_plant_n": 6
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 35,
+    "won_by_kills": 11,
+    "pct_won_by_kills": 31.4,
+    "won_by_defuse": 7,
+    "pct_won_by_defuse": 20.0,
+    "sites": {
+      "A": {
+        "plant_count": 11,
+        "defuse_count": 2,
+        "pct_defuse_win": 18.2,
+        "pct_defuse_share": 28.6,
+        "avg_defuse_time": 20.0,
+        "fk_after_plant_avg": 14.8,
+        "fk_after_plant_n": 8
+      },
+      "B": {
+        "plant_count": 12,
+        "defuse_count": 5,
+        "pct_defuse_win": 41.7,
+        "pct_defuse_share": 71.4,
+        "avg_defuse_time": 36.7,
+        "fk_after_plant_avg": 19.1,
+        "fk_after_plant_n": 9
+      }
+    }
+  },
+  "team": "Team Liquid Academy",
+  "map": "Breeze",
+  "matches": [
+    {
+      "date": "2026-04-13",
+      "opponent": "UNI",
+      "matchId": "80a3b373-711a-4dd8-9626-e90063a4bddc"
+    },
+    {
+      "date": "2026-04-12",
+      "opponent": "VR2",
+      "matchId": "3706855d-0343-4626-ab8a-2b6191373aff"
+    },
+    {
+      "date": "2026-04-11",
+      "opponent": "200",
+      "matchId": "73282d23-90de-4ede-aa80-b2a52da82c70"
+    }
+  ]
+}

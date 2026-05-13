@@ -1,0 +1,290 @@
+{
+  "map": "Pearl",
+  "side": "ct",
+  "selectedMaps": [
+    {
+      "date": "2026-05-12",
+      "opponent": "WIP",
+      "matchId": "cd2fe7a1-b76d-42c4-b8c9-8a6bf1c8868a",
+      "score": "7-13"
+    },
+    {
+      "date": "2026-05-04",
+      "opponent": "MDR",
+      "matchId": "354660a0-d4fb-4a04-8c1f-cbf0d59a56cd",
+      "score": "13-8"
+    },
+    {
+      "date": "2026-04-19",
+      "opponent": "NXR",
+      "matchId": "2281b2f5-ffbb-42b6-b19b-b6daa357bd10",
+      "score": "13-6"
+    }
+  ],
+  "sites": {
+    "A": {
+      "roundCount": 4,
+      "pointCount": 11,
+      "points": [
+        {
+          "site": "A",
+          "player": "kamyk",
+          "normX": 92.7643,
+          "normY": 28.7024,
+          "roundNum": 12,
+          "plantRoundTimeMs": 90379,
+          "date": "2026-05-04",
+          "opponent": "MDR",
+          "matchId": "354660a0-d4fb-4a04-8c1f-cbf0d59a56cd",
+          "score": "13-8"
+        },
+        {
+          "site": "A",
+          "player": "Doma",
+          "normX": 58.7095,
+          "normY": 15.2318,
+          "roundNum": 12,
+          "plantRoundTimeMs": 90379,
+          "date": "2026-05-04",
+          "opponent": "MDR",
+          "matchId": "354660a0-d4fb-4a04-8c1f-cbf0d59a56cd",
+          "score": "13-8"
+        },
+        {
+          "site": "A",
+          "player": "chiwa",
+          "normX": 53.7253,
+          "normY": 16.5422,
+          "roundNum": 12,
+          "plantRoundTimeMs": 90379,
+          "date": "2026-05-04",
+          "opponent": "MDR",
+          "matchId": "354660a0-d4fb-4a04-8c1f-cbf0d59a56cd",
+          "score": "13-8"
+        },
+        {
+          "site": "A",
+          "player": "UNFAKE",
+          "normX": 85.6897,
+          "normY": 19.358,
+          "roundNum": 12,
+          "plantRoundTimeMs": 90379,
+          "date": "2026-05-04",
+          "opponent": "MDR",
+          "matchId": "354660a0-d4fb-4a04-8c1f-cbf0d59a56cd",
+          "score": "13-8"
+        },
+        {
+          "site": "A",
+          "player": "Doma",
+          "normX": 75.4405,
+          "normY": 72.8192,
+          "roundNum": 13,
+          "plantRoundTimeMs": 62058,
+          "date": "2026-05-04",
+          "opponent": "MDR",
+          "matchId": "354660a0-d4fb-4a04-8c1f-cbf0d59a56cd",
+          "score": "13-8"
+        },
+        {
+          "site": "A",
+          "player": "chiwa",
+          "normX": 45.9019,
+          "normY": 43.3118,
+          "roundNum": 13,
+          "plantRoundTimeMs": 62058,
+          "date": "2026-05-04",
+          "opponent": "MDR",
+          "matchId": "354660a0-d4fb-4a04-8c1f-cbf0d59a56cd",
+          "score": "13-8"
+        },
+        {
+          "site": "A",
+          "player": "UNFAKE",
+          "normX": 73.9585,
+          "normY": 75.5414,
+          "roundNum": 13,
+          "plantRoundTimeMs": 62058,
+          "date": "2026-05-04",
+          "opponent": "MDR",
+          "matchId": "354660a0-d4fb-4a04-8c1f-cbf0d59a56cd",
+          "score": "13-8"
+        },
+        {
+          "site": "A",
+          "player": "Doma",
+          "normX": 76.0879,
+          "normY": 37.0016,
+          "roundNum": 12,
+          "plantRoundTimeMs": 76433,
+          "date": "2026-04-19",
+          "opponent": "NXR",
+          "matchId": "2281b2f5-ffbb-42b6-b19b-b6daa357bd10",
+          "score": "13-6"
+        },
+        {
+          "site": "A",
+          "player": "kamyk",
+          "normX": 14.7097,
+          "normY": 29.5448,
+          "roundNum": 13,
+          "plantRoundTimeMs": 52655,
+          "date": "2026-04-19",
+          "opponent": "NXR",
+          "matchId": "2281b2f5-ffbb-42b6-b19b-b6daa357bd10",
+          "score": "13-6"
+        },
+        {
+          "site": "A",
+          "player": "chiwa",
+          "normX": 88.0219,
+          "normY": 19.67,
+          "roundNum": 13,
+          "plantRoundTimeMs": 52655,
+          "date": "2026-04-19",
+          "opponent": "NXR",
+          "matchId": "2281b2f5-ffbb-42b6-b19b-b6daa357bd10",
+          "score": "13-6"
+        },
+        {
+          "site": "A",
+          "player": "Doma",
+          "normX": 88.6381,
+          "normY": 23.0084,
+          "roundNum": 13,
+          "plantRoundTimeMs": 52655,
+          "date": "2026-04-19",
+          "opponent": "NXR",
+          "matchId": "2281b2f5-ffbb-42b6-b19b-b6daa357bd10",
+          "score": "13-6"
+        }
+      ]
+    },
+    "B": {
+      "roundCount": 3,
+      "pointCount": 10,
+      "points": [
+        {
+          "site": "B",
+          "player": "kamyk",
+          "normX": 7.2607,
+          "normY": 58.7636,
+          "roundNum": 18,
+          "plantRoundTimeMs": 81425,
+          "date": "2026-05-04",
+          "opponent": "MDR",
+          "matchId": "354660a0-d4fb-4a04-8c1f-cbf0d59a56cd",
+          "score": "13-8"
+        },
+        {
+          "site": "B",
+          "player": "Doma",
+          "normX": 32.8759,
+          "normY": 32.5088,
+          "roundNum": 18,
+          "plantRoundTimeMs": 81425,
+          "date": "2026-05-04",
+          "opponent": "MDR",
+          "matchId": "354660a0-d4fb-4a04-8c1f-cbf0d59a56cd",
+          "score": "13-8"
+        },
+        {
+          "site": "B",
+          "player": "runneR",
+          "normX": 52.3603,
+          "normY": 19.9976,
+          "roundNum": 18,
+          "plantRoundTimeMs": 81425,
+          "date": "2026-05-04",
+          "opponent": "MDR",
+          "matchId": "354660a0-d4fb-4a04-8c1f-cbf0d59a56cd",
+          "score": "13-8"
+        },
+        {
+          "site": "B",
+          "player": "kamyk",
+          "normX": 23.4691,
+          "normY": 39.2714,
+          "roundNum": 15,
+          "plantRoundTimeMs": 74136,
+          "date": "2026-04-19",
+          "opponent": "NXR",
+          "matchId": "2281b2f5-ffbb-42b6-b19b-b6daa357bd10",
+          "score": "13-6"
+        },
+        {
+          "site": "B",
+          "player": "chiwa",
+          "normX": 44.0143,
+          "normY": 21.4016,
+          "roundNum": 15,
+          "plantRoundTimeMs": 74136,
+          "date": "2026-04-19",
+          "opponent": "NXR",
+          "matchId": "2281b2f5-ffbb-42b6-b19b-b6daa357bd10",
+          "score": "13-6"
+        },
+        {
+          "site": "B",
+          "player": "Doma",
+          "normX": 15.3259,
+          "normY": 72.5228,
+          "roundNum": 15,
+          "plantRoundTimeMs": 74136,
+          "date": "2026-04-19",
+          "opponent": "NXR",
+          "matchId": "2281b2f5-ffbb-42b6-b19b-b6daa357bd10",
+          "score": "13-6"
+        },
+        {
+          "site": "B",
+          "player": "UNFAKE",
+          "normX": 13.7191,
+          "normY": 71.1968,
+          "roundNum": 15,
+          "plantRoundTimeMs": 74136,
+          "date": "2026-04-19",
+          "opponent": "NXR",
+          "matchId": "2281b2f5-ffbb-42b6-b19b-b6daa357bd10",
+          "score": "13-6"
+        },
+        {
+          "site": "B",
+          "player": "runneR",
+          "normX": 4.8661,
+          "normY": 61.3532,
+          "roundNum": 15,
+          "plantRoundTimeMs": 74136,
+          "date": "2026-04-19",
+          "opponent": "NXR",
+          "matchId": "2281b2f5-ffbb-42b6-b19b-b6daa357bd10",
+          "score": "13-6"
+        },
+        {
+          "site": "B",
+          "player": "kamyk",
+          "normX": 22.2601,
+          "normY": 39.0608,
+          "roundNum": 17,
+          "plantRoundTimeMs": 78449,
+          "date": "2026-04-19",
+          "opponent": "NXR",
+          "matchId": "2281b2f5-ffbb-42b6-b19b-b6daa357bd10",
+          "score": "13-6"
+        },
+        {
+          "site": "B",
+          "player": "UNFAKE",
+          "normX": 35.2003,
+          "normY": 30.668,
+          "roundNum": 17,
+          "plantRoundTimeMs": 78449,
+          "date": "2026-04-19",
+          "opponent": "NXR",
+          "matchId": "2281b2f5-ffbb-42b6-b19b-b6daa357bd10",
+          "score": "13-6"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "t_side": {
+    "total_rounds": 18,
+    "sites": {
+      "A": {
+        "plant_count": 9,
+        "pct_plant": 60.0,
+        "pct_win": 66.7,
+        "avg_plant_time": 66.9,
+        "min_plant_time": 40.7,
+        "max_plant_time": 95.9,
+        "fk_to_plant_avg": 33.6,
+        "fk_to_plant_n": 7
+      },
+      "B": {
+        "plant_count": 6,
+        "pct_plant": 40.0,
+        "pct_win": 100.0,
+        "avg_plant_time": 59.6,
+        "min_plant_time": 27.8,
+        "max_plant_time": 97.0,
+        "fk_to_plant_avg": 31.8,
+        "fk_to_plant_n": 5
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 24,
+    "won_by_kills": 9,
+    "pct_won_by_kills": 37.5,
+    "won_by_defuse": 5,
+    "pct_won_by_defuse": 20.8,
+    "sites": {
+      "A": {
+        "plant_count": 7,
+        "defuse_count": 3,
+        "pct_defuse_win": 42.9,
+        "pct_defuse_share": 60.0,
+        "avg_defuse_time": 36.2,
+        "fk_after_plant_avg": 7.3,
+        "fk_after_plant_n": 5
+      },
+      "B": {
+        "plant_count": 7,
+        "defuse_count": 2,
+        "pct_defuse_win": 28.6,
+        "pct_defuse_share": 40.0,
+        "avg_defuse_time": 27.9,
+        "fk_after_plant_avg": 16.1,
+        "fk_after_plant_n": 5
+      }
+    }
+  },
+  "team": "NAVI Junior",
+  "map": "Split",
+  "matches": [
+    {
+      "date": "2026-04-21",
+      "opponent": "TLA",
+      "matchId": "da551aa8-48de-474d-aff3-1d2738578d4d"
+    },
+    {
+      "date": "2026-04-12",
+      "opponent": "LEO",
+      "matchId": "260f31e5-6d02-481a-bd4e-d5e6bb451704"
+    }
+  ]
+}

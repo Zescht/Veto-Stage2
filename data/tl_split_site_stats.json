@@ -1,0 +1,88 @@
+{
+  "t_side": {
+    "total_rounds": 62,
+    "sites": {
+      "A": {
+        "plant_count": 24,
+        "pct_plant": 58.5,
+        "pct_win": 58.3,
+        "avg_plant_time": 64.3,
+        "min_plant_time": 13.1,
+        "max_plant_time": 89.2,
+        "fk_to_plant_avg": 29.5,
+        "fk_to_plant_n": 21
+      },
+      "B": {
+        "plant_count": 17,
+        "pct_plant": 41.5,
+        "pct_win": 88.2,
+        "avg_plant_time": 53.1,
+        "min_plant_time": 22.8,
+        "max_plant_time": 88.1,
+        "fk_to_plant_avg": 25.5,
+        "fk_to_plant_n": 15
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 63,
+    "won_by_kills": 26,
+    "pct_won_by_kills": 41.3,
+    "won_by_defuse": 10,
+    "pct_won_by_defuse": 15.9,
+    "sites": {
+      "A": {
+        "plant_count": 22,
+        "defuse_count": 5,
+        "pct_defuse_win": 22.7,
+        "pct_defuse_share": 50.0,
+        "avg_defuse_time": 31.2,
+        "fk_after_plant_avg": 15.1,
+        "fk_after_plant_n": 12
+      },
+      "B": {
+        "plant_count": 14,
+        "defuse_count": 5,
+        "pct_defuse_win": 35.7,
+        "pct_defuse_share": 50.0,
+        "avg_defuse_time": 28.8,
+        "fk_after_plant_avg": 10.1,
+        "fk_after_plant_n": 11
+      }
+    }
+  },
+  "team": "Team Liquid Academy",
+  "map": "Split",
+  "matches": [
+    {
+      "date": "2026-04-13",
+      "opponent": "UNI",
+      "matchId": "41bb32a2-9ea6-47bf-b83b-ad01f1d2dd32"
+    },
+    {
+      "date": "2026-04-12",
+      "opponent": "VR2",
+      "matchId": "a41f0cfb-f202-446c-8ec7-6aa34d98143e"
+    },
+    {
+      "date": "2026-04-11",
+      "opponent": "200",
+      "matchId": "485ba5ad-fea5-43a0-9d59-a19dfc456ce3"
+    },
+    {
+      "date": "2026-04-06",
+      "opponent": "EVO",
+      "matchId": "54d02e57-4508-4e40-9277-6250f7e27f22"
+    },
+    {
+      "date": "2026-04-05",
+      "opponent": "XD",
+      "matchId": "380c0e00-a212-45d4-aad1-c47364d0ff3d"
+    },
+    {
+      "date": "2026-04-04",
+      "opponent": "M1R",
+      "matchId": "f9695786-9224-4d51-9489-246d045f34ae"
+    }
+  ]
+}

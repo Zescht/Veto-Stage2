@@ -1,0 +1,63 @@
+{
+  "t_side": {
+    "total_rounds": 8,
+    "sites": {
+      "A": {
+        "plant_count": 4,
+        "pct_plant": 66.7,
+        "pct_win": 75.0,
+        "avg_plant_time": 48.4,
+        "min_plant_time": 36.1,
+        "max_plant_time": 76.3,
+        "fk_to_plant_avg": 24.4,
+        "fk_to_plant_n": 3
+      },
+      "B": {
+        "plant_count": 2,
+        "pct_plant": 33.3,
+        "pct_win": 100.0,
+        "avg_plant_time": 69.9,
+        "min_plant_time": 64.3,
+        "max_plant_time": 75.6,
+        "fk_to_plant_avg": 26.3,
+        "fk_to_plant_n": 2
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 12,
+    "won_by_kills": 2,
+    "pct_won_by_kills": 16.7,
+    "won_by_defuse": 0,
+    "pct_won_by_defuse": 0.0,
+    "sites": {
+      "A": {
+        "plant_count": 6,
+        "defuse_count": 0,
+        "pct_defuse_win": 0.0,
+        "pct_defuse_share": null,
+        "avg_defuse_time": null,
+        "fk_after_plant_avg": 17.2,
+        "fk_after_plant_n": 4
+      },
+      "B": {
+        "plant_count": 3,
+        "defuse_count": 0,
+        "pct_defuse_win": 0.0,
+        "pct_defuse_share": null,
+        "avg_defuse_time": null,
+        "fk_after_plant_avg": 7.5,
+        "fk_after_plant_n": 1
+      }
+    }
+  },
+  "team": "Barcelona",
+  "map": "Breeze",
+  "matches": [
+    {
+      "date": "2026-04-12",
+      "opponent": "DSY",
+      "matchId": "cd906374-41f6-4553-85d4-1284f128f375"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "t_side": {
+    "total_rounds": 8,
+    "sites": {
+      "A": {
+        "plant_count": 2,
+        "pct_plant": 40.0,
+        "pct_win": 100.0,
+        "avg_plant_time": 25.6,
+        "min_plant_time": 25.1,
+        "max_plant_time": 26.2,
+        "fk_to_plant_avg": 17.5,
+        "fk_to_plant_n": 1
+      },
+      "B": {
+        "plant_count": 1,
+        "pct_plant": 20.0,
+        "pct_win": 100.0,
+        "avg_plant_time": 73.1,
+        "min_plant_time": 73.1,
+        "max_plant_time": 73.1,
+        "fk_to_plant_avg": 8.1,
+        "fk_to_plant_n": 1
+      },
+      "C": {
+        "plant_count": 2,
+        "pct_plant": 40.0,
+        "pct_win": 0.0,
+        "avg_plant_time": 59.6,
+        "min_plant_time": 59.0,
+        "max_plant_time": 60.3,
+        "fk_to_plant_avg": 52.5,
+        "fk_to_plant_n": 1
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 12,
+    "won_by_kills": 1,
+    "pct_won_by_kills": 8.3,
+    "won_by_defuse": 3,
+    "pct_won_by_defuse": 25.0,
+    "sites": {
+      "A": {
+        "plant_count": 6,
+        "defuse_count": 2,
+        "pct_defuse_win": 33.3,
+        "pct_defuse_share": 66.7,
+        "avg_defuse_time": 35.9,
+        "fk_after_plant_avg": 12.7,
+        "fk_after_plant_n": 2
+      },
+      "B": {
+        "plant_count": 0,
+        "defuse_count": 0,
+        "pct_defuse_win": null,
+        "pct_defuse_share": 0.0,
+        "avg_defuse_time": null,
+        "fk_after_plant_avg": null,
+        "fk_after_plant_n": 0
+      },
+      "C": {
+        "plant_count": 5,
+        "defuse_count": 1,
+        "pct_defuse_win": 20.0,
+        "pct_defuse_share": 33.3,
+        "avg_defuse_time": 29.9,
+        "fk_after_plant_avg": 7.2,
+        "fk_after_plant_n": 3
+      }
+    }
+  },
+  "team": "Barcelona",
+  "map": "Lotus",
+  "matches": [
+    {
+      "date": "2026-04-21",
+      "opponent": "DSY",
+      "matchId": "243e7cc4-33e4-429e-b6a7-94f897b8a0c7"
+    }
+  ]
+}

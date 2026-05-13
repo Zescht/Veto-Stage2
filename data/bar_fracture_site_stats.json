@@ -1,0 +1,88 @@
+{
+  "t_side": {
+    "total_rounds": 59,
+    "sites": {
+      "A": {
+        "plant_count": 23,
+        "pct_plant": 53.5,
+        "pct_win": 73.9,
+        "avg_plant_time": 49.2,
+        "min_plant_time": 22.7,
+        "max_plant_time": 95.0,
+        "fk_to_plant_avg": 27.0,
+        "fk_to_plant_n": 21
+      },
+      "B": {
+        "plant_count": 20,
+        "pct_plant": 46.5,
+        "pct_win": 65.0,
+        "avg_plant_time": 44.8,
+        "min_plant_time": 21.5,
+        "max_plant_time": 90.3,
+        "fk_to_plant_avg": 21.2,
+        "fk_to_plant_n": 15
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 74,
+    "won_by_kills": 31,
+    "pct_won_by_kills": 41.9,
+    "won_by_defuse": 16,
+    "pct_won_by_defuse": 21.6,
+    "sites": {
+      "A": {
+        "plant_count": 23,
+        "defuse_count": 10,
+        "pct_defuse_win": 43.5,
+        "pct_defuse_share": 62.5,
+        "avg_defuse_time": 29.4,
+        "fk_after_plant_avg": 12.6,
+        "fk_after_plant_n": 14
+      },
+      "B": {
+        "plant_count": 18,
+        "defuse_count": 6,
+        "pct_defuse_win": 33.3,
+        "pct_defuse_share": 37.5,
+        "avg_defuse_time": 28.1,
+        "fk_after_plant_avg": 14.9,
+        "fk_after_plant_n": 14
+      }
+    }
+  },
+  "team": "Barcelona",
+  "map": "Fracture",
+  "matches": [
+    {
+      "date": "2026-05-05",
+      "opponent": "RBT",
+      "matchId": "62d210ca-b0d5-46e6-9fb9-a4271c3189c1"
+    },
+    {
+      "date": "2026-04-28",
+      "opponent": "UCAM",
+      "matchId": "43fef650-29f8-4f15-9e65-82d73c57cc2e"
+    },
+    {
+      "date": "2026-04-21",
+      "opponent": "DSY",
+      "matchId": "317dc28d-0ee1-4748-abfb-09b2ab2f1420"
+    },
+    {
+      "date": "2026-04-20",
+      "opponent": "FLK",
+      "matchId": "330d7733-ac25-4517-8573-d25cc369b311"
+    },
+    {
+      "date": "2026-04-07",
+      "opponent": "OTK",
+      "matchId": "c6f95f8b-935b-4bc0-a81f-ddd072a9c68a"
+    },
+    {
+      "date": "2026-04-06",
+      "opponent": "FLK",
+      "matchId": "ab0f3202-e3c0-41a5-b7bf-711d4b3a3b92"
+    }
+  ]
+}

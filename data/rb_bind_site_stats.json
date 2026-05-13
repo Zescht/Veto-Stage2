@@ -1,0 +1,68 @@
+{
+  "t_side": {
+    "total_rounds": 24,
+    "sites": {
+      "A": {
+        "plant_count": 5,
+        "pct_plant": 31.2,
+        "pct_win": 60.0,
+        "avg_plant_time": 46.3,
+        "min_plant_time": 21.1,
+        "max_plant_time": 80.9,
+        "fk_to_plant_avg": 37.3,
+        "fk_to_plant_n": 3
+      },
+      "B": {
+        "plant_count": 11,
+        "pct_plant": 68.8,
+        "pct_win": 90.9,
+        "avg_plant_time": 60.4,
+        "min_plant_time": 35.2,
+        "max_plant_time": 92.1,
+        "fk_to_plant_avg": 29.3,
+        "fk_to_plant_n": 11
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 19,
+    "won_by_kills": 5,
+    "pct_won_by_kills": 26.3,
+    "won_by_defuse": 8,
+    "pct_won_by_defuse": 42.1,
+    "sites": {
+      "A": {
+        "plant_count": 9,
+        "defuse_count": 6,
+        "pct_defuse_win": 66.7,
+        "pct_defuse_share": 75.0,
+        "avg_defuse_time": 30.0,
+        "fk_after_plant_avg": 11.8,
+        "fk_after_plant_n": 7
+      },
+      "B": {
+        "plant_count": 5,
+        "defuse_count": 2,
+        "pct_defuse_win": 40.0,
+        "pct_defuse_share": 25.0,
+        "avg_defuse_time": 37.1,
+        "fk_after_plant_avg": 11.5,
+        "fk_after_plant_n": 3
+      }
+    }
+  },
+  "team": "REBORN",
+  "map": "Bind",
+  "matches": [
+    {
+      "date": "2026-04-19",
+      "opponent": "GS",
+      "matchId": "66387e24-7291-41c3-b17b-c3e14435a22e"
+    },
+    {
+      "date": "2026-04-05",
+      "opponent": "GHS",
+      "matchId": "eef853d8-036a-4312-be40-778377aa07c9"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "t_side": {
+    "total_rounds": 12,
+    "sites": {
+      "A": {
+        "plant_count": 4,
+        "pct_plant": 50.0,
+        "pct_win": 100.0,
+        "avg_plant_time": 44.8,
+        "min_plant_time": 17.1,
+        "max_plant_time": 80.5,
+        "fk_to_plant_avg": 21.6,
+        "fk_to_plant_n": 4
+      },
+      "B": {
+        "plant_count": 4,
+        "pct_plant": 50.0,
+        "pct_win": 50.0,
+        "avg_plant_time": 32.0,
+        "min_plant_time": 21.7,
+        "max_plant_time": 38.1,
+        "fk_to_plant_avg": 12.0,
+        "fk_to_plant_n": 3
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 24,
+    "won_by_kills": 8,
+    "pct_won_by_kills": 33.3,
+    "won_by_defuse": 3,
+    "pct_won_by_defuse": 12.5,
+    "sites": {
+      "A": {
+        "plant_count": 6,
+        "defuse_count": 1,
+        "pct_defuse_win": 16.7,
+        "pct_defuse_share": 33.3,
+        "avg_defuse_time": 18.5,
+        "fk_after_plant_avg": 20.1,
+        "fk_after_plant_n": 5
+      },
+      "B": {
+        "plant_count": 9,
+        "defuse_count": 2,
+        "pct_defuse_win": 22.2,
+        "pct_defuse_share": 66.7,
+        "avg_defuse_time": 21.5,
+        "fk_after_plant_avg": 8.9,
+        "fk_after_plant_n": 6
+      }
+    }
+  },
+  "team": "Barcelona",
+  "map": "Pearl",
+  "matches": [
+    {
+      "date": "2026-05-05",
+      "opponent": "RBT",
+      "matchId": "2e74ac97-760d-4061-b793-91db3386faf2"
+    },
+    {
+      "date": "2026-04-28",
+      "opponent": "UCAM",
+      "matchId": "c32f94ec-dc12-4084-8a08-983aacd8cf18"
+    }
+  ]
+}

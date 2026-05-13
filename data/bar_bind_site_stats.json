@@ -1,0 +1,78 @@
+{
+  "t_side": {
+    "total_rounds": 45,
+    "sites": {
+      "A": {
+        "plant_count": 13,
+        "pct_plant": 43.3,
+        "pct_win": 61.5,
+        "avg_plant_time": 39.9,
+        "min_plant_time": 18.9,
+        "max_plant_time": 71.6,
+        "fk_to_plant_avg": 20.2,
+        "fk_to_plant_n": 11
+      },
+      "B": {
+        "plant_count": 17,
+        "pct_plant": 56.7,
+        "pct_win": 76.5,
+        "avg_plant_time": 48.6,
+        "min_plant_time": 23.0,
+        "max_plant_time": 82.5,
+        "fk_to_plant_avg": 26.5,
+        "fk_to_plant_n": 16
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 31,
+    "won_by_kills": 8,
+    "pct_won_by_kills": 25.8,
+    "won_by_defuse": 11,
+    "pct_won_by_defuse": 35.5,
+    "sites": {
+      "A": {
+        "plant_count": 15,
+        "defuse_count": 6,
+        "pct_defuse_win": 40.0,
+        "pct_defuse_share": 54.5,
+        "avg_defuse_time": 33.0,
+        "fk_after_plant_avg": 12.4,
+        "fk_after_plant_n": 12
+      },
+      "B": {
+        "plant_count": 7,
+        "defuse_count": 5,
+        "pct_defuse_win": 71.4,
+        "pct_defuse_share": 45.5,
+        "avg_defuse_time": 27.5,
+        "fk_after_plant_avg": 15.5,
+        "fk_after_plant_n": 7
+      }
+    }
+  },
+  "team": "Barcelona",
+  "map": "Bind",
+  "matches": [
+    {
+      "date": "2026-05-04",
+      "opponent": "FLK",
+      "matchId": "35a2ab3e-d812-4e33-97db-72d49ed6e91e"
+    },
+    {
+      "date": "2026-04-28",
+      "opponent": "UCAM",
+      "matchId": "9890d4fe-22c3-4b6e-b81e-f71eacc16180"
+    },
+    {
+      "date": "2026-04-27",
+      "opponent": "KPI",
+      "matchId": "731f3c2e-3bf6-48a4-a7ea-14071aad101b"
+    },
+    {
+      "date": "2026-04-20",
+      "opponent": "FLK",
+      "matchId": "d6a630d2-6fd5-497f-8ce6-faac3f416420"
+    }
+  ]
+}

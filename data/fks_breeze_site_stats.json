@@ -1,49 +1,53 @@
 {
   "t_side": {
-    "total_rounds": 27,
+    "total_rounds": 43,
     "sites": {
       "A": {
-        "plant_count": 9,
+        "plant_count": 14,
         "pct_plant": 50.0,
-        "pct_win": 77.8,
-        "avg_plant_time": 47.0,
-        "min_plant_time": 26.5,
-        "max_plant_time": 88.1,
-        "fk_to_plant_avg": 13.2,
-        "fk_to_plant_n": 7
+        "pct_win": 71.4,
+        "avg_plant_time": 47.1,
+        "min_plant_time": 14.9,
+        "max_plant_time": 96.7,
+        "fk_to_plant_avg": 19.5,
+        "fk_to_plant_n": 9
       },
       "B": {
-        "plant_count": 9,
+        "plant_count": 14,
         "pct_plant": 50.0,
         "pct_win": 100.0,
-        "avg_plant_time": 54.6,
+        "avg_plant_time": 60.0,
         "min_plant_time": 24.0,
-        "max_plant_time": 92.2,
-        "fk_to_plant_avg": 39.1,
-        "fk_to_plant_n": 8
+        "max_plant_time": 93.1,
+        "fk_to_plant_avg": 35.0,
+        "fk_to_plant_n": 12
       }
     }
   },
   "ct_side": {
-    "total_rounds": 37,
+    "total_rounds": 61,
+    "won_by_kills": 14,
+    "pct_won_by_kills": 23.0,
+    "won_by_defuse": 12,
+    "pct_won_by_defuse": 19.7,
     "sites": {
       "A": {
-        "plant_count": 16,
-        "defuse_count": 6,
-        "pct_defuse_win": 37.5,
-        "pct_defuse_share": 85.7,
-        "avg_defuse_time": 27.2,
-        "fk_after_plant_avg": 11.3,
-        "fk_after_plant_n": 12
+        "plant_count": 25,
+        "defuse_count": 9,
+        "pct_defuse_win": 36.0,
+        "pct_defuse_share": 75.0,
+        "avg_defuse_time": 27.6,
+        "fk_after_plant_avg": 10.6,
+        "fk_after_plant_n": 17
       },
       "B": {
-        "plant_count": 12,
-        "defuse_count": 1,
-        "pct_defuse_win": 8.3,
-        "pct_defuse_share": 14.3,
-        "avg_defuse_time": 21.6,
-        "fk_after_plant_avg": 14.7,
-        "fk_after_plant_n": 8
+        "plant_count": 20,
+        "defuse_count": 3,
+        "pct_defuse_win": 15.0,
+        "pct_defuse_share": 25.0,
+        "avg_defuse_time": 30.1,
+        "fk_after_plant_avg": 13.9,
+        "fk_after_plant_n": 15
       }
     }
   },
@@ -51,22 +55,29 @@
   "map": "Breeze",
   "matches": [
     {
+      "date": "2026-05-10",
+      "opponent": "CGN",
+      "matchId": "47dc41fc-26bf-40f4-8557-e20aaf70ce30"
+    },
+    {
       "date": "2026-04-25",
       "opponent": "CGN",
-      "matchId": "7547a3f3-723a-490c-af39-c21290d314bd",
-      "score": "13-7"
+      "matchId": "7547a3f3-723a-490c-af39-c21290d314bd"
     },
     {
       "date": "2026-04-12",
       "opponent": "SGE",
-      "matchId": "431fd751-99a6-4b71-a48f-41297e5fe01d",
-      "score": "5-13"
+      "matchId": "431fd751-99a6-4b71-a48f-41297e5fe01d"
     },
     {
       "date": "2026-04-07",
       "opponent": "AKA",
-      "matchId": "1a003f2b-d451-4ba9-aab9-cf6f6c27bba0",
-      "score": "14-12"
+      "matchId": "1a003f2b-d451-4ba9-aab9-cf6f6c27bba0"
+    },
+    {
+      "date": "2026-04-05",
+      "opponent": "ATN",
+      "matchId": "eedba243-b474-4786-ad78-9bfb86fac590"
     }
   ]
 }

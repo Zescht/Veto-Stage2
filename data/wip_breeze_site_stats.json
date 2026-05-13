@@ -1,0 +1,73 @@
+{
+  "t_side": {
+    "total_rounds": 29,
+    "sites": {
+      "A": {
+        "plant_count": 12,
+        "pct_plant": 63.2,
+        "pct_win": 91.7,
+        "avg_plant_time": 46.2,
+        "min_plant_time": 20.8,
+        "max_plant_time": 74.0,
+        "fk_to_plant_avg": 30.0,
+        "fk_to_plant_n": 8
+      },
+      "B": {
+        "plant_count": 7,
+        "pct_plant": 36.8,
+        "pct_win": 85.7,
+        "avg_plant_time": 44.0,
+        "min_plant_time": 22.8,
+        "max_plant_time": 83.4,
+        "fk_to_plant_avg": 24.7,
+        "fk_to_plant_n": 7
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 37,
+    "won_by_kills": 9,
+    "pct_won_by_kills": 24.3,
+    "won_by_defuse": 10,
+    "pct_won_by_defuse": 27.0,
+    "sites": {
+      "A": {
+        "plant_count": 13,
+        "defuse_count": 4,
+        "pct_defuse_win": 30.8,
+        "pct_defuse_share": 40.0,
+        "avg_defuse_time": 31.9,
+        "fk_after_plant_avg": 8.8,
+        "fk_after_plant_n": 10
+      },
+      "B": {
+        "plant_count": 13,
+        "defuse_count": 6,
+        "pct_defuse_win": 46.2,
+        "pct_defuse_share": 60.0,
+        "avg_defuse_time": 28.7,
+        "fk_after_plant_avg": 7.8,
+        "fk_after_plant_n": 10
+      }
+    }
+  },
+  "team": "WIP Esports",
+  "map": "Breeze",
+  "matches": [
+    {
+      "date": "2026-05-05",
+      "opponent": "MDR",
+      "matchId": "5438fd2f-7049-46cb-b6b6-c8242d25840c"
+    },
+    {
+      "date": "2026-04-26",
+      "opponent": "CLA",
+      "matchId": "4cb97f71-d1ff-4eb2-9160-c7162bb34408"
+    },
+    {
+      "date": "2026-04-18",
+      "opponent": "F9",
+      "matchId": "c0e56a89-243e-4046-9a7c-93933f56b646"
+    }
+  ]
+}

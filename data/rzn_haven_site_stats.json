@@ -36,6 +36,10 @@
   },
   "ct_side": {
     "total_rounds": 39,
+    "won_by_kills": 13,
+    "pct_won_by_kills": 33.3,
+    "won_by_defuse": 7,
+    "pct_won_by_defuse": 17.9,
     "sites": {
       "A": {
         "plant_count": 12,
@@ -72,26 +76,22 @@
     {
       "date": "2026-04-26",
       "opponent": "DXG",
-      "matchId": "ba0cf320-229d-47a0-9029-49740aa21229",
-      "score": "3-13"
+      "matchId": "ba0cf320-229d-47a0-9029-49740aa21229"
     },
     {
       "date": "2026-04-25",
       "opponent": "ATN",
-      "matchId": "0a4eac40-0b98-4fda-a1ea-cf49d9522d13",
-      "score": "13-3"
+      "matchId": "0a4eac40-0b98-4fda-a1ea-cf49d9522d13"
     },
     {
       "date": "2026-04-07",
       "opponent": "CGN",
-      "matchId": "66514075-1283-4122-85cb-4d3a7b6e2d8a",
-      "score": "13-8"
+      "matchId": "66514075-1283-4122-85cb-4d3a7b6e2d8a"
     },
     {
       "date": "2026-04-04",
       "opponent": "ECO",
-      "matchId": "a8d5abe2-4ac1-48d1-a5c2-4de4517f94b7",
-      "score": "10-13"
+      "matchId": "a8d5abe2-4ac1-48d1-a5c2-4de4517f94b7"
     }
   ]
 }

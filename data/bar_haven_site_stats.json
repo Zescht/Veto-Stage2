@@ -1,0 +1,112 @@
+{
+  "t_side": {
+    "total_rounds": 71,
+    "sites": {
+      "A": {
+        "plant_count": 25,
+        "pct_plant": 48.1,
+        "pct_win": 80.0,
+        "avg_plant_time": 49.0,
+        "min_plant_time": 24.2,
+        "max_plant_time": 94.5,
+        "fk_to_plant_avg": 26.9,
+        "fk_to_plant_n": 21
+      },
+      "B": {
+        "plant_count": 13,
+        "pct_plant": 25.0,
+        "pct_win": 69.2,
+        "avg_plant_time": 38.5,
+        "min_plant_time": 21.8,
+        "max_plant_time": 87.6,
+        "fk_to_plant_avg": 24.6,
+        "fk_to_plant_n": 7
+      },
+      "C": {
+        "plant_count": 14,
+        "pct_plant": 26.9,
+        "pct_win": 64.3,
+        "avg_plant_time": 50.2,
+        "min_plant_time": 21.7,
+        "max_plant_time": 92.8,
+        "fk_to_plant_avg": 20.3,
+        "fk_to_plant_n": 13
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 88,
+    "won_by_kills": 24,
+    "pct_won_by_kills": 27.3,
+    "won_by_defuse": 16,
+    "pct_won_by_defuse": 18.2,
+    "sites": {
+      "A": {
+        "plant_count": 29,
+        "defuse_count": 5,
+        "pct_defuse_win": 17.2,
+        "pct_defuse_share": 31.2,
+        "avg_defuse_time": 31.1,
+        "fk_after_plant_avg": 13.3,
+        "fk_after_plant_n": 19
+      },
+      "B": {
+        "plant_count": 11,
+        "defuse_count": 5,
+        "pct_defuse_win": 45.5,
+        "pct_defuse_share": 31.2,
+        "avg_defuse_time": 29.6,
+        "fk_after_plant_avg": 12.4,
+        "fk_after_plant_n": 9
+      },
+      "C": {
+        "plant_count": 21,
+        "defuse_count": 6,
+        "pct_defuse_win": 28.6,
+        "pct_defuse_share": 37.5,
+        "avg_defuse_time": 33.0,
+        "fk_after_plant_avg": 8.8,
+        "fk_after_plant_n": 16
+      }
+    }
+  },
+  "team": "Barcelona",
+  "map": "Haven",
+  "matches": [
+    {
+      "date": "2026-05-04",
+      "opponent": "FLK",
+      "matchId": "33f7dbb8-2e55-4ded-ac08-4c101bfbfecd"
+    },
+    {
+      "date": "2026-04-27",
+      "opponent": "KPI",
+      "matchId": "1cd39f16-0f78-45d2-bd41-621987403642"
+    },
+    {
+      "date": "2026-04-21",
+      "opponent": "DSY",
+      "matchId": "5c624503-b2fc-44f2-9148-d632486ed06d"
+    },
+    {
+      "date": "2026-04-20",
+      "opponent": "FLK",
+      "matchId": "126c61d7-d278-42e2-8265-771bf2f47f62"
+    },
+    {
+      "date": "2026-04-12",
+      "opponent": "DSY",
+      "matchId": "0c030db9-89b2-44df-b3d0-8550783225c3"
+    },
+    {
+      "date": "2026-04-07",
+      "opponent": "OTK",
+      "matchId": "cca3462d-7e88-4f79-b29f-7b6e89220328"
+    },
+    {
+      "date": "2026-04-06",
+      "opponent": "FLK",
+      "matchId": "53e2aae5-3848-4e1e-9dd7-8a0f5610f065"
+    }
+  ]
+}

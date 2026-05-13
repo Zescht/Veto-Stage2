@@ -1,0 +1,308 @@
+{
+  "map": "Lotus",
+  "side": "t",
+  "selectedMaps": [
+    {
+      "date": "2026-04-05",
+      "opponent": "EP",
+      "matchId": "17808f01-4f29-4207-8d90-1953ba3d5549",
+      "score": "7-13"
+    }
+  ],
+  "sites": {
+    "A": {
+      "roundCount": 4,
+      "pointCount": 16,
+      "points": [
+        {
+          "site": "A",
+          "player": "k9lyos",
+          "normX": 88.1965,
+          "normY": 41.9368,
+          "roundNum": 0,
+          "plantRoundTimeMs": 52332,
+          "date": "2026-04-05",
+          "opponent": "EP",
+          "matchId": "17808f01-4f29-4207-8d90-1953ba3d5549",
+          "score": "7-13"
+        },
+        {
+          "site": "A",
+          "player": "avey",
+          "normX": 87.3685,
+          "normY": 29.6104,
+          "roundNum": 0,
+          "plantRoundTimeMs": 52332,
+          "date": "2026-04-05",
+          "opponent": "EP",
+          "matchId": "17808f01-4f29-4207-8d90-1953ba3d5549",
+          "score": "7-13"
+        },
+        {
+          "site": "A",
+          "player": "metroneo",
+          "normX": 89.0965,
+          "normY": 44.4784,
+          "roundNum": 0,
+          "plantRoundTimeMs": 52332,
+          "date": "2026-04-05",
+          "opponent": "EP",
+          "matchId": "17808f01-4f29-4207-8d90-1953ba3d5549",
+          "score": "7-13"
+        },
+        {
+          "site": "A",
+          "player": "Javelin",
+          "normX": 83.3653,
+          "normY": 60.3328,
+          "roundNum": 0,
+          "plantRoundTimeMs": 52332,
+          "date": "2026-04-05",
+          "opponent": "EP",
+          "matchId": "17808f01-4f29-4207-8d90-1953ba3d5549",
+          "score": "7-13"
+        },
+        {
+          "site": "A",
+          "player": "Darxcio",
+          "normX": 90.4357,
+          "normY": 36.4576,
+          "roundNum": 1,
+          "plantRoundTimeMs": 74987,
+          "date": "2026-04-05",
+          "opponent": "EP",
+          "matchId": "17808f01-4f29-4207-8d90-1953ba3d5549",
+          "score": "7-13"
+        },
+        {
+          "site": "A",
+          "player": "avey",
+          "normX": 70.7581,
+          "normY": 22.9432,
+          "roundNum": 1,
+          "plantRoundTimeMs": 74987,
+          "date": "2026-04-05",
+          "opponent": "EP",
+          "matchId": "17808f01-4f29-4207-8d90-1953ba3d5549",
+          "score": "7-13"
+        },
+        {
+          "site": "A",
+          "player": "metroneo",
+          "normX": 88.3621,
+          "normY": 41.0656,
+          "roundNum": 1,
+          "plantRoundTimeMs": 74987,
+          "date": "2026-04-05",
+          "opponent": "EP",
+          "matchId": "17808f01-4f29-4207-8d90-1953ba3d5549",
+          "score": "7-13"
+        },
+        {
+          "site": "A",
+          "player": "Javelin",
+          "normX": 92.2573,
+          "normY": 27.5512,
+          "roundNum": 1,
+          "plantRoundTimeMs": 74987,
+          "date": "2026-04-05",
+          "opponent": "EP",
+          "matchId": "17808f01-4f29-4207-8d90-1953ba3d5549",
+          "score": "7-13"
+        },
+        {
+          "site": "A",
+          "player": "Darxcio",
+          "normX": 84.9421,
+          "normY": 27.1984,
+          "roundNum": 8,
+          "plantRoundTimeMs": 23608,
+          "date": "2026-04-05",
+          "opponent": "EP",
+          "matchId": "17808f01-4f29-4207-8d90-1953ba3d5549",
+          "score": "7-13"
+        },
+        {
+          "site": "A",
+          "player": "avey",
+          "normX": 68.1661,
+          "normY": 53.2696,
+          "roundNum": 8,
+          "plantRoundTimeMs": 23608,
+          "date": "2026-04-05",
+          "opponent": "EP",
+          "matchId": "17808f01-4f29-4207-8d90-1953ba3d5549",
+          "score": "7-13"
+        },
+        {
+          "site": "A",
+          "player": "metroneo",
+          "normX": 87.5701,
+          "normY": 41.7568,
+          "roundNum": 8,
+          "plantRoundTimeMs": 23608,
+          "date": "2026-04-05",
+          "opponent": "EP",
+          "matchId": "17808f01-4f29-4207-8d90-1953ba3d5549",
+          "score": "7-13"
+        },
+        {
+          "site": "A",
+          "player": "Javelin",
+          "normX": 83.9053,
+          "normY": 60.2968,
+          "roundNum": 8,
+          "plantRoundTimeMs": 23608,
+          "date": "2026-04-05",
+          "opponent": "EP",
+          "matchId": "17808f01-4f29-4207-8d90-1953ba3d5549",
+          "score": "7-13"
+        },
+        {
+          "site": "A",
+          "player": "Darxcio",
+          "normX": 88.9381,
+          "normY": 37.2568,
+          "roundNum": 10,
+          "plantRoundTimeMs": 76980,
+          "date": "2026-04-05",
+          "opponent": "EP",
+          "matchId": "17808f01-4f29-4207-8d90-1953ba3d5549",
+          "score": "7-13"
+        },
+        {
+          "site": "A",
+          "player": "k9lyos",
+          "normX": 69.5053,
+          "normY": 51.8584,
+          "roundNum": 10,
+          "plantRoundTimeMs": 76980,
+          "date": "2026-04-05",
+          "opponent": "EP",
+          "matchId": "17808f01-4f29-4207-8d90-1953ba3d5549",
+          "score": "7-13"
+        },
+        {
+          "site": "A",
+          "player": "avey",
+          "normX": 88.6213,
+          "normY": 34.3552,
+          "roundNum": 10,
+          "plantRoundTimeMs": 76980,
+          "date": "2026-04-05",
+          "opponent": "EP",
+          "matchId": "17808f01-4f29-4207-8d90-1953ba3d5549",
+          "score": "7-13"
+        },
+        {
+          "site": "A",
+          "player": "Javelin",
+          "normX": 53.7013,
+          "normY": 80.5432,
+          "roundNum": 10,
+          "plantRoundTimeMs": 76980,
+          "date": "2026-04-05",
+          "opponent": "EP",
+          "matchId": "17808f01-4f29-4207-8d90-1953ba3d5549",
+          "score": "7-13"
+        }
+      ]
+    },
+    "B": {
+      "roundCount": 1,
+      "pointCount": 4,
+      "points": [
+        {
+          "site": "B",
+          "player": "k9lyos",
+          "normX": 81.1621,
+          "normY": 53.1472,
+          "roundNum": 6,
+          "plantRoundTimeMs": 57004,
+          "date": "2026-04-05",
+          "opponent": "EP",
+          "matchId": "17808f01-4f29-4207-8d90-1953ba3d5549",
+          "score": "7-13"
+        },
+        {
+          "site": "B",
+          "player": "avey",
+          "normX": 49.4173,
+          "normY": 60.4624,
+          "roundNum": 6,
+          "plantRoundTimeMs": 57004,
+          "date": "2026-04-05",
+          "opponent": "EP",
+          "matchId": "17808f01-4f29-4207-8d90-1953ba3d5549",
+          "score": "7-13"
+        },
+        {
+          "site": "B",
+          "player": "metroneo",
+          "normX": 55.2493,
+          "normY": 40.5904,
+          "roundNum": 6,
+          "plantRoundTimeMs": 57004,
+          "date": "2026-04-05",
+          "opponent": "EP",
+          "matchId": "17808f01-4f29-4207-8d90-1953ba3d5549",
+          "score": "7-13"
+        },
+        {
+          "site": "B",
+          "player": "Javelin",
+          "normX": 43.4917,
+          "normY": 50.116,
+          "roundNum": 6,
+          "plantRoundTimeMs": 57004,
+          "date": "2026-04-05",
+          "opponent": "EP",
+          "matchId": "17808f01-4f29-4207-8d90-1953ba3d5549",
+          "score": "7-13"
+        }
+      ]
+    },
+    "C": {
+      "roundCount": 1,
+      "pointCount": 3,
+      "points": [
+        {
+          "site": "C",
+          "player": "avey",
+          "normX": 9.8749,
+          "normY": 51.412,
+          "roundNum": 3,
+          "plantRoundTimeMs": 39833,
+          "date": "2026-04-05",
+          "opponent": "EP",
+          "matchId": "17808f01-4f29-4207-8d90-1953ba3d5549",
+          "score": "7-13"
+        },
+        {
+          "site": "C",
+          "player": "metroneo",
+          "normX": 35.5141,
+          "normY": 71.968,
+          "roundNum": 3,
+          "plantRoundTimeMs": 39833,
+          "date": "2026-04-05",
+          "opponent": "EP",
+          "matchId": "17808f01-4f29-4207-8d90-1953ba3d5549",
+          "score": "7-13"
+        },
+        {
+          "site": "C",
+          "player": "Javelin",
+          "normX": 17.2693,
+          "normY": 52.1896,
+          "roundNum": 3,
+          "plantRoundTimeMs": 39833,
+          "date": "2026-04-05",
+          "opponent": "EP",
+          "matchId": "17808f01-4f29-4207-8d90-1953ba3d5549",
+          "score": "7-13"
+        }
+      ]
+    }
+  }
+}

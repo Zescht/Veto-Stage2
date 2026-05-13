@@ -1,0 +1,278 @@
+{
+  "map": "Bind",
+  "side": "ct",
+  "selectedMaps": [
+    {
+      "date": "2026-04-19",
+      "opponent": "BFG",
+      "matchId": "5b3a97b9-e330-4a44-8089-1fa618ff7195",
+      "score": "13-5"
+    }
+  ],
+  "sites": {
+    "A": {
+      "roundCount": 4,
+      "pointCount": 14,
+      "points": [
+        {
+          "site": "A",
+          "player": "Kolosha",
+          "normX": 45.9118,
+          "normY": 20.5935,
+          "roundNum": 0,
+          "plantRoundTimeMs": 92704,
+          "date": "2026-04-19",
+          "opponent": "BFG",
+          "matchId": "5b3a97b9-e330-4a44-8089-1fa618ff7195",
+          "score": "13-5"
+        },
+        {
+          "site": "A",
+          "player": "Javelin",
+          "normX": 60.2488,
+          "normY": 44.6655,
+          "roundNum": 0,
+          "plantRoundTimeMs": 92704,
+          "date": "2026-04-19",
+          "opponent": "BFG",
+          "matchId": "5b3a97b9-e330-4a44-8089-1fa618ff7195",
+          "score": "13-5"
+        },
+        {
+          "site": "A",
+          "player": "k9lyos",
+          "normX": 37.4394,
+          "normY": 21.1245,
+          "roundNum": 0,
+          "plantRoundTimeMs": 92704,
+          "date": "2026-04-19",
+          "opponent": "BFG",
+          "matchId": "5b3a97b9-e330-4a44-8089-1fa618ff7195",
+          "score": "13-5"
+        },
+        {
+          "site": "A",
+          "player": "Avey",
+          "normX": 59.0865,
+          "normY": 45.8632,
+          "roundNum": 0,
+          "plantRoundTimeMs": 92704,
+          "date": "2026-04-19",
+          "opponent": "BFG",
+          "matchId": "5b3a97b9-e330-4a44-8089-1fa618ff7195",
+          "score": "13-5"
+        },
+        {
+          "site": "A",
+          "player": "Kolosha",
+          "normX": 58.939,
+          "normY": 19.4253,
+          "roundNum": 4,
+          "plantRoundTimeMs": 27074,
+          "date": "2026-04-19",
+          "opponent": "BFG",
+          "matchId": "5b3a97b9-e330-4a44-8089-1fa618ff7195",
+          "score": "13-5"
+        },
+        {
+          "site": "A",
+          "player": "k9lyos",
+          "normX": 73.3645,
+          "normY": 21.3605,
+          "roundNum": 4,
+          "plantRoundTimeMs": 27074,
+          "date": "2026-04-19",
+          "opponent": "BFG",
+          "matchId": "5b3a97b9-e330-4a44-8089-1fa618ff7195",
+          "score": "13-5"
+        },
+        {
+          "site": "A",
+          "player": "Javelin",
+          "normX": 74.8926,
+          "normY": 31.479,
+          "roundNum": 5,
+          "plantRoundTimeMs": 42735,
+          "date": "2026-04-19",
+          "opponent": "BFG",
+          "matchId": "5b3a97b9-e330-4a44-8089-1fa618ff7195",
+          "score": "13-5"
+        },
+        {
+          "site": "A",
+          "player": "Avey",
+          "normX": 58.9095,
+          "normY": 32.895,
+          "roundNum": 5,
+          "plantRoundTimeMs": 42735,
+          "date": "2026-04-19",
+          "opponent": "BFG",
+          "matchId": "5b3a97b9-e330-4a44-8089-1fa618ff7195",
+          "score": "13-5"
+        },
+        {
+          "site": "A",
+          "player": "Darxcio",
+          "normX": 66.196,
+          "normY": 31.3079,
+          "roundNum": 5,
+          "plantRoundTimeMs": 42735,
+          "date": "2026-04-19",
+          "opponent": "BFG",
+          "matchId": "5b3a97b9-e330-4a44-8089-1fa618ff7195",
+          "score": "13-5"
+        },
+        {
+          "site": "A",
+          "player": "Kolosha",
+          "normX": 38.9439,
+          "normY": 20.6171,
+          "roundNum": 11,
+          "plantRoundTimeMs": 62350,
+          "date": "2026-04-19",
+          "opponent": "BFG",
+          "matchId": "5b3a97b9-e330-4a44-8089-1fa618ff7195",
+          "score": "13-5"
+        },
+        {
+          "site": "A",
+          "player": "Javelin",
+          "normX": 67.6002,
+          "normY": 27.644,
+          "roundNum": 11,
+          "plantRoundTimeMs": 62350,
+          "date": "2026-04-19",
+          "opponent": "BFG",
+          "matchId": "5b3a97b9-e330-4a44-8089-1fa618ff7195",
+          "score": "13-5"
+        },
+        {
+          "site": "A",
+          "player": "k9lyos",
+          "normX": 77.5004,
+          "normY": 22.7234,
+          "roundNum": 11,
+          "plantRoundTimeMs": 62350,
+          "date": "2026-04-19",
+          "opponent": "BFG",
+          "matchId": "5b3a97b9-e330-4a44-8089-1fa618ff7195",
+          "score": "13-5"
+        },
+        {
+          "site": "A",
+          "player": "Avey",
+          "normX": 72.2671,
+          "normY": 26.582,
+          "roundNum": 11,
+          "plantRoundTimeMs": 62350,
+          "date": "2026-04-19",
+          "opponent": "BFG",
+          "matchId": "5b3a97b9-e330-4a44-8089-1fa618ff7195",
+          "score": "13-5"
+        },
+        {
+          "site": "A",
+          "player": "Darxcio",
+          "normX": 78.5388,
+          "normY": 30.0099,
+          "roundNum": 11,
+          "plantRoundTimeMs": 62350,
+          "date": "2026-04-19",
+          "opponent": "BFG",
+          "matchId": "5b3a97b9-e330-4a44-8089-1fa618ff7195",
+          "score": "13-5"
+        }
+      ]
+    },
+    "B": {
+      "roundCount": 3,
+      "pointCount": 7,
+      "points": [
+        {
+          "site": "B",
+          "player": "Avey",
+          "normX": 35.0263,
+          "normY": 22.5641,
+          "roundNum": 2,
+          "plantRoundTimeMs": 69801,
+          "date": "2026-04-19",
+          "opponent": "BFG",
+          "matchId": "5b3a97b9-e330-4a44-8089-1fa618ff7195",
+          "score": "13-5"
+        },
+        {
+          "site": "B",
+          "player": "Darxcio",
+          "normX": 19.7276,
+          "normY": 53.2913,
+          "roundNum": 2,
+          "plantRoundTimeMs": 69801,
+          "date": "2026-04-19",
+          "opponent": "BFG",
+          "matchId": "5b3a97b9-e330-4a44-8089-1fa618ff7195",
+          "score": "13-5"
+        },
+        {
+          "site": "B",
+          "player": "Javelin",
+          "normX": 37.7108,
+          "normY": 21.6083,
+          "roundNum": 3,
+          "plantRoundTimeMs": 87687,
+          "date": "2026-04-19",
+          "opponent": "BFG",
+          "matchId": "5b3a97b9-e330-4a44-8089-1fa618ff7195",
+          "score": "13-5"
+        },
+        {
+          "site": "B",
+          "player": "k9lyos",
+          "normX": 40.6608,
+          "normY": 19.8914,
+          "roundNum": 3,
+          "plantRoundTimeMs": 87687,
+          "date": "2026-04-19",
+          "opponent": "BFG",
+          "matchId": "5b3a97b9-e330-4a44-8089-1fa618ff7195",
+          "score": "13-5"
+        },
+        {
+          "site": "B",
+          "player": "Darxcio",
+          "normX": 65.7771,
+          "normY": 37.5973,
+          "roundNum": 3,
+          "plantRoundTimeMs": 87687,
+          "date": "2026-04-19",
+          "opponent": "BFG",
+          "matchId": "5b3a97b9-e330-4a44-8089-1fa618ff7195",
+          "score": "13-5"
+        },
+        {
+          "site": "B",
+          "player": "k9lyos",
+          "normX": 20.1937,
+          "normY": 45.6803,
+          "roundNum": 9,
+          "plantRoundTimeMs": 85941,
+          "date": "2026-04-19",
+          "opponent": "BFG",
+          "matchId": "5b3a97b9-e330-4a44-8089-1fa618ff7195",
+          "score": "13-5"
+        },
+        {
+          "site": "B",
+          "player": "Darxcio",
+          "normX": 17.9163,
+          "normY": 30.8005,
+          "roundNum": 9,
+          "plantRoundTimeMs": 85941,
+          "date": "2026-04-19",
+          "opponent": "BFG",
+          "matchId": "5b3a97b9-e330-4a44-8089-1fa618ff7195",
+          "score": "13-5"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "t_side": {
+    "total_rounds": 12,
+    "sites": {
+      "A": {
+        "plant_count": 4,
+        "pct_plant": 33.3,
+        "pct_win": 100.0,
+        "avg_plant_time": 47.0,
+        "min_plant_time": 33.1,
+        "max_plant_time": 70.6,
+        "fk_to_plant_avg": 15.8,
+        "fk_to_plant_n": 4
+      },
+      "B": {
+        "plant_count": 8,
+        "pct_plant": 66.7,
+        "pct_win": 87.5,
+        "avg_plant_time": 53.1,
+        "min_plant_time": 31.3,
+        "max_plant_time": 76.7,
+        "fk_to_plant_avg": 27.8,
+        "fk_to_plant_n": 7
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 6,
+    "won_by_kills": 2,
+    "pct_won_by_kills": 33.3,
+    "won_by_defuse": 0,
+    "pct_won_by_defuse": 0.0,
+    "sites": {
+      "A": {
+        "plant_count": 1,
+        "defuse_count": 0,
+        "pct_defuse_win": 0.0,
+        "pct_defuse_share": null,
+        "avg_defuse_time": null,
+        "fk_after_plant_avg": 19.8,
+        "fk_after_plant_n": 1
+      },
+      "B": {
+        "plant_count": 2,
+        "defuse_count": 0,
+        "pct_defuse_win": 0.0,
+        "pct_defuse_share": null,
+        "avg_defuse_time": null,
+        "fk_after_plant_avg": 33.5,
+        "fk_after_plant_n": 2
+      }
+    }
+  },
+  "team": "UCAM",
+  "map": "Pearl",
+  "matches": [
+    {
+      "date": "2026-04-28",
+      "opponent": "BAR",
+      "matchId": "c32f94ec-dc12-4084-8a08-983aacd8cf18"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "t_side": {
+    "total_rounds": 89,
+    "sites": {
+      "A": {
+        "plant_count": 28,
+        "pct_plant": 47.5,
+        "pct_win": 75.0,
+        "avg_plant_time": 58.4,
+        "min_plant_time": 21.5,
+        "max_plant_time": 99.1,
+        "fk_to_plant_avg": 29.3,
+        "fk_to_plant_n": 23
+      },
+      "B": {
+        "plant_count": 31,
+        "pct_plant": 52.5,
+        "pct_win": 61.3,
+        "avg_plant_time": 64.1,
+        "min_plant_time": 22.7,
+        "max_plant_time": 99.8,
+        "fk_to_plant_avg": 28.2,
+        "fk_to_plant_n": 24
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 68,
+    "won_by_kills": 20,
+    "pct_won_by_kills": 29.4,
+    "won_by_defuse": 17,
+    "pct_won_by_defuse": 25.0,
+    "sites": {
+      "A": {
+        "plant_count": 22,
+        "defuse_count": 8,
+        "pct_defuse_win": 36.4,
+        "pct_defuse_share": 47.1,
+        "avg_defuse_time": 29.5,
+        "fk_after_plant_avg": 18.7,
+        "fk_after_plant_n": 14
+      },
+      "B": {
+        "plant_count": 24,
+        "defuse_count": 9,
+        "pct_defuse_win": 37.5,
+        "pct_defuse_share": 52.9,
+        "avg_defuse_time": 25.0,
+        "fk_after_plant_avg": 10.1,
+        "fk_after_plant_n": 18
+      }
+    }
+  },
+  "team": "MIR",
+  "map": "Fracture",
+  "matches": [
+    {
+      "date": "2026-05-07",
+      "opponent": "EP",
+      "matchId": "cb70b5f4-f014-4bb0-88d4-912c7bf40dc9"
+    },
+    {
+      "date": "2026-05-04",
+      "opponent": "NVJ",
+      "matchId": "c5895070-95d7-446f-8a35-6438d56b852b"
+    },
+    {
+      "date": "2026-04-18",
+      "opponent": "FMG",
+      "matchId": "c2933eec-8502-4f2c-bd65-fcc0207e4279"
+    },
+    {
+      "date": "2026-04-13",
+      "opponent": "XD",
+      "matchId": "21de7ebc-083a-43cc-8063-f5a3af431c28"
+    },
+    {
+      "date": "2026-04-12",
+      "opponent": "EVO",
+      "matchId": "d02d47f9-82b5-4889-ac4f-7edc5de0bfd8"
+    },
+    {
+      "date": "2026-04-05",
+      "opponent": "BFG",
+      "matchId": "37522f54-15a6-4635-b2bf-d85d819b7a16"
+    },
+    {
+      "date": "2026-04-04",
+      "opponent": "TL",
+      "matchId": "28682313-520d-45f8-8ec8-c1c87b9bae9d"
+    }
+  ]
+}

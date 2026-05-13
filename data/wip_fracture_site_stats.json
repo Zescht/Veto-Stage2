@@ -1,0 +1,83 @@
+{
+  "t_side": {
+    "total_rounds": 60,
+    "sites": {
+      "A": {
+        "plant_count": 19,
+        "pct_plant": 46.3,
+        "pct_win": 84.2,
+        "avg_plant_time": 51.3,
+        "min_plant_time": 23.6,
+        "max_plant_time": 84.4,
+        "fk_to_plant_avg": 21.8,
+        "fk_to_plant_n": 17
+      },
+      "B": {
+        "plant_count": 22,
+        "pct_plant": 53.7,
+        "pct_win": 90.9,
+        "avg_plant_time": 45.2,
+        "min_plant_time": 22.5,
+        "max_plant_time": 76.6,
+        "fk_to_plant_avg": 24.6,
+        "fk_to_plant_n": 19
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 53,
+    "won_by_kills": 16,
+    "pct_won_by_kills": 30.2,
+    "won_by_defuse": 15,
+    "pct_won_by_defuse": 28.3,
+    "sites": {
+      "A": {
+        "plant_count": 23,
+        "defuse_count": 8,
+        "pct_defuse_win": 34.8,
+        "pct_defuse_share": 53.3,
+        "avg_defuse_time": 26.3,
+        "fk_after_plant_avg": 11.7,
+        "fk_after_plant_n": 16
+      },
+      "B": {
+        "plant_count": 14,
+        "defuse_count": 7,
+        "pct_defuse_win": 50.0,
+        "pct_defuse_share": 46.7,
+        "avg_defuse_time": 27.9,
+        "fk_after_plant_avg": 11.7,
+        "fk_after_plant_n": 11
+      }
+    }
+  },
+  "team": "WIP Esports",
+  "map": "Fracture",
+  "matches": [
+    {
+      "date": "2026-05-05",
+      "opponent": "MDR",
+      "matchId": "05267443-28ba-4650-868c-b09272c49f8d"
+    },
+    {
+      "date": "2026-04-26",
+      "opponent": "CLA",
+      "matchId": "252e3211-557a-4523-ba63-7d0cc8daf590"
+    },
+    {
+      "date": "2026-04-19",
+      "opponent": "ES",
+      "matchId": "edb75e03-8acb-47e6-9996-12e115a51e1e"
+    },
+    {
+      "date": "2026-04-13",
+      "opponent": "MDR",
+      "matchId": "246616a5-dad5-489a-ad6c-9b7a8d6810c1"
+    },
+    {
+      "date": "2026-04-05",
+      "opponent": "GL",
+      "matchId": "3e77aca3-4106-4c9a-b4c5-a97c36235091"
+    }
+  ]
+}

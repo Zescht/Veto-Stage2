@@ -1,0 +1,78 @@
+{
+  "t_side": {
+    "total_rounds": 35,
+    "sites": {
+      "A": {
+        "plant_count": 18,
+        "pct_plant": 66.7,
+        "pct_win": 66.7,
+        "avg_plant_time": 36.6,
+        "min_plant_time": 21.0,
+        "max_plant_time": 81.0,
+        "fk_to_plant_avg": 18.8,
+        "fk_to_plant_n": 16
+      },
+      "B": {
+        "plant_count": 9,
+        "pct_plant": 33.3,
+        "pct_win": 55.6,
+        "avg_plant_time": 47.7,
+        "min_plant_time": 17.1,
+        "max_plant_time": 92.8,
+        "fk_to_plant_avg": 28.3,
+        "fk_to_plant_n": 8
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 36,
+    "won_by_kills": 11,
+    "pct_won_by_kills": 30.6,
+    "won_by_defuse": 8,
+    "pct_won_by_defuse": 22.2,
+    "sites": {
+      "A": {
+        "plant_count": 17,
+        "defuse_count": 6,
+        "pct_defuse_win": 35.3,
+        "pct_defuse_share": 75.0,
+        "avg_defuse_time": 28.5,
+        "fk_after_plant_avg": 14.3,
+        "fk_after_plant_n": 13
+      },
+      "B": {
+        "plant_count": 5,
+        "defuse_count": 2,
+        "pct_defuse_win": 40.0,
+        "pct_defuse_share": 25.0,
+        "avg_defuse_time": 29.0,
+        "fk_after_plant_avg": 10.2,
+        "fk_after_plant_n": 5
+      }
+    }
+  },
+  "team": "MIR",
+  "map": "Breeze",
+  "matches": [
+    {
+      "date": "2026-05-04",
+      "opponent": "NVJ",
+      "matchId": "e3de50cf-7eec-465c-942b-caf6cc8371f2"
+    },
+    {
+      "date": "2026-04-14",
+      "opponent": "UNI",
+      "matchId": "cc70e241-afc2-41aa-b9ff-072e15602802"
+    },
+    {
+      "date": "2026-04-11",
+      "opponent": "VR2",
+      "matchId": "82b59b75-1594-4055-9de2-4b481c6c9799"
+    },
+    {
+      "date": "2026-04-06",
+      "opponent": "200",
+      "matchId": "3c961857-a0d1-4548-8dd9-865d55abdeb9"
+    }
+  ]
+}

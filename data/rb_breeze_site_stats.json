@@ -1,0 +1,63 @@
+{
+  "t_side": {
+    "total_rounds": 9,
+    "sites": {
+      "A": {
+        "plant_count": 5,
+        "pct_plant": 55.6,
+        "pct_win": 80.0,
+        "avg_plant_time": 54.1,
+        "min_plant_time": 23.6,
+        "max_plant_time": 89.8,
+        "fk_to_plant_avg": 26.5,
+        "fk_to_plant_n": 4
+      },
+      "B": {
+        "plant_count": 4,
+        "pct_plant": 44.4,
+        "pct_win": 100.0,
+        "avg_plant_time": 31.2,
+        "min_plant_time": 17.5,
+        "max_plant_time": 44.6,
+        "fk_to_plant_avg": 23.3,
+        "fk_to_plant_n": 4
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 12,
+    "won_by_kills": 4,
+    "pct_won_by_kills": 33.3,
+    "won_by_defuse": 1,
+    "pct_won_by_defuse": 8.3,
+    "sites": {
+      "A": {
+        "plant_count": 5,
+        "defuse_count": 1,
+        "pct_defuse_win": 20.0,
+        "pct_defuse_share": 100.0,
+        "avg_defuse_time": 14.4,
+        "fk_after_plant_avg": 0.9,
+        "fk_after_plant_n": 2
+      },
+      "B": {
+        "plant_count": 3,
+        "defuse_count": 0,
+        "pct_defuse_win": 0.0,
+        "pct_defuse_share": 0.0,
+        "avg_defuse_time": null,
+        "fk_after_plant_avg": 7.6,
+        "fk_after_plant_n": 1
+      }
+    }
+  },
+  "team": "REBORN",
+  "map": "Breeze",
+  "matches": [
+    {
+      "date": "2026-05-03",
+      "opponent": "BJK",
+      "matchId": "f5278d2b-a972-4ae5-982c-31faa7073e6a"
+    }
+  ]
+}

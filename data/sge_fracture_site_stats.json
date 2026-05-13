@@ -28,6 +28,10 @@
   },
   "ct_side": {
     "total_rounds": 12,
+    "won_by_kills": 4,
+    "pct_won_by_kills": 33.3,
+    "won_by_defuse": 1,
+    "pct_won_by_defuse": 8.3,
     "sites": {
       "A": {
         "plant_count": 5,
@@ -53,8 +57,7 @@
     {
       "date": "2026-04-19",
       "opponent": "CGN",
-      "matchId": "f492d91b-bd8a-489c-b2f8-7f194783c6c6",
-      "score": "11-13"
+      "matchId": "f492d91b-bd8a-489c-b2f8-7f194783c6c6"
     }
   ]
 }

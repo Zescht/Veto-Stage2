@@ -1,0 +1,63 @@
+{
+  "t_side": {
+    "total_rounds": 6,
+    "sites": {
+      "A": {
+        "plant_count": 3,
+        "pct_plant": 60.0,
+        "pct_win": 100.0,
+        "avg_plant_time": 75.9,
+        "min_plant_time": 37.6,
+        "max_plant_time": 98.5,
+        "fk_to_plant_avg": 72.3,
+        "fk_to_plant_n": 2
+      },
+      "B": {
+        "plant_count": 2,
+        "pct_plant": 40.0,
+        "pct_win": 100.0,
+        "avg_plant_time": 61.3,
+        "min_plant_time": 54.5,
+        "max_plant_time": 68.0,
+        "fk_to_plant_avg": 40.1,
+        "fk_to_plant_n": 2
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 12,
+    "won_by_kills": 5,
+    "pct_won_by_kills": 41.7,
+    "won_by_defuse": 3,
+    "pct_won_by_defuse": 25.0,
+    "sites": {
+      "A": {
+        "plant_count": 4,
+        "defuse_count": 1,
+        "pct_defuse_win": 25.0,
+        "pct_defuse_share": 33.3,
+        "avg_defuse_time": 21.4,
+        "fk_after_plant_avg": 13.9,
+        "fk_after_plant_n": 2
+      },
+      "B": {
+        "plant_count": 3,
+        "defuse_count": 2,
+        "pct_defuse_win": 66.7,
+        "pct_defuse_share": 66.7,
+        "avg_defuse_time": 19.7,
+        "fk_after_plant_avg": 7.9,
+        "fk_after_plant_n": 3
+      }
+    }
+  },
+  "team": "NAVI Junior",
+  "map": "Bind",
+  "matches": [
+    {
+      "date": "2026-04-19",
+      "opponent": "BFG",
+      "matchId": "5b3a97b9-e330-4a44-8089-1fa618ff7195"
+    }
+  ]
+}

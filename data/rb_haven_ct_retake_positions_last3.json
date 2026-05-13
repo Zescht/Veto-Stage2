@@ -1,0 +1,332 @@
+{
+  "map": "Haven",
+  "side": "ct",
+  "selectedMaps": [
+    {
+      "date": "2026-04-27",
+      "opponent": "MISA",
+      "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+      "score": "13-6"
+    }
+  ],
+  "sites": {
+    "A": {
+      "roundCount": 2,
+      "pointCount": 7,
+      "points": [
+        {
+          "site": "A",
+          "player": "hezacoil",
+          "normX": 24.805,
+          "normY": 25.9478,
+          "roundNum": 1,
+          "plantRoundTimeMs": 50700,
+          "date": "2026-04-27",
+          "opponent": "MISA",
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "score": "13-6"
+        },
+        {
+          "site": "A",
+          "player": "batujnax",
+          "normX": 22.6075,
+          "normY": 28.5503,
+          "roundNum": 1,
+          "plantRoundTimeMs": 50700,
+          "date": "2026-04-27",
+          "opponent": "MISA",
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "score": "13-6"
+        },
+        {
+          "site": "A",
+          "player": "reazy",
+          "normX": 28.885,
+          "normY": 18.2078,
+          "roundNum": 1,
+          "plantRoundTimeMs": 50700,
+          "date": "2026-04-27",
+          "opponent": "MISA",
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "score": "13-6"
+        },
+        {
+          "site": "A",
+          "player": "Kachoww",
+          "normX": 55.795,
+          "normY": 39.6803,
+          "roundNum": 6,
+          "plantRoundTimeMs": 23140,
+          "date": "2026-04-27",
+          "opponent": "MISA",
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "score": "13-6"
+        },
+        {
+          "site": "A",
+          "player": "hezacoil",
+          "normX": 22.585,
+          "normY": 31.4828,
+          "roundNum": 6,
+          "plantRoundTimeMs": 23140,
+          "date": "2026-04-27",
+          "opponent": "MISA",
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "score": "13-6"
+        },
+        {
+          "site": "A",
+          "player": "Deadink",
+          "normX": 22.7575,
+          "normY": 58.0178,
+          "roundNum": 6,
+          "plantRoundTimeMs": 23140,
+          "date": "2026-04-27",
+          "opponent": "MISA",
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "score": "13-6"
+        },
+        {
+          "site": "A",
+          "player": "reazy",
+          "normX": 20.08,
+          "normY": 30.9653,
+          "roundNum": 6,
+          "plantRoundTimeMs": 23140,
+          "date": "2026-04-27",
+          "opponent": "MISA",
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "score": "13-6"
+        }
+      ]
+    },
+    "B": {
+      "roundCount": 5,
+      "pointCount": 16,
+      "points": [
+        {
+          "site": "B",
+          "player": "Kachoww",
+          "normX": 35.545,
+          "normY": 58.3103,
+          "roundNum": 4,
+          "plantRoundTimeMs": 13425,
+          "date": "2026-04-27",
+          "opponent": "MISA",
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "score": "13-6"
+        },
+        {
+          "site": "B",
+          "player": "hezacoil",
+          "normX": 38.3275,
+          "normY": 67.5428,
+          "roundNum": 4,
+          "plantRoundTimeMs": 13425,
+          "date": "2026-04-27",
+          "opponent": "MISA",
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "score": "13-6"
+        },
+        {
+          "site": "B",
+          "player": "Deadink",
+          "normX": 53.305,
+          "normY": 12.3728,
+          "roundNum": 4,
+          "plantRoundTimeMs": 13425,
+          "date": "2026-04-27",
+          "opponent": "MISA",
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "score": "13-6"
+        },
+        {
+          "site": "B",
+          "player": "batujnax",
+          "normX": 35.965,
+          "normY": 32.2403,
+          "roundNum": 4,
+          "plantRoundTimeMs": 13425,
+          "date": "2026-04-27",
+          "opponent": "MISA",
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "score": "13-6"
+        },
+        {
+          "site": "B",
+          "player": "reazy",
+          "normX": 46.93,
+          "normY": 24.7928,
+          "roundNum": 4,
+          "plantRoundTimeMs": 13425,
+          "date": "2026-04-27",
+          "opponent": "MISA",
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "score": "13-6"
+        },
+        {
+          "site": "B",
+          "player": "Kachoww",
+          "normX": 31.2325,
+          "normY": 24.1778,
+          "roundNum": 5,
+          "plantRoundTimeMs": 79681,
+          "date": "2026-04-27",
+          "opponent": "MISA",
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "score": "13-6"
+        },
+        {
+          "site": "B",
+          "player": "hezacoil",
+          "normX": 70.3375,
+          "normY": 39.3578,
+          "roundNum": 5,
+          "plantRoundTimeMs": 79681,
+          "date": "2026-04-27",
+          "opponent": "MISA",
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "score": "13-6"
+        },
+        {
+          "site": "B",
+          "player": "batujnax",
+          "normX": 72.3775,
+          "normY": 41.2703,
+          "roundNum": 5,
+          "plantRoundTimeMs": 79681,
+          "date": "2026-04-27",
+          "opponent": "MISA",
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "score": "13-6"
+        },
+        {
+          "site": "B",
+          "player": "reazy",
+          "normX": 90.895,
+          "normY": 58.1378,
+          "roundNum": 5,
+          "plantRoundTimeMs": 79681,
+          "date": "2026-04-27",
+          "opponent": "MISA",
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "score": "13-6"
+        },
+        {
+          "site": "B",
+          "player": "hezacoil",
+          "normX": 19.2625,
+          "normY": 37.8203,
+          "roundNum": 7,
+          "plantRoundTimeMs": 68053,
+          "date": "2026-04-27",
+          "opponent": "MISA",
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "score": "13-6"
+        },
+        {
+          "site": "B",
+          "player": "Deadink",
+          "normX": 29.515,
+          "normY": 71.3228,
+          "roundNum": 7,
+          "plantRoundTimeMs": 68053,
+          "date": "2026-04-27",
+          "opponent": "MISA",
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "score": "13-6"
+        },
+        {
+          "site": "B",
+          "player": "batujnax",
+          "normX": 33.895,
+          "normY": 22.5728,
+          "roundNum": 7,
+          "plantRoundTimeMs": 68053,
+          "date": "2026-04-27",
+          "opponent": "MISA",
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "score": "13-6"
+        },
+        {
+          "site": "B",
+          "player": "Kachoww",
+          "normX": 40.0525,
+          "normY": 32.8778,
+          "roundNum": 8,
+          "plantRoundTimeMs": 62069,
+          "date": "2026-04-27",
+          "opponent": "MISA",
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "score": "13-6"
+        },
+        {
+          "site": "B",
+          "player": "hezacoil",
+          "normX": 38.275,
+          "normY": 62.3078,
+          "roundNum": 8,
+          "plantRoundTimeMs": 62069,
+          "date": "2026-04-27",
+          "opponent": "MISA",
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "score": "13-6"
+        },
+        {
+          "site": "B",
+          "player": "hezacoil",
+          "normX": 24.745,
+          "normY": 64.2653,
+          "roundNum": 11,
+          "plantRoundTimeMs": 96704,
+          "date": "2026-04-27",
+          "opponent": "MISA",
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "score": "13-6"
+        },
+        {
+          "site": "B",
+          "player": "reazy",
+          "normX": 28.99,
+          "normY": 64.1453,
+          "roundNum": 11,
+          "plantRoundTimeMs": 96704,
+          "date": "2026-04-27",
+          "opponent": "MISA",
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "score": "13-6"
+        }
+      ]
+    },
+    "C": {
+      "roundCount": 1,
+      "pointCount": 2,
+      "points": [
+        {
+          "site": "C",
+          "player": "hezacoil",
+          "normX": 62.3425,
+          "normY": 28.0103,
+          "roundNum": 10,
+          "plantRoundTimeMs": 69426,
+          "date": "2026-04-27",
+          "opponent": "MISA",
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "score": "13-6"
+        },
+        {
+          "site": "C",
+          "player": "batujnax",
+          "normX": 64.3375,
+          "normY": 29.1578,
+          "roundNum": 10,
+          "plantRoundTimeMs": 69426,
+          "date": "2026-04-27",
+          "opponent": "MISA",
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "score": "13-6"
+        }
+      ]
+    }
+  }
+}

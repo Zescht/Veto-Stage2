@@ -1,0 +1,92 @@
+{
+  "t_side": {
+    "total_rounds": 36,
+    "sites": {
+      "A": {
+        "plant_count": 17,
+        "pct_plant": 51.5,
+        "pct_win": 76.5,
+        "avg_plant_time": 48.5,
+        "min_plant_time": 23.9,
+        "max_plant_time": 88.3,
+        "fk_to_plant_avg": 24.4,
+        "fk_to_plant_n": 14
+      },
+      "B": {
+        "plant_count": 8,
+        "pct_plant": 24.2,
+        "pct_win": 37.5,
+        "avg_plant_time": 51.8,
+        "min_plant_time": 21.7,
+        "max_plant_time": 85.4,
+        "fk_to_plant_avg": 22.8,
+        "fk_to_plant_n": 7
+      },
+      "C": {
+        "plant_count": 8,
+        "pct_plant": 24.2,
+        "pct_win": 62.5,
+        "avg_plant_time": 53.6,
+        "min_plant_time": 22.0,
+        "max_plant_time": 77.4,
+        "fk_to_plant_avg": 22.8,
+        "fk_to_plant_n": 6
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 42,
+    "won_by_kills": 13,
+    "pct_won_by_kills": 31.0,
+    "won_by_defuse": 8,
+    "pct_won_by_defuse": 19.0,
+    "sites": {
+      "A": {
+        "plant_count": 7,
+        "defuse_count": 3,
+        "pct_defuse_win": 42.9,
+        "pct_defuse_share": 37.5,
+        "avg_defuse_time": 28.6,
+        "fk_after_plant_avg": 11.3,
+        "fk_after_plant_n": 4
+      },
+      "B": {
+        "plant_count": 6,
+        "defuse_count": 0,
+        "pct_defuse_win": 0.0,
+        "pct_defuse_share": 0.0,
+        "avg_defuse_time": null,
+        "fk_after_plant_avg": 1.1,
+        "fk_after_plant_n": 1
+      },
+      "C": {
+        "plant_count": 12,
+        "defuse_count": 5,
+        "pct_defuse_win": 41.7,
+        "pct_defuse_share": 62.5,
+        "avg_defuse_time": 23.9,
+        "fk_after_plant_avg": 10.2,
+        "fk_after_plant_n": 8
+      }
+    }
+  },
+  "team": "REBORN",
+  "map": "Lotus",
+  "matches": [
+    {
+      "date": "2026-05-03",
+      "opponent": "BJK",
+      "matchId": "0045c419-dc7b-4139-a10d-8a39afbbde4f"
+    },
+    {
+      "date": "2026-04-12",
+      "opponent": "FA",
+      "matchId": "618c516a-c569-4903-8ec0-714be7d15f54"
+    },
+    {
+      "date": "2026-04-07",
+      "opponent": "FF",
+      "matchId": "6908c786-1f88-4a12-b719-aeda43ba5099"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "t_side": {
+    "total_rounds": 9,
+    "sites": {
+      "A": {
+        "plant_count": 4,
+        "pct_plant": 50.0,
+        "pct_win": 100.0,
+        "avg_plant_time": 49.6,
+        "min_plant_time": 40.7,
+        "max_plant_time": 61.1,
+        "fk_to_plant_avg": 32.4,
+        "fk_to_plant_n": 4
+      },
+      "B": {
+        "plant_count": 1,
+        "pct_plant": 12.5,
+        "pct_win": 100.0,
+        "avg_plant_time": 19.4,
+        "min_plant_time": 19.4,
+        "max_plant_time": 19.4,
+        "fk_to_plant_avg": 7.9,
+        "fk_to_plant_n": 1
+      },
+      "C": {
+        "plant_count": 3,
+        "pct_plant": 37.5,
+        "pct_win": 100.0,
+        "avg_plant_time": 44.9,
+        "min_plant_time": 29.6,
+        "max_plant_time": 75.1,
+        "fk_to_plant_avg": 30.2,
+        "fk_to_plant_n": 3
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 24,
+    "won_by_kills": 10,
+    "pct_won_by_kills": 41.7,
+    "won_by_defuse": 7,
+    "pct_won_by_defuse": 29.2,
+    "sites": {
+      "A": {
+        "plant_count": 6,
+        "defuse_count": 4,
+        "pct_defuse_win": 66.7,
+        "pct_defuse_share": 57.1,
+        "avg_defuse_time": 26.5,
+        "fk_after_plant_avg": 14.4,
+        "fk_after_plant_n": 5
+      },
+      "B": {
+        "plant_count": 1,
+        "defuse_count": 0,
+        "pct_defuse_win": 0.0,
+        "pct_defuse_share": 0.0,
+        "avg_defuse_time": null,
+        "fk_after_plant_avg": 6.7,
+        "fk_after_plant_n": 1
+      },
+      "C": {
+        "plant_count": 7,
+        "defuse_count": 3,
+        "pct_defuse_win": 42.9,
+        "pct_defuse_share": 42.9,
+        "avg_defuse_time": 33.2,
+        "fk_after_plant_avg": 13.7,
+        "fk_after_plant_n": 5
+      }
+    }
+  },
+  "team": "Enterprise",
+  "map": "Haven",
+  "matches": [
+    {
+      "date": "2026-04-14",
+      "opponent": "LP",
+      "matchId": "d149aef3-944d-471d-bb1c-369e6e418803"
+    },
+    {
+      "date": "2026-04-11",
+      "opponent": "LEO",
+      "matchId": "38ac4ebc-932d-4589-b9ad-fc76b63e0960"
+    }
+  ]
+}

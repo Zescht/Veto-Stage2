@@ -55,6 +55,86 @@ const TEAMS_CONFIG = {
     playerColors: { "Puggy": "#e53935", "BarcK": "#f1d500", "deyten": "#00e676", "Opex": "#ff4dac", "Bumbibjorn1": "#1f4fd6" },
     playerOrder:  ["Puggy", "BarcK", "deyten", "Opex", "Bumbibjorn1"],
   },
+  enterprise: {
+    filePrefix:   "ep",
+    mapControl:   typeof epMapControlData !== "undefined" ? epMapControlData : {},
+    statMaps:     ["Bind", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
+    retakeMaps:   ["Bind", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
+    playerColors: { "Lime": "#1565C0", "kozzy": "#F9A825", "Proxh": "#C62828", "iluri": "#2E7D32", "MAGNUM": "#E91E63" },
+    playerOrder:  ["Lime", "kozzy", "Proxh", "iluri", "MAGNUM"],
+  },
+  joblife: {
+    filePrefix:   "jl",
+    mapControl:   typeof jlMapControlData !== "undefined" ? jlMapControlData : {},
+    statMaps:     ["Bind", "Breeze", "Haven", "Lotus", "Pearl", "Split"],
+    retakeMaps:   ["Bind", "Breeze", "Haven", "Lotus", "Pearl", "Split"],
+    playerColors: { "chiwa": "#1565C0", "UNFAKE": "#F9A825", "kamyk": "#C62828", "runneR": "#2E7D32", "Doma": "#E91E63" },
+    playerOrder:  ["chiwa", "UNFAKE", "kamyk", "runneR", "Doma"],
+  },
+  wip: {
+    filePrefix:   "wip",
+    mapControl:   typeof wipMapControlData !== "undefined" ? wipMapControlData : {},
+    statMaps:     ["Bind", "Breeze", "Fracture", "Lotus", "Pearl", "Split"],
+    retakeMaps:   ["Bind", "Breeze", "Fracture", "Lotus", "Pearl", "Split"],
+    playerColors: { "77even": "#1565C0", "Yuta": "#F9A825", "Nowax": "#C62828", "hoody": "#2E7D32", "H1ber": "#E91E63" },
+    playerOrder:  ["77even", "Yuta", "Nowax", "hoody", "H1ber"],
+  },
+  nvjunior: {
+    filePrefix:   "nvj",
+    mapControl:   typeof nvjMapControlData !== "undefined" ? nvjMapControlData : {},
+    statMaps:     ["Bind", "Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
+    retakeMaps:   ["Bind", "Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
+    playerColors: { "Avey": "#1565C0", "Darxcio": "#F9A825", "Javelin": "#C62828", "Kolosha": "#2E7D32", "k9lyos": "#E91E63" },
+    playerOrder:  ["Avey", "Darxcio", "Javelin", "Kolosha", "k9lyos"],
+  },
+  liquidacademy: {
+    filePrefix:   "tl",
+    mapControl:   typeof tlMapControlData !== "undefined" ? tlMapControlData : {},
+    statMaps:     ["Breeze", "Fracture", "Haven", "Lotus", "Split"],
+    retakeMaps:   ["Breeze", "Fracture", "Haven", "Lotus", "Split"],
+    playerColors: { "GSR": "#1565C0", "Kicks": "#F9A825", "Prti": "#C62828", "Wanzeru": "#2E7D32", "rexxtoned": "#E91E63" },
+    playerOrder:  ["GSR", "Kicks", "Prti", "Wanzeru", "rexxtoned"],
+  },
+  mir: {
+    filePrefix:   "m1r",
+    mapControl:   typeof m1rMapControlData !== "undefined" ? m1rMapControlData : {},
+    statMaps:     ["Bind", "Breeze", "Fracture", "Lotus", "Pearl", "Split"],
+    retakeMaps:   ["Bind", "Breeze", "Fracture", "Lotus", "Pearl", "Split"],
+    playerColors: { "Bishepss": "#1565C0", "Raz": "#F9A825", "Redgar": "#C62828", "kospa1n": "#2E7D32", "reblyik": "#E91E63" },
+    playerOrder:  ["Bishepss", "Raz", "Redgar", "kospa1n", "reblyik"],
+  },
+  barcelona: {
+    filePrefix:   "bar",
+    mapControl:   typeof barMapControlData !== "undefined" ? barMapControlData : {},
+    statMaps:     ["Bind", "Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
+    retakeMaps:   ["Bind", "Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
+    playerColors: { "Fit1nho": "#1565C0", "Guardy": "#F9A825", "Kajuks": "#C62828", "Stonezy": "#2E7D32", "globeX": "#E91E63" },
+    playerOrder:  ["Fit1nho", "Guardy", "Kajuks", "Stonezy", "globeX"],
+  },
+  besiktas: {
+    filePrefix:   "bjk",
+    mapControl:   typeof bjkMapControlData !== "undefined" ? bjkMapControlData : {},
+    statMaps:     ["Bind", "Breeze", "Fracture", "Lotus", "Pearl", "Split"],
+    retakeMaps:   ["Bind", "Breeze", "Fracture", "Lotus", "Pearl", "Split"],
+    playerColors: { "Docent": "#1565C0", "MerSahaha": "#F9A825", "influx": "#C62828", "oroni": "#2E7D32", "wezzy1": "#E91E63" },
+    playerOrder:  ["Docent", "MerSahaha", "influx", "oroni", "wezzy1"],
+  },
+  reborn: {
+    filePrefix:   "rb",
+    mapControl:   typeof rbMapControlData !== "undefined" ? rbMapControlData : {},
+    statMaps:     ["Bind", "Breeze", "Haven", "Lotus", "Split"],
+    retakeMaps:   ["Bind", "Breeze", "Haven", "Lotus", "Split"],
+    playerColors: { "Deadink": "#1565C0", "Kachoww": "#F9A825", "batujnax": "#C62828", "hezacoil": "#2E7D32", "reazy": "#E91E63" },
+    playerOrder:  ["Deadink", "Kachoww", "batujnax", "hezacoil", "reazy"],
+  },
+  ucam: {
+    filePrefix:   "ucam",
+    mapControl:   typeof ucamMapControlData !== "undefined" ? ucamMapControlData : {},
+    statMaps:     ["Bind", "Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
+    retakeMaps:   ["Bind", "Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
+    playerColors: { "B1SK": "#1565C0", "BULD": "#F9A825", "Famsii": "#C62828", "Jesse": "#2E7D32", "OLIZERA": "#E91E63" },
+    playerOrder:  ["B1SK", "BULD", "Famsii", "Jesse", "OLIZERA"],
+  },
 };
 // Derived — do not edit these directly; update TEAMS_CONFIG above instead
 const TEAM_MAP_CONTROL_DATA = Object.fromEntries(
@@ -1388,6 +1468,13 @@ function renderDefensivePanels(info) {
           <td>${fmtTime(s.fk_after_plant_avg)}</td>
         </tr>`;
       }).join("");
+      const wbk = cs.won_by_kills ?? null;
+      const wbkCell = wbk !== null
+        ? `<tfoot><tr class="sst-kills-row">
+            <td colspan="3">WON BY KILLS — ${wbk} rounds (${fmt(cs.pct_won_by_kills, "%")})</td>
+            <td colspan="2">WON BY DEFUSE — ${cs.won_by_defuse} rounds (${fmt(cs.pct_won_by_defuse, "%")})</td>
+           </tr></tfoot>`
+        : "";
       siteStatsMarkup = `
         <div class="site-stats-wrap">
           <table class="site-stats-table">
@@ -1396,6 +1483,7 @@ function renderDefensivePanels(info) {
               <th>TIME TO DEFUSE</th><th>FK AFTER PLANT</th>
             </tr></thead>
             <tbody>${rows}</tbody>
+            ${wbkCell}
           </table>
         </div>`;
     }

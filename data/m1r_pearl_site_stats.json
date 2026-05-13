@@ -1,0 +1,68 @@
+{
+  "t_side": {
+    "total_rounds": 15,
+    "sites": {
+      "A": {
+        "plant_count": 8,
+        "pct_plant": 72.7,
+        "pct_win": 75.0,
+        "avg_plant_time": 72.6,
+        "min_plant_time": 46.7,
+        "max_plant_time": 98.1,
+        "fk_to_plant_avg": 35.4,
+        "fk_to_plant_n": 5
+      },
+      "B": {
+        "plant_count": 3,
+        "pct_plant": 27.3,
+        "pct_win": 100.0,
+        "avg_plant_time": 47.0,
+        "min_plant_time": 33.7,
+        "max_plant_time": 66.5,
+        "fk_to_plant_avg": 25.3,
+        "fk_to_plant_n": 3
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 24,
+    "won_by_kills": 6,
+    "pct_won_by_kills": 25.0,
+    "won_by_defuse": 1,
+    "pct_won_by_defuse": 4.2,
+    "sites": {
+      "A": {
+        "plant_count": 12,
+        "defuse_count": 1,
+        "pct_defuse_win": 8.3,
+        "pct_defuse_share": 100.0,
+        "avg_defuse_time": 33.8,
+        "fk_after_plant_avg": 21.9,
+        "fk_after_plant_n": 7
+      },
+      "B": {
+        "plant_count": 6,
+        "defuse_count": 0,
+        "pct_defuse_win": 0.0,
+        "pct_defuse_share": 0.0,
+        "avg_defuse_time": null,
+        "fk_after_plant_avg": 15.4,
+        "fk_after_plant_n": 5
+      }
+    }
+  },
+  "team": "MIR",
+  "map": "Pearl",
+  "matches": [
+    {
+      "date": "2026-04-21",
+      "opponent": "EP",
+      "matchId": "e72bd654-538f-4362-9859-83f68f650e84"
+    },
+    {
+      "date": "2026-04-06",
+      "opponent": "200",
+      "matchId": "d1aa667c-b922-455d-ba80-8bbc15709eac"
+    }
+  ]
+}

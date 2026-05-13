@@ -1,0 +1,82 @@
+{
+  "t_side": {
+    "total_rounds": 12,
+    "sites": {
+      "A": {
+        "plant_count": 4,
+        "pct_plant": 66.7,
+        "pct_win": 100.0,
+        "avg_plant_time": 57.0,
+        "min_plant_time": 23.6,
+        "max_plant_time": 77.0,
+        "fk_to_plant_avg": 30.3,
+        "fk_to_plant_n": 3
+      },
+      "B": {
+        "plant_count": 1,
+        "pct_plant": 16.7,
+        "pct_win": 0.0,
+        "avg_plant_time": 57.0,
+        "min_plant_time": 57.0,
+        "max_plant_time": 57.0,
+        "fk_to_plant_avg": null,
+        "fk_to_plant_n": 0
+      },
+      "C": {
+        "plant_count": 1,
+        "pct_plant": 16.7,
+        "pct_win": 0.0,
+        "avg_plant_time": 39.8,
+        "min_plant_time": 39.8,
+        "max_plant_time": 39.8,
+        "fk_to_plant_avg": null,
+        "fk_to_plant_n": 0
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 8,
+    "won_by_kills": 2,
+    "pct_won_by_kills": 25.0,
+    "won_by_defuse": 1,
+    "pct_won_by_defuse": 12.5,
+    "sites": {
+      "A": {
+        "plant_count": 3,
+        "defuse_count": 0,
+        "pct_defuse_win": 0.0,
+        "pct_defuse_share": 0.0,
+        "avg_defuse_time": null,
+        "fk_after_plant_avg": 21.5,
+        "fk_after_plant_n": 2
+      },
+      "B": {
+        "plant_count": 1,
+        "defuse_count": 1,
+        "pct_defuse_win": 100.0,
+        "pct_defuse_share": 100.0,
+        "avg_defuse_time": 38.5,
+        "fk_after_plant_avg": 17.5,
+        "fk_after_plant_n": 1
+      },
+      "C": {
+        "plant_count": 2,
+        "defuse_count": 0,
+        "pct_defuse_win": 0.0,
+        "pct_defuse_share": 0.0,
+        "avg_defuse_time": null,
+        "fk_after_plant_avg": 8.4,
+        "fk_after_plant_n": 2
+      }
+    }
+  },
+  "team": "NAVI Junior",
+  "map": "Lotus",
+  "matches": [
+    {
+      "date": "2026-04-05",
+      "opponent": "EP",
+      "matchId": "17808f01-4f29-4207-8d90-1953ba3d5549"
+    }
+  ]
+}

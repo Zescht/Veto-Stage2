@@ -1,0 +1,380 @@
+{
+  "map": "Haven",
+  "side": "ct",
+  "selectedMaps": [
+    {
+      "date": "2026-04-14",
+      "opponent": "BFG",
+      "matchId": "55510efe-226f-44ef-9398-08221b1311e7",
+      "score": "5-13"
+    },
+    {
+      "date": "2026-04-12",
+      "opponent": "VR2",
+      "matchId": "24c3fa4a-18e4-4146-918d-ae5e7bd9533d",
+      "score": "13-6"
+    },
+    {
+      "date": "2026-04-06",
+      "opponent": "EVO",
+      "matchId": "e0f397f4-89d9-4ff4-b6e7-a8d00707e92c",
+      "score": "13-6"
+    }
+  ],
+  "sites": {
+    "A": {
+      "roundCount": 3,
+      "pointCount": 10,
+      "points": [
+        {
+          "site": "A",
+          "player": "GSR",
+          "normX": 16.78,
+          "normY": 44.5628,
+          "roundNum": 13,
+          "plantRoundTimeMs": 41177,
+          "date": "2026-04-12",
+          "opponent": "VR2",
+          "matchId": "24c3fa4a-18e4-4146-918d-ae5e7bd9533d",
+          "score": "13-6"
+        },
+        {
+          "site": "A",
+          "player": "Prti",
+          "normX": 38.275,
+          "normY": 34.3103,
+          "roundNum": 15,
+          "plantRoundTimeMs": 42814,
+          "date": "2026-04-12",
+          "opponent": "VR2",
+          "matchId": "24c3fa4a-18e4-4146-918d-ae5e7bd9533d",
+          "score": "13-6"
+        },
+        {
+          "site": "A",
+          "player": "GSR",
+          "normX": 42.28,
+          "normY": 34.4003,
+          "roundNum": 15,
+          "plantRoundTimeMs": 42814,
+          "date": "2026-04-12",
+          "opponent": "VR2",
+          "matchId": "24c3fa4a-18e4-4146-918d-ae5e7bd9533d",
+          "score": "13-6"
+        },
+        {
+          "site": "A",
+          "player": "Wanzeru",
+          "normX": 76.075,
+          "normY": 45.0878,
+          "roundNum": 15,
+          "plantRoundTimeMs": 42814,
+          "date": "2026-04-12",
+          "opponent": "VR2",
+          "matchId": "24c3fa4a-18e4-4146-918d-ae5e7bd9533d",
+          "score": "13-6"
+        },
+        {
+          "site": "A",
+          "player": "rexxtoned",
+          "normX": 72.9175,
+          "normY": 41.2478,
+          "roundNum": 15,
+          "plantRoundTimeMs": 42814,
+          "date": "2026-04-12",
+          "opponent": "VR2",
+          "matchId": "24c3fa4a-18e4-4146-918d-ae5e7bd9533d",
+          "score": "13-6"
+        },
+        {
+          "site": "A",
+          "player": "Prti",
+          "normX": 27.04,
+          "normY": 30.3653,
+          "roundNum": 17,
+          "plantRoundTimeMs": 23192,
+          "date": "2026-04-06",
+          "opponent": "EVO",
+          "matchId": "e0f397f4-89d9-4ff4-b6e7-a8d00707e92c",
+          "score": "13-6"
+        },
+        {
+          "site": "A",
+          "player": "Kicks",
+          "normX": 21.805,
+          "normY": 25.8203,
+          "roundNum": 17,
+          "plantRoundTimeMs": 23192,
+          "date": "2026-04-06",
+          "opponent": "EVO",
+          "matchId": "e0f397f4-89d9-4ff4-b6e7-a8d00707e92c",
+          "score": "13-6"
+        },
+        {
+          "site": "A",
+          "player": "Wanzeru",
+          "normX": 75.6475,
+          "normY": 52.8953,
+          "roundNum": 17,
+          "plantRoundTimeMs": 23192,
+          "date": "2026-04-06",
+          "opponent": "EVO",
+          "matchId": "e0f397f4-89d9-4ff4-b6e7-a8d00707e92c",
+          "score": "13-6"
+        },
+        {
+          "site": "A",
+          "player": "GSR",
+          "normX": 33.52,
+          "normY": 32.4353,
+          "roundNum": 17,
+          "plantRoundTimeMs": 23192,
+          "date": "2026-04-06",
+          "opponent": "EVO",
+          "matchId": "e0f397f4-89d9-4ff4-b6e7-a8d00707e92c",
+          "score": "13-6"
+        },
+        {
+          "site": "A",
+          "player": "rexxtoned",
+          "normX": 30.4,
+          "normY": 17.1428,
+          "roundNum": 17,
+          "plantRoundTimeMs": 23192,
+          "date": "2026-04-06",
+          "opponent": "EVO",
+          "matchId": "e0f397f4-89d9-4ff4-b6e7-a8d00707e92c",
+          "score": "13-6"
+        }
+      ]
+    },
+    "B": {
+      "roundCount": 2,
+      "pointCount": 4,
+      "points": [
+        {
+          "site": "B",
+          "player": "Wanzeru",
+          "normX": 33.9775,
+          "normY": 60.1553,
+          "roundNum": 13,
+          "plantRoundTimeMs": 50085,
+          "date": "2026-04-14",
+          "opponent": "BFG",
+          "matchId": "55510efe-226f-44ef-9398-08221b1311e7",
+          "score": "5-13"
+        },
+        {
+          "site": "B",
+          "player": "Prti",
+          "normX": 33.82,
+          "normY": 77.3753,
+          "roundNum": 14,
+          "plantRoundTimeMs": 14830,
+          "date": "2026-04-12",
+          "opponent": "VR2",
+          "matchId": "24c3fa4a-18e4-4146-918d-ae5e7bd9533d",
+          "score": "13-6"
+        },
+        {
+          "site": "B",
+          "player": "Kicks",
+          "normX": 38.275,
+          "normY": 31.0928,
+          "roundNum": 14,
+          "plantRoundTimeMs": 14830,
+          "date": "2026-04-12",
+          "opponent": "VR2",
+          "matchId": "24c3fa4a-18e4-4146-918d-ae5e7bd9533d",
+          "score": "13-6"
+        },
+        {
+          "site": "B",
+          "player": "Wanzeru",
+          "normX": 65.1475,
+          "normY": 40.5353,
+          "roundNum": 14,
+          "plantRoundTimeMs": 14830,
+          "date": "2026-04-12",
+          "opponent": "VR2",
+          "matchId": "24c3fa4a-18e4-4146-918d-ae5e7bd9533d",
+          "score": "13-6"
+        }
+      ]
+    },
+    "C": {
+      "roundCount": 6,
+      "pointCount": 14,
+      "points": [
+        {
+          "site": "C",
+          "player": "Prti",
+          "normX": 35.6275,
+          "normY": 33.2978,
+          "roundNum": 12,
+          "plantRoundTimeMs": 89767,
+          "date": "2026-04-14",
+          "opponent": "BFG",
+          "matchId": "55510efe-226f-44ef-9398-08221b1311e7",
+          "score": "5-13"
+        },
+        {
+          "site": "C",
+          "player": "Kicks",
+          "normX": 30.5575,
+          "normY": 29.0003,
+          "roundNum": 12,
+          "plantRoundTimeMs": 89767,
+          "date": "2026-04-14",
+          "opponent": "BFG",
+          "matchId": "55510efe-226f-44ef-9398-08221b1311e7",
+          "score": "5-13"
+        },
+        {
+          "site": "C",
+          "player": "Kicks",
+          "normX": 23.26,
+          "normY": 58.5803,
+          "roundNum": 16,
+          "plantRoundTimeMs": 81086,
+          "date": "2026-04-14",
+          "opponent": "BFG",
+          "matchId": "55510efe-226f-44ef-9398-08221b1311e7",
+          "score": "5-13"
+        },
+        {
+          "site": "C",
+          "player": "Prti",
+          "normX": 25.0675,
+          "normY": 64.6328,
+          "roundNum": 17,
+          "plantRoundTimeMs": 17669,
+          "date": "2026-04-14",
+          "opponent": "BFG",
+          "matchId": "55510efe-226f-44ef-9398-08221b1311e7",
+          "score": "5-13"
+        },
+        {
+          "site": "C",
+          "player": "GSR",
+          "normX": 45.67,
+          "normY": 50.7803,
+          "roundNum": 17,
+          "plantRoundTimeMs": 17669,
+          "date": "2026-04-14",
+          "opponent": "BFG",
+          "matchId": "55510efe-226f-44ef-9398-08221b1311e7",
+          "score": "5-13"
+        },
+        {
+          "site": "C",
+          "player": "rexxtoned",
+          "normX": 39.37,
+          "normY": 66.9803,
+          "roundNum": 17,
+          "plantRoundTimeMs": 17669,
+          "date": "2026-04-14",
+          "opponent": "BFG",
+          "matchId": "55510efe-226f-44ef-9398-08221b1311e7",
+          "score": "5-13"
+        },
+        {
+          "site": "C",
+          "player": "Prti",
+          "normX": 41.1025,
+          "normY": 67.0478,
+          "roundNum": 12,
+          "plantRoundTimeMs": 32459,
+          "date": "2026-04-12",
+          "opponent": "VR2",
+          "matchId": "24c3fa4a-18e4-4146-918d-ae5e7bd9533d",
+          "score": "13-6"
+        },
+        {
+          "site": "C",
+          "player": "Kicks",
+          "normX": 25.4425,
+          "normY": 63.8903,
+          "roundNum": 12,
+          "plantRoundTimeMs": 32459,
+          "date": "2026-04-12",
+          "opponent": "VR2",
+          "matchId": "24c3fa4a-18e4-4146-918d-ae5e7bd9533d",
+          "score": "13-6"
+        },
+        {
+          "site": "C",
+          "player": "Prti",
+          "normX": 47.9125,
+          "normY": 50.7053,
+          "roundNum": 13,
+          "plantRoundTimeMs": 29757,
+          "date": "2026-04-06",
+          "opponent": "EVO",
+          "matchId": "e0f397f4-89d9-4ff4-b6e7-a8d00707e92c",
+          "score": "13-6"
+        },
+        {
+          "site": "C",
+          "player": "Kicks",
+          "normX": 53.2825,
+          "normY": 50.4578,
+          "roundNum": 13,
+          "plantRoundTimeMs": 29757,
+          "date": "2026-04-06",
+          "opponent": "EVO",
+          "matchId": "e0f397f4-89d9-4ff4-b6e7-a8d00707e92c",
+          "score": "13-6"
+        },
+        {
+          "site": "C",
+          "player": "Wanzeru",
+          "normX": 65.6125,
+          "normY": 37.9553,
+          "roundNum": 13,
+          "plantRoundTimeMs": 29757,
+          "date": "2026-04-06",
+          "opponent": "EVO",
+          "matchId": "e0f397f4-89d9-4ff4-b6e7-a8d00707e92c",
+          "score": "13-6"
+        },
+        {
+          "site": "C",
+          "player": "GSR",
+          "normX": 53.8375,
+          "normY": 51.7178,
+          "roundNum": 13,
+          "plantRoundTimeMs": 29757,
+          "date": "2026-04-06",
+          "opponent": "EVO",
+          "matchId": "e0f397f4-89d9-4ff4-b6e7-a8d00707e92c",
+          "score": "13-6"
+        },
+        {
+          "site": "C",
+          "player": "rexxtoned",
+          "normX": 56.275,
+          "normY": 53.6978,
+          "roundNum": 13,
+          "plantRoundTimeMs": 29757,
+          "date": "2026-04-06",
+          "opponent": "EVO",
+          "matchId": "e0f397f4-89d9-4ff4-b6e7-a8d00707e92c",
+          "score": "13-6"
+        },
+        {
+          "site": "C",
+          "player": "Kicks",
+          "normX": 37.015,
+          "normY": 54.2528,
+          "roundNum": 15,
+          "plantRoundTimeMs": 82472,
+          "date": "2026-04-06",
+          "opponent": "EVO",
+          "matchId": "e0f397f4-89d9-4ff4-b6e7-a8d00707e92c",
+          "score": "13-6"
+        }
+      ]
+    }
+  }
+}

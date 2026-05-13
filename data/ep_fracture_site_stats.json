@@ -1,0 +1,83 @@
+{
+  "t_side": {
+    "total_rounds": 56,
+    "sites": {
+      "A": {
+        "plant_count": 18,
+        "pct_plant": 39.1,
+        "pct_win": 72.2,
+        "avg_plant_time": 57.4,
+        "min_plant_time": 23.8,
+        "max_plant_time": 91.2,
+        "fk_to_plant_avg": 31.3,
+        "fk_to_plant_n": 15
+      },
+      "B": {
+        "plant_count": 28,
+        "pct_plant": 60.9,
+        "pct_win": 89.3,
+        "avg_plant_time": 51.7,
+        "min_plant_time": 18.9,
+        "max_plant_time": 97.2,
+        "fk_to_plant_avg": 27.5,
+        "fk_to_plant_n": 25
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 52,
+    "won_by_kills": 19,
+    "pct_won_by_kills": 36.5,
+    "won_by_defuse": 9,
+    "pct_won_by_defuse": 17.3,
+    "sites": {
+      "A": {
+        "plant_count": 17,
+        "defuse_count": 5,
+        "pct_defuse_win": 29.4,
+        "pct_defuse_share": 55.6,
+        "avg_defuse_time": 25.1,
+        "fk_after_plant_avg": 12.8,
+        "fk_after_plant_n": 11
+      },
+      "B": {
+        "plant_count": 15,
+        "defuse_count": 4,
+        "pct_defuse_win": 26.7,
+        "pct_defuse_share": 44.4,
+        "avg_defuse_time": 37.0,
+        "fk_after_plant_avg": 11.4,
+        "fk_after_plant_n": 8
+      }
+    }
+  },
+  "team": "Enterprise",
+  "map": "Fracture",
+  "matches": [
+    {
+      "date": "2026-05-07",
+      "opponent": "M1R",
+      "matchId": "cb70b5f4-f014-4bb0-88d4-912c7bf40dc9"
+    },
+    {
+      "date": "2026-05-05",
+      "opponent": "TLA",
+      "matchId": "4a373828-cf65-4f8a-ab45-213339918411"
+    },
+    {
+      "date": "2026-04-18",
+      "opponent": "EVOP",
+      "matchId": "a769d1ee-b793-429b-a076-8ece0831d82a"
+    },
+    {
+      "date": "2026-04-12",
+      "opponent": "FMG",
+      "matchId": "9218bea1-b81d-4adf-9e82-081ebf1c6780"
+    },
+    {
+      "date": "2026-04-05",
+      "opponent": "NVJ",
+      "matchId": "70593953-3033-4b51-b6d1-40316e5ab46b"
+    }
+  ]
+}

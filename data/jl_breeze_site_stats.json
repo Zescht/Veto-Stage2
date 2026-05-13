@@ -1,0 +1,68 @@
+{
+  "t_side": {
+    "total_rounds": 19,
+    "sites": {
+      "A": {
+        "plant_count": 4,
+        "pct_plant": 40.0,
+        "pct_win": 75.0,
+        "avg_plant_time": 55.2,
+        "min_plant_time": 26.5,
+        "max_plant_time": 74.0,
+        "fk_to_plant_avg": 21.6,
+        "fk_to_plant_n": 4
+      },
+      "B": {
+        "plant_count": 6,
+        "pct_plant": 60.0,
+        "pct_win": 83.3,
+        "avg_plant_time": 79.8,
+        "min_plant_time": 57.0,
+        "max_plant_time": 95.1,
+        "fk_to_plant_avg": 50.5,
+        "fk_to_plant_n": 5
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 24,
+    "won_by_kills": 6,
+    "pct_won_by_kills": 25.0,
+    "won_by_defuse": 6,
+    "pct_won_by_defuse": 25.0,
+    "sites": {
+      "A": {
+        "plant_count": 8,
+        "defuse_count": 3,
+        "pct_defuse_win": 37.5,
+        "pct_defuse_share": 50.0,
+        "avg_defuse_time": 36.2,
+        "fk_after_plant_avg": 16.1,
+        "fk_after_plant_n": 6
+      },
+      "B": {
+        "plant_count": 10,
+        "defuse_count": 3,
+        "pct_defuse_win": 30.0,
+        "pct_defuse_share": 50.0,
+        "avg_defuse_time": 23.0,
+        "fk_after_plant_avg": 11.6,
+        "fk_after_plant_n": 7
+      }
+    }
+  },
+  "team": "JOBlife",
+  "map": "Breeze",
+  "matches": [
+    {
+      "date": "2026-04-26",
+      "opponent": "MDR",
+      "matchId": "d774b7b4-c8ea-4032-b2f6-1fd088e7da75"
+    },
+    {
+      "date": "2026-04-25",
+      "opponent": "GL",
+      "matchId": "18d9d0af-aeba-4f37-a3fe-6eaab9ed0e2c"
+    }
+  ]
+}

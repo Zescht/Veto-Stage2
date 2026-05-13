@@ -1,0 +1,63 @@
+{
+  "t_side": {
+    "total_rounds": 12,
+    "sites": {
+      "A": {
+        "plant_count": 5,
+        "pct_plant": 62.5,
+        "pct_win": 60.0,
+        "avg_plant_time": 37.9,
+        "min_plant_time": 18.7,
+        "max_plant_time": 78.2,
+        "fk_to_plant_avg": 10.8,
+        "fk_to_plant_n": 3
+      },
+      "B": {
+        "plant_count": 3,
+        "pct_plant": 37.5,
+        "pct_win": 100.0,
+        "avg_plant_time": 29.7,
+        "min_plant_time": 21.6,
+        "max_plant_time": 43.3,
+        "fk_to_plant_avg": 19.9,
+        "fk_to_plant_n": 2
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 12,
+    "won_by_kills": 2,
+    "pct_won_by_kills": 16.7,
+    "won_by_defuse": 4,
+    "pct_won_by_defuse": 33.3,
+    "sites": {
+      "A": {
+        "plant_count": 5,
+        "defuse_count": 2,
+        "pct_defuse_win": 40.0,
+        "pct_defuse_share": 50.0,
+        "avg_defuse_time": 34.9,
+        "fk_after_plant_avg": 11.6,
+        "fk_after_plant_n": 3
+      },
+      "B": {
+        "plant_count": 4,
+        "defuse_count": 2,
+        "pct_defuse_win": 50.0,
+        "pct_defuse_share": 50.0,
+        "avg_defuse_time": 36.2,
+        "fk_after_plant_avg": 16.1,
+        "fk_after_plant_n": 3
+      }
+    }
+  },
+  "team": "Besiktas",
+  "map": "Fracture",
+  "matches": [
+    {
+      "date": "2026-04-27",
+      "opponent": "FA",
+      "matchId": "6b0f0d53-c88a-43ef-a94f-7285974c2b62"
+    }
+  ]
+}

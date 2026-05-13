@@ -1,0 +1,87 @@
+{
+  "t_side": {
+    "total_rounds": 23,
+    "sites": {
+      "A": {
+        "plant_count": 8,
+        "pct_plant": 50.0,
+        "pct_win": 75.0,
+        "avg_plant_time": 45.0,
+        "min_plant_time": 27.1,
+        "max_plant_time": 68.5,
+        "fk_to_plant_avg": 25.6,
+        "fk_to_plant_n": 7
+      },
+      "B": {
+        "plant_count": 4,
+        "pct_plant": 25.0,
+        "pct_win": 50.0,
+        "avg_plant_time": 46.7,
+        "min_plant_time": 30.7,
+        "max_plant_time": 89.9,
+        "fk_to_plant_avg": 9.4,
+        "fk_to_plant_n": 2
+      },
+      "C": {
+        "plant_count": 4,
+        "pct_plant": 25.0,
+        "pct_win": 75.0,
+        "avg_plant_time": 50.3,
+        "min_plant_time": 41.7,
+        "max_plant_time": 68.0,
+        "fk_to_plant_avg": 19.6,
+        "fk_to_plant_n": 3
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 17,
+    "won_by_kills": 7,
+    "pct_won_by_kills": 41.2,
+    "won_by_defuse": 4,
+    "pct_won_by_defuse": 23.5,
+    "sites": {
+      "A": {
+        "plant_count": 5,
+        "defuse_count": 2,
+        "pct_defuse_win": 40.0,
+        "pct_defuse_share": 50.0,
+        "avg_defuse_time": 34.2,
+        "fk_after_plant_avg": 14.3,
+        "fk_after_plant_n": 4
+      },
+      "B": {
+        "plant_count": 1,
+        "defuse_count": 0,
+        "pct_defuse_win": 0.0,
+        "pct_defuse_share": 0.0,
+        "avg_defuse_time": null,
+        "fk_after_plant_avg": 4.6,
+        "fk_after_plant_n": 1
+      },
+      "C": {
+        "plant_count": 4,
+        "defuse_count": 2,
+        "pct_defuse_win": 50.0,
+        "pct_defuse_share": 50.0,
+        "avg_defuse_time": 31.6,
+        "fk_after_plant_avg": 17.0,
+        "fk_after_plant_n": 3
+      }
+    }
+  },
+  "team": "NAVI Junior",
+  "map": "Haven",
+  "matches": [
+    {
+      "date": "2026-04-13",
+      "opponent": "PXL",
+      "matchId": "806a35c4-e590-4b43-9107-8a7c93e43d2a"
+    },
+    {
+      "date": "2026-04-06",
+      "opponent": "BG",
+      "matchId": "83f2af75-3727-4906-b023-d33b4d1b1315"
+    }
+  ]
+}

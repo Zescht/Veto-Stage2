@@ -1,0 +1,88 @@
+{
+  "t_side": {
+    "total_rounds": 67,
+    "sites": {
+      "A": {
+        "plant_count": 16,
+        "pct_plant": 30.2,
+        "pct_win": 87.5,
+        "avg_plant_time": 45.0,
+        "min_plant_time": 12.0,
+        "max_plant_time": 87.5,
+        "fk_to_plant_avg": 21.5,
+        "fk_to_plant_n": 15
+      },
+      "B": {
+        "plant_count": 37,
+        "pct_plant": 69.8,
+        "pct_win": 91.9,
+        "avg_plant_time": 48.4,
+        "min_plant_time": 17.0,
+        "max_plant_time": 91.1,
+        "fk_to_plant_avg": 26.4,
+        "fk_to_plant_n": 35
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 47,
+    "won_by_kills": 25,
+    "pct_won_by_kills": 53.2,
+    "won_by_defuse": 6,
+    "pct_won_by_defuse": 12.8,
+    "sites": {
+      "A": {
+        "plant_count": 10,
+        "defuse_count": 3,
+        "pct_defuse_win": 30.0,
+        "pct_defuse_share": 50.0,
+        "avg_defuse_time": 35.2,
+        "fk_after_plant_avg": 17.2,
+        "fk_after_plant_n": 5
+      },
+      "B": {
+        "plant_count": 11,
+        "defuse_count": 3,
+        "pct_defuse_win": 27.3,
+        "pct_defuse_share": 50.0,
+        "avg_defuse_time": 25.3,
+        "fk_after_plant_avg": 14.7,
+        "fk_after_plant_n": 10
+      }
+    }
+  },
+  "team": "REBORN",
+  "map": "Split",
+  "matches": [
+    {
+      "date": "2026-05-03",
+      "opponent": "BJK",
+      "matchId": "e1f54e6b-43b4-41dd-a73c-ccfac39795d9"
+    },
+    {
+      "date": "2026-04-27",
+      "opponent": "MISA",
+      "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4"
+    },
+    {
+      "date": "2026-04-19",
+      "opponent": "GS",
+      "matchId": "5276db2e-6ea4-4dbc-ae9e-159d66959ad3"
+    },
+    {
+      "date": "2026-04-12",
+      "opponent": "FA",
+      "matchId": "758eb9c0-86d3-4039-90ef-561efcec17e2"
+    },
+    {
+      "date": "2026-04-07",
+      "opponent": "FF",
+      "matchId": "db70f3b8-3419-4bf8-8664-50b63724f802"
+    },
+    {
+      "date": "2026-04-05",
+      "opponent": "GHS",
+      "matchId": "cf9f2a21-eddf-4b63-851e-4ede6c659f44"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "t_side": {
+    "total_rounds": 34,
+    "sites": {
+      "A": {
+        "plant_count": 11,
+        "pct_plant": 50.0,
+        "pct_win": 63.6,
+        "avg_plant_time": 71.0,
+        "min_plant_time": 38.6,
+        "max_plant_time": 94.5,
+        "fk_to_plant_avg": 23.3,
+        "fk_to_plant_n": 10
+      },
+      "B": {
+        "plant_count": 11,
+        "pct_plant": 50.0,
+        "pct_win": 63.6,
+        "avg_plant_time": 65.6,
+        "min_plant_time": 26.1,
+        "max_plant_time": 95.6,
+        "fk_to_plant_avg": 29.5,
+        "fk_to_plant_n": 9
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 35,
+    "won_by_kills": 18,
+    "pct_won_by_kills": 51.4,
+    "won_by_defuse": 5,
+    "pct_won_by_defuse": 14.3,
+    "sites": {
+      "A": {
+        "plant_count": 11,
+        "defuse_count": 3,
+        "pct_defuse_win": 27.3,
+        "pct_defuse_share": 60.0,
+        "avg_defuse_time": 36.7,
+        "fk_after_plant_avg": 12.6,
+        "fk_after_plant_n": 7
+      },
+      "B": {
+        "plant_count": 6,
+        "defuse_count": 2,
+        "pct_defuse_win": 33.3,
+        "pct_defuse_share": 40.0,
+        "avg_defuse_time": 39.9,
+        "fk_after_plant_avg": 14.8,
+        "fk_after_plant_n": 4
+      }
+    }
+  },
+  "team": "Besiktas",
+  "map": "Pearl",
+  "matches": [
+    {
+      "date": "2026-05-04",
+      "opponent": "MISA",
+      "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1"
+    },
+    {
+      "date": "2026-04-13",
+      "opponent": "EFP",
+      "matchId": "93150aa3-95d0-475c-8e4a-0e0b6635e765"
+    },
+    {
+      "date": "2026-04-06",
+      "opponent": "BW",
+      "matchId": "4ce0e6f1-83da-495c-97a9-557f94b94bda"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "t_side": {
+    "total_rounds": 28,
+    "sites": {
+      "A": {
+        "plant_count": 14,
+        "pct_plant": 66.7,
+        "pct_win": 64.3,
+        "avg_plant_time": 55.9,
+        "min_plant_time": 22.6,
+        "max_plant_time": 78.7,
+        "fk_to_plant_avg": 28.1,
+        "fk_to_plant_n": 11
+      },
+      "B": {
+        "plant_count": 7,
+        "pct_plant": 33.3,
+        "pct_win": 100.0,
+        "avg_plant_time": 68.6,
+        "min_plant_time": 35.8,
+        "max_plant_time": 79.3,
+        "fk_to_plant_avg": 44.1,
+        "fk_to_plant_n": 6
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 36,
+    "won_by_kills": 13,
+    "pct_won_by_kills": 36.1,
+    "won_by_defuse": 10,
+    "pct_won_by_defuse": 27.8,
+    "sites": {
+      "A": {
+        "plant_count": 15,
+        "defuse_count": 6,
+        "pct_defuse_win": 40.0,
+        "pct_defuse_share": 60.0,
+        "avg_defuse_time": 26.3,
+        "fk_after_plant_avg": 10.0,
+        "fk_after_plant_n": 14
+      },
+      "B": {
+        "plant_count": 8,
+        "defuse_count": 4,
+        "pct_defuse_win": 50.0,
+        "pct_defuse_share": 40.0,
+        "avg_defuse_time": 26.0,
+        "fk_after_plant_avg": 11.8,
+        "fk_after_plant_n": 4
+      }
+    }
+  },
+  "team": "WIP Esports",
+  "map": "Bind",
+  "matches": [
+    {
+      "date": "2026-05-03",
+      "opponent": "JL",
+      "matchId": "8a34cf5f-f06a-4e82-b185-97bdac3bcf12"
+    },
+    {
+      "date": "2026-04-12",
+      "opponent": "JL",
+      "matchId": "47698e26-fe95-45c5-a15e-b31a709ae888"
+    },
+    {
+      "date": "2026-04-04",
+      "opponent": "NXR",
+      "matchId": "55891c74-5d4f-417c-97de-480b8f29f50a"
+    }
+  ]
+}

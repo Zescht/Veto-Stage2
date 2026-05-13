@@ -1,0 +1,476 @@
+{
+  "map": "Lotus",
+  "side": "ct",
+  "selectedMaps": [
+    {
+      "date": "2026-05-12",
+      "opponent": "JL",
+      "matchId": "8d41bf67-47a4-42e4-b353-00e8342091b9",
+      "score": "10-13"
+    },
+    {
+      "date": "2026-05-05",
+      "opponent": "MDR",
+      "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+      "score": "13-7"
+    },
+    {
+      "date": "2026-05-04",
+      "opponent": "F9",
+      "matchId": "5e307ea4-fd33-4c81-8d48-d7dad9a92d0a",
+      "score": "13-7"
+    }
+  ],
+  "sites": {
+    "A": {
+      "roundCount": 5,
+      "pointCount": 18,
+      "points": [
+        {
+          "site": "A",
+          "player": "Yuta",
+          "normX": 36.9397,
+          "normY": 36.0904,
+          "roundNum": 12,
+          "plantRoundTimeMs": 40501,
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "score": "13-7"
+        },
+        {
+          "site": "A",
+          "player": "hoody",
+          "normX": 69.4045,
+          "normY": 23.3536,
+          "roundNum": 12,
+          "plantRoundTimeMs": 40501,
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "score": "13-7"
+        },
+        {
+          "site": "A",
+          "player": "Nowax",
+          "normX": 72.8677,
+          "normY": 35.428,
+          "roundNum": 12,
+          "plantRoundTimeMs": 40501,
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "score": "13-7"
+        },
+        {
+          "site": "A",
+          "player": "H1ber",
+          "normX": 70.2181,
+          "normY": 38.5384,
+          "roundNum": 12,
+          "plantRoundTimeMs": 40501,
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "score": "13-7"
+        },
+        {
+          "site": "A",
+          "player": "77even",
+          "normX": 61.5925,
+          "normY": 20.992,
+          "roundNum": 12,
+          "plantRoundTimeMs": 40501,
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "score": "13-7"
+        },
+        {
+          "site": "A",
+          "player": "Yuta",
+          "normX": 64.6165,
+          "normY": 18.6592,
+          "roundNum": 16,
+          "plantRoundTimeMs": 36987,
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "score": "13-7"
+        },
+        {
+          "site": "A",
+          "player": "hoody",
+          "normX": 67.7413,
+          "normY": 45.5584,
+          "roundNum": 16,
+          "plantRoundTimeMs": 36987,
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "score": "13-7"
+        },
+        {
+          "site": "A",
+          "player": "Nowax",
+          "normX": 64.6597,
+          "normY": 45.2992,
+          "roundNum": 16,
+          "plantRoundTimeMs": 36987,
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "score": "13-7"
+        },
+        {
+          "site": "A",
+          "player": "H1ber",
+          "normX": 73.1053,
+          "normY": 27.1984,
+          "roundNum": 16,
+          "plantRoundTimeMs": 36987,
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "score": "13-7"
+        },
+        {
+          "site": "A",
+          "player": "77even",
+          "normX": 66.9349,
+          "normY": 45.1336,
+          "roundNum": 16,
+          "plantRoundTimeMs": 36987,
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "score": "13-7"
+        },
+        {
+          "site": "A",
+          "player": "Nowax",
+          "normX": 46.1125,
+          "normY": 40.972,
+          "roundNum": 17,
+          "plantRoundTimeMs": 53572,
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "score": "13-7"
+        },
+        {
+          "site": "A",
+          "player": "77even",
+          "normX": 49.2445,
+          "normY": 46.3288,
+          "roundNum": 17,
+          "plantRoundTimeMs": 53572,
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "score": "13-7"
+        },
+        {
+          "site": "A",
+          "player": "Yuta",
+          "normX": 49.8637,
+          "normY": 20.6968,
+          "roundNum": 19,
+          "plantRoundTimeMs": 89658,
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "score": "13-7"
+        },
+        {
+          "site": "A",
+          "player": "hoody",
+          "normX": 73.4869,
+          "normY": 24.9232,
+          "roundNum": 13,
+          "plantRoundTimeMs": 90784,
+          "date": "2026-05-04",
+          "opponent": "F9",
+          "matchId": "5e307ea4-fd33-4c81-8d48-d7dad9a92d0a",
+          "score": "13-7"
+        },
+        {
+          "site": "A",
+          "player": "Yuta",
+          "normX": 67.7125,
+          "normY": 27.4864,
+          "roundNum": 13,
+          "plantRoundTimeMs": 90784,
+          "date": "2026-05-04",
+          "opponent": "F9",
+          "matchId": "5e307ea4-fd33-4c81-8d48-d7dad9a92d0a",
+          "score": "13-7"
+        },
+        {
+          "site": "A",
+          "player": "H1ber",
+          "normX": 47.5525,
+          "normY": 22.4896,
+          "roundNum": 13,
+          "plantRoundTimeMs": 90784,
+          "date": "2026-05-04",
+          "opponent": "F9",
+          "matchId": "5e307ea4-fd33-4c81-8d48-d7dad9a92d0a",
+          "score": "13-7"
+        },
+        {
+          "site": "A",
+          "player": "Nowax",
+          "normX": 62.8165,
+          "normY": 17.9176,
+          "roundNum": 13,
+          "plantRoundTimeMs": 90784,
+          "date": "2026-05-04",
+          "opponent": "F9",
+          "matchId": "5e307ea4-fd33-4c81-8d48-d7dad9a92d0a",
+          "score": "13-7"
+        },
+        {
+          "site": "A",
+          "player": "77even",
+          "normX": 69.5485,
+          "normY": 23.2888,
+          "roundNum": 13,
+          "plantRoundTimeMs": 90784,
+          "date": "2026-05-04",
+          "opponent": "F9",
+          "matchId": "5e307ea4-fd33-4c81-8d48-d7dad9a92d0a",
+          "score": "13-7"
+        }
+      ]
+    },
+    "B": {
+      "roundCount": 1,
+      "pointCount": 2,
+      "points": [
+        {
+          "site": "B",
+          "player": "hoody",
+          "normX": 51.7285,
+          "normY": 50.2168,
+          "roundNum": 16,
+          "plantRoundTimeMs": 95321,
+          "date": "2026-05-04",
+          "opponent": "F9",
+          "matchId": "5e307ea4-fd33-4c81-8d48-d7dad9a92d0a",
+          "score": "13-7"
+        },
+        {
+          "site": "B",
+          "player": "Nowax",
+          "normX": 55.1917,
+          "normY": 49.6624,
+          "roundNum": 16,
+          "plantRoundTimeMs": 95321,
+          "date": "2026-05-04",
+          "opponent": "F9",
+          "matchId": "5e307ea4-fd33-4c81-8d48-d7dad9a92d0a",
+          "score": "13-7"
+        }
+      ]
+    },
+    "C": {
+      "roundCount": 5,
+      "pointCount": 16,
+      "points": [
+        {
+          "site": "C",
+          "player": "Yuta",
+          "normX": 73.5589,
+          "normY": 31.9288,
+          "roundNum": 13,
+          "plantRoundTimeMs": 82004,
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "score": "13-7"
+        },
+        {
+          "site": "C",
+          "player": "hoody",
+          "normX": 41.2525,
+          "normY": 25.1176,
+          "roundNum": 13,
+          "plantRoundTimeMs": 82004,
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "score": "13-7"
+        },
+        {
+          "site": "C",
+          "player": "Nowax",
+          "normX": 37.3573,
+          "normY": 24.9952,
+          "roundNum": 13,
+          "plantRoundTimeMs": 82004,
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "score": "13-7"
+        },
+        {
+          "site": "C",
+          "player": "H1ber",
+          "normX": 46.9909,
+          "normY": 23.2312,
+          "roundNum": 13,
+          "plantRoundTimeMs": 82004,
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "score": "13-7"
+        },
+        {
+          "site": "C",
+          "player": "77even",
+          "normX": 39.9133,
+          "normY": 24.0232,
+          "roundNum": 13,
+          "plantRoundTimeMs": 82004,
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "score": "13-7"
+        },
+        {
+          "site": "C",
+          "player": "hoody",
+          "normX": 26.0893,
+          "normY": 47.488,
+          "roundNum": 14,
+          "plantRoundTimeMs": 44659,
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "score": "13-7"
+        },
+        {
+          "site": "C",
+          "player": "Nowax",
+          "normX": 33.2821,
+          "normY": 42.1384,
+          "roundNum": 14,
+          "plantRoundTimeMs": 44659,
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "score": "13-7"
+        },
+        {
+          "site": "C",
+          "player": "77even",
+          "normX": 48.8845,
+          "normY": 22.324,
+          "roundNum": 14,
+          "plantRoundTimeMs": 44659,
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "score": "13-7"
+        },
+        {
+          "site": "C",
+          "player": "hoody",
+          "normX": 32.2813,
+          "normY": 59.5768,
+          "roundNum": 15,
+          "plantRoundTimeMs": 55753,
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "score": "13-7"
+        },
+        {
+          "site": "C",
+          "player": "Nowax",
+          "normX": 36.7957,
+          "normY": 55.0408,
+          "roundNum": 15,
+          "plantRoundTimeMs": 55753,
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "score": "13-7"
+        },
+        {
+          "site": "C",
+          "player": "H1ber",
+          "normX": 39.5605,
+          "normY": 37.7032,
+          "roundNum": 15,
+          "plantRoundTimeMs": 55753,
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "score": "13-7"
+        },
+        {
+          "site": "C",
+          "player": "77even",
+          "normX": 45.9469,
+          "normY": 23.0296,
+          "roundNum": 15,
+          "plantRoundTimeMs": 55753,
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "score": "13-7"
+        },
+        {
+          "site": "C",
+          "player": "Yuta",
+          "normX": 12.2941,
+          "normY": 40.72,
+          "roundNum": 18,
+          "plantRoundTimeMs": 90052,
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "score": "13-7"
+        },
+        {
+          "site": "C",
+          "player": "hoody",
+          "normX": 28.1485,
+          "normY": 45.5872,
+          "roundNum": 18,
+          "plantRoundTimeMs": 90052,
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "score": "13-7"
+        },
+        {
+          "site": "C",
+          "player": "77even",
+          "normX": 14.8717,
+          "normY": 41.9656,
+          "roundNum": 18,
+          "plantRoundTimeMs": 90052,
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "score": "13-7"
+        },
+        {
+          "site": "C",
+          "player": "Nowax",
+          "normX": 20.5813,
+          "normY": 42.088,
+          "roundNum": 12,
+          "plantRoundTimeMs": 70637,
+          "date": "2026-05-04",
+          "opponent": "F9",
+          "matchId": "5e307ea4-fd33-4c81-8d48-d7dad9a92d0a",
+          "score": "13-7"
+        }
+      ]
+    }
+  }
+}

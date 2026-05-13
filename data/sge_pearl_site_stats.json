@@ -28,6 +28,10 @@
   },
   "ct_side": {
     "total_rounds": 12,
+    "won_by_kills": 6,
+    "pct_won_by_kills": 50.0,
+    "won_by_defuse": 2,
+    "pct_won_by_defuse": 16.7,
     "sites": {
       "A": {
         "plant_count": 1,

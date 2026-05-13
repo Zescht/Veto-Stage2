@@ -1,0 +1,97 @@
+{
+  "t_side": {
+    "total_rounds": 46,
+    "sites": {
+      "A": {
+        "plant_count": 12,
+        "pct_plant": 35.3,
+        "pct_win": 58.3,
+        "avg_plant_time": 65.1,
+        "min_plant_time": 20.6,
+        "max_plant_time": 99.8,
+        "fk_to_plant_avg": 34.3,
+        "fk_to_plant_n": 11
+      },
+      "B": {
+        "plant_count": 10,
+        "pct_plant": 29.4,
+        "pct_win": 50.0,
+        "avg_plant_time": 60.6,
+        "min_plant_time": 17.3,
+        "max_plant_time": 92.1,
+        "fk_to_plant_avg": 11.0,
+        "fk_to_plant_n": 8
+      },
+      "C": {
+        "plant_count": 12,
+        "pct_plant": 35.3,
+        "pct_win": 83.3,
+        "avg_plant_time": 43.5,
+        "min_plant_time": 25.1,
+        "max_plant_time": 58.9,
+        "fk_to_plant_avg": 23.4,
+        "fk_to_plant_n": 9
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 39,
+    "won_by_kills": 14,
+    "pct_won_by_kills": 35.9,
+    "won_by_defuse": 10,
+    "pct_won_by_defuse": 25.6,
+    "sites": {
+      "A": {
+        "plant_count": 11,
+        "defuse_count": 4,
+        "pct_defuse_win": 36.4,
+        "pct_defuse_share": 40.0,
+        "avg_defuse_time": 35.7,
+        "fk_after_plant_avg": 13.8,
+        "fk_after_plant_n": 8
+      },
+      "B": {
+        "plant_count": 5,
+        "defuse_count": 4,
+        "pct_defuse_win": 80.0,
+        "pct_defuse_share": 40.0,
+        "avg_defuse_time": 24.8,
+        "fk_after_plant_avg": 3.5,
+        "fk_after_plant_n": 4
+      },
+      "C": {
+        "plant_count": 9,
+        "defuse_count": 2,
+        "pct_defuse_win": 22.2,
+        "pct_defuse_share": 20.0,
+        "avg_defuse_time": 37.0,
+        "fk_after_plant_avg": 22.4,
+        "fk_after_plant_n": 5
+      }
+    }
+  },
+  "team": "UCAM",
+  "map": "Lotus",
+  "matches": [
+    {
+      "date": "2026-05-12",
+      "opponent": "BAR",
+      "matchId": "59fc777c-fa1d-4260-a952-16519b8fedb9"
+    },
+    {
+      "date": "2026-04-27",
+      "opponent": "NOVO",
+      "matchId": "f19fc89f-cb65-4508-8c37-da9e8fdfa0ef"
+    },
+    {
+      "date": "2026-04-07",
+      "opponent": "DSY",
+      "matchId": "fe43e9b4-08b2-40f2-893c-44f6310fdf19"
+    },
+    {
+      "date": "2026-04-06",
+      "opponent": "KPI",
+      "matchId": "67427c5d-6c69-4178-a318-0f2463e36390"
+    }
+  ]
+}

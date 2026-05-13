@@ -1,0 +1,92 @@
+{
+  "t_side": {
+    "total_rounds": 26,
+    "sites": {
+      "A": {
+        "plant_count": 5,
+        "pct_plant": 45.5,
+        "pct_win": 80.0,
+        "avg_plant_time": 61.6,
+        "min_plant_time": 25.1,
+        "max_plant_time": 99.2,
+        "fk_to_plant_avg": 13.5,
+        "fk_to_plant_n": 5
+      },
+      "B": {
+        "plant_count": 3,
+        "pct_plant": 27.3,
+        "pct_win": 66.7,
+        "avg_plant_time": 63.3,
+        "min_plant_time": 55.8,
+        "max_plant_time": 78.1,
+        "fk_to_plant_avg": 34.8,
+        "fk_to_plant_n": 2
+      },
+      "C": {
+        "plant_count": 3,
+        "pct_plant": 27.3,
+        "pct_win": 0.0,
+        "avg_plant_time": 58.5,
+        "min_plant_time": 54.1,
+        "max_plant_time": 64.4,
+        "fk_to_plant_avg": 20.7,
+        "fk_to_plant_n": 2
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 31,
+    "won_by_kills": 4,
+    "pct_won_by_kills": 12.9,
+    "won_by_defuse": 6,
+    "pct_won_by_defuse": 19.4,
+    "sites": {
+      "A": {
+        "plant_count": 13,
+        "defuse_count": 2,
+        "pct_defuse_win": 15.4,
+        "pct_defuse_share": 33.3,
+        "avg_defuse_time": 24.3,
+        "fk_after_plant_avg": 9.3,
+        "fk_after_plant_n": 7
+      },
+      "B": {
+        "plant_count": 6,
+        "defuse_count": 3,
+        "pct_defuse_win": 50.0,
+        "pct_defuse_share": 50.0,
+        "avg_defuse_time": 21.7,
+        "fk_after_plant_avg": 4.7,
+        "fk_after_plant_n": 5
+      },
+      "C": {
+        "plant_count": 7,
+        "defuse_count": 1,
+        "pct_defuse_win": 14.3,
+        "pct_defuse_share": 16.7,
+        "avg_defuse_time": 44.9,
+        "fk_after_plant_avg": 17.6,
+        "fk_after_plant_n": 5
+      }
+    }
+  },
+  "team": "JOBlife",
+  "map": "Haven",
+  "matches": [
+    {
+      "date": "2026-05-04",
+      "opponent": "MDR",
+      "matchId": "f771447b-4835-4ad4-ab0d-6df895eecf6b"
+    },
+    {
+      "date": "2026-04-26",
+      "opponent": "MDR",
+      "matchId": "d8a9e186-8e8b-47ef-b77a-9582d1851cf6"
+    },
+    {
+      "date": "2026-04-05",
+      "opponent": "F9",
+      "matchId": "c22dd2c0-0d64-40dc-ac7a-abf5e595ff20"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "t_side": {
+    "total_rounds": 38,
+    "sites": {
+      "A": {
+        "plant_count": 13,
+        "pct_plant": 40.6,
+        "pct_win": 100.0,
+        "avg_plant_time": 47.7,
+        "min_plant_time": 24.4,
+        "max_plant_time": 73.8,
+        "fk_to_plant_avg": 23.4,
+        "fk_to_plant_n": 13
+      },
+      "B": {
+        "plant_count": 6,
+        "pct_plant": 18.8,
+        "pct_win": 16.7,
+        "avg_plant_time": 65.9,
+        "min_plant_time": 32.8,
+        "max_plant_time": 87.9,
+        "fk_to_plant_avg": 13.3,
+        "fk_to_plant_n": 4
+      },
+      "C": {
+        "plant_count": 13,
+        "pct_plant": 40.6,
+        "pct_win": 76.9,
+        "avg_plant_time": 56.4,
+        "min_plant_time": 20.1,
+        "max_plant_time": 93.1,
+        "fk_to_plant_avg": 35.8,
+        "fk_to_plant_n": 11
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 28,
+    "won_by_kills": 4,
+    "pct_won_by_kills": 14.3,
+    "won_by_defuse": 11,
+    "pct_won_by_defuse": 39.3,
+    "sites": {
+      "A": {
+        "plant_count": 9,
+        "defuse_count": 3,
+        "pct_defuse_win": 33.3,
+        "pct_defuse_share": 27.3,
+        "avg_defuse_time": 39.7,
+        "fk_after_plant_avg": 15.4,
+        "fk_after_plant_n": 5
+      },
+      "B": {
+        "plant_count": 6,
+        "defuse_count": 3,
+        "pct_defuse_win": 50.0,
+        "pct_defuse_share": 27.3,
+        "avg_defuse_time": 31.2,
+        "fk_after_plant_avg": 10.2,
+        "fk_after_plant_n": 6
+      },
+      "C": {
+        "plant_count": 8,
+        "defuse_count": 5,
+        "pct_defuse_win": 62.5,
+        "pct_defuse_share": 45.5,
+        "avg_defuse_time": 32.4,
+        "fk_after_plant_avg": 10.3,
+        "fk_after_plant_n": 6
+      }
+    }
+  },
+  "team": "Team Liquid Academy",
+  "map": "Lotus",
+  "matches": [
+    {
+      "date": "2026-04-14",
+      "opponent": "BFG",
+      "matchId": "d52e390d-38af-4e4d-8fb9-940077b531a5"
+    },
+    {
+      "date": "2026-04-06",
+      "opponent": "EVO",
+      "matchId": "f6e87f2b-47b9-483b-9434-1787b8d31cf3"
+    },
+    {
+      "date": "2026-04-04",
+      "opponent": "M1R",
+      "matchId": "6857ab37-9aed-412a-8241-cacbf7e9a970"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "t_side": {
+    "total_rounds": 19,
+    "sites": {
+      "A": {
+        "plant_count": 8,
+        "pct_plant": 53.3,
+        "pct_win": 87.5,
+        "avg_plant_time": 63.2,
+        "min_plant_time": 41.2,
+        "max_plant_time": 92.3,
+        "fk_to_plant_avg": 19.3,
+        "fk_to_plant_n": 8
+      },
+      "B": {
+        "plant_count": 7,
+        "pct_plant": 46.7,
+        "pct_win": 71.4,
+        "avg_plant_time": 53.1,
+        "min_plant_time": 27.2,
+        "max_plant_time": 88.5,
+        "fk_to_plant_avg": 20.6,
+        "fk_to_plant_n": 7
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 24,
+    "won_by_kills": 9,
+    "pct_won_by_kills": 37.5,
+    "won_by_defuse": 5,
+    "pct_won_by_defuse": 20.8,
+    "sites": {
+      "A": {
+        "plant_count": 10,
+        "defuse_count": 3,
+        "pct_defuse_win": 30.0,
+        "pct_defuse_share": 60.0,
+        "avg_defuse_time": 16.3,
+        "fk_after_plant_avg": 5.3,
+        "fk_after_plant_n": 7
+      },
+      "B": {
+        "plant_count": 4,
+        "defuse_count": 2,
+        "pct_defuse_win": 50.0,
+        "pct_defuse_share": 40.0,
+        "avg_defuse_time": 23.8,
+        "fk_after_plant_avg": 8.1,
+        "fk_after_plant_n": 3
+      }
+    }
+  },
+  "team": "Enterprise",
+  "map": "Bind",
+  "matches": [
+    {
+      "date": "2026-04-13",
+      "opponent": "BG",
+      "matchId": "e64ebdea-c6b5-4a91-b257-e98a99f9e88b"
+    },
+    {
+      "date": "2026-04-04",
+      "opponent": "PXL",
+      "matchId": "affd485e-0231-4bcd-9eca-52bddb537e01"
+    }
+  ]
+}

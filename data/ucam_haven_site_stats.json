@@ -1,0 +1,87 @@
+{
+  "t_side": {
+    "total_rounds": 24,
+    "sites": {
+      "A": {
+        "plant_count": 9,
+        "pct_plant": 47.4,
+        "pct_win": 55.6,
+        "avg_plant_time": 67.4,
+        "min_plant_time": 47.8,
+        "max_plant_time": 91.4,
+        "fk_to_plant_avg": 39.4,
+        "fk_to_plant_n": 8
+      },
+      "B": {
+        "plant_count": 1,
+        "pct_plant": 5.3,
+        "pct_win": 100.0,
+        "avg_plant_time": 57.3,
+        "min_plant_time": 57.3,
+        "max_plant_time": 57.3,
+        "fk_to_plant_avg": 1.4,
+        "fk_to_plant_n": 1
+      },
+      "C": {
+        "plant_count": 9,
+        "pct_plant": 47.4,
+        "pct_win": 88.9,
+        "avg_plant_time": 50.8,
+        "min_plant_time": 31.1,
+        "max_plant_time": 80.7,
+        "fk_to_plant_avg": 25.6,
+        "fk_to_plant_n": 9
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 13,
+    "won_by_kills": 2,
+    "pct_won_by_kills": 15.4,
+    "won_by_defuse": 2,
+    "pct_won_by_defuse": 15.4,
+    "sites": {
+      "A": {
+        "plant_count": 3,
+        "defuse_count": 0,
+        "pct_defuse_win": 0.0,
+        "pct_defuse_share": 0.0,
+        "avg_defuse_time": null,
+        "fk_after_plant_avg": 4.4,
+        "fk_after_plant_n": 2
+      },
+      "B": {
+        "plant_count": 2,
+        "defuse_count": 2,
+        "pct_defuse_win": 100.0,
+        "pct_defuse_share": 100.0,
+        "avg_defuse_time": 34.0,
+        "fk_after_plant_avg": 17.2,
+        "fk_after_plant_n": 2
+      },
+      "C": {
+        "plant_count": 6,
+        "defuse_count": 0,
+        "pct_defuse_win": 0.0,
+        "pct_defuse_share": 0.0,
+        "avg_defuse_time": null,
+        "fk_after_plant_avg": 12.6,
+        "fk_after_plant_n": 2
+      }
+    }
+  },
+  "team": "UCAM",
+  "map": "Haven",
+  "matches": [
+    {
+      "date": "2026-04-27",
+      "opponent": "NOVO",
+      "matchId": "bd669550-8151-4b1b-ba64-a05640d822ab"
+    },
+    {
+      "date": "2026-04-06",
+      "opponent": "KPI",
+      "matchId": "4a1fcc29-2de1-4d96-90b2-d92c933886a0"
+    }
+  ]
+}

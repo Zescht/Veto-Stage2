@@ -1,32 +1,68 @@
 {
   "team": "NAVI Junior",
-  "Bind": [
+  "Fracture": [
     {
       "agents": [
-        "Raze",
-        "Skye",
-        "Brimstone",
-        "Viper",
-        "Chamber"
+        "Neon",
+        "Breach",
+        "Tejo",
+        "Astra",
+        "Veto"
       ],
       "agent_ids": [
-        "f94c3b30-42be-e959-889c-5aa313dba261",
-        "6f2a04ca-43e0-be17-7f36-b3908627744d",
-        "9f0d8ba9-4140-b941-57d3-a7ad57c6b417",
-        "707eab51-4836-f488-046a-cda6bf494859",
-        "22697a3d-45bf-8dd7-4fec-84a9e28c69d7"
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "5f8d3a7f-467b-97f3-062c-13acf203c006",
+        "b444168c-4e35-8076-db47-ef9bf368f384",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "92eeef5d-43b5-1d4a-8d03-b3927a09034b"
       ],
       "games": [
         {
-          "date": "2026-04-19",
-          "opponent": "BFG",
-          "matchId": "5b3a97b9-e330-4a44-8089-1fa618ff7195",
+          "date": "2026-05-04",
+          "opponent": "M1R",
+          "matchId": "c5895070-95d7-446f-8a35-6438d56b852b",
+          "players": [
+            "NVJ Darxcio",
+            "NVJ Kolosha",
+            "NVJ Javelin",
+            "NVJ Avey",
+            "NVJ k9lyos"
+          ]
+        },
+        {
+          "date": "2026-04-13",
+          "opponent": "PXL",
+          "matchId": "c6dafa2e-b685-4f70-b566-5347bfdec047",
           "players": [
             "NVJ Darxcio",
             "NVJ Javelin",
-            "NVJ Avey",
-            "NVJ k9lyos",
-            "NVJ Kolosha"
+            "NVJ metroneo",
+            "NVJ Madao",
+            "NVJ k9lyos"
+          ]
+        },
+        {
+          "date": "2026-04-06",
+          "opponent": "BG",
+          "matchId": "57591fe3-7361-4fef-a19c-4851ba1cba73",
+          "players": [
+            "NVJ Darxcio",
+            "NVJ Javelin",
+            "NVJ metroneo",
+            "NVJ avey",
+            "NVJ k9lyos"
+          ]
+        },
+        {
+          "date": "2026-04-05",
+          "opponent": "EP",
+          "matchId": "70593953-3033-4b51-b6d1-40316e5ab46b",
+          "players": [
+            "NVJ Darxcio",
+            "NVJ Javelin",
+            "NVJ metroneo",
+            "NVJ avey",
+            "NVJ k9lyos"
           ]
         }
       ]
@@ -88,51 +124,195 @@
       ]
     }
   ],
-  "Fracture": [
+  "Pearl": [
     {
       "agents": [
         "Neon",
-        "Breach",
-        "Tejo",
+        "Skye",
         "Astra",
+        "Harbor",
         "Veto"
       ],
       "agent_ids": [
         "bb2a4828-46eb-8cd1-e765-15848195d751",
-        "5f8d3a7f-467b-97f3-062c-13acf203c006",
-        "b444168c-4e35-8076-db47-ef9bf368f384",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
         "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "95b78ed7-4637-86d9-7e41-71ba8c293152",
         "92eeef5d-43b5-1d4a-8d03-b3927a09034b"
       ],
       "games": [
         {
-          "date": "2026-05-04",
-          "opponent": "M1R",
-          "matchId": "c5895070-95d7-446f-8a35-6438d56b852b",
+          "date": "2026-05-11",
+          "opponent": "EP",
+          "matchId": "c3d15562-2574-4924-b723-812c533d57aa",
           "players": [
             "NVJ Darxcio",
-            "NVJ Kolosha",
             "NVJ Javelin",
             "NVJ Avey",
+            "NVJ Kolosha",
             "NVJ k9lyos"
           ]
         },
         {
-          "date": "2026-04-13",
-          "opponent": "PXL",
-          "matchId": "c6dafa2e-b685-4f70-b566-5347bfdec047",
+          "date": "2026-04-21",
+          "opponent": "TLA",
+          "matchId": "0ed64935-2497-4820-8ffb-bb6adb4f29fa",
           "players": [
             "NVJ Darxcio",
             "NVJ Javelin",
-            "NVJ metroneo",
-            "NVJ Madao",
+            "NVJ Avey",
+            "NVJ Kolosha",
             "NVJ k9lyos"
           ]
         },
         {
-          "date": "2026-04-06",
-          "opponent": "BG",
-          "matchId": "57591fe3-7361-4fef-a19c-4851ba1cba73",
+          "date": "2026-04-19",
+          "opponent": "BFG",
+          "matchId": "dafed029-efb6-4c3e-95f6-c0fcbb146f9f",
+          "players": [
+            "NVJ Darxcio",
+            "NVJ Javelin",
+            "NVJ Avey",
+            "NVJ Kolosha",
+            "NVJ k9lyos"
+          ]
+        },
+        {
+          "date": "2026-04-12",
+          "opponent": "LEO",
+          "matchId": "af27cdd9-48df-4f05-af80-530682676f37",
+          "players": [
+            "NVJ Darxcio",
+            "NVJ Javelin",
+            "NVJ Madao",
+            "NVJ metroneo",
+            "NVJ k9lyos"
+          ]
+        },
+        {
+          "date": "2026-04-11",
+          "opponent": "LP",
+          "matchId": "5a8ff28f-e9c7-4f50-a64e-a60ff1642042",
+          "players": [
+            "NVJ Darxcio",
+            "NVJ Javelin",
+            "NVJ Madao",
+            "NVJ metroneo",
+            "NVJ k9lyos"
+          ]
+        }
+      ]
+    }
+  ],
+  "Split": [
+    {
+      "agents": [
+        "Raze",
+        "Skye",
+        "Omen",
+        "Viper",
+        "Sage"
+      ],
+      "agent_ids": [
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859",
+        "569fdd95-4d10-43ab-ca70-79becc718b46"
+      ],
+      "games": [
+        {
+          "date": "2026-05-11",
+          "opponent": "EP",
+          "matchId": "58f1ef9d-cd53-48e4-8791-3c002eedaba8",
+          "players": [
+            "NVJ Darxcio",
+            "NVJ Javelin",
+            "NVJ Avey",
+            "NVJ k9lyos",
+            "NVJ Kolosha"
+          ]
+        },
+        {
+          "date": "2026-04-21",
+          "opponent": "TLA",
+          "matchId": "da551aa8-48de-474d-aff3-1d2738578d4d",
+          "players": [
+            "NVJ Darxcio",
+            "NVJ Javelin",
+            "NVJ Avey",
+            "NVJ k9lyos",
+            "NVJ Kolosha"
+          ]
+        },
+        {
+          "date": "2026-04-12",
+          "opponent": "LEO",
+          "matchId": "260f31e5-6d02-481a-bd4e-d5e6bb451704",
+          "players": [
+            "NVJ Darxcio",
+            "NVJ Javelin",
+            "NVJ Madao",
+            "NVJ k9lyos",
+            "NVJ metroneo"
+          ]
+        }
+      ]
+    }
+  ],
+  "Bind": [
+    {
+      "agents": [
+        "Raze",
+        "Skye",
+        "Brimstone",
+        "Viper",
+        "Chamber"
+      ],
+      "agent_ids": [
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "9f0d8ba9-4140-b941-57d3-a7ad57c6b417",
+        "707eab51-4836-f488-046a-cda6bf494859",
+        "22697a3d-45bf-8dd7-4fec-84a9e28c69d7"
+      ],
+      "games": [
+        {
+          "date": "2026-04-19",
+          "opponent": "BFG",
+          "matchId": "5b3a97b9-e330-4a44-8089-1fa618ff7195",
+          "players": [
+            "NVJ Darxcio",
+            "NVJ Javelin",
+            "NVJ Avey",
+            "NVJ k9lyos",
+            "NVJ Kolosha"
+          ]
+        }
+      ]
+    }
+  ],
+  "Lotus": [
+    {
+      "agents": [
+        "Neon",
+        "Fade",
+        "Gekko",
+        "Omen",
+        "Veto"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "e370fa57-4757-3604-3648-499e1f642d3f",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "92eeef5d-43b5-1d4a-8d03-b3927a09034b"
+      ],
+      "games": [
+        {
+          "date": "2026-04-05",
+          "opponent": "EP",
+          "matchId": "17808f01-4f29-4207-8d90-1953ba3d5549",
           "players": [
             "NVJ Darxcio",
             "NVJ Javelin",
@@ -213,150 +393,6 @@
             "NVJ Javelin",
             "NVJ avey",
             "NVJ k9lyos"
-          ]
-        }
-      ]
-    }
-  ],
-  "Lotus": [
-    {
-      "agents": [
-        "Neon",
-        "Fade",
-        "Gekko",
-        "Omen",
-        "Veto"
-      ],
-      "agent_ids": [
-        "bb2a4828-46eb-8cd1-e765-15848195d751",
-        "dade69b4-4f5a-8528-247b-219e5a1facd6",
-        "e370fa57-4757-3604-3648-499e1f642d3f",
-        "8e253930-4c05-31dd-1b6c-968525494517",
-        "92eeef5d-43b5-1d4a-8d03-b3927a09034b"
-      ],
-      "games": [
-        {
-          "date": "2026-04-05",
-          "opponent": "EP",
-          "matchId": "17808f01-4f29-4207-8d90-1953ba3d5549",
-          "players": [
-            "NVJ Darxcio",
-            "NVJ Javelin",
-            "NVJ metroneo",
-            "NVJ avey",
-            "NVJ k9lyos"
-          ]
-        }
-      ]
-    }
-  ],
-  "Pearl": [
-    {
-      "agents": [
-        "Neon",
-        "Skye",
-        "Astra",
-        "Harbor",
-        "Veto"
-      ],
-      "agent_ids": [
-        "bb2a4828-46eb-8cd1-e765-15848195d751",
-        "6f2a04ca-43e0-be17-7f36-b3908627744d",
-        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
-        "95b78ed7-4637-86d9-7e41-71ba8c293152",
-        "92eeef5d-43b5-1d4a-8d03-b3927a09034b"
-      ],
-      "games": [
-        {
-          "date": "2026-05-11",
-          "opponent": "EP",
-          "matchId": "c3d15562-2574-4924-b723-812c533d57aa",
-          "players": [
-            "NVJ Darxcio",
-            "NVJ Javelin",
-            "NVJ Avey",
-            "NVJ Kolosha",
-            "NVJ k9lyos"
-          ]
-        },
-        {
-          "date": "2026-04-21",
-          "opponent": "TLA",
-          "matchId": "0ed64935-2497-4820-8ffb-bb6adb4f29fa",
-          "players": [
-            "NVJ Darxcio",
-            "NVJ Javelin",
-            "NVJ Avey",
-            "NVJ Kolosha",
-            "NVJ k9lyos"
-          ]
-        },
-        {
-          "date": "2026-04-19",
-          "opponent": "BFG",
-          "matchId": "dafed029-efb6-4c3e-95f6-c0fcbb146f9f",
-          "players": [
-            "NVJ Darxcio",
-            "NVJ Javelin",
-            "NVJ Avey",
-            "NVJ Kolosha",
-            "NVJ k9lyos"
-          ]
-        }
-      ]
-    }
-  ],
-  "Split": [
-    {
-      "agents": [
-        "Raze",
-        "Skye",
-        "Omen",
-        "Viper",
-        "Sage"
-      ],
-      "agent_ids": [
-        "f94c3b30-42be-e959-889c-5aa313dba261",
-        "6f2a04ca-43e0-be17-7f36-b3908627744d",
-        "8e253930-4c05-31dd-1b6c-968525494517",
-        "707eab51-4836-f488-046a-cda6bf494859",
-        "569fdd95-4d10-43ab-ca70-79becc718b46"
-      ],
-      "games": [
-        {
-          "date": "2026-05-11",
-          "opponent": "EP",
-          "matchId": "58f1ef9d-cd53-48e4-8791-3c002eedaba8",
-          "players": [
-            "NVJ Darxcio",
-            "NVJ Javelin",
-            "NVJ Avey",
-            "NVJ k9lyos",
-            "NVJ Kolosha"
-          ]
-        },
-        {
-          "date": "2026-04-21",
-          "opponent": "TLA",
-          "matchId": "da551aa8-48de-474d-aff3-1d2738578d4d",
-          "players": [
-            "NVJ Darxcio",
-            "NVJ Javelin",
-            "NVJ Avey",
-            "NVJ k9lyos",
-            "NVJ Kolosha"
-          ]
-        },
-        {
-          "date": "2026-04-12",
-          "opponent": "LEO",
-          "matchId": "260f31e5-6d02-481a-bd4e-d5e6bb451704",
-          "players": [
-            "NVJ Darxcio",
-            "NVJ Javelin",
-            "NVJ Madao",
-            "NVJ k9lyos",
-            "NVJ metroneo"
           ]
         }
       ]

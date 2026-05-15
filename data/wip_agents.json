@@ -1,26 +1,86 @@
 {
   "team": "WIP Esports",
-  "Bind": [
+  "Lotus": [
     {
       "agents": [
-        "Waylay",
-        "Skye",
-        "Brimstone",
+        "Raze",
+        "Fade",
+        "Omen",
         "Viper",
-        "Chamber"
+        "Vyse"
       ],
       "agent_ids": [
-        "df1cb487-4902-002e-5c17-d28e83e78588",
-        "6f2a04ca-43e0-be17-7f36-b3908627744d",
-        "9f0d8ba9-4140-b941-57d3-a7ad57c6b417",
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "8e253930-4c05-31dd-1b6c-968525494517",
         "707eab51-4836-f488-046a-cda6bf494859",
-        "22697a3d-45bf-8dd7-4fec-84a9e28c69d7"
+        "efba5359-4016-a1e5-7626-b1ae76895940"
       ],
       "games": [
         {
+          "date": "2026-05-12",
+          "opponent": "JL",
+          "matchId": "8d41bf67-47a4-42e4-b353-00e8342091b9",
+          "players": [
+            "WIP 77even",
+            "WIP hoody",
+            "WIP Nowax",
+            "WIP Yuta",
+            "WIP H1ber"
+          ]
+        },
+        {
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "players": [
+            "WIP 77even",
+            "WIP hoody",
+            "WIP Nowax",
+            "WIP Yuta",
+            "WIP H1ber"
+          ]
+        },
+        {
+          "date": "2026-05-04",
+          "opponent": "F9",
+          "matchId": "5e307ea4-fd33-4c81-8d48-d7dad9a92d0a",
+          "players": [
+            "WIP 77even",
+            "WIP hoody",
+            "WIP Nowax",
+            "WIP Yuta",
+            "WIP H1ber"
+          ]
+        },
+        {
           "date": "2026-05-03",
           "opponent": "JL",
-          "matchId": "8a34cf5f-f06a-4e82-b185-97bdac3bcf12",
+          "matchId": "14495e0f-f605-4fd5-8fd7-d0cb55ba55a2",
+          "players": [
+            "WIP 77even",
+            "WIP hoody",
+            "WIP Nowax",
+            "WIP Yuta",
+            "WIP H1ber"
+          ]
+        },
+        {
+          "date": "2026-04-18",
+          "opponent": "F9",
+          "matchId": "a5a47ec4-4c75-4174-9d50-1702ed09bb0d",
+          "players": [
+            "WIP 77even",
+            "WIP hoody",
+            "WIP Nowax",
+            "WIP Yuta",
+            "WIP H1ber"
+          ]
+        },
+        {
+          "date": "2026-04-13",
+          "opponent": "MDR",
+          "matchId": "15f70bc5-25db-43f9-9f44-239c70ca90c4",
           "players": [
             "WIP 77even",
             "WIP hoody",
@@ -32,7 +92,19 @@
         {
           "date": "2026-04-12",
           "opponent": "JL",
-          "matchId": "47698e26-fe95-45c5-a15e-b31a709ae888",
+          "matchId": "01a32ae8-0fb3-4a04-a556-8c3331a71cf4",
+          "players": [
+            "WIP 77even",
+            "WIP hoody",
+            "WIP Nowax",
+            "WIP Yuta",
+            "WIP H1ber"
+          ]
+        },
+        {
+          "date": "2026-04-05",
+          "opponent": "GL",
+          "matchId": "ef6db218-8782-4676-a4aa-71665c0eeecd",
           "players": [
             "WIP 77even",
             "WIP hoody",
@@ -44,7 +116,7 @@
         {
           "date": "2026-04-04",
           "opponent": "NXR",
-          "matchId": "55891c74-5d4f-417c-97de-480b8f29f50a",
+          "matchId": "01f8ee6b-7fb1-4b70-a210-156a2960e845",
           "players": [
             "WIP 77even",
             "WIP hoody",
@@ -146,6 +218,36 @@
           ]
         }
       ]
+    },
+    {
+      "agents": [
+        "Jett",
+        "KAY/O",
+        "Sova",
+        "Astra",
+        "Viper"
+      ],
+      "agent_ids": [
+        "add6443a-41bd-e414-f6ad-e58d267f4e95",
+        "601dbbe7-43ce-be57-2a40-4abd24953621",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-04-18",
+          "opponent": "F9",
+          "matchId": "c0e56a89-243e-4046-9a7c-93933f56b646",
+          "players": [
+            "WIP 77even",
+            "WIP H1ber",
+            "WIP hoody",
+            "WIP Nowax",
+            "WIP Yuta"
+          ]
+        }
+      ]
     }
   ],
   "Fracture": [
@@ -200,61 +302,29 @@
             "WIP Nowax",
             "WIP Yuta"
           ]
-        }
-      ]
-    }
-  ],
-  "Lotus": [
-    {
-      "agents": [
-        "Raze",
-        "Fade",
-        "Omen",
-        "Viper",
-        "Vyse"
-      ],
-      "agent_ids": [
-        "f94c3b30-42be-e959-889c-5aa313dba261",
-        "dade69b4-4f5a-8528-247b-219e5a1facd6",
-        "8e253930-4c05-31dd-1b6c-968525494517",
-        "707eab51-4836-f488-046a-cda6bf494859",
-        "efba5359-4016-a1e5-7626-b1ae76895940"
-      ],
-      "games": [
-        {
-          "date": "2026-05-12",
-          "opponent": "JL",
-          "matchId": "8d41bf67-47a4-42e4-b353-00e8342091b9",
-          "players": [
-            "WIP 77even",
-            "WIP hoody",
-            "WIP Nowax",
-            "WIP Yuta",
-            "WIP H1ber"
-          ]
         },
         {
-          "date": "2026-05-05",
+          "date": "2026-04-13",
           "opponent": "MDR",
-          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "matchId": "246616a5-dad5-489a-ad6c-9b7a8d6810c1",
           "players": [
             "WIP 77even",
+            "WIP H1ber",
             "WIP hoody",
             "WIP Nowax",
-            "WIP Yuta",
-            "WIP H1ber"
+            "WIP Yuta"
           ]
         },
         {
-          "date": "2026-05-04",
-          "opponent": "F9",
-          "matchId": "5e307ea4-fd33-4c81-8d48-d7dad9a92d0a",
+          "date": "2026-04-05",
+          "opponent": "GL",
+          "matchId": "3e77aca3-4106-4c9a-b4c5-a97c36235091",
           "players": [
             "WIP 77even",
+            "WIP H1ber",
             "WIP hoody",
             "WIP Nowax",
-            "WIP Yuta",
-            "WIP H1ber"
+            "WIP Yuta"
           ]
         }
       ]
@@ -293,6 +363,30 @@
           "date": "2026-04-19",
           "opponent": "ES",
           "matchId": "be75a583-c126-4779-bcb0-ea2b72d4c667",
+          "players": [
+            "WIP 77even",
+            "WIP hoody",
+            "WIP H1ber",
+            "WIP Nowax",
+            "WIP Yuta"
+          ]
+        },
+        {
+          "date": "2026-04-13",
+          "opponent": "MDR",
+          "matchId": "bc462d4c-40e9-41b7-b3a7-5b911e1c662c",
+          "players": [
+            "WIP 77even",
+            "WIP hoody",
+            "WIP H1ber",
+            "WIP Nowax",
+            "WIP Yuta"
+          ]
+        },
+        {
+          "date": "2026-04-12",
+          "opponent": "JL",
+          "matchId": "177e9838-5082-43a3-a6bc-c6cd9db901bd",
           "players": [
             "WIP 77even",
             "WIP hoody",
@@ -397,6 +491,86 @@
           "date": "2026-05-03",
           "opponent": "JL",
           "matchId": "6b5299c5-2696-417b-8d32-aa29a50a4ba2",
+          "players": [
+            "WIP 77even",
+            "WIP hoody",
+            "WIP Nowax",
+            "WIP Yuta",
+            "WIP H1ber"
+          ]
+        },
+        {
+          "date": "2026-04-19",
+          "opponent": "ES",
+          "matchId": "4e10f351-2ca5-4601-9e24-14706cc04752",
+          "players": [
+            "WIP 77even",
+            "WIP hoody",
+            "WIP Nowax",
+            "WIP Yuta",
+            "WIP H1ber"
+          ]
+        },
+        {
+          "date": "2026-04-04",
+          "opponent": "NXR",
+          "matchId": "3eb2264a-b795-4619-b32a-afc34b2accda",
+          "players": [
+            "WIP 77even",
+            "WIP hoody",
+            "WIP Nowax",
+            "WIP Yuta",
+            "WIP H1ber"
+          ]
+        }
+      ]
+    }
+  ],
+  "Bind": [
+    {
+      "agents": [
+        "Waylay",
+        "Skye",
+        "Brimstone",
+        "Viper",
+        "Chamber"
+      ],
+      "agent_ids": [
+        "df1cb487-4902-002e-5c17-d28e83e78588",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "9f0d8ba9-4140-b941-57d3-a7ad57c6b417",
+        "707eab51-4836-f488-046a-cda6bf494859",
+        "22697a3d-45bf-8dd7-4fec-84a9e28c69d7"
+      ],
+      "games": [
+        {
+          "date": "2026-05-03",
+          "opponent": "JL",
+          "matchId": "8a34cf5f-f06a-4e82-b185-97bdac3bcf12",
+          "players": [
+            "WIP 77even",
+            "WIP hoody",
+            "WIP Nowax",
+            "WIP Yuta",
+            "WIP H1ber"
+          ]
+        },
+        {
+          "date": "2026-04-12",
+          "opponent": "JL",
+          "matchId": "47698e26-fe95-45c5-a15e-b31a709ae888",
+          "players": [
+            "WIP 77even",
+            "WIP hoody",
+            "WIP Nowax",
+            "WIP Yuta",
+            "WIP H1ber"
+          ]
+        },
+        {
+          "date": "2026-04-04",
+          "opponent": "NXR",
+          "matchId": "55891c74-5d4f-417c-97de-480b8f29f50a",
           "players": [
             "WIP 77even",
             "WIP hoody",

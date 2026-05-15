@@ -1,92 +1,190 @@
 {
   "team": "MIR",
-  "Bind": [
+  "Fracture": [
     {
       "agents": [
-        "Neon",
         "Raze",
-        "Skye",
+        "Breach",
+        "Fade",
         "Brimstone",
-        "Viper"
+        "Vyse"
       ],
       "agent_ids": [
-        "bb2a4828-46eb-8cd1-e765-15848195d751",
         "f94c3b30-42be-e959-889c-5aa313dba261",
-        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "5f8d3a7f-467b-97f3-062c-13acf203c006",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
         "9f0d8ba9-4140-b941-57d3-a7ad57c6b417",
-        "707eab51-4836-f488-046a-cda6bf494859"
+        "efba5359-4016-a1e5-7626-b1ae76895940"
       ],
       "games": [
+        {
+          "date": "2026-05-07",
+          "opponent": "EP",
+          "matchId": "cb70b5f4-f014-4bb0-88d4-912c7bf40dc9",
+          "players": [
+            "M1R Raz",
+            "M1R Redgar",
+            "M1R reblyik",
+            "M1R Bishepss",
+            "M1R kospa1n"
+          ]
+        },
+        {
+          "date": "2026-05-04",
+          "opponent": "NVJ",
+          "matchId": "c5895070-95d7-446f-8a35-6438d56b852b",
+          "players": [
+            "M1R Raz",
+            "M1R Redgar",
+            "M1R reblyik",
+            "M1R Bishepss",
+            "M1R kospa1n"
+          ]
+        },
+        {
+          "date": "2026-04-18",
+          "opponent": "FMG",
+          "matchId": "c2933eec-8502-4f2c-bd65-fcc0207e4279",
+          "players": [
+            "M1R Raz",
+            "M1R Redgar",
+            "M1R reblyik",
+            "M1R Bishepss",
+            "M1R kospa1n"
+          ]
+        },
+        {
+          "date": "2026-04-13",
+          "opponent": "XD",
+          "matchId": "21de7ebc-083a-43cc-8063-f5a3af431c28",
+          "players": [
+            "M1R Raz",
+            "M1R Redgar",
+            "M1R reblyik",
+            "M1R Bishepss",
+            "M1R kospa1n"
+          ]
+        },
+        {
+          "date": "2026-04-12",
+          "opponent": "EVO",
+          "matchId": "d02d47f9-82b5-4889-ac4f-7edc5de0bfd8",
+          "players": [
+            "M1R Raz",
+            "M1R Redgar",
+            "M1R reblyik",
+            "M1R Bishepss",
+            "M1R kospa1n"
+          ]
+        },
         {
           "date": "2026-04-05",
           "opponent": "BFG",
-          "matchId": "20d9427f-0490-40a6-a8ad-3610266a410a",
+          "matchId": "37522f54-15a6-4635-b2bf-d85d819b7a16",
           "players": [
             "M1R Raz",
-            "M1R kospa1n",
+            "M1R Redgar",
+            "M1R reblyik",
+            "M1R Bishepss",
+            "M1R kospa1n"
+          ]
+        },
+        {
+          "date": "2026-04-04",
+          "opponent": "TL",
+          "matchId": "28682313-520d-45f8-8ec8-c1c87b9bae9d",
+          "players": [
+            "M1R Raz",
+            "M1R Redgar",
+            "M1R reblyik",
+            "M1R Bishepss",
+            "M1R kospa1n"
+          ]
+        }
+      ]
+    }
+  ],
+  "Split": [
+    {
+      "agents": [
+        "Jett",
+        "Skye",
+        "Astra",
+        "Omen",
+        "Veto"
+      ],
+      "agent_ids": [
+        "add6443a-41bd-e414-f6ad-e58d267f4e95",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "92eeef5d-43b5-1d4a-8d03-b3927a09034b"
+      ],
+      "games": [
+        {
+          "date": "2026-05-07",
+          "opponent": "EP",
+          "matchId": "cecf19a2-5a5e-4b9d-886c-7b24702013c1",
+          "players": [
+            "M1R Raz",
             "M1R Redgar",
             "M1R Bishepss",
-            "M1R reblyik"
+            "M1R reblyik",
+            "M1R kospa1n"
           ]
         }
       ]
     },
     {
       "agents": [
-        "Raze",
-        "Yoru",
+        "Neon",
         "Skye",
-        "Brimstone",
-        "Viper"
+        "Astra",
+        "Omen",
+        "Veto"
       ],
       "agent_ids": [
-        "f94c3b30-42be-e959-889c-5aa313dba261",
-        "7f94d92c-4234-0a36-9646-3a87eb8b5c89",
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
         "6f2a04ca-43e0-be17-7f36-b3908627744d",
-        "9f0d8ba9-4140-b941-57d3-a7ad57c6b417",
-        "707eab51-4836-f488-046a-cda6bf494859"
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "92eeef5d-43b5-1d4a-8d03-b3927a09034b"
       ],
       "games": [
         {
-          "date": "2026-03-22",
-          "opponent": "GNG",
-          "matchId": "3d3a5539-7d42-4e73-ba44-8df8053410e4",
+          "date": "2026-04-21",
+          "opponent": "EP",
+          "matchId": "7321301a-9c28-4075-8015-1703a8356a40",
           "players": [
-            "M1R kospa1n",
             "M1R Raz",
             "M1R Redgar",
             "M1R Bishepss",
-            "M1R reblyik"
+            "M1R reblyik",
+            "M1R kospa1n"
           ]
-        }
-      ]
-    },
-    {
-      "agents": [
-        "Raze",
-        "Yoru",
-        "Skye",
-        "Harbor",
-        "Viper"
-      ],
-      "agent_ids": [
-        "f94c3b30-42be-e959-889c-5aa313dba261",
-        "7f94d92c-4234-0a36-9646-3a87eb8b5c89",
-        "6f2a04ca-43e0-be17-7f36-b3908627744d",
-        "95b78ed7-4637-86d9-7e41-71ba8c293152",
-        "707eab51-4836-f488-046a-cda6bf494859"
-      ],
-      "games": [
+        },
         {
-          "date": "2026-03-20",
-          "opponent": "S2G",
-          "matchId": "38a5f994-f3c8-43ba-8ed0-f3ae2973719b",
+          "date": "2026-04-13",
+          "opponent": "XD",
+          "matchId": "a51d04ac-e062-4bbe-8b76-2b89776e6724",
           "players": [
-            "M1R kospa1n",
             "M1R Raz",
             "M1R Redgar",
             "M1R Bishepss",
-            "M1R reblyik"
+            "M1R reblyik",
+            "M1R kospa1n"
+          ]
+        },
+        {
+          "date": "2026-04-04",
+          "opponent": "TL",
+          "matchId": "f9695786-9224-4d51-9489-246d045f34ae",
+          "players": [
+            "M1R Raz",
+            "M1R Redgar",
+            "M1R Bishepss",
+            "M1R reblyik",
+            "M1R kospa1n"
           ]
         }
       ]
@@ -144,114 +242,26 @@
             "M1R Bishepss",
             "M1R reblyik"
           ]
-        }
-      ]
-    }
-  ],
-  "Fracture": [
-    {
-      "agents": [
-        "Raze",
-        "Breach",
-        "Fade",
-        "Brimstone",
-        "Vyse"
-      ],
-      "agent_ids": [
-        "f94c3b30-42be-e959-889c-5aa313dba261",
-        "5f8d3a7f-467b-97f3-062c-13acf203c006",
-        "dade69b4-4f5a-8528-247b-219e5a1facd6",
-        "9f0d8ba9-4140-b941-57d3-a7ad57c6b417",
-        "efba5359-4016-a1e5-7626-b1ae76895940"
-      ],
-      "games": [
-        {
-          "date": "2026-05-07",
-          "opponent": "EP",
-          "matchId": "cb70b5f4-f014-4bb0-88d4-912c7bf40dc9",
-          "players": [
-            "M1R Raz",
-            "M1R Redgar",
-            "M1R reblyik",
-            "M1R Bishepss",
-            "M1R kospa1n"
-          ]
         },
         {
-          "date": "2026-05-04",
-          "opponent": "NVJ",
-          "matchId": "c5895070-95d7-446f-8a35-6438d56b852b",
+          "date": "2026-04-11",
+          "opponent": "VR2",
+          "matchId": "82b59b75-1594-4055-9de2-4b481c6c9799",
           "players": [
-            "M1R Raz",
-            "M1R Redgar",
-            "M1R reblyik",
-            "M1R Bishepss",
-            "M1R kospa1n"
-          ]
-        },
-        {
-          "date": "2026-04-18",
-          "opponent": "FMG",
-          "matchId": "c2933eec-8502-4f2c-bd65-fcc0207e4279",
-          "players": [
-            "M1R Raz",
-            "M1R Redgar",
-            "M1R reblyik",
-            "M1R Bishepss",
-            "M1R kospa1n"
-          ]
-        }
-      ]
-    }
-  ],
-  "Lotus": [
-    {
-      "agents": [
-        "Neon",
-        "Phoenix",
-        "Fade",
-        "Omen",
-        "Vyse"
-      ],
-      "agent_ids": [
-        "bb2a4828-46eb-8cd1-e765-15848195d751",
-        "eb93336a-449b-9c1b-0a54-a891f7921d69",
-        "dade69b4-4f5a-8528-247b-219e5a1facd6",
-        "8e253930-4c05-31dd-1b6c-968525494517",
-        "efba5359-4016-a1e5-7626-b1ae76895940"
-      ],
-      "games": [
-        {
-          "date": "2026-04-21",
-          "opponent": "EP",
-          "matchId": "dc10f95e-f612-4055-aa43-6ab6d84574e0",
-          "players": [
-            "M1R Raz",
             "M1R kospa1n",
+            "M1R Raz",
             "M1R Redgar",
             "M1R Bishepss",
             "M1R reblyik"
           ]
         },
         {
-          "date": "2026-04-18",
-          "opponent": "FMG",
-          "matchId": "b4820831-2d95-420f-801b-bb9a1885b495",
+          "date": "2026-04-06",
+          "opponent": "200",
+          "matchId": "3c961857-a0d1-4548-8dd9-865d55abdeb9",
           "players": [
-            "M1R Raz",
             "M1R kospa1n",
-            "M1R Redgar",
-            "M1R Bishepss",
-            "M1R reblyik"
-          ]
-        },
-        {
-          "date": "2026-04-14",
-          "opponent": "UNI",
-          "matchId": "7e978c0b-e635-42da-a32e-5042da2a6a3e",
-          "players": [
             "M1R Raz",
-            "M1R kospa1n",
             "M1R Redgar",
             "M1R Bishepss",
             "M1R reblyik"
@@ -334,75 +344,149 @@
       ]
     }
   ],
-  "Split": [
-    {
-      "agents": [
-        "Jett",
-        "Skye",
-        "Astra",
-        "Omen",
-        "Veto"
-      ],
-      "agent_ids": [
-        "add6443a-41bd-e414-f6ad-e58d267f4e95",
-        "6f2a04ca-43e0-be17-7f36-b3908627744d",
-        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
-        "8e253930-4c05-31dd-1b6c-968525494517",
-        "92eeef5d-43b5-1d4a-8d03-b3927a09034b"
-      ],
-      "games": [
-        {
-          "date": "2026-05-07",
-          "opponent": "EP",
-          "matchId": "cecf19a2-5a5e-4b9d-886c-7b24702013c1",
-          "players": [
-            "M1R Raz",
-            "M1R Redgar",
-            "M1R Bishepss",
-            "M1R reblyik",
-            "M1R kospa1n"
-          ]
-        }
-      ]
-    },
+  "Lotus": [
     {
       "agents": [
         "Neon",
-        "Skye",
-        "Astra",
+        "Phoenix",
+        "Fade",
         "Omen",
-        "Veto"
+        "Vyse"
       ],
       "agent_ids": [
         "bb2a4828-46eb-8cd1-e765-15848195d751",
-        "6f2a04ca-43e0-be17-7f36-b3908627744d",
-        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "eb93336a-449b-9c1b-0a54-a891f7921d69",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
         "8e253930-4c05-31dd-1b6c-968525494517",
-        "92eeef5d-43b5-1d4a-8d03-b3927a09034b"
+        "efba5359-4016-a1e5-7626-b1ae76895940"
       ],
       "games": [
         {
           "date": "2026-04-21",
           "opponent": "EP",
-          "matchId": "7321301a-9c28-4075-8015-1703a8356a40",
+          "matchId": "dc10f95e-f612-4055-aa43-6ab6d84574e0",
           "players": [
             "M1R Raz",
+            "M1R kospa1n",
             "M1R Redgar",
             "M1R Bishepss",
-            "M1R reblyik",
-            "M1R kospa1n"
+            "M1R reblyik"
+          ]
+        },
+        {
+          "date": "2026-04-18",
+          "opponent": "FMG",
+          "matchId": "b4820831-2d95-420f-801b-bb9a1885b495",
+          "players": [
+            "M1R Raz",
+            "M1R kospa1n",
+            "M1R Redgar",
+            "M1R Bishepss",
+            "M1R reblyik"
+          ]
+        },
+        {
+          "date": "2026-04-14",
+          "opponent": "UNI",
+          "matchId": "7e978c0b-e635-42da-a32e-5042da2a6a3e",
+          "players": [
+            "M1R Raz",
+            "M1R kospa1n",
+            "M1R Redgar",
+            "M1R Bishepss",
+            "M1R reblyik"
           ]
         },
         {
           "date": "2026-04-13",
           "opponent": "XD",
-          "matchId": "a51d04ac-e062-4bbe-8b76-2b89776e6724",
+          "matchId": "3318c689-73ff-46bf-99d6-6aa1d11f5d48",
           "players": [
             "M1R Raz",
+            "M1R kospa1n",
             "M1R Redgar",
             "M1R Bishepss",
-            "M1R reblyik",
-            "M1R kospa1n"
+            "M1R reblyik"
+          ]
+        },
+        {
+          "date": "2026-04-12",
+          "opponent": "EVO",
+          "matchId": "c633c36e-caa0-4613-b52d-fc4df648a192",
+          "players": [
+            "M1R Raz",
+            "M1R kospa1n",
+            "M1R Redgar",
+            "M1R Bishepss",
+            "M1R reblyik"
+          ]
+        },
+        {
+          "date": "2026-04-11",
+          "opponent": "VR2",
+          "matchId": "94b4715a-6a86-4f73-b16d-b11b5d25ff6d",
+          "players": [
+            "M1R Raz",
+            "M1R kospa1n",
+            "M1R Redgar",
+            "M1R Bishepss",
+            "M1R reblyik"
+          ]
+        },
+        {
+          "date": "2026-04-06",
+          "opponent": "200",
+          "matchId": "7ed39286-2483-4ee9-92e9-487e5bd315ea",
+          "players": [
+            "M1R Raz",
+            "M1R kospa1n",
+            "M1R Redgar",
+            "M1R Bishepss",
+            "M1R reblyik"
+          ]
+        },
+        {
+          "date": "2026-04-04",
+          "opponent": "TL",
+          "matchId": "6857ab37-9aed-412a-8241-cacbf7e9a970",
+          "players": [
+            "M1R Raz",
+            "M1R kospa1n",
+            "M1R Redgar",
+            "M1R Bishepss",
+            "M1R reblyik"
+          ]
+        }
+      ]
+    }
+  ],
+  "Bind": [
+    {
+      "agents": [
+        "Neon",
+        "Raze",
+        "Skye",
+        "Brimstone",
+        "Viper"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "9f0d8ba9-4140-b941-57d3-a7ad57c6b417",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-04-05",
+          "opponent": "BFG",
+          "matchId": "20d9427f-0490-40a6-a8ad-3610266a410a",
+          "players": [
+            "M1R Raz",
+            "M1R kospa1n",
+            "M1R Redgar",
+            "M1R Bishepss",
+            "M1R reblyik"
           ]
         }
       ]

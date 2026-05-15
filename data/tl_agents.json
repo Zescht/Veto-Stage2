@@ -1,5 +1,239 @@
 {
   "team": "Team Liquid Academy",
+  "Lotus": [
+    {
+      "agents": [
+        "Raze",
+        "Breach",
+        "Fade",
+        "Omen",
+        "Viper"
+      ],
+      "agent_ids": [
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "5f8d3a7f-467b-97f3-062c-13acf203c006",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-04-14",
+          "opponent": "BFG",
+          "matchId": "d52e390d-38af-4e4d-8fb9-940077b531a5",
+          "players": [
+            "TL Wanzeru",
+            "TL Kicks",
+            "TL Prti",
+            "TL GSR",
+            "TL rexxtoned"
+          ]
+        },
+        {
+          "date": "2026-04-06",
+          "opponent": "EVO",
+          "matchId": "f6e87f2b-47b9-483b-9434-1787b8d31cf3",
+          "players": [
+            "TL Wanzeru",
+            "TL Kicks",
+            "TL Prti",
+            "TL GSR",
+            "TL rexxtoned"
+          ]
+        },
+        {
+          "date": "2026-04-04",
+          "opponent": "M1R",
+          "matchId": "6857ab37-9aed-412a-8241-cacbf7e9a970",
+          "players": [
+            "TL Wanzeru",
+            "TL Kicks",
+            "TL Prti",
+            "TL GSR",
+            "TL rexxtoned"
+          ]
+        }
+      ]
+    }
+  ],
+  "Haven": [
+    {
+      "agents": [
+        "Iso",
+        "Neon",
+        "Sova",
+        "Omen",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "0e38b510-41a8-5780-5e8f-568b2a4f2d6c",
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-04-14",
+          "opponent": "BFG",
+          "matchId": "55510efe-226f-44ef-9398-08221b1311e7",
+          "players": [
+            "TL GSR",
+            "TL Wanzeru",
+            "TL Kicks",
+            "TL Prti",
+            "TL rexxtoned"
+          ]
+        },
+        {
+          "date": "2026-04-12",
+          "opponent": "VR2",
+          "matchId": "24c3fa4a-18e4-4146-918d-ae5e7bd9533d",
+          "players": [
+            "TL GSR",
+            "TL Wanzeru",
+            "TL Kicks",
+            "TL Prti",
+            "TL rexxtoned"
+          ]
+        },
+        {
+          "date": "2026-04-06",
+          "opponent": "EVO",
+          "matchId": "e0f397f4-89d9-4ff4-b6e7-a8d00707e92c",
+          "players": [
+            "TL GSR",
+            "TL Wanzeru",
+            "TL Kicks",
+            "TL Prti",
+            "TL rexxtoned"
+          ]
+        },
+        {
+          "date": "2026-04-05",
+          "opponent": "XD",
+          "matchId": "ccebc0dc-37af-4bd0-a40c-0ffc791b7251",
+          "players": [
+            "TL GSR",
+            "TL Wanzeru",
+            "TL Kicks",
+            "TL Prti",
+            "TL rexxtoned"
+          ]
+        }
+      ]
+    }
+  ],
+  "Split": [
+    {
+      "agents": [
+        "Neon",
+        "Raze",
+        "Skye",
+        "Omen",
+        "Viper"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-04-13",
+          "opponent": "UNI",
+          "matchId": "41bb32a2-9ea6-47bf-b83b-ad01f1d2dd32",
+          "players": [
+            "TL Wanzeru",
+            "TL GSR",
+            "TL Kicks",
+            "TL Prti",
+            "TL rexxtoned"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Raze",
+        "Breach",
+        "Skye",
+        "Omen",
+        "Viper"
+      ],
+      "agent_ids": [
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "5f8d3a7f-467b-97f3-062c-13acf203c006",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-04-12",
+          "opponent": "VR2",
+          "matchId": "a41f0cfb-f202-446c-8ec7-6aa34d98143e",
+          "players": [
+            "TL Wanzeru",
+            "TL Prti",
+            "TL Kicks",
+            "TL GSR",
+            "TL rexxtoned"
+          ]
+        },
+        {
+          "date": "2026-04-11",
+          "opponent": "200",
+          "matchId": "485ba5ad-fea5-43a0-9d59-a19dfc456ce3",
+          "players": [
+            "TL Wanzeru",
+            "TL Prti",
+            "TL Kicks",
+            "TL GSR",
+            "TL rexxtoned"
+          ]
+        },
+        {
+          "date": "2026-04-06",
+          "opponent": "EVO",
+          "matchId": "54d02e57-4508-4e40-9277-6250f7e27f22",
+          "players": [
+            "TL Wanzeru",
+            "TL Prti",
+            "TL Kicks",
+            "TL GSR",
+            "TL rexxtoned"
+          ]
+        },
+        {
+          "date": "2026-04-05",
+          "opponent": "XD",
+          "matchId": "380c0e00-a212-45d4-aad1-c47364d0ff3d",
+          "players": [
+            "TL Wanzeru",
+            "TL Prti",
+            "TL Kicks",
+            "TL GSR",
+            "TL rexxtoned"
+          ]
+        },
+        {
+          "date": "2026-04-04",
+          "opponent": "M1R",
+          "matchId": "f9695786-9224-4d51-9489-246d045f34ae",
+          "players": [
+            "TL Wanzeru",
+            "TL Prti",
+            "TL Kicks",
+            "TL GSR",
+            "TL rexxtoned"
+          ]
+        }
+      ]
+    }
+  ],
   "Breeze": [
     {
       "agents": [
@@ -106,192 +340,6 @@
             "TL Kicks",
             "TL GSR",
             "TL Prti",
-            "TL rexxtoned"
-          ]
-        }
-      ]
-    }
-  ],
-  "Haven": [
-    {
-      "agents": [
-        "Iso",
-        "Neon",
-        "Sova",
-        "Omen",
-        "Cypher"
-      ],
-      "agent_ids": [
-        "0e38b510-41a8-5780-5e8f-568b2a4f2d6c",
-        "bb2a4828-46eb-8cd1-e765-15848195d751",
-        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
-        "8e253930-4c05-31dd-1b6c-968525494517",
-        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
-      ],
-      "games": [
-        {
-          "date": "2026-04-14",
-          "opponent": "BFG",
-          "matchId": "55510efe-226f-44ef-9398-08221b1311e7",
-          "players": [
-            "TL GSR",
-            "TL Wanzeru",
-            "TL Kicks",
-            "TL Prti",
-            "TL rexxtoned"
-          ]
-        },
-        {
-          "date": "2026-04-12",
-          "opponent": "VR2",
-          "matchId": "24c3fa4a-18e4-4146-918d-ae5e7bd9533d",
-          "players": [
-            "TL GSR",
-            "TL Wanzeru",
-            "TL Kicks",
-            "TL Prti",
-            "TL rexxtoned"
-          ]
-        },
-        {
-          "date": "2026-04-06",
-          "opponent": "EVO",
-          "matchId": "e0f397f4-89d9-4ff4-b6e7-a8d00707e92c",
-          "players": [
-            "TL GSR",
-            "TL Wanzeru",
-            "TL Kicks",
-            "TL Prti",
-            "TL rexxtoned"
-          ]
-        }
-      ]
-    }
-  ],
-  "Lotus": [
-    {
-      "agents": [
-        "Raze",
-        "Breach",
-        "Fade",
-        "Omen",
-        "Viper"
-      ],
-      "agent_ids": [
-        "f94c3b30-42be-e959-889c-5aa313dba261",
-        "5f8d3a7f-467b-97f3-062c-13acf203c006",
-        "dade69b4-4f5a-8528-247b-219e5a1facd6",
-        "8e253930-4c05-31dd-1b6c-968525494517",
-        "707eab51-4836-f488-046a-cda6bf494859"
-      ],
-      "games": [
-        {
-          "date": "2026-04-14",
-          "opponent": "BFG",
-          "matchId": "d52e390d-38af-4e4d-8fb9-940077b531a5",
-          "players": [
-            "TL Wanzeru",
-            "TL Kicks",
-            "TL Prti",
-            "TL GSR",
-            "TL rexxtoned"
-          ]
-        },
-        {
-          "date": "2026-04-06",
-          "opponent": "EVO",
-          "matchId": "f6e87f2b-47b9-483b-9434-1787b8d31cf3",
-          "players": [
-            "TL Wanzeru",
-            "TL Kicks",
-            "TL Prti",
-            "TL GSR",
-            "TL rexxtoned"
-          ]
-        },
-        {
-          "date": "2026-04-04",
-          "opponent": "M1R",
-          "matchId": "6857ab37-9aed-412a-8241-cacbf7e9a970",
-          "players": [
-            "TL Wanzeru",
-            "TL Kicks",
-            "TL Prti",
-            "TL GSR",
-            "TL rexxtoned"
-          ]
-        }
-      ]
-    }
-  ],
-  "Split": [
-    {
-      "agents": [
-        "Neon",
-        "Raze",
-        "Skye",
-        "Omen",
-        "Viper"
-      ],
-      "agent_ids": [
-        "bb2a4828-46eb-8cd1-e765-15848195d751",
-        "f94c3b30-42be-e959-889c-5aa313dba261",
-        "6f2a04ca-43e0-be17-7f36-b3908627744d",
-        "8e253930-4c05-31dd-1b6c-968525494517",
-        "707eab51-4836-f488-046a-cda6bf494859"
-      ],
-      "games": [
-        {
-          "date": "2026-04-13",
-          "opponent": "UNI",
-          "matchId": "41bb32a2-9ea6-47bf-b83b-ad01f1d2dd32",
-          "players": [
-            "TL Wanzeru",
-            "TL GSR",
-            "TL Kicks",
-            "TL Prti",
-            "TL rexxtoned"
-          ]
-        }
-      ]
-    },
-    {
-      "agents": [
-        "Raze",
-        "Breach",
-        "Skye",
-        "Omen",
-        "Viper"
-      ],
-      "agent_ids": [
-        "f94c3b30-42be-e959-889c-5aa313dba261",
-        "5f8d3a7f-467b-97f3-062c-13acf203c006",
-        "6f2a04ca-43e0-be17-7f36-b3908627744d",
-        "8e253930-4c05-31dd-1b6c-968525494517",
-        "707eab51-4836-f488-046a-cda6bf494859"
-      ],
-      "games": [
-        {
-          "date": "2026-04-12",
-          "opponent": "VR2",
-          "matchId": "a41f0cfb-f202-446c-8ec7-6aa34d98143e",
-          "players": [
-            "TL Wanzeru",
-            "TL Prti",
-            "TL Kicks",
-            "TL GSR",
-            "TL rexxtoned"
-          ]
-        },
-        {
-          "date": "2026-04-11",
-          "opponent": "200",
-          "matchId": "485ba5ad-fea5-43a0-9d59-a19dfc456ce3",
-          "players": [
-            "TL Wanzeru",
-            "TL Prti",
-            "TL Kicks",
-            "TL GSR",
             "TL rexxtoned"
           ]
         }

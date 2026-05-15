@@ -1,32 +1,232 @@
 {
   "team": "JOBlife",
-  "Bind": [
+  "Pearl": [
     {
       "agents": [
-        "Neon",
-        "Waylay",
-        "Skye",
-        "Brimstone",
-        "Viper"
+        "Jett",
+        "Phoenix",
+        "Sova",
+        "Astra",
+        "Cypher"
       ],
       "agent_ids": [
-        "bb2a4828-46eb-8cd1-e765-15848195d751",
-        "df1cb487-4902-002e-5c17-d28e83e78588",
-        "6f2a04ca-43e0-be17-7f36-b3908627744d",
-        "9f0d8ba9-4140-b941-57d3-a7ad57c6b417",
-        "707eab51-4836-f488-046a-cda6bf494859"
+        "add6443a-41bd-e414-f6ad-e58d267f4e95",
+        "eb93336a-449b-9c1b-0a54-a891f7921d69",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
       ],
       "games": [
         {
-          "date": "2026-05-03",
+          "date": "2026-05-12",
           "opponent": "WIP",
-          "matchId": "8a34cf5f-f06a-4e82-b185-97bdac3bcf12",
+          "matchId": "cd2fe7a1-b76d-42c4-b8c9-8a6bf1c8868a",
           "players": [
             "JL runneR",
             "JL Doma",
             "JL UNFAKE",
-            "JL chiwa",
-            "JL kamyk"
+            "JL kamyk",
+            "JL chiwa"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Neon",
+        "Phoenix",
+        "Sova",
+        "Astra",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "eb93336a-449b-9c1b-0a54-a891f7921d69",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-05-04",
+          "opponent": "MDR",
+          "matchId": "354660a0-d4fb-4a04-8c1f-cbf0d59a56cd",
+          "players": [
+            "JL runneR",
+            "JL Doma",
+            "JL UNFAKE",
+            "JL kamyk",
+            "JL chiwa"
+          ]
+        },
+        {
+          "date": "2026-04-19",
+          "opponent": "NXR",
+          "matchId": "2281b2f5-ffbb-42b6-b19b-b6daa357bd10",
+          "players": [
+            "JL runneR",
+            "JL Doma",
+            "JL UNFAKE",
+            "JL kamyk",
+            "JL chiwa"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Jett",
+        "Fade",
+        "Skye",
+        "Astra",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "add6443a-41bd-e414-f6ad-e58d267f4e95",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-04-13",
+          "opponent": "ES",
+          "matchId": "1b3200c0-b1f5-4f78-937f-bca213b0cabb",
+          "players": [
+            "JL runneR",
+            "JL Enzo ",
+            "JL Doma",
+            "JL kamyk",
+            "JL chiwa"
+          ]
+        },
+        {
+          "date": "2026-04-12",
+          "opponent": "WIP",
+          "matchId": "177e9838-5082-43a3-a6bc-c6cd9db901bd",
+          "players": [
+            "JL runneR",
+            "JL Enzo ",
+            "JL Doma",
+            "JL kamyk",
+            "JL chiwa"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Jett",
+        "Skye",
+        "Sova",
+        "Astra",
+        "Vyse"
+      ],
+      "agent_ids": [
+        "add6443a-41bd-e414-f6ad-e58d267f4e95",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "efba5359-4016-a1e5-7626-b1ae76895940"
+      ],
+      "games": [
+        {
+          "date": "2026-04-05",
+          "opponent": "F9",
+          "matchId": "7128a70a-7e92-4f3c-859f-b21e44a26ef5",
+          "players": [
+            "JL runneR",
+            "JL Doma",
+            "JL Enzo ",
+            "JL kamyk",
+            "JL chiwa"
+          ]
+        }
+      ]
+    }
+  ],
+  "Split": [
+    {
+      "agents": [
+        "Jett",
+        "Raze",
+        "Skye",
+        "Omen",
+        "Viper"
+      ],
+      "agent_ids": [
+        "add6443a-41bd-e414-f6ad-e58d267f4e95",
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-05-12",
+          "opponent": "WIP",
+          "matchId": "818372fe-b3c5-49cf-a33d-c56056e610f9",
+          "players": [
+            "JL runneR",
+            "JL Doma",
+            "JL UNFAKE",
+            "JL kamyk",
+            "JL chiwa"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Neon",
+        "Raze",
+        "Skye",
+        "Omen",
+        "Viper"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-05-04",
+          "opponent": "MDR",
+          "matchId": "f9240789-f047-462c-81dc-c8903d25857b",
+          "players": [
+            "JL runneR",
+            "JL Doma",
+            "JL UNFAKE",
+            "JL kamyk",
+            "JL chiwa"
+          ]
+        },
+        {
+          "date": "2026-05-03",
+          "opponent": "WIP",
+          "matchId": "6b5299c5-2696-417b-8d32-aa29a50a4ba2",
+          "players": [
+            "JL runneR",
+            "JL Doma",
+            "JL UNFAKE",
+            "JL kamyk",
+            "JL chiwa"
+          ]
+        },
+        {
+          "date": "2026-04-25",
+          "opponent": "GL",
+          "matchId": "b3867fc6-6e37-435a-8a74-7eb66cfa8227",
+          "players": [
+            "JL runneR",
+            "JL Doma",
+            "JL UNFAKE",
+            "JL kamyk",
+            "JL chiwa"
           ]
         }
       ]
@@ -34,97 +234,41 @@
     {
       "agents": [
         "Waylay",
-        "Fade",
         "Skye",
-        "Brimstone",
-        "Viper"
+        "Omen",
+        "Viper",
+        "Vyse"
       ],
       "agent_ids": [
         "df1cb487-4902-002e-5c17-d28e83e78588",
-        "dade69b4-4f5a-8528-247b-219e5a1facd6",
         "6f2a04ca-43e0-be17-7f36-b3908627744d",
-        "9f0d8ba9-4140-b941-57d3-a7ad57c6b417",
-        "707eab51-4836-f488-046a-cda6bf494859"
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859",
+        "efba5359-4016-a1e5-7626-b1ae76895940"
       ],
       "games": [
         {
-          "date": "2026-04-12",
-          "opponent": "WIP",
-          "matchId": "47698e26-fe95-45c5-a15e-b31a709ae888",
+          "date": "2026-04-13",
+          "opponent": "ES",
+          "matchId": "5b51547e-0a2b-44b0-8d15-0521ca9a9639",
           "players": [
             "JL runneR",
-            "JL Enzo ",
             "JL Doma",
+            "JL kamyk",
             "JL chiwa",
-            "JL kamyk"
+            "JL Enzo "
           ]
         },
         {
           "date": "2026-04-06",
           "opponent": "CLA",
-          "matchId": "a6c0eadc-b25e-4f05-86f6-e2678b878b2e",
-          "players": [
-            "JL runneR",
-            "JL Enzo ",
-            "JL Doma",
-            "JL chiwa",
-            "JL kamyk"
-          ]
-        }
-      ]
-    }
-  ],
-  "Breeze": [
-    {
-      "agents": [
-        "Jett",
-        "Skye",
-        "Sova",
-        "Astra",
-        "Viper"
-      ],
-      "agent_ids": [
-        "add6443a-41bd-e414-f6ad-e58d267f4e95",
-        "6f2a04ca-43e0-be17-7f36-b3908627744d",
-        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
-        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
-        "707eab51-4836-f488-046a-cda6bf494859"
-      ],
-      "games": [
-        {
-          "date": "2026-05-12",
-          "opponent": "WIP",
-          "matchId": "7f74b544-dcce-4a75-b233-050cab6dddf6",
+          "matchId": "a30e8c46-f0ad-49a7-9ed7-ce36009271b6",
           "players": [
             "JL runneR",
             "JL Doma",
-            "JL UNFAKE",
+            "JL kamyk",
             "JL chiwa",
-            "JL kamyk"
-          ]
-        },
-        {
-          "date": "2026-04-26",
-          "opponent": "MDR",
-          "matchId": "d774b7b4-c8ea-4032-b2f6-1fd088e7da75",
-          "players": [
-            "JL runneR",
-            "JL Doma",
-            "JL UNFAKE",
-            "JL chiwa",
-            "JL kamyk"
-          ]
-        },
-        {
-          "date": "2026-04-25",
-          "opponent": "GL",
-          "matchId": "18d9d0af-aeba-4f37-a3fe-6eaab9ed0e2c",
-          "players": [
-            "JL runneR",
-            "JL Doma",
-            "JL UNFAKE",
-            "JL chiwa",
-            "JL kamyk"
+            "JL Enzo "
           ]
         }
       ]
@@ -274,65 +418,15 @@
             "JL kamyk",
             "JL chiwa"
           ]
-        }
-      ]
-    }
-  ],
-  "Pearl": [
-    {
-      "agents": [
-        "Jett",
-        "Phoenix",
-        "Sova",
-        "Astra",
-        "Cypher"
-      ],
-      "agent_ids": [
-        "add6443a-41bd-e414-f6ad-e58d267f4e95",
-        "eb93336a-449b-9c1b-0a54-a891f7921d69",
-        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
-        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
-        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
-      ],
-      "games": [
+        },
         {
-          "date": "2026-05-12",
-          "opponent": "WIP",
-          "matchId": "cd2fe7a1-b76d-42c4-b8c9-8a6bf1c8868a",
+          "date": "2026-04-25",
+          "opponent": "GL",
+          "matchId": "2bc92ab8-814e-41f0-84eb-84e0e1069ac9",
           "players": [
             "JL runneR",
-            "JL Doma",
             "JL UNFAKE",
-            "JL kamyk",
-            "JL chiwa"
-          ]
-        }
-      ]
-    },
-    {
-      "agents": [
-        "Neon",
-        "Phoenix",
-        "Sova",
-        "Astra",
-        "Cypher"
-      ],
-      "agent_ids": [
-        "bb2a4828-46eb-8cd1-e765-15848195d751",
-        "eb93336a-449b-9c1b-0a54-a891f7921d69",
-        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
-        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
-        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
-      ],
-      "games": [
-        {
-          "date": "2026-05-04",
-          "opponent": "MDR",
-          "matchId": "354660a0-d4fb-4a04-8c1f-cbf0d59a56cd",
-          "players": [
-            "JL runneR",
             "JL Doma",
-            "JL UNFAKE",
             "JL kamyk",
             "JL chiwa"
           ]
@@ -340,43 +434,11 @@
         {
           "date": "2026-04-19",
           "opponent": "NXR",
-          "matchId": "2281b2f5-ffbb-42b6-b19b-b6daa357bd10",
+          "matchId": "9b199514-6aca-46fa-9cde-dd7eaf8c0a57",
           "players": [
             "JL runneR",
-            "JL Doma",
             "JL UNFAKE",
-            "JL kamyk",
-            "JL chiwa"
-          ]
-        }
-      ]
-    }
-  ],
-  "Split": [
-    {
-      "agents": [
-        "Jett",
-        "Raze",
-        "Skye",
-        "Omen",
-        "Viper"
-      ],
-      "agent_ids": [
-        "add6443a-41bd-e414-f6ad-e58d267f4e95",
-        "f94c3b30-42be-e959-889c-5aa313dba261",
-        "6f2a04ca-43e0-be17-7f36-b3908627744d",
-        "8e253930-4c05-31dd-1b6c-968525494517",
-        "707eab51-4836-f488-046a-cda6bf494859"
-      ],
-      "games": [
-        {
-          "date": "2026-05-12",
-          "opponent": "WIP",
-          "matchId": "818372fe-b3c5-49cf-a33d-c56056e610f9",
-          "players": [
-            "JL runneR",
             "JL Doma",
-            "JL UNFAKE",
             "JL kamyk",
             "JL chiwa"
           ]
@@ -385,42 +447,184 @@
     },
     {
       "agents": [
-        "Neon",
-        "Raze",
-        "Skye",
+        "Waylay",
+        "Fade",
         "Omen",
-        "Viper"
+        "Viper",
+        "Vyse"
       ],
       "agent_ids": [
-        "bb2a4828-46eb-8cd1-e765-15848195d751",
-        "f94c3b30-42be-e959-889c-5aa313dba261",
-        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "df1cb487-4902-002e-5c17-d28e83e78588",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
         "8e253930-4c05-31dd-1b6c-968525494517",
-        "707eab51-4836-f488-046a-cda6bf494859"
+        "707eab51-4836-f488-046a-cda6bf494859",
+        "efba5359-4016-a1e5-7626-b1ae76895940"
       ],
       "games": [
         {
-          "date": "2026-05-04",
-          "opponent": "MDR",
-          "matchId": "f9240789-f047-462c-81dc-c8903d25857b",
+          "date": "2026-04-12",
+          "opponent": "WIP",
+          "matchId": "01a32ae8-0fb3-4a04-a556-8c3331a71cf4",
           "players": [
             "JL runneR",
+            "JL Enzo ",
             "JL Doma",
-            "JL UNFAKE",
             "JL kamyk",
             "JL chiwa"
           ]
         },
         {
+          "date": "2026-04-06",
+          "opponent": "CLA",
+          "matchId": "1897489d-e8d4-4ab0-aad4-44030df2aa83",
+          "players": [
+            "JL runneR",
+            "JL Enzo ",
+            "JL Doma",
+            "JL kamyk",
+            "JL chiwa"
+          ]
+        },
+        {
+          "date": "2026-04-05",
+          "opponent": "F9",
+          "matchId": "16c07da1-0f2e-46d1-9b0f-da296ba7ad5d",
+          "players": [
+            "JL runneR",
+            "JL Enzo ",
+            "JL Doma",
+            "JL kamyk",
+            "JL chiwa"
+          ]
+        }
+      ]
+    }
+  ],
+  "Bind": [
+    {
+      "agents": [
+        "Neon",
+        "Waylay",
+        "Skye",
+        "Brimstone",
+        "Viper"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "df1cb487-4902-002e-5c17-d28e83e78588",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "9f0d8ba9-4140-b941-57d3-a7ad57c6b417",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
           "date": "2026-05-03",
           "opponent": "WIP",
-          "matchId": "6b5299c5-2696-417b-8d32-aa29a50a4ba2",
+          "matchId": "8a34cf5f-f06a-4e82-b185-97bdac3bcf12",
           "players": [
             "JL runneR",
             "JL Doma",
             "JL UNFAKE",
-            "JL kamyk",
-            "JL chiwa"
+            "JL chiwa",
+            "JL kamyk"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Waylay",
+        "Fade",
+        "Skye",
+        "Brimstone",
+        "Viper"
+      ],
+      "agent_ids": [
+        "df1cb487-4902-002e-5c17-d28e83e78588",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "9f0d8ba9-4140-b941-57d3-a7ad57c6b417",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-04-12",
+          "opponent": "WIP",
+          "matchId": "47698e26-fe95-45c5-a15e-b31a709ae888",
+          "players": [
+            "JL runneR",
+            "JL Enzo ",
+            "JL Doma",
+            "JL chiwa",
+            "JL kamyk"
+          ]
+        },
+        {
+          "date": "2026-04-06",
+          "opponent": "CLA",
+          "matchId": "a6c0eadc-b25e-4f05-86f6-e2678b878b2e",
+          "players": [
+            "JL runneR",
+            "JL Enzo ",
+            "JL Doma",
+            "JL chiwa",
+            "JL kamyk"
+          ]
+        }
+      ]
+    }
+  ],
+  "Breeze": [
+    {
+      "agents": [
+        "Jett",
+        "Skye",
+        "Sova",
+        "Astra",
+        "Viper"
+      ],
+      "agent_ids": [
+        "add6443a-41bd-e414-f6ad-e58d267f4e95",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-05-12",
+          "opponent": "WIP",
+          "matchId": "7f74b544-dcce-4a75-b233-050cab6dddf6",
+          "players": [
+            "JL runneR",
+            "JL Doma",
+            "JL UNFAKE",
+            "JL chiwa",
+            "JL kamyk"
+          ]
+        },
+        {
+          "date": "2026-04-26",
+          "opponent": "MDR",
+          "matchId": "d774b7b4-c8ea-4032-b2f6-1fd088e7da75",
+          "players": [
+            "JL runneR",
+            "JL Doma",
+            "JL UNFAKE",
+            "JL chiwa",
+            "JL kamyk"
+          ]
+        },
+        {
+          "date": "2026-04-25",
+          "opponent": "GL",
+          "matchId": "18d9d0af-aeba-4f37-a3fe-6eaab9ed0e2c",
+          "players": [
+            "JL runneR",
+            "JL Doma",
+            "JL UNFAKE",
+            "JL chiwa",
+            "JL kamyk"
           ]
         }
       ]

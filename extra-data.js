@@ -1087,6 +1087,21 @@ const extraVetoHistoryData = {
     "subtitle": "2026 veto history",
     "rows": [
       {
+        "date": "2026-05-14",
+        "opponent": "REBORN",
+        "opponentAbbr": "RBN",
+        "score": "1 - 3",
+        "source": "https://liquipedia.net/valorant/Match:ID_X5I9feP7vq_R05-M001",
+        "decider": "Ascent",
+        "deciderScore": "6:13",
+        "ban1":  { "map": "Pearl",    "type": "ban",  "ownerLabel": "RBN", "ownerKind": "opp" },
+        "ban2":  { "map": "Fracture", "type": "ban",  "ownerLabel": "RBN", "ownerKind": "opp" },
+        "pick1": { "map": "Haven",    "type": "pick", "ownerLabel": "RBN", "ownerKind": "opp",  "score": "9:13" },
+        "pick2": { "map": "Lotus",    "type": "pick", "ownerLabel": "BJK", "ownerKind": "team", "score": "13:6" },
+        "ban3":  { "map": "Split",    "type": "pick", "ownerLabel": "RBN", "ownerKind": "opp",  "score": "13:4" },
+        "ban4":  { "map": "Breeze",   "type": "pick", "ownerLabel": "BJK", "ownerKind": "team", "score": "13:6" }
+      },
+      {
         "date": "2026-05-04",
         "opponent": "Misa Esports",
         "opponentAbbr": "MISA",
@@ -1117,6 +1132,36 @@ const extraVetoHistoryData = {
         "ban4":  { "map": "Fracture", "type": "ban",  "ownerLabel": "BJK", "ownerKind": "team" }
       },
       {
+        "date": "2026-04-27",
+        "opponent": "FUT Academy",
+        "opponentAbbr": "FUT.A",
+        "score": "2 - 1",
+        "source": "https://liquipedia.net/valorant/Match:ID_X5I9feP7vq_R02-M001",
+        "decider": "Split",
+        "deciderScore": "13:10",
+        "ban1":  { "map": "Breeze",   "type": "ban",  "ownerLabel": "FUT.A", "ownerKind": "opp" },
+        "ban2":  { "map": "Haven",    "type": "ban",  "ownerLabel": "BJK",   "ownerKind": "team" },
+        "pick1": { "map": "Fracture", "type": "pick", "ownerLabel": "FUT.A", "ownerKind": "opp",  "score": "11:13" },
+        "pick2": { "map": "Lotus",    "type": "pick", "ownerLabel": "BJK",   "ownerKind": "team", "score": "6:13" },
+        "ban3":  { "map": "Bind",     "type": "ban",  "ownerLabel": "FUT.A", "ownerKind": "opp" },
+        "ban4":  { "map": "Pearl",    "type": "ban",  "ownerLabel": "BJK",   "ownerKind": "team" }
+      },
+      {
+        "date": "2026-04-19",
+        "opponent": "Misa Esports",
+        "opponentAbbr": "MISA",
+        "score": "2 - 0",
+        "source": "https://liquipedia.net/valorant/Match:ID_bhIbLJSVIn_0004",
+        "decider": "Breeze",
+        "deciderScore": "",
+        "ban1":  { "map": "Fracture", "type": "ban",  "ownerLabel": "MISA", "ownerKind": "opp" },
+        "ban2":  { "map": "Haven",    "type": "ban",  "ownerLabel": "BJK",  "ownerKind": "team" },
+        "pick1": { "map": "Split",    "type": "pick", "ownerLabel": "MISA", "ownerKind": "opp",  "score": "10:13" },
+        "pick2": { "map": "Lotus",    "type": "pick", "ownerLabel": "BJK",  "ownerKind": "team", "score": "13:11" },
+        "ban3":  { "map": "Bind",     "type": "ban",  "ownerLabel": "MISA", "ownerKind": "opp" },
+        "ban4":  { "map": "Pearl",    "type": "ban",  "ownerLabel": "BJK",  "ownerKind": "team" }
+      },
+      {
         "date": "2026-04-13",
         "opponent": "EFP",
         "opponentAbbr": "EFP",
@@ -1132,6 +1177,21 @@ const extraVetoHistoryData = {
         "ban4":  { "map": "Split",    "type": "ban",  "ownerLabel": "EFP", "ownerKind": "opp" }
       },
       {
+        "date": "2026-04-11",
+        "opponent": "Dark Passage",
+        "opponentAbbr": "DP",
+        "score": "2 - 0",
+        "source": "https://liquipedia.net/valorant/Match:ID_i3wcmt65n0_0002",
+        "decider": "Pearl",
+        "deciderScore": "",
+        "ban1":  { "map": "Haven",    "type": "ban",  "ownerLabel": "BJK", "ownerKind": "team" },
+        "ban2":  { "map": "Split",    "type": "ban",  "ownerLabel": "DP",  "ownerKind": "opp" },
+        "pick1": { "map": "Bind",     "type": "pick", "ownerLabel": "BJK", "ownerKind": "team", "score": "13:2" },
+        "pick2": { "map": "Breeze",   "type": "pick", "ownerLabel": "DP",  "ownerKind": "opp",  "score": "3:13" },
+        "ban3":  { "map": "Fracture", "type": "ban",  "ownerLabel": "BJK", "ownerKind": "team" },
+        "ban4":  { "map": "Lotus",    "type": "ban",  "ownerLabel": "DP",  "ownerKind": "opp" }
+      },
+      {
         "date": "2026-04-06",
         "opponent": "Bushido Wildcats",
         "opponentAbbr": "BWC",
@@ -1145,6 +1205,36 @@ const extraVetoHistoryData = {
         "pick2": { "map": "Lotus",    "type": "pick", "ownerLabel": "BJK", "ownerKind": "team" },
         "ban3":  { "map": "Fracture", "type": "ban",  "ownerLabel": "BWC", "ownerKind": "opp" },
         "ban4":  { "map": "Split",    "type": "ban",  "ownerLabel": "BJK", "ownerKind": "team" }
+      },
+      {
+        "date": "2026-03-02",
+        "opponent": "S2G Esports",
+        "opponentAbbr": "S2G",
+        "score": "2 - 3",
+        "source": "https://liquipedia.net/valorant/Match:ID_CR61E2RoYP_R02-M002",
+        "decider": "Pearl",
+        "deciderScore": "10:13",
+        "ban1":  { "map": "Haven",   "type": "ban",  "ownerLabel": "BJK", "ownerKind": "team" },
+        "ban2":  { "map": "Bind",    "type": "ban",  "ownerLabel": "S2G", "ownerKind": "opp" },
+        "pick1": { "map": "Split",   "type": "pick", "ownerLabel": "BJK", "ownerKind": "team", "score": "13:11" },
+        "pick2": { "map": "Abyss",   "type": "pick", "ownerLabel": "S2G", "ownerKind": "opp",  "score": "11:13" },
+        "ban3":  { "map": "Corrode", "type": "pick", "ownerLabel": "BJK", "ownerKind": "team", "score": "13:8" },
+        "ban4":  { "map": "Breeze",  "type": "pick", "ownerLabel": "S2G", "ownerKind": "opp",  "score": "13:3" }
+      },
+      {
+        "date": "2026-03-01",
+        "opponent": "Misa Esports",
+        "opponentAbbr": "MISA",
+        "score": "0 - 2",
+        "source": "https://liquipedia.net/valorant/Match:ID_CR61E2RoYP_R02-M001",
+        "decider": "Pearl",
+        "deciderScore": "",
+        "ban1":  { "map": "Bind",    "type": "ban",  "ownerLabel": "MISA", "ownerKind": "opp" },
+        "ban2":  { "map": "Haven",   "type": "ban",  "ownerLabel": "BJK",  "ownerKind": "team" },
+        "pick1": { "map": "Abyss",   "type": "pick", "ownerLabel": "MISA", "ownerKind": "opp",  "score": "13:9" },
+        "pick2": { "map": "Split",   "type": "pick", "ownerLabel": "BJK",  "ownerKind": "team", "score": "9:13" },
+        "ban3":  { "map": "Corrode", "type": "ban",  "ownerLabel": "MISA", "ownerKind": "opp" },
+        "ban4":  { "map": "Breeze",  "type": "ban",  "ownerLabel": "BJK",  "ownerKind": "team" }
       }
     ]
   },

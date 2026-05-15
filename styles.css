@@ -537,6 +537,40 @@ body {
   white-space: nowrap;
 }
 
+.agent-icon-fab {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 200;
+  background: #1e1e2e;
+  color: #a0a0b8;
+  border: 1.5px solid #3a3a52;
+  font: inherit;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 8px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.agent-icon-fab:hover {
+  background: #2a2a40;
+  color: #c0c0d8;
+}
+
+.agent-icon-fab.active {
+  background: #6366f1;
+  color: #fff;
+  border-color: #4f46e5;
+  box-shadow: 0 2px 16px rgba(99,102,241,0.5);
+}
+
 .fks-new-roster-btn {
   border: 1px solid rgba(0, 0, 0, 0.15);
   background: #f0f0f0;
@@ -1634,6 +1668,21 @@ body {
   z-index: 4;
   background: #d61f1f;
   box-shadow: none;
+}
+
+.heat-point--icon {
+  width: 18px;
+  height: 18px;
+  border: none;
+  border-radius: 50%;
+  background-color: #111;
+  background-size: cover;
+  background-position: center;
+  outline-offset: 1px;
+}
+
+.heat-point--icon:hover {
+  filter: brightness(1.15);
 }
 
 .heat-point.calibration-enabled {

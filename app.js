@@ -186,6 +186,7 @@ let ppInlineActiveSites = new Set(["A", "B", "C"]);
 let lastDefensiveInfo = null;
 let allSiteStats = {}; // { teamKey: { mapName: data } }
 const allAgentsData = {}; // { teamKey: full agents JSON }
+let currentAgentLookup = {}; // { matchId: { playerName: agentName } } — rebuilt on each render
 const TEAM_FILE_PREFIX = {
   ...Object.fromEntries(Object.entries(TEAMS_CONFIG).map(([key, cfg]) => [key, cfg.filePrefix])),
   attax: "atn",
@@ -198,6 +199,7 @@ const TEAM_STAT_MAPS = Object.fromEntries(
 let activeRotationTrail = null;
 let activeRotationWindow = null; // "140_120" | "120_100" | "100_end" | "afterplant" | null
 let fksNewRosterFilter = false;
+let agentIconMode = false;
 let isTestMode = false;
 let sniperFilterFK = false;
 let sniperFilterAllFK = false;
@@ -259,6 +261,7 @@ const defensivePlayerControls = document.getElementById("defensive-player-contro
 const defensivePlayerRow = document.getElementById("defensive-player-row");
 const defensivePlayerAll = document.getElementById("defensive-player-all");
 const defensivePlayerNone = document.getElementById("defensive-player-none");
+const agentIconBtn = document.getElementById("agent-icon-btn");
 const fksNewRosterBtn = document.getElementById("fks-new-roster-btn");
 const fksNewRosterHint = document.getElementById("fks-new-roster-hint");
 const agentsBtn = document.getElementById("agents-btn");
@@ -930,8 +933,16 @@ function buildMapControlMarkup(mapName, side, frameClassList, frameStyle, mapIma
     const roundCount = new Set(allPoints.map(pt => `${pt.matchId}|${pt.roundNum}`)).size;
     const dotsMarkup = allPoints.map(pt => {
       const [rx, ry] = MAP_ROTATE_COORDS_CW.has(mapName) ? rotCW90(pt.normX, pt.normY) : [pt.normX, pt.normY];
-      const hidden = selectedPlayers.has(pt.player) ? "" : "display:none;";
-      return `<span class="heat-point" data-player="${encodeURIComponent(pt.player)}" style="${hidden}left:${rx}%;top:${ry}%;background:${getPlayerColor(pt.player)};" title="${pt.player} | R${pt.roundNum + 1} | ${pt.date} vs ${pt.opponent} | ${fmtRoundTime(pt.timeMs)}"></span>`;
+      const color = getPlayerColor(pt.player);
+      const visible = selectedPlayers.has(pt.player);
+      const agent = agentIconMode ? currentAgentLookup[pt.matchId]?.[pt.player] : null;
+      const title = `${pt.player} | R${pt.roundNum + 1} | ${pt.date} vs ${pt.opponent} | ${fmtRoundTime(pt.timeMs)}`;
+      if (agent) {
+        const d = visible ? "" : "display:none;";
+        return `<span class="heat-point heat-point--icon" data-player="${encodeURIComponent(pt.player)}" style="${d}left:${rx}%;top:${ry}%;background-image:url('${agentIconUrl(agent)}');outline:2px solid ${color};" title="${title} (${agent})"></span>`;
+      }
+      const hidden = visible ? "" : "display:none;";
+      return `<span class="heat-point" data-player="${encodeURIComponent(pt.player)}" style="${hidden}left:${rx}%;top:${ry}%;background:${color};" title="${title}"></span>`;
     }).join("");
     return `
       <article class="defensive-card">
@@ -1015,7 +1026,13 @@ function computeRotationLayers(mapName, side, selectedPlayers) {
       }
       for (const snap of snaps) {
         const [rx, ry] = MAP_ROTATE_COORDS_CW.has(mapName) ? rotCW90(snap.normX, snap.normY) : [snap.normX, snap.normY];
-        dotsMarkup += `<span class="heat-point rotation-dot" data-trail-id="${trailId}" style="left:${rx}%;top:${ry}%;background:${color};opacity:${dotOpacity};cursor:pointer;" title="${trail.player} | R${trail.roundNum + 1} | ${fmtRoundTime(snap.timeMs)} | ${trail.date} vs ${trail.opponent}"></span>`;
+        const rotAgent = agentIconMode ? currentAgentLookup[trail.matchId]?.[trail.player] : null;
+        const rotTitle = `${trail.player} | R${trail.roundNum + 1} | ${fmtRoundTime(snap.timeMs)} | ${trail.date} vs ${trail.opponent}`;
+        if (rotAgent) {
+          dotsMarkup += `<span class="heat-point heat-point--icon rotation-dot" data-trail-id="${trailId}" style="left:${rx}%;top:${ry}%;background-image:url('${agentIconUrl(rotAgent)}');outline:2px solid ${color};opacity:${dotOpacity};cursor:pointer;" title="${rotTitle} (${rotAgent})"></span>`;
+        } else {
+          dotsMarkup += `<span class="heat-point rotation-dot" data-trail-id="${trailId}" style="left:${rx}%;top:${ry}%;background:${color};opacity:${dotOpacity};cursor:pointer;" title="${rotTitle}"></span>`;
+        }
       }
     }
   }
@@ -1130,6 +1147,8 @@ function renderDefensivePanels(info) {
         ${sidebarChipsMarkup}
       </div>`
     : "";
+  currentAgentLookup = buildAgentLookup(activeTeam, mapName);
+
   const timingPanels = [
     ["lt10s", "<10s"],
     ["lt20s", "<20s"],
@@ -1152,7 +1171,13 @@ function renderDefensivePanels(info) {
         .map((point) => {
           const p = projectHeatmapPoint(point, mapName);
           const color = getPlayerColor(point.player);
-          const hidden = selectedPlayers.has(point.player) ? "" : ' style="display:none"';
+          const visible = selectedPlayers.has(point.player);
+          const agent = agentIconMode ? currentAgentLookup[point.matchId]?.[point.player] : null;
+          if (agent) {
+            const displayStyle = visible ? "" : "display:none;";
+            return `<span class="heat-point heat-point--icon" data-player="${encodeURIComponent(point.player)}" style="${displayStyle}left:${p.x}%; top:${p.y}%; background-image:url('${agentIconUrl(agent)}'); outline:2px solid ${color};" title="${point.player} (${agent}) | ${point.date} vs ${point.opponent} | R${point.roundNum + 1}"></span>`;
+          }
+          const hidden = visible ? "" : ' style="display:none"';
           return `<span class="heat-point" data-player="${encodeURIComponent(point.player)}" style="left:${p.x}%; top:${p.y}%; background:${color};"${hidden} title="${point.player} | ${point.date} vs ${point.opponent} | R${point.roundNum + 1}"></span>`;
         })
         .join("");
@@ -1201,7 +1226,10 @@ function renderDefensivePanels(info) {
   const sniperKillerDots = sniperVisual
     .map(e => {
       const color = getPlayerColor(e.point.player);
-      return `<span class="heat-point" style="left:${e.killer.x}%; top:${e.killer.y}%; background:${color};" title="${e.point.player} -> ${e.point.victim ?? "?"} | ${e.point.date} vs ${e.point.opponent} | R${e.point.roundNum + 1}"></span>`;
+      const agent = agentIconMode ? currentAgentLookup[e.point.matchId]?.[e.point.player] : null;
+      const title = `${e.point.player} -> ${e.point.victim ?? "?"} | ${e.point.date} vs ${e.point.opponent} | R${e.point.roundNum + 1}`;
+      if (agent) return `<span class="heat-point heat-point--icon" style="left:${e.killer.x}%; top:${e.killer.y}%; background-image:url('${agentIconUrl(agent)}');outline:2px solid ${color};" title="${title} (${agent})"></span>`;
+      return `<span class="heat-point" style="left:${e.killer.x}%; top:${e.killer.y}%; background:${color};" title="${title}"></span>`;
     })
     .join("");
 
@@ -1254,7 +1282,10 @@ function renderDefensivePanels(info) {
   const allFkKillerDots = allFkVisual
     .map(e => {
       const color = getPlayerColor(e.point.player);
-      return `<span class="heat-point" style="left:${e.killer.x}%; top:${e.killer.y}%; background:${color};" title="${e.point.player} -> ${e.point.victim ?? "?"} | ${e.point.date} vs ${e.point.opponent} | R${e.point.roundNum + 1} | ${fmtRoundTime(e.point.timeSinceRoundStartMillis)}"></span>`;
+      const agent = agentIconMode ? currentAgentLookup[e.point.matchId]?.[e.point.player] : null;
+      const title = `${e.point.player} -> ${e.point.victim ?? "?"} | ${e.point.date} vs ${e.point.opponent} | R${e.point.roundNum + 1} | ${fmtRoundTime(e.point.timeSinceRoundStartMillis)}`;
+      if (agent) return `<span class="heat-point heat-point--icon" style="left:${e.killer.x}%; top:${e.killer.y}%; background-image:url('${agentIconUrl(agent)}');outline:2px solid ${color};" title="${title} (${agent})"></span>`;
+      return `<span class="heat-point" style="left:${e.killer.x}%; top:${e.killer.y}%; background:${color};" title="${title}"></span>`;
     }).join("");
   const allFkLegendPlayers = sortByPlayerOrder([...new Set(allFkAllPoints.map(p => p.player))]);
   const allFkLegendMarkup = allFkLegendPlayers.length
@@ -1309,10 +1340,12 @@ function renderDefensivePanels(info) {
       const color = getPlayerColor(point.player);
       const site = String(point.site || "").toUpperCase();
       const ring = siteColor[site] ?? "#888";
-      return `
-        <span class="heat-point retake-point" style="left:${p.x}%; top:${p.y}%; background:${color}; box-shadow: 0 0 0 1.4px ${ring};" title="${point.player} | Site ${site || "?"} | ${point.date} vs ${point.opponent} | R${point.roundNum + 1}"></span>
-        <span class="retake-site-tag retake-site-tag-${site}" style="left:calc(${p.x}% + 6px); top:calc(${p.y}% - 8px);">${site || "?"}</span>
-      `;
+      const agent = agentIconMode ? currentAgentLookup[point.matchId]?.[point.player] : null;
+      const retakeTitle = `${point.player} | Site ${site || "?"} | ${point.date} vs ${point.opponent} | R${point.roundNum + 1}`;
+      const dotSpan = agent
+        ? `<span class="heat-point heat-point--icon retake-point" data-player="${encodeURIComponent(point.player)}" style="left:${p.x}%; top:${p.y}%; background-image:url('${agentIconUrl(agent)}');outline:2px solid ${color};" title="${retakeTitle} (${agent})"></span>`
+        : `<span class="heat-point retake-point" data-player="${encodeURIComponent(point.player)}" style="left:${p.x}%; top:${p.y}%; background:${color}; box-shadow: 0 0 0 1.4px ${ring};" title="${retakeTitle}"></span>`;
+      return `${dotSpan}<span class="retake-site-tag retake-site-tag-${site}" style="left:calc(${p.x}% + 6px); top:calc(${p.y}% - 8px);">${site || "?"}</span>`;
     })
     .join("");
   const retakeLegendPlayers = sortByPlayerOrder([...new Set(retakePoints.map(pt => pt.player))]);
@@ -1380,10 +1413,12 @@ function renderDefensivePanels(info) {
           const ring = ppSiteColor[pt.site] ?? "#888";
           const site = pt.site ?? "";
           const [rx, ry] = MAP_ROTATE_COORDS_CW.has(mapName) ? rotCW90(pt.normX, pt.normY) : [pt.normX, pt.normY];
-          return `
-            <span class="heat-point retake-point" style="left:${rx}%;top:${ry}%;background:${color};box-shadow:0 0 0 1.4px ${ring};" title="${ppShortName(pt.player)} | Site ${site} | R${pt.roundNum + 1} | ${pt.date} vs ${pt.opponent}"></span>
-            <span class="retake-site-tag retake-site-tag-${site}" style="left:calc(${rx}% + 6px);top:calc(${ry}% - 8px);">${site}</span>
-          `;
+          const ppAgent = agentIconMode ? currentAgentLookup[pt.matchId]?.[pt.player] : null;
+          const ppTitle = `${ppShortName(pt.player)} | Site ${site} | R${pt.roundNum + 1} | ${pt.date} vs ${pt.opponent}`;
+          const ppDot = ppAgent
+            ? `<span class="heat-point heat-point--icon retake-point" data-player="${encodeURIComponent(pt.player)}" style="left:${rx}%;top:${ry}%;background-image:url('${agentIconUrl(ppAgent)}');outline:2px solid ${color};" title="${ppTitle} (${ppAgent})"></span>`
+            : `<span class="heat-point retake-point" data-player="${encodeURIComponent(pt.player)}" style="left:${rx}%;top:${ry}%;background:${color};box-shadow:0 0 0 1.4px ${ring};" title="${ppTitle}"></span>`;
+          return `${ppDot}<span class="retake-site-tag retake-site-tag-${site}" style="left:calc(${rx}% + 6px);top:calc(${ry}% - 8px);">${site}</span>`;
         }).join("")
       : '<div class="heatmap-empty"><p>No samples.</p></div>';
 
@@ -1561,6 +1596,8 @@ function updateEarlyDotsInPlace(info, selectedPlayers) {
     chip.classList.toggle("off", !enabled);
     chip.setAttribute("aria-pressed", String(enabled));
   });
+
+  updateRotationCardInPlace(info.map, activeSideView, selectedPlayers);
 }
 
 function toggleRetakeSite(site) {
@@ -1589,6 +1626,7 @@ function renderSideButtons() {
 }
 
 function renderMapInfo() {
+  if (agentIconBtn) agentIconBtn.classList.add("hidden");
   if (fksNewRosterBtn) fksNewRosterBtn.classList.add("hidden");
   if (fksNewRosterHint) fksNewRosterHint.classList.add("hidden");
   const team = allVetoHistoryData[activeTeam];
@@ -1643,6 +1681,10 @@ function renderMapInfo() {
     if (agentsBtn) {
       agentsBtn.classList.remove("hidden");
       agentsBtn.onclick = () => showAgentsModal(activeTeam, activeDefensiveMap);
+    }
+    if (agentIconBtn) {
+      agentIconBtn.classList.remove("hidden");
+      agentIconBtn.classList.toggle("active", agentIconMode);
     }
     const rawSampleMaps = defensiveInfo.sampleMaps ?? defensiveInfo.selectedMaps ?? [];
     const sampleSize = defensiveInfo.sampleSize ?? rawSampleMaps.length;
@@ -2002,6 +2044,27 @@ function closeAgentsModal() {
   agentsModalOverlay.classList.add("hidden");
 }
 
+function buildAgentLookup(teamKey, mapName) {
+  const comps = allAgentsData[teamKey]?.[mapName] ?? [];
+  const lookup = {};
+  for (const comp of comps) {
+    for (const game of comp.games) {
+      if (!lookup[game.matchId]) lookup[game.matchId] = {};
+      for (let i = 0; i < game.players.length; i++) {
+        const full = game.players[i];
+        const short = full.replace(/^\S+ /, "");
+        lookup[game.matchId][short] = comp.agents[i];
+        lookup[game.matchId][full]  = comp.agents[i];
+      }
+    }
+  }
+  return lookup;
+}
+
+function agentIconUrl(agentName) {
+  return `./icons/${agentName.replace(/\//g, "")}.png`;
+}
+
 function showAgentsModal(teamKey, mapName) {
   const data = allAgentsData[teamKey];
   const comps = data?.[mapName] ?? [];
@@ -2133,6 +2196,11 @@ document.addEventListener("mousemove", (e) => {
   if (tip?.style.display === "block") positionPpTooltip(e);
 });
 
+agentIconBtn?.addEventListener("click", () => {
+  agentIconMode = !agentIconMode;
+  renderMapInfo();
+});
+
 fksNewRosterBtn?.addEventListener("click", () => {
   fksNewRosterFilter = !fksNewRosterFilter;
   renderMapInfo();
@@ -2142,6 +2210,7 @@ teamSelect.addEventListener("change", (event) => {
   activeTeam = event.target.value;
   activeDefensiveMap = "Bind";
   fksNewRosterFilter = false;
+  agentIconMode = false;
   retakeActiveSites = new Set(["A", "B", "C"]);
   ppInlineActiveSites = new Set(["A", "B", "C"]);
   if (activeTeam === "eco") {

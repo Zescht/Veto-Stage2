@@ -54,6 +54,162 @@
           ]
         }
       ]
+    },
+    {
+      "agents": [
+        "Waylay",
+        "Fade",
+        "Tejo",
+        "Astra",
+        "Killjoy"
+      ],
+      "agent_ids": [
+        "df1cb487-4902-002e-5c17-d28e83e78588",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "b444168c-4e35-8076-db47-ef9bf368f384",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "1e58de9c-4950-5125-93e9-a0aee9f98746"
+      ],
+      "games": [
+        {
+          "date": "2026-03-02",
+          "opponent": "S2G",
+          "matchId": "a5dad80a-57f7-4f1f-95b8-40222851f301",
+          "players": [
+            "BJK influx",
+            "BJK oroni",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK wezzy1"
+          ]
+        },
+        {
+          "date": "2026-02-07",
+          "opponent": "MISA",
+          "matchId": "da4c1a9e-6c86-480d-8340-f22bddc50924",
+          "players": [
+            "BJK influx",
+            "BJK oroni",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK wezzy1"
+          ]
+        },
+        {
+          "date": "2026-01-25",
+          "opponent": "BW",
+          "matchId": "57587077-f39b-489d-9fdb-97cc34c9c08e",
+          "players": [
+            "BJK influx",
+            "BJK oroni",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK wezzy1"
+          ]
+        },
+        {
+          "date": "2026-01-19",
+          "opponent": "EF",
+          "matchId": "1f75b1ee-ab49-4496-94bf-298de24d024b",
+          "players": [
+            "BJK influx",
+            "BJK oroni",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK wezzy1"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Neon",
+        "Yoru",
+        "Sova",
+        "Astra",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "7f94d92c-4234-0a36-9646-3a87eb8b5c89",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-02-28",
+          "opponent": "FF",
+          "matchId": "9fbaf71d-9612-47bb-b135-6a4b49f5e89c",
+          "players": [
+            "BJK influx",
+            "BJK wezzy1",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK oroni"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Neon",
+        "Sova",
+        "Tejo",
+        "Astra",
+        "Killjoy"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "b444168c-4e35-8076-db47-ef9bf368f384",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "1e58de9c-4950-5125-93e9-a0aee9f98746"
+      ],
+      "games": [
+        {
+          "date": "2026-02-19",
+          "opponent": "ULF",
+          "matchId": "a32f43a3-5d14-4c7a-a305-576f36e902d9",
+          "players": [
+            "BJK influx",
+            "BJK oroni",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK wezzy1"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Reyna",
+        "Yoru",
+        "Sova",
+        "Astra",
+        "Sage"
+      ],
+      "agent_ids": [
+        "a3bfb853-43b2-7238-a4f1-ad90e9e46bcc",
+        "7f94d92c-4234-0a36-9646-3a87eb8b5c89",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "569fdd95-4d10-43ab-ca70-79becc718b46"
+      ],
+      "games": [
+        {
+          "date": "2026-02-19",
+          "opponent": "ULF",
+          "matchId": "55e7bed6-6430-467b-9a39-23fddd97ed82",
+          "players": [
+            "BJK influx",
+            "BJK MerSahaha",
+            "BJK oroni",
+            "BJK Docent",
+            "BJK wezzy1"
+          ]
+        }
+      ]
     }
   ],
   "Lotus": [
@@ -253,6 +409,96 @@
           ]
         }
       ]
+    },
+    {
+      "agents": [
+        "Raze",
+        "Yoru",
+        "Fade",
+        "Omen",
+        "Viper"
+      ],
+      "agent_ids": [
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "7f94d92c-4234-0a36-9646-3a87eb8b5c89",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-03-02",
+          "opponent": "S2G",
+          "matchId": "9f6b462d-5cc1-44da-8c96-cd31e7bcb217",
+          "players": [
+            "BJK influx",
+            "BJK wezzy1",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK oroni"
+          ]
+        },
+        {
+          "date": "2026-03-01",
+          "opponent": "MISA",
+          "matchId": "90bca547-451a-492a-b390-faf1df7bec0e",
+          "players": [
+            "BJK influx",
+            "BJK wezzy1",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK oroni"
+          ]
+        },
+        {
+          "date": "2026-02-22",
+          "opponent": "UCAM",
+          "matchId": "673623d8-3dd3-4567-9e9d-8296c5c47d5e",
+          "players": [
+            "BJK influx",
+            "BJK wezzy1",
+            "BJK oroni",
+            "BJK Docent",
+            "BJK MerSahaha"
+          ]
+        },
+        {
+          "date": "2026-02-21",
+          "opponent": "FKS",
+          "matchId": "e7082892-d52a-4fa2-bfe0-16d74f4ff0d1",
+          "players": [
+            "BJK influx",
+            "BJK wezzy1",
+            "BJK oroni",
+            "BJK Docent",
+            "BJK MerSahaha"
+          ]
+        },
+        {
+          "date": "2026-02-19",
+          "opponent": "ULF",
+          "matchId": "dc93998d-e296-4cd8-a2b3-7c3349d2ba72",
+          "players": [
+            "BJK influx",
+            "BJK wezzy1",
+            "BJK oroni",
+            "BJK Docent",
+            "BJK MerSahaha"
+          ]
+        },
+        {
+          "date": "2026-02-09",
+          "opponent": "GS",
+          "matchId": "ab88ec3b-11c6-49eb-9431-7e6fe7ee6e97",
+          "players": [
+            "BJK influx",
+            "BJK wezzy1",
+            "BJK oroni",
+            "BJK Docent",
+            "BJK MerSahaha"
+          ]
+        }
+      ]
     }
   ],
   "Bind": [
@@ -312,6 +558,72 @@
             "BJK MerSahaha",
             "BJK Docent",
             "BJK wezzy1"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Raze",
+        "Yoru",
+        "Fade",
+        "Brimstone",
+        "Viper"
+      ],
+      "agent_ids": [
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "7f94d92c-4234-0a36-9646-3a87eb8b5c89",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "9f0d8ba9-4140-b941-57d3-a7ad57c6b417",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-02-22",
+          "opponent": "UCAM",
+          "matchId": "c17e1e4b-1f99-4f7b-a045-41ae4b071281",
+          "players": [
+            "BJK influx",
+            "BJK wezzy1",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK oroni"
+          ]
+        },
+        {
+          "date": "2026-02-21",
+          "opponent": "FKS",
+          "matchId": "23790ccf-906d-4357-9360-76c4bef175b7",
+          "players": [
+            "BJK influx",
+            "BJK wezzy1",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK oroni"
+          ]
+        },
+        {
+          "date": "2026-02-01",
+          "opponent": "FF",
+          "matchId": "25c668f9-0531-4fae-94ce-a03b6ed200df",
+          "players": [
+            "BJK influx",
+            "BJK wezzy1",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK oroni"
+          ]
+        },
+        {
+          "date": "2026-01-18",
+          "opponent": "FA",
+          "matchId": "0ff31452-bd15-40a5-881a-f25915f4abd4",
+          "players": [
+            "BJK influx",
+            "BJK wezzy1",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK oroni"
           ]
         }
       ]
@@ -389,6 +701,78 @@
           ]
         }
       ]
+    },
+    {
+      "agents": [
+        "Jett",
+        "Yoru",
+        "Sova",
+        "Astra",
+        "Viper"
+      ],
+      "agent_ids": [
+        "add6443a-41bd-e414-f6ad-e58d267f4e95",
+        "7f94d92c-4234-0a36-9646-3a87eb8b5c89",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-03-02",
+          "opponent": "S2G",
+          "matchId": "0c61f46e-f305-4b1e-84c0-7355e76f10dd",
+          "players": [
+            "BJK influx",
+            "BJK wezzy1",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK oroni"
+          ]
+        },
+        {
+          "date": "2026-02-28",
+          "opponent": "FF",
+          "matchId": "03990086-dcb4-41f9-9390-2f58dc302bd5",
+          "players": [
+            "BJK influx",
+            "BJK wezzy1",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK oroni"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Jett",
+        "Breach",
+        "Sova",
+        "Astra",
+        "Viper"
+      ],
+      "agent_ids": [
+        "add6443a-41bd-e414-f6ad-e58d267f4e95",
+        "5f8d3a7f-467b-97f3-062c-13acf203c006",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-02-21",
+          "opponent": "FKS",
+          "matchId": "d94fe112-5977-4c0e-9bf7-65fc004dc43f",
+          "players": [
+            "BJK influx",
+            "BJK MerSahaha",
+            "BJK oroni",
+            "BJK Docent",
+            "BJK wezzy1"
+          ]
+        }
+      ]
     }
   ],
   "Fracture": [
@@ -416,6 +800,284 @@
             "BJK influx",
             "BJK MerSahaha",
             "BJK oroni",
+            "BJK Docent",
+            "BJK wezzy1"
+          ]
+        }
+      ]
+    }
+  ],
+  "Corrode": [
+    {
+      "agents": [
+        "Waylay",
+        "KAY/O",
+        "Sova",
+        "Omen",
+        "Viper"
+      ],
+      "agent_ids": [
+        "df1cb487-4902-002e-5c17-d28e83e78588",
+        "601dbbe7-43ce-be57-2a40-4abd24953621",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-03-02",
+          "opponent": "S2G",
+          "matchId": "f60966d6-5b47-49a0-b5bf-11c5779d98b2",
+          "players": [
+            "BJK influx",
+            "BJK MerSahaha",
+            "BJK oroni",
+            "BJK Docent",
+            "BJK wezzy1"
+          ]
+        },
+        {
+          "date": "2026-02-28",
+          "opponent": "FF",
+          "matchId": "c793abfb-5346-4014-9670-a7491e9197f2",
+          "players": [
+            "BJK influx",
+            "BJK MerSahaha",
+            "BJK oroni",
+            "BJK Docent",
+            "BJK wezzy1"
+          ]
+        },
+        {
+          "date": "2026-02-22",
+          "opponent": "UCAM",
+          "matchId": "ed6b81f6-82b1-4bcd-8cf0-f78e812f49d9",
+          "players": [
+            "BJK influx",
+            "BJK MerSahaha",
+            "BJK oroni",
+            "BJK Docent",
+            "BJK wezzy1"
+          ]
+        },
+        {
+          "date": "2026-02-09",
+          "opponent": "GS",
+          "matchId": "409e7b8a-e81d-4102-b4ee-a08076ffc977",
+          "players": [
+            "BJK influx",
+            "BJK MerSahaha",
+            "BJK oroni",
+            "BJK Docent",
+            "BJK wezzy1"
+          ]
+        },
+        {
+          "date": "2026-02-07",
+          "opponent": "MISA",
+          "matchId": "746aec80-4a0b-4877-ab59-2fcb13285b71",
+          "players": [
+            "BJK influx",
+            "BJK MerSahaha",
+            "BJK oroni",
+            "BJK Docent",
+            "BJK wezzy1"
+          ]
+        }
+      ]
+    }
+  ],
+  "Abyss": [
+    {
+      "agents": [
+        "Waylay",
+        "Sova",
+        "Tejo",
+        "Astra",
+        "Omen"
+      ],
+      "agent_ids": [
+        "df1cb487-4902-002e-5c17-d28e83e78588",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "b444168c-4e35-8076-db47-ef9bf368f384",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "8e253930-4c05-31dd-1b6c-968525494517"
+      ],
+      "games": [
+        {
+          "date": "2026-03-02",
+          "opponent": "S2G",
+          "matchId": "d963b5a5-a0d0-4805-bebf-fa5d5a82969d",
+          "players": [
+            "BJK influx",
+            "BJK oroni",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK wezzy1"
+          ]
+        },
+        {
+          "date": "2026-03-01",
+          "opponent": "MISA",
+          "matchId": "6e6ceaea-9299-498e-9836-04bbc5b4fb3d",
+          "players": [
+            "BJK influx",
+            "BJK oroni",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK wezzy1"
+          ]
+        },
+        {
+          "date": "2026-02-01",
+          "opponent": "FF",
+          "matchId": "4b1c0845-77ac-4e40-8647-dbbc6e97a60a",
+          "players": [
+            "BJK influx",
+            "BJK oroni",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK wezzy1"
+          ]
+        },
+        {
+          "date": "2026-01-25",
+          "opponent": "BW",
+          "matchId": "7d1c221c-5910-4164-bef9-83d424623124",
+          "players": [
+            "BJK influx",
+            "BJK oroni",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK wezzy1"
+          ]
+        },
+        {
+          "date": "2026-01-19",
+          "opponent": "EF",
+          "matchId": "dd99526f-0bcb-41a9-a478-14e009951a42",
+          "players": [
+            "BJK influx",
+            "BJK oroni",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK wezzy1"
+          ]
+        },
+        {
+          "date": "2026-01-18",
+          "opponent": "FA",
+          "matchId": "63adb5b2-899d-48ae-abff-a75f52025184",
+          "players": [
+            "BJK influx",
+            "BJK oroni",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK wezzy1"
+          ]
+        },
+        {
+          "date": "2026-01-10",
+          "opponent": "S2G",
+          "matchId": "9833065a-193e-45c6-8dca-b2011b5a2569",
+          "players": [
+            "BJK influx",
+            "BJK ARCHFIEND1",
+            "BJK Mersa ",
+            "BJK Docent",
+            "BJK wezzy1"
+          ]
+        }
+      ]
+    }
+  ],
+  "Ascent": [
+    {
+      "agents": [
+        "Jett",
+        "Breach",
+        "Viper",
+        "Deadlock",
+        "Sage"
+      ],
+      "agent_ids": [
+        "add6443a-41bd-e414-f6ad-e58d267f4e95",
+        "5f8d3a7f-467b-97f3-062c-13acf203c006",
+        "707eab51-4836-f488-046a-cda6bf494859",
+        "cc8b64c8-4b25-4ff9-6e7f-37b4da43d235",
+        "569fdd95-4d10-43ab-ca70-79becc718b46"
+      ],
+      "games": [
+        {
+          "date": "2026-02-22",
+          "opponent": "UCAM",
+          "matchId": "0d6cc3fe-7bb6-42e7-b311-97c61f869d54",
+          "players": [
+            "BJK influx",
+            "BJK oroni",
+            "BJK wezzy1",
+            "BJK Docent",
+            "BJK MerSahaha"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Iso",
+        "Jett",
+        "Neon",
+        "Reyna",
+        "Viper"
+      ],
+      "agent_ids": [
+        "0e38b510-41a8-5780-5e8f-568b2a4f2d6c",
+        "add6443a-41bd-e414-f6ad-e58d267f4e95",
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "a3bfb853-43b2-7238-a4f1-ad90e9e46bcc",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-02-21",
+          "opponent": "FKS",
+          "matchId": "f973d754-9985-498f-bcca-79499822a699",
+          "players": [
+            "BJK MerSahaha",
+            "BJK wezzy1",
+            "BJK influx",
+            "BJK Docent",
+            "BJK oroni"
+          ]
+        }
+      ]
+    }
+  ],
+  "Haven": [
+    {
+      "agents": [
+        "Neon",
+        "Breach",
+        "Sova",
+        "Omen",
+        "Killjoy"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "5f8d3a7f-467b-97f3-062c-13acf203c006",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "1e58de9c-4950-5125-93e9-a0aee9f98746"
+      ],
+      "games": [
+        {
+          "date": "2026-01-10",
+          "opponent": "S2G",
+          "matchId": "a89952f3-1e67-40f3-959f-ae561eb6a3a8",
+          "players": [
+            "BJK influx",
+            "BJK Mersa ",
+            "BJK ARCHFIEND1",
             "BJK Docent",
             "BJK wezzy1"
           ]

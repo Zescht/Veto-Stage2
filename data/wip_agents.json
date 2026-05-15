@@ -248,6 +248,72 @@
           ]
         }
       ]
+    },
+    {
+      "agents": [
+        "Neon",
+        "Yoru",
+        "Sova",
+        "Astra",
+        "Viper"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "7f94d92c-4234-0a36-9646-3a87eb8b5c89",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-02-09",
+          "opponent": "MDR",
+          "matchId": "606148a9-49ce-4552-bda0-2385455f4d59",
+          "players": [
+            "WIP H1ber",
+            "WIP Chadi",
+            "WIP Kozok",
+            "WIP Nowax",
+            "WIP Yuta"
+          ]
+        },
+        {
+          "date": "2026-01-31",
+          "opponent": "JL",
+          "matchId": "9da7a49f-1eb2-4161-8b32-e24a56b11d2c",
+          "players": [
+            "WIP H1ber",
+            "WIP Chadi",
+            "WIP Kozok",
+            "WIP Nowax",
+            "WIP Yuta"
+          ]
+        },
+        {
+          "date": "2026-01-18",
+          "opponent": "CLA",
+          "matchId": "dbf9e8cf-9d87-4b60-832d-efff2cd17d04",
+          "players": [
+            "WIP H1ber",
+            "WIP Chadi",
+            "WIP Kozok",
+            "WIP Nowax",
+            "WIP Yuta"
+          ]
+        },
+        {
+          "date": "2026-01-11",
+          "opponent": "ERAH",
+          "matchId": "ba7ef4c4-ccf4-4a53-9add-67c343046d72",
+          "players": [
+            "WIP H1ber",
+            "WIP Chadi",
+            "WIP Kozok",
+            "WIP Nowax",
+            "WIP Yuta"
+          ]
+        }
+      ]
     }
   ],
   "Fracture": [
@@ -394,6 +460,30 @@
             "WIP Nowax",
             "WIP Yuta"
           ]
+        },
+        {
+          "date": "2026-02-09",
+          "opponent": "MDR",
+          "matchId": "b421416f-9404-4d5c-833b-01f213518665",
+          "players": [
+            "WIP Chadi",
+            "WIP Kozok",
+            "WIP H1ber",
+            "WIP Nowax",
+            "WIP Yuta"
+          ]
+        },
+        {
+          "date": "2026-01-31",
+          "opponent": "JL",
+          "matchId": "8bde71a2-f66e-44d3-9db5-336b853bd530",
+          "players": [
+            "WIP Chadi",
+            "WIP Kozok",
+            "WIP H1ber",
+            "WIP Nowax",
+            "WIP Yuta"
+          ]
         }
       ]
     },
@@ -426,6 +516,48 @@
           ]
         }
       ]
+    },
+    {
+      "agents": [
+        "Neon",
+        "Yoru",
+        "Sova",
+        "Astra",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "7f94d92c-4234-0a36-9646-3a87eb8b5c89",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-01-18",
+          "opponent": "CLA",
+          "matchId": "a004eb36-01a7-4b6f-bfc5-dac32b4e5e44",
+          "players": [
+            "WIP H1ber",
+            "WIP Chadi",
+            "WIP Kozok",
+            "WIP Nowax",
+            "WIP Yuta"
+          ]
+        },
+        {
+          "date": "2026-01-11",
+          "opponent": "ERAH",
+          "matchId": "9ce89859-8681-41a1-a3ee-8d064fdb8536",
+          "players": [
+            "WIP H1ber",
+            "WIP Chadi",
+            "WIP Kozok",
+            "WIP Nowax",
+            "WIP Yuta"
+          ]
+        }
+      ]
     }
   ],
   "Split": [
@@ -452,6 +584,18 @@
           "players": [
             "WIP 77even",
             "WIP hoody",
+            "WIP Nowax",
+            "WIP Yuta",
+            "WIP H1ber"
+          ]
+        },
+        {
+          "date": "2026-01-10",
+          "opponent": "GL",
+          "matchId": "673f1bea-426a-45b1-aaef-8baed773934e",
+          "players": [
+            "WIP Chadi",
+            "WIP Kozok",
             "WIP Nowax",
             "WIP Yuta",
             "WIP H1ber"
@@ -524,6 +668,36 @@
           ]
         }
       ]
+    },
+    {
+      "agents": [
+        "Waylay",
+        "Yoru",
+        "Fade",
+        "Omen",
+        "Viper"
+      ],
+      "agent_ids": [
+        "df1cb487-4902-002e-5c17-d28e83e78588",
+        "7f94d92c-4234-0a36-9646-3a87eb8b5c89",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-02-08",
+          "opponent": "GL",
+          "matchId": "599f578d-eca8-4b65-9972-5947618e37c6",
+          "players": [
+            "WIP H1ber",
+            "WIP Chadi",
+            "WIP Kozok",
+            "WIP Nowax",
+            "WIP Yuta"
+          ]
+        }
+      ]
     }
   ],
   "Bind": [
@@ -577,6 +751,250 @@
             "WIP Nowax",
             "WIP Yuta",
             "WIP H1ber"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Raze",
+        "Skye",
+        "Brimstone",
+        "Viper",
+        "Sage"
+      ],
+      "agent_ids": [
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "9f0d8ba9-4140-b941-57d3-a7ad57c6b417",
+        "707eab51-4836-f488-046a-cda6bf494859",
+        "569fdd95-4d10-43ab-ca70-79becc718b46"
+      ],
+      "games": [
+        {
+          "date": "2026-01-17",
+          "opponent": "ES",
+          "matchId": "551d54c3-2b2c-4664-a38f-13ca99cf5946",
+          "players": [
+            "WIP Chadi",
+            "WIP H1ber",
+            "WIP Nowax",
+            "WIP Yuta",
+            "WIP Kozok"
+          ]
+        },
+        {
+          "date": "2026-01-10",
+          "opponent": "GL",
+          "matchId": "732a8f9f-791b-47a1-b70a-f00b1ee3dc84",
+          "players": [
+            "WIP Chadi",
+            "WIP H1ber",
+            "WIP Nowax",
+            "WIP Yuta",
+            "WIP Kozok"
+          ]
+        }
+      ]
+    }
+  ],
+  "Corrode": [
+    {
+      "agents": [
+        "Waylay",
+        "Fade",
+        "Tejo",
+        "Omen",
+        "Viper"
+      ],
+      "agent_ids": [
+        "df1cb487-4902-002e-5c17-d28e83e78588",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "b444168c-4e35-8076-db47-ef9bf368f384",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-02-09",
+          "opponent": "MDR",
+          "matchId": "e6d3b7c9-fd4f-4a4b-9a21-61cb4921736a",
+          "players": [
+            "WIP Chadi",
+            "WIP Kozok",
+            "WIP H1ber",
+            "WIP Nowax",
+            "WIP Yuta"
+          ]
+        },
+        {
+          "date": "2026-02-08",
+          "opponent": "GL",
+          "matchId": "6b9c65a6-5731-4a0c-b8e0-03464251af90",
+          "players": [
+            "WIP Chadi",
+            "WIP Kozok",
+            "WIP H1ber",
+            "WIP Nowax",
+            "WIP Yuta"
+          ]
+        },
+        {
+          "date": "2026-02-07",
+          "opponent": "JL",
+          "matchId": "0b08ef6c-99a0-4e75-ab4a-a05f5192ab6c",
+          "players": [
+            "WIP Chadi",
+            "WIP Kozok",
+            "WIP H1ber",
+            "WIP Nowax",
+            "WIP Yuta"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Waylay",
+        "Fade",
+        "Omen",
+        "Viper",
+        "Sage"
+      ],
+      "agent_ids": [
+        "df1cb487-4902-002e-5c17-d28e83e78588",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859",
+        "569fdd95-4d10-43ab-ca70-79becc718b46"
+      ],
+      "games": [
+        {
+          "date": "2026-02-01",
+          "opponent": "MDR",
+          "matchId": "7b8ec3dc-0632-4f53-ba71-0cc6d49a80e1",
+          "players": [
+            "WIP Chadi",
+            "WIP Kozok",
+            "WIP Nowax",
+            "WIP Yuta",
+            "WIP H1ber"
+          ]
+        },
+        {
+          "date": "2026-01-25",
+          "opponent": "F9",
+          "matchId": "6e43b9d4-9a01-48aa-87fc-75927cb7a9c4",
+          "players": [
+            "WIP Chadi",
+            "WIP Kozok",
+            "WIP Nowax",
+            "WIP Yuta",
+            "WIP H1ber"
+          ]
+        },
+        {
+          "date": "2026-01-10",
+          "opponent": "GL",
+          "matchId": "89559059-d3d0-4392-972f-a5a2482b0e5c",
+          "players": [
+            "WIP Chadi",
+            "WIP Kozok",
+            "WIP Nowax",
+            "WIP Yuta",
+            "WIP H1ber"
+          ]
+        }
+      ]
+    }
+  ],
+  "Haven": [
+    {
+      "agents": [
+        "Neon",
+        "Yoru",
+        "Sova",
+        "Omen",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "7f94d92c-4234-0a36-9646-3a87eb8b5c89",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-02-09",
+          "opponent": "MDR",
+          "matchId": "a4f98c73-c6de-4c7b-8ac1-9e2d7ccb505b",
+          "players": [
+            "WIP H1ber",
+            "WIP Chadi",
+            "WIP Kozok",
+            "WIP Nowax",
+            "WIP Yuta"
+          ]
+        },
+        {
+          "date": "2026-02-07",
+          "opponent": "JL",
+          "matchId": "37d49028-ea38-4514-a9eb-eb3f30fa0e1b",
+          "players": [
+            "WIP H1ber",
+            "WIP Chadi",
+            "WIP Kozok",
+            "WIP Nowax",
+            "WIP Yuta"
+          ]
+        },
+        {
+          "date": "2026-02-01",
+          "opponent": "MDR",
+          "matchId": "6f1d1f96-8702-4b2d-8510-f35f1712f948",
+          "players": [
+            "WIP H1ber",
+            "WIP Chadi",
+            "WIP Kozok",
+            "WIP Nowax",
+            "WIP Yuta"
+          ]
+        },
+        {
+          "date": "2026-01-31",
+          "opponent": "JL",
+          "matchId": "d1495404-f7ee-4d47-8a18-373dc65fa66c",
+          "players": [
+            "WIP H1ber",
+            "WIP Chadi",
+            "WIP Kozok",
+            "WIP Nowax",
+            "WIP Yuta"
+          ]
+        },
+        {
+          "date": "2026-01-25",
+          "opponent": "F9",
+          "matchId": "76530d78-2a35-4a89-aedb-b10a39c7645c",
+          "players": [
+            "WIP H1ber",
+            "WIP Chadi",
+            "WIP Kozok",
+            "WIP Nowax",
+            "WIP Yuta"
+          ]
+        },
+        {
+          "date": "2026-01-17",
+          "opponent": "ES",
+          "matchId": "4209cfcc-e2f8-42a2-a8c4-a9e123bb7314",
+          "players": [
+            "WIP H1ber",
+            "WIP Chadi",
+            "WIP Kozok",
+            "WIP Nowax",
+            "WIP Yuta"
           ]
         }
       ]

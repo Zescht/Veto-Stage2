@@ -3,6 +3,12 @@
   "map": "Breeze",
   "t_side": {
     "total_rounds": 24,
+    "rounds_won": 17,
+    "pct_rounds_won": 70.8,
+    "won_by_kills": 14,
+    "pct_won_by_kills": 58.3,
+    "won_by_explosion": 3,
+    "pct_won_by_explosion": 12.5,
     "sites": {
       "A": {
         "plant_count": 12,
@@ -28,6 +34,8 @@
   },
   "ct_side": {
     "total_rounds": 15,
+    "rounds_won": 4,
+    "pct_rounds_won": 26.7,
     "won_by_kills": 2,
     "pct_won_by_kills": 13.3,
     "won_by_defuse": 2,

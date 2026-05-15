@@ -1,0 +1,223 @@
+{
+  "team": "REBORN",
+  "Bind": [
+    {
+      "agents": [
+        "Raze",
+        "Waylay",
+        "Skye",
+        "Brimstone",
+        "Viper"
+      ],
+      "agent_ids": [
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "df1cb487-4902-002e-5c17-d28e83e78588",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "9f0d8ba9-4140-b941-57d3-a7ad57c6b417",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-04-19",
+          "opponent": "GS",
+          "matchId": "66387e24-7291-41c3-b17b-c3e14435a22e",
+          "players": [
+            "RB Kachoww",
+            "RB Deadink",
+            "RB batujnax",
+            "RB hezacoil",
+            "RB reazy"
+          ]
+        },
+        {
+          "date": "2026-04-05",
+          "opponent": "GHS",
+          "matchId": "eef853d8-036a-4312-be40-778377aa07c9",
+          "players": [
+            "RB Kachoww",
+            "RB Deadink",
+            "RB batujnax",
+            "RB hezacoil",
+            "RB reazy"
+          ]
+        }
+      ]
+    }
+  ],
+  "Breeze": [
+    {
+      "agents": [
+        "Neon",
+        "Phoenix",
+        "Sova",
+        "Harbor",
+        "Viper"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "eb93336a-449b-9c1b-0a54-a891f7921d69",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "95b78ed7-4637-86d9-7e41-71ba8c293152",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-05-03",
+          "opponent": "BJK",
+          "matchId": "f5278d2b-a972-4ae5-982c-31faa7073e6a",
+          "players": [
+            "RB Deadink",
+            "RB Kachoww",
+            "RB batujnax",
+            "RB hezacoil",
+            "RB reazy"
+          ]
+        }
+      ]
+    }
+  ],
+  "Haven": [
+    {
+      "agents": [
+        "Neon",
+        "Sova",
+        "Omen",
+        "Chamber",
+        "Vyse"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "22697a3d-45bf-8dd7-4fec-84a9e28c69d7",
+        "efba5359-4016-a1e5-7626-b1ae76895940"
+      ],
+      "games": [
+        {
+          "date": "2026-04-27",
+          "opponent": "MISA",
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "players": [
+            "RB Kachoww",
+            "RB batujnax",
+            "RB reazy",
+            "RB Deadink",
+            "RB hezacoil"
+          ]
+        }
+      ]
+    }
+  ],
+  "Lotus": [
+    {
+      "agents": [
+        "Neon",
+        "Waylay",
+        "Fade",
+        "Omen",
+        "Vyse"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "df1cb487-4902-002e-5c17-d28e83e78588",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "efba5359-4016-a1e5-7626-b1ae76895940"
+      ],
+      "games": [
+        {
+          "date": "2026-05-03",
+          "opponent": "BJK",
+          "matchId": "0045c419-dc7b-4139-a10d-8a39afbbde4f",
+          "players": [
+            "RB Kachoww",
+            "RB Deadink",
+            "RB batujnax",
+            "RB reazy",
+            "RB hezacoil"
+          ]
+        },
+        {
+          "date": "2026-04-12",
+          "opponent": "FA",
+          "matchId": "618c516a-c569-4903-8ec0-714be7d15f54",
+          "players": [
+            "RB Kachoww",
+            "RB Deadink",
+            "RB batujnax",
+            "RB reazy",
+            "RB hezacoil"
+          ]
+        },
+        {
+          "date": "2026-04-07",
+          "opponent": "FF",
+          "matchId": "6908c786-1f88-4a12-b719-aeda43ba5099",
+          "players": [
+            "RB Kachoww",
+            "RB Deadink",
+            "RB batujnax",
+            "RB reazy",
+            "RB hezacoil"
+          ]
+        }
+      ]
+    }
+  ],
+  "Split": [
+    {
+      "agents": [
+        "Neon",
+        "Waylay",
+        "Skye",
+        "Astra",
+        "Omen"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "df1cb487-4902-002e-5c17-d28e83e78588",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "8e253930-4c05-31dd-1b6c-968525494517"
+      ],
+      "games": [
+        {
+          "date": "2026-05-03",
+          "opponent": "BJK",
+          "matchId": "e1f54e6b-43b4-41dd-a73c-ccfac39795d9",
+          "players": [
+            "RB Kachoww",
+            "RB Deadink",
+            "RB batujnax",
+            "RB hezacoil",
+            "RB reazy"
+          ]
+        },
+        {
+          "date": "2026-04-27",
+          "opponent": "MISA",
+          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
+          "players": [
+            "RB Kachoww",
+            "RB Deadink",
+            "RB batujnax",
+            "RB hezacoil",
+            "RB reazy"
+          ]
+        },
+        {
+          "date": "2026-04-19",
+          "opponent": "GS",
+          "matchId": "5276db2e-6ea4-4dbc-ae9e-159d66959ad3",
+          "players": [
+            "RB Kachoww",
+            "RB Deadink",
+            "RB batujnax",
+            "RB hezacoil",
+            "RB reazy"
+          ]
+        }
+      ]
+    }
+  ]
+}

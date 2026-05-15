@@ -1,0 +1,381 @@
+{
+  "team": "FOKUS",
+  "Bind": [
+    {
+      "agents": [
+        "Neon",
+        "Raze",
+        "Skye",
+        "Brimstone",
+        "Viper"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "9f0d8ba9-4140-b941-57d3-a7ad57c6b417",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-04-26",
+          "opponent": "ECO",
+          "matchId": "f8cc74ae-aefb-462e-b8f6-046b699848a7",
+          "players": [
+            "FKS shinnok",
+            "FKS pa1ze",
+            "FKS YaBoiLewis",
+            "FKS MOLSI",
+            "FKS Serial"
+          ]
+        },
+        {
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "6f46764b-09e1-404e-b195-398aae7ff291",
+          "players": [
+            "FKS cullum",
+            "FKS pa1ze",
+            "FKS shinnok",
+            "FKS MOLSI",
+            "FKS Serial"
+          ]
+        },
+        {
+          "date": "2026-04-14",
+          "opponent": "DXG",
+          "matchId": "d70d9f94-af30-4bac-b2fd-2ca74ec4c6b1",
+          "players": [
+            "FKS cullum",
+            "FKS pa1ze",
+            "FKS shinnok",
+            "FKS MOLSI",
+            "FKS Serial"
+          ]
+        }
+      ]
+    }
+  ],
+  "Breeze": [
+    {
+      "agents": [
+        "Neon",
+        "KAY/O",
+        "Sova",
+        "Omen",
+        "Viper"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "601dbbe7-43ce-be57-2a40-4abd24953621",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-04-25",
+          "opponent": "CGN",
+          "matchId": "7547a3f3-723a-490c-af39-c21290d314bd",
+          "players": [
+            "FKS pa1ze",
+            "FKS YaBoiLewis",
+            "FKS shinnok",
+            "FKS MOLSI",
+            "FKS Serial"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Jett",
+        "Neon",
+        "Sova",
+        "Omen",
+        "Viper"
+      ],
+      "agent_ids": [
+        "add6443a-41bd-e414-f6ad-e58d267f4e95",
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-04-12",
+          "opponent": "SGE",
+          "matchId": "431fd751-99a6-4b71-a48f-41297e5fe01d",
+          "players": [
+            "FKS pyrolll",
+            "FKS pa1ze",
+            "FKS shinnok",
+            "FKS MOLSI",
+            "FKS Serial"
+          ]
+        },
+        {
+          "date": "2026-04-07",
+          "opponent": "AKA",
+          "matchId": "1a003f2b-d451-4ba9-aab9-cf6f6c27bba0",
+          "players": [
+            "FKS pyrolll",
+            "FKS pa1ze",
+            "FKS shinnok",
+            "FKS MOLSI",
+            "FKS Serial"
+          ]
+        }
+      ]
+    }
+  ],
+  "Fracture": [
+    {
+      "agents": [
+        "Neon",
+        "Phoenix",
+        "Fade",
+        "Brimstone",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "eb93336a-449b-9c1b-0a54-a891f7921d69",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "9f0d8ba9-4140-b941-57d3-a7ad57c6b417",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-04-25",
+          "opponent": "CGN",
+          "matchId": "6cb09b8a-77ef-4431-b36a-19ba6a861425",
+          "players": [
+            "FKS pa1ze",
+            "FKS shinnok",
+            "FKS YaBoiLewis",
+            "FKS MOLSI",
+            "FKS Serial"
+          ]
+        },
+        {
+          "date": "2026-04-14",
+          "opponent": "DXG",
+          "matchId": "b2e410f9-1787-4e62-afea-4d43cc8e54e0",
+          "players": [
+            "FKS pa1ze",
+            "FKS cullum",
+            "FKS shinnok",
+            "FKS MOLSI",
+            "FKS Serial"
+          ]
+        }
+      ]
+    }
+  ],
+  "Lotus": [
+    {
+      "agents": [
+        "Neon",
+        "Raze",
+        "Fade",
+        "Omen",
+        "Viper"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-04-26",
+          "opponent": "ECO",
+          "matchId": "403b0617-7109-4477-846c-a7c0e5c89d76",
+          "players": [
+            "FKS shinnok",
+            "FKS pa1ze",
+            "FKS YaBoiLewis",
+            "FKS MOLSI",
+            "FKS Serial"
+          ]
+        },
+        {
+          "date": "2026-04-18",
+          "opponent": "RZN",
+          "matchId": "7d332eca-1ea4-4bea-bb37-6df00a89ccaa",
+          "players": [
+            "FKS cullum",
+            "FKS pa1ze",
+            "FKS shinnok",
+            "FKS MOLSI",
+            "FKS Serial"
+          ]
+        },
+        {
+          "date": "2026-04-12",
+          "opponent": "SGE",
+          "matchId": "7ee45a1e-1257-4b2b-97b6-2face254d0f1",
+          "players": [
+            "FKS shinnok",
+            "FKS pa1ze",
+            "FKS MOLSI",
+            "FKS pyrolll",
+            "FKS Serial"
+          ]
+        }
+      ]
+    }
+  ],
+  "Pearl": [
+    {
+      "agents": [
+        "Neon",
+        "Waylay",
+        "Sova",
+        "Astra",
+        "Killjoy"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "df1cb487-4902-002e-5c17-d28e83e78588",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "1e58de9c-4950-5125-93e9-a0aee9f98746"
+      ],
+      "games": [
+        {
+          "date": "2026-03-21",
+          "opponent": "BAR",
+          "matchId": "8df79447-ecc8-470c-b4ff-9c31515cfa2b",
+          "players": [
+            "FKS pa1ze",
+            "FKS MOLSI",
+            "FKS shinnok",
+            "FKS pyrolll",
+            "FKS Serial"
+          ]
+        },
+        {
+          "date": "2026-03-20",
+          "opponent": "EP",
+          "matchId": "25d172f7-f241-41ad-bddd-dde81c56e5a1",
+          "players": [
+            "FKS pa1ze",
+            "FKS MOLSI",
+            "FKS shinnok",
+            "FKS pyrolll",
+            "FKS Serial"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Neon",
+        "Yoru",
+        "Sova",
+        "Astra",
+        "Veto"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "7f94d92c-4234-0a36-9646-3a87eb8b5c89",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "92eeef5d-43b5-1d4a-8d03-b3927a09034b"
+      ],
+      "games": [
+        {
+          "date": "2026-03-10",
+          "opponent": "CGN",
+          "matchId": "f8dd4980-8525-4726-84b2-db886a5dc006",
+          "players": [
+            "FKS pa1ze",
+            "FKS pyrolll",
+            "FKS shinnok",
+            "FKS MOLSI",
+            "FKS Serial"
+          ]
+        }
+      ]
+    }
+  ],
+  "Split": [
+    {
+      "agents": [
+        "Neon",
+        "Raze",
+        "Skye",
+        "Omen",
+        "Viper"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-04-25",
+          "opponent": "CGN",
+          "matchId": "2f81e93e-3c51-4ef3-82c4-b04698afc1e1",
+          "players": [
+            "FKS shinnok",
+            "FKS pa1ze",
+            "FKS YaBoiLewis",
+            "FKS MOLSI",
+            "FKS Serial"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Neon",
+        "Waylay",
+        "Fade",
+        "Omen",
+        "Viper"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "df1cb487-4902-002e-5c17-d28e83e78588",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-03-21",
+          "opponent": "BAR",
+          "matchId": "43af4785-7ee2-49d6-a74f-42adec2cf403",
+          "players": [
+            "FKS pa1ze",
+            "FKS MOLSI",
+            "FKS shinnok",
+            "FKS pyrolll",
+            "FKS Serial"
+          ]
+        },
+        {
+          "date": "2026-03-20",
+          "opponent": "EP",
+          "matchId": "22607544-de81-49bc-8f37-85c70f596d0b",
+          "players": [
+            "FKS pa1ze",
+            "FKS MOLSI",
+            "FKS shinnok",
+            "FKS pyrolll",
+            "FKS Serial"
+          ]
+        }
+      ]
+    }
+  ]
+}

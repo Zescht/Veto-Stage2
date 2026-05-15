@@ -3,6 +3,12 @@
   "map": "Bind",
   "t_side": {
     "total_rounds": 25,
+    "rounds_won": 17,
+    "pct_rounds_won": 68.0,
+    "won_by_kills": 16,
+    "pct_won_by_kills": 64.0,
+    "won_by_explosion": 1,
+    "pct_won_by_explosion": 4.0,
     "sites": {
       "A": {
         "plant_count": 14,
@@ -28,8 +34,10 @@
   },
   "ct_side": {
     "total_rounds": 32,
-    "won_by_kills": 15,
-    "pct_won_by_kills": 46.9,
+    "rounds_won": 19,
+    "pct_rounds_won": 59.4,
+    "won_by_kills": 12,
+    "pct_won_by_kills": 37.5,
     "won_by_defuse": 7,
     "pct_won_by_defuse": 21.9,
     "sites": {

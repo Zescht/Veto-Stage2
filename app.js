@@ -185,6 +185,7 @@ let retakeActiveSites = new Set(["A", "B", "C"]);
 let ppInlineActiveSites = new Set(["A", "B", "C"]);
 let lastDefensiveInfo = null;
 let allSiteStats = {}; // { teamKey: { mapName: data } }
+const allAgentsData = {}; // { teamKey: full agents JSON }
 const TEAM_FILE_PREFIX = {
   ...Object.fromEntries(Object.entries(TEAMS_CONFIG).map(([key, cfg]) => [key, cfg.filePrefix])),
   attax: "atn",
@@ -260,6 +261,7 @@ const defensivePlayerAll = document.getElementById("defensive-player-all");
 const defensivePlayerNone = document.getElementById("defensive-player-none");
 const fksNewRosterBtn = document.getElementById("fks-new-roster-btn");
 const fksNewRosterHint = document.getElementById("fks-new-roster-hint");
+const agentsBtn = document.getElementById("agents-btn");
 const ctCount = document.getElementById("ct-count");
 const tCount = document.getElementById("t-count");
 const ctHeatTitle = document.getElementById("ct-heat-title");
@@ -1430,6 +1432,12 @@ function renderDefensivePanels(info) {
           <td>${fmtTime(s.fk_to_plant_avg)}</td>
         </tr>`;
       }).join("");
+      const summaryRows = [
+        ["ROUNDS PLAYED", ts.total_rounds != null ? `${ts.total_rounds}` : "—"],
+        ["ROUNDS WON", ts.rounds_won != null ? `${ts.rounds_won} (${fmt(ts.pct_rounds_won, "%")})` : "—"],
+        ["WON BY KILLS", ts.won_by_kills != null ? `${ts.won_by_kills} (${fmt(ts.pct_won_by_kills, "%")})` : "—"],
+        ["WON BY SPIKE EXPLOSION", ts.won_by_explosion != null ? `${ts.won_by_explosion} (${fmt(ts.pct_won_by_explosion, "%")})` : "—"],
+      ].map(([label, val]) => `<tr><td class="sst-summary-label">${label}</td><td class="sst-summary-val">${val}</td></tr>`).join("");
       siteStatsMarkup = `
         <div class="site-stats-wrap">
           <table class="site-stats-table">
@@ -1438,6 +1446,9 @@ function renderDefensivePanels(info) {
               <th>TIME TO PLANT</th><th>MIN / MAX</th><th>FK → PLANT</th>
             </tr></thead>
             <tbody>${rows}</tbody>
+          </table>
+          <table class="site-stats-summary">
+            <tbody>${summaryRows}</tbody>
           </table>
         </div>`;
     } else {
@@ -1453,13 +1464,12 @@ function renderDefensivePanels(info) {
           <td>${fmtTime(s.fk_after_plant_avg)}</td>
         </tr>`;
       }).join("");
-      const wbk = cs.won_by_kills ?? null;
-      const wbkCell = wbk !== null
-        ? `<tfoot><tr class="sst-kills-row">
-            <td colspan="3">WON BY KILLS — ${wbk} rounds (${fmt(cs.pct_won_by_kills, "%")})</td>
-            <td colspan="2">WON BY DEFUSE — ${cs.won_by_defuse} rounds (${fmt(cs.pct_won_by_defuse, "%")})</td>
-           </tr></tfoot>`
-        : "";
+      const summaryRows = [
+        ["ROUNDS PLAYED", cs.total_rounds != null ? `${cs.total_rounds}` : "—"],
+        ["ROUNDS WON", cs.rounds_won != null ? `${cs.rounds_won} (${fmt(cs.pct_rounds_won, "%")})` : "—"],
+        ["WON BY KILLS", cs.won_by_kills != null ? `${cs.won_by_kills} (${fmt(cs.pct_won_by_kills, "%")})` : "—"],
+        ["WON BY DEFUSE", cs.won_by_defuse != null ? `${cs.won_by_defuse} (${fmt(cs.pct_won_by_defuse, "%")})` : "—"],
+      ].map(([label, val]) => `<tr><td class="sst-summary-label">${label}</td><td class="sst-summary-val">${val}</td></tr>`).join("");
       siteStatsMarkup = `
         <div class="site-stats-wrap">
           <table class="site-stats-table">
@@ -1468,7 +1478,9 @@ function renderDefensivePanels(info) {
               <th>TIME TO DEFUSE</th><th>FK AFTER PLANT</th>
             </tr></thead>
             <tbody>${rows}</tbody>
-            ${wbkCell}
+          </table>
+          <table class="site-stats-summary">
+            <tbody>${summaryRows}</tbody>
           </table>
         </div>`;
     }
@@ -1616,6 +1628,7 @@ function renderMapInfo() {
       `;
       mapInfoTitle.textContent = team.name;
       mapInfoCopy.textContent = `${activeSideView.toUpperCase()}-side module unavailable.`;
+      agentsBtn?.classList.add("hidden");
       return;
     }
 
@@ -1627,6 +1640,10 @@ function renderMapInfo() {
     }
     const defensiveTeamName = defensiveInfo.name ?? defensiveInfo.team ?? team.name;
     defensiveTitle.textContent = defensiveTeamName;
+    if (agentsBtn) {
+      agentsBtn.classList.remove("hidden");
+      agentsBtn.onclick = () => showAgentsModal(activeTeam, activeDefensiveMap);
+    }
     const rawSampleMaps = defensiveInfo.sampleMaps ?? defensiveInfo.selectedMaps ?? [];
     const sampleSize = defensiveInfo.sampleSize ?? rawSampleMaps.length;
     const mapName = defensiveInfo.map ?? "Bind";
@@ -1958,6 +1975,85 @@ function renderPostPlant() {
   renderPpSiteTabs("rt-tabs", "retake", rtActiveSite, (s) => { rtActiveSite = s; }, false);
 }
 
+// ── Agents modal ─────────────────────────────────────────────────────────────
+
+const agentsModalOverlay = (() => {
+  const el = document.createElement("div");
+  el.id = "agents-modal-overlay";
+  el.className = "agents-modal-overlay hidden";
+  el.innerHTML = `
+    <div class="agents-modal" id="agents-modal" role="dialog" aria-modal="true">
+      <div class="agents-modal-header">
+        <span class="agents-modal-title" id="agents-modal-title"></span>
+        <button class="agents-modal-close" id="agents-modal-close" type="button" aria-label="Close">✕</button>
+      </div>
+      <div class="agents-modal-body" id="agents-modal-body"></div>
+    </div>
+  `;
+  document.body.appendChild(el);
+
+  el.addEventListener("click", (e) => { if (e.target === el) closeAgentsModal(); });
+  el.querySelector("#agents-modal-close").addEventListener("click", closeAgentsModal);
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeAgentsModal(); });
+  return el;
+})();
+
+function closeAgentsModal() {
+  agentsModalOverlay.classList.add("hidden");
+}
+
+function showAgentsModal(teamKey, mapName) {
+  const data = allAgentsData[teamKey];
+  const comps = data?.[mapName] ?? [];
+  const teamName = allVetoHistoryData[teamKey]?.name ?? teamKey;
+
+  document.getElementById("agents-modal-title").textContent = `${teamName} — ${mapName}`;
+
+  const body = document.getElementById("agents-modal-body");
+  if (!comps.length) {
+    body.innerHTML = `<p class="agents-empty">No agent data available for ${mapName}.</p>`;
+  } else {
+    body.innerHTML = comps.map((comp) => {
+      const icons = comp.agents.map((agent, i) => {
+        const uuid = comp.agent_ids[i];
+        const player = comp.games[0]?.players?.[i] ?? agent;
+        const shortName = player.replace(/^[A-Z0-9]+ /i, "");
+        return `<div class="agent-icon-wrap">
+          <img class="agent-icon" src="https://media.valorant-api.com/agents/${uuid}/displayicon.png"
+               alt="${agent}" loading="lazy">
+          <span class="agent-icon-tooltip">${shortName}</span>
+        </div>`;
+      }).join("");
+
+      const count = comp.games.length;
+      const chips = comp.games.map((g) =>
+        `<span class="game-chip">${g.date.slice(5)} vs ${g.opponent}</span>`
+      ).join("");
+
+      return `<div class="agents-comp-row">
+        <div class="agents-comp-icons">${icons}</div>
+        <div class="agents-comp-meta">
+          <span class="agents-comp-count">×${count}</span>
+          <div class="agents-comp-games">${chips}</div>
+        </div>
+      </div>`;
+    }).join("");
+  }
+
+  agentsModalOverlay.classList.remove("hidden");
+}
+
+async function preloadAgentsData(teamKey) {
+  if (allAgentsData[teamKey]) return;
+  const prefix = TEAM_FILE_PREFIX[teamKey];
+  if (!prefix) return;
+  try {
+    const resp = await fetch(`./data/${prefix}_agents.json`);
+    if (!resp.ok) return;
+    allAgentsData[teamKey] = await resp.json();
+  } catch (_) {}
+}
+
 async function preloadSiteStats(teamKey) {
   const prefix = TEAM_FILE_PREFIX[teamKey];
   if (!prefix) return;
@@ -2268,3 +2364,4 @@ render();
 preloadRetakeData();
 preloadPostPlantData();
 teamOrder.forEach(teamKey => preloadSiteStats(teamKey));
+teamOrder.forEach(teamKey => preloadAgentsData(teamKey));

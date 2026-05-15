@@ -3,6 +3,12 @@
   "map": "Lotus",
   "t_side": {
     "total_rounds": 54,
+    "rounds_won": 38,
+    "pct_rounds_won": 70.4,
+    "won_by_kills": 35,
+    "pct_won_by_kills": 64.8,
+    "won_by_explosion": 3,
+    "pct_won_by_explosion": 5.6,
     "sites": {
       "A": {
         "plant_count": 12,
@@ -38,8 +44,10 @@
   },
   "ct_side": {
     "total_rounds": 63,
-    "won_by_kills": 26,
-    "pct_won_by_kills": 41.3,
+    "rounds_won": 38,
+    "pct_rounds_won": 60.3,
+    "won_by_kills": 24,
+    "pct_won_by_kills": 38.1,
     "won_by_defuse": 14,
     "pct_won_by_defuse": 22.2,
     "sites": {

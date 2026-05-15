@@ -3,6 +3,12 @@
   "map": "Fracture",
   "t_side": {
     "total_rounds": 12,
+    "rounds_won": 6,
+    "pct_rounds_won": 50.0,
+    "won_by_kills": 6,
+    "pct_won_by_kills": 50.0,
+    "won_by_explosion": 0,
+    "pct_won_by_explosion": 0.0,
     "sites": {
       "A": {
         "plant_count": 3,
@@ -28,6 +34,8 @@
   },
   "ct_side": {
     "total_rounds": 12,
+    "rounds_won": 5,
+    "pct_rounds_won": 41.7,
     "won_by_kills": 4,
     "pct_won_by_kills": 33.3,
     "won_by_defuse": 1,

@@ -1,6 +1,12 @@
 {
   "t_side": {
     "total_rounds": 39,
+    "rounds_won": 20,
+    "pct_rounds_won": 51.3,
+    "won_by_kills": 16,
+    "pct_won_by_kills": 41.0,
+    "won_by_explosion": 4,
+    "pct_won_by_explosion": 10.3,
     "sites": {
       "A": {
         "plant_count": 17,
@@ -26,8 +32,10 @@
   },
   "ct_side": {
     "total_rounds": 48,
-    "won_by_kills": 17,
-    "pct_won_by_kills": 35.4,
+    "rounds_won": 25,
+    "pct_rounds_won": 52.1,
+    "won_by_kills": 13,
+    "pct_won_by_kills": 27.1,
     "won_by_defuse": 12,
     "pct_won_by_defuse": 25.0,
     "sites": {

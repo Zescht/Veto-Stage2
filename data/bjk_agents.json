@@ -1,0 +1,378 @@
+{
+  "team": "Besiktas",
+  "Bind": [
+    {
+      "agents": [
+        "Neon",
+        "Phoenix",
+        "Skye",
+        "Brimstone",
+        "Viper"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "eb93336a-449b-9c1b-0a54-a891f7921d69",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "9f0d8ba9-4140-b941-57d3-a7ad57c6b417",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-05-04",
+          "opponent": "MISA",
+          "matchId": "fa12a604-7a7c-4249-9a3f-9959428233c2",
+          "players": [
+            "BJK influx",
+            "BJK oroni",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK wezzy1"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Neon",
+        "Raze",
+        "Skye",
+        "Astra",
+        "Viper"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-04-11",
+          "opponent": "DP",
+          "matchId": "9120955b-0dc9-44a9-a2b2-5ddd1a7af9f4",
+          "players": [
+            "BJK oroni",
+            "BJK influx",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK wezzy1"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Raze",
+        "Yoru",
+        "Fade",
+        "Brimstone",
+        "Viper"
+      ],
+      "agent_ids": [
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "7f94d92c-4234-0a36-9646-3a87eb8b5c89",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "9f0d8ba9-4140-b941-57d3-a7ad57c6b417",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-02-22",
+          "opponent": "UCAM",
+          "matchId": "c17e1e4b-1f99-4f7b-a045-41ae4b071281",
+          "players": [
+            "BJK influx",
+            "BJK wezzy1",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK oroni"
+          ]
+        }
+      ]
+    }
+  ],
+  "Breeze": [
+    {
+      "agents": [
+        "Neon",
+        "Phoenix",
+        "Sova",
+        "Harbor",
+        "Viper"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "eb93336a-449b-9c1b-0a54-a891f7921d69",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "95b78ed7-4637-86d9-7e41-71ba8c293152",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-05-03",
+          "opponent": "RB",
+          "matchId": "f5278d2b-a972-4ae5-982c-31faa7073e6a",
+          "players": [
+            "BJK influx",
+            "BJK oroni",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK wezzy1"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Jett",
+        "KAY/O",
+        "Sova",
+        "Astra",
+        "Viper"
+      ],
+      "agent_ids": [
+        "add6443a-41bd-e414-f6ad-e58d267f4e95",
+        "601dbbe7-43ce-be57-2a40-4abd24953621",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-04-13",
+          "opponent": "EFP",
+          "matchId": "557ae375-cca6-4957-8778-bce62bbe7c16",
+          "players": [
+            "BJK influx",
+            "BJK MerSahaha",
+            "BJK oroni",
+            "BJK Docent",
+            "BJK wezzy1"
+          ]
+        },
+        {
+          "date": "2026-04-11",
+          "opponent": "DP",
+          "matchId": "37502aa2-e156-4bec-821f-458b7df86861",
+          "players": [
+            "BJK influx",
+            "BJK MerSahaha",
+            "BJK oroni",
+            "BJK Docent",
+            "BJK wezzy1"
+          ]
+        }
+      ]
+    }
+  ],
+  "Fracture": [
+    {
+      "agents": [
+        "Neon",
+        "Breach",
+        "Tejo",
+        "Brimstone",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "5f8d3a7f-467b-97f3-062c-13acf203c006",
+        "b444168c-4e35-8076-db47-ef9bf368f384",
+        "9f0d8ba9-4140-b941-57d3-a7ad57c6b417",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-04-27",
+          "opponent": "FA",
+          "matchId": "6b0f0d53-c88a-43ef-a94f-7285974c2b62",
+          "players": [
+            "BJK influx",
+            "BJK MerSahaha",
+            "BJK oroni",
+            "BJK Docent",
+            "BJK wezzy1"
+          ]
+        }
+      ]
+    }
+  ],
+  "Lotus": [
+    {
+      "agents": [
+        "Raze",
+        "Fade",
+        "Omen",
+        "Viper",
+        "Vyse"
+      ],
+      "agent_ids": [
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859",
+        "efba5359-4016-a1e5-7626-b1ae76895940"
+      ],
+      "games": [
+        {
+          "date": "2026-05-04",
+          "opponent": "MISA",
+          "matchId": "b3b7a21d-26b5-4453-9e8b-9497ef446c4c",
+          "players": [
+            "BJK influx",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK wezzy1",
+            "BJK oroni"
+          ]
+        },
+        {
+          "date": "2026-05-03",
+          "opponent": "RB",
+          "matchId": "0045c419-dc7b-4139-a10d-8a39afbbde4f",
+          "players": [
+            "BJK influx",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK wezzy1",
+            "BJK oroni"
+          ]
+        },
+        {
+          "date": "2026-04-27",
+          "opponent": "FA",
+          "matchId": "8d0ca0cd-c422-46e9-b62e-5629334ea87d",
+          "players": [
+            "BJK influx",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK wezzy1",
+            "BJK oroni"
+          ]
+        }
+      ]
+    }
+  ],
+  "Pearl": [
+    {
+      "agents": [
+        "Neon",
+        "Phoenix",
+        "Fade",
+        "Astra",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "eb93336a-449b-9c1b-0a54-a891f7921d69",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-05-04",
+          "opponent": "MISA",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "players": [
+            "BJK influx",
+            "BJK oroni",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK wezzy1"
+          ]
+        },
+        {
+          "date": "2026-04-13",
+          "opponent": "EFP",
+          "matchId": "93150aa3-95d0-475c-8e4a-0e0b6635e765",
+          "players": [
+            "BJK influx",
+            "BJK oroni",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK wezzy1"
+          ]
+        },
+        {
+          "date": "2026-04-06",
+          "opponent": "BW",
+          "matchId": "4ce0e6f1-83da-495c-97a9-557f94b94bda",
+          "players": [
+            "BJK influx",
+            "BJK oroni",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK wezzy1"
+          ]
+        }
+      ]
+    }
+  ],
+  "Split": [
+    {
+      "agents": [
+        "Neon",
+        "Raze",
+        "Skye",
+        "Omen",
+        "Viper"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-05-04",
+          "opponent": "MISA",
+          "matchId": "d2a95c2f-139a-4401-8695-f2679b61f534",
+          "players": [
+            "BJK oroni",
+            "BJK influx",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK wezzy1"
+          ]
+        },
+        {
+          "date": "2026-05-03",
+          "opponent": "RB",
+          "matchId": "e1f54e6b-43b4-41dd-a73c-ccfac39795d9",
+          "players": [
+            "BJK oroni",
+            "BJK influx",
+            "BJK MerSahaha",
+            "BJK Docent",
+            "BJK wezzy1"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Neon",
+        "Raze"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "f94c3b30-42be-e959-889c-5aa313dba261"
+      ],
+      "games": [
+        {
+          "date": "2026-05-03",
+          "opponent": "?",
+          "matchId": "147c5da4-e93b-45b2-8cbf-a2b3bc7ade5c",
+          "players": [
+            "BJK oroni",
+            "BJK influx"
+          ]
+        }
+      ]
+    }
+  ]
+}

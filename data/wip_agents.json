@@ -1,0 +1,411 @@
+{
+  "team": "WIP Esports",
+  "Bind": [
+    {
+      "agents": [
+        "Waylay",
+        "Skye",
+        "Brimstone",
+        "Viper",
+        "Chamber"
+      ],
+      "agent_ids": [
+        "df1cb487-4902-002e-5c17-d28e83e78588",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "9f0d8ba9-4140-b941-57d3-a7ad57c6b417",
+        "707eab51-4836-f488-046a-cda6bf494859",
+        "22697a3d-45bf-8dd7-4fec-84a9e28c69d7"
+      ],
+      "games": [
+        {
+          "date": "2026-05-03",
+          "opponent": "JL",
+          "matchId": "8a34cf5f-f06a-4e82-b185-97bdac3bcf12",
+          "players": [
+            "WIP 77even",
+            "WIP hoody",
+            "WIP Nowax",
+            "WIP Yuta",
+            "WIP H1ber"
+          ]
+        },
+        {
+          "date": "2026-04-12",
+          "opponent": "JL",
+          "matchId": "47698e26-fe95-45c5-a15e-b31a709ae888",
+          "players": [
+            "WIP 77even",
+            "WIP hoody",
+            "WIP Nowax",
+            "WIP Yuta",
+            "WIP H1ber"
+          ]
+        },
+        {
+          "date": "2026-04-04",
+          "opponent": "NXR",
+          "matchId": "55891c74-5d4f-417c-97de-480b8f29f50a",
+          "players": [
+            "WIP 77even",
+            "WIP hoody",
+            "WIP Nowax",
+            "WIP Yuta",
+            "WIP H1ber"
+          ]
+        }
+      ]
+    }
+  ],
+  "Breeze": [
+    {
+      "agents": [
+        "Jett",
+        "Skye",
+        "Tejo",
+        "Astra",
+        "Viper"
+      ],
+      "agent_ids": [
+        "add6443a-41bd-e414-f6ad-e58d267f4e95",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "b444168c-4e35-8076-db47-ef9bf368f384",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-05-12",
+          "opponent": "JL",
+          "matchId": "7f74b544-dcce-4a75-b233-050cab6dddf6",
+          "players": [
+            "WIP 77even",
+            "WIP hoody",
+            "WIP H1ber",
+            "WIP Nowax",
+            "WIP Yuta"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Jett",
+        "Neon",
+        "Sova",
+        "Harbor",
+        "Viper"
+      ],
+      "agent_ids": [
+        "add6443a-41bd-e414-f6ad-e58d267f4e95",
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "95b78ed7-4637-86d9-7e41-71ba8c293152",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "5438fd2f-7049-46cb-b6b6-c8242d25840c",
+          "players": [
+            "WIP H1ber",
+            "WIP 77even",
+            "WIP hoody",
+            "WIP Nowax",
+            "WIP Yuta"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Jett",
+        "Neon",
+        "Sova",
+        "Astra",
+        "Viper"
+      ],
+      "agent_ids": [
+        "add6443a-41bd-e414-f6ad-e58d267f4e95",
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-04-26",
+          "opponent": "CLA",
+          "matchId": "4cb97f71-d1ff-4eb2-9160-c7162bb34408",
+          "players": [
+            "WIP H1ber",
+            "WIP 77even",
+            "WIP hoody",
+            "WIP Nowax",
+            "WIP Yuta"
+          ]
+        }
+      ]
+    }
+  ],
+  "Fracture": [
+    {
+      "agents": [
+        "Raze",
+        "Breach",
+        "Fade",
+        "Brimstone",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "5f8d3a7f-467b-97f3-062c-13acf203c006",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "9f0d8ba9-4140-b941-57d3-a7ad57c6b417",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "05267443-28ba-4650-868c-b09272c49f8d",
+          "players": [
+            "WIP 77even",
+            "WIP H1ber",
+            "WIP hoody",
+            "WIP Nowax",
+            "WIP Yuta"
+          ]
+        },
+        {
+          "date": "2026-04-26",
+          "opponent": "CLA",
+          "matchId": "252e3211-557a-4523-ba63-7d0cc8daf590",
+          "players": [
+            "WIP 77even",
+            "WIP H1ber",
+            "WIP hoody",
+            "WIP Nowax",
+            "WIP Yuta"
+          ]
+        },
+        {
+          "date": "2026-04-19",
+          "opponent": "ES",
+          "matchId": "edb75e03-8acb-47e6-9996-12e115a51e1e",
+          "players": [
+            "WIP 77even",
+            "WIP H1ber",
+            "WIP hoody",
+            "WIP Nowax",
+            "WIP Yuta"
+          ]
+        }
+      ]
+    }
+  ],
+  "Lotus": [
+    {
+      "agents": [
+        "Raze",
+        "Fade",
+        "Omen",
+        "Viper",
+        "Vyse"
+      ],
+      "agent_ids": [
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859",
+        "efba5359-4016-a1e5-7626-b1ae76895940"
+      ],
+      "games": [
+        {
+          "date": "2026-05-12",
+          "opponent": "JL",
+          "matchId": "8d41bf67-47a4-42e4-b353-00e8342091b9",
+          "players": [
+            "WIP 77even",
+            "WIP hoody",
+            "WIP Nowax",
+            "WIP Yuta",
+            "WIP H1ber"
+          ]
+        },
+        {
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "players": [
+            "WIP 77even",
+            "WIP hoody",
+            "WIP Nowax",
+            "WIP Yuta",
+            "WIP H1ber"
+          ]
+        },
+        {
+          "date": "2026-05-04",
+          "opponent": "F9",
+          "matchId": "5e307ea4-fd33-4c81-8d48-d7dad9a92d0a",
+          "players": [
+            "WIP 77even",
+            "WIP hoody",
+            "WIP Nowax",
+            "WIP Yuta",
+            "WIP H1ber"
+          ]
+        }
+      ]
+    }
+  ],
+  "Pearl": [
+    {
+      "agents": [
+        "Waylay",
+        "Sova",
+        "Tejo",
+        "Astra",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "df1cb487-4902-002e-5c17-d28e83e78588",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "b444168c-4e35-8076-db47-ef9bf368f384",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-05-12",
+          "opponent": "JL",
+          "matchId": "cd2fe7a1-b76d-42c4-b8c9-8a6bf1c8868a",
+          "players": [
+            "WIP 77even",
+            "WIP hoody",
+            "WIP H1ber",
+            "WIP Nowax",
+            "WIP Yuta"
+          ]
+        },
+        {
+          "date": "2026-04-19",
+          "opponent": "ES",
+          "matchId": "be75a583-c126-4779-bcb0-ea2b72d4c667",
+          "players": [
+            "WIP 77even",
+            "WIP hoody",
+            "WIP H1ber",
+            "WIP Nowax",
+            "WIP Yuta"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Neon",
+        "Sova",
+        "Tejo",
+        "Astra",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "b444168c-4e35-8076-db47-ef9bf368f384",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "matchId": "c4747d9b-57a3-4fe6-a908-2c2fc6d28a45",
+          "players": [
+            "WIP 77even",
+            "WIP hoody",
+            "WIP H1ber",
+            "WIP Nowax",
+            "WIP Yuta"
+          ]
+        }
+      ]
+    }
+  ],
+  "Split": [
+    {
+      "agents": [
+        "Raze",
+        "Skye",
+        "Omen",
+        "Viper",
+        "Chamber"
+      ],
+      "agent_ids": [
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859",
+        "22697a3d-45bf-8dd7-4fec-84a9e28c69d7"
+      ],
+      "games": [
+        {
+          "date": "2026-05-12",
+          "opponent": "JL",
+          "matchId": "818372fe-b3c5-49cf-a33d-c56056e610f9",
+          "players": [
+            "WIP 77even",
+            "WIP hoody",
+            "WIP Nowax",
+            "WIP Yuta",
+            "WIP H1ber"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Neon",
+        "Skye",
+        "Omen",
+        "Viper",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-05-04",
+          "opponent": "F9",
+          "matchId": "4877484e-8b48-4eff-a135-4441c8e9dba7",
+          "players": [
+            "WIP 77even",
+            "WIP hoody",
+            "WIP Nowax",
+            "WIP Yuta",
+            "WIP H1ber"
+          ]
+        },
+        {
+          "date": "2026-05-03",
+          "opponent": "JL",
+          "matchId": "6b5299c5-2696-417b-8d32-aa29a50a4ba2",
+          "players": [
+            "WIP 77even",
+            "WIP hoody",
+            "WIP Nowax",
+            "WIP Yuta",
+            "WIP H1ber"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -527,7 +527,7 @@ function getPlayerDisplayName(playerName) {
 }
 
 function collectPlayersFromPoints(ctPoints, tPoints) {
-  return [...new Set([...ctPoints, ...tPoints].map((point) => point.player).filter(Boolean))].sort((a, b) =>
+  return [...new Set([...ctPoints, ...tPoints].map((point) => canonicalPlayerName(point.player)).filter(Boolean))].sort((a, b) =>
     getPlayerDisplayName(a).localeCompare(getPlayerDisplayName(b))
   );
 }
@@ -597,15 +597,16 @@ function getDefensiveFilterKey(defensiveInfo) {
 }
 
 function collectDefensivePlayers(defensiveInfo) {
-  const legendPlayers = (defensiveInfo?.legend ?? []).map((row) => row.player).filter(Boolean);
+  const legendPlayers = (defensiveInfo?.legend ?? []).map((row) => canonicalPlayerName(row.player)).filter(Boolean);
   if (legendPlayers.length) return legendPlayers;
   const seen = new Set();
   const out = [];
   ["lt10s", "lt20s", "lt30s"].forEach((key) => {
     (defensiveInfo?.thresholds?.[key]?.points ?? []).forEach((point) => {
-      if (point?.player && !seen.has(point.player)) {
-        seen.add(point.player);
-        out.push(point.player);
+      const canonical = canonicalPlayerName(point?.player);
+      if (canonical && !seen.has(canonical)) {
+        seen.add(canonical);
+        out.push(canonical);
       }
     });
   });
@@ -639,9 +640,10 @@ function collectAllDefensivePlayers(defensiveInfo) {
   const retakeInfo = getRetakeInfo(activeTeam, activeSideView, mapName);
   const fromRetake = collectPlayersFromPoints(collectRetakePoints(retakeInfo), []);
   [...fromEarly, ...fromSniper, ...fromRetake].forEach((player) => {
-    if (player && !seen.has(player)) {
-      seen.add(player);
-      out.push(player);
+    const canonical = canonicalPlayerName(player);
+    if (canonical && !seen.has(canonical)) {
+      seen.add(canonical);
+      out.push(canonical);
     }
   });
   return sortByPlayerOrder(out);
@@ -929,20 +931,21 @@ function buildMapControlMarkup(mapName, side, frameClassList, frameStyle, mapIma
 
   const cards = windows.map(({ key, label }) => {
     const allPoints = applyNewRosterFilter(mcSide.mapControl?.[key] ?? []);
-    const points = allPoints.filter(pt => selectedPlayers.has(pt.player));
+    const points = allPoints.filter(pt => selectedPlayers.has(canonicalPlayerName(pt.player)));
     const roundCount = new Set(allPoints.map(pt => `${pt.matchId}|${pt.roundNum}`)).size;
     const dotsMarkup = allPoints.map(pt => {
+      const ptName = canonicalPlayerName(pt.player);
       const [rx, ry] = MAP_ROTATE_COORDS_CW.has(mapName) ? rotCW90(pt.normX, pt.normY) : [pt.normX, pt.normY];
-      const color = getPlayerColor(pt.player);
-      const visible = selectedPlayers.has(pt.player);
+      const color = getPlayerColor(ptName);
+      const visible = selectedPlayers.has(ptName);
       const agent = agentIconMode ? currentAgentLookup[pt.matchId]?.[pt.player] : null;
-      const title = `${pt.player} | R${pt.roundNum + 1} | ${pt.date} vs ${pt.opponent} | ${fmtRoundTime(pt.timeMs)}`;
+      const title = `${ptName} | R${pt.roundNum + 1} | ${pt.date} vs ${pt.opponent} | ${fmtRoundTime(pt.timeMs)}`;
       if (agent) {
         const d = visible ? "" : "display:none;";
-        return `<span class="heat-point heat-point--icon" data-player="${encodeURIComponent(pt.player)}" style="${d}left:${rx}%;top:${ry}%;background-image:url('${agentIconUrl(agent)}');outline:2px solid ${color};" title="${title} (${agent})"></span>`;
+        return `<span class="heat-point heat-point--icon" data-player="${encodeURIComponent(ptName)}" style="${d}left:${rx}%;top:${ry}%;background-image:url('${agentIconUrl(agent)}');outline:2px solid ${color};" title="${title} (${agent})"></span>`;
       }
       const hidden = visible ? "" : "display:none;";
-      return `<span class="heat-point" data-player="${encodeURIComponent(pt.player)}" style="${hidden}left:${rx}%;top:${ry}%;background:${color};" title="${title}"></span>`;
+      return `<span class="heat-point" data-player="${encodeURIComponent(ptName)}" style="${hidden}left:${rx}%;top:${ry}%;background:${color};" title="${title}"></span>`;
     }).join("");
     return `
       <article class="defensive-card">
@@ -1006,11 +1009,12 @@ function computeRotationLayers(mapName, side, selectedPlayers) {
 
   for (const roundTrails of rounds) {
     for (const trail of roundTrails) {
-      if (!selectedPlayers.has(trail.player)) continue;
+      const trailName = canonicalPlayerName(trail.player);
+      if (!selectedPlayers.has(trailName)) continue;
       const snaps = filterSnapshotsByWindow(trail.snapshots, activeRotationWindow, trail.plantTimeMs);
       if (!snaps.length) continue;
-      visiblePlayers.add(trail.player);
-      const color = getPlayerColor(trail.player);
+      visiblePlayers.add(trailName);
+      const color = getPlayerColor(trailName);
       const trailId = `${trail.matchId}|${trail.roundNum}`;
       const isActive = activeRotationTrail === trailId;
       const lineOpacity = hasSelection ? (isActive ? 1.0 : 0.06) : 0.35;
@@ -1038,7 +1042,7 @@ function computeRotationLayers(mapName, side, selectedPlayers) {
   }
 
   const roundCount = new Set(
-    rounds.flatMap(rt => rt.filter(t => selectedPlayers.has(t.player)).map(t => `${t.matchId}|${t.roundNum}`))
+    rounds.flatMap(rt => rt.filter(t => selectedPlayers.has(canonicalPlayerName(t.player))).map(t => `${t.matchId}|${t.roundNum}`))
   ).size;
 
   return { svgLines, dotsMarkup, visiblePlayers, roundCount };
@@ -1165,20 +1169,21 @@ function renderDefensivePanels(info) {
       const allPoints = (isTestMode && sniperFilterFK)
         ? basePoints.filter(p => sniperRoundKeySet.has(`${p.matchId}|${p.roundNum}`))
         : basePoints;
-      const points = allPoints.filter((point) => selectedPlayers.has(point.player));
+      const points = allPoints.filter((point) => selectedPlayers.has(canonicalPlayerName(point.player)));
       const roundCount = new Set(allPoints.map((point) => `${point.matchId}|${point.roundNum}`)).size;
       const pointsMarkup = allPoints
         .map((point) => {
+          const pName = canonicalPlayerName(point.player);
           const p = projectHeatmapPoint(point, mapName);
-          const color = getPlayerColor(point.player);
-          const visible = selectedPlayers.has(point.player);
+          const color = getPlayerColor(pName);
+          const visible = selectedPlayers.has(pName);
           const agent = agentIconMode ? currentAgentLookup[point.matchId]?.[point.player] : null;
           if (agent) {
             const displayStyle = visible ? "" : "display:none;";
-            return `<span class="heat-point heat-point--icon" data-player="${encodeURIComponent(point.player)}" style="${displayStyle}left:${p.x}%; top:${p.y}%; background-image:url('${agentIconUrl(agent)}'); outline:2px solid ${color};" title="${point.player} (${agent}) | ${point.date} vs ${point.opponent} | R${point.roundNum + 1}"></span>`;
+            return `<span class="heat-point heat-point--icon" data-player="${encodeURIComponent(pName)}" style="${displayStyle}left:${p.x}%; top:${p.y}%; background-image:url('${agentIconUrl(agent)}'); outline:2px solid ${color};" title="${pName} (${agent}) | ${point.date} vs ${point.opponent} | R${point.roundNum + 1}"></span>`;
           }
           const hidden = visible ? "" : ' style="display:none"';
-          return `<span class="heat-point" data-player="${encodeURIComponent(point.player)}" style="left:${p.x}%; top:${p.y}%; background:${color};"${hidden} title="${point.player} | ${point.date} vs ${point.opponent} | R${point.roundNum + 1}"></span>`;
+          return `<span class="heat-point" data-player="${encodeURIComponent(pName)}" style="left:${p.x}%; top:${p.y}%; background:${color};"${hidden} title="${pName} | ${point.date} vs ${point.opponent} | R${point.roundNum + 1}"></span>`;
         })
         .join("");
 
@@ -1233,7 +1238,7 @@ function renderDefensivePanels(info) {
     })
     .join("");
 
-  const sniperLegendPlayers = sortByPlayerOrder([...new Set(sniperPoints.map(pt => pt.player))]);
+  const sniperLegendPlayers = sortByPlayerOrder([...new Set(sniperPoints.map(pt => canonicalPlayerName(pt.player)))]);
   const sniperLegendMarkup = sniperLegendPlayers.length
     ? `<div class="retake-player-legend">${sniperLegendPlayers.map(p =>
         `<span class="retake-legend-item"><span class="retake-legend-dot" style="background:${getPlayerColor(p)};"></span><span class="retake-legend-name">${stripTeamPrefix(p)}</span></span>`
@@ -1287,7 +1292,7 @@ function renderDefensivePanels(info) {
       if (agent) return `<span class="heat-point heat-point--icon" style="left:${e.killer.x}%; top:${e.killer.y}%; background-image:url('${agentIconUrl(agent)}');outline:2px solid ${color};" title="${title} (${agent})"></span>`;
       return `<span class="heat-point" style="left:${e.killer.x}%; top:${e.killer.y}%; background:${color};" title="${title}"></span>`;
     }).join("");
-  const allFkLegendPlayers = sortByPlayerOrder([...new Set(allFkAllPoints.map(p => p.player))]);
+  const allFkLegendPlayers = sortByPlayerOrder([...new Set(allFkAllPoints.map(p => canonicalPlayerName(p.player)))]);
   const allFkLegendMarkup = allFkLegendPlayers.length
     ? `<div class="retake-player-legend">${allFkLegendPlayers.map(p =>
         `<span class="retake-legend-item"><span class="retake-legend-dot" style="background:${getPlayerColor(p)};"></span><span class="retake-legend-name">${stripTeamPrefix(p)}</span></span>`
@@ -1336,19 +1341,20 @@ function renderDefensivePanels(info) {
   const retakeRoundCount = new Set(retakePoints.map((point) => `${point.matchId}|${point.roundNum}`)).size;
   const retakePointsMarkup = retakePoints
     .map((point) => {
+      const rName = canonicalPlayerName(point.player);
       const p = projectHeatmapPoint(point, mapName);
-      const color = getPlayerColor(point.player);
+      const color = getPlayerColor(rName);
       const site = String(point.site || "").toUpperCase();
       const ring = siteColor[site] ?? "#888";
       const agent = agentIconMode ? currentAgentLookup[point.matchId]?.[point.player] : null;
-      const retakeTitle = `${point.player} | Site ${site || "?"} | ${point.date} vs ${point.opponent} | R${point.roundNum + 1}`;
+      const retakeTitle = `${rName} | Site ${site || "?"} | ${point.date} vs ${point.opponent} | R${point.roundNum + 1}`;
       const dotSpan = agent
-        ? `<span class="heat-point heat-point--icon retake-point" data-player="${encodeURIComponent(point.player)}" style="left:${p.x}%; top:${p.y}%; background-image:url('${agentIconUrl(agent)}');outline:2px solid ${color};" title="${retakeTitle} (${agent})"></span>`
-        : `<span class="heat-point retake-point" data-player="${encodeURIComponent(point.player)}" style="left:${p.x}%; top:${p.y}%; background:${color}; box-shadow: 0 0 0 1.4px ${ring};" title="${retakeTitle}"></span>`;
+        ? `<span class="heat-point heat-point--icon retake-point" data-player="${encodeURIComponent(rName)}" style="left:${p.x}%; top:${p.y}%; background-image:url('${agentIconUrl(agent)}');outline:2px solid ${color};" title="${retakeTitle} (${agent})"></span>`
+        : `<span class="heat-point retake-point" data-player="${encodeURIComponent(rName)}" style="left:${p.x}%; top:${p.y}%; background:${color}; box-shadow: 0 0 0 1.4px ${ring};" title="${retakeTitle}"></span>`;
       return `${dotSpan}<span class="retake-site-tag retake-site-tag-${site}" style="left:calc(${p.x}% + 6px); top:calc(${p.y}% - 8px);">${site || "?"}</span>`;
     })
     .join("");
-  const retakeLegendPlayers = sortByPlayerOrder([...new Set(retakePoints.map(pt => pt.player))]);
+  const retakeLegendPlayers = sortByPlayerOrder([...new Set(retakePoints.map(pt => canonicalPlayerName(pt.player)))]);
   const retakeLegendMarkup = retakeLegendPlayers.length
     ? `<div class="retake-player-legend">${retakeLegendPlayers.map(p =>
         `<span class="retake-legend-item"><span class="retake-legend-dot" style="background:${ppGetColor(p)};"></span><span class="retake-legend-name">${ppShortName(p)}</span></span>`
@@ -1409,21 +1415,22 @@ function renderDefensivePanels(info) {
 
     const ppDotsMarkup = allPpPts.length
       ? allPpPts.map(pt => {
-          const color = ppGetColor(pt.player);
+          const ppName = canonicalPlayerName(pt.player);
+          const color = ppGetColor(ppName);
           const ring = ppSiteColor[pt.site] ?? "#888";
           const site = pt.site ?? "";
           const [rx, ry] = MAP_ROTATE_COORDS_CW.has(mapName) ? rotCW90(pt.normX, pt.normY) : [pt.normX, pt.normY];
           const ppAgent = agentIconMode ? currentAgentLookup[pt.matchId]?.[pt.player] : null;
-          const ppTitle = `${ppShortName(pt.player)} | Site ${site} | R${pt.roundNum + 1} | ${pt.date} vs ${pt.opponent}`;
+          const ppTitle = `${ppShortName(ppName)} | Site ${site} | R${pt.roundNum + 1} | ${pt.date} vs ${pt.opponent}`;
           const ppDot = ppAgent
-            ? `<span class="heat-point heat-point--icon retake-point" data-player="${encodeURIComponent(pt.player)}" style="left:${rx}%;top:${ry}%;background-image:url('${agentIconUrl(ppAgent)}');outline:2px solid ${color};" title="${ppTitle} (${ppAgent})"></span>`
-            : `<span class="heat-point retake-point" data-player="${encodeURIComponent(pt.player)}" style="left:${rx}%;top:${ry}%;background:${color};box-shadow:0 0 0 1.4px ${ring};" title="${ppTitle}"></span>`;
+            ? `<span class="heat-point heat-point--icon retake-point" data-player="${encodeURIComponent(ppName)}" style="left:${rx}%;top:${ry}%;background-image:url('${agentIconUrl(ppAgent)}');outline:2px solid ${color};" title="${ppTitle} (${ppAgent})"></span>`
+            : `<span class="heat-point retake-point" data-player="${encodeURIComponent(ppName)}" style="left:${rx}%;top:${ry}%;background:${color};box-shadow:0 0 0 1.4px ${ring};" title="${ppTitle}"></span>`;
           return `${ppDot}<span class="retake-site-tag retake-site-tag-${site}" style="left:calc(${rx}% + 6px);top:calc(${ry}% - 8px);">${site}</span>`;
         }).join("")
       : '<div class="heatmap-empty"><p>No samples.</p></div>';
 
     // Player legend (unique players in displayed points)
-    const ppLegendPlayers = sortByPlayerOrder([...new Set(allPpPts.map(pt => pt.player))]);
+    const ppLegendPlayers = sortByPlayerOrder([...new Set(allPpPts.map(pt => canonicalPlayerName(pt.player)))]);
     const ppLegendMarkup = ppLegendPlayers.length
       ? `<div class="retake-player-legend">${ppLegendPlayers.map(p =>
           `<span class="retake-legend-item"><span class="retake-legend-dot" style="background:${ppGetColor(p)};"></span><span class="retake-legend-name">${ppShortName(p)}</span></span>`
@@ -1584,7 +1591,7 @@ function updateEarlyDotsInPlace(info, selectedPlayers) {
     const card = panels.querySelector(`[data-threshold="${key}"]`);
     if (!card) return;
     const allPoints = applyNewRosterFilter(info.thresholds?.[key]?.points ?? []);
-    const visibleCount = allPoints.filter(p => selectedPlayers.has(p.player)).length;
+    const visibleCount = allPoints.filter(p => selectedPlayers.has(canonicalPlayerName(p.player))).length;
     const roundCount = new Set(allPoints.map(p => `${p.matchId}|${p.roundNum}`)).size;
     const meta = card.querySelector(".defensive-card-meta");
     if (meta) meta.textContent = `Rounds: ${roundCount} | Points: ${visibleCount}/${allPoints.length}`;
@@ -1861,11 +1868,21 @@ function stripTeamPrefix(name) {
   return String(name ?? "").replace(_TEAM_PREFIX_RE, "");
 }
 
+function canonicalPlayerName(name) {
+  const short = stripTeamPrefix(name);
+  const lower = short.toLowerCase();
+  for (const cfg of Object.values(TEAMS_CONFIG)) {
+    const found = Object.keys(cfg.playerColors).find(k => k.toLowerCase() === lower);
+    if (found) return found;
+  }
+  return short;
+}
+
 function sortByPlayerOrder(players) {
   const order = TEAMS_CONFIG[activeTeam]?.playerOrder ?? [];
   return [...players].sort((a, b) => {
-    const ai = order.indexOf(stripTeamPrefix(a));
-    const bi = order.indexOf(stripTeamPrefix(b));
+    const ai = order.indexOf(canonicalPlayerName(a));
+    const bi = order.indexOf(canonicalPlayerName(b));
     if (ai === -1 && bi === -1) return a.localeCompare(b);
     if (ai === -1) return 1;
     if (bi === -1) return -1;
@@ -1874,9 +1891,9 @@ function sortByPlayerOrder(players) {
 }
 
 function getPlayerColor(name) {
-  const short = stripTeamPrefix(name);
+  const canonical = canonicalPlayerName(name);
   for (const cfg of Object.values(TEAMS_CONFIG)) {
-    if (cfg.playerColors[short]) return cfg.playerColors[short];
+    if (cfg.playerColors[canonical]) return cfg.playerColors[canonical];
   }
   return "#888888";
 }

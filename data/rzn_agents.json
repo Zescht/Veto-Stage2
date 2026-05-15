@@ -30,6 +30,36 @@
           ]
         }
       ]
+    },
+    {
+      "agents": [
+        "Phoenix",
+        "Yoru",
+        "Fade",
+        "Astra",
+        "Veto"
+      ],
+      "agent_ids": [
+        "eb93336a-449b-9c1b-0a54-a891f7921d69",
+        "7f94d92c-4234-0a36-9646-3a87eb8b5c89",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "92eeef5d-43b5-1d4a-8d03-b3927a09034b"
+      ],
+      "games": [
+        {
+          "date": "2026-01-25",
+          "opponent": "DXG",
+          "matchId": "c49dbfe5-937e-4449-88b6-450b5fd5c4ee",
+          "players": [
+            "RZN BarcK",
+            "RZN Apyr",
+            "RZN Snowi",
+            "RZN Amcar",
+            "RZN Puggy"
+          ]
+        }
+      ]
     }
   ],
   "Haven": [
@@ -127,6 +157,48 @@
             "RZN Puggy",
             "RZN deyten",
             "RZN Bumbibjorn1"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Jett",
+        "Yoru",
+        "Sova",
+        "Omen",
+        "Viper"
+      ],
+      "agent_ids": [
+        "add6443a-41bd-e414-f6ad-e58d267f4e95",
+        "7f94d92c-4234-0a36-9646-3a87eb8b5c89",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-03-09",
+          "opponent": "CGN",
+          "matchId": "47bca094-569c-4fd0-b49f-49d1895202e4",
+          "players": [
+            "RZN Opex",
+            "RZN BarcK",
+            "RZN Puggy",
+            "RZN deyten",
+            "RZN Vivik"
+          ]
+        },
+        {
+          "date": "2026-03-07",
+          "opponent": "PD",
+          "matchId": "1bad02fe-ec46-47d4-960d-a572c95df2f1",
+          "players": [
+            "RZN Opex",
+            "RZN BarcK",
+            "RZN Puggy",
+            "RZN deyten",
+            "RZN Vivik"
           ]
         }
       ]

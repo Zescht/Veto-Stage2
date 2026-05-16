@@ -520,6 +520,21 @@ const extraVetoHistoryData = {
     "subtitle": "2026 veto history",
     "rows": [
       {
+        "date": "2026-05-13",
+        "opponent": "Team Liquid Academy",
+        "opponentAbbr": "TL",
+        "score": "2 - 3",
+        "source": "https://liquipedia.net/valorant/Match:ID_7KMRtUcQ7H_R05-M002",
+        "decider": "Split",
+        "deciderScore": "11:13",
+        "ban1": { "map": "Lotus",    "type": "ban",  "ownerLabel": "NVJ", "ownerKind": "team" },
+        "ban2": { "map": "Bind",     "type": "ban",  "ownerLabel": "TL",  "ownerKind": "opp" },
+        "pick1": { "map": "Haven",   "type": "pick", "ownerLabel": "NVJ", "ownerKind": "team", "score": "8:13" },
+        "pick2": { "map": "Pearl",   "type": "pick", "ownerLabel": "TL",  "ownerKind": "opp",  "score": "13:9" },
+        "ban3": { "map": "Fracture", "type": "pick", "ownerLabel": "NVJ", "ownerKind": "team", "score": "13:11" },
+        "ban4": { "map": "Breeze",   "type": "pick", "ownerLabel": "TL",  "ownerKind": "opp",  "score": "8:13" }
+      },
+      {
         "date": "2026-05-11",
         "opponent": "Enterprise Esports",
         "opponentAbbr": "EP",

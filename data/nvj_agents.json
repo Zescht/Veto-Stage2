@@ -4,6 +4,36 @@
     {
       "agents": [
         "Neon",
+        "Phoenix",
+        "Fade",
+        "Astra",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "eb93336a-449b-9c1b-0a54-a891f7921d69",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-05-13",
+          "opponent": "TLA",
+          "matchId": "7a4b7c83-af61-4bc6-8a4c-24f5a0664347",
+          "players": [
+            "NVJ Darxcio",
+            "NVJ Kolosha",
+            "NVJ Javelin",
+            "NVJ Avey",
+            "NVJ k9lyos"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Neon",
         "Breach",
         "Tejo",
         "Astra",
@@ -86,6 +116,18 @@
       ],
       "games": [
         {
+          "date": "2026-05-13",
+          "opponent": "TLA",
+          "matchId": "b0c826ab-0ad9-46b4-9bd1-98ae8b1c1cde",
+          "players": [
+            "NVJ Darxcio",
+            "NVJ Kolosha",
+            "NVJ Javelin",
+            "NVJ Avey",
+            "NVJ k9lyos"
+          ]
+        },
+        {
           "date": "2026-05-04",
           "opponent": "M1R",
           "matchId": "e3de50cf-7eec-465c-942b-caf6cc8371f2",
@@ -141,6 +183,18 @@
         "92eeef5d-43b5-1d4a-8d03-b3927a09034b"
       ],
       "games": [
+        {
+          "date": "2026-05-13",
+          "opponent": "TLA",
+          "matchId": "5968f942-ca36-40e0-a0fe-fdbb0ea8024c",
+          "players": [
+            "NVJ Darxcio",
+            "NVJ Javelin",
+            "NVJ Avey",
+            "NVJ Kolosha",
+            "NVJ k9lyos"
+          ]
+        },
         {
           "date": "2026-05-11",
           "opponent": "EP",
@@ -221,6 +275,18 @@
         "569fdd95-4d10-43ab-ca70-79becc718b46"
       ],
       "games": [
+        {
+          "date": "2026-05-13",
+          "opponent": "TLA",
+          "matchId": "e02cf2c3-401f-4f39-ac58-d916f8f677b2",
+          "players": [
+            "NVJ Darxcio",
+            "NVJ Javelin",
+            "NVJ Avey",
+            "NVJ k9lyos",
+            "NVJ Kolosha"
+          ]
+        },
         {
           "date": "2026-05-11",
           "opponent": "EP",
@@ -341,6 +407,18 @@
         "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
       ],
       "games": [
+        {
+          "date": "2026-05-13",
+          "opponent": "TLA",
+          "matchId": "be27224b-3d54-4c89-b9b8-2f845e332476",
+          "players": [
+            "NVJ Darxcio",
+            "NVJ Kolosha",
+            "NVJ Javelin",
+            "NVJ Avey",
+            "NVJ k9lyos"
+          ]
+        },
         {
           "date": "2026-05-11",
           "opponent": "EP",

@@ -1,67 +1,77 @@
 {
   "t_side": {
-    "total_rounds": 45,
-    "rounds_won": 29,
-    "pct_rounds_won": 64.4,
-    "won_by_kills": 26,
-    "pct_won_by_kills": 57.8,
-    "won_by_explosion": 3,
-    "pct_won_by_explosion": 6.7,
+    "total_rounds": 67,
+    "rounds_won": 39,
+    "pct_rounds_won": 58.2,
+    "won_by_kills": 32,
+    "pct_won_by_kills": 47.8,
+    "won_by_explosion": 7,
+    "pct_won_by_explosion": 10.4,
     "sites": {
       "A": {
-        "plant_count": 19,
-        "pct_plant": 54.3,
-        "pct_win": 89.5,
-        "avg_plant_time": 61.8,
+        "plant_count": 28,
+        "pct_plant": 56.0,
+        "pct_win": 78.6,
+        "avg_plant_time": 61.2,
         "min_plant_time": 27.5,
         "max_plant_time": 95.9,
-        "fk_to_plant_avg": 31.0,
-        "fk_to_plant_n": 18
+        "fk_to_plant_avg": 33.3,
+        "fk_to_plant_n": 26
       },
       "B": {
-        "plant_count": 16,
-        "pct_plant": 45.7,
-        "pct_win": 68.8,
-        "avg_plant_time": 52.3,
+        "plant_count": 22,
+        "pct_plant": 44.0,
+        "pct_win": 72.7,
+        "avg_plant_time": 56.7,
         "min_plant_time": 26.8,
-        "max_plant_time": 91.6,
-        "fk_to_plant_avg": 38.9,
-        "fk_to_plant_n": 13
+        "max_plant_time": 103.9,
+        "fk_to_plant_avg": 35.2,
+        "fk_to_plant_n": 19
       }
     }
   },
   "ct_side": {
-    "total_rounds": 39,
-    "rounds_won": 19,
-    "pct_rounds_won": 48.7,
-    "won_by_kills": 9,
-    "pct_won_by_kills": 23.1,
-    "won_by_defuse": 10,
-    "pct_won_by_defuse": 25.6,
+    "total_rounds": 56,
+    "rounds_won": 26,
+    "pct_rounds_won": 46.4,
+    "won_by_kills": 11,
+    "pct_won_by_kills": 19.6,
+    "won_by_defuse": 15,
+    "pct_won_by_defuse": 26.8,
     "sites": {
       "A": {
-        "plant_count": 16,
-        "defuse_count": 5,
-        "pct_defuse_win": 31.2,
-        "pct_defuse_share": 50.0,
-        "avg_defuse_time": 32.3,
-        "fk_after_plant_avg": 14.6,
-        "fk_after_plant_n": 13
+        "plant_count": 26,
+        "defuse_count": 7,
+        "pct_defuse_win": 26.9,
+        "pct_defuse_share": 46.7,
+        "avg_defuse_time": 30.8,
+        "fk_after_plant_avg": 13.0,
+        "fk_after_plant_n": 17
       },
       "B": {
-        "plant_count": 8,
-        "defuse_count": 5,
-        "pct_defuse_win": 62.5,
-        "pct_defuse_share": 50.0,
-        "avg_defuse_time": 29.6,
-        "fk_after_plant_avg": 12.3,
-        "fk_after_plant_n": 7
+        "plant_count": 13,
+        "defuse_count": 8,
+        "pct_defuse_win": 61.5,
+        "pct_defuse_share": 53.3,
+        "avg_defuse_time": 32.5,
+        "fk_after_plant_avg": 11.3,
+        "fk_after_plant_n": 12
       }
     }
   },
   "team": "NAVI Junior",
   "map": "Pearl",
   "matches": [
+    {
+      "date": "2026-05-13",
+      "opponent": "TLA",
+      "matchId": "5968f942-ca36-40e0-a0fe-fdbb0ea8024c"
+    },
+    {
+      "date": "2026-05-11",
+      "opponent": "EP",
+      "matchId": "c3d15562-2574-4924-b723-812c533d57aa"
+    },
     {
       "date": "2026-04-21",
       "opponent": "TLA",

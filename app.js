@@ -2249,7 +2249,7 @@ document.getElementById("defensive-sample-card")?.addEventListener("click", (e) 
     chip.classList.remove("off");
     chip.setAttribute("aria-pressed", "true");
   }
-  if (lastDefensiveInfo) updateEarlyDotsInPlace(lastDefensiveInfo, selectedPlayers);
+  if (lastDefensiveInfo) updateEarlyDotsInPlace(lastDefensiveInfo, getSelectedDefensiveSet(lastDefensiveInfo, collectDefensivePlayers(lastDefensiveInfo)));
 });
 
 teamSelect.addEventListener("change", (event) => {

@@ -1361,6 +1361,21 @@ body {
   margin-top: 18px;
 }
 
+#defensive-sample-card {
+  position: fixed;
+  right: 16px;
+  top: 16px;
+  width: 210px;
+  margin-top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+}
+
+#defensive-sample-card .sample-chip-list {
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
 .map-sample-label {
   margin: 0 0 12px;
   color: #70777c;

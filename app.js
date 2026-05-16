@@ -1016,6 +1016,7 @@ function computeRotationLayers(mapName, side, selectedPlayers) {
     for (const trail of roundTrails) {
       const trailName = canonicalPlayerName(trail.player);
       if (!selectedPlayers.has(trailName)) continue;
+      if (!isMatchActive(trail.matchId)) continue;
       const snaps = filterSnapshotsByWindow(trail.snapshots, activeRotationWindow, trail.plantTimeMs);
       if (!snaps.length) continue;
       visiblePlayers.add(trailName);
@@ -1047,7 +1048,7 @@ function computeRotationLayers(mapName, side, selectedPlayers) {
   }
 
   const roundCount = new Set(
-    rounds.flatMap(rt => rt.filter(t => selectedPlayers.has(canonicalPlayerName(t.player))).map(t => `${t.matchId}|${t.roundNum}`))
+    rounds.flatMap(rt => rt.filter(t => selectedPlayers.has(canonicalPlayerName(t.player)) && isMatchActive(t.matchId)).map(t => `${t.matchId}|${t.roundNum}`))
   ).size;
 
   return { svgLines, dotsMarkup, visiblePlayers, roundCount };

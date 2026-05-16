@@ -1387,6 +1387,22 @@ body {
   color: #303538;
 }
 
+.sample-chip--toggle {
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.15s, background 0.15s;
+}
+
+.sample-chip--toggle:hover {
+  background: #e4e8ea;
+}
+
+.sample-chip--toggle.off {
+  opacity: 0.35;
+  text-decoration: line-through;
+  background: #f4f6f7;
+}
+
 .data-error-bar {
   display: flex;
   align-items: flex-start;

@@ -200,6 +200,11 @@ let activeRotationTrail = null;
 let activeRotationWindow = null; // "140_120" | "120_100" | "100_end" | "afterplant" | null
 let fksNewRosterFilter = false;
 let agentIconMode = false;
+let activeSampleMatches = new Set(); // matchIds currently shown; empty = show all
+
+function isMatchActive(matchId) {
+  return activeSampleMatches.size === 0 || activeSampleMatches.has(matchId);
+}
 let isTestMode = false;
 let sniperFilterFK = false;
 let sniperFilterAllFK = false;
@@ -942,10 +947,10 @@ function buildMapControlMarkup(mapName, side, frameClassList, frameStyle, mapIma
       const title = `${ptName} | R${pt.roundNum + 1} | ${pt.date} vs ${pt.opponent} | ${fmtRoundTime(pt.timeMs)}`;
       if (agent) {
         const d = visible ? "" : "display:none;";
-        return `<span class="heat-point heat-point--icon" data-player="${encodeURIComponent(ptName)}" style="${d}left:${rx}%;top:${ry}%;background-image:url('${agentIconUrl(agent)}');outline:2px solid ${color};" title="${title} (${agent})"></span>`;
+        return `<span class="heat-point heat-point--icon" data-player="${encodeURIComponent(ptName)}" data-match-id="${pt.matchId}" style="${d}left:${rx}%;top:${ry}%;background-image:url('${agentIconUrl(agent)}');outline:2px solid ${color};" title="${title} (${agent})"></span>`;
       }
       const hidden = visible ? "" : "display:none;";
-      return `<span class="heat-point" data-player="${encodeURIComponent(ptName)}" style="${hidden}left:${rx}%;top:${ry}%;background:${color};" title="${title}"></span>`;
+      return `<span class="heat-point" data-player="${encodeURIComponent(ptName)}" data-match-id="${pt.matchId}" style="${hidden}left:${rx}%;top:${ry}%;background:${color};" title="${title}"></span>`;
     }).join("");
     return `
       <article class="defensive-card">
@@ -1033,9 +1038,9 @@ function computeRotationLayers(mapName, side, selectedPlayers) {
         const rotAgent = agentIconMode ? currentAgentLookup[trail.matchId]?.[trail.player] : null;
         const rotTitle = `${trail.player} | R${trail.roundNum + 1} | ${fmtRoundTime(snap.timeMs)} | ${trail.date} vs ${trail.opponent}`;
         if (rotAgent) {
-          dotsMarkup += `<span class="heat-point heat-point--icon rotation-dot" data-trail-id="${trailId}" style="left:${rx}%;top:${ry}%;background-image:url('${agentIconUrl(rotAgent)}');outline:2px solid ${color};opacity:${dotOpacity};cursor:pointer;" title="${rotTitle} (${rotAgent})"></span>`;
+          dotsMarkup += `<span class="heat-point heat-point--icon rotation-dot" data-trail-id="${trailId}" data-match-id="${trail.matchId}" style="left:${rx}%;top:${ry}%;background-image:url('${agentIconUrl(rotAgent)}');outline:2px solid ${color};opacity:${dotOpacity};cursor:pointer;" title="${rotTitle} (${rotAgent})"></span>`;
         } else {
-          dotsMarkup += `<span class="heat-point rotation-dot" data-trail-id="${trailId}" style="left:${rx}%;top:${ry}%;background:${color};opacity:${dotOpacity};cursor:pointer;" title="${rotTitle}"></span>`;
+          dotsMarkup += `<span class="heat-point rotation-dot" data-trail-id="${trailId}" data-match-id="${trail.matchId}" style="left:${rx}%;top:${ry}%;background:${color};opacity:${dotOpacity};cursor:pointer;" title="${rotTitle}"></span>`;
         }
       }
     }
@@ -1180,10 +1185,10 @@ function renderDefensivePanels(info) {
           const agent = agentIconMode ? currentAgentLookup[point.matchId]?.[point.player] : null;
           if (agent) {
             const displayStyle = visible ? "" : "display:none;";
-            return `<span class="heat-point heat-point--icon" data-player="${encodeURIComponent(pName)}" style="${displayStyle}left:${p.x}%; top:${p.y}%; background-image:url('${agentIconUrl(agent)}'); outline:2px solid ${color};" title="${pName} (${agent}) | ${point.date} vs ${point.opponent} | R${point.roundNum + 1}"></span>`;
+            return `<span class="heat-point heat-point--icon" data-player="${encodeURIComponent(pName)}" data-match-id="${point.matchId}" style="${displayStyle}left:${p.x}%; top:${p.y}%; background-image:url('${agentIconUrl(agent)}'); outline:2px solid ${color};" title="${pName} (${agent}) | ${point.date} vs ${point.opponent} | R${point.roundNum + 1}"></span>`;
           }
           const hidden = visible ? "" : ' style="display:none"';
-          return `<span class="heat-point" data-player="${encodeURIComponent(pName)}" style="left:${p.x}%; top:${p.y}%; background:${color};"${hidden} title="${pName} | ${point.date} vs ${point.opponent} | R${point.roundNum + 1}"></span>`;
+          return `<span class="heat-point" data-player="${encodeURIComponent(pName)}" data-match-id="${point.matchId}" style="left:${p.x}%; top:${p.y}%; background:${color};"${hidden} title="${pName} | ${point.date} vs ${point.opponent} | R${point.roundNum + 1}"></span>`;
         })
         .join("");
 
@@ -1233,8 +1238,8 @@ function renderDefensivePanels(info) {
       const color = getPlayerColor(e.point.player);
       const agent = agentIconMode ? currentAgentLookup[e.point.matchId]?.[e.point.player] : null;
       const title = `${e.point.player} -> ${e.point.victim ?? "?"} | ${e.point.date} vs ${e.point.opponent} | R${e.point.roundNum + 1}`;
-      if (agent) return `<span class="heat-point heat-point--icon" style="left:${e.killer.x}%; top:${e.killer.y}%; background-image:url('${agentIconUrl(agent)}');outline:2px solid ${color};" title="${title} (${agent})"></span>`;
-      return `<span class="heat-point" style="left:${e.killer.x}%; top:${e.killer.y}%; background:${color};" title="${title}"></span>`;
+      if (agent) return `<span class="heat-point heat-point--icon" data-match-id="${e.point.matchId}" style="left:${e.killer.x}%; top:${e.killer.y}%; background-image:url('${agentIconUrl(agent)}');outline:2px solid ${color};" title="${title} (${agent})"></span>`;
+      return `<span class="heat-point" data-match-id="${e.point.matchId}" style="left:${e.killer.x}%; top:${e.killer.y}%; background:${color};" title="${title}"></span>`;
     })
     .join("");
 
@@ -1289,8 +1294,8 @@ function renderDefensivePanels(info) {
       const color = getPlayerColor(e.point.player);
       const agent = agentIconMode ? currentAgentLookup[e.point.matchId]?.[e.point.player] : null;
       const title = `${e.point.player} -> ${e.point.victim ?? "?"} | ${e.point.date} vs ${e.point.opponent} | R${e.point.roundNum + 1} | ${fmtRoundTime(e.point.timeSinceRoundStartMillis)}`;
-      if (agent) return `<span class="heat-point heat-point--icon" style="left:${e.killer.x}%; top:${e.killer.y}%; background-image:url('${agentIconUrl(agent)}');outline:2px solid ${color};" title="${title} (${agent})"></span>`;
-      return `<span class="heat-point" style="left:${e.killer.x}%; top:${e.killer.y}%; background:${color};" title="${title}"></span>`;
+      if (agent) return `<span class="heat-point heat-point--icon" data-match-id="${e.point.matchId}" style="left:${e.killer.x}%; top:${e.killer.y}%; background-image:url('${agentIconUrl(agent)}');outline:2px solid ${color};" title="${title} (${agent})"></span>`;
+      return `<span class="heat-point" data-match-id="${e.point.matchId}" style="left:${e.killer.x}%; top:${e.killer.y}%; background:${color};" title="${title}"></span>`;
     }).join("");
   const allFkLegendPlayers = sortByPlayerOrder([...new Set(allFkAllPoints.map(p => canonicalPlayerName(p.player)))]);
   const allFkLegendMarkup = allFkLegendPlayers.length
@@ -1349,8 +1354,8 @@ function renderDefensivePanels(info) {
       const agent = agentIconMode ? currentAgentLookup[point.matchId]?.[point.player] : null;
       const retakeTitle = `${rName} | Site ${site || "?"} | ${point.date} vs ${point.opponent} | R${point.roundNum + 1}`;
       const dotSpan = agent
-        ? `<span class="heat-point heat-point--icon retake-point" data-player="${encodeURIComponent(rName)}" style="left:${p.x}%; top:${p.y}%; background-image:url('${agentIconUrl(agent)}');outline:2px solid ${color};" title="${retakeTitle} (${agent})"></span>`
-        : `<span class="heat-point retake-point" data-player="${encodeURIComponent(rName)}" style="left:${p.x}%; top:${p.y}%; background:${color}; box-shadow: 0 0 0 1.4px ${ring};" title="${retakeTitle}"></span>`;
+        ? `<span class="heat-point heat-point--icon retake-point" data-player="${encodeURIComponent(rName)}" data-match-id="${point.matchId}" style="left:${p.x}%; top:${p.y}%; background-image:url('${agentIconUrl(agent)}');outline:2px solid ${color};" title="${retakeTitle} (${agent})"></span>`
+        : `<span class="heat-point retake-point" data-player="${encodeURIComponent(rName)}" data-match-id="${point.matchId}" style="left:${p.x}%; top:${p.y}%; background:${color}; box-shadow: 0 0 0 1.4px ${ring};" title="${retakeTitle}"></span>`;
       return `${dotSpan}<span class="retake-site-tag retake-site-tag-${site}" style="left:calc(${p.x}% + 6px); top:calc(${p.y}% - 8px);">${site || "?"}</span>`;
     })
     .join("");
@@ -1423,8 +1428,8 @@ function renderDefensivePanels(info) {
           const ppAgent = agentIconMode ? currentAgentLookup[pt.matchId]?.[pt.player] : null;
           const ppTitle = `${ppShortName(ppName)} | Site ${site} | R${pt.roundNum + 1} | ${pt.date} vs ${pt.opponent}`;
           const ppDot = ppAgent
-            ? `<span class="heat-point heat-point--icon retake-point" data-player="${encodeURIComponent(ppName)}" style="left:${rx}%;top:${ry}%;background-image:url('${agentIconUrl(ppAgent)}');outline:2px solid ${color};" title="${ppTitle} (${ppAgent})"></span>`
-            : `<span class="heat-point retake-point" data-player="${encodeURIComponent(ppName)}" style="left:${rx}%;top:${ry}%;background:${color};box-shadow:0 0 0 1.4px ${ring};" title="${ppTitle}"></span>`;
+            ? `<span class="heat-point heat-point--icon retake-point" data-player="${encodeURIComponent(ppName)}" data-match-id="${pt.matchId}" style="left:${rx}%;top:${ry}%;background-image:url('${agentIconUrl(ppAgent)}');outline:2px solid ${color};" title="${ppTitle} (${ppAgent})"></span>`
+            : `<span class="heat-point retake-point" data-player="${encodeURIComponent(ppName)}" data-match-id="${pt.matchId}" style="left:${rx}%;top:${ry}%;background:${color};box-shadow:0 0 0 1.4px ${ring};" title="${ppTitle}"></span>`;
           return `${ppDot}<span class="retake-site-tag retake-site-tag-${site}" style="left:calc(${rx}% + 6px);top:calc(${ry}% - 8px);">${site}</span>`;
         }).join("")
       : '<div class="heatmap-empty"><p>No samples.</p></div>';
@@ -1584,7 +1589,12 @@ function updateEarlyDotsInPlace(info, selectedPlayers) {
 
   panels.querySelectorAll(".heat-point[data-player]").forEach(dot => {
     const player = decodeURIComponent(dot.dataset.player);
-    dot.style.display = selectedPlayers.has(player) ? "" : "none";
+    const matchOk = isMatchActive(dot.dataset.matchId);
+    dot.style.display = (selectedPlayers.has(player) && matchOk) ? "" : "none";
+  });
+
+  panels.querySelectorAll(".heat-point:not([data-player])[data-match-id]").forEach(dot => {
+    dot.style.display = isMatchActive(dot.dataset.matchId) ? "" : "none";
   });
 
   [["lt10s"], ["lt20s"], ["lt30s"]].forEach(([key]) => {
@@ -1708,13 +1718,15 @@ function renderMapInfo() {
       ? rawSampleMaps.filter(m => FKS_NEW_ROSTER_OPPONENTS.has(m.opponent))
       : rawSampleMaps;
 
+    activeSampleMatches = new Set(sampleMaps.map(m => m.matchId));
+
     renderDefensivePanels(defensiveInfo);
 
     defensiveSampleCard.innerHTML = `
       <p class="map-sample-label">${fksNewRosterFilter && showNewRosterBtn ? `New Roster (${sampleMaps.length} maps)` : `Last ${sampleSize} maps in sample`}</p>
       <div class="sample-chip-list">
         ${sampleMaps
-          .map((item) => `<span class="sample-chip">${item.date.slice(5)} ${mapName} vs ${item.opponent}</span>`)
+          .map((item) => `<button class="sample-chip sample-chip--toggle" data-match-id="${item.matchId}" aria-pressed="true">${item.date.slice(5)} ${mapName} vs ${item.opponent}</button>`)
           .join("")}
       </div>
     `;
@@ -2221,6 +2233,23 @@ agentIconBtn?.addEventListener("click", () => {
 fksNewRosterBtn?.addEventListener("click", () => {
   fksNewRosterFilter = !fksNewRosterFilter;
   renderMapInfo();
+});
+
+document.getElementById("defensive-sample-card")?.addEventListener("click", (e) => {
+  const chip = e.target.closest(".sample-chip--toggle");
+  if (!chip) return;
+  const matchId = chip.dataset.matchId;
+  if (activeSampleMatches.has(matchId)) {
+    if (activeSampleMatches.size <= 1) return; // keep at least one match visible
+    activeSampleMatches.delete(matchId);
+    chip.classList.add("off");
+    chip.setAttribute("aria-pressed", "false");
+  } else {
+    activeSampleMatches.add(matchId);
+    chip.classList.remove("off");
+    chip.setAttribute("aria-pressed", "true");
+  }
+  if (lastDefensiveInfo) updateEarlyDotsInPlace(lastDefensiveInfo, selectedPlayers);
 });
 
 teamSelect.addEventListener("change", (event) => {

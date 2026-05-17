@@ -1,67 +1,74 @@
 {
   "t_side": {
-    "total_rounds": 45,
-    "rounds_won": 25,
-    "pct_rounds_won": 55.6,
-    "won_by_kills": 19,
-    "pct_won_by_kills": 42.2,
-    "won_by_explosion": 6,
-    "pct_won_by_explosion": 13.3,
+    "total_rounds": 53,
+    "rounds_won": 31,
+    "pct_rounds_won": 58.5,
+    "won_by_kills": 24,
+    "pct_won_by_kills": 45.3,
+    "won_by_explosion": 7,
+    "pct_won_by_explosion": 13.2,
+    "avg_fk_time": 33.5,
     "sites": {
       "A": {
-        "plant_count": 23,
-        "pct_plant": 67.6,
-        "pct_win": 60.9,
-        "avg_plant_time": 56.2,
+        "plant_count": 26,
+        "pct_plant": 63.4,
+        "pct_win": 61.5,
+        "avg_plant_time": 54.2,
         "min_plant_time": 15.5,
         "max_plant_time": 92.6,
-        "fk_to_plant_avg": 33.5,
-        "fk_to_plant_n": 15
+        "fk_to_plant_avg": 31.8,
+        "fk_to_plant_n": 17
       },
       "B": {
-        "plant_count": 11,
-        "pct_plant": 32.4,
-        "pct_win": 90.9,
-        "avg_plant_time": 61.6,
-        "min_plant_time": 31.9,
-        "max_plant_time": 83.0,
-        "fk_to_plant_avg": 29.1,
-        "fk_to_plant_n": 11
+        "plant_count": 15,
+        "pct_plant": 36.6,
+        "pct_win": 93.3,
+        "avg_plant_time": 60.6,
+        "min_plant_time": 25.6,
+        "max_plant_time": 90.7,
+        "fk_to_plant_avg": 26.9,
+        "fk_to_plant_n": 15
       }
     }
   },
   "ct_side": {
-    "total_rounds": 47,
-    "rounds_won": 18,
-    "pct_rounds_won": 38.3,
-    "won_by_kills": 11,
-    "pct_won_by_kills": 23.4,
-    "won_by_defuse": 7,
-    "pct_won_by_defuse": 14.9,
+    "total_rounds": 59,
+    "rounds_won": 25,
+    "pct_rounds_won": 42.4,
+    "won_by_kills": 14,
+    "pct_won_by_kills": 23.7,
+    "won_by_defuse": 11,
+    "pct_won_by_defuse": 18.6,
+    "avg_fk_time": 39.0,
     "sites": {
       "A": {
-        "plant_count": 15,
-        "defuse_count": 2,
-        "pct_defuse_win": 13.3,
-        "pct_defuse_share": 28.6,
-        "avg_defuse_time": 23.6,
-        "fk_after_plant_avg": 9.8,
-        "fk_after_plant_n": 8
+        "plant_count": 19,
+        "defuse_count": 3,
+        "pct_defuse_win": 15.8,
+        "pct_defuse_share": 27.3,
+        "avg_defuse_time": 24.9,
+        "fk_after_plant_avg": 8.8,
+        "fk_after_plant_n": 10
       },
       "B": {
-        "plant_count": 19,
-        "defuse_count": 5,
-        "pct_defuse_win": 26.3,
-        "pct_defuse_share": 71.4,
-        "avg_defuse_time": 29.8,
-        "fk_after_plant_avg": 10.6,
-        "fk_after_plant_n": 12
+        "plant_count": 24,
+        "defuse_count": 8,
+        "pct_defuse_win": 33.3,
+        "pct_defuse_share": 72.7,
+        "avg_defuse_time": 28.8,
+        "fk_after_plant_avg": 10.7,
+        "fk_after_plant_n": 16
       }
     }
   },
   "team": "WIP Esports",
   "map": "Pearl",
   "matches": [
+    {
+      "date": "2026-05-12",
+      "opponent": "JL",
+      "matchId": "cd2fe7a1-b76d-42c4-b8c9-8a6bf1c8868a"
+    },
     {
       "date": "2026-05-05",
       "opponent": "MDR",

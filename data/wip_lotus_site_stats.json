@@ -1,86 +1,93 @@
 {
   "t_side": {
-    "total_rounds": 86,
-    "rounds_won": 56,
-    "pct_rounds_won": 65.1,
-    "won_by_kills": 44,
-    "pct_won_by_kills": 51.2,
+    "total_rounds": 98,
+    "rounds_won": 60,
+    "pct_rounds_won": 61.2,
+    "won_by_kills": 48,
+    "pct_won_by_kills": 49.0,
     "won_by_explosion": 12,
-    "pct_won_by_explosion": 14.0,
+    "pct_won_by_explosion": 12.2,
+    "avg_fk_time": 34.1,
     "sites": {
       "A": {
-        "plant_count": 28,
-        "pct_plant": 40.0,
-        "pct_win": 82.1,
-        "avg_plant_time": 62.5,
+        "plant_count": 31,
+        "pct_plant": 39.2,
+        "pct_win": 80.6,
+        "avg_plant_time": 62.2,
         "min_plant_time": 26.8,
         "max_plant_time": 94.7,
-        "fk_to_plant_avg": 27.2,
-        "fk_to_plant_n": 25
+        "fk_to_plant_avg": 27.5,
+        "fk_to_plant_n": 28
       },
       "B": {
-        "plant_count": 14,
-        "pct_plant": 20.0,
-        "pct_win": 71.4,
-        "avg_plant_time": 53.7,
+        "plant_count": 16,
+        "pct_plant": 20.3,
+        "pct_win": 68.8,
+        "avg_plant_time": 55.5,
         "min_plant_time": 21.9,
         "max_plant_time": 91.2,
-        "fk_to_plant_avg": 28.0,
-        "fk_to_plant_n": 12
+        "fk_to_plant_avg": 28.1,
+        "fk_to_plant_n": 13
       },
       "C": {
-        "plant_count": 28,
-        "pct_plant": 40.0,
-        "pct_win": 71.4,
-        "avg_plant_time": 60.8,
+        "plant_count": 32,
+        "pct_plant": 40.5,
+        "pct_win": 65.6,
+        "avg_plant_time": 62.4,
         "min_plant_time": 31.0,
-        "max_plant_time": 92.2,
-        "fk_to_plant_avg": 32.7,
-        "fk_to_plant_n": 24
+        "max_plant_time": 94.7,
+        "fk_to_plant_avg": 33.5,
+        "fk_to_plant_n": 28
       }
     }
   },
   "ct_side": {
-    "total_rounds": 90,
-    "rounds_won": 40,
-    "pct_rounds_won": 44.4,
-    "won_by_kills": 20,
-    "pct_won_by_kills": 22.2,
-    "won_by_defuse": 20,
-    "pct_won_by_defuse": 22.2,
+    "total_rounds": 101,
+    "rounds_won": 46,
+    "pct_rounds_won": 45.5,
+    "won_by_kills": 24,
+    "pct_won_by_kills": 23.8,
+    "won_by_defuse": 22,
+    "pct_won_by_defuse": 21.8,
+    "avg_fk_time": 36.9,
     "sites": {
       "A": {
         "plant_count": 29,
         "defuse_count": 9,
         "pct_defuse_win": 31.0,
-        "pct_defuse_share": 45.0,
+        "pct_defuse_share": 40.9,
         "avg_defuse_time": 29.1,
         "fk_after_plant_avg": 11.2,
         "fk_after_plant_n": 19
       },
       "B": {
-        "plant_count": 17,
-        "defuse_count": 6,
-        "pct_defuse_win": 35.3,
-        "pct_defuse_share": 30.0,
-        "avg_defuse_time": 20.7,
-        "fk_after_plant_avg": 8.1,
-        "fk_after_plant_n": 10
+        "plant_count": 20,
+        "defuse_count": 7,
+        "pct_defuse_win": 35.0,
+        "pct_defuse_share": 31.8,
+        "avg_defuse_time": 21.3,
+        "fk_after_plant_avg": 7.9,
+        "fk_after_plant_n": 13
       },
       "C": {
-        "plant_count": 18,
-        "defuse_count": 5,
-        "pct_defuse_win": 27.8,
-        "pct_defuse_share": 25.0,
-        "avg_defuse_time": 27.3,
-        "fk_after_plant_avg": 13.0,
-        "fk_after_plant_n": 13
+        "plant_count": 21,
+        "defuse_count": 6,
+        "pct_defuse_win": 28.6,
+        "pct_defuse_share": 27.3,
+        "avg_defuse_time": 27.7,
+        "fk_after_plant_avg": 15.1,
+        "fk_after_plant_n": 16
       }
     }
   },
   "team": "WIP Esports",
   "map": "Lotus",
   "matches": [
+    {
+      "date": "2026-05-12",
+      "opponent": "JL",
+      "matchId": "8d41bf67-47a4-42e4-b353-00e8342091b9"
+    },
     {
       "date": "2026-05-05",
       "opponent": "MDR",

@@ -7,6 +7,7 @@
     "pct_won_by_kills": 22.2,
     "won_by_explosion": 2,
     "pct_won_by_explosion": 22.2,
+    "avg_fk_time": 20.5,
     "sites": {
       "A": {
         "plant_count": 3,
@@ -38,6 +39,7 @@
     "pct_won_by_kills": 25.0,
     "won_by_defuse": 1,
     "pct_won_by_defuse": 8.3,
+    "avg_fk_time": 37.9,
     "sites": {
       "A": {
         "plant_count": 5,

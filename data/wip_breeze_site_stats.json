@@ -1,43 +1,45 @@
 {
   "t_side": {
-    "total_rounds": 29,
-    "rounds_won": 18,
-    "pct_rounds_won": 62.1,
-    "won_by_kills": 14,
-    "pct_won_by_kills": 48.3,
+    "total_rounds": 41,
+    "rounds_won": 19,
+    "pct_rounds_won": 46.3,
+    "won_by_kills": 15,
+    "pct_won_by_kills": 36.6,
     "won_by_explosion": 4,
-    "pct_won_by_explosion": 13.8,
+    "pct_won_by_explosion": 9.8,
+    "avg_fk_time": 25.0,
     "sites": {
       "A": {
-        "plant_count": 12,
-        "pct_plant": 63.2,
-        "pct_win": 91.7,
-        "avg_plant_time": 46.2,
+        "plant_count": 14,
+        "pct_plant": 60.9,
+        "pct_win": 78.6,
+        "avg_plant_time": 45.1,
         "min_plant_time": 20.8,
         "max_plant_time": 74.0,
-        "fk_to_plant_avg": 30.0,
-        "fk_to_plant_n": 8
+        "fk_to_plant_avg": 25.1,
+        "fk_to_plant_n": 10
       },
       "B": {
-        "plant_count": 7,
-        "pct_plant": 36.8,
-        "pct_win": 85.7,
-        "avg_plant_time": 44.0,
+        "plant_count": 9,
+        "pct_plant": 39.1,
+        "pct_win": 77.8,
+        "avg_plant_time": 46.0,
         "min_plant_time": 22.8,
         "max_plant_time": 83.4,
-        "fk_to_plant_avg": 24.7,
-        "fk_to_plant_n": 7
+        "fk_to_plant_avg": 21.6,
+        "fk_to_plant_n": 9
       }
     }
   },
   "ct_side": {
-    "total_rounds": 37,
+    "total_rounds": 39,
     "rounds_won": 16,
-    "pct_rounds_won": 43.2,
+    "pct_rounds_won": 41.0,
     "won_by_kills": 6,
-    "pct_won_by_kills": 16.2,
+    "pct_won_by_kills": 15.4,
     "won_by_defuse": 10,
-    "pct_won_by_defuse": 27.0,
+    "pct_won_by_defuse": 25.6,
+    "avg_fk_time": 32.4,
     "sites": {
       "A": {
         "plant_count": 13,
@@ -49,9 +51,9 @@
         "fk_after_plant_n": 10
       },
       "B": {
-        "plant_count": 13,
+        "plant_count": 14,
         "defuse_count": 6,
-        "pct_defuse_win": 46.2,
+        "pct_defuse_win": 42.9,
         "pct_defuse_share": 60.0,
         "avg_defuse_time": 28.7,
         "fk_after_plant_avg": 7.8,
@@ -62,6 +64,11 @@
   "team": "WIP Esports",
   "map": "Breeze",
   "matches": [
+    {
+      "date": "2026-05-12",
+      "opponent": "JL",
+      "matchId": "7f74b544-dcce-4a75-b233-050cab6dddf6"
+    },
     {
       "date": "2026-05-05",
       "opponent": "MDR",

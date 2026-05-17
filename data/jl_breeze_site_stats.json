@@ -1,16 +1,17 @@
 {
   "t_side": {
-    "total_rounds": 19,
-    "rounds_won": 9,
-    "pct_rounds_won": 47.4,
-    "won_by_kills": 7,
-    "pct_won_by_kills": 36.8,
+    "total_rounds": 21,
+    "rounds_won": 11,
+    "pct_rounds_won": 52.4,
+    "won_by_kills": 9,
+    "pct_won_by_kills": 42.9,
     "won_by_explosion": 2,
-    "pct_won_by_explosion": 10.5,
+    "pct_won_by_explosion": 9.5,
+    "avg_fk_time": 35.0,
     "sites": {
       "A": {
         "plant_count": 4,
-        "pct_plant": 40.0,
+        "pct_plant": 36.4,
         "pct_win": 75.0,
         "avg_plant_time": 55.2,
         "min_plant_time": 26.5,
@@ -19,49 +20,55 @@
         "fk_to_plant_n": 4
       },
       "B": {
-        "plant_count": 6,
-        "pct_plant": 60.0,
-        "pct_win": 83.3,
-        "avg_plant_time": 79.8,
+        "plant_count": 7,
+        "pct_plant": 63.6,
+        "pct_win": 85.7,
+        "avg_plant_time": 79.9,
         "min_plant_time": 57.0,
         "max_plant_time": 95.1,
-        "fk_to_plant_avg": 50.5,
-        "fk_to_plant_n": 5
+        "fk_to_plant_avg": 53.9,
+        "fk_to_plant_n": 6
       }
     }
   },
   "ct_side": {
-    "total_rounds": 24,
-    "rounds_won": 9,
-    "pct_rounds_won": 37.5,
-    "won_by_kills": 3,
-    "pct_won_by_kills": 12.5,
-    "won_by_defuse": 6,
+    "total_rounds": 36,
+    "rounds_won": 20,
+    "pct_rounds_won": 55.6,
+    "won_by_kills": 11,
+    "pct_won_by_kills": 30.6,
+    "won_by_defuse": 9,
     "pct_won_by_defuse": 25.0,
+    "avg_fk_time": 24.4,
     "sites": {
       "A": {
-        "plant_count": 8,
-        "defuse_count": 3,
-        "pct_defuse_win": 37.5,
-        "pct_defuse_share": 50.0,
-        "avg_defuse_time": 36.2,
-        "fk_after_plant_avg": 16.1,
-        "fk_after_plant_n": 6
+        "plant_count": 10,
+        "defuse_count": 5,
+        "pct_defuse_win": 50.0,
+        "pct_defuse_share": 55.6,
+        "avg_defuse_time": 34.8,
+        "fk_after_plant_avg": 13.0,
+        "fk_after_plant_n": 8
       },
       "B": {
-        "plant_count": 10,
-        "defuse_count": 3,
-        "pct_defuse_win": 30.0,
-        "pct_defuse_share": 50.0,
-        "avg_defuse_time": 23.0,
-        "fk_after_plant_avg": 11.6,
-        "fk_after_plant_n": 7
+        "plant_count": 12,
+        "defuse_count": 4,
+        "pct_defuse_win": 33.3,
+        "pct_defuse_share": 44.4,
+        "avg_defuse_time": 20.5,
+        "fk_after_plant_avg": 12.1,
+        "fk_after_plant_n": 9
       }
     }
   },
   "team": "JOBlife",
   "map": "Breeze",
   "matches": [
+    {
+      "date": "2026-05-12",
+      "opponent": "WIP",
+      "matchId": "7f74b544-dcce-4a75-b233-050cab6dddf6"
+    },
     {
       "date": "2026-04-26",
       "opponent": "MDR",

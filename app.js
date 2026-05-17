@@ -201,6 +201,7 @@ let activeRotationWindow = null; // "140_120" | "120_100" | "100_end" | "afterpl
 let fksNewRosterFilter = false;
 let agentIconMode = false;
 let activeSampleMatches = new Set(); // matchIds currently shown; empty = show all
+let _lastSampleContext = null; // { team, map, seenIds } — tracks last chip-init so side swaps preserve selection
 
 function isMatchActive(matchId) {
   return activeSampleMatches.size === 0 || activeSampleMatches.has(matchId);
@@ -1485,6 +1486,7 @@ function renderDefensivePanels(info) {
         ["ROUNDS WON", ts.rounds_won != null ? `${ts.rounds_won} (${fmt(ts.pct_rounds_won, "%")})` : "—"],
         ["WON BY KILLS", ts.won_by_kills != null ? `${ts.won_by_kills} (${fmt(ts.pct_won_by_kills, "%")})` : "—"],
         ["WON BY SPIKE EXPLOSION", ts.won_by_explosion != null ? `${ts.won_by_explosion} (${fmt(ts.pct_won_by_explosion, "%")})` : "—"],
+        ["AVG FK", ts.avg_fk_time != null ? fmtTime(ts.avg_fk_time) : "—"],
       ].map(([label, val]) => `<tr><td class="sst-summary-label">${label}</td><td class="sst-summary-val">${val}</td></tr>`).join("");
       siteStatsMarkup = `
         <div class="site-stats-wrap">
@@ -1517,6 +1519,7 @@ function renderDefensivePanels(info) {
         ["ROUNDS WON", cs.rounds_won != null ? `${cs.rounds_won} (${fmt(cs.pct_rounds_won, "%")})` : "—"],
         ["WON BY KILLS", cs.won_by_kills != null ? `${cs.won_by_kills} (${fmt(cs.pct_won_by_kills, "%")})` : "—"],
         ["WON BY DEFUSE", cs.won_by_defuse != null ? `${cs.won_by_defuse} (${fmt(cs.pct_won_by_defuse, "%")})` : "—"],
+        ["AVG FK", cs.avg_fk_time != null ? fmtTime(cs.avg_fk_time) : "—"],
       ].map(([label, val]) => `<tr><td class="sst-summary-label">${label}</td><td class="sst-summary-val">${val}</td></tr>`).join("");
       siteStatsMarkup = `
         <div class="site-stats-wrap">
@@ -1719,7 +1722,11 @@ function renderMapInfo() {
       ? rawSampleMaps.filter(m => FKS_NEW_ROSTER_OPPONENTS.has(m.opponent))
       : rawSampleMaps;
 
-    activeSampleMatches = new Set(sampleMaps.map(m => m.matchId));
+    const sampleContextKey = `${activeTeam}|${mapName}`;
+    if (_lastSampleContext?.key !== sampleContextKey) {
+      activeSampleMatches = new Set(sampleMaps.map(m => m.matchId));
+      _lastSampleContext = { key: sampleContextKey };
+    }
 
     renderDefensivePanels(defensiveInfo);
 
@@ -1727,7 +1734,10 @@ function renderMapInfo() {
       <p class="map-sample-label">${fksNewRosterFilter && showNewRosterBtn ? `New Roster (${sampleMaps.length} maps)` : `Last ${sampleSize} maps in sample`}</p>
       <div class="sample-chip-list">
         ${sampleMaps
-          .map((item) => `<button class="sample-chip sample-chip--toggle" data-match-id="${item.matchId}" aria-pressed="true">${item.date.slice(5)} ${mapName} vs ${item.opponent}</button>`)
+          .map((item) => {
+            const on = activeSampleMatches.has(item.matchId);
+            return `<button class="sample-chip sample-chip--toggle${on ? "" : " off"}" data-match-id="${item.matchId}" aria-pressed="${on}">${item.date.slice(5)} ${mapName} vs ${item.opponent}</button>`;
+          })
           .join("")}
       </div>
     `;

@@ -3,6 +3,12 @@
   "side": "ct",
   "selectedMaps": [
     {
+      "date": "2026-05-18",
+      "opponent": "NVJ",
+      "matchId": "67be656c-b3a3-479e-890a-45b404c20bc3",
+      "score": "6-13"
+    },
+    {
       "date": "2026-04-27",
       "opponent": "FA",
       "matchId": "6b0f0d53-c88a-43ef-a94f-7285974c2b62",
@@ -11,9 +17,189 @@
   ],
   "sites": {
     "A": {
-      "roundCount": 5,
-      "pointCount": 18,
+      "roundCount": 10,
+      "pointCount": 33,
       "points": [
+        {
+          "site": "A",
+          "player": "oroni",
+          "normX": 58.4252,
+          "normY": 47.6194,
+          "roundNum": 12,
+          "plantRoundTimeMs": 39272,
+          "date": "2026-05-18",
+          "opponent": "NVJ",
+          "matchId": "67be656c-b3a3-479e-890a-45b404c20bc3",
+          "score": "6-13"
+        },
+        {
+          "site": "A",
+          "player": "Docent",
+          "normX": 75.1094,
+          "normY": 46.1686,
+          "roundNum": 12,
+          "plantRoundTimeMs": 39272,
+          "date": "2026-05-18",
+          "opponent": "NVJ",
+          "matchId": "67be656c-b3a3-479e-890a-45b404c20bc3",
+          "score": "6-13"
+        },
+        {
+          "site": "A",
+          "player": "influx",
+          "normX": 76.4042,
+          "normY": 46.7614,
+          "roundNum": 12,
+          "plantRoundTimeMs": 39272,
+          "date": "2026-05-18",
+          "opponent": "NVJ",
+          "matchId": "67be656c-b3a3-479e-890a-45b404c20bc3",
+          "score": "6-13"
+        },
+        {
+          "site": "A",
+          "player": "MerSahaha",
+          "normX": 80.1092,
+          "normY": 36.9334,
+          "roundNum": 12,
+          "plantRoundTimeMs": 39272,
+          "date": "2026-05-18",
+          "opponent": "NVJ",
+          "matchId": "67be656c-b3a3-479e-890a-45b404c20bc3",
+          "score": "6-13"
+        },
+        {
+          "site": "A",
+          "player": "oroni",
+          "normX": 41.3744,
+          "normY": 55.0918,
+          "roundNum": 13,
+          "plantRoundTimeMs": 51820,
+          "date": "2026-05-18",
+          "opponent": "NVJ",
+          "matchId": "67be656c-b3a3-479e-890a-45b404c20bc3",
+          "score": "6-13"
+        },
+        {
+          "site": "A",
+          "player": "influx",
+          "normX": 25.7588,
+          "normY": 50.8096,
+          "roundNum": 13,
+          "plantRoundTimeMs": 51820,
+          "date": "2026-05-18",
+          "opponent": "NVJ",
+          "matchId": "67be656c-b3a3-479e-890a-45b404c20bc3",
+          "score": "6-13"
+        },
+        {
+          "site": "A",
+          "player": "MerSahaha",
+          "normX": 28.3796,
+          "normY": 47.2918,
+          "roundNum": 13,
+          "plantRoundTimeMs": 51820,
+          "date": "2026-05-18",
+          "opponent": "NVJ",
+          "matchId": "67be656c-b3a3-479e-890a-45b404c20bc3",
+          "score": "6-13"
+        },
+        {
+          "site": "A",
+          "player": "wezzy1",
+          "normX": 76.7084,
+          "normY": 48.4852,
+          "roundNum": 14,
+          "plantRoundTimeMs": 98938,
+          "date": "2026-05-18",
+          "opponent": "NVJ",
+          "matchId": "67be656c-b3a3-479e-890a-45b404c20bc3",
+          "score": "6-13"
+        },
+        {
+          "site": "A",
+          "player": "MerSahaha",
+          "normX": 67.1768,
+          "normY": 49.2184,
+          "roundNum": 14,
+          "plantRoundTimeMs": 98938,
+          "date": "2026-05-18",
+          "opponent": "NVJ",
+          "matchId": "67be656c-b3a3-479e-890a-45b404c20bc3",
+          "score": "6-13"
+        },
+        {
+          "site": "A",
+          "player": "Docent",
+          "normX": 41.6786,
+          "normY": 49.195,
+          "roundNum": 15,
+          "plantRoundTimeMs": 61499,
+          "date": "2026-05-18",
+          "opponent": "NVJ",
+          "matchId": "67be656c-b3a3-479e-890a-45b404c20bc3",
+          "score": "6-13"
+        },
+        {
+          "site": "A",
+          "player": "oroni",
+          "normX": 56.522,
+          "normY": 60.8014,
+          "roundNum": 18,
+          "plantRoundTimeMs": 63261,
+          "date": "2026-05-18",
+          "opponent": "NVJ",
+          "matchId": "67be656c-b3a3-479e-890a-45b404c20bc3",
+          "score": "6-13"
+        },
+        {
+          "site": "A",
+          "player": "wezzy1",
+          "normX": 42.1466,
+          "normY": 45.061,
+          "roundNum": 18,
+          "plantRoundTimeMs": 63261,
+          "date": "2026-05-18",
+          "opponent": "NVJ",
+          "matchId": "67be656c-b3a3-479e-890a-45b404c20bc3",
+          "score": "6-13"
+        },
+        {
+          "site": "A",
+          "player": "Docent",
+          "normX": 64.6262,
+          "normY": 62.0026,
+          "roundNum": 18,
+          "plantRoundTimeMs": 63261,
+          "date": "2026-05-18",
+          "opponent": "NVJ",
+          "matchId": "67be656c-b3a3-479e-890a-45b404c20bc3",
+          "score": "6-13"
+        },
+        {
+          "site": "A",
+          "player": "influx",
+          "normX": 56.4206,
+          "normY": 61.9246,
+          "roundNum": 18,
+          "plantRoundTimeMs": 63261,
+          "date": "2026-05-18",
+          "opponent": "NVJ",
+          "matchId": "67be656c-b3a3-479e-890a-45b404c20bc3",
+          "score": "6-13"
+        },
+        {
+          "site": "A",
+          "player": "MerSahaha",
+          "normX": 57.1148,
+          "normY": 61.87,
+          "roundNum": 18,
+          "plantRoundTimeMs": 63261,
+          "date": "2026-05-18",
+          "opponent": "NVJ",
+          "matchId": "67be656c-b3a3-479e-890a-45b404c20bc3",
+          "score": "6-13"
+        },
         {
           "site": "A",
           "player": "oroni",
@@ -233,9 +419,57 @@
       ]
     },
     "B": {
-      "roundCount": 3,
-      "pointCount": 11,
+      "roundCount": 5,
+      "pointCount": 15,
       "points": [
+        {
+          "site": "B",
+          "player": "Docent",
+          "normX": 26.0786,
+          "normY": 55.786,
+          "roundNum": 16,
+          "plantRoundTimeMs": 39935,
+          "date": "2026-05-18",
+          "opponent": "NVJ",
+          "matchId": "67be656c-b3a3-479e-890a-45b404c20bc3",
+          "score": "6-13"
+        },
+        {
+          "site": "B",
+          "player": "MerSahaha",
+          "normX": 60.9758,
+          "normY": 63.7108,
+          "roundNum": 16,
+          "plantRoundTimeMs": 39935,
+          "date": "2026-05-18",
+          "opponent": "NVJ",
+          "matchId": "67be656c-b3a3-479e-890a-45b404c20bc3",
+          "score": "6-13"
+        },
+        {
+          "site": "B",
+          "player": "influx",
+          "normX": 53.2226,
+          "normY": 46.4026,
+          "roundNum": 17,
+          "plantRoundTimeMs": 42442,
+          "date": "2026-05-18",
+          "opponent": "NVJ",
+          "matchId": "67be656c-b3a3-479e-890a-45b404c20bc3",
+          "score": "6-13"
+        },
+        {
+          "site": "B",
+          "player": "MerSahaha",
+          "normX": 32.81,
+          "normY": 57.5098,
+          "roundNum": 17,
+          "plantRoundTimeMs": 42442,
+          "date": "2026-05-18",
+          "opponent": "NVJ",
+          "matchId": "67be656c-b3a3-479e-890a-45b404c20bc3",
+          "score": "6-13"
+        },
         {
           "site": "B",
           "player": "oroni",

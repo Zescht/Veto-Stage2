@@ -1,27 +1,27 @@
 {
   "t_side": {
-    "total_rounds": 31,
-    "rounds_won": 16,
-    "pct_rounds_won": 51.6,
-    "won_by_kills": 12,
-    "pct_won_by_kills": 38.7,
+    "total_rounds": 36,
+    "rounds_won": 17,
+    "pct_rounds_won": 47.2,
+    "won_by_kills": 13,
+    "pct_won_by_kills": 36.1,
     "won_by_explosion": 4,
-    "pct_won_by_explosion": 12.9,
-    "avg_fk_time": 23.9,
+    "pct_won_by_explosion": 11.1,
+    "avg_fk_time": 26.2,
     "sites": {
       "A": {
-        "plant_count": 6,
-        "pct_plant": 37.5,
-        "pct_win": 66.7,
-        "avg_plant_time": 64.3,
-        "min_plant_time": 48.2,
+        "plant_count": 9,
+        "pct_plant": 47.4,
+        "pct_win": 55.6,
+        "avg_plant_time": 59.7,
+        "min_plant_time": 21.6,
         "max_plant_time": 76.5,
-        "fk_to_plant_avg": 27.5,
-        "fk_to_plant_n": 6
+        "fk_to_plant_avg": 29.8,
+        "fk_to_plant_n": 8
       },
       "B": {
         "plant_count": 10,
-        "pct_plant": 62.5,
+        "pct_plant": 52.6,
         "pct_win": 90.0,
         "avg_plant_time": 51.8,
         "min_plant_time": 28.2,
@@ -32,38 +32,43 @@
     }
   },
   "ct_side": {
-    "total_rounds": 48,
-    "rounds_won": 26,
-    "pct_rounds_won": 54.2,
-    "won_by_kills": 16,
-    "pct_won_by_kills": 33.3,
-    "won_by_defuse": 10,
-    "pct_won_by_defuse": 20.8,
-    "avg_fk_time": 30.5,
+    "total_rounds": 60,
+    "rounds_won": 29,
+    "pct_rounds_won": 48.3,
+    "won_by_kills": 18,
+    "pct_won_by_kills": 30.0,
+    "won_by_defuse": 11,
+    "pct_won_by_defuse": 18.3,
+    "avg_fk_time": 30.4,
     "sites": {
       "A": {
-        "plant_count": 16,
+        "plant_count": 20,
         "defuse_count": 5,
-        "pct_defuse_win": 31.2,
-        "pct_defuse_share": 50.0,
+        "pct_defuse_win": 25.0,
+        "pct_defuse_share": 45.5,
         "avg_defuse_time": 28.0,
-        "fk_after_plant_avg": 16.2,
-        "fk_after_plant_n": 13
+        "fk_after_plant_avg": 15.6,
+        "fk_after_plant_n": 15
       },
       "B": {
-        "plant_count": 13,
-        "defuse_count": 5,
-        "pct_defuse_win": 38.5,
-        "pct_defuse_share": 50.0,
-        "avg_defuse_time": 29.3,
-        "fk_after_plant_avg": 14.8,
-        "fk_after_plant_n": 9
+        "plant_count": 18,
+        "defuse_count": 6,
+        "pct_defuse_win": 33.3,
+        "pct_defuse_share": 54.5,
+        "avg_defuse_time": 30.7,
+        "fk_after_plant_avg": 17.1,
+        "fk_after_plant_n": 13
       }
     }
   },
   "team": "Besiktas",
   "map": "Split",
   "matches": [
+    {
+      "date": "2026-05-14",
+      "opponent": "RB",
+      "matchId": "2504b033-9955-4935-ba1e-f31aef5105f6"
+    },
     {
       "date": "2026-05-04",
       "opponent": "MISA",

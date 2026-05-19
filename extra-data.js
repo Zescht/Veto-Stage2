@@ -520,6 +520,21 @@ const extraVetoHistoryData = {
     "subtitle": "2026 veto history",
     "rows": [
       {
+        "date": "2026-05-18",
+        "opponent": "Beşiktaş Esports",
+        "opponentAbbr": "BJK",
+        "score": "1 - 2",
+        "source": "https://www.vlr.gg/team/21715/natus-vincere-junior",
+        "decider": "Breeze",
+        "deciderScore": "11:13",
+        "ban1":  { "map": "Pearl",    "type": "ban",  "ownerLabel": "BJK", "ownerKind": "opp"  },
+        "ban2":  { "map": "Lotus",    "type": "ban",  "ownerLabel": "NVJ", "ownerKind": "team" },
+        "pick1": { "map": "Fracture", "type": "pick", "ownerLabel": "BJK", "ownerKind": "opp",  "score": "13:6"  },
+        "pick2": { "map": "Haven",    "type": "pick", "ownerLabel": "NVJ", "ownerKind": "team", "score": "13:15" },
+        "ban3":  { "map": "Ascent",   "type": "ban",  "ownerLabel": "BJK", "ownerKind": "opp"  },
+        "ban4":  { "map": "Split",    "type": "ban",  "ownerLabel": "NVJ", "ownerKind": "team" }
+      },
+      {
         "date": "2026-05-13",
         "opponent": "Team Liquid Academy",
         "opponentAbbr": "TL",
@@ -1101,6 +1116,21 @@ const extraVetoHistoryData = {
     "ownerLabel": "BJK",
     "subtitle": "2026 veto history",
     "rows": [
+      {
+        "date": "2026-05-18",
+        "opponent": "NAVI Junior",
+        "opponentAbbr": "NVJ",
+        "score": "2 - 1",
+        "source": "https://www.vlr.gg/team/21715/natus-vincere-junior",
+        "decider": "Breeze",
+        "deciderScore": "13:11",
+        "ban1":  { "map": "Pearl",    "type": "ban",  "ownerLabel": "BJK", "ownerKind": "team" },
+        "ban2":  { "map": "Lotus",    "type": "ban",  "ownerLabel": "NVJ", "ownerKind": "opp"  },
+        "pick1": { "map": "Fracture", "type": "pick", "ownerLabel": "BJK", "ownerKind": "team", "score": "6:13"  },
+        "pick2": { "map": "Haven",    "type": "pick", "ownerLabel": "NVJ", "ownerKind": "opp",  "score": "15:13" },
+        "ban3":  { "map": "Ascent",   "type": "ban",  "ownerLabel": "BJK", "ownerKind": "team" },
+        "ban4":  { "map": "Split",    "type": "ban",  "ownerLabel": "NVJ", "ownerKind": "opp"  }
+      },
       {
         "date": "2026-05-14",
         "opponent": "REBORN",

@@ -502,5 +502,113 @@
         }
       ]
     }
+  },
+  "postPlant10_20": {
+    "A": {
+      "rounds": [
+        {
+          "roundNum": 6,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 12446,
+              "players": [
+                {
+                  "player": "Lime",
+                  "normX": 64.1959,
+                  "normY": 32.4761
+                },
+                {
+                  "player": "MAGNUM",
+                  "normX": 77.2467,
+                  "normY": 28.5526
+                },
+                {
+                  "player": "iluri",
+                  "normX": 61.7828,
+                  "normY": 42.1167
+                }
+              ]
+            }
+          ],
+          "matchId": "e64ebdea-c6b5-4a91-b257-e98a99f9e88b",
+          "date": "2026-04-13",
+          "opponent": "BG",
+          "score": "13-7"
+        },
+        {
+          "roundNum": 7,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 13954,
+              "players": [
+                {
+                  "player": "Lime",
+                  "normX": 67.3819,
+                  "normY": 27.5968
+                }
+              ]
+            }
+          ],
+          "matchId": "e64ebdea-c6b5-4a91-b257-e98a99f9e88b",
+          "date": "2026-04-13",
+          "opponent": "BG",
+          "score": "13-7"
+        },
+        {
+          "roundNum": 1,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 18232,
+              "players": [
+                {
+                  "player": "Proxh",
+                  "normX": 73.217,
+                  "normY": 69.6638
+                },
+                {
+                  "player": "MAGNUM",
+                  "normX": 74.633,
+                  "normY": 73.015
+                },
+                {
+                  "player": "Lime",
+                  "normX": 52.3369,
+                  "normY": 53.25
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18687,
+              "players": [
+                {
+                  "player": "MAGNUM",
+                  "normX": 74.7805,
+                  "normY": 72.071
+                },
+                {
+                  "player": "Lime",
+                  "normX": 52.4254,
+                  "normY": 52.5007
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18972,
+              "players": [
+                {
+                  "player": "MAGNUM",
+                  "normX": 74.9693,
+                  "normY": 71.7642
+                }
+              ]
+            }
+          ],
+          "matchId": "4b4a1e89-0e49-4c88-b24d-14b83a357980",
+          "date": "2026-03-29",
+          "opponent": "MDR",
+          "score": "13-7"
+        }
+      ]
+    }
   }
 }

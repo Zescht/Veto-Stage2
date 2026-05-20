@@ -700,5 +700,391 @@
         }
       ]
     }
+  },
+  "postPlant10_20": {
+    "A": {
+      "rounds": [
+        {
+          "roundNum": 1,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 16624,
+              "players": [
+                {
+                  "player": "OLIZERA",
+                  "normX": 40.8475,
+                  "normY": 54.6803
+                }
+              ]
+            }
+          ],
+          "matchId": "06bc6e38-7502-4746-b945-089b07cdfef3",
+          "date": "2026-03-28",
+          "opponent": "MDR",
+          "score": "7-13"
+        },
+        {
+          "roundNum": 5,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 11863,
+              "players": [
+                {
+                  "player": "Famsii",
+                  "normX": 28.72,
+                  "normY": 24.1628
+                },
+                {
+                  "player": "BULD",
+                  "normX": 29.8375,
+                  "normY": 15.9128
+                },
+                {
+                  "player": "Jesse",
+                  "normX": 35.0425,
+                  "normY": 33.9578
+                },
+                {
+                  "player": "OLIZERA",
+                  "normX": 35.4925,
+                  "normY": 33.5228
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 14895,
+              "players": [
+                {
+                  "player": "BULD",
+                  "normX": 31.96,
+                  "normY": 15.3728
+                },
+                {
+                  "player": "Jesse",
+                  "normX": 29.035,
+                  "normY": 31.3778
+                },
+                {
+                  "player": "OLIZERA",
+                  "normX": 31.135,
+                  "normY": 30.2978
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15716,
+              "players": [
+                {
+                  "player": "BULD",
+                  "normX": 33.085,
+                  "normY": 13.2653
+                },
+                {
+                  "player": "Jesse",
+                  "normX": 29.3875,
+                  "normY": 31.0478
+                },
+                {
+                  "player": "OLIZERA",
+                  "normX": 30.445,
+                  "normY": 26.9453
+                }
+              ]
+            }
+          ],
+          "matchId": "06bc6e38-7502-4746-b945-089b07cdfef3",
+          "date": "2026-03-28",
+          "opponent": "MDR",
+          "score": "7-13"
+        },
+        {
+          "roundNum": 14,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 14193,
+              "players": [
+                {
+                  "player": "BULD",
+                  "normX": 30.58,
+                  "normY": 12.5078
+                },
+                {
+                  "player": "Jesse",
+                  "normX": 62.6875,
+                  "normY": 35.6903
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 16534,
+              "players": [
+                {
+                  "player": "BULD",
+                  "normX": 30.8875,
+                  "normY": 12.3728
+                },
+                {
+                  "player": "Jesse",
+                  "normX": 65.4175,
+                  "normY": 36.5078
+                }
+              ]
+            }
+          ],
+          "matchId": "bd669550-8151-4b1b-ba64-a05640d822ab",
+          "date": "2026-04-27",
+          "opponent": "NOVO",
+          "score": "5-13"
+        }
+      ]
+    },
+    "C": {
+      "rounds": [
+        {
+          "roundNum": 3,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 14522,
+              "players": [
+                {
+                  "player": "BULD",
+                  "normX": 33.7375,
+                  "normY": 68.2778
+                },
+                {
+                  "player": "Jesse",
+                  "normX": 56.2975,
+                  "normY": 54.2078
+                },
+                {
+                  "player": "OLIZERA",
+                  "normX": 40.5325,
+                  "normY": 65.5178
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 17745,
+              "players": [
+                {
+                  "player": "BULD",
+                  "normX": 27.9175,
+                  "normY": 70.4078
+                },
+                {
+                  "player": "OLIZERA",
+                  "normX": 31.2475,
+                  "normY": 67.5653
+                }
+              ]
+            }
+          ],
+          "matchId": "06bc6e38-7502-4746-b945-089b07cdfef3",
+          "date": "2026-03-28",
+          "opponent": "MDR",
+          "score": "7-13"
+        },
+        {
+          "roundNum": 12,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 17899,
+              "players": [
+                {
+                  "player": "Jesse",
+                  "normX": 40.2925,
+                  "normY": 68.4503
+                },
+                {
+                  "player": "Famsii",
+                  "normX": 32.6875,
+                  "normY": 64.1003
+                },
+                {
+                  "player": "BULD",
+                  "normX": 33.0775,
+                  "normY": 65.4503
+                },
+                {
+                  "player": "B1SK",
+                  "normX": 49.42,
+                  "normY": 66.2453
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18767,
+              "players": [
+                {
+                  "player": "Jesse",
+                  "normX": 40.99,
+                  "normY": 67.2953
+                },
+                {
+                  "player": "Famsii",
+                  "normX": 30.715,
+                  "normY": 64.1003
+                },
+                {
+                  "player": "BULD",
+                  "normX": 29.3875,
+                  "normY": 65.9153
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 19576,
+              "players": [
+                {
+                  "player": "Jesse",
+                  "normX": 40.9675,
+                  "normY": 63.8528
+                },
+                {
+                  "player": "Famsii",
+                  "normX": 30.625,
+                  "normY": 64.4528
+                },
+                {
+                  "player": "BULD",
+                  "normX": 27.9175,
+                  "normY": 69.0428
+                }
+              ]
+            }
+          ],
+          "matchId": "4a1fcc29-2de1-4d96-90b2-d92c933886a0",
+          "date": "2026-04-06",
+          "opponent": "KPI",
+          "score": "13-6"
+        },
+        {
+          "roundNum": 12,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 18739,
+              "players": [
+                {
+                  "player": "Famsii",
+                  "normX": 47.755,
+                  "normY": 71.5778
+                }
+              ]
+            }
+          ],
+          "matchId": "bd669550-8151-4b1b-ba64-a05640d822ab",
+          "date": "2026-04-27",
+          "opponent": "NOVO",
+          "score": "5-13"
+        },
+        {
+          "roundNum": 16,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 13235,
+              "players": [
+                {
+                  "player": "Famsii",
+                  "normX": 44.4475,
+                  "normY": 65.4878
+                },
+                {
+                  "player": "BULD",
+                  "normX": 58.585,
+                  "normY": 60.3353
+                },
+                {
+                  "player": "OLIZERA",
+                  "normX": 32.5675,
+                  "normY": 66.5453
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15093,
+              "players": [
+                {
+                  "player": "Famsii",
+                  "normX": 46.9225,
+                  "normY": 68.5778
+                },
+                {
+                  "player": "BULD",
+                  "normX": 55.45,
+                  "normY": 63.2978
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 17319,
+              "players": [
+                {
+                  "player": "BULD",
+                  "normX": 49.5625,
+                  "normY": 66.3803
+                }
+              ]
+            }
+          ],
+          "matchId": "bd669550-8151-4b1b-ba64-a05640d822ab",
+          "date": "2026-04-27",
+          "opponent": "NOVO",
+          "score": "5-13"
+        }
+      ]
+    },
+    "B": {
+      "rounds": [
+        {
+          "roundNum": 18,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 12267,
+              "players": [
+                {
+                  "player": "Famsii",
+                  "normX": 53.665,
+                  "normY": 51.0803
+                },
+                {
+                  "player": "BULD",
+                  "normX": 67.225,
+                  "normY": 48.2303
+                },
+                {
+                  "player": "OLIZERA",
+                  "normX": 48.1675,
+                  "normY": 54.9503
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 19354,
+              "players": [
+                {
+                  "player": "Famsii",
+                  "normX": 42.805,
+                  "normY": 51.8828
+                },
+                {
+                  "player": "BULD",
+                  "normX": 46.255,
+                  "normY": 53.8103
+                },
+                {
+                  "player": "OLIZERA",
+                  "normX": 41.9425,
+                  "normY": 53.9228
+                }
+              ]
+            }
+          ],
+          "matchId": "4a1fcc29-2de1-4d96-90b2-d92c933886a0",
+          "date": "2026-04-06",
+          "opponent": "KPI",
+          "score": "13-6"
+        }
+      ]
+    }
   }
 }

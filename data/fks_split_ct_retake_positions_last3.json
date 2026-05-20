@@ -490,5 +490,344 @@
         }
       ]
     }
+  },
+  "postPlant10_20": {
+    "A": {
+      "rounds": [
+        {
+          "roundNum": 12,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 11433,
+              "players": [
+                {
+                  "player": "shinnok",
+                  "normX": 43.1908,
+                  "normY": 21.3588
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 16055,
+              "players": [
+                {
+                  "player": "shinnok",
+                  "normX": 49.774,
+                  "normY": 22.9812
+                }
+              ]
+            }
+          ],
+          "matchId": "22607544-de81-49bc-8f37-85c70f596d0b",
+          "date": "2026-03-20",
+          "opponent": "EP",
+          "score": "3-13"
+        },
+        {
+          "roundNum": 18,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 14090,
+              "players": [
+                {
+                  "player": "shinnok",
+                  "normX": 28.675,
+                  "normY": 25.6956
+                },
+                {
+                  "player": "MOLSI",
+                  "normX": 29.3614,
+                  "normY": 12.0222
+                },
+                {
+                  "player": "pa1ze",
+                  "normX": 26.9044,
+                  "normY": 5.3532
+                }
+              ]
+            }
+          ],
+          "matchId": "43af4785-7ee2-49d6-a74f-42adec2cf403",
+          "date": "2026-03-21",
+          "opponent": "BAR",
+          "score": "13-8"
+        },
+        {
+          "roundNum": 4,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 13422,
+              "players": [
+                {
+                  "player": "pa1ze",
+                  "normX": 25.0636,
+                  "normY": 24.4788
+                },
+                {
+                  "player": "Serial",
+                  "normX": 25.0792,
+                  "normY": 22.8876
+                },
+                {
+                  "player": "YaBoiLewis",
+                  "normX": 33.5032,
+                  "normY": 27.2946
+                },
+                {
+                  "player": "MOLSI",
+                  "normX": 30.196,
+                  "normY": 27.3726
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 14098,
+              "players": [
+                {
+                  "player": "pa1ze",
+                  "normX": 27.154,
+                  "normY": 25.5474
+                },
+                {
+                  "player": "Serial",
+                  "normX": 26.6626,
+                  "normY": 24.705
+                },
+                {
+                  "player": "MOLSI",
+                  "normX": 30.5158,
+                  "normY": 27.9576
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 14434,
+              "players": [
+                {
+                  "player": "pa1ze",
+                  "normX": 28.0744,
+                  "normY": 25.7346
+                },
+                {
+                  "player": "Serial",
+                  "normX": 27.9028,
+                  "normY": 25.1028
+                },
+                {
+                  "player": "MOLSI",
+                  "normX": 30.6016,
+                  "normY": 29.502
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15147,
+              "players": [
+                {
+                  "player": "Serial",
+                  "normX": 29.377,
+                  "normY": 25.1886
+                },
+                {
+                  "player": "MOLSI",
+                  "normX": 30.9526,
+                  "normY": 30.3678
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15563,
+              "players": [
+                {
+                  "player": "MOLSI",
+                  "normX": 29.5408,
+                  "normY": 30.3522
+                }
+              ]
+            }
+          ],
+          "matchId": "2f81e93e-3c51-4ef3-82c4-b04698afc1e1",
+          "date": "2026-04-25",
+          "opponent": "CGN",
+          "score": "7-13"
+        },
+        {
+          "roundNum": 8,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 13625,
+              "players": [
+                {
+                  "player": "pa1ze",
+                  "normX": 51.9658,
+                  "normY": 20.0328
+                },
+                {
+                  "player": "Serial",
+                  "normX": 37.372,
+                  "normY": 32.7156
+                },
+                {
+                  "player": "YaBoiLewis",
+                  "normX": 35.0554,
+                  "normY": 33.2148
+                },
+                {
+                  "player": "MOLSI",
+                  "normX": 25.1494,
+                  "normY": 29.8764
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 17921,
+              "players": [
+                {
+                  "player": "pa1ze",
+                  "normX": 52.6678,
+                  "normY": 17.7006
+                },
+                {
+                  "player": "Serial",
+                  "normX": 30.313,
+                  "normY": 30.3054
+                },
+                {
+                  "player": "YaBoiLewis",
+                  "normX": 31.4128,
+                  "normY": 32.505
+                },
+                {
+                  "player": "MOLSI",
+                  "normX": 22.513,
+                  "normY": 40.149
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18191,
+              "players": [
+                {
+                  "player": "pa1ze",
+                  "normX": 52.6678,
+                  "normY": 17.7006
+                },
+                {
+                  "player": "YaBoiLewis",
+                  "normX": 31.3114,
+                  "normY": 32.505
+                },
+                {
+                  "player": "MOLSI",
+                  "normX": 21.8656,
+                  "normY": 40.4688
+                }
+              ]
+            }
+          ],
+          "matchId": "2f81e93e-3c51-4ef3-82c4-b04698afc1e1",
+          "date": "2026-04-25",
+          "opponent": "CGN",
+          "score": "7-13"
+        }
+      ]
+    },
+    "B": {
+      "rounds": [
+        {
+          "roundNum": 12,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 12684,
+              "players": [
+                {
+                  "player": "Serial",
+                  "normX": 46.1392,
+                  "normY": 75.4206
+                },
+                {
+                  "player": "shinnok",
+                  "normX": 19.9234,
+                  "normY": 79.383
+                },
+                {
+                  "player": "MOLSI",
+                  "normX": 38.2768,
+                  "normY": 71.9886
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15689,
+              "players": [
+                {
+                  "player": "Serial",
+                  "normX": 43.6198,
+                  "normY": 72.6516
+                },
+                {
+                  "player": "shinnok",
+                  "normX": 27.5206,
+                  "normY": 81.1848
+                },
+                {
+                  "player": "MOLSI",
+                  "normX": 42.013,
+                  "normY": 76.1148
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 17148,
+              "players": [
+                {
+                  "player": "Serial",
+                  "normX": 44.8522,
+                  "normY": 73.299
+                },
+                {
+                  "player": "shinnok",
+                  "normX": 27.1696,
+                  "normY": 81.3564
+                },
+                {
+                  "player": "MOLSI",
+                  "normX": 42.4888,
+                  "normY": 76.3254
+                }
+              ]
+            }
+          ],
+          "matchId": "43af4785-7ee2-49d6-a74f-42adec2cf403",
+          "date": "2026-03-21",
+          "opponent": "BAR",
+          "score": "13-8"
+        },
+        {
+          "roundNum": 5,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 12497,
+              "players": [
+                {
+                  "player": "YaBoiLewis",
+                  "normX": 27.7312,
+                  "normY": 67.9872
+                },
+                {
+                  "player": "shinnok",
+                  "normX": 45.796,
+                  "normY": 55.0548
+                }
+              ]
+            }
+          ],
+          "matchId": "2f81e93e-3c51-4ef3-82c4-b04698afc1e1",
+          "date": "2026-04-25",
+          "opponent": "CGN",
+          "score": "7-13"
+        }
+      ]
+    }
   }
 }

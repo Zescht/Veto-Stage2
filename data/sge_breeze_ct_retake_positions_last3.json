@@ -508,5 +508,406 @@
         }
       ]
     }
+  },
+  "postPlant10_20": {
+    "A": {
+      "rounds": [
+        {
+          "roundNum": 12,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 16800,
+              "players": [
+                {
+                  "player": "MONSTEERR",
+                  "normX": 71.8523,
+                  "normY": 51.9338
+                },
+                {
+                  "player": "musashi",
+                  "normX": 86.8463,
+                  "normY": 36.9188
+                },
+                {
+                  "player": "azury",
+                  "normX": 74.6873,
+                  "normY": 48.8818
+                },
+                {
+                  "player": "Fizzy",
+                  "normX": 86.0133,
+                  "normY": 40.4678
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 17771,
+              "players": [
+                {
+                  "player": "MONSTEERR",
+                  "normX": 74.1483,
+                  "normY": 51.9268
+                },
+                {
+                  "player": "musashi",
+                  "normX": 87.0073,
+                  "normY": 37.8638
+                },
+                {
+                  "player": "azury",
+                  "normX": 75.4293,
+                  "normY": 49.2948
+                }
+              ]
+            }
+          ],
+          "matchId": "fd6c3337-92a5-479d-aa2f-30f9fd9dab60",
+          "date": "2026-04-19",
+          "opponent": "CGN",
+          "score": "8-13"
+        },
+        {
+          "roundNum": 14,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 12930,
+              "players": [
+                {
+                  "player": "Jamelinho",
+                  "normX": 92.0543,
+                  "normY": 42.6588
+                }
+              ]
+            }
+          ],
+          "matchId": "fd6c3337-92a5-479d-aa2f-30f9fd9dab60",
+          "date": "2026-04-19",
+          "opponent": "CGN",
+          "score": "8-13"
+        },
+        {
+          "roundNum": 15,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 15149,
+              "players": [
+                {
+                  "player": "MONSTEERR",
+                  "normX": 78.5863,
+                  "normY": 30.4718
+                },
+                {
+                  "player": "musashi",
+                  "normX": 76.4723,
+                  "normY": 33.2508
+                },
+                {
+                  "player": "azury",
+                  "normX": 65.7063,
+                  "normY": 35.2738
+                },
+                {
+                  "player": "Fizzy",
+                  "normX": 80.5883,
+                  "normY": 30.6748
+                },
+                {
+                  "player": "Jamelinho",
+                  "normX": 72.6853,
+                  "normY": 25.6558
+                }
+              ]
+            }
+          ],
+          "matchId": "fd6c3337-92a5-479d-aa2f-30f9fd9dab60",
+          "date": "2026-04-19",
+          "opponent": "CGN",
+          "score": "8-13"
+        },
+        {
+          "roundNum": 14,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 11381,
+              "players": [
+                {
+                  "player": "Jamelinho",
+                  "normX": 75.5693,
+                  "normY": 43.0298
+                },
+                {
+                  "player": "azury",
+                  "normX": 75.3313,
+                  "normY": 28.4698
+                },
+                {
+                  "player": "Fizzy",
+                  "normX": 38.8333,
+                  "normY": 64.0858
+                },
+                {
+                  "player": "musashi",
+                  "normX": 73.1123,
+                  "normY": 35.7778
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 12381,
+              "players": [
+                {
+                  "player": "Jamelinho",
+                  "normX": 77.2353,
+                  "normY": 43.1138
+                },
+                {
+                  "player": "azury",
+                  "normX": 74.3163,
+                  "normY": 32.0818
+                },
+                {
+                  "player": "musashi",
+                  "normX": 73.2593,
+                  "normY": 38.1718
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 13892,
+              "players": [
+                {
+                  "player": "Jamelinho",
+                  "normX": 76.7033,
+                  "normY": 42.9948
+                },
+                {
+                  "player": "azury",
+                  "normX": 73.4063,
+                  "normY": 34.6298
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 14461,
+              "players": [
+                {
+                  "player": "Jamelinho",
+                  "normX": 78.0473,
+                  "normY": 42.9178
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 14782,
+              "players": [
+                {
+                  "player": "Jamelinho",
+                  "normX": 78.1313,
+                  "normY": 42.6588
+                }
+              ]
+            }
+          ],
+          "matchId": "431fd751-99a6-4b71-a48f-41297e5fe01d",
+          "date": "2026-04-12",
+          "opponent": "FKS",
+          "score": "13-5"
+        },
+        {
+          "roundNum": 15,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 17005,
+              "players": [
+                {
+                  "player": "MONSTEERR",
+                  "normX": 45.8473,
+                  "normY": 40.6078
+                },
+                {
+                  "player": "azury",
+                  "normX": 82.4293,
+                  "normY": 61.5308
+                }
+              ]
+            }
+          ],
+          "matchId": "431fd751-99a6-4b71-a48f-41297e5fe01d",
+          "date": "2026-04-12",
+          "opponent": "FKS",
+          "score": "13-5"
+        }
+      ]
+    },
+    "B": {
+      "rounds": [
+        {
+          "roundNum": 13,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 12458,
+              "players": [
+                {
+                  "player": "Fizzy",
+                  "normX": 39.4773,
+                  "normY": 37.8218
+                }
+              ]
+            }
+          ],
+          "matchId": "fd6c3337-92a5-479d-aa2f-30f9fd9dab60",
+          "date": "2026-04-19",
+          "opponent": "CGN",
+          "score": "8-13"
+        },
+        {
+          "roundNum": 16,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 19854,
+              "players": [
+                {
+                  "player": "azury",
+                  "normX": 46.5193,
+                  "normY": 64.5128
+                },
+                {
+                  "player": "Fizzy",
+                  "normX": 26.6393,
+                  "normY": 38.8298
+                },
+                {
+                  "player": "Jamelinho",
+                  "normX": 41.3463,
+                  "normY": 34.1118
+                }
+              ]
+            }
+          ],
+          "matchId": "fd6c3337-92a5-479d-aa2f-30f9fd9dab60",
+          "date": "2026-04-19",
+          "opponent": "CGN",
+          "score": "8-13"
+        },
+        {
+          "roundNum": 17,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 11950,
+              "players": [
+                {
+                  "player": "azury",
+                  "normX": 16.5103,
+                  "normY": 48.7768
+                },
+                {
+                  "player": "Fizzy",
+                  "normX": 29.6493,
+                  "normY": 8.8068
+                },
+                {
+                  "player": "Jamelinho",
+                  "normX": 14.5783,
+                  "normY": 46.3898
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15463,
+              "players": [
+                {
+                  "player": "azury",
+                  "normX": 14.9773,
+                  "normY": 45.0598
+                },
+                {
+                  "player": "Fizzy",
+                  "normX": 27.7663,
+                  "normY": 8.6948
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 19195,
+              "players": [
+                {
+                  "player": "azury",
+                  "normX": 12.2053,
+                  "normY": 42.9318
+                },
+                {
+                  "player": "Fizzy",
+                  "normX": 26.6253,
+                  "normY": 16.8148
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 19615,
+              "players": [
+                {
+                  "player": "azury",
+                  "normX": 12.2053,
+                  "normY": 42.9318
+                },
+                {
+                  "player": "Fizzy",
+                  "normX": 26.6953,
+                  "normY": 17.5778
+                }
+              ]
+            }
+          ],
+          "matchId": "fd6c3337-92a5-479d-aa2f-30f9fd9dab60",
+          "date": "2026-04-19",
+          "opponent": "CGN",
+          "score": "8-13"
+        },
+        {
+          "roundNum": 18,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 16607,
+              "players": [
+                {
+                  "player": "musashi",
+                  "normX": 8.8803,
+                  "normY": 24.2628
+                },
+                {
+                  "player": "azury",
+                  "normX": 19.0583,
+                  "normY": 36.0298
+                },
+                {
+                  "player": "Fizzy",
+                  "normX": 12.5833,
+                  "normY": 27.2798
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 16624,
+              "players": [
+                {
+                  "player": "azury",
+                  "normX": 19.0583,
+                  "normY": 36.0298
+                },
+                {
+                  "player": "Fizzy",
+                  "normX": 12.4503,
+                  "normY": 27.4898
+                }
+              ]
+            }
+          ],
+          "matchId": "fd6c3337-92a5-479d-aa2f-30f9fd9dab60",
+          "date": "2026-04-19",
+          "opponent": "CGN",
+          "score": "8-13"
+        }
+      ]
+    }
   }
 }

@@ -490,5 +490,580 @@
         }
       ]
     }
+  },
+  "postPlant10_20": {
+    "B": {
+      "rounds": [
+        {
+          "roundNum": 1,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 15682,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 22.4603,
+                  "normY": 16.1918
+                },
+                {
+                  "player": "Raz",
+                  "normX": 25.0713,
+                  "normY": 21.4558
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 35.2353,
+                  "normY": 26.9088
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 28.0183,
+                  "normY": 25.1658
+                }
+              ]
+            }
+          ],
+          "matchId": "9285a983-122c-45f1-8eaf-355c4976ed7b",
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "score": "6-13"
+        },
+        {
+          "roundNum": 6,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 14241,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 24.3153,
+                  "normY": 16.8428
+                },
+                {
+                  "player": "Bishepss",
+                  "normX": 56.4243,
+                  "normY": 69.4268
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 44.2583,
+                  "normY": 72.7658
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15013,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 23.9373,
+                  "normY": 15.7298
+                },
+                {
+                  "player": "Bishepss",
+                  "normX": 56.2913,
+                  "normY": 71.4078
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 16595,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 24.6233,
+                  "normY": 17.5918
+                },
+                {
+                  "player": "Bishepss",
+                  "normX": 56.2353,
+                  "normY": 73.5498
+                }
+              ]
+            }
+          ],
+          "matchId": "9285a983-122c-45f1-8eaf-355c4976ed7b",
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "score": "6-13"
+        },
+        {
+          "roundNum": 10,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 16903,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 16.5803,
+                  "normY": 63.9388
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 49.6273,
+                  "normY": 20.0418
+                }
+              ]
+            }
+          ],
+          "matchId": "9285a983-122c-45f1-8eaf-355c4976ed7b",
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "score": "6-13"
+        },
+        {
+          "roundNum": 1,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 17707,
+              "players": [
+                {
+                  "player": "Bishepss",
+                  "normX": 28.4173,
+                  "normY": 30.1288
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18360,
+              "players": [
+                {
+                  "player": "Bishepss",
+                  "normX": 26.6603,
+                  "normY": 31.1858
+                }
+              ]
+            }
+          ],
+          "matchId": "cc70e241-afc2-41aa-b9ff-072e15602802",
+          "date": "2026-04-14",
+          "opponent": "UNI",
+          "score": "13-6"
+        },
+        {
+          "roundNum": 3,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 19433,
+              "players": [
+                {
+                  "player": "Bishepss",
+                  "normX": 44.8743,
+                  "normY": 23.9198
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 15.6703,
+                  "normY": 66.7248
+                }
+              ]
+            }
+          ],
+          "matchId": "cc70e241-afc2-41aa-b9ff-072e15602802",
+          "date": "2026-04-14",
+          "opponent": "UNI",
+          "score": "13-6"
+        },
+        {
+          "roundNum": 14,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 11621,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 45.0563,
+                  "normY": 28.7568
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 45.4553,
+                  "normY": 14.5608
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 38.8753,
+                  "normY": 29.4568
+                }
+              ]
+            }
+          ],
+          "matchId": "e3de50cf-7eec-465c-942b-caf6cc8371f2",
+          "date": "2026-05-04",
+          "opponent": "NVJ",
+          "score": "7-13"
+        }
+      ]
+    },
+    "A": {
+      "rounds": [
+        {
+          "roundNum": 2,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 18669,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 61.5343,
+                  "normY": 45.9348
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 69.1293,
+                  "normY": 37.8988
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 73.2803,
+                  "normY": 45.0388
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 19206,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 62.6473,
+                  "normY": 46.1798
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 69.3393,
+                  "normY": 36.8768
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 72.6573,
+                  "normY": 43.4008
+                }
+              ]
+            }
+          ],
+          "matchId": "9285a983-122c-45f1-8eaf-355c4976ed7b",
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "score": "6-13"
+        },
+        {
+          "roundNum": 7,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 12073,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 56.6763,
+                  "normY": 48.6578
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 71.4393,
+                  "normY": 22.5128
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 66.3013,
+                  "normY": 43.7648
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 12424,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 58.3773,
+                  "normY": 47.9928
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 71.4253,
+                  "normY": 22.5618
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 17178,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 68.7163,
+                  "normY": 48.7138
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18079,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 69.0733,
+                  "normY": 50.5338
+                }
+              ]
+            }
+          ],
+          "matchId": "9285a983-122c-45f1-8eaf-355c4976ed7b",
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "score": "6-13"
+        },
+        {
+          "roundNum": 0,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 15630,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 64.3693,
+                  "normY": 46.8448
+                },
+                {
+                  "player": "Raz",
+                  "normX": 79.7553,
+                  "normY": 62.5948
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 80.8753,
+                  "normY": 65.0168
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18467,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 64.9993,
+                  "normY": 45.5008
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 86.7623,
+                  "normY": 65.1918
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18899,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 66.2873,
+                  "normY": 45.8998
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 87.4833,
+                  "normY": 64.5688
+                }
+              ]
+            }
+          ],
+          "matchId": "cc70e241-afc2-41aa-b9ff-072e15602802",
+          "date": "2026-04-14",
+          "opponent": "UNI",
+          "score": "13-6"
+        },
+        {
+          "roundNum": 2,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 17917,
+              "players": [
+                {
+                  "player": "Raz",
+                  "normX": 58.2723,
+                  "normY": 48.7138
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 75.3943,
+                  "normY": 21.4138
+                }
+              ]
+            }
+          ],
+          "matchId": "cc70e241-afc2-41aa-b9ff-072e15602802",
+          "date": "2026-04-14",
+          "opponent": "UNI",
+          "score": "13-6"
+        },
+        {
+          "roundNum": 6,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 12412,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 88.0363,
+                  "normY": 35.8478
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 66.8683,
+                  "normY": 35.4138
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 52.0423,
+                  "normY": 54.2298
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 12604,
+              "players": [
+                {
+                  "player": "Redgar",
+                  "normX": 66.8683,
+                  "normY": 35.4138
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 52.4203,
+                  "normY": 53.6488
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 16826,
+              "players": [
+                {
+                  "player": "Redgar",
+                  "normX": 68.6253,
+                  "normY": 33.6638
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 66.1263,
+                  "normY": 45.5708
+                }
+              ]
+            }
+          ],
+          "matchId": "cc70e241-afc2-41aa-b9ff-072e15602802",
+          "date": "2026-04-14",
+          "opponent": "UNI",
+          "score": "13-6"
+        },
+        {
+          "roundNum": 8,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 17475,
+              "players": [
+                {
+                  "player": "Bishepss",
+                  "normX": 76.8993,
+                  "normY": 62.1328
+                }
+              ]
+            }
+          ],
+          "matchId": "cc70e241-afc2-41aa-b9ff-072e15602802",
+          "date": "2026-04-14",
+          "opponent": "UNI",
+          "score": "13-6"
+        },
+        {
+          "roundNum": 10,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 16215,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 87.9243,
+                  "normY": 35.7638
+                },
+                {
+                  "player": "Raz",
+                  "normX": 86.9583,
+                  "normY": 34.7698
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 79.2023,
+                  "normY": 43.0438
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 17274,
+              "players": [
+                {
+                  "player": "Raz",
+                  "normX": 87.1333,
+                  "normY": 34.9518
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 79.0903,
+                  "normY": 42.6868
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 17645,
+              "players": [
+                {
+                  "player": "Raz",
+                  "normX": 86.6083,
+                  "normY": 34.6508
+                }
+              ]
+            }
+          ],
+          "matchId": "cc70e241-afc2-41aa-b9ff-072e15602802",
+          "date": "2026-04-14",
+          "opponent": "UNI",
+          "score": "13-6"
+        },
+        {
+          "roundNum": 11,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 15324,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 47.3803,
+                  "normY": 46.4808
+                }
+              ]
+            }
+          ],
+          "matchId": "cc70e241-afc2-41aa-b9ff-072e15602802",
+          "date": "2026-04-14",
+          "opponent": "UNI",
+          "score": "13-6"
+        },
+        {
+          "roundNum": 16,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 17734,
+              "players": [
+                {
+                  "player": "Redgar",
+                  "normX": 67.9393,
+                  "normY": 22.9538
+                }
+              ]
+            }
+          ],
+          "matchId": "e3de50cf-7eec-465c-942b-caf6cc8371f2",
+          "date": "2026-05-04",
+          "opponent": "NVJ",
+          "score": "7-13"
+        }
+      ]
+    }
   }
 }

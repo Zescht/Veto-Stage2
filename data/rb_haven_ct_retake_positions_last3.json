@@ -328,5 +328,93 @@
         }
       ]
     }
+  },
+  "postPlant10_20": {
+    "B": {
+      "rounds": [
+        {
+          "roundNum": 4,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 12902,
+              "players": [
+                {
+                  "player": "Kachoww",
+                  "normX": 45.7975,
+                  "normY": 55.7078
+                },
+                {
+                  "player": "hezacoil",
+                  "normX": 50.5075,
+                  "normY": 63.8078
+                },
+                {
+                  "player": "Deadink",
+                  "normX": 31.09,
+                  "normY": 32.4053
+                },
+                {
+                  "player": "batujnax",
+                  "normX": 46.7275,
+                  "normY": 45.9428
+                },
+                {
+                  "player": "reazy",
+                  "normX": 44.545,
+                  "normY": 45.9278
+                }
+              ]
+            }
+          ],
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "date": "2026-04-27",
+          "opponent": "MISA",
+          "score": "13-6"
+        }
+      ]
+    },
+    "A": {
+      "rounds": [
+        {
+          "roundNum": 6,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 13203,
+              "players": [
+                {
+                  "player": "hezacoil",
+                  "normX": 30.955,
+                  "normY": 12.0803
+                },
+                {
+                  "player": "Deadink",
+                  "normX": 26.575,
+                  "normY": 33.7403
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18643,
+              "players": [
+                {
+                  "player": "hezacoil",
+                  "normX": 32.905,
+                  "normY": 12.8528
+                },
+                {
+                  "player": "Deadink",
+                  "normX": 33.07,
+                  "normY": 32.4503
+                }
+              ]
+            }
+          ],
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "date": "2026-04-27",
+          "opponent": "MISA",
+          "score": "13-6"
+        }
+      ]
+    }
   }
 }

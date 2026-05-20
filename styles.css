@@ -939,6 +939,19 @@ body {
   color: #0d7c4b;
 }
 
+.retake-pp-toggle {
+  color: #7c5c1a;
+  background: rgba(251, 191, 36, 0.15);
+  border-color: rgba(251, 191, 36, 0.4);
+  margin-left: auto;
+}
+
+.retake-pp-toggle--active {
+  background: rgba(251, 146, 60, 0.9);
+  color: #1a0f00;
+  border-color: #f97316;
+}
+
 .retake-site-tag {
   position: absolute;
   z-index: 4;

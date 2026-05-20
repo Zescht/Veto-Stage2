@@ -125,7 +125,7 @@ const TEAM_MAP_CONTROL_DATA = Object.fromEntries(
   Object.entries(TEAMS_CONFIG).map(([key, cfg]) => [key, cfg.mapControl])
 );
 const allDefensiveRetake = {};
-const RETAKE_DATA_VERSION = "20260428a";
+const RETAKE_DATA_VERSION = "20260520a";
 const RETAKE_DATA_SOURCES = Object.entries(TEAMS_CONFIG).flatMap(([team, cfg]) =>
   ["ct", "t"].flatMap(side =>
     cfg.retakeMaps.map(map => ({
@@ -183,6 +183,7 @@ let rtActiveSite = "All";
 let postPlantData = null;
 let retakeActiveSites = new Set(["A", "B", "C"]);
 let ppInlineActiveSites = new Set(["A", "B", "C"]);
+let retakePostPlantMode = false;
 let lastDefensiveInfo = null;
 let allSiteStats = {}; // { teamKey: { mapName: data } }
 const allAgentsData = {}; // { teamKey: full agents JSON }
@@ -1344,8 +1345,12 @@ function renderDefensivePanels(info) {
       return `<span class="retake-site-chip retake-site-chip-${site}" data-site="${site}" onclick="toggleRetakeSite('${site}')" style="cursor:pointer;opacity:${opacity};" title="Click to toggle Site ${site}">${site}: ${rounds}R / ${points}P</span>`;
     })
     .join("");
+
+  // +10-20s toggle button
+  const ppToggleBtn = `<span class="retake-site-chip retake-pp-toggle${retakePostPlantMode ? " retake-pp-toggle--active" : ""}" onclick="toggleRetakePostPlantMode()" title="Show player positions 10–20s after spike plant">+10-20s</span>`;
+
+  // Normal plant-time dots
   const retakePoints = retakeAllPoints.filter((point) => retakeActiveSites.has(String(point.site || "").toUpperCase()));
-  const retakeRoundCount = new Set(retakePoints.map((point) => `${point.matchId}|${point.roundNum}`)).size;
   const retakePointsMarkup = retakePoints
     .map((point) => {
       const rName = canonicalPlayerName(point.player);
@@ -1368,19 +1373,80 @@ function renderDefensivePanels(info) {
       ).join("")}</div>`
     : "";
 
+  // +10-20s mode: trail dots + SVG lines per round
+  let ppSnapshotSvg = "";
+  let ppSnapshotDots = "";
+  let ppSnapshotLegendMarkup = "";
+  if (retakePostPlantMode && retakeInfo?.postPlant10_20) {
+    const ppData = retakeInfo.postPlant10_20;
+    const ppPlayers = new Set();
+    for (const site of retakeSiteOrder) {
+      if (!retakeActiveSites.has(site)) continue;
+      const rounds = ppData[site]?.rounds ?? [];
+      for (const rnd of rounds) {
+        const snaps = rnd.snapshots ?? [];
+        // Build per-player ordered trail for this round
+        const playerTrail = {};
+        for (const snap of snaps) {
+          for (const pl of snap.players ?? []) {
+            const pName = canonicalPlayerName(pl.player);
+            ppPlayers.add(pName);
+            if (!playerTrail[pName]) playerTrail[pName] = [];
+            playerTrail[pName].push({ normX: pl.normX, normY: pl.normY, t: snap.timeSincePlantMs, snap, rnd });
+          }
+        }
+        // SVG polylines
+        for (const [pName, positions] of Object.entries(playerTrail)) {
+          if (positions.length < 2) continue;
+          const color = getPlayerColor(pName);
+          const pts = positions.map(pos => {
+            const proj = projectHeatmapPoint(pos, mapName);
+            return `${proj.x},${proj.y}`;
+          }).join(" ");
+          ppSnapshotSvg += `<polyline points="${pts}" fill="none" stroke="${color}" stroke-width="0.35" opacity="0.7"/>`;
+        }
+        // Dots
+        for (const snap of snaps) {
+          for (const pl of snap.players ?? []) {
+            const pName = canonicalPlayerName(pl.player);
+            const proj = projectHeatmapPoint({ normX: pl.normX, normY: pl.normY }, mapName);
+            const color = getPlayerColor(pName);
+            const tSec = (snap.timeSincePlantMs / 1000).toFixed(1);
+            const title = `${pName} | Site ${site} | +${tSec}s | R${rnd.roundNum + 1} | ${rnd.date} vs ${rnd.opponent}`;
+            ppSnapshotDots += `<span class="heat-point retake-point" data-player="${encodeURIComponent(pName)}" style="left:${proj.x}%;top:${proj.y}%;background:${color};box-shadow:0 0 0 1.5px ${siteColor[site] ?? "#888"};" title="${title}"></span>`;
+          }
+        }
+      }
+    }
+    const ppLegendPlayers = sortByPlayerOrder([...ppPlayers]);
+    ppSnapshotLegendMarkup = ppLegendPlayers.length
+      ? `<div class="retake-player-legend">${ppLegendPlayers.map(p =>
+          `<span class="retake-legend-item"><span class="retake-legend-dot" style="background:${ppGetColor(p)};"></span><span class="retake-legend-name">${ppShortName(p)}</span></span>`
+        ).join("")}</div>`
+      : "";
+  }
+
+  const retakeLayerContent = retakePostPlantMode
+    ? (ppSnapshotDots
+        ? `<svg style="position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;" viewBox="0 0 100 100" preserveAspectRatio="none">${ppSnapshotSvg}</svg>${ppSnapshotDots}`
+        : `<div class="heatmap-empty"><p>No +10-20s data for selected sites.</p></div>`)
+    : (retakePointsMarkup || `<div class="heatmap-empty"><p>No samples.</p></div>`);
+
+  const activeLegendMarkup = retakePostPlantMode ? ppSnapshotLegendMarkup : retakeLegendMarkup;
+
   const retakeMarkup = retakeInfo && activeSideView === "ct"
     ? `
     <article class="defensive-card">
-      <div class="retake-site-chip-row">${retakeSiteChips}</div>
+      <div class="retake-site-chip-row">${retakeSiteChips}${ppToggleBtn}</div>
       <div class="defensive-map-wrap">
         <div class="defensive-map">
           <div class="${frameClassList}" style="${frameStyle}">
             ${mapImageMarkup}
             <div class="heat-layer">
-              ${retakePointsMarkup || '<div class="heatmap-empty"><p>No samples.</p></div>'}
+              ${retakeLayerContent}
             </div>
           </div>
-          ${retakeLegendMarkup}
+          ${activeLegendMarkup}
         </div>
       </div>
     </article>
@@ -1630,6 +1696,12 @@ function toggleRetakeSite(site) {
   if (lastDefensiveInfo) renderDefensivePanels(lastDefensiveInfo);
 }
 window.toggleRetakeSite = toggleRetakeSite;
+
+function toggleRetakePostPlantMode() {
+  retakePostPlantMode = !retakePostPlantMode;
+  if (lastDefensiveInfo) renderDefensivePanels(lastDefensiveInfo);
+}
+window.toggleRetakePostPlantMode = toggleRetakePostPlantMode;
 
 function togglePpInlineSite(site) {
   if (ppInlineActiveSites.has(site)) {

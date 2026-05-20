@@ -286,5 +286,389 @@
         }
       ]
     }
+  },
+  "postPlant10_20": {
+    "A": {
+      "rounds": [
+        {
+          "roundNum": 12,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 17032,
+              "players": [
+                {
+                  "player": "Proxh",
+                  "normX": 23.4178,
+                  "normY": 52.4262
+                },
+                {
+                  "player": "Lime",
+                  "normX": 51.0922,
+                  "normY": 17.3418
+                },
+                {
+                  "player": "iluri",
+                  "normX": 22.357,
+                  "normY": 50.6244
+                },
+                {
+                  "player": "MAGNUM",
+                  "normX": 49.8676,
+                  "normY": 17.8254
+                },
+                {
+                  "player": "kozzy",
+                  "normX": 52.4962,
+                  "normY": 18.9096
+                }
+              ]
+            }
+          ],
+          "matchId": "58f1ef9d-cd53-48e4-8791-3c002eedaba8",
+          "date": "2026-05-11",
+          "opponent": "NVJ",
+          "score": "13-4"
+        },
+        {
+          "roundNum": 14,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 14037,
+              "players": [
+                {
+                  "player": "Proxh",
+                  "normX": 37.0756,
+                  "normY": 17.9424
+                },
+                {
+                  "player": "iluri",
+                  "normX": 23.0512,
+                  "normY": 14.0736
+                },
+                {
+                  "player": "kozzy",
+                  "normX": 37.7698,
+                  "normY": 13.6446
+                }
+              ]
+            }
+          ],
+          "matchId": "58f1ef9d-cd53-48e4-8791-3c002eedaba8",
+          "date": "2026-05-11",
+          "opponent": "NVJ",
+          "score": "13-4"
+        },
+        {
+          "roundNum": 3,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 12829,
+              "players": [
+                {
+                  "player": "Proxh",
+                  "normX": 16.6708,
+                  "normY": 34.2132
+                },
+                {
+                  "player": "MAGNUM",
+                  "normX": 35.734,
+                  "normY": 27.2946
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 19911,
+              "players": [
+                {
+                  "player": "Proxh",
+                  "normX": 13.816,
+                  "normY": 21.5148
+                },
+                {
+                  "player": "MAGNUM",
+                  "normX": 35.8666,
+                  "normY": 27.3102
+                }
+              ]
+            }
+          ],
+          "matchId": "53e5cba3-2869-48e4-b6bc-f12a0dea9630",
+          "date": "2026-04-27",
+          "opponent": "BONK",
+          "score": "13-2"
+        },
+        {
+          "roundNum": 6,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 10014,
+              "players": [
+                {
+                  "player": "Lime",
+                  "normX": 26.4598,
+                  "normY": 37.848
+                },
+                {
+                  "player": "iluri",
+                  "normX": 18.457,
+                  "normY": 20.6178
+                },
+                {
+                  "player": "kozzy",
+                  "normX": 23.6674,
+                  "normY": 23.9172
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 10388,
+              "players": [
+                {
+                  "player": "Lime",
+                  "normX": 25.5472,
+                  "normY": 37.8636
+                },
+                {
+                  "player": "iluri",
+                  "normX": 17.7394,
+                  "normY": 19.9626
+                }
+              ]
+            }
+          ],
+          "matchId": "53e5cba3-2869-48e4-b6bc-f12a0dea9630",
+          "date": "2026-04-27",
+          "opponent": "BONK",
+          "score": "13-2"
+        }
+      ]
+    },
+    "B": {
+      "rounds": [
+        {
+          "roundNum": 0,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 10938,
+              "players": [
+                {
+                  "player": "Proxh",
+                  "normX": 22.669,
+                  "normY": 77.1054
+                },
+                {
+                  "player": "Lime",
+                  "normX": 40.0084,
+                  "normY": 76.5048
+                },
+                {
+                  "player": "iluri",
+                  "normX": 24.9232,
+                  "normY": 68.7204
+                },
+                {
+                  "player": "kozzy",
+                  "normX": 42.0442,
+                  "normY": 73.065
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 11781,
+              "players": [
+                {
+                  "player": "Proxh",
+                  "normX": 21.7876,
+                  "normY": 77.8854
+                },
+                {
+                  "player": "Lime",
+                  "normX": 39.4156,
+                  "normY": 76.536
+                },
+                {
+                  "player": "iluri",
+                  "normX": 22.8094,
+                  "normY": 71.7468
+                },
+                {
+                  "player": "kozzy",
+                  "normX": 42.832,
+                  "normY": 74.3754
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 12847,
+              "players": [
+                {
+                  "player": "Proxh",
+                  "normX": 22.8016,
+                  "normY": 80.6232
+                },
+                {
+                  "player": "Lime",
+                  "normX": 38.8228,
+                  "normY": 76.3488
+                },
+                {
+                  "player": "iluri",
+                  "normX": 20.329,
+                  "normY": 75.9666
+                },
+                {
+                  "player": "kozzy",
+                  "normX": 43.1128,
+                  "normY": 76.185
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 16629,
+              "players": [
+                {
+                  "player": "Proxh",
+                  "normX": 34.5406,
+                  "normY": 84.024
+                },
+                {
+                  "player": "iluri",
+                  "normX": 28.5658,
+                  "normY": 81.2472
+                },
+                {
+                  "player": "kozzy",
+                  "normX": 39.4468,
+                  "normY": 84.9288
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 17288,
+              "players": [
+                {
+                  "player": "Proxh",
+                  "normX": 33.9868,
+                  "normY": 83.9382
+                },
+                {
+                  "player": "kozzy",
+                  "normX": 39.322,
+                  "normY": 87.1128
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18002,
+              "players": [
+                {
+                  "player": "Proxh",
+                  "normX": 34.8838,
+                  "normY": 83.673
+                },
+                {
+                  "player": "kozzy",
+                  "normX": 39.0802,
+                  "normY": 90.0768
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 19030,
+              "players": [
+                {
+                  "player": "kozzy",
+                  "normX": 35.5468,
+                  "normY": 90.5214
+                }
+              ]
+            }
+          ],
+          "matchId": "53e5cba3-2869-48e4-b6bc-f12a0dea9630",
+          "date": "2026-04-27",
+          "opponent": "BONK",
+          "score": "13-2"
+        },
+        {
+          "roundNum": 7,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 12669,
+              "players": [
+                {
+                  "player": "Proxh",
+                  "normX": 38.8618,
+                  "normY": 71.4036
+                },
+                {
+                  "player": "Lime",
+                  "normX": 43.573,
+                  "normY": 75.1242
+                },
+                {
+                  "player": "kozzy",
+                  "normX": 41.8336,
+                  "normY": 78.174
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 17309,
+              "players": [
+                {
+                  "player": "Proxh",
+                  "normX": 34.4938,
+                  "normY": 74.7654
+                },
+                {
+                  "player": "Lime",
+                  "normX": 39.9304,
+                  "normY": 87.495
+                },
+                {
+                  "player": "kozzy",
+                  "normX": 43.6276,
+                  "normY": 87.4326
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 17352,
+              "players": [
+                {
+                  "player": "Lime",
+                  "normX": 39.9304,
+                  "normY": 87.495
+                },
+                {
+                  "player": "kozzy",
+                  "normX": 43.5964,
+                  "normY": 87.5652
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18467,
+              "players": [
+                {
+                  "player": "Lime",
+                  "normX": 39.1894,
+                  "normY": 90.1782
+                },
+                {
+                  "player": "kozzy",
+                  "normX": 43.8304,
+                  "normY": 89.6712
+                }
+              ]
+            }
+          ],
+          "matchId": "53e5cba3-2869-48e4-b6bc-f12a0dea9630",
+          "date": "2026-04-27",
+          "opponent": "BONK",
+          "score": "13-2"
+        }
+      ]
+    }
   }
 }

@@ -928,5 +928,382 @@
         }
       ]
     }
+  },
+  "postPlant10_20": {
+    "A": {
+      "rounds": [
+        {
+          "roundNum": 4,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 12916,
+              "players": [
+                {
+                  "player": "kamyk",
+                  "normX": 43.7125,
+                  "normY": 20.4728
+                },
+                {
+                  "player": "chiwa",
+                  "normX": 62.71,
+                  "normY": 35.2553
+                },
+                {
+                  "player": "UNFAKE",
+                  "normX": 38.56,
+                  "normY": 21.4703
+                }
+              ]
+            }
+          ],
+          "matchId": "f771447b-4835-4ad4-ab0d-6df895eecf6b",
+          "date": "2026-05-04",
+          "opponent": "MDR",
+          "score": "6-13"
+        },
+        {
+          "roundNum": 11,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 17514,
+              "players": [
+                {
+                  "player": "Doma",
+                  "normX": 30.8725,
+                  "normY": 15.4103
+                }
+              ]
+            }
+          ],
+          "matchId": "f771447b-4835-4ad4-ab0d-6df895eecf6b",
+          "date": "2026-05-04",
+          "opponent": "MDR",
+          "score": "6-13"
+        },
+        {
+          "roundNum": 0,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 12164,
+              "players": [
+                {
+                  "player": "Doma",
+                  "normX": 48.9625,
+                  "normY": 25.0103
+                },
+                {
+                  "player": "UNFAKE",
+                  "normX": 28.9825,
+                  "normY": 28.7303
+                },
+                {
+                  "player": "runneR",
+                  "normX": 29.8225,
+                  "normY": 26.9978
+                }
+              ]
+            }
+          ],
+          "matchId": "d8a9e186-8e8b-47ef-b77a-9582d1851cf6",
+          "date": "2026-04-26",
+          "opponent": "MDR",
+          "score": "6-13"
+        },
+        {
+          "roundNum": 9,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 16471,
+              "players": [
+                {
+                  "player": "Doma",
+                  "normX": 49.3525,
+                  "normY": 35.6303
+                },
+                {
+                  "player": "UNFAKE",
+                  "normX": 32.995,
+                  "normY": 12.8678
+                },
+                {
+                  "player": "kamyk",
+                  "normX": 30.865,
+                  "normY": 26.5553
+                }
+              ]
+            }
+          ],
+          "matchId": "d8a9e186-8e8b-47ef-b77a-9582d1851cf6",
+          "date": "2026-04-26",
+          "opponent": "MDR",
+          "score": "6-13"
+        },
+        {
+          "roundNum": 12,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 12479,
+              "players": [
+                {
+                  "player": "chiwa",
+                  "normX": 29.8075,
+                  "normY": 15.1703
+                }
+              ]
+            }
+          ],
+          "matchId": "c22dd2c0-0d64-40dc-ac7a-abf5e595ff20",
+          "date": "2026-04-05",
+          "opponent": "F9",
+          "score": "6-13"
+        },
+        {
+          "roundNum": 13,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 19375,
+              "players": [
+                {
+                  "player": "kamyk",
+                  "normX": 59.125,
+                  "normY": 50.4653
+                },
+                {
+                  "player": "Doma",
+                  "normX": 62.785,
+                  "normY": 48.9803
+                },
+                {
+                  "player": "chiwa",
+                  "normX": 64.72,
+                  "normY": 49.4903
+                },
+                {
+                  "player": "Enzo ",
+                  "normX": 70.5475,
+                  "normY": 45.0428
+                },
+                {
+                  "player": "runneR",
+                  "normX": 76.675,
+                  "normY": 40.9403
+                }
+              ]
+            }
+          ],
+          "matchId": "c22dd2c0-0d64-40dc-ac7a-abf5e595ff20",
+          "date": "2026-04-05",
+          "opponent": "F9",
+          "score": "6-13"
+        }
+      ]
+    },
+    "B": {
+      "rounds": [
+        {
+          "roundNum": 7,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 10251,
+              "players": [
+                {
+                  "player": "kamyk",
+                  "normX": 34.7425,
+                  "normY": 56.5253
+                },
+                {
+                  "player": "UNFAKE",
+                  "normX": 41.0125,
+                  "normY": 45.7328
+                }
+              ]
+            }
+          ],
+          "matchId": "f771447b-4835-4ad4-ab0d-6df895eecf6b",
+          "date": "2026-05-04",
+          "opponent": "MDR",
+          "score": "6-13"
+        },
+        {
+          "roundNum": 5,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 14010,
+              "players": [
+                {
+                  "player": "Doma",
+                  "normX": 46.9225,
+                  "normY": 62.5853
+                },
+                {
+                  "player": "UNFAKE",
+                  "normX": 42.1525,
+                  "normY": 37.0328
+                },
+                {
+                  "player": "kamyk",
+                  "normX": 42.085,
+                  "normY": 38.6903
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15537,
+              "players": [
+                {
+                  "player": "Doma",
+                  "normX": 47.0275,
+                  "normY": 61.7453
+                },
+                {
+                  "player": "UNFAKE",
+                  "normX": 42.115,
+                  "normY": 37.0553
+                },
+                {
+                  "player": "kamyk",
+                  "normX": 40.6,
+                  "normY": 38.4353
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 17136,
+              "players": [
+                {
+                  "player": "Doma",
+                  "normX": 44.7775,
+                  "normY": 64.1153
+                },
+                {
+                  "player": "UNFAKE",
+                  "normX": 41.935,
+                  "normY": 38.0003
+                }
+              ]
+            }
+          ],
+          "matchId": "d8a9e186-8e8b-47ef-b77a-9582d1851cf6",
+          "date": "2026-04-26",
+          "opponent": "MDR",
+          "score": "6-13"
+        },
+        {
+          "roundNum": 7,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 13454,
+              "players": [
+                {
+                  "player": "UNFAKE",
+                  "normX": 51.79,
+                  "normY": 53.4728
+                },
+                {
+                  "player": "kamyk",
+                  "normX": 58.8775,
+                  "normY": 57.4703
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 14986,
+              "players": [
+                {
+                  "player": "UNFAKE",
+                  "normX": 51.76,
+                  "normY": 53.5178
+                },
+                {
+                  "player": "kamyk",
+                  "normX": 57.82,
+                  "normY": 53.4878
+                }
+              ]
+            }
+          ],
+          "matchId": "d8a9e186-8e8b-47ef-b77a-9582d1851cf6",
+          "date": "2026-04-26",
+          "opponent": "MDR",
+          "score": "6-13"
+        }
+      ]
+    },
+    "C": {
+      "rounds": [
+        {
+          "roundNum": 8,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 15158,
+              "players": [
+                {
+                  "player": "kamyk",
+                  "normX": 39.565,
+                  "normY": 54.6953
+                },
+                {
+                  "player": "UNFAKE",
+                  "normX": 55.8625,
+                  "normY": 63.5978
+                },
+                {
+                  "player": "Doma",
+                  "normX": 24.6175,
+                  "normY": 62.0978
+                },
+                {
+                  "player": "runneR",
+                  "normX": 79.075,
+                  "normY": 73.6328
+                }
+              ]
+            }
+          ],
+          "matchId": "f771447b-4835-4ad4-ab0d-6df895eecf6b",
+          "date": "2026-05-04",
+          "opponent": "MDR",
+          "score": "6-13"
+        },
+        {
+          "roundNum": 2,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 12203,
+              "players": [
+                {
+                  "player": "UNFAKE",
+                  "normX": 27.0775,
+                  "normY": 65.6153
+                }
+              ]
+            }
+          ],
+          "matchId": "d8a9e186-8e8b-47ef-b77a-9582d1851cf6",
+          "date": "2026-04-26",
+          "opponent": "MDR",
+          "score": "6-13"
+        },
+        {
+          "roundNum": 3,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 18082,
+              "players": [
+                {
+                  "player": "runneR",
+                  "normX": 80.8225,
+                  "normY": 48.4853
+                }
+              ]
+            }
+          ],
+          "matchId": "d8a9e186-8e8b-47ef-b77a-9582d1851cf6",
+          "date": "2026-04-26",
+          "opponent": "MDR",
+          "score": "6-13"
+        }
+      ]
+    }
   }
 }

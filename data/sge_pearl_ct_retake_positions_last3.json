@@ -202,5 +202,202 @@
         }
       ]
     }
+  },
+  "postPlant10_20": {
+    "B": {
+      "rounds": [
+        {
+          "roundNum": 3,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 15041,
+              "players": [
+                {
+                  "player": "Fizzy",
+                  "normX": 26.3785,
+                  "normY": 34.217
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 16324,
+              "players": [
+                {
+                  "player": "Fizzy",
+                  "normX": 23.6329,
+                  "normY": 33.4682
+                }
+              ]
+            }
+          ],
+          "matchId": "a5530bd1-1aa3-48f2-be69-ba2875d12fb7",
+          "date": "2026-03-21",
+          "opponent": "TL",
+          "score": "13-5"
+        },
+        {
+          "roundNum": 11,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 12805,
+              "players": [
+                {
+                  "player": "Jamelinho",
+                  "normX": 10.1155,
+                  "normY": 43.9592
+                },
+                {
+                  "player": "azury",
+                  "normX": 23.8513,
+                  "normY": 45.839
+                },
+                {
+                  "player": "musashi",
+                  "normX": 14.5771,
+                  "normY": 36.557
+                },
+                {
+                  "player": "Fizzy",
+                  "normX": 30.2395,
+                  "normY": 36.284
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 13981,
+              "players": [
+                {
+                  "player": "Jamelinho",
+                  "normX": 8.3917,
+                  "normY": 46.6892
+                },
+                {
+                  "player": "azury",
+                  "normX": 20.0215,
+                  "normY": 44.0606
+                },
+                {
+                  "player": "musashi",
+                  "normX": 14.5771,
+                  "normY": 36.557
+                },
+                {
+                  "player": "Fizzy",
+                  "normX": 25.6297,
+                  "normY": 36.2684
+                }
+              ]
+            }
+          ],
+          "matchId": "a5530bd1-1aa3-48f2-be69-ba2875d12fb7",
+          "date": "2026-03-21",
+          "opponent": "TL",
+          "score": "13-5"
+        }
+      ]
+    },
+    "A": {
+      "rounds": [
+        {
+          "roundNum": 5,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 11995,
+              "players": [
+                {
+                  "player": "Jamelinho",
+                  "normX": 68.0773,
+                  "normY": 18.7106
+                },
+                {
+                  "player": "azury",
+                  "normX": 83.7007,
+                  "normY": 29.4044
+                },
+                {
+                  "player": "Fizzy",
+                  "normX": 84.6757,
+                  "normY": 18.9914
+                },
+                {
+                  "player": "MONSTEERR",
+                  "normX": 86.0953,
+                  "normY": 22.5248
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15664,
+              "players": [
+                {
+                  "player": "Jamelinho",
+                  "normX": 62.8435,
+                  "normY": 15.5204
+                },
+                {
+                  "player": "azury",
+                  "normX": 88.6615,
+                  "normY": 31.487
+                },
+                {
+                  "player": "Fizzy",
+                  "normX": 83.0065,
+                  "normY": 18.11
+                },
+                {
+                  "player": "MONSTEERR",
+                  "normX": 89.6599,
+                  "normY": 25.559
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15845,
+              "players": [
+                {
+                  "player": "Jamelinho",
+                  "normX": 62.1337,
+                  "normY": 15.9806
+                },
+                {
+                  "player": "Fizzy",
+                  "normX": 83.5369,
+                  "normY": 18.5234
+                },
+                {
+                  "player": "MONSTEERR",
+                  "normX": 89.5039,
+                  "normY": 26.339
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 17031,
+              "players": [
+                {
+                  "player": "Jamelinho",
+                  "normX": 68.9743,
+                  "normY": 17.3222
+                },
+                {
+                  "player": "Fizzy",
+                  "normX": 85.7521,
+                  "normY": 20.372
+                },
+                {
+                  "player": "MONSTEERR",
+                  "normX": 89.3323,
+                  "normY": 29.3576
+                }
+              ]
+            }
+          ],
+          "matchId": "a5530bd1-1aa3-48f2-be69-ba2875d12fb7",
+          "date": "2026-03-21",
+          "opponent": "TL",
+          "score": "13-5"
+        }
+      ]
+    }
   }
 }

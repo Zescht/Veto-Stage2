@@ -1012,5 +1012,612 @@
         }
       ]
     }
+  },
+  "postPlant10_20": {
+    "C": {
+      "rounds": [
+        {
+          "roundNum": 5,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 15276,
+              "players": [
+                {
+                  "player": "Bishepss",
+                  "normX": 26.8525,
+                  "normY": 24.0808
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 30.6541,
+                  "normY": 24.5848
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 16202,
+              "players": [
+                {
+                  "player": "Redgar",
+                  "normX": 30.6541,
+                  "normY": 24.5848
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 19709,
+              "players": [
+                {
+                  "player": "Redgar",
+                  "normX": 27.7165,
+                  "normY": 23.8504
+                }
+              ]
+            }
+          ],
+          "matchId": "7e978c0b-e635-42da-a32e-5042da2a6a3e",
+          "date": "2026-04-14",
+          "opponent": "UNI",
+          "score": "13-4"
+        },
+        {
+          "roundNum": 12,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 19166,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 36.8533,
+                  "normY": 38.0848
+                },
+                {
+                  "player": "Raz",
+                  "normX": 14.5549,
+                  "normY": 31.8352
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 14.3389,
+                  "normY": 34.2832
+                }
+              ]
+            }
+          ],
+          "matchId": "dc10f95e-f612-4055-aa43-6ab6d84574e0",
+          "date": "2026-04-21",
+          "opponent": "EP",
+          "score": "13-11"
+        },
+        {
+          "roundNum": 19,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 13771,
+              "players": [
+                {
+                  "player": "Bishepss",
+                  "normX": 9.8245,
+                  "normY": 45.94
+                }
+              ]
+            }
+          ],
+          "matchId": "dc10f95e-f612-4055-aa43-6ab6d84574e0",
+          "date": "2026-04-21",
+          "opponent": "EP",
+          "score": "13-11"
+        },
+        {
+          "roundNum": 21,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 17399,
+              "players": [
+                {
+                  "player": "Raz",
+                  "normX": 27.7165,
+                  "normY": 69.0664
+                },
+                {
+                  "player": "Bishepss",
+                  "normX": 29.7829,
+                  "normY": 36.5656
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 31.1149,
+                  "normY": 39.9064
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18946,
+              "players": [
+                {
+                  "player": "Bishepss",
+                  "normX": 29.9557,
+                  "normY": 38.0056
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 30.2869,
+                  "normY": 41.296
+                }
+              ]
+            }
+          ],
+          "matchId": "dc10f95e-f612-4055-aa43-6ab6d84574e0",
+          "date": "2026-04-21",
+          "opponent": "EP",
+          "score": "13-11"
+        },
+        {
+          "roundNum": 23,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 12647,
+              "players": [
+                {
+                  "player": "Raz",
+                  "normX": 9.2197,
+                  "normY": 57.172
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 29.5669,
+                  "normY": 60.1456
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 14215,
+              "players": [
+                {
+                  "player": "Raz",
+                  "normX": 15.2677,
+                  "normY": 58.8928
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 26.8093,
+                  "normY": 60.6064
+                }
+              ]
+            }
+          ],
+          "matchId": "dc10f95e-f612-4055-aa43-6ab6d84574e0",
+          "date": "2026-04-21",
+          "opponent": "EP",
+          "score": "13-11"
+        },
+        {
+          "roundNum": 12,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 19098,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 29.3005,
+                  "normY": 64.5016
+                },
+                {
+                  "player": "Bishepss",
+                  "normX": 26.5717,
+                  "normY": 24.16
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 29.9269,
+                  "normY": 63.0184
+                }
+              ]
+            }
+          ],
+          "matchId": "b4820831-2d95-420f-801b-bb9a1885b495",
+          "date": "2026-04-18",
+          "opponent": "FMG",
+          "score": "13-11"
+        },
+        {
+          "roundNum": 16,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 12165,
+              "players": [
+                {
+                  "player": "Raz",
+                  "normX": 28.7461,
+                  "normY": 62.1112
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 37.9837,
+                  "normY": 37.0696
+                },
+                {
+                  "player": "Bishepss",
+                  "normX": 31.1293,
+                  "normY": 24.232
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 30.3805,
+                  "normY": 64.2136
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15154,
+              "players": [
+                {
+                  "player": "Raz",
+                  "normX": 29.9989,
+                  "normY": 57.8416
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 33.7717,
+                  "normY": 39.8704
+                },
+                {
+                  "player": "Bishepss",
+                  "normX": 26.6077,
+                  "normY": 27.3856
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 30.5389,
+                  "normY": 60.6784
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15183,
+              "players": [
+                {
+                  "player": "Raz",
+                  "normX": 29.9989,
+                  "normY": 57.8416
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 33.6853,
+                  "normY": 39.9064
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 30.5173,
+                  "normY": 60.5416
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15219,
+              "players": [
+                {
+                  "player": "Redgar",
+                  "normX": 33.6493,
+                  "normY": 39.9136
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 30.5101,
+                  "normY": 60.4984
+                }
+              ]
+            }
+          ],
+          "matchId": "b4820831-2d95-420f-801b-bb9a1885b495",
+          "date": "2026-04-18",
+          "opponent": "FMG",
+          "score": "13-11"
+        },
+        {
+          "roundNum": 17,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 14632,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 12.0061,
+                  "normY": 39.6616
+                },
+                {
+                  "player": "Raz",
+                  "normX": 12.7693,
+                  "normY": 36.3064
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 31.3525,
+                  "normY": 42.1744
+                },
+                {
+                  "player": "Bishepss",
+                  "normX": 10.4077,
+                  "normY": 35.7304
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 17.9749,
+                  "normY": 38.7544
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 19634,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 14.9797,
+                  "normY": 38.5384
+                },
+                {
+                  "player": "Raz",
+                  "normX": 11.9845,
+                  "normY": 37.1416
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 24.3181,
+                  "normY": 44.32
+                },
+                {
+                  "player": "Bishepss",
+                  "normX": 15.7933,
+                  "normY": 39.9352
+                }
+              ]
+            }
+          ],
+          "matchId": "b4820831-2d95-420f-801b-bb9a1885b495",
+          "date": "2026-04-18",
+          "opponent": "FMG",
+          "score": "13-11"
+        },
+        {
+          "roundNum": 20,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 11270,
+              "players": [
+                {
+                  "player": "Bishepss",
+                  "normX": 17.2837,
+                  "normY": 38.3656
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 19.2565,
+                  "normY": 38.092
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 12095,
+              "players": [
+                {
+                  "player": "Bishepss",
+                  "normX": 18.4789,
+                  "normY": 38.3152
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 19.1485,
+                  "normY": 38.2936
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18232,
+              "players": [
+                {
+                  "player": "Bishepss",
+                  "normX": 12.3445,
+                  "normY": 44.536
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 12.2509,
+                  "normY": 45.4936
+                }
+              ]
+            }
+          ],
+          "matchId": "b4820831-2d95-420f-801b-bb9a1885b495",
+          "date": "2026-04-18",
+          "opponent": "FMG",
+          "score": "13-11"
+        }
+      ]
+    },
+    "A": {
+      "rounds": [
+        {
+          "roundNum": 13,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 15714,
+              "players": [
+                {
+                  "player": "Bishepss",
+                  "normX": 87.9085,
+                  "normY": 24.5056
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 74.8837,
+                  "normY": 30.9712
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 16992,
+              "players": [
+                {
+                  "player": "Bishepss",
+                  "normX": 89.3557,
+                  "normY": 25.0528
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 74.1997,
+                  "normY": 33.4408
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18184,
+              "players": [
+                {
+                  "player": "Redgar",
+                  "normX": 73.1845,
+                  "normY": 35.6728
+                }
+              ]
+            }
+          ],
+          "matchId": "dc10f95e-f612-4055-aa43-6ab6d84574e0",
+          "date": "2026-04-21",
+          "opponent": "EP",
+          "score": "13-11"
+        },
+        {
+          "roundNum": 20,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 14940,
+              "players": [
+                {
+                  "player": "Bishepss",
+                  "normX": 60.0661,
+                  "normY": 47.4736
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 67.7773,
+                  "normY": 18.724
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 68.8789,
+                  "normY": 27.4864
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18488,
+              "players": [
+                {
+                  "player": "Redgar",
+                  "normX": 70.5637,
+                  "normY": 19.6672
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 73.3501,
+                  "normY": 29.452
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18706,
+              "players": [
+                {
+                  "player": "Redgar",
+                  "normX": 70.5565,
+                  "normY": 19.696
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 73.0981,
+                  "normY": 29.5168
+                }
+              ]
+            }
+          ],
+          "matchId": "dc10f95e-f612-4055-aa43-6ab6d84574e0",
+          "date": "2026-04-21",
+          "opponent": "EP",
+          "score": "13-11"
+        }
+      ]
+    },
+    "B": {
+      "rounds": [
+        {
+          "roundNum": 15,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 15348,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 69.9661,
+                  "normY": 42.7864
+                },
+                {
+                  "player": "Raz",
+                  "normX": 36.0253,
+                  "normY": 55.5808
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 29.9845,
+                  "normY": 55.6168
+                },
+                {
+                  "player": "Bishepss",
+                  "normX": 60.0877,
+                  "normY": 29.3944
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 56.0989,
+                  "normY": 37.5736
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18858,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 72.7741,
+                  "normY": 30.1288
+                },
+                {
+                  "player": "Raz",
+                  "normX": 39.8629,
+                  "normY": 53.968
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 37.5517,
+                  "normY": 54.2704
+                },
+                {
+                  "player": "Bishepss",
+                  "normX": 54.7597,
+                  "normY": 38.7976
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 53.4205,
+                  "normY": 42.0304
+                }
+              ]
+            }
+          ],
+          "matchId": "b4820831-2d95-420f-801b-bb9a1885b495",
+          "date": "2026-04-18",
+          "opponent": "FMG",
+          "score": "13-11"
+        }
+      ]
+    }
   }
 }

@@ -190,5 +190,68 @@
         }
       ]
     }
+  },
+  "postPlant10_20": {
+    "A": {
+      "rounds": [
+        {
+          "roundNum": 2,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 17061,
+              "players": [
+                {
+                  "player": "Deadink",
+                  "normX": 79.1743,
+                  "normY": 49.4698
+                }
+              ]
+            }
+          ],
+          "matchId": "f5278d2b-a972-4ae5-982c-31faa7073e6a",
+          "date": "2026-05-03",
+          "opponent": "BJK",
+          "score": "13-8"
+        }
+      ]
+    },
+    "B": {
+      "rounds": [
+        {
+          "roundNum": 4,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 16399,
+              "players": [
+                {
+                  "player": "hezacoil",
+                  "normX": 21.8303,
+                  "normY": 31.4308
+                },
+                {
+                  "player": "Deadink",
+                  "normX": 22.4183,
+                  "normY": 48.7278
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 17067,
+              "players": [
+                {
+                  "player": "Deadink",
+                  "normX": 19.7233,
+                  "normY": 48.0978
+                }
+              ]
+            }
+          ],
+          "matchId": "f5278d2b-a972-4ae5-982c-31faa7073e6a",
+          "date": "2026-05-03",
+          "opponent": "BJK",
+          "score": "13-8"
+        }
+      ]
+    }
   }
 }

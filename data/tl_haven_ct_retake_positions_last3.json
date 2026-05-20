@@ -376,5 +376,265 @@
         }
       ]
     }
+  },
+  "postPlant10_20": {
+    "C": {
+      "rounds": [
+        {
+          "roundNum": 12,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 14208,
+              "players": [
+                {
+                  "player": "Kicks",
+                  "normX": 39.2125,
+                  "normY": 63.8903
+                }
+              ]
+            }
+          ],
+          "matchId": "55510efe-226f-44ef-9398-08221b1311e7",
+          "date": "2026-04-14",
+          "opponent": "BFG",
+          "score": "5-13"
+        }
+      ]
+    },
+    "A": {
+      "rounds": [
+        {
+          "roundNum": 17,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 11744,
+              "players": [
+                {
+                  "player": "Prti",
+                  "normX": 30.6475,
+                  "normY": 20.4353
+                },
+                {
+                  "player": "Kicks",
+                  "normX": 28.975,
+                  "normY": 26.2778
+                },
+                {
+                  "player": "Wanzeru",
+                  "normX": 62.8225,
+                  "normY": 35.2178
+                },
+                {
+                  "player": "GSR",
+                  "normX": 28.9975,
+                  "normY": 24.0053
+                },
+                {
+                  "player": "rexxtoned",
+                  "normX": 30.9475,
+                  "normY": 16.2803
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 14047,
+              "players": [
+                {
+                  "player": "Prti",
+                  "normX": 29.1625,
+                  "normY": 20.4803
+                },
+                {
+                  "player": "Kicks",
+                  "normX": 29.6875,
+                  "normY": 26.5328
+                },
+                {
+                  "player": "Wanzeru",
+                  "normX": 58.9,
+                  "normY": 29.6903
+                },
+                {
+                  "player": "GSR",
+                  "normX": 28.135,
+                  "normY": 23.0528
+                },
+                {
+                  "player": "rexxtoned",
+                  "normX": 30.0025,
+                  "normY": 14.2178
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15726,
+              "players": [
+                {
+                  "player": "Prti",
+                  "normX": 29.3275,
+                  "normY": 20.4953
+                },
+                {
+                  "player": "Kicks",
+                  "normX": 29.8975,
+                  "normY": 27.9653
+                },
+                {
+                  "player": "Wanzeru",
+                  "normX": 56.98,
+                  "normY": 21.4853
+                },
+                {
+                  "player": "GSR",
+                  "normX": 29.3125,
+                  "normY": 21.9578
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18645,
+              "players": [
+                {
+                  "player": "Prti",
+                  "normX": 33.745,
+                  "normY": 22.6253
+                },
+                {
+                  "player": "Kicks",
+                  "normX": 30.7525,
+                  "normY": 26.1653
+                },
+                {
+                  "player": "Wanzeru",
+                  "normX": 42.925,
+                  "normY": 12.3953
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18829,
+              "players": [
+                {
+                  "player": "Prti",
+                  "normX": 33.8875,
+                  "normY": 22.7003
+                },
+                {
+                  "player": "Kicks",
+                  "normX": 30.325,
+                  "normY": 25.9328
+                },
+                {
+                  "player": "Wanzeru",
+                  "normX": 42.19,
+                  "normY": 12.2678
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18975,
+              "players": [
+                {
+                  "player": "Prti",
+                  "normX": 33.8875,
+                  "normY": 22.7003
+                },
+                {
+                  "player": "Kicks",
+                  "normX": 30.0775,
+                  "normY": 25.7678
+                },
+                {
+                  "player": "Wanzeru",
+                  "normX": 42.3025,
+                  "normY": 12.2828
+                }
+              ]
+            }
+          ],
+          "matchId": "e0f397f4-89d9-4ff4-b6e7-a8d00707e92c",
+          "date": "2026-04-06",
+          "opponent": "EVO",
+          "score": "13-6"
+        },
+        {
+          "roundNum": 15,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 15372,
+              "players": [
+                {
+                  "player": "GSR",
+                  "normX": 31.5025,
+                  "normY": 30.1553
+                },
+                {
+                  "player": "Wanzeru",
+                  "normX": 42.2275,
+                  "normY": 16.9853
+                },
+                {
+                  "player": "rexxtoned",
+                  "normX": 48.8125,
+                  "normY": 23.4803
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18533,
+              "players": [
+                {
+                  "player": "GSR",
+                  "normX": 30.835,
+                  "normY": 24.9953
+                },
+                {
+                  "player": "rexxtoned",
+                  "normX": 42.8575,
+                  "normY": 24.4103
+                }
+              ]
+            }
+          ],
+          "matchId": "24c3fa4a-18e4-4146-918d-ae5e7bd9533d",
+          "date": "2026-04-12",
+          "opponent": "VR2",
+          "score": "13-6"
+        }
+      ]
+    },
+    "B": {
+      "rounds": [
+        {
+          "roundNum": 14,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 18054,
+              "players": [
+                {
+                  "player": "Prti",
+                  "normX": 39.76,
+                  "normY": 83.3903
+                },
+                {
+                  "player": "Kicks",
+                  "normX": 35.5375,
+                  "normY": 33.7853
+                },
+                {
+                  "player": "Wanzeru",
+                  "normX": 65.8375,
+                  "normY": 43.6553
+                }
+              ]
+            }
+          ],
+          "matchId": "24c3fa4a-18e4-4146-918d-ae5e7bd9533d",
+          "date": "2026-04-12",
+          "opponent": "VR2",
+          "score": "13-6"
+        }
+      ]
+    }
   }
 }

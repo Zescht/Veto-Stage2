@@ -196,5 +196,170 @@
         }
       ]
     }
+  },
+  "postPlant10_20": {
+    "A": {
+      "rounds": [
+        {
+          "roundNum": 12,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 13533,
+              "players": [
+                {
+                  "player": "k9lyos",
+                  "normX": 74.2141,
+                  "normY": 23.872
+                },
+                {
+                  "player": "avey",
+                  "normX": 74.8333,
+                  "normY": 34.2832
+                },
+                {
+                  "player": "metroneo",
+                  "normX": 78.6205,
+                  "normY": 27.5656
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 14585,
+              "players": [
+                {
+                  "player": "k9lyos",
+                  "normX": 78.1021,
+                  "normY": 22.2448
+                },
+                {
+                  "player": "avey",
+                  "normX": 74.5453,
+                  "normY": 35.2984
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 16921,
+              "players": [
+                {
+                  "player": "k9lyos",
+                  "normX": 82.3357,
+                  "normY": 24.2248
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 17281,
+              "players": [
+                {
+                  "player": "k9lyos",
+                  "normX": 81.8173,
+                  "normY": 24.088
+                }
+              ]
+            }
+          ],
+          "matchId": "17808f01-4f29-4207-8d90-1953ba3d5549",
+          "date": "2026-04-05",
+          "opponent": "EP",
+          "score": "7-13"
+        }
+      ]
+    },
+    "C": {
+      "rounds": [
+        {
+          "roundNum": 14,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 14326,
+              "players": [
+                {
+                  "player": "k9lyos",
+                  "normX": 33.2173,
+                  "normY": 44.3704
+                }
+              ]
+            }
+          ],
+          "matchId": "17808f01-4f29-4207-8d90-1953ba3d5549",
+          "date": "2026-04-05",
+          "opponent": "EP",
+          "score": "7-13"
+        },
+        {
+          "roundNum": 19,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 13888,
+              "players": [
+                {
+                  "player": "k9lyos",
+                  "normX": 18.6805,
+                  "normY": 39.1504
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 14738,
+              "players": [
+                {
+                  "player": "k9lyos",
+                  "normX": 21.0853,
+                  "normY": 40.4104
+                }
+              ]
+            }
+          ],
+          "matchId": "17808f01-4f29-4207-8d90-1953ba3d5549",
+          "date": "2026-04-05",
+          "opponent": "EP",
+          "score": "7-13"
+        }
+      ]
+    },
+    "B": {
+      "rounds": [
+        {
+          "roundNum": 16,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 17515,
+              "players": [
+                {
+                  "player": "k9lyos",
+                  "normX": 53.0173,
+                  "normY": 35.464
+                },
+                {
+                  "player": "avey",
+                  "normX": 43.3981,
+                  "normY": 36.9904
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 19089,
+              "players": [
+                {
+                  "player": "k9lyos",
+                  "normX": 51.1237,
+                  "normY": 37.8256
+                },
+                {
+                  "player": "avey",
+                  "normX": 42.9949,
+                  "normY": 37.3072
+                }
+              ]
+            }
+          ],
+          "matchId": "17808f01-4f29-4207-8d90-1953ba3d5549",
+          "date": "2026-04-05",
+          "opponent": "EP",
+          "score": "7-13"
+        }
+      ]
+    }
   }
 }

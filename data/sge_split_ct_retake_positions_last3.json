@@ -514,5 +514,377 @@
         }
       ]
     }
+  },
+  "postPlant10_20": {
+    "A": {
+      "rounds": [
+        {
+          "roundNum": 7,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 13927,
+              "players": [
+                {
+                  "player": "MONSTEERR",
+                  "normX": 30.3676,
+                  "normY": 30.3834
+                },
+                {
+                  "player": "musashi",
+                  "normX": 42.6604,
+                  "normY": 21.273
+                },
+                {
+                  "player": "azury",
+                  "normX": 45.2656,
+                  "normY": 21.0312
+                },
+                {
+                  "player": "Fizzy",
+                  "normX": 22.2556,
+                  "normY": 52.3482
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 16880,
+              "players": [
+                {
+                  "player": "Jamelinho",
+                  "normX": 38.8384,
+                  "normY": 21.7878
+                },
+                {
+                  "player": "MONSTEERR",
+                  "normX": 27.0604,
+                  "normY": 22.404
+                },
+                {
+                  "player": "musashi",
+                  "normX": 41.4124,
+                  "normY": 20.844
+                },
+                {
+                  "player": "azury",
+                  "normX": 40.0006,
+                  "normY": 22.2714
+                },
+                {
+                  "player": "Fizzy",
+                  "normX": 20.3368,
+                  "normY": 40.929
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 16957,
+              "players": [
+                {
+                  "player": "Jamelinho",
+                  "normX": 38.8384,
+                  "normY": 21.7878
+                },
+                {
+                  "player": "MONSTEERR",
+                  "normX": 26.9824,
+                  "normY": 22.4586
+                },
+                {
+                  "player": "musashi",
+                  "normX": 41.3968,
+                  "normY": 20.961
+                },
+                {
+                  "player": "Fizzy",
+                  "normX": 20.2822,
+                  "normY": 40.5
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18502,
+              "players": [
+                {
+                  "player": "MONSTEERR",
+                  "normX": 27.4582,
+                  "normY": 21.3666
+                },
+                {
+                  "player": "musashi",
+                  "normX": 40.0084,
+                  "normY": 21.507
+                },
+                {
+                  "player": "Fizzy",
+                  "normX": 18.0592,
+                  "normY": 32.8716
+                }
+              ]
+            }
+          ],
+          "matchId": "b24bbb8a-3af9-4357-b7e5-2b6851114a2f",
+          "date": "2026-04-26",
+          "opponent": "AKA",
+          "score": "13-7"
+        },
+        {
+          "roundNum": 0,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 11442,
+              "players": [
+                {
+                  "player": "Jamelinho",
+                  "normX": 34.72,
+                  "normY": 13.6056
+                },
+                {
+                  "player": "azury",
+                  "normX": 36.4048,
+                  "normY": 19.4478
+                }
+              ]
+            }
+          ],
+          "matchId": "f88d58be-7201-4599-8e46-6587b42622ed",
+          "date": "2026-04-21",
+          "opponent": "ECO",
+          "score": "13-3"
+        },
+        {
+          "roundNum": 1,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 16481,
+              "players": [
+                {
+                  "player": "MONSTEERR",
+                  "normX": 37.645,
+                  "normY": 14.5104
+                },
+                {
+                  "player": "azury",
+                  "normX": 27.31,
+                  "normY": 29.5332
+                },
+                {
+                  "player": "Fizzy",
+                  "normX": 21.3742,
+                  "normY": 14.3544
+                }
+              ]
+            }
+          ],
+          "matchId": "f88d58be-7201-4599-8e46-6587b42622ed",
+          "date": "2026-04-21",
+          "opponent": "ECO",
+          "score": "13-3"
+        },
+        {
+          "roundNum": 10,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 17040,
+              "players": [
+                {
+                  "player": "musashi",
+                  "normX": 37.8322,
+                  "normY": 25.5162
+                }
+              ]
+            }
+          ],
+          "matchId": "3cc1127c-3135-4a5c-a503-f09d664c602d",
+          "date": "2026-04-14",
+          "opponent": "RZN",
+          "score": "13-10"
+        },
+        {
+          "roundNum": 11,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 16599,
+              "players": [
+                {
+                  "player": "Jamelinho",
+                  "normX": 39.3766,
+                  "normY": 25.9686
+                },
+                {
+                  "player": "azury",
+                  "normX": 40.0318,
+                  "normY": 20.3214
+                },
+                {
+                  "player": "Fizzy",
+                  "normX": 17.5678,
+                  "normY": 49.9146
+                },
+                {
+                  "player": "musashi",
+                  "normX": 24.8218,
+                  "normY": 39.1272
+                },
+                {
+                  "player": "MONSTEERR",
+                  "normX": 36.7636,
+                  "normY": 24.4554
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18794,
+              "players": [
+                {
+                  "player": "Jamelinho",
+                  "normX": 36.1318,
+                  "normY": 21.234
+                },
+                {
+                  "player": "Fizzy",
+                  "normX": 19.6036,
+                  "normY": 49.2438
+                },
+                {
+                  "player": "musashi",
+                  "normX": 29.3536,
+                  "normY": 31.1634
+                },
+                {
+                  "player": "MONSTEERR",
+                  "normX": 30.2038,
+                  "normY": 25.407
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18932,
+              "players": [
+                {
+                  "player": "Jamelinho",
+                  "normX": 36.0616,
+                  "normY": 20.1888
+                },
+                {
+                  "player": "Fizzy",
+                  "normX": 20.0872,
+                  "normY": 49.0722
+                },
+                {
+                  "player": "musashi",
+                  "normX": 29.4628,
+                  "normY": 30.6252
+                },
+                {
+                  "player": "MONSTEERR",
+                  "normX": 30.1336,
+                  "normY": 25.1184
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18969,
+              "players": [
+                {
+                  "player": "Jamelinho",
+                  "normX": 36.046,
+                  "normY": 19.947
+                },
+                {
+                  "player": "Fizzy",
+                  "normX": 20.1574,
+                  "normY": 49.0254
+                },
+                {
+                  "player": "musashi",
+                  "normX": 29.4784,
+                  "normY": 30.4848
+                }
+              ]
+            }
+          ],
+          "matchId": "3cc1127c-3135-4a5c-a503-f09d664c602d",
+          "date": "2026-04-14",
+          "opponent": "RZN",
+          "score": "13-10"
+        }
+      ]
+    },
+    "B": {
+      "rounds": [
+        {
+          "roundNum": 5,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 17643,
+              "players": [
+                {
+                  "player": "MONSTEERR",
+                  "normX": 44.002,
+                  "normY": 76.9338
+                }
+              ]
+            }
+          ],
+          "matchId": "f88d58be-7201-4599-8e46-6587b42622ed",
+          "date": "2026-04-21",
+          "opponent": "ECO",
+          "score": "13-3"
+        },
+        {
+          "roundNum": 0,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 11003,
+              "players": [
+                {
+                  "player": "azury",
+                  "normX": 19.9156,
+                  "normY": 77.6124
+                }
+              ]
+            }
+          ],
+          "matchId": "3cc1127c-3135-4a5c-a503-f09d664c602d",
+          "date": "2026-04-14",
+          "opponent": "RZN",
+          "score": "13-10"
+        },
+        {
+          "roundNum": 8,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 19175,
+              "players": [
+                {
+                  "player": "Jamelinho",
+                  "normX": 35.071,
+                  "normY": 82.5498
+                },
+                {
+                  "player": "Fizzy",
+                  "normX": 21.9202,
+                  "normY": 71.1306
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 19375,
+              "players": [
+                {
+                  "player": "Fizzy",
+                  "normX": 21.6316,
+                  "normY": 71.4036
+                }
+              ]
+            }
+          ],
+          "matchId": "3cc1127c-3135-4a5c-a503-f09d664c602d",
+          "date": "2026-04-14",
+          "opponent": "RZN",
+          "score": "13-10"
+        }
+      ]
+    }
   }
 }

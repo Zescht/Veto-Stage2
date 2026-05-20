@@ -838,5 +838,500 @@
         }
       ]
     }
+  },
+  "postPlant10_20": {
+    "A": {
+      "rounds": [
+        {
+          "roundNum": 19,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 12832,
+              "players": [
+                {
+                  "player": "Docent",
+                  "normX": 86.7203,
+                  "normY": 56.8968
+                },
+                {
+                  "player": "influx",
+                  "normX": 80.5953,
+                  "normY": 50.1488
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 14361,
+              "players": [
+                {
+                  "player": "Docent",
+                  "normX": 88.4283,
+                  "normY": 56.6308
+                },
+                {
+                  "player": "influx",
+                  "normX": 79.8673,
+                  "normY": 49.9528
+                }
+              ]
+            }
+          ],
+          "matchId": "ec8569ca-1b4e-4eae-a5fb-9ac8c8d23c6e",
+          "date": "2026-05-18",
+          "opponent": "NVJ",
+          "score": "13-11"
+        },
+        {
+          "roundNum": 20,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 13450,
+              "players": [
+                {
+                  "player": "oroni",
+                  "normX": 76.1083,
+                  "normY": 34.6508
+                },
+                {
+                  "player": "wezzy1",
+                  "normX": 93.0833,
+                  "normY": 49.3368
+                },
+                {
+                  "player": "influx",
+                  "normX": 93.2023,
+                  "normY": 40.4678
+                },
+                {
+                  "player": "Docent",
+                  "normX": 91.5363,
+                  "normY": 42.9108
+                },
+                {
+                  "player": "MerSahaha",
+                  "normX": 84.5783,
+                  "normY": 32.6908
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 13775,
+              "players": [
+                {
+                  "player": "oroni",
+                  "normX": 76.1083,
+                  "normY": 34.6508
+                },
+                {
+                  "player": "influx",
+                  "normX": 92.2293,
+                  "normY": 40.3278
+                },
+                {
+                  "player": "Docent",
+                  "normX": 91.6833,
+                  "normY": 43.6318
+                },
+                {
+                  "player": "MerSahaha",
+                  "normX": 85.0613,
+                  "normY": 33.1738
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 17940,
+              "players": [
+                {
+                  "player": "oroni",
+                  "normX": 81.4353,
+                  "normY": 32.8238
+                },
+                {
+                  "player": "influx",
+                  "normX": 92.7263,
+                  "normY": 48.5038
+                },
+                {
+                  "player": "MerSahaha",
+                  "normX": 86.6783,
+                  "normY": 39.5158
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18345,
+              "players": [
+                {
+                  "player": "oroni",
+                  "normX": 82.6463,
+                  "normY": 33.8038
+                },
+                {
+                  "player": "MerSahaha",
+                  "normX": 87.0563,
+                  "normY": 40.3418
+                }
+              ]
+            }
+          ],
+          "matchId": "f5278d2b-a972-4ae5-982c-31faa7073e6a",
+          "date": "2026-05-03",
+          "opponent": "RB",
+          "score": "8-13"
+        },
+        {
+          "roundNum": 9,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 11205,
+              "players": [
+                {
+                  "player": "oroni",
+                  "normX": 69.5143,
+                  "normY": 19.7478
+                },
+                {
+                  "player": "influx",
+                  "normX": 55.6053,
+                  "normY": 21.6588
+                },
+                {
+                  "player": "MerSahaha",
+                  "normX": 58.4543,
+                  "normY": 19.9298
+                },
+                {
+                  "player": "Docent",
+                  "normX": 42.4873,
+                  "normY": 35.7218
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 11280,
+              "players": [
+                {
+                  "player": "oroni",
+                  "normX": 69.5143,
+                  "normY": 19.7478
+                },
+                {
+                  "player": "influx",
+                  "normX": 55.6053,
+                  "normY": 21.6728
+                },
+                {
+                  "player": "MerSahaha",
+                  "normX": 58.2933,
+                  "normY": 20.0558
+                },
+                {
+                  "player": "Docent",
+                  "normX": 42.5503,
+                  "normY": 35.8758
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18649,
+              "players": [
+                {
+                  "player": "oroni",
+                  "normX": 74.3513,
+                  "normY": 25.2778
+                },
+                {
+                  "player": "influx",
+                  "normX": 74.9953,
+                  "normY": 33.7968
+                },
+                {
+                  "player": "MerSahaha",
+                  "normX": 73.0283,
+                  "normY": 23.5978
+                },
+                {
+                  "player": "Docent",
+                  "normX": 51.9723,
+                  "normY": 44.2058
+                }
+              ]
+            }
+          ],
+          "matchId": "b92c2013-07a8-41b4-a77e-c265ac93efd3",
+          "date": "2026-05-14",
+          "opponent": "RB",
+          "score": "6-13"
+        },
+        {
+          "roundNum": 11,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 11090,
+              "players": [
+                {
+                  "player": "MerSahaha",
+                  "normX": 50.7683,
+                  "normY": 47.3698
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18498,
+              "players": [
+                {
+                  "player": "MerSahaha",
+                  "normX": 66.5953,
+                  "normY": 45.8158
+                }
+              ]
+            }
+          ],
+          "matchId": "b92c2013-07a8-41b4-a77e-c265ac93efd3",
+          "date": "2026-05-14",
+          "opponent": "RB",
+          "score": "6-13"
+        }
+      ]
+    },
+    "B": {
+      "rounds": [
+        {
+          "roundNum": 22,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 14940,
+              "players": [
+                {
+                  "player": "wezzy1",
+                  "normX": 16.9723,
+                  "normY": 32.2008
+                },
+                {
+                  "player": "MerSahaha",
+                  "normX": 17.4413,
+                  "normY": 33.9298
+                },
+                {
+                  "player": "influx",
+                  "normX": 18.6313,
+                  "normY": 32.3058
+                }
+              ]
+            }
+          ],
+          "matchId": "ec8569ca-1b4e-4eae-a5fb-9ac8c8d23c6e",
+          "date": "2026-05-18",
+          "opponent": "NVJ",
+          "score": "13-11"
+        },
+        {
+          "roundNum": 15,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 13814,
+              "players": [
+                {
+                  "player": "oroni",
+                  "normX": 37.0623,
+                  "normY": 30.8568
+                },
+                {
+                  "player": "wezzy1",
+                  "normX": 24.8193,
+                  "normY": 43.1138
+                },
+                {
+                  "player": "Docent",
+                  "normX": 14.4523,
+                  "normY": 63.4208
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15389,
+              "players": [
+                {
+                  "player": "oroni",
+                  "normX": 33.5203,
+                  "normY": 31.0388
+                },
+                {
+                  "player": "wezzy1",
+                  "normX": 23.9303,
+                  "normY": 46.2708
+                },
+                {
+                  "player": "Docent",
+                  "normX": 13.7243,
+                  "normY": 63.4138
+                }
+              ]
+            }
+          ],
+          "matchId": "f5278d2b-a972-4ae5-982c-31faa7073e6a",
+          "date": "2026-05-03",
+          "opponent": "RB",
+          "score": "8-13"
+        },
+        {
+          "roundNum": 16,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 10601,
+              "players": [
+                {
+                  "player": "Docent",
+                  "normX": 29.5443,
+                  "normY": 40.5378
+                }
+              ]
+            }
+          ],
+          "matchId": "f5278d2b-a972-4ae5-982c-31faa7073e6a",
+          "date": "2026-05-03",
+          "opponent": "RB",
+          "score": "8-13"
+        },
+        {
+          "roundNum": 3,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 11234,
+              "players": [
+                {
+                  "player": "oroni",
+                  "normX": 11.4773,
+                  "normY": 46.2988
+                },
+                {
+                  "player": "MerSahaha",
+                  "normX": 5.1773,
+                  "normY": 18.6698
+                },
+                {
+                  "player": "wezzy1",
+                  "normX": 12.5133,
+                  "normY": 41.0768
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 12395,
+              "players": [
+                {
+                  "player": "oroni",
+                  "normX": 12.8213,
+                  "normY": 42.6798
+                },
+                {
+                  "player": "MerSahaha",
+                  "normX": 7.0253,
+                  "normY": 18.5228
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 13649,
+              "players": [
+                {
+                  "player": "oroni",
+                  "normX": 10.6023,
+                  "normY": 40.1528
+                },
+                {
+                  "player": "MerSahaha",
+                  "normX": 7.0253,
+                  "normY": 18.2288
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15645,
+              "players": [
+                {
+                  "player": "oroni",
+                  "normX": 10.0983,
+                  "normY": 36.1768
+                },
+                {
+                  "player": "MerSahaha",
+                  "normX": 5.4853,
+                  "normY": 18.9848
+                }
+              ]
+            }
+          ],
+          "matchId": "b92c2013-07a8-41b4-a77e-c265ac93efd3",
+          "date": "2026-05-14",
+          "opponent": "RB",
+          "score": "6-13"
+        },
+        {
+          "roundNum": 4,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 12770,
+              "players": [
+                {
+                  "player": "oroni",
+                  "normX": 25.2673,
+                  "normY": 21.4558
+                },
+                {
+                  "player": "MerSahaha",
+                  "normX": 31.2593,
+                  "normY": 8.6458
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 19366,
+              "players": [
+                {
+                  "player": "oroni",
+                  "normX": 31.3293,
+                  "normY": 29.5408
+                }
+              ]
+            }
+          ],
+          "matchId": "b92c2013-07a8-41b4-a77e-c265ac93efd3",
+          "date": "2026-05-14",
+          "opponent": "RB",
+          "score": "6-13"
+        },
+        {
+          "roundNum": 7,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 16212,
+              "players": [
+                {
+                  "player": "influx",
+                  "normX": 40.0373,
+                  "normY": 32.6208
+                },
+                {
+                  "player": "MerSahaha",
+                  "normX": 44.3493,
+                  "normY": 25.1518
+                },
+                {
+                  "player": "Docent",
+                  "normX": 23.9863,
+                  "normY": 54.4748
+                }
+              ]
+            }
+          ],
+          "matchId": "b92c2013-07a8-41b4-a77e-c265ac93efd3",
+          "date": "2026-05-14",
+          "opponent": "RB",
+          "score": "6-13"
+        }
+      ]
+    }
   }
 }

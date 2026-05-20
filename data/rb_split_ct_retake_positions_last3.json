@@ -262,5 +262,111 @@
         }
       ]
     }
+  },
+  "postPlant10_20": {
+    "A": {
+      "rounds": [
+        {
+          "roundNum": 12,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 16208,
+              "players": [
+                {
+                  "player": "Kachoww",
+                  "normX": 17.989,
+                  "normY": 20.3214
+                },
+                {
+                  "player": "reazy",
+                  "normX": 44.7898,
+                  "normY": 23.9718
+                },
+                {
+                  "player": "Deadink",
+                  "normX": 49.0018,
+                  "normY": 18.387
+                }
+              ]
+            }
+          ],
+          "matchId": "e1f54e6b-43b4-41dd-a73c-ccfac39795d9",
+          "date": "2026-05-03",
+          "opponent": "BJK",
+          "score": "13-5"
+        }
+      ]
+    },
+    "B": {
+      "rounds": [
+        {
+          "roundNum": 16,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 10103,
+              "players": [
+                {
+                  "player": "hezacoil",
+                  "normX": 39.3532,
+                  "normY": 76.1382
+                },
+                {
+                  "player": "Deadink",
+                  "normX": 25.8748,
+                  "normY": 80.5218
+                }
+              ]
+            }
+          ],
+          "matchId": "e1f54e6b-43b4-41dd-a73c-ccfac39795d9",
+          "date": "2026-05-03",
+          "opponent": "BJK",
+          "score": "13-5"
+        },
+        {
+          "roundNum": 12,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 12485,
+              "players": [
+                {
+                  "player": "hezacoil",
+                  "normX": 31.2412,
+                  "normY": 88.9146
+                }
+              ]
+            }
+          ],
+          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
+          "date": "2026-04-27",
+          "opponent": "MISA",
+          "score": "14-12"
+        },
+        {
+          "roundNum": 18,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 17779,
+              "players": [
+                {
+                  "player": "hezacoil",
+                  "normX": 38.3158,
+                  "normY": 70.3428
+                },
+                {
+                  "player": "reazy",
+                  "normX": 29.3848,
+                  "normY": 87.5964
+                }
+              ]
+            }
+          ],
+          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
+          "date": "2026-04-27",
+          "opponent": "MISA",
+          "score": "14-12"
+        }
+      ]
+    }
   }
 }

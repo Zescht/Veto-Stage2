@@ -850,5 +850,459 @@
         }
       ]
     }
+  },
+  "postPlant10_20": {
+    "B": {
+      "rounds": [
+        {
+          "roundNum": 12,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 16912,
+              "players": [
+                {
+                  "player": "Darxcio",
+                  "normX": 40.3984,
+                  "normY": 79.4064
+                },
+                {
+                  "player": "Javelin",
+                  "normX": 35.1334,
+                  "normY": 86.4654
+                }
+              ]
+            }
+          ],
+          "matchId": "e02cf2c3-401f-4f39-ac58-d916f8f677b2",
+          "date": "2026-05-13",
+          "opponent": "TLA",
+          "score": "11-13"
+        },
+        {
+          "roundNum": 16,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 18127,
+              "players": [
+                {
+                  "player": "Javelin",
+                  "normX": 27.7078,
+                  "normY": 81.3252
+                }
+              ]
+            }
+          ],
+          "matchId": "e02cf2c3-401f-4f39-ac58-d916f8f677b2",
+          "date": "2026-05-13",
+          "opponent": "TLA",
+          "score": "11-13"
+        },
+        {
+          "roundNum": 3,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 11308,
+              "players": [
+                {
+                  "player": "Darxcio",
+                  "normX": 39.6964,
+                  "normY": 89.094
+                },
+                {
+                  "player": "k9lyos",
+                  "normX": 29.1742,
+                  "normY": 88.3686
+                },
+                {
+                  "player": "Kolosha",
+                  "normX": 34.5484,
+                  "normY": 90.5448
+                },
+                {
+                  "player": "Avey",
+                  "normX": 34.8838,
+                  "normY": 89.7882
+                },
+                {
+                  "player": "Javelin",
+                  "normX": 41.9974,
+                  "normY": 79.4454
+                }
+              ]
+            }
+          ],
+          "matchId": "da551aa8-48de-474d-aff3-1d2738578d4d",
+          "date": "2026-04-21",
+          "opponent": "TLA",
+          "score": "13-10"
+        },
+        {
+          "roundNum": 4,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 17094,
+              "players": [
+                {
+                  "player": "Darxcio",
+                  "normX": 25.9996,
+                  "normY": 81.0912
+                },
+                {
+                  "player": "k9lyos",
+                  "normX": 22.7314,
+                  "normY": 82.6356
+                },
+                {
+                  "player": "Avey",
+                  "normX": 23.41,
+                  "normY": 78.7356
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18559,
+              "players": [
+                {
+                  "player": "k9lyos",
+                  "normX": 23.839,
+                  "normY": 81.1146
+                },
+                {
+                  "player": "Avey",
+                  "normX": 24.9076,
+                  "normY": 79.695
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18977,
+              "players": [
+                {
+                  "player": "k9lyos",
+                  "normX": 24.9856,
+                  "normY": 81.4422
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 19997,
+              "players": [
+                {
+                  "player": "k9lyos",
+                  "normX": 24.2914,
+                  "normY": 80.5608
+                }
+              ]
+            }
+          ],
+          "matchId": "da551aa8-48de-474d-aff3-1d2738578d4d",
+          "date": "2026-04-21",
+          "opponent": "TLA",
+          "score": "13-10"
+        },
+        {
+          "roundNum": 3,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 16038,
+              "players": [
+                {
+                  "player": "Kolosha",
+                  "normX": 41.9662,
+                  "normY": 71.8794
+                },
+                {
+                  "player": "k9lyos",
+                  "normX": 41.9194,
+                  "normY": 71.076
+                },
+                {
+                  "player": "Javelin",
+                  "normX": 23.4022,
+                  "normY": 77.9322
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18192,
+              "players": [
+                {
+                  "player": "k9lyos",
+                  "normX": 41.6854,
+                  "normY": 73.6656
+                },
+                {
+                  "player": "Javelin",
+                  "normX": 22.3726,
+                  "normY": 82.2144
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18405,
+              "players": [
+                {
+                  "player": "Javelin",
+                  "normX": 22.1932,
+                  "normY": 82.0896
+                }
+              ]
+            }
+          ],
+          "matchId": "58f1ef9d-cd53-48e4-8791-3c002eedaba8",
+          "date": "2026-05-11",
+          "opponent": "EP",
+          "score": "4-13"
+        }
+      ]
+    },
+    "A": {
+      "rounds": [
+        {
+          "roundNum": 15,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 18929,
+              "players": [
+                {
+                  "player": "Avey",
+                  "normX": 26.0386,
+                  "normY": 24.4242
+                }
+              ]
+            }
+          ],
+          "matchId": "e02cf2c3-401f-4f39-ac58-d916f8f677b2",
+          "date": "2026-05-13",
+          "opponent": "TLA",
+          "score": "11-13"
+        },
+        {
+          "roundNum": 17,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 15977,
+              "players": [
+                {
+                  "player": "Kolosha",
+                  "normX": 20.1574,
+                  "normY": 22.4508
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18350,
+              "players": [
+                {
+                  "player": "Kolosha",
+                  "normX": 23.6986,
+                  "normY": 23.4492
+                }
+              ]
+            }
+          ],
+          "matchId": "e02cf2c3-401f-4f39-ac58-d916f8f677b2",
+          "date": "2026-05-13",
+          "opponent": "TLA",
+          "score": "11-13"
+        },
+        {
+          "roundNum": 19,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 17775,
+              "players": [
+                {
+                  "player": "Avey",
+                  "normX": 29.416,
+                  "normY": 27.9498
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18957,
+              "players": [
+                {
+                  "player": "Avey",
+                  "normX": 30.5158,
+                  "normY": 28.4802
+                }
+              ]
+            }
+          ],
+          "matchId": "e02cf2c3-401f-4f39-ac58-d916f8f677b2",
+          "date": "2026-05-13",
+          "opponent": "TLA",
+          "score": "11-13"
+        },
+        {
+          "roundNum": 8,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 11348,
+              "players": [
+                {
+                  "player": "Darxcio",
+                  "normX": 31.5298,
+                  "normY": 30.555
+                },
+                {
+                  "player": "k9lyos",
+                  "normX": 22.5754,
+                  "normY": 15.1422
+                },
+                {
+                  "player": "Kolosha",
+                  "normX": 20.9686,
+                  "normY": 20.103
+                },
+                {
+                  "player": "Javelin",
+                  "normX": 18.3088,
+                  "normY": 19.0188
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 12775,
+              "players": [
+                {
+                  "player": "Darxcio",
+                  "normX": 30.8278,
+                  "normY": 31.5378
+                },
+                {
+                  "player": "k9lyos",
+                  "normX": 21.6394,
+                  "normY": 14.4012
+                },
+                {
+                  "player": "Kolosha",
+                  "normX": 23.0512,
+                  "normY": 17.5914
+                },
+                {
+                  "player": "Javelin",
+                  "normX": 18.3244,
+                  "normY": 18.9174
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 14171,
+              "players": [
+                {
+                  "player": "Darxcio",
+                  "normX": 29.7046,
+                  "normY": 30.1884
+                },
+                {
+                  "player": "k9lyos",
+                  "normX": 22.7548,
+                  "normY": 11.7648
+                },
+                {
+                  "player": "Kolosha",
+                  "normX": 22.2634,
+                  "normY": 14.37
+                },
+                {
+                  "player": "Javelin",
+                  "normX": 17.8954,
+                  "normY": 21.5226
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15669,
+              "players": [
+                {
+                  "player": "Darxcio",
+                  "normX": 28.7296,
+                  "normY": 26.577
+                },
+                {
+                  "player": "k9lyos",
+                  "normX": 26.842,
+                  "normY": 9.8148
+                },
+                {
+                  "player": "Kolosha",
+                  "normX": 27.0526,
+                  "normY": 12.1158
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15985,
+              "players": [
+                {
+                  "player": "Darxcio",
+                  "normX": 28.5736,
+                  "normY": 26.07
+                },
+                {
+                  "player": "k9lyos",
+                  "normX": 27.895,
+                  "normY": 9.3702
+                },
+                {
+                  "player": "Kolosha",
+                  "normX": 28.1914,
+                  "normY": 12.03
+                }
+              ]
+            }
+          ],
+          "matchId": "da551aa8-48de-474d-aff3-1d2738578d4d",
+          "date": "2026-04-21",
+          "opponent": "TLA",
+          "score": "13-10"
+        },
+        {
+          "roundNum": 8,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 18083,
+              "players": [
+                {
+                  "player": "Javelin",
+                  "normX": 50.4136,
+                  "normY": 27.8016
+                }
+              ]
+            }
+          ],
+          "matchId": "58f1ef9d-cd53-48e4-8791-3c002eedaba8",
+          "date": "2026-05-11",
+          "opponent": "EP",
+          "score": "4-13"
+        },
+        {
+          "roundNum": 9,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 13678,
+              "players": [
+                {
+                  "player": "Kolosha",
+                  "normX": 49.0798,
+                  "normY": 27.0684
+                },
+                {
+                  "player": "Avey",
+                  "normX": 36.163,
+                  "normY": 34.5018
+                }
+              ]
+            }
+          ],
+          "matchId": "58f1ef9d-cd53-48e4-8791-3c002eedaba8",
+          "date": "2026-05-11",
+          "opponent": "EP",
+          "score": "4-13"
+        }
+      ]
+    }
   }
 }

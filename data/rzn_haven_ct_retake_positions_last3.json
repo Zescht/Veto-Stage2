@@ -898,5 +898,893 @@
         }
       ]
     }
+  },
+  "postPlant10_20": {
+    "C": {
+      "rounds": [
+        {
+          "roundNum": 12,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 10583,
+              "players": [
+                {
+                  "player": "deyten",
+                  "normX": 36.445,
+                  "normY": 67.7603
+                },
+                {
+                  "player": "BarcK",
+                  "normX": 38.4775,
+                  "normY": 67.0253
+                },
+                {
+                  "player": "Puggy",
+                  "normX": 28.075,
+                  "normY": 72.9503
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 10735,
+              "players": [
+                {
+                  "player": "deyten",
+                  "normX": 36.6775,
+                  "normY": 68.0153
+                },
+                {
+                  "player": "BarcK",
+                  "normX": 37.7875,
+                  "normY": 66.8078
+                },
+                {
+                  "player": "Puggy",
+                  "normX": 28.0225,
+                  "normY": 72.9278
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 12684,
+              "players": [
+                {
+                  "player": "deyten",
+                  "normX": 33.07,
+                  "normY": 67.7828
+                },
+                {
+                  "player": "BarcK",
+                  "normX": 29.4625,
+                  "normY": 67.8353
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 14273,
+              "players": [
+                {
+                  "player": "deyten",
+                  "normX": 30.6325,
+                  "normY": 70.4828
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 14894,
+              "players": [
+                {
+                  "player": "deyten",
+                  "normX": 30.82,
+                  "normY": 70.7978
+                }
+              ]
+            }
+          ],
+          "matchId": "a8d5abe2-4ac1-48d1-a5c2-4de4517f94b7",
+          "date": "2026-04-04",
+          "opponent": "ECO",
+          "score": "10-13"
+        },
+        {
+          "roundNum": 15,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 12449,
+              "players": [
+                {
+                  "player": "deyten",
+                  "normX": 78.61,
+                  "normY": 64.7003
+                },
+                {
+                  "player": "Opex",
+                  "normX": 58.9225,
+                  "normY": 62.1578
+                }
+              ]
+            }
+          ],
+          "matchId": "a8d5abe2-4ac1-48d1-a5c2-4de4517f94b7",
+          "date": "2026-04-04",
+          "opponent": "ECO",
+          "score": "10-13"
+        },
+        {
+          "roundNum": 17,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 10456,
+              "players": [
+                {
+                  "player": "deyten",
+                  "normX": 55.795,
+                  "normY": 63.5078
+                },
+                {
+                  "player": "Puggy",
+                  "normX": 21.055,
+                  "normY": 54.8828
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 10913,
+              "players": [
+                {
+                  "player": "deyten",
+                  "normX": 54.5575,
+                  "normY": 62.4278
+                },
+                {
+                  "player": "Puggy",
+                  "normX": 22.105,
+                  "normY": 55.3628
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18285,
+              "players": [
+                {
+                  "player": "deyten",
+                  "normX": 49.3675,
+                  "normY": 66.6428
+                }
+              ]
+            }
+          ],
+          "matchId": "a8d5abe2-4ac1-48d1-a5c2-4de4517f94b7",
+          "date": "2026-04-04",
+          "opponent": "ECO",
+          "score": "10-13"
+        },
+        {
+          "roundNum": 0,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 12568,
+              "players": [
+                {
+                  "player": "deyten",
+                  "normX": 28.2475,
+                  "normY": 65.0678
+                },
+                {
+                  "player": "BarcK",
+                  "normX": 49.6,
+                  "normY": 66.4553
+                },
+                {
+                  "player": "Opex",
+                  "normX": 44.0875,
+                  "normY": 66.0953
+                },
+                {
+                  "player": "Puggy",
+                  "normX": 33.625,
+                  "normY": 65.7353
+                },
+                {
+                  "player": "Bumbibjorn1",
+                  "normX": 54.5725,
+                  "normY": 63.0653
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 13152,
+              "players": [
+                {
+                  "player": "BarcK",
+                  "normX": 48.1525,
+                  "normY": 67.0328
+                },
+                {
+                  "player": "Opex",
+                  "normX": 44.83,
+                  "normY": 66.5228
+                },
+                {
+                  "player": "Puggy",
+                  "normX": 31.555,
+                  "normY": 65.0528
+                },
+                {
+                  "player": "Bumbibjorn1",
+                  "normX": 53.5075,
+                  "normY": 62.3303
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 17377,
+              "players": [
+                {
+                  "player": "BarcK",
+                  "normX": 48.1,
+                  "normY": 74.2253
+                },
+                {
+                  "player": "Opex",
+                  "normX": 46.0975,
+                  "normY": 74.4578
+                },
+                {
+                  "player": "Puggy",
+                  "normX": 29.485,
+                  "normY": 70.1678
+                },
+                {
+                  "player": "Bumbibjorn1",
+                  "normX": 47.77,
+                  "normY": 71.2628
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 17569,
+              "players": [
+                {
+                  "player": "BarcK",
+                  "normX": 48.0475,
+                  "normY": 74.6378
+                },
+                {
+                  "player": "Puggy",
+                  "normX": 29.41,
+                  "normY": 70.4153
+                },
+                {
+                  "player": "Bumbibjorn1",
+                  "normX": 47.83,
+                  "normY": 71.9603
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18488,
+              "players": [
+                {
+                  "player": "BarcK",
+                  "normX": 47.395,
+                  "normY": 74.8478
+                },
+                {
+                  "player": "Puggy",
+                  "normX": 28.7425,
+                  "normY": 73.6478
+                },
+                {
+                  "player": "Bumbibjorn1",
+                  "normX": 46.57,
+                  "normY": 74.5703
+                }
+              ]
+            }
+          ],
+          "matchId": "66514075-1283-4122-85cb-4d3a7b6e2d8a",
+          "date": "2026-04-07",
+          "opponent": "CGN",
+          "score": "13-8"
+        },
+        {
+          "roundNum": 7,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 16805,
+              "players": [
+                {
+                  "player": "Bumbibjorn1",
+                  "normX": 54.595,
+                  "normY": 85.7003
+                }
+              ]
+            }
+          ],
+          "matchId": "66514075-1283-4122-85cb-4d3a7b6e2d8a",
+          "date": "2026-04-07",
+          "opponent": "CGN",
+          "score": "13-8"
+        },
+        {
+          "roundNum": 12,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 11469,
+              "players": [
+                {
+                  "player": "BarcK",
+                  "normX": 68.4025,
+                  "normY": 46.1078
+                },
+                {
+                  "player": "deyten",
+                  "normX": 21.49,
+                  "normY": 54.5303
+                },
+                {
+                  "player": "Bumbibjorn1",
+                  "normX": 66.9475,
+                  "normY": 46.2953
+                }
+              ]
+            }
+          ],
+          "matchId": "ba0cf320-229d-47a0-9029-49740aa21229",
+          "date": "2026-04-26",
+          "opponent": "DXG",
+          "score": "3-13"
+        },
+        {
+          "roundNum": 6,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 11632,
+              "players": [
+                {
+                  "player": "deyten",
+                  "normX": 41.05,
+                  "normY": 62.2178
+                },
+                {
+                  "player": "Puggy",
+                  "normX": 33.9775,
+                  "normY": 60.2603
+                }
+              ]
+            }
+          ],
+          "matchId": "0a4eac40-0b98-4fda-a1ea-cf49d9522d13",
+          "date": "2026-04-25",
+          "opponent": "ATN",
+          "score": "13-3"
+        },
+        {
+          "roundNum": 9,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 15771,
+              "players": [
+                {
+                  "player": "Puggy",
+                  "normX": 46.51,
+                  "normY": 65.3903
+                }
+              ]
+            }
+          ],
+          "matchId": "0a4eac40-0b98-4fda-a1ea-cf49d9522d13",
+          "date": "2026-04-25",
+          "opponent": "ATN",
+          "score": "13-3"
+        }
+      ]
+    },
+    "A": {
+      "rounds": [
+        {
+          "roundNum": 18,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 18056,
+              "players": [
+                {
+                  "player": "deyten",
+                  "normX": 31.03,
+                  "normY": 28.9628
+                },
+                {
+                  "player": "BarcK",
+                  "normX": 28.9675,
+                  "normY": 22.6028
+                },
+                {
+                  "player": "Opex",
+                  "normX": 37.195,
+                  "normY": 16.4603
+                },
+                {
+                  "player": "Puggy",
+                  "normX": 23.86,
+                  "normY": 19.4453
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18266,
+              "players": [
+                {
+                  "player": "deyten",
+                  "normX": 31.03,
+                  "normY": 28.4528
+                },
+                {
+                  "player": "BarcK",
+                  "normX": 29.1325,
+                  "normY": 23.4728
+                },
+                {
+                  "player": "Puggy",
+                  "normX": 24.175,
+                  "normY": 19.1228
+                }
+              ]
+            }
+          ],
+          "matchId": "a8d5abe2-4ac1-48d1-a5c2-4de4517f94b7",
+          "date": "2026-04-04",
+          "opponent": "ECO",
+          "score": "10-13"
+        },
+        {
+          "roundNum": 20,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 12636,
+              "players": [
+                {
+                  "player": "BarcK",
+                  "normX": 39.5425,
+                  "normY": 14.9903
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 13064,
+              "players": [
+                {
+                  "player": "BarcK",
+                  "normX": 39.475,
+                  "normY": 13.2278
+                }
+              ]
+            }
+          ],
+          "matchId": "a8d5abe2-4ac1-48d1-a5c2-4de4517f94b7",
+          "date": "2026-04-04",
+          "opponent": "ECO",
+          "score": "10-13"
+        },
+        {
+          "roundNum": 22,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 11852,
+              "players": [
+                {
+                  "player": "Puggy",
+                  "normX": 31.3375,
+                  "normY": 15.0278
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 13652,
+              "players": [
+                {
+                  "player": "Puggy",
+                  "normX": 31.12,
+                  "normY": 12.7103
+                }
+              ]
+            }
+          ],
+          "matchId": "a8d5abe2-4ac1-48d1-a5c2-4de4517f94b7",
+          "date": "2026-04-04",
+          "opponent": "ECO",
+          "score": "10-13"
+        },
+        {
+          "roundNum": 2,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 16793,
+              "players": [
+                {
+                  "player": "deyten",
+                  "normX": 29.095,
+                  "normY": 25.3553
+                },
+                {
+                  "player": "BarcK",
+                  "normX": 32.7025,
+                  "normY": 12.9878
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 17625,
+              "players": [
+                {
+                  "player": "deyten",
+                  "normX": 29.7925,
+                  "normY": 23.5778
+                }
+              ]
+            }
+          ],
+          "matchId": "66514075-1283-4122-85cb-4d3a7b6e2d8a",
+          "date": "2026-04-07",
+          "opponent": "CGN",
+          "score": "13-8"
+        },
+        {
+          "roundNum": 15,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 16509,
+              "players": [
+                {
+                  "player": "Opex",
+                  "normX": 33.2125,
+                  "normY": 13.8353
+                },
+                {
+                  "player": "BarcK",
+                  "normX": 30.1825,
+                  "normY": 26.7278
+                },
+                {
+                  "player": "deyten",
+                  "normX": 34.015,
+                  "normY": 31.6928
+                },
+                {
+                  "player": "Puggy",
+                  "normX": 30.5575,
+                  "normY": 12.5153
+                },
+                {
+                  "player": "Bumbibjorn1",
+                  "normX": 39.3175,
+                  "normY": 33.5453
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 17121,
+              "players": [
+                {
+                  "player": "Opex",
+                  "normX": 32.2975,
+                  "normY": 12.1478
+                },
+                {
+                  "player": "BarcK",
+                  "normX": 30.085,
+                  "normY": 31.1828
+                },
+                {
+                  "player": "deyten",
+                  "normX": 36.9925,
+                  "normY": 32.9453
+                },
+                {
+                  "player": "Puggy",
+                  "normX": 31.8175,
+                  "normY": 11.7653
+                },
+                {
+                  "player": "Bumbibjorn1",
+                  "normX": 38.23,
+                  "normY": 31.4303
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18902,
+              "players": [
+                {
+                  "player": "Opex",
+                  "normX": 37.345,
+                  "normY": 10.4003
+                },
+                {
+                  "player": "BarcK",
+                  "normX": 30.79,
+                  "normY": 29.5703
+                },
+                {
+                  "player": "deyten",
+                  "normX": 32.26,
+                  "normY": 31.5653
+                },
+                {
+                  "player": "Puggy",
+                  "normX": 30.9775,
+                  "normY": 13.8353
+                },
+                {
+                  "player": "Bumbibjorn1",
+                  "normX": 30.8875,
+                  "normY": 30.2903
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 19542,
+              "players": [
+                {
+                  "player": "BarcK",
+                  "normX": 30.55,
+                  "normY": 28.1453
+                },
+                {
+                  "player": "deyten",
+                  "normX": 30.6775,
+                  "normY": 30.0728
+                },
+                {
+                  "player": "Puggy",
+                  "normX": 31.2925,
+                  "normY": 13.3028
+                },
+                {
+                  "player": "Bumbibjorn1",
+                  "normX": 29.5825,
+                  "normY": 28.7978
+                }
+              ]
+            }
+          ],
+          "matchId": "ba0cf320-229d-47a0-9029-49740aa21229",
+          "date": "2026-04-26",
+          "opponent": "DXG",
+          "score": "3-13"
+        },
+        {
+          "roundNum": 4,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 16004,
+              "players": [
+                {
+                  "player": "BarcK",
+                  "normX": 30.0925,
+                  "normY": 26.9903
+                },
+                {
+                  "player": "Opex",
+                  "normX": 30.7825,
+                  "normY": 25.1603
+                },
+                {
+                  "player": "Puggy",
+                  "normX": 30.4975,
+                  "normY": 14.6303
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 16231,
+              "players": [
+                {
+                  "player": "BarcK",
+                  "normX": 29.77,
+                  "normY": 26.8178
+                },
+                {
+                  "player": "Opex",
+                  "normX": 30.565,
+                  "normY": 23.2328
+                },
+                {
+                  "player": "Puggy",
+                  "normX": 31.0825,
+                  "normY": 14.6303
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 16791,
+              "players": [
+                {
+                  "player": "BarcK",
+                  "normX": 30.91,
+                  "normY": 27.1853
+                },
+                {
+                  "player": "Opex",
+                  "normX": 30.5575,
+                  "normY": 20.3603
+                }
+              ]
+            }
+          ],
+          "matchId": "0a4eac40-0b98-4fda-a1ea-cf49d9522d13",
+          "date": "2026-04-25",
+          "opponent": "ATN",
+          "score": "13-3"
+        },
+        {
+          "roundNum": 5,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 14378,
+              "players": [
+                {
+                  "player": "Bumbibjorn1",
+                  "normX": 31.3075,
+                  "normY": 21.0653
+                },
+                {
+                  "player": "BarcK",
+                  "normX": 30.8125,
+                  "normY": 24.6278
+                },
+                {
+                  "player": "Opex",
+                  "normX": 36.205,
+                  "normY": 17.7578
+                },
+                {
+                  "player": "deyten",
+                  "normX": 38.41,
+                  "normY": 18.4478
+                },
+                {
+                  "player": "Puggy",
+                  "normX": 30.7375,
+                  "normY": 15.2303
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15911,
+              "players": [
+                {
+                  "player": "BarcK",
+                  "normX": 33.9775,
+                  "normY": 24.1103
+                },
+                {
+                  "player": "Opex",
+                  "normX": 38.215,
+                  "normY": 12.5303
+                },
+                {
+                  "player": "deyten",
+                  "normX": 38.515,
+                  "normY": 17.7053
+                },
+                {
+                  "player": "Puggy",
+                  "normX": 31.39,
+                  "normY": 12.0428
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 16171,
+              "players": [
+                {
+                  "player": "BarcK",
+                  "normX": 34.9075,
+                  "normY": 24.2078
+                },
+                {
+                  "player": "Opex",
+                  "normX": 40.45,
+                  "normY": 12.5903
+                },
+                {
+                  "player": "deyten",
+                  "normX": 38.4925,
+                  "normY": 17.4953
+                },
+                {
+                  "player": "Puggy",
+                  "normX": 31.42,
+                  "normY": 12.6728
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 16201,
+              "players": [
+                {
+                  "player": "BarcK",
+                  "normX": 34.9075,
+                  "normY": 24.2078
+                },
+                {
+                  "player": "Opex",
+                  "normX": 40.945,
+                  "normY": 12.6053
+                },
+                {
+                  "player": "deyten",
+                  "normX": 38.5225,
+                  "normY": 17.4503
+                },
+                {
+                  "player": "Puggy",
+                  "normX": 31.42,
+                  "normY": 12.6953
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 19169,
+              "players": [
+                {
+                  "player": "BarcK",
+                  "normX": 40.4875,
+                  "normY": 24.4253
+                },
+                {
+                  "player": "Opex",
+                  "normX": 42.3325,
+                  "normY": 20.3303
+                },
+                {
+                  "player": "deyten",
+                  "normX": 37.8175,
+                  "normY": 15.2828
+                },
+                {
+                  "player": "Puggy",
+                  "normX": 32.77,
+                  "normY": 13.0028
+                }
+              ]
+            }
+          ],
+          "matchId": "0a4eac40-0b98-4fda-a1ea-cf49d9522d13",
+          "date": "2026-04-25",
+          "opponent": "ATN",
+          "score": "13-3"
+        }
+      ]
+    },
+    "B": {
+      "rounds": [
+        {
+          "roundNum": 11,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 11005,
+              "players": [
+                {
+                  "player": "deyten",
+                  "normX": 55.555,
+                  "normY": 64.3328
+                },
+                {
+                  "player": "Bumbibjorn1",
+                  "normX": 35.755,
+                  "normY": 64.7003
+                }
+              ]
+            }
+          ],
+          "matchId": "66514075-1283-4122-85cb-4d3a7b6e2d8a",
+          "date": "2026-04-07",
+          "opponent": "CGN",
+          "score": "13-8"
+        }
+      ]
+    }
   }
 }

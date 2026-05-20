@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BJK Split CT — Positional Analysis</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0d1117;
+    color: #e6edf3;
+    font-family: "Inter", system-ui, sans-serif;
+    font-size: 14px;
+    padding: 28px 32px 48px;
+  }
+  h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.03em; color: #f0f6fc; }
+  h2 { font-size: 1rem; font-weight: 600; letter-spacing: -0.02em; color: #c9d1d9; margin-bottom: 8px; }
+  .eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #8b949e; margin-bottom: 4px; }
+  .subtitle { color: #8b949e; font-size: 0.85rem; margin-top: 4px; margin-bottom: 28px; line-height: 1.5; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+  .card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 18px 20px;
+  }
+  .card .note {
+    font-size: 0.78rem;
+    color: #6e7681;
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+  svg text { font-family: "Inter", system-ui, sans-serif; }
+  .bjk-label { fill: #f97316; font-weight: 700; }
+  .legend { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 10px; font-size: 0.78rem; color: #8b949e; }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .finding-label {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 3px;
+    margin-bottom: 6px;
+  }
+  .f2 { background: rgba(59,130,246,0.18); color: #60a5fa; border: 1px solid rgba(59,130,246,0.3); }
+  .f3 { background: rgba(249,115,22,0.18); color: #fb923c; border: 1px solid rgba(249,115,22,0.3); }
+  .callout {
+    background: rgba(249,115,22,0.08);
+    border: 1px solid rgba(249,115,22,0.25);
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    font-size: 0.85rem;
+    color: #d1d5db;
+    line-height: 1.6;
+  }
+  .callout strong { color: #fb923c; }
+  .section-title {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #8b949e;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #21262d;
+  }
+</style>
+</head>
+<body>
+
+<div class="eyebrow">Split CT-Side · lt10s First-Kill Positioning</div>
+<h1>Besiktas — What Makes Them Different</h1>
+<p class="subtitle">Comparing BJK against 11 other teams on Split CT-side. Data from last 3 maps per team, positions captured at first-kill moment (rounds where FK happened within 10 seconds).</p>
+
+<div class="callout">
+  <strong>Two structural patterns stand out:</strong> BJK players are <strong>compressed into a narrow horizontal corridor</strong> (Finding 3), and they almost never send anyone into the <strong>far-flank early positions</strong> that other teams routinely use (Finding 2). The result: reactive rather than proactive CT play — and a 33% early FK win rate, vs 65% average across the field.
+</div>
+
+<!-- MAP OVERLAY -->
+<div class="section-title">Positions on the map — lt10s CT (first 10 seconds)</div>
+<div class="grid-2" style="margin-bottom:20px;">
+
+  <div class="card">
+    <span class="finding-label f2">Rest of field</span>
+    <h2>All other teams — where they stand</h2>
+    <p style="font-size:0.8rem;color:#8b949e;margin-bottom:10px;">Blue dots = all 11 other teams combined. The <span style="color:#60a5fa;font-weight:600;">blue shaded zone</span> on the left is the far-flank area. Multiple teams regularly send a player there.</p>
+    <div style="position:relative;width:100%;aspect-ratio:1/1;overflow:hidden;background:#080c10;border-radius:4px;">
+      <div id="map-inner-field" style="position:absolute;inset:0;transform:rotate(90deg);transform-origin:center center;">
+        <img src="maps/Split.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.65;">
+        <div style="position:absolute;left:0;top:0;width:25%;height:100%;background:rgba(59,130,246,0.18);border-right:2px dashed rgba(96,165,250,0.7);pointer-events:none;z-index:2;"></div>
+        <div id="dots-field" style="position:absolute;inset:0;z-index:3;"></div>
+      </div>
+    </div>
+    <p class="note">Dots cluster across the full left-right span of the map, with a visible group reaching deep into the far-flank zone (shaded blue).</p>
+  </div>
+
+  <div class="card">
+    <span class="finding-label f3">BJK only</span>
+    <h2>Besiktas — where they stand</h2>
+    <p style="font-size:0.8rem;color:#8b949e;margin-bottom:10px;">Orange dots = BJK only. The <span style="color:#f97316;font-weight:600;">orange band</span> shows their corridor. The far-flank zone (blue dashed line) is nearly empty.</p>
+    <div style="position:relative;width:100%;aspect-ratio:1/1;overflow:hidden;background:#080c10;border-radius:4px;">
+      <div id="map-inner-bjk" style="position:absolute;inset:0;transform:rotate(90deg);transform-origin:center center;">
+        <img src="maps/Split.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.65;">
+        <div style="position:absolute;left:0;top:0;width:25%;height:100%;background:rgba(59,130,246,0.08);border-right:2px dashed rgba(96,165,250,0.5);pointer-events:none;z-index:2;"></div>
+        <div style="position:absolute;left:25%;top:0;width:30%;height:100%;background:rgba(249,115,22,0.1);border-left:2px dashed rgba(249,115,22,0.65);border-right:2px dashed rgba(249,115,22,0.65);pointer-events:none;z-index:2;"></div>
+        <div id="dots-bjk" style="position:absolute;inset:0;z-index:3;"></div>
+      </div>
+    </div>
+    <p class="note">All BJK players are squeezed inside the orange corridor. Almost no presence in the far-flank zone. Compare to the left panel.</p>
+  </div>
+
+</div>
+
+<!-- FINDING 2 -->
+<div class="section-title">Finding 2 — No wide/flank early positions</div>
+<div class="grid-2">
+
+  <div class="card">
+    <span class="finding-label f2">Finding 2</span>
+    <h2>Who enters the "wide zone" (normX &lt; 25)?</h2>
+    <p style="font-size:0.8rem;color:#8b949e;margin-bottom:14px;">On Split CT, normX &lt; 25 corresponds to far-flank early positions — A-main deep / B-link. Most teams send 1 player there early. BJK almost never does.</p>
+    <svg id="bar-wide" width="100%" viewBox="0 0 460 310" style="display:block;"></svg>
+    <p class="note">Each bar = % of lt10s data points for that team at normX &lt; 25. BJK is almost flat.</p>
+  </div>
+
+  <div class="card">
+    <span class="finding-label f2">Finding 2 · Scatter view</span>
+    <h2>normX distribution — BJK vs. all others</h2>
+    <p style="font-size:0.8rem;color:#8b949e;margin-bottom:14px;">Each column of dots = one normX bucket (0–100). The <span style="color:#f97316;font-weight:600;">orange zone (normX &lt; 25)</span> is where other teams' players appear. BJK has a single dot there.</p>
+    <svg id="dot-dist" width="100%" viewBox="0 0 460 280" style="display:block;"></svg>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#3b82f6;opacity:0.7;"></div>Other teams</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#f97316;"></div>BJK</div>
+    </div>
+    <p class="note">BJK's dots (orange) are almost entirely absent from the left side. The lone orange dot at normX 22 is the single outlier.</p>
+  </div>
+
+</div>
+
+<!-- FINDING 3 -->
+<div class="section-title">Finding 3 — Narrow horizontal corridor</div>
+<div class="grid-2">
+
+  <div class="card">
+    <span class="finding-label f3">Finding 3</span>
+    <h2>Average X-range per round (team width)</h2>
+    <p style="font-size:0.8rem;color:#8b949e;margin-bottom:14px;">Per-round X-range = max(normX) − min(normX) across players in that round. Measures how "wide" the team is deployed horizontally when a first kill happens.</p>
+    <svg id="bar-xrange" width="100%" viewBox="0 0 460 310" style="display:block;"></svg>
+    <p class="note">BJK avg: 14.7 · Field avg: 20.0. BJK is the 2nd most compressed team, and the only one with a very high enemy-FK rate alongside it.</p>
+  </div>
+
+  <div class="card">
+    <span class="finding-label f3">Finding 3 · Scatter view</span>
+    <h2>2D positions: BJK vs. rest of field</h2>
+    <p style="font-size:0.8rem;color:#8b949e;margin-bottom:14px;">normX = horizontal (depth axis on rotated Split). normY = vertical (A-to-B axis). The <span style="color:#f97316;font-weight:600;">orange band</span> shows BJK's narrow normX range.</p>
+    <svg id="scatter-compare" width="100%" viewBox="0 0 460 340" style="display:block;"></svg>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#3b82f6;opacity:0.5;"></div>Other teams (all)</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#f97316;"></div>BJK</div>
+    </div>
+    <p class="note">Other teams fan out to normX 15–65. BJK stays in a band of roughly 25–53 with almost all points between 31–50.</p>
+  </div>
+
+</div>
+
+<!-- FORMATION DIAGRAM -->
+<div class="section-title">Finding 3 · Formation breakdown</div>
+<div class="grid-3">
+
+  <div class="card">
+    <span class="finding-label f3">Finding 3 · Per-player</span>
+    <h2>BJK player lanes (mean positions)</h2>
+    <p style="font-size:0.8rem;color:#8b949e;margin-bottom:14px;">Each player's mean normX and normY. Notice how ALL five occupy a very similar normX band — but span the full normY (A→B) axis.</p>
+    <svg id="player-lanes" width="100%" viewBox="0 0 300 340" style="display:block;"></svg>
+    <p class="note">A classic 1-2-2 setup (A / mid×2 / B×2) but horizontally collapsed — no player pushes wide in the depth axis.</p>
+  </div>
+
+  <div class="card" style="grid-column: span 2;">
+    <span class="finding-label f3">Finding 3 · Round-by-round</span>
+    <h2>X-range vs Y-range per round — BJK only</h2>
+    <p style="font-size:0.8rem;color:#8b949e;margin-bottom:14px;">Each circle = one round. X-axis = how horizontally compressed the team is (small = tight). Y-axis = how vertically spread they are (large = covering A-to-B). Good defensive setups tend to have wide X + wide Y. BJK has narrow X + wide Y — a vertical column formation.</p>
+    <svg id="scatter-rounds" width="100%" viewBox="0 0 560 300" style="display:block;"></svg>
+    <p class="note">Most circles cluster in the bottom-left quadrant: tight X-range, high Y-range. Compare: FKS/TL often reach X-range &gt; 20 and Y-range &gt; 65 simultaneously.</p>
+  </div>
+
+</div>
+
+<script>
+const RAW = {"bjk": [{"normX": 32.19, "normY": 83.88, "player": "wezzy1"}, {"normX": 42.88, "normY": 20.21, "player": "MerSahaha"}, {"normX": 48.53, "normY": 21.32, "player": "oroni"}, {"normX": 32.19, "normY": 96.63, "player": "influx"}, {"normX": 33.92, "normY": 25.75, "player": "Docent"}, {"normX": 43.57, "normY": 51.45, "player": "MerSahaha"}, {"normX": 49.18, "normY": 64.57, "player": "oroni"}, {"normX": 35.13, "normY": 89.29, "player": "influx"}, {"normX": 34.67, "normY": 75.28, "player": "Docent"}, {"normX": 38.71, "normY": 22.65, "player": "wezzy1"}, {"normX": 36.59, "normY": 38.49, "player": "oroni"}, {"normX": 22.35, "normY": 51.58, "player": "influx"}, {"normX": 47.68, "normY": 59.6, "player": "wezzy1"}, {"normX": 33.38, "normY": 12.49, "player": "MerSahaha"}, {"normX": 42.63, "normY": 44.43, "player": "influx"}, {"normX": 47.06, "normY": 59.31, "player": "Docent"}, {"normX": 38.6, "normY": 35.41, "player": "oroni"}, {"normX": 46.37, "normY": 65.51, "player": "wezzy1"}, {"normX": 38.87, "normY": 21.67, "player": "MerSahaha"}, {"normX": 35.13, "normY": 89.37, "player": "influx"}, {"normX": 53.34, "normY": 35.69, "player": "Docent"}, {"normX": 35.47, "normY": 36.65, "player": "oroni"}, {"normX": 40.45, "normY": 25.56, "player": "wezzy1"}, {"normX": 31.86, "normY": 24.32, "player": "MerSahaha"}, {"normX": 44.15, "normY": 60.3, "player": "influx"}, {"normX": 33.17, "normY": 90.32, "player": "Docent"}, {"normX": 46.52, "normY": 92.68, "player": "oroni"}, {"normX": 43.28, "normY": 50.69, "player": "wezzy1"}, {"normX": 37.02, "normY": 38.27, "player": "MerSahaha"}, {"normX": 36.55, "normY": 66.15, "player": "influx"}, {"normX": 45.59, "normY": 69.11, "player": "Docent"}, {"normX": 46.54, "normY": 62.62, "player": "oroni"}, {"normX": 31.75, "normY": 26.73, "player": "wezzy1"}, {"normX": 47.32, "normY": 63.02, "player": "influx"}, {"normX": 33.21, "normY": 87.64, "player": "Docent"}, {"normX": 46.26, "normY": 38.23, "player": "oroni"}, {"normX": 45.87, "normY": 56.09, "player": "wezzy1"}, {"normX": 39.99, "normY": 49.09, "player": "influx"}, {"normX": 26.02, "normY": 38.97, "player": "MerSahaha"}, {"normX": 25.74, "normY": 91.54, "player": "Docent"}, {"normX": 52.98, "normY": 19.06, "player": "oroni"}, {"normX": 44.06, "normY": 94.75, "player": "wezzy1"}, {"normX": 31.94, "normY": 96.64, "player": "influx"}, {"normX": 47.24, "normY": 20.89, "player": "MerSahaha"}, {"normX": 45.62, "normY": 34.63, "player": "oroni"}, {"normX": 48.74, "normY": 59.37, "player": "wezzy1"}, {"normX": 46.45, "normY": 92.86, "player": "influx"}, {"normX": 37.87, "normY": 19.47, "player": "MerSahaha"}, {"normX": 47.48, "normY": 93.52, "player": "oroni"}, {"normX": 42.88, "normY": 22.63, "player": "wezzy1"}, {"normX": 41.58, "normY": 20.64, "player": "MerSahaha"}, {"normX": 41.83, "normY": 74.84, "player": "Docent"}], "sge": [{"normX": 35.88, "normY": 41.76}, {"normX": 40.22, "normY": 67.09}, {"normX": 23.76, "normY": 79.53}, {"normX": 50.0, "normY": 89.9}, {"normX": 48.22, "normY": 38.06}, {"normX": 43.1, "normY": 49.73}, {"normX": 41.78, "normY": 74.8}, {"normX": 49.27, "normY": 34.88}, {"normX": 45.69, "normY": 92.67}, {"normX": 38.75, "normY": 20.42}, {"normX": 46.96, "normY": 70.59}, {"normX": 35.06, "normY": 20.27}, {"normX": 60.49, "normY": 87.25}, {"normX": 46.43, "normY": 65.48}, {"normX": 46.05, "normY": 66.08}, {"normX": 39.74, "normY": 21.81}, {"normX": 34.74, "normY": 35.73}, {"normX": 41.1, "normY": 96.09}, {"normX": 47.11, "normY": 38.03}, {"normX": 42.81, "normY": 78.08}, {"normX": 47.69, "normY": 61.94}, {"normX": 44.83, "normY": 34.81}, {"normX": 35.11, "normY": 89.38}, {"normX": 37.87, "normY": 19.83}, {"normX": 41.28, "normY": 43.6}, {"normX": 45.92, "normY": 68.28}, {"normX": 30.46, "normY": 12.12}, {"normX": 35.14, "normY": 89.48}, {"normX": 48.68, "normY": 19.48}, {"normX": 43.11, "normY": 70.32}, {"normX": 43.26, "normY": 67.14}, {"normX": 16.59, "normY": 23.36}, {"normX": 29.12, "normY": 93.85}, {"normX": 15.88, "normY": 27.69}, {"normX": 34.9, "normY": 75.01}, {"normX": 35.13, "normY": 84.24}, {"normX": 23.88, "normY": 54.26}, {"normX": 29.17, "normY": 96.54}, {"normX": 41.27, "normY": 95.76}, {"normX": 40.7, "normY": 46.81}, {"normX": 39.63, "normY": 21.87}, {"normX": 15.32, "normY": 26.02}, {"normX": 43.44, "normY": 88.94}, {"normX": 46.51, "normY": 66.31}, {"normX": 21.33, "normY": 39.17}, {"normX": 37.84, "normY": 15.84}, {"normX": 35.13, "normY": 89.41}, {"normX": 44.15, "normY": 20.52}, {"normX": 43.21, "normY": 45.92}, {"normX": 47.22, "normY": 64.17}, {"normX": 34.28, "normY": 19.96}, {"normX": 41.08, "normY": 96.08}, {"normX": 45.15, "normY": 72.13}, {"normX": 15.82, "normY": 23.82}, {"normX": 27.67, "normY": 79.58}, {"normX": 41.02, "normY": 48.25}, {"normX": 39.88, "normY": 54.61}, {"normX": 43.18, "normY": 21.94}, {"normX": 37.19, "normY": 19.91}, {"normX": 41.69, "normY": 89.98}, {"normX": 42.09, "normY": 94.41}, {"normX": 35.55, "normY": 33.89}, {"normX": 35.11, "normY": 88.89}, {"normX": 48.36, "normY": 61.59}, {"normX": 42.15, "normY": 46.94}], "fks": [{"normX": 43.38, "normY": 86.08}, {"normX": 41.14, "normY": 50.56}, {"normX": 48.35, "normY": 37.54}, {"normX": 41.4, "normY": 96.43}, {"normX": 61.96, "normY": 53.42}, {"normX": 21.55, "normY": 19.77}, {"normX": 44.41, "normY": 51.34}, {"normX": 53.44, "normY": 85.21}, {"normX": 45.59, "normY": 74.76}, {"normX": 41.02, "normY": 68.32}, {"normX": 37.18, "normY": 19.42}, {"normX": 33.97, "normY": 25.75}, {"normX": 33.77, "normY": 86.43}, {"normX": 50.41, "normY": 90.26}, {"normX": 43.0, "normY": 50.39}, {"normX": 19.01, "normY": 21.87}, {"normX": 46.17, "normY": 38.21}, {"normX": 41.45, "normY": 82.11}, {"normX": 47.34, "normY": 63.06}, {"normX": 15.32, "normY": 23.48}, {"normX": 48.4, "normY": 90.75}, {"normX": 52.91, "normY": 85.0}, {"normX": 43.24, "normY": 72.58}, {"normX": 37.83, "normY": 41.76}, {"normX": 15.88, "normY": 22.52}, {"normX": 21.74, "normY": 76.82}, {"normX": 24.09, "normY": 39.54}, {"normX": 33.46, "normY": 63.28}], "tl": [{"normX": 40.39, "normY": 67.25}, {"normX": 29.17, "normY": 18.82}, {"normX": 48.42, "normY": 26.83}, {"normX": 51.3, "normY": 25.31}, {"normX": 43.6, "normY": 58.39}, {"normX": 34.02, "normY": 79.4}, {"normX": 18.23, "normY": 21.9}, {"normX": 47.3, "normY": 58.85}, {"normX": 24.71, "normY": 35.35}, {"normX": 40.49, "normY": 42.88}, {"normX": 41.79, "normY": 95.08}, {"normX": 40.89, "normY": 78.85}, {"normX": 30.95, "normY": 29.7}, {"normX": 42.47, "normY": 48.95}, {"normX": 47.38, "normY": 59.65}, {"normX": 19.54, "normY": 36.71}, {"normX": 40.12, "normY": 96.64}, {"normX": 22.56, "normY": 51.64}, {"normX": 38.95, "normY": 71.82}, {"normX": 38.64, "normY": 77.95}, {"normX": 20.92, "normY": 20.93}, {"normX": 46.96, "normY": 61.53}, {"normX": 31.39, "normY": 30.82}, {"normX": 38.57, "normY": 52.75}, {"normX": 22.25, "normY": 70.79}, {"normX": 78.6, "normY": 66.86}, {"normX": 42.04, "normY": 47.68}, {"normX": 23.05, "normY": 15.1}, {"normX": 30.34, "normY": 9.71}, {"normX": 40.3, "normY": 43.67}, {"normX": 38.36, "normY": 42.87}, {"normX": 45.49, "normY": 66.44}, {"normX": 35.13, "normY": 88.76}, {"normX": 46.67, "normY": 70.59}, {"normX": 27.86, "normY": 20.48}, {"normX": 46.12, "normY": 36.29}, {"normX": 47.54, "normY": 64.57}, {"normX": 33.64, "normY": 88.21}, {"normX": 28.5, "normY": 10.85}, {"normX": 44.66, "normY": 35.62}, {"normX": 33.75, "normY": 87.85}, {"normX": 44.11, "normY": 96.64}, {"normX": 47.69, "normY": 60.76}, {"normX": 33.5, "normY": 17.58}, {"normX": 40.02, "normY": 32.48}, {"normX": 35.13, "normY": 88.2}, {"normX": 39.89, "normY": 35.38}, {"normX": 44.91, "normY": 61.18}, {"normX": 34.69, "normY": 13.9}, {"normX": 38.05, "normY": 42.37}, {"normX": 34.47, "normY": 88.01}, {"normX": 39.18, "normY": 53.74}, {"normX": 44.28, "normY": 58.78}, {"normX": 36.82, "normY": 65.79}, {"normX": 42.24, "normY": 21.71}, {"normX": 48.18, "normY": 93.59}, {"normX": 45.87, "normY": 70.44}], "rzn": [{"normX": 42.08, "normY": 71.86}, {"normX": 38.73, "normY": 35.26}, {"normX": 42.04, "normY": 95.55}, {"normX": 34.32, "normY": 17.15}, {"normX": 29.46, "normY": 37.13}, {"normX": 41.38, "normY": 79.92}, {"normX": 42.3, "normY": 45.14}, {"normX": 35.8, "normY": 21.46}, {"normX": 46.36, "normY": 60.87}, {"normX": 57.52, "normY": 89.82}, {"normX": 46.41, "normY": 65.71}, {"normX": 47.47, "normY": 93.6}, {"normX": 17.13, "normY": 22.29}, {"normX": 29.37, "normY": 28.1}, {"normX": 44.11, "normY": 80.9}, {"normX": 43.09, "normY": 48.71}, {"normX": 30.8, "normY": 26.9}, {"normX": 35.02, "normY": 78.7}, {"normX": 57.71, "normY": 89.22}, {"normX": 45.8, "normY": 65.41}, {"normX": 47.3, "normY": 91.08}, {"normX": 43.11, "normY": 36.68}, {"normX": 45.51, "normY": 67.68}, {"normX": 27.6, "normY": 37.58}, {"normX": 29.15, "normY": 32.79}, {"normX": 35.83, "normY": 39.51}, {"normX": 40.76, "normY": 48.73}, {"normX": 45.65, "normY": 23.51}, {"normX": 31.23, "normY": 26.91}, {"normX": 47.04, "normY": 63.81}, {"normX": 47.9, "normY": 93.05}, {"normX": 41.49, "normY": 44.43}, {"normX": 44.99, "normY": 59.59}, {"normX": 17.05, "normY": 22.52}, {"normX": 37.29, "normY": 37.19}, {"normX": 47.57, "normY": 93.24}, {"normX": 40.05, "normY": 42.66}, {"normX": 44.9, "normY": 53.69}, {"normX": 36.65, "normY": 42.77}, {"normX": 36.64, "normY": 40.23}, {"normX": 54.16, "normY": 93.6}, {"normX": 43.94, "normY": 51.23}, {"normX": 54.91, "normY": 80.64}, {"normX": 29.0, "normY": 34.93}, {"normX": 43.57, "normY": 74.67}, {"normX": 53.43, "normY": 81.32}, {"normX": 22.86, "normY": 19.47}, {"normX": 47.82, "normY": 89.79}, {"normX": 29.04, "normY": 36.92}, {"normX": 42.32, "normY": 88.68}], "wip": [{"normX": 41.33, "normY": 86.53}, {"normX": 42.75, "normY": 86.54}, {"normX": 44.05, "normY": 69.41}, {"normX": 42.5, "normY": 38.23}, {"normX": 41.86, "normY": 93.77}, {"normX": 42.08, "normY": 71.86}, {"normX": 36.16, "normY": 19.0}, {"normX": 45.37, "normY": 54.91}, {"normX": 21.55, "normY": 17.9}, {"normX": 31.58, "normY": 94.05}, {"normX": 34.11, "normY": 87.42}, {"normX": 40.79, "normY": 21.01}, {"normX": 48.53, "normY": 66.63}, {"normX": 42.22, "normY": 72.02}, {"normX": 39.6, "normY": 90.9}, {"normX": 37.76, "normY": 18.65}, {"normX": 49.04, "normY": 89.6}, {"normX": 44.85, "normY": 36.29}, {"normX": 34.45, "normY": 81.89}, {"normX": 46.54, "normY": 56.61}, {"normX": 38.6, "normY": 48.47}, {"normX": 18.58, "normY": 22.35}, {"normX": 35.09, "normY": 89.32}, {"normX": 45.02, "normY": 55.56}, {"normX": 21.37, "normY": 17.54}, {"normX": 41.99, "normY": 94.4}, {"normX": 32.4, "normY": 30.16}, {"normX": 44.21, "normY": 51.84}, {"normX": 43.34, "normY": 86.84}, {"normX": 35.61, "normY": 66.03}, {"normX": 36.62, "normY": 35.76}, {"normX": 56.86, "normY": 51.39}, {"normX": 25.43, "normY": 11.49}, {"normX": 57.81, "normY": 56.51}, {"normX": 58.48, "normY": 53.34}, {"normX": 42.01, "normY": 71.83}, {"normX": 26.61, "normY": 59.17}, {"normX": 35.78, "normY": 23.72}, {"normX": 20.67, "normY": 38.09}, {"normX": 13.57, "normY": 22.32}], "ucam": [{"normX": 44.11, "normY": 96.64}, {"normX": 41.79, "normY": 45.81}, {"normX": 25.59, "normY": 36.98}, {"normX": 38.25, "normY": 71.9}, {"normX": 37.13, "normY": 80.82}, {"normX": 37.87, "normY": 19.58}, {"normX": 19.89, "normY": 45.85}, {"normX": 43.0, "normY": 69.11}, {"normX": 30.8, "normY": 90.28}, {"normX": 38.03, "normY": 34.63}, {"normX": 21.58, "normY": 40.84}, {"normX": 44.26, "normY": 70.41}, {"normX": 51.23, "normY": 34.96}, {"normX": 33.95, "normY": 88.91}, {"normX": 31.51, "normY": 29.63}, {"normX": 26.3, "normY": 12.1}, {"normX": 44.2, "normY": 69.71}, {"normX": 35.89, "normY": 35.94}, {"normX": 59.88, "normY": 87.78}, {"normX": 33.57, "normY": 19.92}, {"normX": 46.35, "normY": 65.84}, {"normX": 48.73, "normY": 57.97}, {"normX": 33.82, "normY": 87.91}, {"normX": 36.3, "normY": 18.4}, {"normX": 33.8, "normY": 26.03}, {"normX": 47.02, "normY": 65.44}, {"normX": 40.37, "normY": 49.45}, {"normX": 21.25, "normY": 19.95}, {"normX": 45.14, "normY": 35.52}, {"normX": 43.78, "normY": 89.31}, {"normX": 47.56, "normY": 93.6}, {"normX": 45.48, "normY": 66.22}, {"normX": 44.11, "normY": 96.64}, {"normX": 16.79, "normY": 25.41}, {"normX": 26.81, "normY": 58.6}, {"normX": 44.38, "normY": 54.95}, {"normX": 43.99, "normY": 96.64}, {"normX": 20.84, "normY": 43.67}, {"normX": 39.17, "normY": 81.43}, {"normX": 15.81, "normY": 27.56}, {"normX": 39.18, "normY": 73.34}, {"normX": 34.96, "normY": 87.46}, {"normX": 35.41, "normY": 31.58}, {"normX": 36.72, "normY": 36.73}, {"normX": 42.04, "normY": 95.58}, {"normX": 37.08, "normY": 42.36}, {"normX": 33.47, "normY": 88.41}, {"normX": 17.06, "normY": 29.99}, {"normX": 46.79, "normY": 57.15}, {"normX": 36.59, "normY": 16.6}, {"normX": 49.0, "normY": 57.78}, {"normX": 29.3, "normY": 26.99}, {"normX": 45.06, "normY": 36.17}, {"normX": 41.21, "normY": 82.82}, {"normX": 46.08, "normY": 65.7}, {"normX": 39.49, "normY": 49.0}], "nvj": [{"normX": 48.05, "normY": 54.54}, {"normX": 40.57, "normY": 48.56}, {"normX": 49.54, "normY": 33.21}, {"normX": 36.37, "normY": 75.44}, {"normX": 47.47, "normY": 23.15}, {"normX": 46.38, "normY": 60.27}, {"normX": 43.04, "normY": 50.41}, {"normX": 29.46, "normY": 26.65}, {"normX": 37.88, "normY": 19.95}, {"normX": 33.18, "normY": 94.16}, {"normX": 41.0, "normY": 49.08}, {"normX": 37.97, "normY": 42.08}, {"normX": 45.43, "normY": 20.39}, {"normX": 29.85, "normY": 27.93}, {"normX": 37.5, "normY": 40.46}, {"normX": 45.05, "normY": 59.3}, {"normX": 42.07, "normY": 82.54}, {"normX": 45.16, "normY": 67.02}, {"normX": 40.87, "normY": 20.56}, {"normX": 40.99, "normY": 90.26}, {"normX": 41.58, "normY": 47.97}, {"normX": 42.55, "normY": 96.64}, {"normX": 48.78, "normY": 59.34}, {"normX": 42.56, "normY": 87.58}, {"normX": 42.15, "normY": 48.64}, {"normX": 30.31, "normY": 26.69}, {"normX": 48.19, "normY": 65.21}, {"normX": 40.12, "normY": 22.59}, {"normX": 41.05, "normY": 95.75}, {"normX": 41.35, "normY": 49.38}, {"normX": 37.41, "normY": 37.93}, {"normX": 43.84, "normY": 83.06}, {"normX": 47.73, "normY": 58.8}, {"normX": 43.22, "normY": 87.6}, {"normX": 42.47, "normY": 20.21}, {"normX": 54.34, "normY": 23.45}, {"normX": 47.19, "normY": 58.29}, {"normX": 42.25, "normY": 81.16}, {"normX": 40.35, "normY": 47.52}, {"normX": 29.92, "normY": 30.02}, {"normX": 40.96, "normY": 53.74}, {"normX": 44.42, "normY": 68.68}, {"normX": 44.2, "normY": 89.61}, {"normX": 32.12, "normY": 30.66}, {"normX": 46.77, "normY": 63.53}, {"normX": 39.83, "normY": 54.45}, {"normX": 47.73, "normY": 22.16}, {"normX": 45.19, "normY": 91.11}, {"normX": 45.74, "normY": 89.75}, {"normX": 34.54, "normY": 65.19}, {"normX": 36.4, "normY": 40.48}, {"normX": 33.43, "normY": 6.73}, {"normX": 43.3, "normY": 77.25}, {"normX": 30.94, "normY": 29.0}], "rb": [{"normX": 49.18, "normY": 57.75}, {"normX": 37.87, "normY": 17.9}, {"normX": 25.36, "normY": 60.97}, {"normX": 26.51, "normY": 37.68}, {"normX": 64.76, "normY": 62.78}, {"normX": 21.94, "normY": 18.06}, {"normX": 42.52, "normY": 73.26}, {"normX": 57.4, "normY": 56.89}, {"normX": 25.89, "normY": 95.83}, {"normX": 39.38, "normY": 72.75}, {"normX": 30.08, "normY": 19.81}, {"normX": 31.5, "normY": 89.49}, {"normX": 43.43, "normY": 94.57}, {"normX": 31.35, "normY": 28.15}, {"normX": 37.12, "normY": 17.92}, {"normX": 35.73, "normY": 80.99}, {"normX": 33.42, "normY": 89.8}, {"normX": 39.26, "normY": 35.25}, {"normX": 29.81, "normY": 35.31}, {"normX": 51.01, "normY": 93.44}, {"normX": 51.4, "normY": 56.95}, {"normX": 38.56, "normY": 73.54}, {"normX": 38.46, "normY": 42.2}, {"normX": 46.14, "normY": 20.17}, {"normX": 34.49, "normY": 87.77}, {"normX": 47.25, "normY": 57.54}, {"normX": 46.9, "normY": 58.62}, {"normX": 47.13, "normY": 37.07}, {"normX": 17.08, "normY": 22.08}], "bar": [{"normX": 44.91, "normY": 20.17}, {"normX": 41.03, "normY": 77.67}, {"normX": 27.58, "normY": 93.42}, {"normX": 30.5, "normY": 31.65}, {"normX": 38.23, "normY": 74.02}, {"normX": 50.21, "normY": 34.0}, {"normX": 30.54, "normY": 94.52}, {"normX": 42.34, "normY": 37.86}, {"normX": 37.87, "normY": 19.39}, {"normX": 46.4, "normY": 67.11}, {"normX": 45.46, "normY": 34.22}, {"normX": 46.74, "normY": 65.19}, {"normX": 42.93, "normY": 49.2}, {"normX": 31.81, "normY": 26.94}, {"normX": 45.78, "normY": 23.11}, {"normX": 44.03, "normY": 51.18}, {"normX": 35.13, "normY": 89.38}, {"normX": 28.64, "normY": 33.72}, {"normX": 28.0, "normY": 22.18}, {"normX": 44.68, "normY": 61.53}, {"normX": 48.03, "normY": 93.6}, {"normX": 42.54, "normY": 48.42}, {"normX": 36.29, "normY": 20.77}, {"normX": 44.8, "normY": 20.17}, {"normX": 39.84, "normY": 70.8}, {"normX": 42.57, "normY": 50.49}, {"normX": 34.6, "normY": 26.34}, {"normX": 51.58, "normY": 22.15}, {"normX": 31.12, "normY": 61.34}, {"normX": 34.94, "normY": 88.84}, {"normX": 42.18, "normY": 48.99}, {"normX": 31.11, "normY": 29.03}], "m1r": [{"normX": 23.05, "normY": 19.01}, {"normX": 39.35, "normY": 95.86}, {"normX": 30.44, "normY": 27.48}, {"normX": 42.0, "normY": 49.2}, {"normX": 23.32, "normY": 94.97}, {"normX": 47.24, "normY": 55.26}, {"normX": 54.31, "normY": 22.93}, {"normX": 56.17, "normY": 84.67}, {"normX": 51.43, "normY": 51.33}, {"normX": 48.02, "normY": 24.31}, {"normX": 47.88, "normY": 58.85}, {"normX": 36.79, "normY": 15.2}, {"normX": 45.76, "normY": 65.61}, {"normX": 23.32, "normY": 94.77}, {"normX": 47.64, "normY": 36.34}, {"normX": 58.18, "normY": 87.71}, {"normX": 40.84, "normY": 46.79}, {"normX": 32.95, "normY": 24.76}, {"normX": 38.32, "normY": 73.06}, {"normX": 47.61, "normY": 61.76}, {"normX": 15.18, "normY": 22.76}, {"normX": 44.63, "normY": 92.82}, {"normX": 36.62, "normY": 7.31}, {"normX": 39.8, "normY": 70.69}, {"normX": 31.33, "normY": 30.13}, {"normX": 29.04, "normY": 27.43}, {"normX": 37.28, "normY": 78.43}, {"normX": 30.7, "normY": 6.18}, {"normX": 44.12, "normY": 74.17}, {"normX": 35.47, "normY": 36.12}, {"normX": 36.75, "normY": 39.62}, {"normX": 49.34, "normY": 26.99}, {"normX": 46.85, "normY": 57.42}, {"normX": 38.03, "normY": 43.55}, {"normX": 40.94, "normY": 8.18}, {"normX": 33.58, "normY": 85.67}, {"normX": 22.58, "normY": 11.48}, {"normX": 40.53, "normY": 83.76}, {"normX": 42.24, "normY": 45.7}, {"normX": 21.37, "normY": 19.64}, {"normX": 38.07, "normY": 89.9}, {"normX": 33.97, "normY": 25.75}], "jl": [{"normX": 43.35, "normY": 68.17}, {"normX": 33.54, "normY": 95.51}, {"normX": 34.42, "normY": 92.42}, {"normX": 22.95, "normY": 21.63}, {"normX": 36.19, "normY": 36.25}, {"normX": 39.74, "normY": 42.33}, {"normX": 32.74, "normY": 79.39}, {"normX": 42.07, "normY": 82.8}, {"normX": 15.24, "normY": 22.29}, {"normX": 47.07, "normY": 58.17}, {"normX": 44.06, "normY": 86.45}, {"normX": 47.15, "normY": 64.18}, {"normX": 41.88, "normY": 20.42}, {"normX": 46.65, "normY": 36.55}, {"normX": 42.13, "normY": 82.35}, {"normX": 43.99, "normY": 65.61}, {"normX": 29.88, "normY": 35.52}, {"normX": 42.21, "normY": 20.42}, {"normX": 49.54, "normY": 19.6}, {"normX": 38.67, "normY": 25.07}, {"normX": 42.35, "normY": 45.38}, {"normX": 25.36, "normY": 58.6}, {"normX": 21.63, "normY": 22.9}, {"normX": 41.77, "normY": 90.9}, {"normX": 53.66, "normY": 56.46}, {"normX": 49.58, "normY": 54.42}, {"normX": 55.75, "normY": 57.84}, {"normX": 18.22, "normY": 22.44}, {"normX": 47.36, "normY": 50.07}, {"normX": 33.71, "normY": 81.33}, {"normX": 46.35, "normY": 66.41}, {"normX": 44.15, "normY": 36.23}, {"normX": 37.54, "normY": 33.71}, {"normX": 47.82, "normY": 36.78}, {"normX": 38.67, "normY": 43.12}, {"normX": 43.39, "normY": 69.76}, {"normX": 34.45, "normY": 27.03}, {"normX": 37.27, "normY": 37.5}, {"normX": 34.77, "normY": 33.01}, {"normX": 40.41, "normY": 66.63}, {"normX": 25.3, "normY": 96.64}, {"normX": 37.73, "normY": 36.97}, {"normX": 15.06, "normY": 22.12}, {"normX": 33.31, "normY": 32.56}]};
+
+const BJK_PLAYERS = {
+  Docent:     { meanX: 38.7, meanY: 67.7 },
+  MerSahaha:  { meanX: 38.0, meanY: 26.8 },
+  influx:     { meanX: 37.6, meanY: 72.7 },
+  oroni:      { meanX: 44.9, meanY: 48.8 },
+  wezzy1:     { meanX: 42.0, meanY: 51.6 }
+};
+
+const BJK_ROUNDS = [
+  { xr: 15.6, yr: 60.9 }, { xr: 20.5, yr: 53.3 }, { xr: 21.0, yr: 77.6 },
+  { xr: 10.9, yr: 73.4 }, { xr:  5.9, yr: 72.9 }, { xr: 14.3, yr: 47.1 },
+  { xr: 18.2, yr: 67.7 }, { xr: 12.3, yr: 66.0 }, { xr: 10.0, yr: 54.4 },
+  { xr: 16.3, yr: 76.4 }, { xr: 15.3, yr: 63.5 }, { xr: 16.4, yr: 52.6 }
+];
+
+const TEAM_STATS = [
+  { team: 'bjk',  avgXr: 14.7, widePct: 2,  fkPct: 33 },
+  { team: 'sge',  avgXr: 18.9, widePct: 11, fkPct: 64 },
+  { team: 'fks',  avgXr: 24.3, widePct: 21, fkPct: 67 },
+  { team: 'tl',   avgXr: 21.6, widePct: 12, fkPct: 75 },
+  { team: 'rzn',  avgXr: 20.5, widePct: 6,  fkPct: 55 },
+  { team: 'wip',  avgXr: 19.7, widePct: 12, fkPct: 44 },
+  { team: 'ucam', avgXr: 22.2, widePct: 12, fkPct: 67 },
+  { team: 'nvj',  avgXr: 12.8, widePct: 0,  fkPct: 50 },
+  { team: 'rb',   avgXr: 20.5, widePct: 7,  fkPct: 83 },
+  { team: 'bar',  avgXr: 14.9, widePct: 0,  fkPct: 57 },
+  { team: 'm1r',  avgXr: 21.0, widePct: 14, fkPct: 67 },
+  { team: 'jl',   avgXr: 19.4, widePct: 11, fkPct: 89 }
+];
+
+function svgEl(tag, attrs = {}) {
+  const el = document.createElementNS('http://www.w3.org/2000/svg', tag);
+  for (const [k, v] of Object.entries(attrs)) el.setAttribute(k, v);
+  return el;
+}
+function txt(content, attrs = {}) {
+  const el = svgEl('text', attrs);
+  el.textContent = content;
+  return el;
+}
+
+// ── Chart 1: wide-zone bar chart ─────────────────────────────────────────────
+(function() {
+  const svg = document.getElementById('bar-wide');
+  const W = 460, H = 310, L = 58, R = 14, T = 16, B = 56;
+  const cW = W - L - R, cH = H - T - B;
+  const sorted = [...TEAM_STATS].sort((a, b) => b.widePct - a.widePct);
+  const barW = cW / sorted.length - 4;
+  const maxV = 25;
+
+  svg.appendChild(svgEl('rect', { x: L, y: T, width: cW, height: cH, fill: '#0d1117' }));
+
+  // x-axis line
+  svg.appendChild(svgEl('line', { x1: L, y1: T + cH, x2: L + cW, y2: T + cH, stroke: '#30363d', 'stroke-width': 1 }));
+  // field avg line
+  const fieldAvg = TEAM_STATS.filter(d => d.team !== 'bjk').reduce((s, d) => s + d.widePct, 0) / 11;
+  const avgY = T + cH - (fieldAvg / maxV) * cH;
+  svg.appendChild(svgEl('line', { x1: L, y1: avgY, x2: L + cW, y2: avgY, stroke: '#6e7681', 'stroke-width': 1, 'stroke-dasharray': '4 3' }));
+  const avgLbl = txt(`field avg ${fieldAvg.toFixed(1)}%`, { x: L + cW - 2, y: avgY - 5, 'text-anchor': 'end', fill: '#6e7681', 'font-size': 10 });
+  svg.appendChild(avgLbl);
+
+  // gridlines
+  for (let v = 5; v <= 20; v += 5) {
+    const gy = T + cH - (v / maxV) * cH;
+    svg.appendChild(svgEl('line', { x1: L, y1: gy, x2: L + cW, y2: gy, stroke: '#21262d', 'stroke-width': 1 }));
+    svg.appendChild(txt(`${v}%`, { x: L - 5, y: gy + 4, 'text-anchor': 'end', fill: '#6e7681', 'font-size': 10 }));
+  }
+  svg.appendChild(txt('0%', { x: L - 5, y: T + cH + 4, 'text-anchor': 'end', fill: '#6e7681', 'font-size': 10 }));
+
+  sorted.forEach((d, i) => {
+    const isBjk = d.team === 'bjk';
+    const bx = L + i * (barW + 4) + 2;
+    const bh = Math.max(2, (d.widePct / maxV) * cH);
+    const by = T + cH - bh;
+    svg.appendChild(svgEl('rect', { x: bx, y: by, width: barW, height: bh,
+      fill: isBjk ? '#f97316' : '#3b82f6', opacity: isBjk ? 1 : 0.55, rx: 2 }));
+
+    const labelEl = txt(d.team.toUpperCase(), {
+      x: bx + barW / 2, y: T + cH + 14,
+      'text-anchor': 'middle', fill: isBjk ? '#f97316' : '#8b949e',
+      'font-size': isBjk ? 11 : 10, 'font-weight': isBjk ? 700 : 400
+    });
+    svg.appendChild(labelEl);
+
+    if (d.widePct > 0) {
+      svg.appendChild(txt(`${d.widePct}%`, {
+        x: bx + barW / 2, y: by - 4,
+        'text-anchor': 'middle', fill: isBjk ? '#f97316' : '#60a5fa', 'font-size': 10
+      }));
+    } else {
+      svg.appendChild(txt('0%', {
+        x: bx + barW / 2, y: T + cH - 2,
+        'text-anchor': 'middle', fill: isBjk ? '#f9731688' : '#6e7681', 'font-size': 9
+      }));
+    }
+  });
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+})();
+
+// ── Chart 2: dot distribution ────────────────────────────────────────────────
+(function() {
+  const svg = document.getElementById('dot-dist');
+  const W = 460, H = 280, L = 30, R = 14, T = 16, B = 36;
+  const cW = W - L - R, cH = H - T - B;
+
+  // background shade for wide zone (normX 0–25)
+  const zoneX = L + (0 / 85) * cW;
+  const zoneW = (25 / 85) * cW;
+  svg.appendChild(svgEl('rect', { x: zoneX, y: T, width: zoneW, height: cH, fill: 'rgba(249,115,22,0.07)' }));
+  svg.appendChild(svgEl('line', { x1: zoneX + zoneW, y1: T, x2: zoneX + zoneW, y2: T + cH, stroke: '#f9731655', 'stroke-width': 1, 'stroke-dasharray': '3 3' }));
+  svg.appendChild(txt('Wide zone', { x: zoneX + zoneW / 2, y: T + 12, 'text-anchor': 'middle', fill: '#f97316', 'font-size': 9, 'font-weight': 600 }));
+  svg.appendChild(txt('normX < 25', { x: zoneX + zoneW / 2, y: T + 22, 'text-anchor': 'middle', fill: '#f9731699', 'font-size': 8 }));
+
+  // x-axis
+  svg.appendChild(svgEl('line', { x1: L, y1: T + cH, x2: L + cW, y2: T + cH, stroke: '#30363d', 'stroke-width': 1 }));
+  for (let v = 0; v <= 80; v += 10) {
+    const gx = L + (v / 85) * cW;
+    svg.appendChild(svgEl('line', { x1: gx, y1: T + cH, x2: gx, y2: T + cH + 4, stroke: '#30363d', 'stroke-width': 1 }));
+    svg.appendChild(txt(v.toString(), { x: gx, y: T + cH + 14, 'text-anchor': 'middle', fill: '#6e7681', 'font-size': 9 }));
+  }
+  svg.appendChild(txt('normX →', { x: L + cW, y: T + cH + 14, 'text-anchor': 'end', fill: '#6e7681', 'font-size': 9 }));
+
+  // buckets: count per 3-unit wide bucket, stacked dots
+  const BUCKET = 3;
+  const othersCount = {}, bjkCount = {};
+  for (const [team, pts] of Object.entries(RAW)) {
+    for (const p of pts) {
+      const b = Math.floor(p.normX / BUCKET) * BUCKET;
+      if (team === 'bjk') bjkCount[b] = (bjkCount[b] || 0) + 1;
+      else othersCount[b] = (othersCount[b] || 0) + 1;
+    }
+  }
+
+  const allBuckets = new Set([...Object.keys(othersCount), ...Object.keys(bjkCount)].map(Number));
+  const DOT_R = 4, DOT_GAP = 1;
+  for (const b of allBuckets) {
+    const cx = L + ((b + BUCKET / 2) / 85) * cW;
+    let stackY = T + cH - 4;
+    for (let i = 0; i < (othersCount[b] || 0); i++) {
+      svg.appendChild(svgEl('circle', { cx, cy: stackY, r: DOT_R, fill: '#3b82f6', opacity: 0.45 }));
+      stackY -= (DOT_R * 2 + DOT_GAP);
+    }
+    for (let i = 0; i < (bjkCount[b] || 0); i++) {
+      svg.appendChild(svgEl('circle', { cx, cy: stackY, r: DOT_R, fill: '#f97316', opacity: 0.9 }));
+      stackY -= (DOT_R * 2 + DOT_GAP);
+    }
+  }
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+})();
+
+// ── Chart 3: x-range bar chart ───────────────────────────────────────────────
+(function() {
+  const svg = document.getElementById('bar-xrange');
+  const W = 460, H = 310, L = 58, R = 14, T = 16, B = 56;
+  const cW = W - L - R, cH = H - T - B;
+  const sorted = [...TEAM_STATS].sort((a, b) => a.avgXr - b.avgXr);
+  const barW = cW / sorted.length - 4;
+  const maxV = 28;
+
+  svg.appendChild(svgEl('rect', { x: L, y: T, width: cW, height: cH, fill: '#0d1117' }));
+  svg.appendChild(svgEl('line', { x1: L, y1: T + cH, x2: L + cW, y2: T + cH, stroke: '#30363d', 'stroke-width': 1 }));
+
+  const fieldAvg = TEAM_STATS.filter(d => d.team !== 'bjk').reduce((s, d) => s + d.avgXr, 0) / 11;
+  const avgY = T + cH - (fieldAvg / maxV) * cH;
+  svg.appendChild(svgEl('line', { x1: L, y1: avgY, x2: L + cW, y2: avgY, stroke: '#6e7681', 'stroke-width': 1, 'stroke-dasharray': '4 3' }));
+  svg.appendChild(txt(`field avg ${fieldAvg.toFixed(1)}`, { x: L + cW - 2, y: avgY - 5, 'text-anchor': 'end', fill: '#6e7681', 'font-size': 10 }));
+
+  for (let v = 5; v <= 25; v += 5) {
+    const gy = T + cH - (v / maxV) * cH;
+    svg.appendChild(svgEl('line', { x1: L, y1: gy, x2: L + cW, y2: gy, stroke: '#21262d', 'stroke-width': 1 }));
+    svg.appendChild(txt(v.toString(), { x: L - 5, y: gy + 4, 'text-anchor': 'end', fill: '#6e7681', 'font-size': 10 }));
+  }
+  svg.appendChild(txt('0', { x: L - 5, y: T + cH + 4, 'text-anchor': 'end', fill: '#6e7681', 'font-size': 10 }));
+
+  sorted.forEach((d, i) => {
+    const isBjk = d.team === 'bjk';
+    const bx = L + i * (barW + 4) + 2;
+    const bh = Math.max(2, (d.avgXr / maxV) * cH);
+    const by = T + cH - bh;
+    svg.appendChild(svgEl('rect', { x: bx, y: by, width: barW, height: bh,
+      fill: isBjk ? '#f97316' : '#3b82f6', opacity: isBjk ? 1 : 0.55, rx: 2 }));
+    svg.appendChild(txt(d.team.toUpperCase(), {
+      x: bx + barW / 2, y: T + cH + 14,
+      'text-anchor': 'middle', fill: isBjk ? '#f97316' : '#8b949e',
+      'font-size': isBjk ? 11 : 10, 'font-weight': isBjk ? 700 : 400
+    }));
+    svg.appendChild(txt(d.avgXr.toFixed(1), {
+      x: bx + barW / 2, y: by - 4,
+      'text-anchor': 'middle', fill: isBjk ? '#f97316' : '#60a5fa', 'font-size': 9
+    }));
+  });
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+})();
+
+// ── Chart 4: 2D scatter BJK vs others ───────────────────────────────────────
+(function() {
+  const svg = document.getElementById('scatter-compare');
+  const W = 460, H = 340, L = 50, R = 14, T = 14, B = 46;
+  const cW = W - L - R, cH = H - T - B;
+
+  // x = normX (0–80), y = normY (0–100)
+  const scaleX = v => L + (v / 80) * cW;
+  const scaleY = v => T + (v / 100) * cH;
+
+  // background
+  svg.appendChild(svgEl('rect', { x: L, y: T, width: cW, height: cH, fill: '#0d1117' }));
+
+  // wide-zone band highlight
+  const bandX2 = scaleX(25);
+  svg.appendChild(svgEl('rect', { x: L, y: T, width: bandX2 - L, height: cH, fill: 'rgba(249,115,22,0.06)' }));
+  svg.appendChild(svgEl('line', { x1: bandX2, y1: T, x2: bandX2, y2: T + cH, stroke: '#f9731644', 'stroke-width': 1, 'stroke-dasharray': '3 3' }));
+
+  // BJK corridor band
+  const bjkMinX = scaleX(22);
+  const bjkMaxX = scaleX(53.5);
+  svg.appendChild(svgEl('rect', { x: bjkMinX, y: T, width: bjkMaxX - bjkMinX, height: cH, fill: 'rgba(249,115,22,0.05)', stroke: 'rgba(249,115,22,0.2)', 'stroke-width': 1 }));
+  svg.appendChild(txt('← BJK corridor →', { x: (bjkMinX + bjkMaxX) / 2, y: T + cH + 14, 'text-anchor': 'middle', fill: '#f97316', 'font-size': 9, 'font-weight': 600 }));
+
+  // gridlines
+  for (let v = 0; v <= 80; v += 20) {
+    const gx = scaleX(v);
+    svg.appendChild(svgEl('line', { x1: gx, y1: T, x2: gx, y2: T + cH, stroke: '#21262d', 'stroke-width': 1 }));
+    svg.appendChild(txt(v.toString(), { x: gx, y: T + cH + 28, 'text-anchor': 'middle', fill: '#6e7681', 'font-size': 9 }));
+  }
+  for (let v = 0; v <= 100; v += 25) {
+    const gy = scaleY(v);
+    svg.appendChild(svgEl('line', { x1: L, y1: gy, x2: L + cW, y2: gy, stroke: '#21262d', 'stroke-width': 1 }));
+    svg.appendChild(txt(v.toString(), { x: L - 5, y: gy + 4, 'text-anchor': 'end', fill: '#6e7681', 'font-size': 9 }));
+  }
+  svg.appendChild(txt('normX →', { x: L + cW, y: T + cH + 38, 'text-anchor': 'end', fill: '#6e7681', 'font-size': 9 }));
+  svg.appendChild(txt('normY ↓', { x: L - 36, y: T + cH / 2 + 4, 'text-anchor': 'middle', fill: '#6e7681', 'font-size': 9,
+    transform: `rotate(-90, ${L - 36}, ${T + cH / 2 + 4})` }));
+
+  // others
+  for (const [team, pts] of Object.entries(RAW)) {
+    if (team === 'bjk') continue;
+    for (const p of pts) {
+      svg.appendChild(svgEl('circle', { cx: scaleX(p.normX), cy: scaleY(p.normY), r: 3, fill: '#3b82f6', opacity: 0.25 }));
+    }
+  }
+  // bjk
+  for (const p of RAW.bjk) {
+    svg.appendChild(svgEl('circle', { cx: scaleX(p.normX), cy: scaleY(p.normY), r: 3.5, fill: '#f97316', opacity: 0.85 }));
+  }
+
+  svg.appendChild(txt('Wide zone', { x: (L + bandX2) / 2, y: T + 12, 'text-anchor': 'middle', fill: '#f97316', 'font-size': 8 }));
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+})();
+
+// ── Chart 5: player lanes ────────────────────────────────────────────────────
+(function() {
+  const svg = document.getElementById('player-lanes');
+  const W = 300, H = 340, L = 60, R = 20, T = 24, B = 44;
+  const cW = W - L - R, cH = H - T - B;
+  const scaleX = v => L + ((v - 20) / 50) * cW;
+  const scaleY = v => T + (v / 100) * cH;
+
+  svg.appendChild(svgEl('rect', { x: L, y: T, width: cW, height: cH, fill: '#0d1117' }));
+
+  // narrow band
+  const bx1 = scaleX(22), bx2 = scaleX(53.5);
+  svg.appendChild(svgEl('rect', { x: bx1, y: T, width: bx2 - bx1, height: cH, fill: 'rgba(249,115,22,0.06)', stroke: 'rgba(249,115,22,0.2)', 'stroke-width': 1 }));
+
+  // grid
+  for (let v = 20; v <= 70; v += 10) {
+    const gx = scaleX(v);
+    svg.appendChild(svgEl('line', { x1: gx, y1: T, x2: gx, y2: T + cH, stroke: '#21262d', 'stroke-width': 1 }));
+    svg.appendChild(txt(v.toString(), { x: gx, y: T + cH + 14, 'text-anchor': 'middle', fill: '#6e7681', 'font-size': 9 }));
+  }
+  for (let v = 0; v <= 100; v += 25) {
+    const gy = scaleY(v);
+    svg.appendChild(svgEl('line', { x1: L, y1: gy, x2: L + cW, y2: gy, stroke: '#21262d', 'stroke-width': 1 }));
+    svg.appendChild(txt(v.toString(), { x: L - 5, y: gy + 4, 'text-anchor': 'end', fill: '#6e7681', 'font-size': 9 }));
+  }
+  svg.appendChild(txt('← A-side', { x: L + 2, y: T - 5, fill: '#60a5fa', 'font-size': 8 }));
+  svg.appendChild(txt('B-side →', { x: L + cW - 2, y: T - 5, 'text-anchor': 'end', fill: '#60a5fa', 'font-size': 8 }));
+
+  const COLORS = ['#f97316', '#a78bfa', '#34d399', '#f472b6', '#facc15'];
+  const players = Object.entries(BJK_PLAYERS);
+  players.forEach(([name, pos], i) => {
+    const cx = scaleX(pos.meanX), cy = scaleY(pos.meanY);
+    svg.appendChild(svgEl('circle', { cx, cy, r: 8, fill: COLORS[i], opacity: 0.85 }));
+    const labelX = cx > L + cW - 55 ? cx - 10 : cx + 10;
+    svg.appendChild(txt(name, { x: labelX, y: cy + 4,
+      'text-anchor': cx > L + cW - 55 ? 'end' : 'start',
+      fill: COLORS[i], 'font-size': 10, 'font-weight': 600 }));
+  });
+
+  // normX axis label
+  svg.appendChild(txt('normX (depth axis) →', { x: L + cW / 2, y: T + cH + 30, 'text-anchor': 'middle', fill: '#6e7681', 'font-size': 8 }));
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+})();
+
+// ── Chart 6: round scatter ───────────────────────────────────────────────────
+(function() {
+  const svg = document.getElementById('scatter-rounds');
+  const W = 560, H = 300, L = 52, R = 24, T = 14, B = 50;
+  const cW = W - L - R, cH = H - T - B;
+  const maxXR = 35, maxYR = 90;
+  const scaleX = v => L + (v / maxXR) * cW;
+  const scaleY = v => T + cH - (v / maxYR) * cH;
+
+  svg.appendChild(svgEl('rect', { x: L, y: T, width: cW, height: cH, fill: '#0d1117' }));
+
+  // tight-X / wide-Y quadrant shading
+  const qX = scaleX(18), qY = scaleY(60);
+  svg.appendChild(svgEl('rect', { x: L, y: qY, width: qX - L, height: T + cH - qY, fill: 'rgba(249,115,22,0.06)' }));
+  svg.appendChild(txt('Tight X + Wide Y', { x: L + 4, y: qY + 14, fill: '#f9731666', 'font-size': 9 }));
+  svg.appendChild(txt('(BJK zone)', { x: L + 4, y: qY + 25, fill: '#f9731666', 'font-size': 9 }));
+
+  // grid
+  for (let v = 5; v <= 30; v += 5) {
+    const gx = scaleX(v);
+    svg.appendChild(svgEl('line', { x1: gx, y1: T, x2: gx, y2: T + cH, stroke: '#21262d', 'stroke-width': 1 }));
+    svg.appendChild(txt(v.toString(), { x: gx, y: T + cH + 16, 'text-anchor': 'middle', fill: '#6e7681', 'font-size': 9 }));
+  }
+  for (let v = 0; v <= 80; v += 20) {
+    const gy = scaleY(v);
+    svg.appendChild(svgEl('line', { x1: L, y1: gy, x2: L + cW, y2: gy, stroke: '#21262d', 'stroke-width': 1 }));
+    svg.appendChild(txt(v.toString(), { x: L - 5, y: gy + 4, 'text-anchor': 'end', fill: '#6e7681', 'font-size': 9 }));
+  }
+  svg.appendChild(txt('X-range per round (smaller = more compressed) →', { x: L + cW / 2, y: T + cH + 36, 'text-anchor': 'middle', fill: '#6e7681', 'font-size': 9 }));
+  svg.appendChild(txt('Y-range ↑', { x: L - 40, y: T + cH / 2, 'text-anchor': 'middle', fill: '#6e7681', 'font-size': 9, transform: `rotate(-90, ${L - 40}, ${T + cH / 2})` }));
+
+  // other teams' rounds (compute from raw data)
+  const BJK_MATCH_ROUNDS = [
+    { matchId: 'e1f54e6b', rn: 0 }, { matchId: 'e1f54e6b', rn: 1 }, { matchId: 'e1f54e6b', rn: 4 },
+    { matchId: 'e1f54e6b', rn: 6 }, { matchId: 'e1f54e6b', rn: 10 },
+    { matchId: 'd2a95c2f', rn: 5 }, { matchId: 'd2a95c2f', rn: 7 }, { matchId: 'd2a95c2f', rn: 9 }, { matchId: 'd2a95c2f', rn: 10 },
+    { matchId: '2504b033', rn: 4 }, { matchId: '2504b033', rn: 9 }, { matchId: '2504b033', rn: 11 }
+  ];
+
+  // compute x/y ranges from raw for other teams
+  for (const [team, pts] of Object.entries(RAW)) {
+    if (team === 'bjk') continue;
+    const rounds = {};
+    for (const p of pts) {
+      const key = `${Math.round(p.normX * 10)}_${Math.round(p.normY * 10)}_grp`; // can't group without matchId, use a rough proxy
+      rounds[key] = rounds[key] || [];
+      rounds[key].push(p);
+    }
+    // We don't have exact round groupings in this simplified data, so skip per-round for others
+    // Instead just show the round distribution from BJK_ROUNDS and reference line
+  }
+
+  // reference line: field avg X-range = 20, avg Y-range = 64
+  const refX = scaleX(20), refY = scaleY(64);
+  svg.appendChild(svgEl('line', { x1: refX, y1: T, x2: refX, y2: T + cH, stroke: '#3b82f6', 'stroke-width': 1, 'stroke-dasharray': '4 3', opacity: 0.7 }));
+  svg.appendChild(svgEl('line', { x1: L, y1: refY, x2: L + cW, y2: refY, stroke: '#3b82f6', 'stroke-width': 1, 'stroke-dasharray': '4 3', opacity: 0.7 }));
+  svg.appendChild(txt('field avg X-range', { x: refX + 4, y: T + 12, fill: '#3b82f688', 'font-size': 8 }));
+  svg.appendChild(txt('field avg Y-range', { x: L + cW - 4, y: refY - 5, 'text-anchor': 'end', fill: '#3b82f688', 'font-size': 8 }));
+
+  // BJK rounds
+  for (const r of BJK_ROUNDS) {
+    const cx = scaleX(r.xr), cy = scaleY(r.yr);
+    svg.appendChild(svgEl('circle', { cx, cy, r: 7, fill: '#f97316', opacity: 0.8, stroke: '#fb923c', 'stroke-width': 1 }));
+  }
+
+  // legend
+  svg.appendChild(svgEl('circle', { cx: L + cW - 80, cy: T + 14, r: 7, fill: '#f97316', opacity: 0.8 }));
+  svg.appendChild(txt('BJK round', { x: L + cW - 70, y: T + 18, fill: '#f97316', 'font-size': 10 }));
+  svg.appendChild(svgEl('line', { x1: L + cW - 84, y1: T + 32, x2: L + cW - 64, y2: T + 32, stroke: '#3b82f6', 'stroke-width': 1, 'stroke-dasharray': '4 3', opacity: 0.7 }));
+  svg.appendChild(txt('field averages', { x: L + cW - 60, y: T + 36, fill: '#3b82f688', 'font-size': 9 }));
+
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+})();
+
+// ── Map overlay dots ─────────────────────────────────────────────────────────
+(function() {
+  function makeDot(x, y, color, size, opacity) {
+    const d = document.createElement('div');
+    d.style.cssText = `position:absolute;left:${x}%;top:${y}%;width:${size}px;height:${size}px;border-radius:50%;background:${color};opacity:${opacity};transform:translate(-50%,-50%);pointer-events:none;`;
+    return d;
+  }
+
+  const fieldEl = document.getElementById('dots-field');
+  const fieldTeams = ['sge','fks','tl','rzn','wip','ucam','nvj','rb','bar','m1r','jl'];
+  fieldTeams.forEach(team => {
+    (RAW[team] || []).forEach(p => {
+      fieldEl.appendChild(makeDot(p.normX, p.normY, '#3b82f6', 7, 0.5));
+    });
+  });
+
+  const bjkEl = document.getElementById('dots-bjk');
+  (RAW.bjk || []).forEach(p => {
+    bjkEl.appendChild(makeDot(p.normX, p.normY, '#f97316', 8, 0.9));
+  });
+})();
+</script>
+</body>
+</html>

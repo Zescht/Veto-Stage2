@@ -604,5 +604,323 @@
         }
       ]
     }
+  },
+  "postPlant10_20": {
+    "A": {
+      "rounds": [
+        {
+          "roundNum": 13,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 17616,
+              "players": [
+                {
+                  "player": "oroni",
+                  "normX": 48.02,
+                  "normY": 46.0126
+                },
+                {
+                  "player": "influx",
+                  "normX": 46.7954,
+                  "normY": 46.114
+                }
+              ]
+            }
+          ],
+          "matchId": "67be656c-b3a3-479e-890a-45b404c20bc3",
+          "date": "2026-05-18",
+          "opponent": "NVJ",
+          "score": "6-13"
+        },
+        {
+          "roundNum": 18,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 16233,
+              "players": [
+                {
+                  "player": "oroni",
+                  "normX": 75.2498,
+                  "normY": 80.4184
+                },
+                {
+                  "player": "wezzy1",
+                  "normX": 65.5154,
+                  "normY": 50.2714
+                },
+                {
+                  "player": "Docent",
+                  "normX": 84.875,
+                  "normY": 64.7248
+                },
+                {
+                  "player": "influx",
+                  "normX": 83.2604,
+                  "normY": 64.6078
+                },
+                {
+                  "player": "MerSahaha",
+                  "normX": 64.4,
+                  "normY": 53.9062
+                }
+              ]
+            }
+          ],
+          "matchId": "67be656c-b3a3-479e-890a-45b404c20bc3",
+          "date": "2026-05-18",
+          "opponent": "NVJ",
+          "score": "6-13"
+        },
+        {
+          "roundNum": 14,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 12504,
+              "players": [
+                {
+                  "player": "oroni",
+                  "normX": 69.7274,
+                  "normY": 69.2488
+                },
+                {
+                  "player": "wezzy1",
+                  "normX": 77.2778,
+                  "normY": 55.8562
+                }
+              ]
+            }
+          ],
+          "matchId": "6b0f0d53-c88a-43ef-a94f-7285974c2b62",
+          "date": "2026-04-27",
+          "opponent": "FA",
+          "score": "13-11"
+        },
+        {
+          "roundNum": 19,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 13181,
+              "players": [
+                {
+                  "player": "oroni",
+                  "normX": 80.117,
+                  "normY": 70.2082
+                },
+                {
+                  "player": "Docent",
+                  "normX": 81.9578,
+                  "normY": 71.7916
+                },
+                {
+                  "player": "MerSahaha",
+                  "normX": 74.813,
+                  "normY": 72.4936
+                },
+                {
+                  "player": "influx",
+                  "normX": 85.265,
+                  "normY": 73.0162
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 13602,
+              "players": [
+                {
+                  "player": "oroni",
+                  "normX": 80.0078,
+                  "normY": 68.4064
+                },
+                {
+                  "player": "Docent",
+                  "normX": 81.9032,
+                  "normY": 70.8244
+                },
+                {
+                  "player": "MerSahaha",
+                  "normX": 74.9144,
+                  "normY": 72.673
+                },
+                {
+                  "player": "influx",
+                  "normX": 85.265,
+                  "normY": 72.9928
+                }
+              ]
+            }
+          ],
+          "matchId": "6b0f0d53-c88a-43ef-a94f-7285974c2b62",
+          "date": "2026-04-27",
+          "opponent": "FA",
+          "score": "13-11"
+        },
+        {
+          "roundNum": 20,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 14868,
+              "players": [
+                {
+                  "player": "oroni",
+                  "normX": 58.9868,
+                  "normY": 52.315
+                },
+                {
+                  "player": "wezzy1",
+                  "normX": 63.113,
+                  "normY": 78.172
+                },
+                {
+                  "player": "Docent",
+                  "normX": 62.1692,
+                  "normY": 81.0502
+                },
+                {
+                  "player": "MerSahaha",
+                  "normX": 53.2616,
+                  "normY": 49.5538
+                },
+                {
+                  "player": "influx",
+                  "normX": 63.113,
+                  "normY": 80.356
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 16647,
+              "players": [
+                {
+                  "player": "oroni",
+                  "normX": 59.6732,
+                  "normY": 46.9018
+                },
+                {
+                  "player": "wezzy1",
+                  "normX": 62.9336,
+                  "normY": 75.3172
+                },
+                {
+                  "player": "Docent",
+                  "normX": 62.7698,
+                  "normY": 79.9816
+                },
+                {
+                  "player": "MerSahaha",
+                  "normX": 55.9136,
+                  "normY": 53.9296
+                },
+                {
+                  "player": "influx",
+                  "normX": 66.0848,
+                  "normY": 73.9288
+                }
+              ]
+            }
+          ],
+          "matchId": "6b0f0d53-c88a-43ef-a94f-7285974c2b62",
+          "date": "2026-04-27",
+          "opponent": "FA",
+          "score": "13-11"
+        }
+      ]
+    },
+    "B": {
+      "rounds": [
+        {
+          "roundNum": 17,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 11051,
+              "players": [
+                {
+                  "player": "influx",
+                  "normX": 35.0798,
+                  "normY": 56.5738
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 11786,
+              "players": [
+                {
+                  "player": "influx",
+                  "normX": 35.2514,
+                  "normY": 57.4474
+                }
+              ]
+            }
+          ],
+          "matchId": "67be656c-b3a3-479e-890a-45b404c20bc3",
+          "date": "2026-05-18",
+          "opponent": "NVJ",
+          "score": "6-13"
+        },
+        {
+          "roundNum": 17,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 11562,
+              "players": [
+                {
+                  "player": "oroni",
+                  "normX": 33.6056,
+                  "normY": 44.437
+                },
+                {
+                  "player": "MerSahaha",
+                  "normX": 34.2374,
+                  "normY": 48.376
+                },
+                {
+                  "player": "influx",
+                  "normX": 32.7242,
+                  "normY": 50.8564
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15639,
+              "players": [
+                {
+                  "player": "oroni",
+                  "normX": 30.8444,
+                  "normY": 37.846
+                },
+                {
+                  "player": "MerSahaha",
+                  "normX": 32.9504,
+                  "normY": 42.565
+                },
+                {
+                  "player": "influx",
+                  "normX": 32.8178,
+                  "normY": 41.317
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 19634,
+              "players": [
+                {
+                  "player": "oroni",
+                  "normX": 27.4046,
+                  "normY": 35.8336
+                },
+                {
+                  "player": "influx",
+                  "normX": 24.62,
+                  "normY": 45.8254
+                }
+              ]
+            }
+          ],
+          "matchId": "6b0f0d53-c88a-43ef-a94f-7285974c2b62",
+          "date": "2026-04-27",
+          "opponent": "FA",
+          "score": "13-11"
+        }
+      ]
+    }
   }
 }

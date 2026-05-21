@@ -211,6 +211,25 @@ let isTestMode = false;
 let sniperFilterFK = false;
 let sniperFilterAllFK = false;
 let sniperFilterRotation = false;
+let activePlantSites = new Set(); // "A" | "B" | "C" — empty = show all
+const MAPS_WITH_C_SITE = new Set(["Lotus", "Haven"]);
+
+function applyPlantSiteFilter(items) {
+  if (activePlantSites.size === 0) return items;
+  return items.filter(item => {
+    const site = Array.isArray(item) ? item[0]?.plantSite : item.plantSite;
+    return site && activePlantSites.has(site);
+  });
+}
+
+function buildPlantFilterButtons(mapName) {
+  if (activeSideView !== "t") return "";
+  const sites = ["A", "B"];
+  if (MAPS_WITH_C_SITE.has(mapName)) sites.push("C");
+  return sites.map(s =>
+    `<button class="rotation-window-btn${activePlantSites.has(s) ? ' active' : ''}" data-plant-site="${s}" type="button">${s}-PLANT</button>`
+  ).join("");
+}
 const selectedPlayerFilters = {};
 const selectedDefensivePlayerFilters = {};
 
@@ -936,8 +955,11 @@ function buildMapControlMarkup(mapName, side, frameClassList, frameStyle, mapIma
     { key: "20_30", label: "20–30s" },
   ];
 
+  const mcPlantButtons = buildPlantFilterButtons(mapName);
+
   const cards = windows.map(({ key, label }) => {
-    const allPoints = applyNewRosterFilter(mcSide.mapControl?.[key] ?? []);
+    const rawPoints = applyNewRosterFilter(mcSide.mapControl?.[key] ?? []);
+    const allPoints = applyPlantSiteFilter(rawPoints);
     const points = allPoints.filter(pt => selectedPlayers.has(canonicalPlayerName(pt.player)));
     const roundCount = new Set(allPoints.map(pt => `${pt.matchId}|${pt.roundNum}`)).size;
     const dotsMarkup = allPoints.map(pt => {
@@ -976,7 +998,10 @@ function buildMapControlMarkup(mapName, side, frameClassList, frameStyle, mapIma
   return `
     <div class="defensive-topic-divider" role="presentation"></div>
     <section class="defensive-topic">
-      <h3 class="defensive-topic-title">Map Control</h3>
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+        <h3 class="defensive-topic-title">Map Control</h3>
+        ${mcPlantButtons}
+      </div>
       <div class="early-positioning-layout">
         ${sidebarMarkup}
         <div class="defensive-topic-grid">${cards}</div>
@@ -1006,9 +1031,10 @@ function computeRotationLayers(mapName, side, selectedPlayers) {
   const mcSide = TEAM_MAP_CONTROL_DATA[activeTeam]?.[mapName]?.[side];
   const rotSniperKeySet = new Set(mcSide?.sniperRoundKeys ?? []);
   const allRotRounds = applyNewRosterFilter(mcSide?.rotations ?? []);
-  const rounds = (isTestMode && sniperFilterRotation)
+  const afterSniperRounds = (isTestMode && sniperFilterRotation)
     ? allRotRounds.filter(rt => rt[0] && rotSniperKeySet.has(`${rt[0].matchId}|${rt[0].roundNum}`))
     : allRotRounds;
+  const rounds = applyPlantSiteFilter(afterSniperRounds);
   const hasSelection = activeRotationTrail !== null;
   let svgLines = "";
   let dotsMarkup = "";
@@ -1171,12 +1197,15 @@ function renderDefensivePanels(info) {
   const sniperTopicTitle = "Sniper Kills";
   const sniperTopicTooltip = "Map positions where the team landed a kill with the Operator, Outlaw, or Marshal. Each colored dot represents one kill, colored by the player who made it. All rounds in the sample are shown \u2014 no player filter applied.";
 
+  const plantFilterButtons = buildPlantFilterButtons(mapName);
+
   const timingMarkup = timingPanels
     .map(([key, label]) => {
       const basePoints = applyNewRosterFilter(info.thresholds?.[key]?.points ?? []);
-      const allPoints = (isTestMode && sniperFilterFK)
+      const afterSniperFilter = (isTestMode && sniperFilterFK)
         ? basePoints.filter(p => sniperRoundKeySet.has(`${p.matchId}|${p.roundNum}`))
         : basePoints;
+      const allPoints = applyPlantSiteFilter(afterSniperFilter);
       const points = allPoints.filter((point) => selectedPlayers.has(canonicalPlayerName(point.player)));
       const roundCount = new Set(allPoints.map((point) => `${point.matchId}|${point.roundNum}`)).size;
       const pointsMarkup = allPoints
@@ -1606,8 +1635,9 @@ function renderDefensivePanels(info) {
   defensivePanels.innerHTML = `
     ${siteStatsMarkup}
     <section class="defensive-topic">
-      <div style="display:flex;align-items:center;gap:12px;">
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
         <h3 class="defensive-topic-title" title="${earlyTopicTooltip}">${earlyTopicTitle}</h3>
+        ${plantFilterButtons}
         ${isTestMode ? `<button class="rotation-window-btn${sniperFilterFK ? ' active' : ''}" data-sniper-panel="fk" type="button">SNIPER</button>` : ''}
       </div>
       <div class="early-positioning-layout">
@@ -1643,7 +1673,10 @@ function renderDefensivePanels(info) {
           ${sidebarMarkup}
           <div class="${secondaryCard ? "defensive-support-columns" : ""}">
             <div>
-              <h3 class="defensive-topic-title">Rotation Patterns</h3>
+              <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+                <h3 class="defensive-topic-title">Rotation Patterns</h3>
+                ${buildPlantFilterButtons(mapName)}
+              </div>
               ${rotationCard}
             </div>
             ${secondaryCard}
@@ -2355,6 +2388,7 @@ sideCtButton?.addEventListener("click", () => {
   activeSideView = "ct";
   activeRotationTrail = null;
   activeRotationWindow = null;
+  activePlantSites = new Set();
   retakeActiveSites = new Set(["A", "B", "C"]);
   ppInlineActiveSites = new Set(["A", "B", "C"]);
   renderHero(allVetoHistoryData[activeTeam]);
@@ -2366,6 +2400,7 @@ sideTButton?.addEventListener("click", () => {
   activeSideView = "t";
   activeRotationTrail = null;
   activeRotationWindow = null;
+  activePlantSites = new Set();
   retakeActiveSites = new Set(["A", "B", "C"]);
   ppInlineActiveSites = new Set(["A", "B", "C"]);
   renderHero(allVetoHistoryData[activeTeam]);
@@ -2442,6 +2477,15 @@ if (defensivePanels) {
       updateEarlyDotsInPlace(activeInfo, getSelectedDefensiveSet(activeInfo, collectDefensivePlayers(activeInfo)));
       return;
     }
+    const plantSiteBtn = event.target.closest("[data-plant-site]");
+    if (plantSiteBtn) {
+      const site = plantSiteBtn.dataset.plantSite;
+      if (activePlantSites.has(site)) activePlantSites.delete(site);
+      else activePlantSites.add(site);
+      renderDefensivePanels(activeInfo);
+      return;
+    }
+
     const sniperPanelBtn = event.target.closest("[data-sniper-panel]");
     if (sniperPanelBtn) {
       const panel = sniperPanelBtn.dataset.sniperPanel;
@@ -2486,6 +2530,7 @@ if (defensiveMapSelect) {
     activeDefensiveMap = event.target.value;
     activeRotationTrail = null;
     activeRotationWindow = null;
+    activePlantSites = new Set();
     renderMapInfo();
   });
 }

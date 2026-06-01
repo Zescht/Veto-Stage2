@@ -1,0 +1,93 @@
+{
+  "t_side": {
+    "total_rounds": 61,
+    "rounds_won": 29,
+    "pct_rounds_won": 47.5,
+    "won_by_kills": 25,
+    "pct_won_by_kills": 41.0,
+    "won_by_explosion": 4,
+    "pct_won_by_explosion": 6.6,
+    "avg_fk_time": 34.5,
+    "sites": {
+      "A": {
+        "plant_count": 17,
+        "pct_plant": 42.5,
+        "pct_win": 70.6,
+        "avg_plant_time": 58.3,
+        "min_plant_time": 20.8,
+        "max_plant_time": 92.3,
+        "fk_to_plant_avg": 31.3,
+        "fk_to_plant_n": 15
+      },
+      "B": {
+        "plant_count": 23,
+        "pct_plant": 57.5,
+        "pct_win": 73.9,
+        "avg_plant_time": 58.4,
+        "min_plant_time": 21.3,
+        "max_plant_time": 92.3,
+        "fk_to_plant_avg": 30.1,
+        "fk_to_plant_n": 21
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 45,
+    "rounds_won": 21,
+    "pct_rounds_won": 46.7,
+    "won_by_kills": 16,
+    "pct_won_by_kills": 35.6,
+    "won_by_defuse": 5,
+    "pct_won_by_defuse": 11.1,
+    "avg_fk_time": 30.7,
+    "sites": {
+      "A": {
+        "plant_count": 6,
+        "defuse_count": 1,
+        "pct_defuse_win": 16.7,
+        "pct_defuse_share": 20.0,
+        "avg_defuse_time": 20.5,
+        "fk_after_plant_avg": 12.1,
+        "fk_after_plant_n": 3
+      },
+      "B": {
+        "plant_count": 20,
+        "defuse_count": 4,
+        "pct_defuse_win": 20.0,
+        "pct_defuse_share": 80.0,
+        "avg_defuse_time": 30.4,
+        "fk_after_plant_avg": 17.3,
+        "fk_after_plant_n": 11
+      }
+    }
+  },
+  "team": "Misa Esports",
+  "map": "Split",
+  "matches": [
+    {
+      "date": "2026-05-04",
+      "opponent": "BJK",
+      "matchId": "d2a95c2f-139a-4401-8695-f2679b61f534"
+    },
+    {
+      "date": "2026-04-27",
+      "opponent": "RB",
+      "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4"
+    },
+    {
+      "date": "2026-04-19",
+      "opponent": "BJK",
+      "matchId": "4ffed079-3f65-4fd1-a224-1bfa44c60f92"
+    },
+    {
+      "date": "2026-04-12",
+      "opponent": "BW",
+      "matchId": "ba634a67-5528-4347-b9e3-c80911f88da2"
+    },
+    {
+      "date": "2026-04-06",
+      "opponent": "EFP",
+      "matchId": "13e61144-bea6-4b94-9c8e-10ae48302720"
+    }
+  ]
+}

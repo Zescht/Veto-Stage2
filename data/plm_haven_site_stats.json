@@ -1,0 +1,112 @@
+{
+  "t_side": {
+    "total_rounds": 47,
+    "rounds_won": 24,
+    "pct_rounds_won": 51.1,
+    "won_by_kills": 21,
+    "pct_won_by_kills": 44.7,
+    "won_by_explosion": 3,
+    "pct_won_by_explosion": 6.4,
+    "avg_fk_time": 29.1,
+    "sites": {
+      "A": {
+        "plant_count": 13,
+        "pct_plant": 37.1,
+        "pct_win": 69.2,
+        "avg_plant_time": 69.7,
+        "min_plant_time": 44.9,
+        "max_plant_time": 92.5,
+        "fk_to_plant_avg": 38.5,
+        "fk_to_plant_n": 13
+      },
+      "B": {
+        "plant_count": 7,
+        "pct_plant": 20.0,
+        "pct_win": 57.1,
+        "avg_plant_time": 47.2,
+        "min_plant_time": 12.5,
+        "max_plant_time": 85.8,
+        "fk_to_plant_avg": 39.4,
+        "fk_to_plant_n": 5
+      },
+      "C": {
+        "plant_count": 15,
+        "pct_plant": 42.9,
+        "pct_win": 73.3,
+        "avg_plant_time": 44.0,
+        "min_plant_time": 16.6,
+        "max_plant_time": 99.9,
+        "fk_to_plant_avg": 25.3,
+        "fk_to_plant_n": 13
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 51,
+    "rounds_won": 28,
+    "pct_rounds_won": 54.9,
+    "won_by_kills": 15,
+    "pct_won_by_kills": 29.4,
+    "won_by_defuse": 13,
+    "pct_won_by_defuse": 25.5,
+    "avg_fk_time": 25.9,
+    "sites": {
+      "A": {
+        "plant_count": 13,
+        "defuse_count": 5,
+        "pct_defuse_win": 38.5,
+        "pct_defuse_share": 38.5,
+        "avg_defuse_time": 33.7,
+        "fk_after_plant_avg": 20.9,
+        "fk_after_plant_n": 11
+      },
+      "B": {
+        "plant_count": 10,
+        "defuse_count": 4,
+        "pct_defuse_win": 40.0,
+        "pct_defuse_share": 30.8,
+        "avg_defuse_time": 28.8,
+        "fk_after_plant_avg": 11.2,
+        "fk_after_plant_n": 9
+      },
+      "C": {
+        "plant_count": 12,
+        "defuse_count": 4,
+        "pct_defuse_win": 33.3,
+        "pct_defuse_share": 30.8,
+        "avg_defuse_time": 24.6,
+        "fk_after_plant_avg": 12.1,
+        "fk_after_plant_n": 8
+      }
+    }
+  },
+  "team": "Pixel Lumina",
+  "map": "Haven",
+  "matches": [
+    {
+      "date": "2026-04-14",
+      "opponent": "BG",
+      "matchId": "6b5c52ec-1f36-4d8a-896e-c6bc6ce49bc2"
+    },
+    {
+      "date": "2026-04-13",
+      "opponent": "NVJ",
+      "matchId": "806a35c4-e590-4b43-9107-8a7c93e43d2a"
+    },
+    {
+      "date": "2026-04-12",
+      "opponent": "BONK",
+      "matchId": "7b01e461-e297-48f5-ba4f-c04c121c911f"
+    },
+    {
+      "date": "2026-04-06",
+      "opponent": "LEO",
+      "matchId": "eb06313d-d387-4e44-a4cb-c3c789c2a72b"
+    },
+    {
+      "date": "2026-04-05",
+      "opponent": "LP",
+      "matchId": "5dc1ad77-2e65-43db-891b-80ba3a2e1e95"
+    }
+  ]
+}

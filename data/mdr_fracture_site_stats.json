@@ -1,0 +1,93 @@
+{
+  "t_side": {
+    "total_rounds": 61,
+    "rounds_won": 34,
+    "pct_rounds_won": 55.7,
+    "won_by_kills": 30,
+    "pct_won_by_kills": 49.2,
+    "won_by_explosion": 4,
+    "pct_won_by_explosion": 6.6,
+    "avg_fk_time": 31.0,
+    "sites": {
+      "A": {
+        "plant_count": 38,
+        "pct_plant": 71.7,
+        "pct_win": 68.4,
+        "avg_plant_time": 56.6,
+        "min_plant_time": 23.0,
+        "max_plant_time": 94.9,
+        "fk_to_plant_avg": 27.8,
+        "fk_to_plant_n": 33
+      },
+      "B": {
+        "plant_count": 15,
+        "pct_plant": 28.3,
+        "pct_win": 53.3,
+        "avg_plant_time": 49.5,
+        "min_plant_time": 17.5,
+        "max_plant_time": 87.5,
+        "fk_to_plant_avg": 33.0,
+        "fk_to_plant_n": 11
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 48,
+    "rounds_won": 26,
+    "pct_rounds_won": 54.2,
+    "won_by_kills": 16,
+    "pct_won_by_kills": 33.3,
+    "won_by_defuse": 10,
+    "pct_won_by_defuse": 20.8,
+    "avg_fk_time": 33.5,
+    "sites": {
+      "A": {
+        "plant_count": 13,
+        "defuse_count": 1,
+        "pct_defuse_win": 7.7,
+        "pct_defuse_share": 10.0,
+        "avg_defuse_time": 31.0,
+        "fk_after_plant_avg": 15.2,
+        "fk_after_plant_n": 8
+      },
+      "B": {
+        "plant_count": 17,
+        "defuse_count": 9,
+        "pct_defuse_win": 52.9,
+        "pct_defuse_share": 90.0,
+        "avg_defuse_time": 31.6,
+        "fk_after_plant_avg": 8.9,
+        "fk_after_plant_n": 15
+      }
+    }
+  },
+  "team": "Mandatory",
+  "map": "Fracture",
+  "matches": [
+    {
+      "date": "2026-05-05",
+      "opponent": "WIP",
+      "matchId": "05267443-28ba-4650-868c-b09272c49f8d"
+    },
+    {
+      "date": "2026-05-03",
+      "opponent": "F9",
+      "matchId": "dda6385b-5f9d-41f9-bac6-47f62d3a239a"
+    },
+    {
+      "date": "2026-04-25",
+      "opponent": "CLA",
+      "matchId": "86199875-ef7b-4f9a-a8ad-c269bd2ba5eb"
+    },
+    {
+      "date": "2026-04-13",
+      "opponent": "WIP",
+      "matchId": "246616a5-dad5-489a-ad6c-9b7a8d6810c1"
+    },
+    {
+      "date": "2026-04-05",
+      "opponent": "ES",
+      "matchId": "535c5836-0d31-420d-830a-ad335f6c253f"
+    }
+  ]
+}

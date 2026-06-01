@@ -1,0 +1,88 @@
+{
+  "t_side": {
+    "total_rounds": 48,
+    "rounds_won": 32,
+    "pct_rounds_won": 66.7,
+    "won_by_kills": 29,
+    "pct_won_by_kills": 60.4,
+    "won_by_explosion": 3,
+    "pct_won_by_explosion": 6.2,
+    "avg_fk_time": 32.0,
+    "sites": {
+      "A": {
+        "plant_count": 20,
+        "pct_plant": 55.6,
+        "pct_win": 90.0,
+        "avg_plant_time": 60.7,
+        "min_plant_time": 16.4,
+        "max_plant_time": 99.4,
+        "fk_to_plant_avg": 30.4,
+        "fk_to_plant_n": 17
+      },
+      "B": {
+        "plant_count": 16,
+        "pct_plant": 44.4,
+        "pct_win": 81.2,
+        "avg_plant_time": 45.2,
+        "min_plant_time": 24.8,
+        "max_plant_time": 80.3,
+        "fk_to_plant_avg": 21.5,
+        "fk_to_plant_n": 14
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 26,
+    "rounds_won": 20,
+    "pct_rounds_won": 76.9,
+    "won_by_kills": 11,
+    "pct_won_by_kills": 42.3,
+    "won_by_defuse": 9,
+    "pct_won_by_defuse": 34.6,
+    "avg_fk_time": 23.0,
+    "sites": {
+      "A": {
+        "plant_count": 9,
+        "defuse_count": 6,
+        "pct_defuse_win": 66.7,
+        "pct_defuse_share": 66.7,
+        "avg_defuse_time": 31.2,
+        "fk_after_plant_avg": 17.2,
+        "fk_after_plant_n": 8
+      },
+      "B": {
+        "plant_count": 6,
+        "defuse_count": 3,
+        "pct_defuse_win": 50.0,
+        "pct_defuse_share": 33.3,
+        "avg_defuse_time": 30.8,
+        "fk_after_plant_avg": 8.6,
+        "fk_after_plant_n": 5
+      }
+    }
+  },
+  "team": "AlQadsiah",
+  "map": "Breeze",
+  "matches": [
+    {
+      "date": "2026-05-22",
+      "opponent": "VCT",
+      "matchId": "6da0f26a-f480-4692-a575-a7006179eea4"
+    },
+    {
+      "date": "2026-05-21",
+      "opponent": "VCT",
+      "matchId": "aed3d458-6c91-4a23-a5dc-fad28b8c68be"
+    },
+    {
+      "date": "2026-05-13",
+      "opponent": "VIL",
+      "matchId": "18cbfef1-772a-46b0-b1df-2be8e0d07281"
+    },
+    {
+      "date": "2026-05-03",
+      "opponent": "SPR",
+      "matchId": "acef2df4-a4f5-48e7-9e55-1cd7e499114d"
+    }
+  ]
+}

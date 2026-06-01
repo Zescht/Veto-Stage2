@@ -1,0 +1,338 @@
+{
+  "map": "Split",
+  "side": "ct",
+  "selectedMaps": [
+    {
+      "date": "2026-05-04",
+      "opponent": "BJK",
+      "matchId": "d2a95c2f-139a-4401-8695-f2679b61f534",
+      "score": "2-13"
+    },
+    {
+      "date": "2026-04-27",
+      "opponent": "RB",
+      "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
+      "score": "12-14"
+    },
+    {
+      "date": "2026-04-19",
+      "opponent": "BJK",
+      "matchId": "4ffed079-3f65-4fd1-a224-1bfa44c60f92",
+      "score": "10-13"
+    }
+  ],
+  "sites": {
+    "A": {
+      "roundCount": 3,
+      "pointCount": 7,
+      "points": [
+        {
+          "site": "A",
+          "player": "burzzy",
+          "normX": 53.7052,
+          "normY": 89.7648,
+          "roundNum": 7,
+          "plantRoundTimeMs": 79009,
+          "date": "2026-04-27",
+          "opponent": "RB",
+          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
+          "score": "12-14"
+        },
+        {
+          "site": "A",
+          "player": "Elite",
+          "normX": 44.1112,
+          "normY": 89.0472,
+          "roundNum": 7,
+          "plantRoundTimeMs": 79009,
+          "date": "2026-04-27",
+          "opponent": "RB",
+          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
+          "score": "12-14"
+        },
+        {
+          "site": "A",
+          "player": "burzzy",
+          "normX": 27.4426,
+          "normY": 61.3104,
+          "roundNum": 16,
+          "plantRoundTimeMs": 74924,
+          "date": "2026-04-19",
+          "opponent": "BJK",
+          "matchId": "4ffed079-3f65-4fd1-a224-1bfa44c60f92",
+          "score": "10-13"
+        },
+        {
+          "site": "A",
+          "player": "Elite",
+          "normX": 21.8422,
+          "normY": 50.0004,
+          "roundNum": 16,
+          "plantRoundTimeMs": 74924,
+          "date": "2026-04-19",
+          "opponent": "BJK",
+          "matchId": "4ffed079-3f65-4fd1-a224-1bfa44c60f92",
+          "score": "10-13"
+        },
+        {
+          "site": "A",
+          "player": "QutionerX",
+          "normX": 32.9884,
+          "normY": 61.95,
+          "roundNum": 16,
+          "plantRoundTimeMs": 74924,
+          "date": "2026-04-19",
+          "opponent": "BJK",
+          "matchId": "4ffed079-3f65-4fd1-a224-1bfa44c60f92",
+          "score": "10-13"
+        },
+        {
+          "site": "A",
+          "player": "burzzy",
+          "normX": 13.816,
+          "normY": 28.059,
+          "roundNum": 21,
+          "plantRoundTimeMs": 48230,
+          "date": "2026-04-19",
+          "opponent": "BJK",
+          "matchId": "4ffed079-3f65-4fd1-a224-1bfa44c60f92",
+          "score": "10-13"
+        },
+        {
+          "site": "A",
+          "player": "Elite",
+          "normX": 27.3568,
+          "normY": 29.9622,
+          "roundNum": 21,
+          "plantRoundTimeMs": 48230,
+          "date": "2026-04-19",
+          "opponent": "BJK",
+          "matchId": "4ffed079-3f65-4fd1-a224-1bfa44c60f92",
+          "score": "10-13"
+        }
+      ]
+    },
+    "B": {
+      "roundCount": 9,
+      "pointCount": 18,
+      "points": [
+        {
+          "site": "B",
+          "player": "Brave",
+          "normX": 20.641,
+          "normY": 45.2268,
+          "roundNum": 0,
+          "plantRoundTimeMs": 38353,
+          "date": "2026-04-27",
+          "opponent": "RB",
+          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
+          "score": "12-14"
+        },
+        {
+          "site": "B",
+          "player": "QutionerX",
+          "normX": 45.3982,
+          "normY": 68.0574,
+          "roundNum": 0,
+          "plantRoundTimeMs": 38353,
+          "date": "2026-04-27",
+          "opponent": "RB",
+          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
+          "score": "12-14"
+        },
+        {
+          "site": "B",
+          "player": "pAura",
+          "normX": 35.5312,
+          "normY": 65.4912,
+          "roundNum": 0,
+          "plantRoundTimeMs": 38353,
+          "date": "2026-04-27",
+          "opponent": "RB",
+          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
+          "score": "12-14"
+        },
+        {
+          "site": "B",
+          "player": "Brave",
+          "normX": 26.4598,
+          "normY": 81.3096,
+          "roundNum": 2,
+          "plantRoundTimeMs": 86546,
+          "date": "2026-04-27",
+          "opponent": "RB",
+          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
+          "score": "12-14"
+        },
+        {
+          "site": "B",
+          "player": "pAura",
+          "normX": 31.2412,
+          "normY": 61.4508,
+          "roundNum": 2,
+          "plantRoundTimeMs": 86546,
+          "date": "2026-04-27",
+          "opponent": "RB",
+          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
+          "score": "12-14"
+        },
+        {
+          "site": "B",
+          "player": "Brave",
+          "normX": 26.7874,
+          "normY": 80.7246,
+          "roundNum": 5,
+          "plantRoundTimeMs": 56179,
+          "date": "2026-04-27",
+          "opponent": "RB",
+          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
+          "score": "12-14"
+        },
+        {
+          "site": "B",
+          "player": "QutionerX",
+          "normX": 30.7654,
+          "normY": 76.5516,
+          "roundNum": 5,
+          "plantRoundTimeMs": 56179,
+          "date": "2026-04-27",
+          "opponent": "RB",
+          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
+          "score": "12-14"
+        },
+        {
+          "site": "B",
+          "player": "pAura",
+          "normX": 23.2618,
+          "normY": 82.2144,
+          "roundNum": 5,
+          "plantRoundTimeMs": 56179,
+          "date": "2026-04-27",
+          "opponent": "RB",
+          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
+          "score": "12-14"
+        },
+        {
+          "site": "B",
+          "player": "Brave",
+          "normX": 21.733,
+          "normY": 80.2332,
+          "roundNum": 6,
+          "plantRoundTimeMs": 54435,
+          "date": "2026-04-27",
+          "opponent": "RB",
+          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
+          "score": "12-14"
+        },
+        {
+          "site": "B",
+          "player": "pAura",
+          "normX": 33.4954,
+          "normY": 65.499,
+          "roundNum": 6,
+          "plantRoundTimeMs": 54435,
+          "date": "2026-04-27",
+          "opponent": "RB",
+          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
+          "score": "12-14"
+        },
+        {
+          "site": "B",
+          "player": "pAura",
+          "normX": 38.4094,
+          "normY": 78.9462,
+          "roundNum": 8,
+          "plantRoundTimeMs": 65670,
+          "date": "2026-04-27",
+          "opponent": "RB",
+          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
+          "score": "12-14"
+        },
+        {
+          "site": "B",
+          "player": "QutionerX",
+          "normX": 25.5238,
+          "normY": 58.9158,
+          "roundNum": 10,
+          "plantRoundTimeMs": 58728,
+          "date": "2026-04-27",
+          "opponent": "RB",
+          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
+          "score": "12-14"
+        },
+        {
+          "site": "B",
+          "player": "pAura",
+          "normX": 26.0698,
+          "normY": 79.89,
+          "roundNum": 10,
+          "plantRoundTimeMs": 58728,
+          "date": "2026-04-27",
+          "opponent": "RB",
+          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
+          "score": "12-14"
+        },
+        {
+          "site": "B",
+          "player": "Brave",
+          "normX": 20.5084,
+          "normY": 43.4094,
+          "roundNum": 11,
+          "plantRoundTimeMs": 91090,
+          "date": "2026-04-27",
+          "opponent": "RB",
+          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
+          "score": "12-14"
+        },
+        {
+          "site": "B",
+          "player": "Brave",
+          "normX": 23.449,
+          "normY": 71.1306,
+          "roundNum": 24,
+          "plantRoundTimeMs": 71864,
+          "date": "2026-04-27",
+          "opponent": "RB",
+          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
+          "score": "12-14"
+        },
+        {
+          "site": "B",
+          "player": "pAura",
+          "normX": 23.4412,
+          "normY": 82.6824,
+          "roundNum": 24,
+          "plantRoundTimeMs": 71864,
+          "date": "2026-04-27",
+          "opponent": "RB",
+          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
+          "score": "12-14"
+        },
+        {
+          "site": "B",
+          "player": "pAura",
+          "normX": 32.7154,
+          "normY": 32.0136,
+          "roundNum": 18,
+          "plantRoundTimeMs": 28226,
+          "date": "2026-04-19",
+          "opponent": "BJK",
+          "matchId": "4ffed079-3f65-4fd1-a224-1bfa44c60f92",
+          "score": "10-13"
+        },
+        {
+          "site": "B",
+          "player": "Brave",
+          "normX": 18.2152,
+          "normY": 49.6182,
+          "roundNum": 18,
+          "plantRoundTimeMs": 28226,
+          "date": "2026-04-19",
+          "opponent": "BJK",
+          "matchId": "4ffed079-3f65-4fd1-a224-1bfa44c60f92",
+          "score": "10-13"
+        }
+      ]
+    }
+  }
+}

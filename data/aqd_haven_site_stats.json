@@ -1,0 +1,112 @@
+{
+  "t_side": {
+    "total_rounds": 58,
+    "rounds_won": 39,
+    "pct_rounds_won": 67.2,
+    "won_by_kills": 29,
+    "pct_won_by_kills": 50.0,
+    "won_by_explosion": 10,
+    "pct_won_by_explosion": 17.2,
+    "avg_fk_time": 32.3,
+    "sites": {
+      "A": {
+        "plant_count": 21,
+        "pct_plant": 43.8,
+        "pct_win": 81.0,
+        "avg_plant_time": 55.1,
+        "min_plant_time": 24.5,
+        "max_plant_time": 90.2,
+        "fk_to_plant_avg": 24.2,
+        "fk_to_plant_n": 20
+      },
+      "B": {
+        "plant_count": 5,
+        "pct_plant": 10.4,
+        "pct_win": 60.0,
+        "avg_plant_time": 56.6,
+        "min_plant_time": 18.6,
+        "max_plant_time": 78.2,
+        "fk_to_plant_avg": 23.0,
+        "fk_to_plant_n": 3
+      },
+      "C": {
+        "plant_count": 22,
+        "pct_plant": 45.8,
+        "pct_win": 81.8,
+        "avg_plant_time": 58.0,
+        "min_plant_time": 16.6,
+        "max_plant_time": 93.2,
+        "fk_to_plant_avg": 33.2,
+        "fk_to_plant_n": 19
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 40,
+    "rounds_won": 22,
+    "pct_rounds_won": 55.0,
+    "won_by_kills": 15,
+    "pct_won_by_kills": 37.5,
+    "won_by_defuse": 7,
+    "pct_won_by_defuse": 17.5,
+    "avg_fk_time": 27.4,
+    "sites": {
+      "A": {
+        "plant_count": 7,
+        "defuse_count": 2,
+        "pct_defuse_win": 28.6,
+        "pct_defuse_share": 28.6,
+        "avg_defuse_time": 33.4,
+        "fk_after_plant_avg": 19.8,
+        "fk_after_plant_n": 7
+      },
+      "B": {
+        "plant_count": 7,
+        "defuse_count": 2,
+        "pct_defuse_win": 28.6,
+        "pct_defuse_share": 28.6,
+        "avg_defuse_time": 33.9,
+        "fk_after_plant_avg": 13.5,
+        "fk_after_plant_n": 6
+      },
+      "C": {
+        "plant_count": 11,
+        "defuse_count": 3,
+        "pct_defuse_win": 27.3,
+        "pct_defuse_share": 42.9,
+        "avg_defuse_time": 26.9,
+        "fk_after_plant_avg": 14.0,
+        "fk_after_plant_n": 7
+      }
+    }
+  },
+  "team": "AlQadsiah",
+  "map": "Haven",
+  "matches": [
+    {
+      "date": "2026-05-18",
+      "opponent": "VCT",
+      "matchId": "1bb03841-5bcc-479b-94c4-e1ab9cf3fbed"
+    },
+    {
+      "date": "2026-05-13",
+      "opponent": "VIL",
+      "matchId": "2c8169f6-4396-4641-824b-8f1c5645b4aa"
+    },
+    {
+      "date": "2026-05-05",
+      "opponent": "VIL",
+      "matchId": "a4646ddc-1db8-41c5-995e-92fb37178f84"
+    },
+    {
+      "date": "2026-04-11",
+      "opponent": "VIL",
+      "matchId": "6535060b-a56d-4c83-b748-9a5ed74e7161"
+    },
+    {
+      "date": "2026-04-04",
+      "opponent": "MYM",
+      "matchId": "34119bb3-2840-45d8-850b-8c43b9af2f75"
+    }
+  ]
+}

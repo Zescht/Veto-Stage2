@@ -1,0 +1,88 @@
+{
+  "t_side": {
+    "total_rounds": 42,
+    "rounds_won": 19,
+    "pct_rounds_won": 45.2,
+    "won_by_kills": 18,
+    "pct_won_by_kills": 42.9,
+    "won_by_explosion": 1,
+    "pct_won_by_explosion": 2.4,
+    "avg_fk_time": 33.4,
+    "sites": {
+      "A": {
+        "plant_count": 15,
+        "pct_plant": 50.0,
+        "pct_win": 60.0,
+        "avg_plant_time": 50.3,
+        "min_plant_time": 21.3,
+        "max_plant_time": 82.9,
+        "fk_to_plant_avg": 28.5,
+        "fk_to_plant_n": 14
+      },
+      "B": {
+        "plant_count": 15,
+        "pct_plant": 50.0,
+        "pct_win": 60.0,
+        "avg_plant_time": 63.4,
+        "min_plant_time": 25.9,
+        "max_plant_time": 97.3,
+        "fk_to_plant_avg": 29.0,
+        "fk_to_plant_n": 15
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 36,
+    "rounds_won": 18,
+    "pct_rounds_won": 50.0,
+    "won_by_kills": 14,
+    "pct_won_by_kills": 38.9,
+    "won_by_defuse": 4,
+    "pct_won_by_defuse": 11.1,
+    "avg_fk_time": 32.5,
+    "sites": {
+      "A": {
+        "plant_count": 11,
+        "defuse_count": 4,
+        "pct_defuse_win": 36.4,
+        "pct_defuse_share": 100.0,
+        "avg_defuse_time": 30.0,
+        "fk_after_plant_avg": 12.5,
+        "fk_after_plant_n": 10
+      },
+      "B": {
+        "plant_count": 11,
+        "defuse_count": 0,
+        "pct_defuse_win": 0.0,
+        "pct_defuse_share": 0.0,
+        "avg_defuse_time": null,
+        "fk_after_plant_avg": 17.9,
+        "fk_after_plant_n": 8
+      }
+    }
+  },
+  "team": "Mandatory",
+  "map": "Breeze",
+  "matches": [
+    {
+      "date": "2026-05-05",
+      "opponent": "WIP",
+      "matchId": "5438fd2f-7049-46cb-b6b6-c8242d25840c"
+    },
+    {
+      "date": "2026-04-26",
+      "opponent": "JL",
+      "matchId": "d774b7b4-c8ea-4032-b2f6-1fd088e7da75"
+    },
+    {
+      "date": "2026-04-19",
+      "opponent": "F9",
+      "matchId": "a734651a-a833-41c0-9bf4-5f934c7a4357"
+    },
+    {
+      "date": "2026-04-04",
+      "opponent": "GL",
+      "matchId": "c190a17c-56e4-406f-8873-bae8a739a782"
+    }
+  ]
+}

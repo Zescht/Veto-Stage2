@@ -1,0 +1,470 @@
+{
+  "map": "Split",
+  "side": "ct",
+  "selectedMaps": [
+    {
+      "date": "2026-04-14",
+      "opponent": "BG",
+      "matchId": "1af52e56-862b-426d-926b-2567ae1e8667",
+      "score": "13-5"
+    },
+    {
+      "date": "2026-04-12",
+      "opponent": "BONK",
+      "matchId": "d50f6c05-1e97-46ba-a81f-c77934823b40",
+      "score": "6-13"
+    },
+    {
+      "date": "2026-04-06",
+      "opponent": "LEO",
+      "matchId": "64e2ba12-1774-4c73-9022-bf8f1cb06007",
+      "score": "8-13"
+    }
+  ],
+  "sites": {
+    "A": {
+      "roundCount": 7,
+      "pointCount": 22,
+      "points": [
+        {
+          "site": "A",
+          "player": "elllement",
+          "normX": 37.2862,
+          "normY": 38.6904,
+          "roundNum": 1,
+          "plantRoundTimeMs": 35523,
+          "date": "2026-04-14",
+          "opponent": "BG",
+          "matchId": "1af52e56-862b-426d-926b-2567ae1e8667",
+          "score": "13-5"
+        },
+        {
+          "site": "A",
+          "player": "szimpli",
+          "normX": 43.3234,
+          "normY": 38.2302,
+          "roundNum": 1,
+          "plantRoundTimeMs": 35523,
+          "date": "2026-04-14",
+          "opponent": "BG",
+          "matchId": "1af52e56-862b-426d-926b-2567ae1e8667",
+          "score": "13-5"
+        },
+        {
+          "site": "A",
+          "player": "Leare",
+          "normX": 23.3008,
+          "normY": 40.3518,
+          "roundNum": 1,
+          "plantRoundTimeMs": 35523,
+          "date": "2026-04-14",
+          "opponent": "BG",
+          "matchId": "1af52e56-862b-426d-926b-2567ae1e8667",
+          "score": "13-5"
+        },
+        {
+          "site": "A",
+          "player": "Chaza",
+          "normX": 64.7422,
+          "normY": 66.7548,
+          "roundNum": 1,
+          "plantRoundTimeMs": 35523,
+          "date": "2026-04-14",
+          "opponent": "BG",
+          "matchId": "1af52e56-862b-426d-926b-2567ae1e8667",
+          "score": "13-5"
+        },
+        {
+          "site": "A",
+          "player": "Stix",
+          "normX": 21.8656,
+          "normY": 39.3846,
+          "roundNum": 1,
+          "plantRoundTimeMs": 35523,
+          "date": "2026-04-14",
+          "opponent": "BG",
+          "matchId": "1af52e56-862b-426d-926b-2567ae1e8667",
+          "score": "13-5"
+        },
+        {
+          "site": "A",
+          "player": "elllement",
+          "normX": 40.609,
+          "normY": 35.0556,
+          "roundNum": 9,
+          "plantRoundTimeMs": 36243,
+          "date": "2026-04-14",
+          "opponent": "BG",
+          "matchId": "1af52e56-862b-426d-926b-2567ae1e8667",
+          "score": "13-5"
+        },
+        {
+          "site": "A",
+          "player": "szimpli",
+          "normX": 38.1832,
+          "normY": 35.4144,
+          "roundNum": 9,
+          "plantRoundTimeMs": 36243,
+          "date": "2026-04-14",
+          "opponent": "BG",
+          "matchId": "1af52e56-862b-426d-926b-2567ae1e8667",
+          "score": "13-5"
+        },
+        {
+          "site": "A",
+          "player": "Leare",
+          "normX": 41.5918,
+          "normY": 69.087,
+          "roundNum": 9,
+          "plantRoundTimeMs": 36243,
+          "date": "2026-04-14",
+          "opponent": "BG",
+          "matchId": "1af52e56-862b-426d-926b-2567ae1e8667",
+          "score": "13-5"
+        },
+        {
+          "site": "A",
+          "player": "elllement",
+          "normX": 48.3154,
+          "normY": 23.9718,
+          "roundNum": 10,
+          "plantRoundTimeMs": 51542,
+          "date": "2026-04-14",
+          "opponent": "BG",
+          "matchId": "1af52e56-862b-426d-926b-2567ae1e8667",
+          "score": "13-5"
+        },
+        {
+          "site": "A",
+          "player": "szimpli",
+          "normX": 60.4912,
+          "normY": 16.5228,
+          "roundNum": 10,
+          "plantRoundTimeMs": 51542,
+          "date": "2026-04-14",
+          "opponent": "BG",
+          "matchId": "1af52e56-862b-426d-926b-2567ae1e8667",
+          "score": "13-5"
+        },
+        {
+          "site": "A",
+          "player": "elllement",
+          "normX": 14.6194,
+          "normY": 29.7282,
+          "roundNum": 18,
+          "plantRoundTimeMs": 78261,
+          "date": "2026-04-12",
+          "opponent": "BONK",
+          "matchId": "d50f6c05-1e97-46ba-a81f-c77934823b40",
+          "score": "6-13"
+        },
+        {
+          "site": "A",
+          "player": "Leare",
+          "normX": 44.8366,
+          "normY": 22.8798,
+          "roundNum": 18,
+          "plantRoundTimeMs": 78261,
+          "date": "2026-04-12",
+          "opponent": "BONK",
+          "matchId": "d50f6c05-1e97-46ba-a81f-c77934823b40",
+          "score": "6-13"
+        },
+        {
+          "site": "A",
+          "player": "elllement",
+          "normX": 37.8712,
+          "normY": 39.018,
+          "roundNum": 4,
+          "plantRoundTimeMs": 90938,
+          "date": "2026-04-06",
+          "opponent": "LEO",
+          "matchId": "64e2ba12-1774-4c73-9022-bf8f1cb06007",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "szimpli",
+          "normX": 21.1792,
+          "normY": 20.3604,
+          "roundNum": 4,
+          "plantRoundTimeMs": 90938,
+          "date": "2026-04-06",
+          "opponent": "LEO",
+          "matchId": "64e2ba12-1774-4c73-9022-bf8f1cb06007",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "Leare",
+          "normX": 23.5192,
+          "normY": 55.2264,
+          "roundNum": 4,
+          "plantRoundTimeMs": 90938,
+          "date": "2026-04-06",
+          "opponent": "LEO",
+          "matchId": "64e2ba12-1774-4c73-9022-bf8f1cb06007",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "Chaza",
+          "normX": 36.7792,
+          "normY": 5.7042,
+          "roundNum": 4,
+          "plantRoundTimeMs": 90938,
+          "date": "2026-04-06",
+          "opponent": "LEO",
+          "matchId": "64e2ba12-1774-4c73-9022-bf8f1cb06007",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "kya",
+          "normX": 20.3758,
+          "normY": 22.0608,
+          "roundNum": 4,
+          "plantRoundTimeMs": 90938,
+          "date": "2026-04-06",
+          "opponent": "LEO",
+          "matchId": "64e2ba12-1774-4c73-9022-bf8f1cb06007",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "Leare",
+          "normX": 29.7046,
+          "normY": 30.5394,
+          "roundNum": 6,
+          "plantRoundTimeMs": 80908,
+          "date": "2026-04-06",
+          "opponent": "LEO",
+          "matchId": "64e2ba12-1774-4c73-9022-bf8f1cb06007",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "elllement",
+          "normX": 39.6652,
+          "normY": 34.533,
+          "roundNum": 11,
+          "plantRoundTimeMs": 36098,
+          "date": "2026-04-06",
+          "opponent": "LEO",
+          "matchId": "64e2ba12-1774-4c73-9022-bf8f1cb06007",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "szimpli",
+          "normX": 15.2824,
+          "normY": 29.6268,
+          "roundNum": 11,
+          "plantRoundTimeMs": 36098,
+          "date": "2026-04-06",
+          "opponent": "LEO",
+          "matchId": "64e2ba12-1774-4c73-9022-bf8f1cb06007",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "Leare",
+          "normX": 58.9234,
+          "normY": 53.4246,
+          "roundNum": 11,
+          "plantRoundTimeMs": 36098,
+          "date": "2026-04-06",
+          "opponent": "LEO",
+          "matchId": "64e2ba12-1774-4c73-9022-bf8f1cb06007",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "kya",
+          "normX": 14.7052,
+          "normY": 32.6532,
+          "roundNum": 11,
+          "plantRoundTimeMs": 36098,
+          "date": "2026-04-06",
+          "opponent": "LEO",
+          "matchId": "64e2ba12-1774-4c73-9022-bf8f1cb06007",
+          "score": "8-13"
+        }
+      ]
+    },
+    "B": {
+      "roundCount": 7,
+      "pointCount": 14,
+      "points": [
+        {
+          "site": "B",
+          "player": "elllement",
+          "normX": 47.5744,
+          "normY": 58.5648,
+          "roundNum": 0,
+          "plantRoundTimeMs": 20260,
+          "date": "2026-04-14",
+          "opponent": "BG",
+          "matchId": "1af52e56-862b-426d-926b-2567ae1e8667",
+          "score": "13-5"
+        },
+        {
+          "site": "B",
+          "player": "szimpli",
+          "normX": 46.888,
+          "normY": 65.031,
+          "roundNum": 0,
+          "plantRoundTimeMs": 20260,
+          "date": "2026-04-14",
+          "opponent": "BG",
+          "matchId": "1af52e56-862b-426d-926b-2567ae1e8667",
+          "score": "13-5"
+        },
+        {
+          "site": "B",
+          "player": "Leare",
+          "normX": 35.1802,
+          "normY": 67.293,
+          "roundNum": 0,
+          "plantRoundTimeMs": 20260,
+          "date": "2026-04-14",
+          "opponent": "BG",
+          "matchId": "1af52e56-862b-426d-926b-2567ae1e8667",
+          "score": "13-5"
+        },
+        {
+          "site": "B",
+          "player": "Chaza",
+          "normX": 21.889,
+          "normY": 70.0854,
+          "roundNum": 0,
+          "plantRoundTimeMs": 20260,
+          "date": "2026-04-14",
+          "opponent": "BG",
+          "matchId": "1af52e56-862b-426d-926b-2567ae1e8667",
+          "score": "13-5"
+        },
+        {
+          "site": "B",
+          "player": "Stix",
+          "normX": 40.6402,
+          "normY": 43.6902,
+          "roundNum": 0,
+          "plantRoundTimeMs": 20260,
+          "date": "2026-04-14",
+          "opponent": "BG",
+          "matchId": "1af52e56-862b-426d-926b-2567ae1e8667",
+          "score": "13-5"
+        },
+        {
+          "site": "B",
+          "player": "Chaza",
+          "normX": 34.2598,
+          "normY": 63.8922,
+          "roundNum": 7,
+          "plantRoundTimeMs": 78324,
+          "date": "2026-04-14",
+          "opponent": "BG",
+          "matchId": "1af52e56-862b-426d-926b-2567ae1e8667",
+          "score": "13-5"
+        },
+        {
+          "site": "B",
+          "player": "szimpli",
+          "normX": 20.2822,
+          "normY": 37.1382,
+          "roundNum": 8,
+          "plantRoundTimeMs": 71536,
+          "date": "2026-04-14",
+          "opponent": "BG",
+          "matchId": "1af52e56-862b-426d-926b-2567ae1e8667",
+          "score": "13-5"
+        },
+        {
+          "site": "B",
+          "player": "Chaza",
+          "normX": 44.5168,
+          "normY": 73.962,
+          "roundNum": 11,
+          "plantRoundTimeMs": 24787,
+          "date": "2026-04-14",
+          "opponent": "BG",
+          "matchId": "1af52e56-862b-426d-926b-2567ae1e8667",
+          "score": "13-5"
+        },
+        {
+          "site": "B",
+          "player": "Stix",
+          "normX": 51.2638,
+          "normY": 56.334,
+          "roundNum": 11,
+          "plantRoundTimeMs": 24787,
+          "date": "2026-04-14",
+          "opponent": "BG",
+          "matchId": "1af52e56-862b-426d-926b-2567ae1e8667",
+          "score": "13-5"
+        },
+        {
+          "site": "B",
+          "player": "elllement",
+          "normX": 38.698,
+          "normY": 72.1836,
+          "roundNum": 0,
+          "plantRoundTimeMs": 51777,
+          "date": "2026-04-06",
+          "opponent": "LEO",
+          "matchId": "64e2ba12-1774-4c73-9022-bf8f1cb06007",
+          "score": "8-13"
+        },
+        {
+          "site": "B",
+          "player": "szimpli",
+          "normX": 21.3352,
+          "normY": 49.6494,
+          "roundNum": 1,
+          "plantRoundTimeMs": 76679,
+          "date": "2026-04-06",
+          "opponent": "LEO",
+          "matchId": "64e2ba12-1774-4c73-9022-bf8f1cb06007",
+          "score": "8-13"
+        },
+        {
+          "site": "B",
+          "player": "Leare",
+          "normX": 30.43,
+          "normY": 61.7004,
+          "roundNum": 1,
+          "plantRoundTimeMs": 76679,
+          "date": "2026-04-06",
+          "opponent": "LEO",
+          "matchId": "64e2ba12-1774-4c73-9022-bf8f1cb06007",
+          "score": "8-13"
+        },
+        {
+          "site": "B",
+          "player": "kya",
+          "normX": 28.5034,
+          "normY": 61.7784,
+          "roundNum": 1,
+          "plantRoundTimeMs": 76679,
+          "date": "2026-04-06",
+          "opponent": "LEO",
+          "matchId": "64e2ba12-1774-4c73-9022-bf8f1cb06007",
+          "score": "8-13"
+        },
+        {
+          "site": "B",
+          "player": "Chaza",
+          "normX": 26.2648,
+          "normY": 64.7268,
+          "roundNum": 9,
+          "plantRoundTimeMs": 95597,
+          "date": "2026-04-06",
+          "opponent": "LEO",
+          "matchId": "64e2ba12-1774-4c73-9022-bf8f1cb06007",
+          "score": "8-13"
+        }
+      ]
+    }
+  }
+}

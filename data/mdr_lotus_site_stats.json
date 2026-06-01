@@ -1,0 +1,112 @@
+{
+  "t_side": {
+    "total_rounds": 42,
+    "rounds_won": 23,
+    "pct_rounds_won": 54.8,
+    "won_by_kills": 18,
+    "pct_won_by_kills": 42.9,
+    "won_by_explosion": 5,
+    "pct_won_by_explosion": 11.9,
+    "avg_fk_time": 42.5,
+    "sites": {
+      "A": {
+        "plant_count": 11,
+        "pct_plant": 32.4,
+        "pct_win": 54.5,
+        "avg_plant_time": 58.7,
+        "min_plant_time": 27.5,
+        "max_plant_time": 89.7,
+        "fk_to_plant_avg": 30.2,
+        "fk_to_plant_n": 6
+      },
+      "B": {
+        "plant_count": 8,
+        "pct_plant": 23.5,
+        "pct_win": 75.0,
+        "avg_plant_time": 56.9,
+        "min_plant_time": 24.0,
+        "max_plant_time": 85.4,
+        "fk_to_plant_avg": 27.6,
+        "fk_to_plant_n": 7
+      },
+      "C": {
+        "plant_count": 15,
+        "pct_plant": 44.1,
+        "pct_win": 73.3,
+        "avg_plant_time": 68.0,
+        "min_plant_time": 32.3,
+        "max_plant_time": 96.6,
+        "fk_to_plant_avg": 35.1,
+        "fk_to_plant_n": 12
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 62,
+    "rounds_won": 29,
+    "pct_rounds_won": 46.8,
+    "won_by_kills": 17,
+    "pct_won_by_kills": 27.4,
+    "won_by_defuse": 12,
+    "pct_won_by_defuse": 19.4,
+    "avg_fk_time": 39.2,
+    "sites": {
+      "A": {
+        "plant_count": 16,
+        "defuse_count": 4,
+        "pct_defuse_win": 25.0,
+        "pct_defuse_share": 33.3,
+        "avg_defuse_time": 32.4,
+        "fk_after_plant_avg": 9.8,
+        "fk_after_plant_n": 10
+      },
+      "B": {
+        "plant_count": 7,
+        "defuse_count": 2,
+        "pct_defuse_win": 28.6,
+        "pct_defuse_share": 16.7,
+        "avg_defuse_time": 33.5,
+        "fk_after_plant_avg": 20.6,
+        "fk_after_plant_n": 6
+      },
+      "C": {
+        "plant_count": 18,
+        "defuse_count": 6,
+        "pct_defuse_win": 33.3,
+        "pct_defuse_share": 50.0,
+        "avg_defuse_time": 32.6,
+        "fk_after_plant_avg": 13.7,
+        "fk_after_plant_n": 12
+      }
+    }
+  },
+  "team": "Mandatory",
+  "map": "Lotus",
+  "matches": [
+    {
+      "date": "2026-05-05",
+      "opponent": "WIP",
+      "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e"
+    },
+    {
+      "date": "2026-04-26",
+      "opponent": "JL",
+      "matchId": "5c863e2b-b1c9-4cd1-aa6d-a84c88544d32"
+    },
+    {
+      "date": "2026-04-13",
+      "opponent": "WIP",
+      "matchId": "15f70bc5-25db-43f9-9f44-239c70ca90c4"
+    },
+    {
+      "date": "2026-04-11",
+      "opponent": "NXR",
+      "matchId": "d6be4467-2763-4110-a99c-3ce69909a38f"
+    },
+    {
+      "date": "2026-04-04",
+      "opponent": "GL",
+      "matchId": "10e8d751-da2a-4590-8289-7e4f77abd621"
+    }
+  ]
+}

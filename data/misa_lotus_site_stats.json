@@ -1,0 +1,117 @@
+{
+  "t_side": {
+    "total_rounds": 65,
+    "rounds_won": 37,
+    "pct_rounds_won": 56.9,
+    "won_by_kills": 32,
+    "pct_won_by_kills": 49.2,
+    "won_by_explosion": 5,
+    "pct_won_by_explosion": 7.7,
+    "avg_fk_time": 30.1,
+    "sites": {
+      "A": {
+        "plant_count": 16,
+        "pct_plant": 32.0,
+        "pct_win": 75.0,
+        "avg_plant_time": 39.8,
+        "min_plant_time": 20.9,
+        "max_plant_time": 70.1,
+        "fk_to_plant_avg": 22.6,
+        "fk_to_plant_n": 11
+      },
+      "B": {
+        "plant_count": 16,
+        "pct_plant": 32.0,
+        "pct_win": 81.2,
+        "avg_plant_time": 61.0,
+        "min_plant_time": 12.2,
+        "max_plant_time": 91.9,
+        "fk_to_plant_avg": 34.1,
+        "fk_to_plant_n": 11
+      },
+      "C": {
+        "plant_count": 18,
+        "pct_plant": 36.0,
+        "pct_win": 50.0,
+        "avg_plant_time": 48.2,
+        "min_plant_time": 21.6,
+        "max_plant_time": 88.2,
+        "fk_to_plant_avg": 28.5,
+        "fk_to_plant_n": 14
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 70,
+    "rounds_won": 27,
+    "pct_rounds_won": 38.6,
+    "won_by_kills": 13,
+    "pct_won_by_kills": 18.6,
+    "won_by_defuse": 14,
+    "pct_won_by_defuse": 20.0,
+    "avg_fk_time": 34.7,
+    "sites": {
+      "A": {
+        "plant_count": 26,
+        "defuse_count": 6,
+        "pct_defuse_win": 23.1,
+        "pct_defuse_share": 42.9,
+        "avg_defuse_time": 25.1,
+        "fk_after_plant_avg": 10.2,
+        "fk_after_plant_n": 20
+      },
+      "B": {
+        "plant_count": 11,
+        "defuse_count": 2,
+        "pct_defuse_win": 18.2,
+        "pct_defuse_share": 14.3,
+        "avg_defuse_time": 18.3,
+        "fk_after_plant_avg": 16.6,
+        "fk_after_plant_n": 7
+      },
+      "C": {
+        "plant_count": 17,
+        "defuse_count": 6,
+        "pct_defuse_win": 35.3,
+        "pct_defuse_share": 42.9,
+        "avg_defuse_time": 26.4,
+        "fk_after_plant_avg": 12.9,
+        "fk_after_plant_n": 13
+      }
+    }
+  },
+  "team": "Misa Esports",
+  "map": "Lotus",
+  "matches": [
+    {
+      "date": "2026-05-04",
+      "opponent": "BJK",
+      "matchId": "b3b7a21d-26b5-4453-9e8b-9497ef446c4c"
+    },
+    {
+      "date": "2026-05-03",
+      "opponent": "FA",
+      "matchId": "7f48e509-536f-4be7-9ab5-f4eaeda859f0"
+    },
+    {
+      "date": "2026-04-28",
+      "opponent": "FF",
+      "matchId": "a18c96ed-9157-4e39-88a1-948dbc61ff6a"
+    },
+    {
+      "date": "2026-04-25",
+      "opponent": "GS",
+      "matchId": "ae2a1cb1-6865-49a5-9c1e-fa407f292ba8"
+    },
+    {
+      "date": "2026-04-19",
+      "opponent": "BJK",
+      "matchId": "6c80211a-0529-4a3e-abd5-c77b5f4f7d6f"
+    },
+    {
+      "date": "2026-04-06",
+      "opponent": "EFP",
+      "matchId": "d58436c3-3fed-4832-8bd9-00db094adb6e"
+    }
+  ]
+}

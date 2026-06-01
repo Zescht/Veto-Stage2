@@ -1,0 +1,88 @@
+{
+  "t_side": {
+    "total_rounds": 48,
+    "rounds_won": 30,
+    "pct_rounds_won": 62.5,
+    "won_by_kills": 20,
+    "pct_won_by_kills": 41.7,
+    "won_by_explosion": 10,
+    "pct_won_by_explosion": 20.8,
+    "avg_fk_time": 27.7,
+    "sites": {
+      "A": {
+        "plant_count": 12,
+        "pct_plant": 35.3,
+        "pct_win": 75.0,
+        "avg_plant_time": 48.8,
+        "min_plant_time": 13.1,
+        "max_plant_time": 95.6,
+        "fk_to_plant_avg": 26.3,
+        "fk_to_plant_n": 9
+      },
+      "B": {
+        "plant_count": 22,
+        "pct_plant": 64.7,
+        "pct_win": 86.4,
+        "avg_plant_time": 54.2,
+        "min_plant_time": 21.0,
+        "max_plant_time": 88.3,
+        "fk_to_plant_avg": 31.5,
+        "fk_to_plant_n": 22
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 38,
+    "rounds_won": 16,
+    "pct_rounds_won": 42.1,
+    "won_by_kills": 11,
+    "pct_won_by_kills": 28.9,
+    "won_by_defuse": 5,
+    "pct_won_by_defuse": 13.2,
+    "avg_fk_time": 34.6,
+    "sites": {
+      "A": {
+        "plant_count": 11,
+        "defuse_count": 3,
+        "pct_defuse_win": 27.3,
+        "pct_defuse_share": 60.0,
+        "avg_defuse_time": 30.6,
+        "fk_after_plant_avg": 16.7,
+        "fk_after_plant_n": 9
+      },
+      "B": {
+        "plant_count": 13,
+        "defuse_count": 2,
+        "pct_defuse_win": 15.4,
+        "pct_defuse_share": 40.0,
+        "avg_defuse_time": 33.4,
+        "fk_after_plant_avg": 21.0,
+        "fk_after_plant_n": 2
+      }
+    }
+  },
+  "team": "AlQadsiah",
+  "map": "Split",
+  "matches": [
+    {
+      "date": "2026-05-21",
+      "opponent": "VCT",
+      "matchId": "c735762a-1b45-41c8-b1aa-377f1c1e6243"
+    },
+    {
+      "date": "2026-05-18",
+      "opponent": "UCAM",
+      "matchId": "67234f39-ee41-49f2-9f66-8d6c4acb5157"
+    },
+    {
+      "date": "2026-04-11",
+      "opponent": "VIL",
+      "matchId": "11c2e225-9e3d-4aca-a5f2-246a1bb4f5b0"
+    },
+    {
+      "date": "2026-04-04",
+      "opponent": "MYM",
+      "matchId": "dda29d6e-4cd6-45e5-b69b-e0a7e8aba1aa"
+    }
+  ]
+}

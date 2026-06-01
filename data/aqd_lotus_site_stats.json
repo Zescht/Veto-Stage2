@@ -1,0 +1,107 @@
+{
+  "t_side": {
+    "total_rounds": 45,
+    "rounds_won": 20,
+    "pct_rounds_won": 44.4,
+    "won_by_kills": 14,
+    "pct_won_by_kills": 31.1,
+    "won_by_explosion": 6,
+    "pct_won_by_explosion": 13.3,
+    "avg_fk_time": 36.1,
+    "sites": {
+      "A": {
+        "plant_count": 9,
+        "pct_plant": 34.6,
+        "pct_win": 77.8,
+        "avg_plant_time": 53.1,
+        "min_plant_time": 27.3,
+        "max_plant_time": 81.1,
+        "fk_to_plant_avg": 27.9,
+        "fk_to_plant_n": 7
+      },
+      "B": {
+        "plant_count": 8,
+        "pct_plant": 30.8,
+        "pct_win": 62.5,
+        "avg_plant_time": 72.1,
+        "min_plant_time": 39.6,
+        "max_plant_time": 94.9,
+        "fk_to_plant_avg": 28.5,
+        "fk_to_plant_n": 6
+      },
+      "C": {
+        "plant_count": 9,
+        "pct_plant": 34.6,
+        "pct_win": 66.7,
+        "avg_plant_time": 57.9,
+        "min_plant_time": 23.3,
+        "max_plant_time": 90.8,
+        "fk_to_plant_avg": 13.5,
+        "fk_to_plant_n": 8
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 45,
+    "rounds_won": 27,
+    "pct_rounds_won": 60.0,
+    "won_by_kills": 12,
+    "pct_won_by_kills": 26.7,
+    "won_by_defuse": 15,
+    "pct_won_by_defuse": 33.3,
+    "avg_fk_time": 33.0,
+    "sites": {
+      "A": {
+        "plant_count": 9,
+        "defuse_count": 6,
+        "pct_defuse_win": 66.7,
+        "pct_defuse_share": 40.0,
+        "avg_defuse_time": 33.8,
+        "fk_after_plant_avg": 13.6,
+        "fk_after_plant_n": 6
+      },
+      "B": {
+        "plant_count": 11,
+        "defuse_count": 4,
+        "pct_defuse_win": 36.4,
+        "pct_defuse_share": 26.7,
+        "avg_defuse_time": 29.9,
+        "fk_after_plant_avg": 12.0,
+        "fk_after_plant_n": 11
+      },
+      "C": {
+        "plant_count": 10,
+        "defuse_count": 5,
+        "pct_defuse_win": 50.0,
+        "pct_defuse_share": 33.3,
+        "avg_defuse_time": 25.6,
+        "fk_after_plant_avg": 3.9,
+        "fk_after_plant_n": 8
+      }
+    }
+  },
+  "team": "AlQadsiah",
+  "map": "Lotus",
+  "matches": [
+    {
+      "date": "2026-05-21",
+      "opponent": "VCT",
+      "matchId": "509adb5b-1c2f-4f8b-be25-0da35c95c942"
+    },
+    {
+      "date": "2026-05-13",
+      "opponent": "VIL",
+      "matchId": "2880d28a-3a78-4259-8476-3a3c934e1e2b"
+    },
+    {
+      "date": "2026-05-05",
+      "opponent": "VIL",
+      "matchId": "43598ece-bea4-487a-8e60-1ab2d4176fdb"
+    },
+    {
+      "date": "2026-05-03",
+      "opponent": "SPR",
+      "matchId": "e2384eb3-0e1e-42d9-aa50-d426f579774e"
+    }
+  ]
+}

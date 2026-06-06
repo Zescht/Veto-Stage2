@@ -66,8 +66,8 @@ const TEAMS_CONFIG = {
   joblife: {
     filePrefix:   "jl",
     mapControl:   typeof jlMapControlData !== "undefined" ? jlMapControlData : {},
-    statMaps:     ["Bind", "Breeze", "Haven", "Lotus", "Pearl", "Split"],
-    retakeMaps:   ["Bind", "Breeze", "Haven", "Lotus", "Pearl", "Split"],
+    statMaps:     ["Breeze", "Haven", "Lotus", "Pearl", "Split"],
+    retakeMaps:   ["Breeze", "Haven", "Lotus", "Pearl", "Split"],
     playerColors: { "chiwa": "#1565C0", "UNFAKE": "#F9A825", "kamyk": "#C62828", "runneR": "#2E7D32", "Doma": "#E91E63" },
     playerOrder:  ["chiwa", "UNFAKE", "kamyk", "runneR", "Doma"],
   },

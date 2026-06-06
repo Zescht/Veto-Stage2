@@ -197,9 +197,33 @@
       ]
     },
     "B": {
-      "roundCount": 6,
-      "pointCount": 17,
+      "roundCount": 7,
+      "pointCount": 19,
       "points": [
+        {
+          "site": "B",
+          "player": "chiwa",
+          "normX": 13.0383,
+          "normY": 27.3428,
+          "roundNum": 12,
+          "plantRoundTimeMs": 80588,
+          "date": "2026-05-12",
+          "opponent": "WIP",
+          "matchId": "7f74b544-dcce-4a75-b233-050cab6dddf6",
+          "score": "13-1"
+        },
+        {
+          "site": "B",
+          "player": "runneR",
+          "normX": 7.9633,
+          "normY": 33.9928,
+          "roundNum": 12,
+          "plantRoundTimeMs": 80588,
+          "date": "2026-05-12",
+          "opponent": "WIP",
+          "matchId": "7f74b544-dcce-4a75-b233-050cab6dddf6",
+          "score": "13-1"
+        },
         {
           "site": "B",
           "player": "chiwa",

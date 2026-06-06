@@ -1,88 +1,98 @@
 {
   "t_side": {
-    "total_rounds": 26,
-    "rounds_won": 8,
-    "pct_rounds_won": 30.8,
-    "won_by_kills": 4,
-    "pct_won_by_kills": 15.4,
-    "won_by_explosion": 4,
-    "pct_won_by_explosion": 15.4,
-    "avg_fk_time": 45.4,
+    "total_rounds": 30,
+    "rounds_won": 12,
+    "pct_rounds_won": 40.0,
+    "won_by_kills": 6,
+    "pct_won_by_kills": 20.0,
+    "won_by_explosion": 6,
+    "pct_won_by_explosion": 20.0,
+    "avg_fk_time": 39.2,
     "sites": {
       "A": {
-        "plant_count": 5,
-        "pct_plant": 45.5,
-        "pct_win": 80.0,
-        "avg_plant_time": 61.6,
+        "plant_count": 9,
+        "pct_plant": 50.0,
+        "pct_win": 77.8,
+        "avg_plant_time": 49.0,
         "min_plant_time": 25.1,
-        "max_plant_time": 99.2,
-        "fk_to_plant_avg": 13.5,
-        "fk_to_plant_n": 5
+        "max_plant_time": 101.3,
+        "fk_to_plant_avg": 31.8,
+        "fk_to_plant_n": 7
       },
       "B": {
         "plant_count": 3,
-        "pct_plant": 27.3,
+        "pct_plant": 16.7,
         "pct_win": 66.7,
-        "avg_plant_time": 63.3,
+        "avg_plant_time": 76.1,
         "min_plant_time": 55.8,
-        "max_plant_time": 78.1,
-        "fk_to_plant_avg": 34.8,
-        "fk_to_plant_n": 2
+        "max_plant_time": 94.2,
+        "fk_to_plant_avg": 26.6,
+        "fk_to_plant_n": 1
       },
       "C": {
-        "plant_count": 3,
-        "pct_plant": 27.3,
-        "pct_win": 0.0,
-        "avg_plant_time": 58.5,
-        "min_plant_time": 54.1,
-        "max_plant_time": 64.4,
-        "fk_to_plant_avg": 20.7,
-        "fk_to_plant_n": 2
+        "plant_count": 6,
+        "pct_plant": 33.3,
+        "pct_win": 50.0,
+        "avg_plant_time": 50.4,
+        "min_plant_time": 33.2,
+        "max_plant_time": 72.8,
+        "fk_to_plant_avg": 35.1,
+        "fk_to_plant_n": 3
       }
     }
   },
   "ct_side": {
-    "total_rounds": 31,
-    "rounds_won": 10,
-    "pct_rounds_won": 32.3,
-    "won_by_kills": 4,
-    "pct_won_by_kills": 12.9,
-    "won_by_defuse": 6,
-    "pct_won_by_defuse": 19.4,
-    "avg_fk_time": 40.6,
+    "total_rounds": 48,
+    "rounds_won": 17,
+    "pct_rounds_won": 35.4,
+    "won_by_kills": 7,
+    "pct_won_by_kills": 14.6,
+    "won_by_defuse": 10,
+    "pct_won_by_defuse": 20.8,
+    "avg_fk_time": 38.0,
     "sites": {
       "A": {
-        "plant_count": 13,
-        "defuse_count": 2,
-        "pct_defuse_win": 15.4,
-        "pct_defuse_share": 33.3,
-        "avg_defuse_time": 24.3,
-        "fk_after_plant_avg": 9.3,
-        "fk_after_plant_n": 7
+        "plant_count": 15,
+        "defuse_count": 3,
+        "pct_defuse_win": 20.0,
+        "pct_defuse_share": 30.0,
+        "avg_defuse_time": 22.0,
+        "fk_after_plant_avg": 9.2,
+        "fk_after_plant_n": 11
       },
       "B": {
-        "plant_count": 6,
-        "defuse_count": 3,
+        "plant_count": 10,
+        "defuse_count": 5,
         "pct_defuse_win": 50.0,
         "pct_defuse_share": 50.0,
-        "avg_defuse_time": 21.7,
-        "fk_after_plant_avg": 4.7,
-        "fk_after_plant_n": 5
+        "avg_defuse_time": 22.2,
+        "fk_after_plant_avg": 6.9,
+        "fk_after_plant_n": 8
       },
       "C": {
-        "plant_count": 7,
-        "defuse_count": 1,
+        "plant_count": 14,
+        "defuse_count": 2,
         "pct_defuse_win": 14.3,
-        "pct_defuse_share": 16.7,
-        "avg_defuse_time": 44.9,
-        "fk_after_plant_avg": 17.6,
-        "fk_after_plant_n": 5
+        "pct_defuse_share": 20.0,
+        "avg_defuse_time": 34.9,
+        "fk_after_plant_avg": 13.6,
+        "fk_after_plant_n": 9
       }
     }
   },
   "team": "JOBlife",
   "map": "Haven",
   "matches": [
+    {
+      "date": "2026-05-26",
+      "opponent": "VCT",
+      "matchId": "95e0158a-085f-4d66-af52-600a37c3e15c"
+    },
+    {
+      "date": "2026-05-18",
+      "opponent": "VCT",
+      "matchId": "42df5685-0757-4a57-977b-41e81317f8ad"
+    },
     {
       "date": "2026-05-04",
       "opponent": "MDR",
@@ -92,11 +102,6 @@
       "date": "2026-04-26",
       "opponent": "MDR",
       "matchId": "d8a9e186-8e8b-47ef-b77a-9582d1851cf6"
-    },
-    {
-      "date": "2026-04-05",
-      "opponent": "F9",
-      "matchId": "c22dd2c0-0d64-40dc-ac7a-abf5e595ff20"
     }
   ]
 }

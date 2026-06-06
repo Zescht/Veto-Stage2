@@ -1,88 +1,98 @@
 {
   "t_side": {
-    "total_rounds": 83,
-    "rounds_won": 46,
-    "pct_rounds_won": 55.4,
-    "won_by_kills": 39,
-    "pct_won_by_kills": 47.0,
-    "won_by_explosion": 7,
-    "pct_won_by_explosion": 8.4,
-    "avg_fk_time": 37.0,
+    "total_rounds": 74,
+    "rounds_won": 43,
+    "pct_rounds_won": 58.1,
+    "won_by_kills": 35,
+    "pct_won_by_kills": 47.3,
+    "won_by_explosion": 8,
+    "pct_won_by_explosion": 10.8,
+    "avg_fk_time": 37.3,
     "sites": {
       "A": {
-        "plant_count": 25,
-        "pct_plant": 43.1,
-        "pct_win": 76.0,
-        "avg_plant_time": 54.7,
-        "min_plant_time": 20.6,
+        "plant_count": 21,
+        "pct_plant": 41.2,
+        "pct_win": 76.2,
+        "avg_plant_time": 59.5,
+        "min_plant_time": 32.3,
         "max_plant_time": 94.0,
-        "fk_to_plant_avg": 25.2,
-        "fk_to_plant_n": 23
+        "fk_to_plant_avg": 29.5,
+        "fk_to_plant_n": 18
       },
       "B": {
-        "plant_count": 14,
-        "pct_plant": 24.1,
-        "pct_win": 64.3,
-        "avg_plant_time": 63.4,
-        "min_plant_time": 23.1,
-        "max_plant_time": 98.3,
-        "fk_to_plant_avg": 25.9,
-        "fk_to_plant_n": 10
+        "plant_count": 13,
+        "pct_plant": 25.5,
+        "pct_win": 76.9,
+        "avg_plant_time": 70.3,
+        "min_plant_time": 41.8,
+        "max_plant_time": 88.7,
+        "fk_to_plant_avg": 31.2,
+        "fk_to_plant_n": 9
       },
       "C": {
-        "plant_count": 19,
-        "pct_plant": 32.8,
-        "pct_win": 73.7,
-        "avg_plant_time": 64.9,
-        "min_plant_time": 27.3,
-        "max_plant_time": 99.4,
-        "fk_to_plant_avg": 33.7,
-        "fk_to_plant_n": 17
+        "plant_count": 17,
+        "pct_plant": 33.3,
+        "pct_win": 70.6,
+        "avg_plant_time": 55.8,
+        "min_plant_time": 23.5,
+        "max_plant_time": 96.1,
+        "fk_to_plant_avg": 33.3,
+        "fk_to_plant_n": 14
       }
     }
   },
   "ct_side": {
-    "total_rounds": 88,
+    "total_rounds": 78,
     "rounds_won": 40,
-    "pct_rounds_won": 45.5,
-    "won_by_kills": 21,
-    "pct_won_by_kills": 23.9,
-    "won_by_defuse": 19,
-    "pct_won_by_defuse": 21.6,
-    "avg_fk_time": 36.4,
+    "pct_rounds_won": 51.3,
+    "won_by_kills": 23,
+    "pct_won_by_kills": 29.5,
+    "won_by_defuse": 17,
+    "pct_won_by_defuse": 21.8,
+    "avg_fk_time": 31.8,
     "sites": {
       "A": {
-        "plant_count": 29,
-        "defuse_count": 8,
-        "pct_defuse_win": 27.6,
-        "pct_defuse_share": 42.1,
-        "avg_defuse_time": 27.8,
-        "fk_after_plant_avg": 13.9,
-        "fk_after_plant_n": 20
+        "plant_count": 25,
+        "defuse_count": 6,
+        "pct_defuse_win": 24.0,
+        "pct_defuse_share": 35.3,
+        "avg_defuse_time": 27.5,
+        "fk_after_plant_avg": 12.2,
+        "fk_after_plant_n": 17
       },
       "B": {
-        "plant_count": 13,
-        "defuse_count": 4,
-        "pct_defuse_win": 30.8,
-        "pct_defuse_share": 21.1,
-        "avg_defuse_time": 32.3,
-        "fk_after_plant_avg": 14.7,
-        "fk_after_plant_n": 9
+        "plant_count": 8,
+        "defuse_count": 5,
+        "pct_defuse_win": 62.5,
+        "pct_defuse_share": 29.4,
+        "avg_defuse_time": 36.0,
+        "fk_after_plant_avg": 15.4,
+        "fk_after_plant_n": 7
       },
       "C": {
-        "plant_count": 23,
-        "defuse_count": 7,
-        "pct_defuse_win": 30.4,
-        "pct_defuse_share": 36.8,
-        "avg_defuse_time": 27.3,
-        "fk_after_plant_avg": 10.4,
-        "fk_after_plant_n": 16
+        "plant_count": 21,
+        "defuse_count": 6,
+        "pct_defuse_win": 28.6,
+        "pct_defuse_share": 35.3,
+        "avg_defuse_time": 26.2,
+        "fk_after_plant_avg": 8.8,
+        "fk_after_plant_n": 13
       }
     }
   },
   "team": "JOBlife",
   "map": "Lotus",
   "matches": [
+    {
+      "date": "2026-05-25",
+      "opponent": "VCT",
+      "matchId": "753f8fcd-be0b-4b16-8f5d-f52ae797c166"
+    },
+    {
+      "date": "2026-05-18",
+      "opponent": "VCT",
+      "matchId": "b53b8804-3eef-4fe0-982d-80c239de4002"
+    },
     {
       "date": "2026-05-12",
       "opponent": "WIP",
@@ -107,21 +117,6 @@
       "date": "2026-04-19",
       "opponent": "NXR",
       "matchId": "9b199514-6aca-46fa-9cde-dd7eaf8c0a57"
-    },
-    {
-      "date": "2026-04-12",
-      "opponent": "WIP",
-      "matchId": "01a32ae8-0fb3-4a04-a556-8c3331a71cf4"
-    },
-    {
-      "date": "2026-04-06",
-      "opponent": "CLA",
-      "matchId": "1897489d-e8d4-4ab0-aad4-44030df2aa83"
-    },
-    {
-      "date": "2026-04-05",
-      "opponent": "F9",
-      "matchId": "16c07da1-0f2e-46d1-9b0f-da296ba7ad5d"
     }
   ]
 }

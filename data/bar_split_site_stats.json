@@ -1,17 +1,17 @@
 {
   "t_side": {
-    "total_rounds": 42,
-    "rounds_won": 15,
-    "pct_rounds_won": 35.7,
-    "won_by_kills": 13,
-    "pct_won_by_kills": 31.0,
+    "total_rounds": 54,
+    "rounds_won": 17,
+    "pct_rounds_won": 31.5,
+    "won_by_kills": 15,
+    "pct_won_by_kills": 27.8,
     "won_by_explosion": 2,
-    "pct_won_by_explosion": 4.8,
-    "avg_fk_time": 28.0,
+    "pct_won_by_explosion": 3.7,
+    "avg_fk_time": 28.2,
     "sites": {
       "A": {
         "plant_count": 14,
-        "pct_plant": 58.3,
+        "pct_plant": 53.8,
         "pct_win": 50.0,
         "avg_plant_time": 56.1,
         "min_plant_time": 30.2,
@@ -20,50 +20,55 @@
         "fk_to_plant_n": 13
       },
       "B": {
-        "plant_count": 10,
-        "pct_plant": 41.7,
-        "pct_win": 70.0,
-        "avg_plant_time": 60.7,
-        "min_plant_time": 30.8,
-        "max_plant_time": 84.5,
-        "fk_to_plant_avg": 35.4,
-        "fk_to_plant_n": 10
+        "plant_count": 12,
+        "pct_plant": 46.2,
+        "pct_win": 75.0,
+        "avg_plant_time": 59.8,
+        "min_plant_time": 23.7,
+        "max_plant_time": 86.3,
+        "fk_to_plant_avg": 34.5,
+        "fk_to_plant_n": 12
       }
     }
   },
   "ct_side": {
-    "total_rounds": 46,
-    "rounds_won": 27,
-    "pct_rounds_won": 58.7,
-    "won_by_kills": 19,
-    "pct_won_by_kills": 41.3,
-    "won_by_defuse": 8,
-    "pct_won_by_defuse": 17.4,
-    "avg_fk_time": 29.2,
+    "total_rounds": 55,
+    "rounds_won": 32,
+    "pct_rounds_won": 58.2,
+    "won_by_kills": 22,
+    "pct_won_by_kills": 40.0,
+    "won_by_defuse": 10,
+    "pct_won_by_defuse": 18.2,
+    "avg_fk_time": 29.3,
     "sites": {
       "A": {
-        "plant_count": 10,
+        "plant_count": 12,
         "defuse_count": 5,
-        "pct_defuse_win": 50.0,
-        "pct_defuse_share": 62.5,
+        "pct_defuse_win": 41.7,
+        "pct_defuse_share": 50.0,
         "avg_defuse_time": 37.4,
-        "fk_after_plant_avg": 18.2,
-        "fk_after_plant_n": 9
+        "fk_after_plant_avg": 18.9,
+        "fk_after_plant_n": 10
       },
       "B": {
-        "plant_count": 13,
-        "defuse_count": 3,
-        "pct_defuse_win": 23.1,
-        "pct_defuse_share": 37.5,
-        "avg_defuse_time": 25.9,
-        "fk_after_plant_avg": 13.3,
-        "fk_after_plant_n": 7
+        "plant_count": 16,
+        "defuse_count": 5,
+        "pct_defuse_win": 31.2,
+        "pct_defuse_share": 50.0,
+        "avg_defuse_time": 25.6,
+        "fk_after_plant_avg": 12.7,
+        "fk_after_plant_n": 9
       }
     }
   },
   "team": "Barcelona",
   "map": "Split",
   "matches": [
+    {
+      "date": "2026-05-19",
+      "opponent": "VCT",
+      "matchId": "29742c15-c6fa-4c38-b917-3a49f1125112"
+    },
     {
       "date": "2026-05-12",
       "opponent": "UCAM",

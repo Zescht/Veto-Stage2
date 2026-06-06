@@ -1766,13 +1766,13 @@ function toggleRetakeSite(site) {
   } else {
     retakeActiveSites.add(site);
   }
-  if (lastDefensiveInfo) renderDefensivePanels(lastDefensiveInfo);
+  if (lastDefensiveInfo) { renderDefensivePanels(lastDefensiveInfo); requestAnimationFrame(positionSampleCard); }
 }
 window.toggleRetakeSite = toggleRetakeSite;
 
 function toggleRetakePostPlantMode() {
   retakePostPlantMode = !retakePostPlantMode;
-  if (lastDefensiveInfo) renderDefensivePanels(lastDefensiveInfo);
+  if (lastDefensiveInfo) { renderDefensivePanels(lastDefensiveInfo); requestAnimationFrame(positionSampleCard); }
 }
 window.toggleRetakePostPlantMode = toggleRetakePostPlantMode;
 
@@ -1782,7 +1782,7 @@ function togglePpInlineSite(site) {
   } else {
     ppInlineActiveSites.add(site);
   }
-  if (lastDefensiveInfo) renderDefensivePanels(lastDefensiveInfo);
+  if (lastDefensiveInfo) { renderDefensivePanels(lastDefensiveInfo); requestAnimationFrame(positionSampleCard); }
 }
 window.togglePpInlineSite = togglePpInlineSite;
 
@@ -1875,6 +1875,8 @@ function renderMapInfo() {
 
     renderDefensivePanels(defensiveInfo);
 
+    requestAnimationFrame(positionSampleCard);
+
     defensiveSampleCard.innerHTML = `
       <p class="map-sample-label">${fksNewRosterFilter && showNewRosterBtn ? `New Roster (${sampleMaps.length} maps)` : `Last ${sampleSize} maps in sample`}</p>
       <div class="sample-chip-list">
@@ -1885,6 +1887,7 @@ function renderMapInfo() {
           })
           .join("")}
       </div>
+      <button class="sample-agent-btn${agentIconMode ? ' active' : ''}" type="button">Agent Icons</button>
     `;
     return;
   }
@@ -2391,7 +2394,22 @@ fksNewRosterBtn?.addEventListener("click", () => {
   renderMapInfo();
 });
 
+function positionSampleCard() {
+  if (!defensiveSampleCard) return;
+  const anchor = defensivePanels?.querySelector('.defensive-card');
+  const MIN_TOP = 16;
+  const top = anchor ? Math.max(MIN_TOP, anchor.getBoundingClientRect().top) : MIN_TOP;
+  defensiveSampleCard.style.top = top + 'px';
+}
+
+window.addEventListener('scroll', positionSampleCard, { passive: true });
+
 document.getElementById("defensive-sample-card")?.addEventListener("click", (e) => {
+  if (e.target.closest(".sample-agent-btn")) {
+    agentIconMode = !agentIconMode;
+    renderMapInfo();
+    return;
+  }
   const chip = e.target.closest(".sample-chip--toggle");
   if (!chip) return;
   const matchId = chip.dataset.matchId;

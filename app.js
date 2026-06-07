@@ -262,14 +262,6 @@ function applyPlantSiteFilter(items) {
   });
 }
 
-function buildPlantFilterButtons(mapName) {
-  if (activeSideView !== "t") return "";
-  const sites = ["A", "B"];
-  if (MAPS_WITH_C_SITE.has(mapName)) sites.push("C");
-  return sites.map(s =>
-    `<button class="rotation-window-btn${activePlantSites.has(s) ? ' active' : ''}" data-plant-site="${s}" type="button">${s}-PLANT</button>`
-  ).join("");
-}
 const selectedPlayerFilters = {};
 const selectedDefensivePlayerFilters = {};
 
@@ -995,8 +987,6 @@ function buildMapControlMarkup(mapName, side, frameClassList, frameStyle, mapIma
     { key: "20_30", label: "20–30s" },
   ];
 
-  const mcPlantButtons = buildPlantFilterButtons(mapName);
-
   const cards = windows.map(({ key, label }) => {
     const rawPoints = applyNewRosterFilter(mcSide.mapControl?.[key] ?? []);
     const allPoints = applyPlantSiteFilter(rawPoints);
@@ -1040,7 +1030,6 @@ function buildMapControlMarkup(mapName, side, frameClassList, frameStyle, mapIma
     <section class="defensive-topic">
       <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
         <h3 class="defensive-topic-title">Map Control</h3>
-        ${mcPlantButtons}
       </div>
       <div class="early-positioning-layout">
         ${sidebarMarkup}
@@ -1237,8 +1226,6 @@ function renderDefensivePanels(info) {
   const sniperTopicTitle = "Sniper Kills";
   const sniperTopicTooltip = "Map positions where the team landed a kill with the Operator, Outlaw, or Marshal. Each colored dot represents one kill, colored by the player who made it. All rounds in the sample are shown \u2014 no player filter applied.";
 
-  const plantFilterButtons = buildPlantFilterButtons(mapName);
-
   const timingMarkup = timingPanels
     .map(([key, label]) => {
       const basePoints = applyNewRosterFilter(info.thresholds?.[key]?.points ?? []);
@@ -1347,9 +1334,10 @@ function renderDefensivePanels(info) {
 
   // ── All SGE First Kills ─────────────────────────────────────────
   const allFkBasePoints = applyNewRosterFilter(info?.all_fk?.points ?? []);
-  const allFkAllPoints = (isTestMode && sniperFilterAllFK)
+  const allFkSniperPoints = (isTestMode && sniperFilterAllFK)
     ? allFkBasePoints.filter(p => sniperRoundKeySet.has(`${p.matchId}|${p.roundNum}`))
     : allFkBasePoints;
+  const allFkAllPoints = applyPlantSiteFilter(allFkSniperPoints);
   const allFkRoundCount = new Set(allFkAllPoints.map(p => `${p.matchId}|${p.roundNum}`)).size;
   const allFkVisual = allFkAllPoints.map(point => {
     const killer = projectHeatmapPoint(point, mapName);
@@ -1677,7 +1665,6 @@ function renderDefensivePanels(info) {
     <section class="defensive-topic">
       <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
         <h3 class="defensive-topic-title" title="${earlyTopicTooltip}">${earlyTopicTitle}</h3>
-        ${plantFilterButtons}
         ${isTestMode ? `<button class="rotation-window-btn${sniperFilterFK ? ' active' : ''}" data-sniper-panel="fk" type="button">SNIPER</button>` : ''}
       </div>
       <div class="early-positioning-layout">
@@ -1715,7 +1702,6 @@ function renderDefensivePanels(info) {
             <div>
               <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
                 <h3 class="defensive-topic-title">Rotation Patterns</h3>
-                ${buildPlantFilterButtons(mapName)}
               </div>
               ${rotationCard}
             </div>
@@ -1887,6 +1873,16 @@ function renderMapInfo() {
           })
           .join("")}
       </div>
+      ${activeSideView === "t" ? `
+        <div class="sample-plant-filter">
+          <p class="sample-plant-label">Plant Site</p>
+          <div class="sample-plant-btns">
+            ${["A", "B", ...(MAPS_WITH_C_SITE.has(mapName) ? ["C"] : [])].map(s =>
+              `<button class="sample-plant-btn${activePlantSites.has(s) ? " active" : ""}" data-plant-site="${s}" type="button">${s}</button>`
+            ).join("")}
+          </div>
+        </div>
+      ` : ""}
       <button class="sample-agent-btn${agentIconMode ? ' active' : ''}" type="button">Agent Icons</button>
     `;
     return;
@@ -2410,6 +2406,21 @@ document.getElementById("defensive-sample-card")?.addEventListener("click", (e) 
     renderMapInfo();
     return;
   }
+  const plantSiteBtn = e.target.closest("[data-plant-site]");
+  if (plantSiteBtn) {
+    const site = plantSiteBtn.dataset.plantSite;
+    if (activePlantSites.has(site)) {
+      activePlantSites.clear();
+    } else {
+      activePlantSites.clear();
+      activePlantSites.add(site);
+    }
+    if (lastDefensiveInfo) {
+      renderDefensivePanels(lastDefensiveInfo);
+      requestAnimationFrame(positionSampleCard);
+    }
+    return;
+  }
   const chip = e.target.closest(".sample-chip--toggle");
   if (!chip) return;
   const matchId = chip.dataset.matchId;
@@ -2538,8 +2549,12 @@ if (defensivePanels) {
     const plantSiteBtn = event.target.closest("[data-plant-site]");
     if (plantSiteBtn) {
       const site = plantSiteBtn.dataset.plantSite;
-      if (activePlantSites.has(site)) activePlantSites.delete(site);
-      else activePlantSites.add(site);
+      if (activePlantSites.has(site)) {
+        activePlantSites.clear();
+      } else {
+        activePlantSites.clear();
+        activePlantSites.add(site);
+      }
       renderDefensivePanels(activeInfo);
       return;
     }

@@ -2415,6 +2415,9 @@ document.getElementById("defensive-sample-card")?.addEventListener("click", (e) 
       activePlantSites.clear();
       activePlantSites.add(site);
     }
+    defensiveSampleCard.querySelectorAll("[data-plant-site]").forEach(btn => {
+      btn.classList.toggle("active", activePlantSites.has(btn.dataset.plantSite));
+    });
     if (lastDefensiveInfo) {
       renderDefensivePanels(lastDefensiveInfo);
       requestAnimationFrame(positionSampleCard);

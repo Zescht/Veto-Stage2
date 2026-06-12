@@ -18,6 +18,30 @@
       ],
       "games": [
         {
+          "date": "2026-05-20",
+          "opponent": "FKS",
+          "matchId": "64c11bb3-47bd-4ac3-b06e-1e1f80c122d1",
+          "players": [
+            "EP kozzy",
+            "EP Lime",
+            "EP iluri",
+            "EP Proxh",
+            "EP MAGNUM"
+          ]
+        },
+        {
+          "date": "2026-05-14",
+          "opponent": "TLA",
+          "matchId": "f52c9584-83b1-4c9d-b913-a71d1b74b2c0",
+          "players": [
+            "EP kozzy",
+            "EP Lime",
+            "EP iluri",
+            "EP Proxh",
+            "EP MAGNUM"
+          ]
+        },
+        {
           "date": "2026-05-11",
           "opponent": "NVJ",
           "matchId": "4e4479cb-bc22-4a8f-9824-0bb4efd76794",
@@ -249,6 +273,30 @@
         "707eab51-4836-f488-046a-cda6bf494859"
       ],
       "games": [
+        {
+          "date": "2026-05-18",
+          "opponent": "RB",
+          "matchId": "ca617e30-d5fc-4d86-b1f4-33c2c74cdf49",
+          "players": [
+            "EP kozzy",
+            "EP Lime",
+            "EP iluri",
+            "EP Proxh",
+            "EP MAGNUM"
+          ]
+        },
+        {
+          "date": "2026-05-14",
+          "opponent": "TLA",
+          "matchId": "89914dd9-9102-48ba-9ea9-30776b0c614b",
+          "players": [
+            "EP kozzy",
+            "EP Lime",
+            "EP iluri",
+            "EP Proxh",
+            "EP MAGNUM"
+          ]
+        },
         {
           "date": "2026-05-11",
           "opponent": "NVJ",
@@ -704,6 +752,18 @@
       ],
       "games": [
         {
+          "date": "2026-05-14",
+          "opponent": "TLA",
+          "matchId": "6a353029-a0d5-4f3e-a527-52d727890a4e",
+          "players": [
+            "EP kozzy",
+            "EP iluri",
+            "EP Proxh",
+            "EP MAGNUM",
+            "EP Lime"
+          ]
+        },
+        {
           "date": "2026-04-13",
           "opponent": "BG",
           "matchId": "e64ebdea-c6b5-4a91-b257-e98a99f9e88b",
@@ -869,6 +929,36 @@
     }
   ],
   "Ascent": [
+    {
+      "agents": [
+        "Jett",
+        "KAY/O",
+        "Sova",
+        "Omen",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "add6443a-41bd-e414-f6ad-e58d267f4e95",
+        "601dbbe7-43ce-be57-2a40-4abd24953621",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-05-20",
+          "opponent": "FKS",
+          "matchId": "462a864a-e83a-45a6-8672-9c446f30544b",
+          "players": [
+            "EP kozzy",
+            "EP Lime",
+            "EP iluri",
+            "EP Proxh",
+            "EP MAGNUM"
+          ]
+        }
+      ]
+    },
     {
       "agents": [
         "Jett",
@@ -1082,6 +1172,30 @@
       ],
       "games": [
         {
+          "date": "2026-05-18",
+          "opponent": "RB",
+          "matchId": "a4f4ccc0-5d0e-4ae7-bf03-c054c6f4f512",
+          "players": [
+            "EP kozzy",
+            "EP Lime",
+            "EP iluri",
+            "EP Proxh",
+            "EP MAGNUM"
+          ]
+        },
+        {
+          "date": "2026-05-14",
+          "opponent": "TLA",
+          "matchId": "d2b744bc-bfee-4587-9170-f1ad4d4d4f86",
+          "players": [
+            "EP kozzy",
+            "EP Lime",
+            "EP iluri",
+            "EP Proxh",
+            "EP MAGNUM"
+          ]
+        },
+        {
           "date": "2026-05-07",
           "opponent": "M1R",
           "matchId": "cb70b5f4-f014-4bb0-88d4-912c7bf40dc9",
@@ -1181,6 +1295,36 @@
     }
   ],
   "Lotus": [
+    {
+      "agents": [
+        "Jett",
+        "Raze",
+        "Skye",
+        "Omen",
+        "Vyse"
+      ],
+      "agent_ids": [
+        "add6443a-41bd-e414-f6ad-e58d267f4e95",
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "efba5359-4016-a1e5-7626-b1ae76895940"
+      ],
+      "games": [
+        {
+          "date": "2026-05-14",
+          "opponent": "TLA",
+          "matchId": "f0978843-27a9-4fdc-aae7-fc4a9977cd7d",
+          "players": [
+            "EP kozzy",
+            "EP Lime",
+            "EP iluri",
+            "EP Proxh",
+            "EP MAGNUM"
+          ]
+        }
+      ]
+    },
     {
       "agents": [
         "Neon",

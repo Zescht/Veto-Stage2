@@ -3,6 +3,48 @@
   "Haven": [
     {
       "agents": [
+        "Jett",
+        "Phoenix",
+        "Sova",
+        "Omen",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "add6443a-41bd-e414-f6ad-e58d267f4e95",
+        "eb93336a-449b-9c1b-0a54-a891f7921d69",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-05-26",
+          "opponent": "RB",
+          "matchId": "95e0158a-085f-4d66-af52-600a37c3e15c",
+          "players": [
+            "JL runneR",
+            "JL Doma",
+            "JL UNFAKE",
+            "JL kamyk",
+            "JL chiwa"
+          ]
+        },
+        {
+          "date": "2026-05-18",
+          "opponent": "GLS",
+          "matchId": "42df5685-0757-4a57-977b-41e81317f8ad",
+          "players": [
+            "JL runneR",
+            "JL Doma",
+            "JL UNFAKE",
+            "JL kamyk",
+            "JL chiwa"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
         "Neon",
         "Phoenix",
         "Sova",
@@ -229,6 +271,18 @@
         "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
       ],
       "games": [
+        {
+          "date": "2026-05-21",
+          "opponent": "BAR",
+          "matchId": "ab5cbc7b-c48c-4c6c-af02-d1651eadd3c2",
+          "players": [
+            "JL runneR",
+            "JL Doma",
+            "JL UNFAKE",
+            "JL kamyk",
+            "JL chiwa"
+          ]
+        },
         {
           "date": "2026-05-12",
           "opponent": "WIP",
@@ -467,6 +521,48 @@
     }
   ],
   "Ascent": [
+    {
+      "agents": [
+        "Jett",
+        "Phoenix",
+        "Sova",
+        "Omen",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "add6443a-41bd-e414-f6ad-e58d267f4e95",
+        "eb93336a-449b-9c1b-0a54-a891f7921d69",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-05-22",
+          "opponent": "TLA",
+          "matchId": "4f842de8-f4d9-4732-81be-c3d23313c4b5",
+          "players": [
+            "JL runneR",
+            "JL Doma",
+            "JL UNFAKE",
+            "JL kamyk",
+            "JL chiwa"
+          ]
+        },
+        {
+          "date": "2026-05-21",
+          "opponent": "BAR",
+          "matchId": "0d55660d-21c9-48ee-b9e2-eb5fef677135",
+          "players": [
+            "JL runneR",
+            "JL Doma",
+            "JL UNFAKE",
+            "JL kamyk",
+            "JL chiwa"
+          ]
+        }
+      ]
+    },
     {
       "agents": [
         "Jett",
@@ -843,6 +939,42 @@
         "707eab51-4836-f488-046a-cda6bf494859"
       ],
       "games": [
+        {
+          "date": "2026-05-26",
+          "opponent": "RB",
+          "matchId": "fff346fc-1201-45fb-8e13-977e08dce903",
+          "players": [
+            "JL runneR",
+            "JL Doma",
+            "JL UNFAKE",
+            "JL kamyk",
+            "JL chiwa"
+          ]
+        },
+        {
+          "date": "2026-05-25",
+          "opponent": "UCAM",
+          "matchId": "c3da87cb-43f0-42ba-9363-f9af1fbc5302",
+          "players": [
+            "JL runneR",
+            "JL Doma",
+            "JL UNFAKE",
+            "JL kamyk",
+            "JL chiwa"
+          ]
+        },
+        {
+          "date": "2026-05-22",
+          "opponent": "TLA",
+          "matchId": "7e0c20d9-4a75-4f7f-9fd8-62e5e7864d74",
+          "players": [
+            "JL runneR",
+            "JL Doma",
+            "JL UNFAKE",
+            "JL kamyk",
+            "JL chiwa"
+          ]
+        },
         {
           "date": "2026-05-12",
           "opponent": "WIP",
@@ -1269,6 +1401,30 @@
         "efba5359-4016-a1e5-7626-b1ae76895940"
       ],
       "games": [
+        {
+          "date": "2026-05-25",
+          "opponent": "UCAM",
+          "matchId": "753f8fcd-be0b-4b16-8f5d-f52ae797c166",
+          "players": [
+            "JL runneR",
+            "JL UNFAKE",
+            "JL Doma",
+            "JL kamyk",
+            "JL chiwa"
+          ]
+        },
+        {
+          "date": "2026-05-18",
+          "opponent": "GLS",
+          "matchId": "b53b8804-3eef-4fe0-982d-80c239de4002",
+          "players": [
+            "JL runneR",
+            "JL UNFAKE",
+            "JL Doma",
+            "JL kamyk",
+            "JL chiwa"
+          ]
+        },
         {
           "date": "2026-05-12",
           "opponent": "WIP",

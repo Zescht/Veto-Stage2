@@ -212,7 +212,8 @@ const calibrationOverrides = {
   "dortmund|Haven|t": []
 };
 
-const teamOrder = Object.keys(TEAMS_CONFIG).filter((key) => allVetoHistoryData[key]);
+const ACTIVE_TEAMS = new Set(["barcelona", "enterprise", "joblife", "cgn"]);
+const teamOrder = Object.keys(TEAMS_CONFIG).filter((key) => allVetoHistoryData[key] && ACTIVE_TEAMS.has(key));
 let activeTeam = teamOrder[0];
 let activeView = "veto";
 let startDateFilter = "";

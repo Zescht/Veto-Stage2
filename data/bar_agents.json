@@ -3,6 +3,36 @@
   "Haven": [
     {
       "agents": [
+        "Jett",
+        "Sova",
+        "Omen",
+        "Viper",
+        "Killjoy"
+      ],
+      "agent_ids": [
+        "add6443a-41bd-e414-f6ad-e58d267f4e95",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859",
+        "1e58de9c-4950-5125-93e9-a0aee9f98746"
+      ],
+      "games": [
+        {
+          "date": "2026-05-20",
+          "opponent": "GLS",
+          "matchId": "35df4cde-e268-4bc8-bcbc-ee76bdd35ad8",
+          "players": [
+            "BAR globeX",
+            "BAR Fit1nho",
+            "BAR Kajuks",
+            "BAR Guardy",
+            "BAR Stonezy"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
         "Neon",
         "Sova",
         "Omen",
@@ -192,6 +222,36 @@
     }
   ],
   "Pearl": [
+    {
+      "agents": [
+        "Jett",
+        "Sova",
+        "Tejo",
+        "Astra",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "add6443a-41bd-e414-f6ad-e58d267f4e95",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "b444168c-4e35-8076-db47-ef9bf368f384",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-05-21",
+          "opponent": "JL",
+          "matchId": "ab5cbc7b-c48c-4c6c-af02-d1651eadd3c2",
+          "players": [
+            "BAR globeX",
+            "BAR Fit1nho",
+            "BAR Guardy",
+            "BAR Kajuks",
+            "BAR Stonezy"
+          ]
+        }
+      ]
+    },
     {
       "agents": [
         "Neon",
@@ -522,6 +582,36 @@
     }
   ],
   "Split": [
+    {
+      "agents": [
+        "Raze",
+        "Skye",
+        "Omen",
+        "Viper",
+        "Sage"
+      ],
+      "agent_ids": [
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859",
+        "569fdd95-4d10-43ab-ca70-79becc718b46"
+      ],
+      "games": [
+        {
+          "date": "2026-05-19",
+          "opponent": "TLA",
+          "matchId": "29742c15-c6fa-4c38-b917-3a49f1125112",
+          "players": [
+            "BAR globeX",
+            "BAR Guardy",
+            "BAR Kajuks",
+            "BAR Stonezy",
+            "BAR Fit1nho"
+          ]
+        }
+      ]
+    },
     {
       "agents": [
         "Neon",
@@ -1074,6 +1164,36 @@
   "Fracture": [
     {
       "agents": [
+        "Raze",
+        "Breach",
+        "Tejo",
+        "Brimstone",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "5f8d3a7f-467b-97f3-062c-13acf203c006",
+        "b444168c-4e35-8076-db47-ef9bf368f384",
+        "9f0d8ba9-4140-b941-57d3-a7ad57c6b417",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-05-20",
+          "opponent": "GLS",
+          "matchId": "34edf9ee-c678-481e-908f-39e6563b7308",
+          "players": [
+            "BAR globeX",
+            "BAR Fit1nho",
+            "BAR Guardy",
+            "BAR Kajuks",
+            "BAR Stonezy"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
         "Neon",
         "Breach",
         "Tejo",
@@ -1178,6 +1298,36 @@
   "Lotus": [
     {
       "agents": [
+        "Raze",
+        "Fade",
+        "Omen",
+        "Viper",
+        "Vyse"
+      ],
+      "agent_ids": [
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859",
+        "efba5359-4016-a1e5-7626-b1ae76895940"
+      ],
+      "games": [
+        {
+          "date": "2026-05-19",
+          "opponent": "TLA",
+          "matchId": "b5582727-332b-4c7f-9b2e-677e135cb173",
+          "players": [
+            "BAR globeX",
+            "BAR Fit1nho",
+            "BAR Guardy",
+            "BAR Kajuks",
+            "BAR Stonezy"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
         "Neon",
         "Fade",
         "Omen",
@@ -1232,6 +1382,50 @@
             "BAR Fit1nho",
             "BAR Kajuks",
             "BAR Guardy"
+          ]
+        }
+      ]
+    }
+  ],
+  "Ascent": [
+    {
+      "agents": [
+        "Jett",
+        "KAY/O",
+        "Sova",
+        "Omen",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "add6443a-41bd-e414-f6ad-e58d267f4e95",
+        "601dbbe7-43ce-be57-2a40-4abd24953621",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-05-21",
+          "opponent": "JL",
+          "matchId": "0d55660d-21c9-48ee-b9e2-eb5fef677135",
+          "players": [
+            "BAR globeX",
+            "BAR Guardy",
+            "BAR Fit1nho",
+            "BAR Kajuks",
+            "BAR Stonezy"
+          ]
+        },
+        {
+          "date": "2026-05-20",
+          "opponent": "GLS",
+          "matchId": "6d420117-e5e0-4edc-82f6-6fd5084a6beb",
+          "players": [
+            "BAR globeX",
+            "BAR Guardy",
+            "BAR Fit1nho",
+            "BAR Kajuks",
+            "BAR Stonezy"
           ]
         }
       ]

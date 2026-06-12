@@ -1,0 +1,78 @@
+{
+  "t_side": {
+    "total_rounds": 14,
+    "rounds_won": 8,
+    "pct_rounds_won": 57.1,
+    "won_by_kills": 7,
+    "pct_won_by_kills": 50.0,
+    "won_by_explosion": 1,
+    "pct_won_by_explosion": 7.1,
+    "avg_fk_time": 21.7,
+    "sites": {
+      "A": {
+        "plant_count": 5,
+        "pct_plant": 62.5,
+        "pct_win": 100.0,
+        "avg_plant_time": 38.2,
+        "min_plant_time": 23.3,
+        "max_plant_time": 64.4,
+        "fk_to_plant_avg": 21.7,
+        "fk_to_plant_n": 5
+      },
+      "B": {
+        "plant_count": 3,
+        "pct_plant": 37.5,
+        "pct_win": 100.0,
+        "avg_plant_time": 43.4,
+        "min_plant_time": 26.0,
+        "max_plant_time": 56.2,
+        "fk_to_plant_avg": 20.9,
+        "fk_to_plant_n": 3
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 24,
+    "rounds_won": 18,
+    "pct_rounds_won": 75.0,
+    "won_by_kills": 17,
+    "pct_won_by_kills": 70.8,
+    "won_by_defuse": 1,
+    "pct_won_by_defuse": 4.2,
+    "avg_fk_time": 25.2,
+    "sites": {
+      "A": {
+        "plant_count": 4,
+        "defuse_count": 1,
+        "pct_defuse_win": 25.0,
+        "pct_defuse_share": 100.0,
+        "avg_defuse_time": 17.9,
+        "fk_after_plant_avg": 26.0,
+        "fk_after_plant_n": 2
+      },
+      "B": {
+        "plant_count": 3,
+        "defuse_count": 0,
+        "pct_defuse_win": 0.0,
+        "pct_defuse_share": 0.0,
+        "avg_defuse_time": null,
+        "fk_after_plant_avg": 23.9,
+        "fk_after_plant_n": 1
+      }
+    }
+  },
+  "team": "JOBlife",
+  "map": "Ascent",
+  "matches": [
+    {
+      "date": "2026-05-22",
+      "opponent": "VCT",
+      "matchId": "4f842de8-f4d9-4732-81be-c3d23313c4b5"
+    },
+    {
+      "date": "2026-05-21",
+      "opponent": "VCT",
+      "matchId": "0d55660d-21c9-48ee-b9e2-eb5fef677135"
+    }
+  ]
+}

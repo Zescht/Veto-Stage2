@@ -34,8 +34,8 @@ const TEAMS_CONFIG = {
   barcelona: {
     filePrefix:   "bar",
     mapControl:   typeof barMapControlData !== "undefined" ? barMapControlData : {},
-    statMaps:     ["Bind", "Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
-    retakeMaps:   ["Bind", "Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
+    statMaps:     ["Ascent", "Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
+    retakeMaps:   ["Ascent", "Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
     playerColors: { "Fit1nho": "#1565C0", "Guardy": "#F9A825", "Kajuks": "#C62828", "Stonezy": "#2E7D32", "globeX": "#E91E63" },
     playerOrder:  ["Fit1nho", "Guardy", "Kajuks", "Stonezy", "globeX"],
   },
@@ -50,8 +50,8 @@ const TEAMS_CONFIG = {
   enterprise: {
     filePrefix:   "ep",
     mapControl:   typeof epMapControlData !== "undefined" ? epMapControlData : {},
-    statMaps:     ["Bind", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
-    retakeMaps:   ["Bind", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
+    statMaps:     ["Ascent", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
+    retakeMaps:   ["Ascent", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
     playerColors: { "Lime": "#1565C0", "kozzy": "#F9A825", "Proxh": "#C62828", "iluri": "#2E7D32", "MAGNUM": "#E91E63" },
     playerOrder:  ["Lime", "kozzy", "Proxh", "iluri", "MAGNUM"],
   },
@@ -66,8 +66,8 @@ const TEAMS_CONFIG = {
   joblife: {
     filePrefix:   "jl",
     mapControl:   typeof jlMapControlData !== "undefined" ? jlMapControlData : {},
-    statMaps:     ["Breeze", "Haven", "Lotus", "Pearl", "Split"],
-    retakeMaps:   ["Breeze", "Haven", "Lotus", "Pearl", "Split"],
+    statMaps:     ["Ascent", "Breeze", "Haven", "Lotus", "Pearl", "Split"],
+    retakeMaps:   ["Ascent", "Breeze", "Haven", "Lotus", "Pearl", "Split"],
     playerColors: { "chiwa": "#1565C0", "UNFAKE": "#F9A825", "kamyk": "#C62828", "runneR": "#2E7D32", "Doma": "#E91E63" },
     playerOrder:  ["chiwa", "UNFAKE", "kamyk", "runneR", "Doma"],
   },
@@ -176,8 +176,9 @@ const RETAKE_DATA_SOURCES = Object.entries(TEAMS_CONFIG).flatMap(([team, cfg]) =
     }))
   )
 );
-  const MAP_IMAGE_VERSION = "20260412-riot";
+  const MAP_IMAGE_VERSION = "20260608";
   const MAP_IMAGE_ASPECTS = {
+    Ascent: 1,
     Bind: 1,
     Breeze: 1,
     Corrode: 1,
@@ -188,6 +189,7 @@ const RETAKE_DATA_SOURCES = Object.entries(TEAMS_CONFIG).flatMap(([team, cfg]) =
     Split: 1
   };
   const MAP_IMAGE_PATHS = {
+    Ascent: `./maps/Ascent.png?v=${MAP_IMAGE_VERSION}`,
     Bind: `./maps/Bind.png?v=${MAP_IMAGE_VERSION}`,
     Breeze: `./maps/Breeze.png?v=${MAP_IMAGE_VERSION}`,
     Fracture: `./maps/Fracture.png?v=${MAP_IMAGE_VERSION}`,

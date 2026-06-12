@@ -1,0 +1,73 @@
+{
+  "t_side": {
+    "total_rounds": 12,
+    "rounds_won": 6,
+    "pct_rounds_won": 50.0,
+    "won_by_kills": 5,
+    "pct_won_by_kills": 41.7,
+    "won_by_explosion": 1,
+    "pct_won_by_explosion": 8.3,
+    "avg_fk_time": 30.7,
+    "sites": {
+      "A": {
+        "plant_count": 3,
+        "pct_plant": 37.5,
+        "pct_win": 100.0,
+        "avg_plant_time": 38.8,
+        "min_plant_time": 30.2,
+        "max_plant_time": 49.6,
+        "fk_to_plant_avg": 21.3,
+        "fk_to_plant_n": 3
+      },
+      "B": {
+        "plant_count": 5,
+        "pct_plant": 62.5,
+        "pct_win": 60.0,
+        "avg_plant_time": 66.3,
+        "min_plant_time": 44.9,
+        "max_plant_time": 98.2,
+        "fk_to_plant_avg": 38.3,
+        "fk_to_plant_n": 5
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 11,
+    "rounds_won": 4,
+    "pct_rounds_won": 36.4,
+    "won_by_kills": 3,
+    "pct_won_by_kills": 27.3,
+    "won_by_defuse": 1,
+    "pct_won_by_defuse": 9.1,
+    "avg_fk_time": 29.4,
+    "sites": {
+      "A": {
+        "plant_count": 5,
+        "defuse_count": 1,
+        "pct_defuse_win": 20.0,
+        "pct_defuse_share": 100.0,
+        "avg_defuse_time": 39.7,
+        "fk_after_plant_avg": 10.7,
+        "fk_after_plant_n": 2
+      },
+      "B": {
+        "plant_count": 3,
+        "defuse_count": 0,
+        "pct_defuse_win": 0.0,
+        "pct_defuse_share": 0.0,
+        "avg_defuse_time": null,
+        "fk_after_plant_avg": 17.2,
+        "fk_after_plant_n": 3
+      }
+    }
+  },
+  "team": "Enterprise",
+  "map": "Ascent",
+  "matches": [
+    {
+      "date": "2026-05-20",
+      "opponent": "VCT",
+      "matchId": "462a864a-e83a-45a6-8672-9c446f30544b"
+    }
+  ]
+}

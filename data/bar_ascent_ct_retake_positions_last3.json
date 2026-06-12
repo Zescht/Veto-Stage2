@@ -1,0 +1,152 @@
+{
+  "map": "Ascent",
+  "side": "ct",
+  "selectedMaps": [
+    {
+      "date": "2026-05-21",
+      "opponent": "JL",
+      "matchId": "0d55660d-21c9-48ee-b9e2-eb5fef677135",
+      "score": "7-13"
+    },
+    {
+      "date": "2026-05-20",
+      "opponent": "GLS",
+      "matchId": "6d420117-e5e0-4edc-82f6-6fd5084a6beb",
+      "score": "12-14"
+    }
+  ],
+  "sites": {
+    "A": {
+      "roundCount": 5,
+      "pointCount": 9,
+      "points": [
+        {
+          "site": "A",
+          "player": "Stonezy",
+          "normX": 53.1478,
+          "normY": 40.9015,
+          "roundNum": 18,
+          "plantRoundTimeMs": 38924,
+          "date": "2026-05-21",
+          "opponent": "JL",
+          "matchId": "0d55660d-21c9-48ee-b9e2-eb5fef677135",
+          "score": "7-13"
+        },
+        {
+          "site": "A",
+          "player": "globeX",
+          "normX": 57.0748,
+          "normY": 46.5295,
+          "roundNum": 19,
+          "plantRoundTimeMs": 24261,
+          "date": "2026-05-21",
+          "opponent": "JL",
+          "matchId": "0d55660d-21c9-48ee-b9e2-eb5fef677135",
+          "score": "7-13"
+        },
+        {
+          "site": "A",
+          "player": "Stonezy",
+          "normX": 69.4648,
+          "normY": 32.7745,
+          "roundNum": 19,
+          "plantRoundTimeMs": 24261,
+          "date": "2026-05-21",
+          "opponent": "JL",
+          "matchId": "0d55660d-21c9-48ee-b9e2-eb5fef677135",
+          "score": "7-13"
+        },
+        {
+          "site": "A",
+          "player": "Fit1nho",
+          "normX": 72.9228,
+          "normY": 25.4105,
+          "roundNum": 19,
+          "plantRoundTimeMs": 24261,
+          "date": "2026-05-21",
+          "opponent": "JL",
+          "matchId": "0d55660d-21c9-48ee-b9e2-eb5fef677135",
+          "score": "7-13"
+        },
+        {
+          "site": "A",
+          "player": "Stonezy",
+          "normX": 80.2588,
+          "normY": 22.8905,
+          "roundNum": 16,
+          "plantRoundTimeMs": 85512,
+          "date": "2026-05-20",
+          "opponent": "GLS",
+          "matchId": "6d420117-e5e0-4edc-82f6-6fd5084a6beb",
+          "score": "12-14"
+        },
+        {
+          "site": "A",
+          "player": "globeX",
+          "normX": 75.3588,
+          "normY": 21.1335,
+          "roundNum": 18,
+          "plantRoundTimeMs": 38867,
+          "date": "2026-05-20",
+          "opponent": "GLS",
+          "matchId": "6d420117-e5e0-4edc-82f6-6fd5084a6beb",
+          "score": "12-14"
+        },
+        {
+          "site": "A",
+          "player": "Stonezy",
+          "normX": 66.4408,
+          "normY": 27.6855,
+          "roundNum": 18,
+          "plantRoundTimeMs": 38867,
+          "date": "2026-05-20",
+          "opponent": "GLS",
+          "matchId": "6d420117-e5e0-4edc-82f6-6fd5084a6beb",
+          "score": "12-14"
+        },
+        {
+          "site": "A",
+          "player": "Fit1nho",
+          "normX": 80.5668,
+          "normY": 25.7465,
+          "roundNum": 18,
+          "plantRoundTimeMs": 38867,
+          "date": "2026-05-20",
+          "opponent": "GLS",
+          "matchId": "6d420117-e5e0-4edc-82f6-6fd5084a6beb",
+          "score": "12-14"
+        },
+        {
+          "site": "A",
+          "player": "Stonezy",
+          "normX": 68.9468,
+          "normY": 16.9405,
+          "roundNum": 25,
+          "plantRoundTimeMs": 75829,
+          "date": "2026-05-20",
+          "opponent": "GLS",
+          "matchId": "6d420117-e5e0-4edc-82f6-6fd5084a6beb",
+          "score": "12-14"
+        }
+      ]
+    },
+    "B": {
+      "roundCount": 1,
+      "pointCount": 1,
+      "points": [
+        {
+          "site": "B",
+          "player": "Kajuks",
+          "normX": 63.0598,
+          "normY": 15.8975,
+          "roundNum": 12,
+          "plantRoundTimeMs": 71061,
+          "date": "2026-05-20",
+          "opponent": "GLS",
+          "matchId": "6d420117-e5e0-4edc-82f6-6fd5084a6beb",
+          "score": "12-14"
+        }
+      ]
+    }
+  }
+}

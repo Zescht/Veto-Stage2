@@ -1,0 +1,152 @@
+{
+  "map": "Ascent",
+  "side": "ct",
+  "selectedMaps": [
+    {
+      "date": "2026-05-22",
+      "opponent": "TLA",
+      "matchId": "4f842de8-f4d9-4732-81be-c3d23313c4b5",
+      "score": "13-5"
+    },
+    {
+      "date": "2026-05-21",
+      "opponent": "BAR",
+      "matchId": "0d55660d-21c9-48ee-b9e2-eb5fef677135",
+      "score": "13-7"
+    }
+  ],
+  "sites": {
+    "A": {
+      "roundCount": 3,
+      "pointCount": 5,
+      "points": [
+        {
+          "site": "A",
+          "player": "UNFAKE",
+          "normX": 76.6188,
+          "normY": 22.2185,
+          "roundNum": 7,
+          "plantRoundTimeMs": 33595,
+          "date": "2026-05-22",
+          "opponent": "TLA",
+          "matchId": "4f842de8-f4d9-4732-81be-c3d23313c4b5",
+          "score": "13-5"
+        },
+        {
+          "site": "A",
+          "player": "runneR",
+          "normX": 74.8198,
+          "normY": 17.7735,
+          "roundNum": 7,
+          "plantRoundTimeMs": 33595,
+          "date": "2026-05-22",
+          "opponent": "TLA",
+          "matchId": "4f842de8-f4d9-4732-81be-c3d23313c4b5",
+          "score": "13-5"
+        },
+        {
+          "site": "A",
+          "player": "UNFAKE",
+          "normX": 71.2428,
+          "normY": 17.1015,
+          "roundNum": 8,
+          "plantRoundTimeMs": 38604,
+          "date": "2026-05-22",
+          "opponent": "TLA",
+          "matchId": "4f842de8-f4d9-4732-81be-c3d23313c4b5",
+          "score": "13-5"
+        },
+        {
+          "site": "A",
+          "player": "runneR",
+          "normX": 82.2888,
+          "normY": 46.7885,
+          "roundNum": 8,
+          "plantRoundTimeMs": 38604,
+          "date": "2026-05-22",
+          "opponent": "TLA",
+          "matchId": "4f842de8-f4d9-4732-81be-c3d23313c4b5",
+          "score": "13-5"
+        },
+        {
+          "site": "A",
+          "player": "chiwa",
+          "normX": 56.0598,
+          "normY": 30.0305,
+          "roundNum": 9,
+          "plantRoundTimeMs": 47335,
+          "date": "2026-05-22",
+          "opponent": "TLA",
+          "matchId": "4f842de8-f4d9-4732-81be-c3d23313c4b5",
+          "score": "13-5"
+        }
+      ]
+    },
+    "B": {
+      "roundCount": 2,
+      "pointCount": 5,
+      "points": [
+        {
+          "site": "B",
+          "player": "kamyk",
+          "normX": 78.1308,
+          "normY": 22.9745,
+          "roundNum": 4,
+          "plantRoundTimeMs": 34750,
+          "date": "2026-05-21",
+          "opponent": "BAR",
+          "matchId": "0d55660d-21c9-48ee-b9e2-eb5fef677135",
+          "score": "13-7"
+        },
+        {
+          "site": "B",
+          "player": "UNFAKE",
+          "normX": 49.6898,
+          "normY": 16.8145,
+          "roundNum": 4,
+          "plantRoundTimeMs": 34750,
+          "date": "2026-05-21",
+          "opponent": "BAR",
+          "matchId": "0d55660d-21c9-48ee-b9e2-eb5fef677135",
+          "score": "13-7"
+        },
+        {
+          "site": "B",
+          "player": "Doma",
+          "normX": 51.3418,
+          "normY": 13.7835,
+          "roundNum": 4,
+          "plantRoundTimeMs": 34750,
+          "date": "2026-05-21",
+          "opponent": "BAR",
+          "matchId": "0d55660d-21c9-48ee-b9e2-eb5fef677135",
+          "score": "13-7"
+        },
+        {
+          "site": "B",
+          "player": "chiwa",
+          "normX": 49.2698,
+          "normY": 32.2915,
+          "roundNum": 7,
+          "plantRoundTimeMs": 19594,
+          "date": "2026-05-21",
+          "opponent": "BAR",
+          "matchId": "0d55660d-21c9-48ee-b9e2-eb5fef677135",
+          "score": "13-7"
+        },
+        {
+          "site": "B",
+          "player": "Doma",
+          "normX": 39.3298,
+          "normY": 29.6665,
+          "roundNum": 7,
+          "plantRoundTimeMs": 19594,
+          "date": "2026-05-21",
+          "opponent": "BAR",
+          "matchId": "0d55660d-21c9-48ee-b9e2-eb5fef677135",
+          "score": "13-7"
+        }
+      ]
+    }
+  }
+}

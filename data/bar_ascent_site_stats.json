@@ -1,0 +1,78 @@
+{
+  "t_side": {
+    "total_rounds": 25,
+    "rounds_won": 7,
+    "pct_rounds_won": 28.0,
+    "won_by_kills": 5,
+    "pct_won_by_kills": 20.0,
+    "won_by_explosion": 2,
+    "pct_won_by_explosion": 8.0,
+    "avg_fk_time": 29.4,
+    "sites": {
+      "A": {
+        "plant_count": 5,
+        "pct_plant": 55.6,
+        "pct_win": 60.0,
+        "avg_plant_time": 43.8,
+        "min_plant_time": 27.4,
+        "max_plant_time": 70.1,
+        "fk_to_plant_avg": 17.0,
+        "fk_to_plant_n": 5
+      },
+      "B": {
+        "plant_count": 4,
+        "pct_plant": 44.4,
+        "pct_win": 100.0,
+        "avg_plant_time": 39.4,
+        "min_plant_time": 19.6,
+        "max_plant_time": 60.1,
+        "fk_to_plant_avg": 16.4,
+        "fk_to_plant_n": 4
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 21,
+    "rounds_won": 12,
+    "pct_rounds_won": 57.1,
+    "won_by_kills": 11,
+    "pct_won_by_kills": 52.4,
+    "won_by_defuse": 1,
+    "pct_won_by_defuse": 4.8,
+    "avg_fk_time": 29.1,
+    "sites": {
+      "A": {
+        "plant_count": 6,
+        "defuse_count": 1,
+        "pct_defuse_win": 16.7,
+        "pct_defuse_share": 100.0,
+        "avg_defuse_time": 32.1,
+        "fk_after_plant_avg": 13.3,
+        "fk_after_plant_n": 2
+      },
+      "B": {
+        "plant_count": 3,
+        "defuse_count": 0,
+        "pct_defuse_win": 0.0,
+        "pct_defuse_share": 0.0,
+        "avg_defuse_time": null,
+        "fk_after_plant_avg": 2.3,
+        "fk_after_plant_n": 1
+      }
+    }
+  },
+  "team": "Barcelona",
+  "map": "Ascent",
+  "matches": [
+    {
+      "date": "2026-05-21",
+      "opponent": "VCT",
+      "matchId": "0d55660d-21c9-48ee-b9e2-eb5fef677135"
+    },
+    {
+      "date": "2026-05-20",
+      "opponent": "VCT",
+      "matchId": "6d420117-e5e0-4edc-82f6-6fd5084a6beb"
+    }
+  ]
+}

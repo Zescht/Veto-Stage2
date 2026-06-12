@@ -1115,7 +1115,11 @@ function computeRotationLayers(mapName, side, selectedPlayers) {
 
 function updateRotationCardInPlace(mapName, side, selectedPlayers) {
   const card = document.getElementById("rotation-panel-card");
-  if (!card) { renderMapInfo(); return; }
+  if (!card) {
+    const hasRotations = (TEAM_MAP_CONTROL_DATA[activeTeam]?.[mapName]?.[side]?.rotations?.length ?? 0) > 0;
+    if (hasRotations) renderMapInfo();
+    return;
+  }
 
   const { svgLines, dotsMarkup, visiblePlayers, roundCount } = computeRotationLayers(mapName, side, selectedPlayers);
 

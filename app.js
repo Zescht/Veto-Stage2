@@ -1656,7 +1656,7 @@ function renderDefensivePanels(info) {
           <table class="site-stats-table">
             <thead><tr>
               <th>SITE</th><th>% DEFUSE</th><th>% DEFUSEWIN</th>
-              <th>TIME TO DEFUSE</th><th>FK AFTER PLANT</th>
+              <th>TIME TO DEFUSE</th><th>FK AFTER PLANT <button class="site-stats-info-btn" data-site-stats-info type="button" title="Show games">i</button></th>
             </tr></thead>
             <tbody>${rows}</tbody>
           </table>
@@ -2541,6 +2541,19 @@ if (defensivePanels) {
     if (!activeInfo) return;
     const key = getDefensiveFilterKey(activeInfo);
     selectedDefensivePlayerFilters[key] ||= {};
+
+    if (event.target.closest("[data-site-stats-info]")) {
+      const mapName = lastDefensiveInfo?.map;
+      const matches = allSiteStats[activeTeam]?.[mapName]?.matches ?? [];
+      const teamName = allVetoHistoryData[activeTeam]?.name ?? activeTeam;
+      document.getElementById("agents-modal-title").textContent = `${teamName} — ${mapName} · Sample`;
+      const body = document.getElementById("agents-modal-body");
+      body.innerHTML = matches.length
+        ? `<div class="site-stats-games-list">${matches.map(m => `<div class="site-stats-game-row"><span class="ssg-date">${m.date}</span><span class="ssg-sep">vs</span><span class="ssg-opp">${m.opponent}</span></div>`).join("")}</div>`
+        : `<p class="agents-empty">No match data available.</p>`;
+      agentsModalOverlay.classList.remove("hidden");
+      return;
+    }
 
     if (event.target.closest("[data-early-all]")) {
       collectDefensivePlayers(activeInfo).forEach((player) => {

@@ -1009,6 +1009,35 @@ body {
   white-space: nowrap;
 }
 
+.site-stats-info-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1.5px solid currentColor;
+  background: none;
+  color: inherit;
+  font-size: 9px;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-left: 4px;
+  opacity: 0.6;
+  padding: 0;
+  transition: opacity 0.15s;
+}
+.site-stats-info-btn:hover { opacity: 1; }
+
+.site-stats-games-list { display: flex; flex-direction: column; gap: 6px; }
+.site-stats-game-row { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; }
+.ssg-date { color: #888; min-width: 80px; }
+.ssg-sep  { color: #bbb; font-size: 0.75rem; }
+.ssg-opp  { font-weight: 700; color: #222; }
+
 .site-stats-wrap {
   margin-bottom: 14px;
   width: 100%;

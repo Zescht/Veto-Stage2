@@ -840,211 +840,95 @@
     }
   },
   "postPlant10_20": {
-    "A": {
-      "rounds": [
-        {
-          "roundNum": 2,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 19831,
-              "players": [
-                {
-                  "player": "reblyik",
-                  "normX": 43.1518,
-                  "normY": 20.3214
-                },
-                {
-                  "player": "Redgar",
-                  "normX": 40.8976,
-                  "normY": 20.1732
-                }
-              ]
-            }
-          ],
-          "matchId": "cecf19a2-5a5e-4b9d-886c-7b24702013c1",
-          "date": "2026-05-07",
-          "opponent": "EP",
-          "score": "2-13"
-        },
-        {
-          "roundNum": 4,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 14564,
-              "players": [
-                {
-                  "player": "reblyik",
-                  "normX": 24.1276,
-                  "normY": 35.5002
-                },
-                {
-                  "player": "Raz",
-                  "normX": 26.0152,
-                  "normY": 24.5802
-                },
-                {
-                  "player": "kospa1n",
-                  "normX": 24.7906,
-                  "normY": 25.2978
-                }
-              ]
-            },
-            {
-              "timeSincePlantMs": 16590,
-              "players": [
-                {
-                  "player": "reblyik",
-                  "normX": 24.4318,
-                  "normY": 32.5128
-                },
-                {
-                  "player": "Raz",
-                  "normX": 23.9794,
-                  "normY": 20.1264
-                },
-                {
-                  "player": "kospa1n",
-                  "normX": 25.2508,
-                  "normY": 25.5396
-                }
-              ]
-            }
-          ],
-          "matchId": "cecf19a2-5a5e-4b9d-886c-7b24702013c1",
-          "date": "2026-05-07",
-          "opponent": "EP",
-          "score": "2-13"
-        },
-        {
-          "roundNum": 18,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 12753,
-              "players": [
-                {
-                  "player": "Raz",
-                  "normX": 19.1668,
-                  "normY": 48.4638
-                },
-                {
-                  "player": "Bishepss",
-                  "normX": 21.1246,
-                  "normY": 30.1104
-                }
-              ]
-            }
-          ],
-          "matchId": "7321301a-9c28-4075-8015-1703a8356a40",
-          "date": "2026-04-21",
-          "opponent": "EP",
-          "score": "6-13"
-        },
-        {
-          "roundNum": 1,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 10757,
-              "players": [
-                {
-                  "player": "kospa1n",
-                  "normX": 45.5308,
-                  "normY": 54.3918
-                }
-              ]
-            }
-          ],
-          "matchId": "a51d04ac-e062-4bbe-8b76-2b89776e6724",
-          "date": "2026-04-13",
-          "opponent": "XD",
-          "score": "9-13"
-        },
-        {
-          "roundNum": 2,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 10537,
-              "players": [
-                {
-                  "player": "reblyik",
-                  "normX": 43.3858,
-                  "normY": 33.9714
-                },
-                {
-                  "player": "Redgar",
-                  "normX": 17.7082,
-                  "normY": 26.0856
-                },
-                {
-                  "player": "Bishepss",
-                  "normX": 64.9138,
-                  "normY": 24.198
-                }
-              ]
-            },
-            {
-              "timeSincePlantMs": 17472,
-              "players": [
-                {
-                  "player": "reblyik",
-                  "normX": 26.5534,
-                  "normY": 31.101
-                },
-                {
-                  "player": "Bishepss",
-                  "normX": 56.7784,
-                  "normY": 16.2966
-                }
-              ]
-            }
-          ],
-          "matchId": "a51d04ac-e062-4bbe-8b76-2b89776e6724",
-          "date": "2026-04-13",
-          "opponent": "XD",
-          "score": "9-13"
-        },
-        {
-          "roundNum": 3,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 10473,
-              "players": [
-                {
-                  "player": "reblyik",
-                  "normX": 43.2298,
-                  "normY": 43.2768
-                },
-                {
-                  "player": "Raz",
-                  "normX": 35.851,
-                  "normY": 43.4172
-                },
-                {
-                  "player": "Redgar",
-                  "normX": 26.3506,
-                  "normY": 40.9602
-                },
-                {
-                  "player": "Bishepss",
-                  "normX": 20.8438,
-                  "normY": 42.606
-                },
-                {
-                  "player": "kospa1n",
-                  "normX": 16.1092,
-                  "normY": 28.6908
-                }
-              ]
-            }
-          ],
-          "matchId": "a51d04ac-e062-4bbe-8b76-2b89776e6724",
-          "date": "2026-04-13",
-          "opponent": "XD",
-          "score": "9-13"
-        }
-      ]
-    },
     "B": {
       "rounds": [
+        {
+          "roundNum": 0,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 18044,
+              "players": [
+                {
+                  "player": "Redgar",
+                  "normX": 29.2444,
+                  "normY": 61.8876
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 59.3992,
+                  "normY": 79.1256
+                }
+              ]
+            }
+          ],
+          "matchId": "a51d04ac-e062-4bbe-8b76-2b89776e6724",
+          "date": "2026-04-13",
+          "opponent": "XD",
+          "score": "9-13"
+        },
+        {
+          "roundNum": 5,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 19009,
+              "players": [
+                {
+                  "player": "Raz",
+                  "normX": 39.8758,
+                  "normY": 69.672
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 43.9162,
+                  "normY": 69.6486
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 62.1838,
+                  "normY": 78.9306
+                }
+              ]
+            }
+          ],
+          "matchId": "a51d04ac-e062-4bbe-8b76-2b89776e6724",
+          "date": "2026-04-13",
+          "opponent": "XD",
+          "score": "9-13"
+        },
+        {
+          "roundNum": 6,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 16946,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 24.424,
+                  "normY": 81.3408
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 38.7136,
+                  "normY": 69.3756
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 17488,
+              "players": [
+                {
+                  "player": "Redgar",
+                  "normX": 39.2206,
+                  "normY": 70.0074
+                }
+              ]
+            }
+          ],
+          "matchId": "a51d04ac-e062-4bbe-8b76-2b89776e6724",
+          "date": "2026-04-13",
+          "opponent": "XD",
+          "score": "9-13"
+        },
         {
           "roundNum": 6,
           "snapshots": [
@@ -1180,22 +1064,21 @@
           "date": "2026-04-21",
           "opponent": "EP",
           "score": "6-13"
-        },
+        }
+      ]
+    },
+    "A": {
+      "rounds": [
         {
-          "roundNum": 0,
+          "roundNum": 1,
           "snapshots": [
             {
-              "timeSincePlantMs": 18044,
+              "timeSincePlantMs": 10757,
               "players": [
                 {
-                  "player": "Redgar",
-                  "normX": 29.2444,
-                  "normY": 61.8876
-                },
-                {
                   "player": "kospa1n",
-                  "normX": 59.3992,
-                  "normY": 79.1256
+                  "normX": 45.5308,
+                  "normY": 54.3918
                 }
               ]
             }
@@ -1206,59 +1089,40 @@
           "score": "9-13"
         },
         {
-          "roundNum": 5,
+          "roundNum": 2,
           "snapshots": [
             {
-              "timeSincePlantMs": 19009,
-              "players": [
-                {
-                  "player": "Raz",
-                  "normX": 39.8758,
-                  "normY": 69.672
-                },
-                {
-                  "player": "Redgar",
-                  "normX": 43.9162,
-                  "normY": 69.6486
-                },
-                {
-                  "player": "kospa1n",
-                  "normX": 62.1838,
-                  "normY": 78.9306
-                }
-              ]
-            }
-          ],
-          "matchId": "a51d04ac-e062-4bbe-8b76-2b89776e6724",
-          "date": "2026-04-13",
-          "opponent": "XD",
-          "score": "9-13"
-        },
-        {
-          "roundNum": 6,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 16946,
+              "timeSincePlantMs": 10537,
               "players": [
                 {
                   "player": "reblyik",
-                  "normX": 24.424,
-                  "normY": 81.3408
+                  "normX": 43.3858,
+                  "normY": 33.9714
                 },
                 {
                   "player": "Redgar",
-                  "normX": 38.7136,
-                  "normY": 69.3756
+                  "normX": 17.7082,
+                  "normY": 26.0856
+                },
+                {
+                  "player": "Bishepss",
+                  "normX": 64.9138,
+                  "normY": 24.198
                 }
               ]
             },
             {
-              "timeSincePlantMs": 17488,
+              "timeSincePlantMs": 17472,
               "players": [
                 {
-                  "player": "Redgar",
-                  "normX": 39.2206,
-                  "normY": 70.0074
+                  "player": "reblyik",
+                  "normX": 26.5534,
+                  "normY": 31.101
+                },
+                {
+                  "player": "Bishepss",
+                  "normX": 56.7784,
+                  "normY": 16.2966
                 }
               ]
             }
@@ -1267,6 +1131,142 @@
           "date": "2026-04-13",
           "opponent": "XD",
           "score": "9-13"
+        },
+        {
+          "roundNum": 3,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 10473,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 43.2298,
+                  "normY": 43.2768
+                },
+                {
+                  "player": "Raz",
+                  "normX": 35.851,
+                  "normY": 43.4172
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 26.3506,
+                  "normY": 40.9602
+                },
+                {
+                  "player": "Bishepss",
+                  "normX": 20.8438,
+                  "normY": 42.606
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 16.1092,
+                  "normY": 28.6908
+                }
+              ]
+            }
+          ],
+          "matchId": "a51d04ac-e062-4bbe-8b76-2b89776e6724",
+          "date": "2026-04-13",
+          "opponent": "XD",
+          "score": "9-13"
+        },
+        {
+          "roundNum": 2,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 19831,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 43.1518,
+                  "normY": 20.3214
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 40.8976,
+                  "normY": 20.1732
+                }
+              ]
+            }
+          ],
+          "matchId": "cecf19a2-5a5e-4b9d-886c-7b24702013c1",
+          "date": "2026-05-07",
+          "opponent": "EP",
+          "score": "2-13"
+        },
+        {
+          "roundNum": 4,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 14564,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 24.1276,
+                  "normY": 35.5002
+                },
+                {
+                  "player": "Raz",
+                  "normX": 26.0152,
+                  "normY": 24.5802
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 24.7906,
+                  "normY": 25.2978
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 16590,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 24.4318,
+                  "normY": 32.5128
+                },
+                {
+                  "player": "Raz",
+                  "normX": 23.9794,
+                  "normY": 20.1264
+                },
+                {
+                  "player": "kospa1n",
+                  "normX": 25.2508,
+                  "normY": 25.5396
+                }
+              ]
+            }
+          ],
+          "matchId": "cecf19a2-5a5e-4b9d-886c-7b24702013c1",
+          "date": "2026-05-07",
+          "opponent": "EP",
+          "score": "2-13"
+        },
+        {
+          "roundNum": 18,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 12753,
+              "players": [
+                {
+                  "player": "Raz",
+                  "normX": 19.1668,
+                  "normY": 48.4638
+                },
+                {
+                  "player": "Bishepss",
+                  "normX": 21.1246,
+                  "normY": 30.1104
+                }
+              ]
+            }
+          ],
+          "matchId": "7321301a-9c28-4075-8015-1703a8356a40",
+          "date": "2026-04-21",
+          "opponent": "EP",
+          "score": "6-13"
         }
       ]
     }

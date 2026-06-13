@@ -826,5 +826,391 @@
         }
       ]
     }
+  },
+  "postPlant10_20": {
+    "B": {
+      "rounds": [
+        {
+          "roundNum": 12,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 10890,
+              "players": [
+                {
+                  "player": "Guardy",
+                  "normX": 26.1409,
+                  "normY": 23.2957
+                },
+                {
+                  "player": "Kajuks",
+                  "normX": 34.7372,
+                  "normY": 21.6142
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 11003,
+              "players": [
+                {
+                  "player": "Guardy",
+                  "normX": 26.1409,
+                  "normY": 23.2957
+                },
+                {
+                  "player": "Kajuks",
+                  "normX": 34.8847,
+                  "normY": 21.2307
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 11304,
+              "players": [
+                {
+                  "player": "Guardy",
+                  "normX": 26.2825,
+                  "normY": 23.3134
+                },
+                {
+                  "player": "Kajuks",
+                  "normX": 35.5042,
+                  "normY": 20.4991
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15287,
+              "players": [
+                {
+                  "player": "Guardy",
+                  "normX": 24.7426,
+                  "normY": 27.8328
+                },
+                {
+                  "player": "Kajuks",
+                  "normX": 33.7873,
+                  "normY": 25.8563
+                }
+              ]
+            }
+          ],
+          "matchId": "35a2ab3e-d812-4e33-97db-72d49ed6e91e",
+          "date": "2026-05-04",
+          "opponent": "FLK",
+          "score": "13-11"
+        },
+        {
+          "roundNum": 2,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 14420,
+              "players": [
+                {
+                  "player": "Kajuks",
+                  "normX": 46.7437,
+                  "normY": 17.3072
+                },
+                {
+                  "player": "Stonezy",
+                  "normX": 29.6927,
+                  "normY": 37.9159
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 16796,
+              "players": [
+                {
+                  "player": "Stonezy",
+                  "normX": 29.6278,
+                  "normY": 37.8923
+                }
+              ]
+            }
+          ],
+          "matchId": "7c1d12f0-4422-4033-90c7-e934e0809f9b",
+          "date": "2026-05-12",
+          "opponent": "UCAM",
+          "score": "13-11"
+        },
+        {
+          "roundNum": 10,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 14841,
+              "players": [
+                {
+                  "player": "Kajuks",
+                  "normX": 16.459,
+                  "normY": 25.7206
+                }
+              ]
+            }
+          ],
+          "matchId": "7c1d12f0-4422-4033-90c7-e934e0809f9b",
+          "date": "2026-05-12",
+          "opponent": "UCAM",
+          "score": "13-11"
+        }
+      ]
+    },
+    "A": {
+      "rounds": [
+        {
+          "roundNum": 13,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 15206,
+              "players": [
+                {
+                  "player": "globeX",
+                  "normX": 62.9923,
+                  "normY": 33.544
+                },
+                {
+                  "player": "Guardy",
+                  "normX": 70.7626,
+                  "normY": 26.8357
+                },
+                {
+                  "player": "Fit1nho",
+                  "normX": 64.3847,
+                  "normY": 28.706
+                },
+                {
+                  "player": "Stonezy",
+                  "normX": 70.9396,
+                  "normY": 29.1131
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15785,
+              "players": [
+                {
+                  "player": "globeX",
+                  "normX": 61.6117,
+                  "normY": 33.9452
+                },
+                {
+                  "player": "Guardy",
+                  "normX": 72.0134,
+                  "normY": 27.0776
+                },
+                {
+                  "player": "Fit1nho",
+                  "normX": 64.9924,
+                  "normY": 29.2842
+                },
+                {
+                  "player": "Stonezy",
+                  "normX": 72.0429,
+                  "normY": 30.5645
+                }
+              ]
+            }
+          ],
+          "matchId": "35a2ab3e-d812-4e33-97db-72d49ed6e91e",
+          "date": "2026-05-04",
+          "opponent": "FLK",
+          "score": "13-11"
+        },
+        {
+          "roundNum": 22,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 13483,
+              "players": [
+                {
+                  "player": "Kajuks",
+                  "normX": 73.2583,
+                  "normY": 32.3581
+                }
+              ]
+            }
+          ],
+          "matchId": "35a2ab3e-d812-4e33-97db-72d49ed6e91e",
+          "date": "2026-05-04",
+          "opponent": "FLK",
+          "score": "13-11"
+        },
+        {
+          "roundNum": 2,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 10073,
+              "players": [
+                {
+                  "player": "Stonezy",
+                  "normX": 78.5742,
+                  "normY": 59.0969
+                },
+                {
+                  "player": "Guardy",
+                  "normX": 75.6124,
+                  "normY": 22.5523
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 17520,
+              "players": [
+                {
+                  "player": "Stonezy",
+                  "normX": 84.2559,
+                  "normY": 48.0167
+                }
+              ]
+            }
+          ],
+          "matchId": "1d621928-8798-438b-ab75-2da4a54308cb",
+          "date": "2026-05-11",
+          "opponent": "OTK",
+          "score": "13-10"
+        },
+        {
+          "roundNum": 3,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 14765,
+              "players": [
+                {
+                  "player": "Fit1nho",
+                  "normX": 66.2078,
+                  "normY": 29.9332
+                },
+                {
+                  "player": "Guardy",
+                  "normX": 63.659,
+                  "normY": 33.3493
+                },
+                {
+                  "player": "Kajuks",
+                  "normX": 77.052,
+                  "normY": 32.718
+                }
+              ]
+            }
+          ],
+          "matchId": "1d621928-8798-438b-ab75-2da4a54308cb",
+          "date": "2026-05-11",
+          "opponent": "OTK",
+          "score": "13-10"
+        },
+        {
+          "roundNum": 6,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 11364,
+              "players": [
+                {
+                  "player": "globeX",
+                  "normX": 76.108,
+                  "normY": 23.1482
+                },
+                {
+                  "player": "Kajuks",
+                  "normX": 59.5054,
+                  "normY": 50.9903
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 12246,
+              "players": [
+                {
+                  "player": "globeX",
+                  "normX": 76.9694,
+                  "normY": 23.3311
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15843,
+              "players": [
+                {
+                  "player": "globeX",
+                  "normX": 79.2114,
+                  "normY": 25.933
+                }
+              ]
+            }
+          ],
+          "matchId": "1d621928-8798-438b-ab75-2da4a54308cb",
+          "date": "2026-05-11",
+          "opponent": "OTK",
+          "score": "13-10"
+        },
+        {
+          "roundNum": 0,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 10894,
+              "players": [
+                {
+                  "player": "globeX",
+                  "normX": 80.4386,
+                  "normY": 28.352
+                },
+                {
+                  "player": "Kajuks",
+                  "normX": 78.0727,
+                  "normY": 32.3168
+                },
+                {
+                  "player": "Stonezy",
+                  "normX": 73.5887,
+                  "normY": 31.066
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 14356,
+              "players": [
+                {
+                  "player": "globeX",
+                  "normX": 80.9401,
+                  "normY": 28.6234
+                },
+                {
+                  "player": "Kajuks",
+                  "normX": 75.7186,
+                  "normY": 35.2786
+                },
+                {
+                  "player": "Stonezy",
+                  "normX": 73.2937,
+                  "normY": 33.0838
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 19504,
+              "players": [
+                {
+                  "player": "globeX",
+                  "normX": 76.1906,
+                  "normY": 33.3906
+                },
+                {
+                  "player": "Kajuks",
+                  "normX": 71.0753,
+                  "normY": 35.3671
+                },
+                {
+                  "player": "Stonezy",
+                  "normX": 72.8512,
+                  "normY": 36.1046
+                }
+              ]
+            }
+          ],
+          "matchId": "7c1d12f0-4422-4033-90c7-e934e0809f9b",
+          "date": "2026-05-12",
+          "opponent": "UCAM",
+          "score": "13-11"
+        }
+      ]
+    }
   }
 }

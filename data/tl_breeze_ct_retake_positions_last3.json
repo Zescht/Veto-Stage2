@@ -732,125 +732,23 @@
     }
   },
   "postPlant10_20": {
-    "A": {
+    "B": {
       "rounds": [
         {
-          "roundNum": 6,
+          "roundNum": 0,
           "snapshots": [
             {
-              "timeSincePlantMs": 11674,
-              "players": [
-                {
-                  "player": "Wanzeru",
-                  "normX": 74.7643,
-                  "normY": 43.3098
-                },
-                {
-                  "player": "rexxtoned",
-                  "normX": 59.6163,
-                  "normY": 45.9278
-                }
-              ]
-            },
-            {
-              "timeSincePlantMs": 12434,
-              "players": [
-                {
-                  "player": "rexxtoned",
-                  "normX": 60.8063,
-                  "normY": 44.6258
-                }
-              ]
-            },
-            {
-              "timeSincePlantMs": 13922,
-              "players": [
-                {
-                  "player": "rexxtoned",
-                  "normX": 62.3043,
-                  "normY": 43.9118
-                }
-              ]
-            }
-          ],
-          "matchId": "73282d23-90de-4ede-aa80-b2a52da82c70",
-          "date": "2026-04-11",
-          "opponent": "200",
-          "score": "13-7"
-        },
-        {
-          "roundNum": 14,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 15478,
-              "players": [
-                {
-                  "player": "Prti",
-                  "normX": 72.9863,
-                  "normY": 25.0608
-                },
-                {
-                  "player": "rexxtoned",
-                  "normX": 61.9613,
-                  "normY": 44.5698
-                }
-              ]
-            }
-          ],
-          "matchId": "3706855d-0343-4626-ab8a-2b6191373aff",
-          "date": "2026-04-12",
-          "opponent": "VR2",
-          "score": "13-10"
-        },
-        {
-          "roundNum": 18,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 18606,
+              "timeSincePlantMs": 17582,
               "players": [
                 {
                   "player": "Kicks",
-                  "normX": 74.2603,
-                  "normY": 35.7708
-                },
-                {
-                  "player": "Wanzeru",
-                  "normX": 77.6903,
-                  "normY": 62.2728
-                },
-                {
-                  "player": "rexxtoned",
-                  "normX": 76.3113,
-                  "normY": 63.8478
-                }
-              ]
-            }
-          ],
-          "matchId": "3706855d-0343-4626-ab8a-2b6191373aff",
-          "date": "2026-04-12",
-          "opponent": "VR2",
-          "score": "13-10"
-        },
-        {
-          "roundNum": 7,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 12695,
-              "players": [
-                {
-                  "player": "Kicks",
-                  "normX": 78.7893,
-                  "normY": 50.2328
+                  "normX": 22.6703,
+                  "normY": 46.2008
                 },
                 {
                   "player": "GSR",
-                  "normX": 76.5423,
-                  "normY": 50.0648
-                },
-                {
-                  "player": "rexxtoned",
-                  "normX": 75.8493,
-                  "normY": 62.6018
+                  "normX": 25.4283,
+                  "normY": 15.5548
                 }
               ]
             }
@@ -859,11 +757,26 @@
           "date": "2026-04-13",
           "opponent": "UNI",
           "score": "11-13"
-        }
-      ]
-    },
-    "B": {
-      "rounds": [
+        },
+        {
+          "roundNum": 3,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 12065,
+              "players": [
+                {
+                  "player": "Kicks",
+                  "normX": 32.8203,
+                  "normY": 29.9608
+                }
+              ]
+            }
+          ],
+          "matchId": "80a3b373-711a-4dd8-9626-e90063a4bddc",
+          "date": "2026-04-13",
+          "opponent": "UNI",
+          "score": "11-13"
+        },
         {
           "roundNum": 8,
           "snapshots": [
@@ -1010,22 +923,31 @@
           "date": "2026-04-12",
           "opponent": "VR2",
           "score": "13-10"
-        },
+        }
+      ]
+    },
+    "A": {
+      "rounds": [
         {
-          "roundNum": 0,
+          "roundNum": 7,
           "snapshots": [
             {
-              "timeSincePlantMs": 17582,
+              "timeSincePlantMs": 12695,
               "players": [
                 {
                   "player": "Kicks",
-                  "normX": 22.6703,
-                  "normY": 46.2008
+                  "normX": 78.7893,
+                  "normY": 50.2328
                 },
                 {
                   "player": "GSR",
-                  "normX": 25.4283,
-                  "normY": 15.5548
+                  "normX": 76.5423,
+                  "normY": 50.0648
+                },
+                {
+                  "player": "rexxtoned",
+                  "normX": 75.8493,
+                  "normY": 62.6018
                 }
               ]
             }
@@ -1036,23 +958,101 @@
           "score": "11-13"
         },
         {
-          "roundNum": 3,
+          "roundNum": 6,
           "snapshots": [
             {
-              "timeSincePlantMs": 12065,
+              "timeSincePlantMs": 11674,
               "players": [
                 {
-                  "player": "Kicks",
-                  "normX": 32.8203,
-                  "normY": 29.9608
+                  "player": "Wanzeru",
+                  "normX": 74.7643,
+                  "normY": 43.3098
+                },
+                {
+                  "player": "rexxtoned",
+                  "normX": 59.6163,
+                  "normY": 45.9278
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 12434,
+              "players": [
+                {
+                  "player": "rexxtoned",
+                  "normX": 60.8063,
+                  "normY": 44.6258
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 13922,
+              "players": [
+                {
+                  "player": "rexxtoned",
+                  "normX": 62.3043,
+                  "normY": 43.9118
                 }
               ]
             }
           ],
-          "matchId": "80a3b373-711a-4dd8-9626-e90063a4bddc",
-          "date": "2026-04-13",
-          "opponent": "UNI",
-          "score": "11-13"
+          "matchId": "73282d23-90de-4ede-aa80-b2a52da82c70",
+          "date": "2026-04-11",
+          "opponent": "200",
+          "score": "13-7"
+        },
+        {
+          "roundNum": 14,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 15478,
+              "players": [
+                {
+                  "player": "Prti",
+                  "normX": 72.9863,
+                  "normY": 25.0608
+                },
+                {
+                  "player": "rexxtoned",
+                  "normX": 61.9613,
+                  "normY": 44.5698
+                }
+              ]
+            }
+          ],
+          "matchId": "3706855d-0343-4626-ab8a-2b6191373aff",
+          "date": "2026-04-12",
+          "opponent": "VR2",
+          "score": "13-10"
+        },
+        {
+          "roundNum": 18,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 18606,
+              "players": [
+                {
+                  "player": "Kicks",
+                  "normX": 74.2603,
+                  "normY": 35.7708
+                },
+                {
+                  "player": "Wanzeru",
+                  "normX": 77.6903,
+                  "normY": 62.2728
+                },
+                {
+                  "player": "rexxtoned",
+                  "normX": 76.3113,
+                  "normY": 63.8478
+                }
+              ]
+            }
+          ],
+          "matchId": "3706855d-0343-4626-ab8a-2b6191373aff",
+          "date": "2026-04-12",
+          "opponent": "VR2",
+          "score": "13-10"
         }
       ]
     }

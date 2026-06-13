@@ -1080,60 +1080,6 @@
           "score": "11-13"
         },
         {
-          "roundNum": 15,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 11290,
-              "players": [
-                {
-                  "player": "deyten",
-                  "normX": 36.2485,
-                  "normY": 56.2216
-                },
-                {
-                  "player": "Opex",
-                  "normX": 11.6101,
-                  "normY": 45.76
-                },
-                {
-                  "player": "Puggy",
-                  "normX": 22.5973,
-                  "normY": 45.8248
-                }
-              ]
-            },
-            {
-              "timeSincePlantMs": 13888,
-              "players": [
-                {
-                  "player": "deyten",
-                  "normX": 34.7437,
-                  "normY": 53.9392
-                },
-                {
-                  "player": "Opex",
-                  "normX": 8.3053,
-                  "normY": 46.7536
-                }
-              ]
-            },
-            {
-              "timeSincePlantMs": 18367,
-              "players": [
-                {
-                  "player": "Opex",
-                  "normX": 8.3053,
-                  "normY": 46.7536
-                }
-              ]
-            }
-          ],
-          "matchId": "ac2960a5-2503-4ca5-8973-b699a39ed09d",
-          "date": "2026-04-11",
-          "opponent": "AKA",
-          "score": "13-3"
-        },
-        {
           "roundNum": 0,
           "snapshots": [
             {
@@ -1220,6 +1166,60 @@
           "date": "2026-04-25",
           "opponent": "ATN",
           "score": "13-4"
+        },
+        {
+          "roundNum": 15,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 11290,
+              "players": [
+                {
+                  "player": "deyten",
+                  "normX": 36.2485,
+                  "normY": 56.2216
+                },
+                {
+                  "player": "Opex",
+                  "normX": 11.6101,
+                  "normY": 45.76
+                },
+                {
+                  "player": "Puggy",
+                  "normX": 22.5973,
+                  "normY": 45.8248
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 13888,
+              "players": [
+                {
+                  "player": "deyten",
+                  "normX": 34.7437,
+                  "normY": 53.9392
+                },
+                {
+                  "player": "Opex",
+                  "normX": 8.3053,
+                  "normY": 46.7536
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18367,
+              "players": [
+                {
+                  "player": "Opex",
+                  "normX": 8.3053,
+                  "normY": 46.7536
+                }
+              ]
+            }
+          ],
+          "matchId": "ac2960a5-2503-4ca5-8973-b699a39ed09d",
+          "date": "2026-04-11",
+          "opponent": "AKA",
+          "score": "13-3"
         },
         {
           "roundNum": 18,

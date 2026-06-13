@@ -980,6 +980,93 @@
           "score": "13-11"
         },
         {
+          "roundNum": 0,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 10518,
+              "players": [
+                {
+                  "player": "BarcK",
+                  "normX": 71.565,
+                  "normY": 27.6381
+                }
+              ]
+            }
+          ],
+          "matchId": "f6c3a1e8-4268-4caf-8b26-463c1557640b",
+          "date": "2026-04-07",
+          "opponent": "CGN",
+          "score": "4-13"
+        },
+        {
+          "roundNum": 2,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 16615,
+              "players": [
+                {
+                  "player": "deyten",
+                  "normX": 76.0903,
+                  "normY": 19.4902
+                },
+                {
+                  "player": "Bumbibjorn1",
+                  "normX": 75.5711,
+                  "normY": 22.6349
+                }
+              ]
+            }
+          ],
+          "matchId": "f6c3a1e8-4268-4caf-8b26-463c1557640b",
+          "date": "2026-04-07",
+          "opponent": "CGN",
+          "score": "4-13"
+        },
+        {
+          "roundNum": 3,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 14887,
+              "players": [
+                {
+                  "player": "BarcK",
+                  "normX": 60.7267,
+                  "normY": 22.0036
+                },
+                {
+                  "player": "Bumbibjorn1",
+                  "normX": 57.4286,
+                  "normY": 34.2225
+                },
+                {
+                  "player": "Puggy",
+                  "normX": 71.5532,
+                  "normY": 30.7828
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18289,
+              "players": [
+                {
+                  "player": "Bumbibjorn1",
+                  "normX": 57.4463,
+                  "normY": 32.2932
+                },
+                {
+                  "player": "Puggy",
+                  "normX": 70.208,
+                  "normY": 32.7003
+                }
+              ]
+            }
+          ],
+          "matchId": "f6c3a1e8-4268-4caf-8b26-463c1557640b",
+          "date": "2026-04-07",
+          "opponent": "CGN",
+          "score": "4-13"
+        },
+        {
           "roundNum": 2,
           "snapshots": [
             {
@@ -1095,93 +1182,6 @@
           "date": "2026-04-18",
           "opponent": "FKS",
           "score": "9-13"
-        },
-        {
-          "roundNum": 0,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 10518,
-              "players": [
-                {
-                  "player": "BarcK",
-                  "normX": 71.565,
-                  "normY": 27.6381
-                }
-              ]
-            }
-          ],
-          "matchId": "f6c3a1e8-4268-4caf-8b26-463c1557640b",
-          "date": "2026-04-07",
-          "opponent": "CGN",
-          "score": "4-13"
-        },
-        {
-          "roundNum": 2,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 16615,
-              "players": [
-                {
-                  "player": "deyten",
-                  "normX": 76.0903,
-                  "normY": 19.4902
-                },
-                {
-                  "player": "Bumbibjorn1",
-                  "normX": 75.5711,
-                  "normY": 22.6349
-                }
-              ]
-            }
-          ],
-          "matchId": "f6c3a1e8-4268-4caf-8b26-463c1557640b",
-          "date": "2026-04-07",
-          "opponent": "CGN",
-          "score": "4-13"
-        },
-        {
-          "roundNum": 3,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 14887,
-              "players": [
-                {
-                  "player": "BarcK",
-                  "normX": 60.7267,
-                  "normY": 22.0036
-                },
-                {
-                  "player": "Bumbibjorn1",
-                  "normX": 57.4286,
-                  "normY": 34.2225
-                },
-                {
-                  "player": "Puggy",
-                  "normX": 71.5532,
-                  "normY": 30.7828
-                }
-              ]
-            },
-            {
-              "timeSincePlantMs": 18289,
-              "players": [
-                {
-                  "player": "Bumbibjorn1",
-                  "normX": 57.4463,
-                  "normY": 32.2932
-                },
-                {
-                  "player": "Puggy",
-                  "normX": 70.208,
-                  "normY": 32.7003
-                }
-              ]
-            }
-          ],
-          "matchId": "f6c3a1e8-4268-4caf-8b26-463c1557640b",
-          "date": "2026-04-07",
-          "opponent": "CGN",
-          "score": "4-13"
         }
       ]
     },

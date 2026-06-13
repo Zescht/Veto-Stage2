@@ -492,30 +492,6 @@
           "roundNum": 12,
           "snapshots": [
             {
-              "timeSincePlantMs": 16368,
-              "players": [
-                {
-                  "player": "Serial",
-                  "normX": 76.4245,
-                  "normY": 44.3848
-                },
-                {
-                  "player": "pa1ze",
-                  "normX": 75.0421,
-                  "normY": 40.0432
-                }
-              ]
-            }
-          ],
-          "matchId": "403b0617-7109-4477-846c-a7c0e5c89d76",
-          "date": "2026-04-26",
-          "opponent": "ECO",
-          "score": "13-0"
-        },
-        {
-          "roundNum": 12,
-          "snapshots": [
-            {
               "timeSincePlantMs": 14110,
               "players": [
                 {
@@ -674,6 +650,30 @@
           "date": "2026-04-12",
           "opponent": "SGE",
           "score": "3-13"
+        },
+        {
+          "roundNum": 12,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 16368,
+              "players": [
+                {
+                  "player": "Serial",
+                  "normX": 76.4245,
+                  "normY": 44.3848
+                },
+                {
+                  "player": "pa1ze",
+                  "normX": 75.0421,
+                  "normY": 40.0432
+                }
+              ]
+            }
+          ],
+          "matchId": "403b0617-7109-4477-846c-a7c0e5c89d76",
+          "date": "2026-04-26",
+          "opponent": "ECO",
+          "score": "13-0"
         }
       ]
     },

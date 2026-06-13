@@ -510,124 +510,8 @@
     }
   },
   "postPlant10_20": {
-    "B": {
-      "rounds": [
-        {
-          "roundNum": 14,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 15899,
-              "players": [
-                {
-                  "player": "hezacoil",
-                  "normX": 20.707,
-                  "normY": 33.9688
-                },
-                {
-                  "player": "Deadink",
-                  "normX": 36.2063,
-                  "normY": 22.1688
-                }
-              ]
-            },
-            {
-              "timeSincePlantMs": 18253,
-              "players": [
-                {
-                  "player": "hezacoil",
-                  "normX": 22.2823,
-                  "normY": 34.6237
-                }
-              ]
-            },
-            {
-              "timeSincePlantMs": 18285,
-              "players": [
-                {
-                  "player": "hezacoil",
-                  "normX": 22.3531,
-                  "normY": 34.6768
-                }
-              ]
-            }
-          ],
-          "matchId": "eef853d8-036a-4312-be40-778377aa07c9",
-          "date": "2026-04-05",
-          "opponent": "GHS",
-          "score": "13-6"
-        },
-        {
-          "roundNum": 11,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 11407,
-              "players": [
-                {
-                  "player": "Deadink",
-                  "normX": 34.9909,
-                  "normY": 23.9801
-                }
-              ]
-            }
-          ],
-          "matchId": "66387e24-7291-41c3-b17b-c3e14435a22e",
-          "date": "2026-04-19",
-          "opponent": "GS",
-          "score": "13-11"
-        }
-      ]
-    },
     "A": {
       "rounds": [
-        {
-          "roundNum": 16,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 15502,
-              "players": [
-                {
-                  "player": "reazy",
-                  "normX": 73.1344,
-                  "normY": 33.1487
-                },
-                {
-                  "player": "Deadink",
-                  "normX": 65.7417,
-                  "normY": 27.4493
-                },
-                {
-                  "player": "batujnax",
-                  "normX": 61.2636,
-                  "normY": 46.7895
-                }
-              ]
-            },
-            {
-              "timeSincePlantMs": 17744,
-              "players": [
-                {
-                  "player": "reazy",
-                  "normX": 73.3586,
-                  "normY": 35.8214
-                },
-                {
-                  "player": "Deadink",
-                  "normX": 66.4143,
-                  "normY": 30.8772
-                },
-                {
-                  "player": "batujnax",
-                  "normX": 59.1868,
-                  "normY": 44.0637
-                }
-              ]
-            }
-          ],
-          "matchId": "eef853d8-036a-4312-be40-778377aa07c9",
-          "date": "2026-04-05",
-          "opponent": "GHS",
-          "score": "13-6"
-        },
         {
           "roundNum": 1,
           "snapshots": [
@@ -842,6 +726,122 @@
           "date": "2026-04-19",
           "opponent": "GS",
           "score": "13-11"
+        },
+        {
+          "roundNum": 16,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 15502,
+              "players": [
+                {
+                  "player": "reazy",
+                  "normX": 73.1344,
+                  "normY": 33.1487
+                },
+                {
+                  "player": "Deadink",
+                  "normX": 65.7417,
+                  "normY": 27.4493
+                },
+                {
+                  "player": "batujnax",
+                  "normX": 61.2636,
+                  "normY": 46.7895
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 17744,
+              "players": [
+                {
+                  "player": "reazy",
+                  "normX": 73.3586,
+                  "normY": 35.8214
+                },
+                {
+                  "player": "Deadink",
+                  "normX": 66.4143,
+                  "normY": 30.8772
+                },
+                {
+                  "player": "batujnax",
+                  "normX": 59.1868,
+                  "normY": 44.0637
+                }
+              ]
+            }
+          ],
+          "matchId": "eef853d8-036a-4312-be40-778377aa07c9",
+          "date": "2026-04-05",
+          "opponent": "GHS",
+          "score": "13-6"
+        }
+      ]
+    },
+    "B": {
+      "rounds": [
+        {
+          "roundNum": 11,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 11407,
+              "players": [
+                {
+                  "player": "Deadink",
+                  "normX": 34.9909,
+                  "normY": 23.9801
+                }
+              ]
+            }
+          ],
+          "matchId": "66387e24-7291-41c3-b17b-c3e14435a22e",
+          "date": "2026-04-19",
+          "opponent": "GS",
+          "score": "13-11"
+        },
+        {
+          "roundNum": 14,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 15899,
+              "players": [
+                {
+                  "player": "hezacoil",
+                  "normX": 20.707,
+                  "normY": 33.9688
+                },
+                {
+                  "player": "Deadink",
+                  "normX": 36.2063,
+                  "normY": 22.1688
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18253,
+              "players": [
+                {
+                  "player": "hezacoil",
+                  "normX": 22.2823,
+                  "normY": 34.6237
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18285,
+              "players": [
+                {
+                  "player": "hezacoil",
+                  "normX": 22.3531,
+                  "normY": 34.6768
+                }
+              ]
+            }
+          ],
+          "matchId": "eef853d8-036a-4312-be40-778377aa07c9",
+          "date": "2026-04-05",
+          "opponent": "GHS",
+          "score": "13-6"
         }
       ]
     }

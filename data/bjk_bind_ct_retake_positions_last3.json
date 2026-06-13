@@ -444,72 +444,50 @@
     }
   },
   "postPlant10_20": {
-    "B": {
+    "A": {
       "rounds": [
         {
-          "roundNum": 9,
+          "roundNum": 12,
           "snapshots": [
             {
-              "timeSincePlantMs": 11413,
+              "timeSincePlantMs": 13591,
               "players": [
-                {
-                  "player": "oroni",
-                  "normX": 42.8143,
-                  "normY": 21.6673
-                },
                 {
                   "player": "wezzy1",
-                  "normX": 35.0204,
-                  "normY": 22.452
-                },
-                {
-                  "player": "Docent",
-                  "normX": 32.3123,
-                  "normY": 38.0398
-                }
-              ]
-            },
-            {
-              "timeSincePlantMs": 11757,
-              "players": [
-                {
-                  "player": "oroni",
-                  "normX": 43.1447,
-                  "normY": 20.6938
-                },
-                {
-                  "player": "wezzy1",
-                  "normX": 35.0204,
-                  "normY": 22.4166
-                },
-                {
-                  "player": "Docent",
-                  "normX": 32.3064,
-                  "normY": 37.9926
-                }
-              ]
-            },
-            {
-              "timeSincePlantMs": 12164,
-              "players": [
-                {
-                  "player": "oroni",
-                  "normX": 45.0504,
-                  "normY": 19.2955
-                },
-                {
-                  "player": "Docent",
-                  "normX": 32.8138,
-                  "normY": 38.4764
+                  "normX": 77.6125,
+                  "normY": 40.9898
                 }
               ]
             }
           ],
-          "matchId": "9120955b-0dc9-44a9-a2b2-5ddd1a7af9f4",
-          "date": "2026-04-11",
-          "opponent": "DP",
-          "score": "13-2"
+          "matchId": "c17e1e4b-1f99-4f7b-a045-41ae4b071281",
+          "date": "2026-02-22",
+          "opponent": "UCAM",
+          "score": "10-13"
         },
+        {
+          "roundNum": 19,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 10599,
+              "players": [
+                {
+                  "player": "influx",
+                  "normX": 79.8486,
+                  "normY": 41.8276
+                }
+              ]
+            }
+          ],
+          "matchId": "c17e1e4b-1f99-4f7b-a045-41ae4b071281",
+          "date": "2026-02-22",
+          "opponent": "UCAM",
+          "score": "10-13"
+        }
+      ]
+    },
+    "B": {
+      "rounds": [
         {
           "roundNum": 20,
           "snapshots": [
@@ -577,48 +555,70 @@
           "date": "2026-02-22",
           "opponent": "UCAM",
           "score": "10-13"
-        }
-      ]
-    },
-    "A": {
-      "rounds": [
-        {
-          "roundNum": 12,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 13591,
-              "players": [
-                {
-                  "player": "wezzy1",
-                  "normX": 77.6125,
-                  "normY": 40.9898
-                }
-              ]
-            }
-          ],
-          "matchId": "c17e1e4b-1f99-4f7b-a045-41ae4b071281",
-          "date": "2026-02-22",
-          "opponent": "UCAM",
-          "score": "10-13"
         },
         {
-          "roundNum": 19,
+          "roundNum": 9,
           "snapshots": [
             {
-              "timeSincePlantMs": 10599,
+              "timeSincePlantMs": 11413,
               "players": [
                 {
-                  "player": "influx",
-                  "normX": 79.8486,
-                  "normY": 41.8276
+                  "player": "oroni",
+                  "normX": 42.8143,
+                  "normY": 21.6673
+                },
+                {
+                  "player": "wezzy1",
+                  "normX": 35.0204,
+                  "normY": 22.452
+                },
+                {
+                  "player": "Docent",
+                  "normX": 32.3123,
+                  "normY": 38.0398
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 11757,
+              "players": [
+                {
+                  "player": "oroni",
+                  "normX": 43.1447,
+                  "normY": 20.6938
+                },
+                {
+                  "player": "wezzy1",
+                  "normX": 35.0204,
+                  "normY": 22.4166
+                },
+                {
+                  "player": "Docent",
+                  "normX": 32.3064,
+                  "normY": 37.9926
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 12164,
+              "players": [
+                {
+                  "player": "oroni",
+                  "normX": 45.0504,
+                  "normY": 19.2955
+                },
+                {
+                  "player": "Docent",
+                  "normX": 32.8138,
+                  "normY": 38.4764
                 }
               ]
             }
           ],
-          "matchId": "c17e1e4b-1f99-4f7b-a045-41ae4b071281",
-          "date": "2026-02-22",
-          "opponent": "UCAM",
-          "score": "10-13"
+          "matchId": "9120955b-0dc9-44a9-a2b2-5ddd1a7af9f4",
+          "date": "2026-04-11",
+          "opponent": "DP",
+          "score": "13-2"
         }
       ]
     }

@@ -166,6 +166,8 @@ const TEAM_MAP_CONTROL_DATA = Object.fromEntries(
 );
 const allDefensiveRetake = {};
 const RETAKE_DATA_VERSION = "20260520a";
+const AGENTS_DATA_VERSION = "20260612a";
+const ECONOMY_DATA_VERSION = "20260613a";
 const RETAKE_DATA_SOURCES = Object.entries(TEAMS_CONFIG).flatMap(([team, cfg]) =>
   ["ct", "t"].flatMap(side =>
     cfg.retakeMaps.map(map => ({
@@ -230,6 +232,7 @@ let retakePostPlantMode = false;
 let lastDefensiveInfo = null;
 let allSiteStats = {}; // { teamKey: { mapName: data } }
 const allAgentsData = {}; // { teamKey: full agents JSON }
+const allEconomyData = {}; // { teamKey: { matchId: { roundNum: { teamTier, oppTier, teamHasOp } } } }
 let currentAgentLookup = {}; // { matchId: { playerName: agentName } } — rebuilt on each render
 const TEAM_FILE_PREFIX = {
   ...Object.fromEntries(Object.entries(TEAMS_CONFIG).map(([key, cfg]) => [key, cfg.filePrefix])),
@@ -256,12 +259,33 @@ let sniperFilterAllFK = false;
 let sniperFilterRotation = false;
 let activePlantSites = new Set(); // "A" | "B" | "C" — empty = show all
 const MAPS_WITH_C_SITE = new Set(["Lotus", "Haven"]);
+let activeEcoTier = null;    // null | "pistol" | "eco" | "force" | "full"
+let activeEcoOp = false;     // only rounds where team had an Operator
+let activeEnemyEco = false;  // only rounds where opponent was on eco/pistol
 
 function applyPlantSiteFilter(items) {
   if (activePlantSites.size === 0) return items;
   return items.filter(item => {
     const site = Array.isArray(item) ? item[0]?.plantSite : item.plantSite;
     return site && activePlantSites.has(site);
+  });
+}
+
+function passesEconomyFilter(matchId, roundNum) {
+  if (!activeEcoTier && !activeEcoOp && !activeEnemyEco) return true;
+  const econ = allEconomyData[activeTeam]?.[matchId]?.[String(roundNum)];
+  if (!econ) return true;
+  if (activeEcoTier && econ.teamTier !== activeEcoTier) return false;
+  if (activeEcoOp && !econ.teamHasOp) return false;
+  if (activeEnemyEco && econ.oppTier !== "eco" && econ.oppTier !== "pistol") return false;
+  return true;
+}
+
+function applyEconomyFilter(items) {
+  if (!activeEcoTier && !activeEcoOp && !activeEnemyEco) return items;
+  return items.filter(item => {
+    if (Array.isArray(item)) return passesEconomyFilter(item[0]?.matchId, item[0]?.roundNum);
+    return passesEconomyFilter(item.matchId, item.roundNum);
   });
 }
 
@@ -992,7 +1016,7 @@ function buildMapControlMarkup(mapName, side, frameClassList, frameStyle, mapIma
 
   const cards = windows.map(({ key, label }) => {
     const rawPoints = applyNewRosterFilter(mcSide.mapControl?.[key] ?? []);
-    const allPoints = applyPlantSiteFilter(rawPoints);
+    const allPoints = applyEconomyFilter(applyPlantSiteFilter(rawPoints));
     const points = allPoints.filter(pt => selectedPlayers.has(canonicalPlayerName(pt.player)));
     const roundCount = new Set(allPoints.map(pt => `${pt.matchId}|${pt.roundNum}`)).size;
     const dotsMarkup = allPoints.map(pt => {
@@ -1066,7 +1090,7 @@ function computeRotationLayers(mapName, side, selectedPlayers) {
   const afterSniperRounds = (isTestMode && sniperFilterRotation)
     ? allRotRounds.filter(rt => rt[0] && rotSniperKeySet.has(`${rt[0].matchId}|${rt[0].roundNum}`))
     : allRotRounds;
-  const rounds = applyPlantSiteFilter(afterSniperRounds);
+  const rounds = applyEconomyFilter(applyPlantSiteFilter(afterSniperRounds));
   const hasSelection = activeRotationTrail !== null;
   let svgLines = "";
   let dotsMarkup = "";
@@ -1197,7 +1221,7 @@ function renderDefensivePanels(info) {
     ? `<img class="heat-map-image" src="${mapImage}" alt="${mapName} map" loading="lazy" decoding="async" />`
     : "";
   // Only early-positioning players drive the sidebar filter
-  const earlyPlayers = collectDefensivePlayers(info);
+  const earlyPlayers = sortByPlayerOrder(collectDefensivePlayers(info));
   const selectedPlayers = getSelectedDefensiveSet(info, earlyPlayers);
   const earlyFilterState = ensureDefensiveFilterState(info, earlyPlayers);
   const sidebarChipsMarkup = earlyPlayers
@@ -1239,7 +1263,7 @@ function renderDefensivePanels(info) {
       const afterSniperFilter = (isTestMode && sniperFilterFK)
         ? basePoints.filter(p => sniperRoundKeySet.has(`${p.matchId}|${p.roundNum}`))
         : basePoints;
-      const allPoints = applyPlantSiteFilter(afterSniperFilter);
+      const allPoints = applyEconomyFilter(applyPlantSiteFilter(afterSniperFilter));
       const points = allPoints.filter((point) => selectedPlayers.has(canonicalPlayerName(point.player)));
       const roundCount = new Set(allPoints.map((point) => `${point.matchId}|${point.roundNum}`)).size;
       const pointsMarkup = allPoints
@@ -1279,7 +1303,7 @@ function renderDefensivePanels(info) {
     })
     .join("");
 
-  const sniperAllPoints = applyNewRosterFilter(info?.sniper?.points ?? []);
+  const sniperAllPoints = applyEconomyFilter(applyNewRosterFilter(info?.sniper?.points ?? []));
   const sniperPoints = sniperAllPoints; // unfiltered — sidebar only affects early positioning
   const sniperRoundCount = new Set(sniperAllPoints.map((point) => `${point.matchId}|${point.roundNum}`)).size;
   const sniperVisual = sniperPoints.map((point) => {
@@ -1344,7 +1368,7 @@ function renderDefensivePanels(info) {
   const allFkSniperPoints = (isTestMode && sniperFilterAllFK)
     ? allFkBasePoints.filter(p => sniperRoundKeySet.has(`${p.matchId}|${p.roundNum}`))
     : allFkBasePoints;
-  const allFkAllPoints = applyPlantSiteFilter(allFkSniperPoints);
+  const allFkAllPoints = applyEconomyFilter(applyPlantSiteFilter(allFkSniperPoints));
   const allFkRoundCount = new Set(allFkAllPoints.map(p => `${p.matchId}|${p.roundNum}`)).size;
   const allFkVisual = allFkAllPoints.map(point => {
     const killer = projectHeatmapPoint(point, mapName);
@@ -1397,7 +1421,7 @@ function renderDefensivePanels(info) {
   `;
 
   const retakeInfo = getRetakeInfo(activeTeam, activeSideView, mapName);
-  const retakeAllPoints = applyNewRosterFilter(collectRetakePoints(retakeInfo));
+  const retakeAllPoints = applyEconomyFilter(applyNewRosterFilter(collectRetakePoints(retakeInfo)));
   const retakeSiteOrder = ["A", "B", "C"];
   const siteColor = { A: "#df3a3a", B: "#2f68e8", C: "#0d8d52" };
   const retakeSiteChips = retakeSiteOrder
@@ -1448,6 +1472,7 @@ function renderDefensivePanels(info) {
       if (!retakeActiveSites.has(site)) continue;
       const rounds = ppData[site]?.rounds ?? [];
       for (const rnd of rounds) {
+        if (!passesEconomyFilter(rnd.matchId, rnd.roundNum)) continue;
         const snaps = rnd.snapshots ?? [];
         // Build per-player ordered trail for this round
         const playerTrail = {};
@@ -1477,7 +1502,11 @@ function renderDefensivePanels(info) {
             const color = getPlayerColor(pName);
             const tSec = (snap.timeSincePlantMs / 1000).toFixed(1);
             const title = `${pName} | Site ${site} | +${tSec}s | R${rnd.roundNum + 1} | ${rnd.date} vs ${rnd.opponent}`;
-            ppSnapshotDots += `<span class="heat-point retake-point" data-player="${encodeURIComponent(pName)}" style="left:${proj.x}%;top:${proj.y}%;background:${color};box-shadow:0 0 0 1.5px ${siteColor[site] ?? "#888"};" title="${title}"></span>`;
+            const agent = agentIconMode ? currentAgentLookup[rnd.matchId]?.[pl.player] : null;
+            const dotHtml = agent
+              ? `<span class="heat-point heat-point--icon retake-point" data-player="${encodeURIComponent(pName)}" style="left:${proj.x}%;top:${proj.y}%;background-image:url('${agentIconUrl(agent)}');outline:2px solid ${color};" title="${title} (${agent})"></span>`
+              : `<span class="heat-point retake-point" data-player="${encodeURIComponent(pName)}" style="left:${proj.x}%;top:${proj.y}%;background:${color};box-shadow:0 0 0 1.5px ${siteColor[site] ?? "#888"};" title="${title}"></span>`;
+            ppSnapshotDots += dotHtml + `<span class="retake-site-tag retake-site-tag-${site}" style="left:calc(${proj.x}% + 6px); top:calc(${proj.y}% - 8px);">${site}</span>`;
           }
         }
       }
@@ -1890,6 +1919,20 @@ function renderMapInfo() {
           </div>
         </div>
       ` : ""}
+      <div class="sample-eco-filter">
+        <div class="sample-eco-row">
+          <button class="sample-eco-btn${activeEcoTier === 'eco'   ? ' active' : ''}" data-eco-tier="eco"   type="button">$</button>
+          <button class="sample-eco-btn${activeEcoTier === 'force' ? ' active' : ''}" data-eco-tier="force" type="button">$$</button>
+          <button class="sample-eco-btn${activeEcoTier === 'full'  ? ' active' : ''}" data-eco-tier="full"  type="button">$$$</button>
+        </div>
+        <div class="sample-eco-row">
+          <button class="sample-eco-btn${activeEcoTier === 'pistol' ? ' active' : ''}" data-eco-tier="pistol" type="button">P</button>
+          <button class="sample-eco-btn sample-eco-op-btn${activeEcoOp ? ' active' : ''}" data-eco-op type="button">OP</button>
+        </div>
+        <div class="sample-eco-row">
+          <button class="sample-eco-btn sample-eco-enemy-btn${activeEnemyEco ? ' active' : ''}" data-eco-enemy type="button">Enemy ECO</button>
+        </div>
+      </div>
       <button class="sample-agent-btn${agentIconMode ? ' active' : ''}" type="button">Agent Icons</button>
     `;
     return;
@@ -2052,15 +2095,21 @@ function canonicalPlayerName(name) {
   return short;
 }
 
+const COLOR_SORT_ORDER = {
+  "#C62828": 0, "#e53935": 0,  // red
+  "#F9A825": 1, "#f1d500": 1,  // yellow
+  "#2E7D32": 2, "#00e676": 2,  // green
+  "#1565C0": 3, "#1f4fd6": 3,  // blue
+  "#E91E63": 4, "#ff4dac": 4,  // pink
+  "#ff7f0e": 5,                // orange (FKS 6th)
+};
+
 function sortByPlayerOrder(players) {
-  const order = TEAMS_CONFIG[activeTeam]?.playerOrder ?? [];
   return [...players].sort((a, b) => {
-    const ai = order.indexOf(canonicalPlayerName(a));
-    const bi = order.indexOf(canonicalPlayerName(b));
-    if (ai === -1 && bi === -1) return a.localeCompare(b);
-    if (ai === -1) return 1;
-    if (bi === -1) return -1;
-    return ai - bi;
+    const ra = COLOR_SORT_ORDER[getPlayerColor(canonicalPlayerName(a))] ?? 99;
+    const rb = COLOR_SORT_ORDER[getPlayerColor(canonicalPlayerName(b))] ?? 99;
+    if (ra !== rb) return ra - rb;
+    return String(a).localeCompare(String(b));
   });
 }
 
@@ -2302,9 +2351,20 @@ async function preloadAgentsData(teamKey) {
   const prefix = TEAM_FILE_PREFIX[teamKey];
   if (!prefix) return;
   try {
-    const resp = await fetch(`./data/${prefix}_agents.json`);
+    const resp = await fetch(`./data/${prefix}_agents.json?v=${AGENTS_DATA_VERSION}`, { cache: "no-store" });
     if (!resp.ok) return;
     allAgentsData[teamKey] = await resp.json();
+  } catch (_) {}
+}
+
+async function preloadEconomyData(teamKey) {
+  if (allEconomyData[teamKey]) return;
+  const prefix = TEAM_FILE_PREFIX[teamKey];
+  if (!prefix) return;
+  try {
+    const resp = await fetch(`./data/${prefix}_economy.json?v=${ECONOMY_DATA_VERSION}`, { cache: "no-store" });
+    if (!resp.ok) return;
+    allEconomyData[teamKey] = await resp.json();
   } catch (_) {}
 }
 
@@ -2407,10 +2467,49 @@ function positionSampleCard() {
 
 window.addEventListener('scroll', positionSampleCard, { passive: true });
 
+function syncEcoButtons() {
+  defensiveSampleCard.querySelectorAll("[data-eco-tier]").forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.ecoTier === activeEcoTier);
+  });
+  const opBtn = defensiveSampleCard.querySelector("[data-eco-op]");
+  if (opBtn) opBtn.classList.toggle("active", activeEcoOp);
+  const enemyBtn = defensiveSampleCard.querySelector("[data-eco-enemy]");
+  if (enemyBtn) enemyBtn.classList.toggle("active", activeEnemyEco);
+}
+
 document.getElementById("defensive-sample-card")?.addEventListener("click", (e) => {
   if (e.target.closest(".sample-agent-btn")) {
     agentIconMode = !agentIconMode;
     renderMapInfo();
+    return;
+  }
+  const ecoTierBtn = e.target.closest("[data-eco-tier]");
+  if (ecoTierBtn) {
+    const tier = ecoTierBtn.dataset.ecoTier;
+    activeEcoTier = activeEcoTier === tier ? null : tier;
+    syncEcoButtons();
+    if (lastDefensiveInfo) {
+      renderDefensivePanels(lastDefensiveInfo);
+      requestAnimationFrame(positionSampleCard);
+    }
+    return;
+  }
+  if (e.target.closest("[data-eco-op]")) {
+    activeEcoOp = !activeEcoOp;
+    syncEcoButtons();
+    if (lastDefensiveInfo) {
+      renderDefensivePanels(lastDefensiveInfo);
+      requestAnimationFrame(positionSampleCard);
+    }
+    return;
+  }
+  if (e.target.closest("[data-eco-enemy]")) {
+    activeEnemyEco = !activeEnemyEco;
+    syncEcoButtons();
+    if (lastDefensiveInfo) {
+      renderDefensivePanels(lastDefensiveInfo);
+      requestAnimationFrame(positionSampleCard);
+    }
     return;
   }
   const plantSiteBtn = e.target.closest("[data-plant-site]");
@@ -2452,6 +2551,7 @@ teamSelect.addEventListener("change", (event) => {
   activeDefensiveMap = "Bind";
   fksNewRosterFilter = false;
   agentIconMode = false;
+  activeEcoTier = null; activeEcoOp = false; activeEnemyEco = false;
   retakeActiveSites = new Set(["A", "B", "C"]);
   ppInlineActiveSites = new Set(["A", "B", "C"]);
   if (activeTeam === "eco") {
@@ -2468,6 +2568,7 @@ sideCtButton?.addEventListener("click", () => {
   activeRotationTrail = null;
   activeRotationWindow = null;
   activePlantSites = new Set();
+  activeEcoTier = null; activeEcoOp = false; activeEnemyEco = false;
   retakeActiveSites = new Set(["A", "B", "C"]);
   ppInlineActiveSites = new Set(["A", "B", "C"]);
   renderHero(allVetoHistoryData[activeTeam]);
@@ -2480,6 +2581,7 @@ sideTButton?.addEventListener("click", () => {
   activeRotationTrail = null;
   activeRotationWindow = null;
   activePlantSites = new Set();
+  activeEcoTier = null; activeEcoOp = false; activeEnemyEco = false;
   retakeActiveSites = new Set(["A", "B", "C"]);
   ppInlineActiveSites = new Set(["A", "B", "C"]);
   renderHero(allVetoHistoryData[activeTeam]);
@@ -2627,6 +2729,7 @@ if (defensiveMapSelect) {
     activeRotationTrail = null;
     activeRotationWindow = null;
     activePlantSites = new Set();
+    activeEcoTier = null; activeEcoOp = false; activeEnemyEco = false;
     renderMapInfo();
   });
 }
@@ -2704,3 +2807,4 @@ preloadRetakeData();
 preloadPostPlantData();
 teamOrder.forEach(teamKey => preloadSiteStats(teamKey));
 teamOrder.forEach(teamKey => preloadAgentsData(teamKey));
+teamOrder.forEach(teamKey => preloadEconomyData(teamKey));

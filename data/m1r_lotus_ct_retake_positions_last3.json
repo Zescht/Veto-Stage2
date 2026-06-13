@@ -1017,50 +1017,6 @@
     "C": {
       "rounds": [
         {
-          "roundNum": 5,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 15276,
-              "players": [
-                {
-                  "player": "Bishepss",
-                  "normX": 26.8525,
-                  "normY": 24.0808
-                },
-                {
-                  "player": "Redgar",
-                  "normX": 30.6541,
-                  "normY": 24.5848
-                }
-              ]
-            },
-            {
-              "timeSincePlantMs": 16202,
-              "players": [
-                {
-                  "player": "Redgar",
-                  "normX": 30.6541,
-                  "normY": 24.5848
-                }
-              ]
-            },
-            {
-              "timeSincePlantMs": 19709,
-              "players": [
-                {
-                  "player": "Redgar",
-                  "normX": 27.7165,
-                  "normY": 23.8504
-                }
-              ]
-            }
-          ],
-          "matchId": "7e978c0b-e635-42da-a32e-5042da2a6a3e",
-          "date": "2026-04-14",
-          "opponent": "UNI",
-          "score": "13-4"
-        },
-        {
           "roundNum": 12,
           "snapshots": [
             {
@@ -1431,6 +1387,50 @@
           "date": "2026-04-18",
           "opponent": "FMG",
           "score": "13-11"
+        },
+        {
+          "roundNum": 5,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 15276,
+              "players": [
+                {
+                  "player": "Bishepss",
+                  "normX": 26.8525,
+                  "normY": 24.0808
+                },
+                {
+                  "player": "Redgar",
+                  "normX": 30.6541,
+                  "normY": 24.5848
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 16202,
+              "players": [
+                {
+                  "player": "Redgar",
+                  "normX": 30.6541,
+                  "normY": 24.5848
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 19709,
+              "players": [
+                {
+                  "player": "Redgar",
+                  "normX": 27.7165,
+                  "normY": 23.8504
+                }
+              ]
+            }
+          ],
+          "matchId": "7e978c0b-e635-42da-a32e-5042da2a6a3e",
+          "date": "2026-04-14",
+          "opponent": "UNI",
+          "score": "13-4"
         }
       ]
     },

@@ -474,181 +474,18 @@
     }
   },
   "postPlant10_20": {
-    "A": {
+    "C": {
       "rounds": [
         {
           "roundNum": 12,
           "snapshots": [
             {
-              "timeSincePlantMs": 15851,
-              "players": [
-                {
-                  "player": "hoody",
-                  "normX": 78.2821,
-                  "normY": 41.0512
-                },
-                {
-                  "player": "Nowax",
-                  "normX": 78.3325,
-                  "normY": 39.46
-                },
-                {
-                  "player": "77even",
-                  "normX": 70.8013,
-                  "normY": 24.9304
-                }
-              ]
-            },
-            {
-              "timeSincePlantMs": 16562,
-              "players": [
-                {
-                  "player": "hoody",
-                  "normX": 77.3533,
-                  "normY": 39.5968
-                },
-                {
-                  "player": "Nowax",
-                  "normX": 79.9813,
-                  "normY": 38.956
-                },
-                {
-                  "player": "77even",
-                  "normX": 72.0325,
-                  "normY": 24.592
-                }
-              ]
-            },
-            {
-              "timeSincePlantMs": 18035,
+              "timeSincePlantMs": 17111,
               "players": [
                 {
                   "player": "Nowax",
-                  "normX": 80.8309,
-                  "normY": 35.3488
-                },
-                {
-                  "player": "77even",
-                  "normX": 73.1917,
-                  "normY": 24.2176
-                }
-              ]
-            },
-            {
-              "timeSincePlantMs": 18807,
-              "players": [
-                {
-                  "player": "77even",
-                  "normX": 73.6453,
-                  "normY": 23.9944
-                }
-              ]
-            }
-          ],
-          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
-          "date": "2026-05-05",
-          "opponent": "MDR",
-          "score": "13-7"
-        },
-        {
-          "roundNum": 16,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 19748,
-              "players": [
-                {
-                  "player": "Yuta",
-                  "normX": 75.7909,
-                  "normY": 21.8416
-                },
-                {
-                  "player": "hoody",
-                  "normX": 84.7837,
-                  "normY": 52.7368
-                },
-                {
-                  "player": "Nowax",
-                  "normX": 73.6885,
-                  "normY": 36.0832
-                },
-                {
-                  "player": "H1ber",
-                  "normX": 75.4813,
-                  "normY": 43.816
-                },
-                {
-                  "player": "77even",
-                  "normX": 81.1333,
-                  "normY": 50.3824
-                }
-              ]
-            }
-          ],
-          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
-          "date": "2026-05-05",
-          "opponent": "MDR",
-          "score": "13-7"
-        },
-        {
-          "roundNum": 13,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 16642,
-              "players": [
-                {
-                  "player": "hoody",
-                  "normX": 81.0685,
-                  "normY": 36.9472
-                },
-                {
-                  "player": "Yuta",
-                  "normX": 76.7341,
-                  "normY": 47.1208
-                },
-                {
-                  "player": "H1ber",
-                  "normX": 83.2573,
-                  "normY": 41.9368
-                },
-                {
-                  "player": "77even",
-                  "normX": 73.1413,
-                  "normY": 24.124
-                }
-              ]
-            },
-            {
-              "timeSincePlantMs": 17741,
-              "players": [
-                {
-                  "player": "hoody",
-                  "normX": 81.9829,
-                  "normY": 35.1328
-                },
-                {
-                  "player": "Yuta",
-                  "normX": 77.0941,
-                  "normY": 49.36
-                },
-                {
-                  "player": "77even",
-                  "normX": 73.2493,
-                  "normY": 23.98
-                }
-              ]
-            },
-            {
-              "timeSincePlantMs": 17949,
-              "players": [
-                {
-                  "player": "Yuta",
-                  "normX": 77.3317,
-                  "normY": 49.8784
-                },
-                {
-                  "player": "77even",
-                  "normX": 73.3789,
-                  "normY": 23.8792
+                  "normX": 14.8429,
+                  "normY": 41.08
                 }
               ]
             }
@@ -657,11 +494,90 @@
           "date": "2026-05-04",
           "opponent": "F9",
           "score": "13-7"
-        }
-      ]
-    },
-    "C": {
-      "rounds": [
+        },
+        {
+          "roundNum": 12,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 10626,
+              "players": [
+                {
+                  "player": "hoody",
+                  "normX": 26.1541,
+                  "normY": 73.588
+                },
+                {
+                  "player": "Nowax",
+                  "normX": 35.0533,
+                  "normY": 40.1656
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 11117,
+              "players": [
+                {
+                  "player": "Nowax",
+                  "normX": 36.2629,
+                  "normY": 40.216
+                }
+              ]
+            }
+          ],
+          "matchId": "8d41bf67-47a4-42e4-b353-00e8342091b9",
+          "date": "2026-05-12",
+          "opponent": "JL",
+          "score": "10-13"
+        },
+        {
+          "roundNum": 19,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 10054,
+              "players": [
+                {
+                  "player": "Yuta",
+                  "normX": 24.1669,
+                  "normY": 28.8544
+                },
+                {
+                  "player": "H1ber",
+                  "normX": 29.6893,
+                  "normY": 45.8176
+                },
+                {
+                  "player": "77even",
+                  "normX": 23.6269,
+                  "normY": 30.244
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 19050,
+              "players": [
+                {
+                  "player": "Yuta",
+                  "normX": 7.0453,
+                  "normY": 48.5536
+                },
+                {
+                  "player": "H1ber",
+                  "normX": 18.4861,
+                  "normY": 51.1024
+                },
+                {
+                  "player": "77even",
+                  "normX": 12.2653,
+                  "normY": 45.7384
+                }
+              ]
+            }
+          ],
+          "matchId": "8d41bf67-47a4-42e4-b353-00e8342091b9",
+          "date": "2026-05-12",
+          "opponent": "JL",
+          "score": "10-13"
+        },
         {
           "roundNum": 13,
           "snapshots": [
@@ -829,100 +745,71 @@
           "date": "2026-05-05",
           "opponent": "MDR",
           "score": "13-7"
-        },
+        }
+      ]
+    },
+    "A": {
+      "rounds": [
         {
-          "roundNum": 12,
+          "roundNum": 13,
           "snapshots": [
             {
-              "timeSincePlantMs": 10626,
+              "timeSincePlantMs": 16642,
               "players": [
                 {
                   "player": "hoody",
-                  "normX": 26.1541,
-                  "normY": 73.588
+                  "normX": 81.0685,
+                  "normY": 36.9472
                 },
                 {
-                  "player": "Nowax",
-                  "normX": 35.0533,
-                  "normY": 40.1656
+                  "player": "Yuta",
+                  "normX": 76.7341,
+                  "normY": 47.1208
+                },
+                {
+                  "player": "H1ber",
+                  "normX": 83.2573,
+                  "normY": 41.9368
+                },
+                {
+                  "player": "77even",
+                  "normX": 73.1413,
+                  "normY": 24.124
                 }
               ]
             },
             {
-              "timeSincePlantMs": 11117,
+              "timeSincePlantMs": 17741,
               "players": [
                 {
-                  "player": "Nowax",
-                  "normX": 36.2629,
-                  "normY": 40.216
-                }
-              ]
-            }
-          ],
-          "matchId": "8d41bf67-47a4-42e4-b353-00e8342091b9",
-          "date": "2026-05-12",
-          "opponent": "JL",
-          "score": "10-13"
-        },
-        {
-          "roundNum": 19,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 10054,
-              "players": [
-                {
-                  "player": "Yuta",
-                  "normX": 24.1669,
-                  "normY": 28.8544
+                  "player": "hoody",
+                  "normX": 81.9829,
+                  "normY": 35.1328
                 },
                 {
-                  "player": "H1ber",
-                  "normX": 29.6893,
-                  "normY": 45.8176
+                  "player": "Yuta",
+                  "normX": 77.0941,
+                  "normY": 49.36
                 },
                 {
                   "player": "77even",
-                  "normX": 23.6269,
-                  "normY": 30.244
+                  "normX": 73.2493,
+                  "normY": 23.98
                 }
               ]
             },
             {
-              "timeSincePlantMs": 19050,
+              "timeSincePlantMs": 17949,
               "players": [
                 {
                   "player": "Yuta",
-                  "normX": 7.0453,
-                  "normY": 48.5536
-                },
-                {
-                  "player": "H1ber",
-                  "normX": 18.4861,
-                  "normY": 51.1024
+                  "normX": 77.3317,
+                  "normY": 49.8784
                 },
                 {
                   "player": "77even",
-                  "normX": 12.2653,
-                  "normY": 45.7384
-                }
-              ]
-            }
-          ],
-          "matchId": "8d41bf67-47a4-42e4-b353-00e8342091b9",
-          "date": "2026-05-12",
-          "opponent": "JL",
-          "score": "10-13"
-        },
-        {
-          "roundNum": 12,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 17111,
-              "players": [
-                {
-                  "player": "Nowax",
-                  "normX": 14.8429,
-                  "normY": 41.08
+                  "normX": 73.3789,
+                  "normY": 23.8792
                 }
               ]
             }
@@ -930,6 +817,119 @@
           "matchId": "5e307ea4-fd33-4c81-8d48-d7dad9a92d0a",
           "date": "2026-05-04",
           "opponent": "F9",
+          "score": "13-7"
+        },
+        {
+          "roundNum": 12,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 15851,
+              "players": [
+                {
+                  "player": "hoody",
+                  "normX": 78.2821,
+                  "normY": 41.0512
+                },
+                {
+                  "player": "Nowax",
+                  "normX": 78.3325,
+                  "normY": 39.46
+                },
+                {
+                  "player": "77even",
+                  "normX": 70.8013,
+                  "normY": 24.9304
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 16562,
+              "players": [
+                {
+                  "player": "hoody",
+                  "normX": 77.3533,
+                  "normY": 39.5968
+                },
+                {
+                  "player": "Nowax",
+                  "normX": 79.9813,
+                  "normY": 38.956
+                },
+                {
+                  "player": "77even",
+                  "normX": 72.0325,
+                  "normY": 24.592
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18035,
+              "players": [
+                {
+                  "player": "Nowax",
+                  "normX": 80.8309,
+                  "normY": 35.3488
+                },
+                {
+                  "player": "77even",
+                  "normX": 73.1917,
+                  "normY": 24.2176
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18807,
+              "players": [
+                {
+                  "player": "77even",
+                  "normX": 73.6453,
+                  "normY": 23.9944
+                }
+              ]
+            }
+          ],
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "date": "2026-05-05",
+          "opponent": "MDR",
+          "score": "13-7"
+        },
+        {
+          "roundNum": 16,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 19748,
+              "players": [
+                {
+                  "player": "Yuta",
+                  "normX": 75.7909,
+                  "normY": 21.8416
+                },
+                {
+                  "player": "hoody",
+                  "normX": 84.7837,
+                  "normY": 52.7368
+                },
+                {
+                  "player": "Nowax",
+                  "normX": 73.6885,
+                  "normY": 36.0832
+                },
+                {
+                  "player": "H1ber",
+                  "normX": 75.4813,
+                  "normY": 43.816
+                },
+                {
+                  "player": "77even",
+                  "normX": 81.1333,
+                  "normY": 50.3824
+                }
+              ]
+            }
+          ],
+          "matchId": "1178179b-a3a2-41e7-b422-31337d263f8e",
+          "date": "2026-05-05",
+          "opponent": "MDR",
           "score": "13-7"
         }
       ]

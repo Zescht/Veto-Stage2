@@ -1761,6 +1761,7 @@ function renderDefensivePanels(info) {
         </div>`;
     })()}
   `;
+  updateEarlyDotsInPlace(info, selectedPlayers);
 }
 
 function updateEarlyDotsInPlace(info, selectedPlayers) {

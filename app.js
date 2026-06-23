@@ -167,7 +167,7 @@ const TEAM_MAP_CONTROL_DATA = Object.fromEntries(
 const allDefensiveRetake = {};
 const RETAKE_DATA_VERSION = "20260520a";
 const AGENTS_DATA_VERSION = "20260623a";
-const ECONOMY_DATA_VERSION = "20260613a";
+const ECONOMY_DATA_VERSION = "20260623a";
 const RETAKE_DATA_SOURCES = Object.entries(TEAMS_CONFIG).flatMap(([team, cfg]) =>
   ["ct", "t"].flatMap(side =>
     cfg.retakeMaps.map(map => ({

@@ -932,6 +932,36 @@
     {
       "agents": [
         "Jett",
+        "Phoenix",
+        "Sova",
+        "Omen",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "add6443a-41bd-e414-f6ad-e58d267f4e95",
+        "eb93336a-449b-9c1b-0a54-a891f7921d69",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-06-22",
+          "opponent": "BAR",
+          "matchId": "a997eac5-33ee-422b-8099-a18f2586bdd0",
+          "players": [
+            "EP Lime",
+            "EP kozzy",
+            "EP iluri",
+            "EP paTiTek",
+            "EP MAGNUM"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Jett",
         "KAY/O",
         "Sova",
         "Omen",
@@ -1171,6 +1201,18 @@
         "1e58de9c-4950-5125-93e9-a0aee9f98746"
       ],
       "games": [
+        {
+          "date": "2026-06-22",
+          "opponent": "BAR",
+          "matchId": "359fd9c6-a36b-4265-bcee-430ca088bc80",
+          "players": [
+            "EP kozzy",
+            "EP Lime",
+            "EP iluri",
+            "EP paTiTek",
+            "EP MAGNUM"
+          ]
+        },
         {
           "date": "2026-05-18",
           "opponent": "RB",

@@ -1164,6 +1164,36 @@
   "Fracture": [
     {
       "agents": [
+        "Phoenix",
+        "Raze",
+        "Fade",
+        "Brimstone",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "eb93336a-449b-9c1b-0a54-a891f7921d69",
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "9f0d8ba9-4140-b941-57d3-a7ad57c6b417",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-06-22",
+          "opponent": "EP",
+          "matchId": "359fd9c6-a36b-4265-bcee-430ca088bc80",
+          "players": [
+            "BAR Guardy",
+            "BAR globeX",
+            "BAR Fit1nho",
+            "BAR Kajuks",
+            "BAR Stonezy"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
         "Raze",
         "Breach",
         "Tejo",
@@ -1400,6 +1430,36 @@
     }
   ],
   "Ascent": [
+    {
+      "agents": [
+        "Jett",
+        "Phoenix",
+        "Sova",
+        "Omen",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "add6443a-41bd-e414-f6ad-e58d267f4e95",
+        "eb93336a-449b-9c1b-0a54-a891f7921d69",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-06-22",
+          "opponent": "EP",
+          "matchId": "a997eac5-33ee-422b-8099-a18f2586bdd0",
+          "players": [
+            "BAR globeX",
+            "BAR Guardy",
+            "BAR Fit1nho",
+            "BAR Kajuks",
+            "BAR Stonezy"
+          ]
+        }
+      ]
+    },
     {
       "agents": [
         "Jett",

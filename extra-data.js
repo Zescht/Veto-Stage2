@@ -5,6 +5,23 @@ const extraVetoHistoryData = {
     "subtitle": "2026 veto history",
     "rows": [
       {
+        "date": "2026-06-22",
+        "opponent": "Barça eSports",
+        "opponentAbbr": "BAR",
+        "score": "2 - 0",
+        "source": "https://liquipedia.net/valorant/Match:ID_e2P4tcattk_0001",
+        "decider": "Split",
+        "deciderScore": "",
+        "deciderLabel": "DECIDER",
+        "deciderTeamStartSide": "",
+        "ban1": { "map": "Breeze", "type": "ban", "ownerLabel": "EP", "ownerKind": "team" },
+        "ban2": { "map": "Pearl", "type": "ban", "ownerLabel": "BAR", "ownerKind": "opp" },
+        "pick1": { "map": "Fracture", "type": "pick", "ownerLabel": "EP", "ownerKind": "team", "score": "14:12", "pickLabel": "EP PICK", "teamStartSide": "" },
+        "pick2": { "map": "Ascent", "type": "pick", "ownerLabel": "BAR", "ownerKind": "opp", "score": "13:8", "pickLabel": "OPPONENT PICK", "teamStartSide": "" },
+        "ban3": { "map": "Haven", "type": "ban", "ownerLabel": "EP", "ownerKind": "team" },
+        "ban4": { "map": "Lotus", "type": "ban", "ownerLabel": "BAR", "ownerKind": "opp" }
+      },
+      {
         "date": "2026-05-20",
         "opponent": "FOKUS",
         "opponentAbbr": "FKS",
@@ -4489,6 +4506,23 @@ const extraVetoHistoryData = {
     "ownerLabel": "BAR",
     "subtitle": "2026 veto history",
     "rows": [
+      {
+        "date": "2026-06-22",
+        "opponent": "Enterprise",
+        "opponentAbbr": "EP",
+        "score": "0 - 2",
+        "source": "https://liquipedia.net/valorant/Match:ID_e2P4tcattk_0001",
+        "decider": "Split",
+        "deciderScore": "",
+        "deciderLabel": "DECIDER",
+        "deciderTeamStartSide": "",
+        "ban1": { "map": "Breeze", "type": "ban", "ownerLabel": "EP", "ownerKind": "opp" },
+        "ban2": { "map": "Pearl", "type": "ban", "ownerLabel": "BAR", "ownerKind": "team" },
+        "pick1": { "map": "Fracture", "type": "pick", "ownerLabel": "EP", "ownerKind": "opp", "score": "12:14", "pickLabel": "OPPONENT PICK", "teamStartSide": "" },
+        "pick2": { "map": "Ascent", "type": "pick", "ownerLabel": "BAR", "ownerKind": "team", "score": "8:13", "pickLabel": "BAR PICK", "teamStartSide": "" },
+        "ban3": { "map": "Haven", "type": "ban", "ownerLabel": "EP", "ownerKind": "opp" },
+        "ban4": { "map": "Lotus", "type": "ban", "ownerLabel": "BAR", "ownerKind": "team" }
+      },
       {
         "date": "2026-05-21",
         "opponent": "Joblife",

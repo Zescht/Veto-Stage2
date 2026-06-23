@@ -1,0 +1,103 @@
+{
+  "t_side": {
+    "total_rounds": 84,
+    "rounds_won": 55,
+    "pct_rounds_won": 65.5,
+    "won_by_kills": 47,
+    "pct_won_by_kills": 56.0,
+    "won_by_explosion": 8,
+    "pct_won_by_explosion": 9.5,
+    "avg_fk_time": 39.6,
+    "sites": {
+      "A": {
+        "plant_count": 31,
+        "pct_plant": 49.2,
+        "pct_win": 80.6,
+        "avg_plant_time": 63.5,
+        "min_plant_time": 21.5,
+        "max_plant_time": 100.0,
+        "fk_to_plant_avg": 30.4,
+        "fk_to_plant_n": 28
+      },
+      "B": {
+        "plant_count": 32,
+        "pct_plant": 50.8,
+        "pct_win": 93.8,
+        "avg_plant_time": 62.9,
+        "min_plant_time": 24.1,
+        "max_plant_time": 93.7,
+        "fk_to_plant_avg": 28.8,
+        "fk_to_plant_n": 29
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 47,
+    "rounds_won": 34,
+    "pct_rounds_won": 72.3,
+    "won_by_kills": 24,
+    "pct_won_by_kills": 51.1,
+    "won_by_defuse": 10,
+    "pct_won_by_defuse": 21.3,
+    "avg_fk_time": 29.8,
+    "sites": {
+      "A": {
+        "plant_count": 9,
+        "defuse_count": 5,
+        "pct_defuse_win": 55.6,
+        "pct_defuse_share": 50.0,
+        "avg_defuse_time": 33.6,
+        "fk_after_plant_avg": 7.7,
+        "fk_after_plant_n": 8
+      },
+      "B": {
+        "plant_count": 12,
+        "defuse_count": 5,
+        "pct_defuse_win": 41.7,
+        "pct_defuse_share": 50.0,
+        "avg_defuse_time": 22.5,
+        "fk_after_plant_avg": 7.2,
+        "fk_after_plant_n": 7
+      }
+    }
+  },
+  "team": "CGN Esports",
+  "map": "Split",
+  "matches": [
+    {
+      "date": "2026-05-10",
+      "opponent": "FKS",
+      "matchId": "bff0ed4c-d77c-4e3b-9fb8-4d89b57d3dc9"
+    },
+    {
+      "date": "2026-05-09",
+      "opponent": "RZN",
+      "matchId": "6ba8d834-66e3-47fa-97d2-7c4c4f5b84cb"
+    },
+    {
+      "date": "2026-04-26",
+      "opponent": "ATN",
+      "matchId": "a012662c-edd1-4104-9b5b-00f807c57ee8"
+    },
+    {
+      "date": "2026-04-25",
+      "opponent": "FKS",
+      "matchId": "2f81e93e-3c51-4ef3-82c4-b04698afc1e1"
+    },
+    {
+      "date": "2026-04-14",
+      "opponent": "ECO",
+      "matchId": "62705369-df99-48eb-b226-5904e659bfb0"
+    },
+    {
+      "date": "2026-04-07",
+      "opponent": "RZN",
+      "matchId": "56aec96e-d9c4-4e20-99b4-c64fd3cf8215"
+    },
+    {
+      "date": "2026-04-04",
+      "opponent": "AKA",
+      "matchId": "0a7605a8-75a9-4f7d-954e-07a4f82504b2"
+    }
+  ]
+}

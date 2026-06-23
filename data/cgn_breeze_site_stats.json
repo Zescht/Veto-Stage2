@@ -1,0 +1,93 @@
+{
+  "t_side": {
+    "total_rounds": 49,
+    "rounds_won": 35,
+    "pct_rounds_won": 71.4,
+    "won_by_kills": 29,
+    "pct_won_by_kills": 59.2,
+    "won_by_explosion": 6,
+    "pct_won_by_explosion": 12.2,
+    "avg_fk_time": 29.0,
+    "sites": {
+      "A": {
+        "plant_count": 17,
+        "pct_plant": 39.5,
+        "pct_win": 64.7,
+        "avg_plant_time": 54.3,
+        "min_plant_time": 22.6,
+        "max_plant_time": 87.2,
+        "fk_to_plant_avg": 37.5,
+        "fk_to_plant_n": 13
+      },
+      "B": {
+        "plant_count": 26,
+        "pct_plant": 60.5,
+        "pct_win": 84.6,
+        "avg_plant_time": 48.2,
+        "min_plant_time": 20.6,
+        "max_plant_time": 91.3,
+        "fk_to_plant_avg": 23.0,
+        "fk_to_plant_n": 23
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 44,
+    "rounds_won": 23,
+    "pct_rounds_won": 52.3,
+    "won_by_kills": 16,
+    "pct_won_by_kills": 36.4,
+    "won_by_defuse": 7,
+    "pct_won_by_defuse": 15.9,
+    "avg_fk_time": 35.5,
+    "sites": {
+      "A": {
+        "plant_count": 15,
+        "defuse_count": 4,
+        "pct_defuse_win": 26.7,
+        "pct_defuse_share": 57.1,
+        "avg_defuse_time": 25.7,
+        "fk_after_plant_avg": 10.4,
+        "fk_after_plant_n": 10
+      },
+      "B": {
+        "plant_count": 9,
+        "defuse_count": 3,
+        "pct_defuse_win": 33.3,
+        "pct_defuse_share": 42.9,
+        "avg_defuse_time": 26.2,
+        "fk_after_plant_avg": 11.4,
+        "fk_after_plant_n": 8
+      }
+    }
+  },
+  "team": "CGN Esports",
+  "map": "Breeze",
+  "matches": [
+    {
+      "date": "2026-05-10",
+      "opponent": "FKS",
+      "matchId": "47dc41fc-26bf-40f4-8557-e20aaf70ce30"
+    },
+    {
+      "date": "2026-04-26",
+      "opponent": "ATN",
+      "matchId": "b1a8268f-fa07-4829-b901-3e7244de4805"
+    },
+    {
+      "date": "2026-04-25",
+      "opponent": "FKS",
+      "matchId": "7547a3f3-723a-490c-af39-c21290d314bd"
+    },
+    {
+      "date": "2026-04-19",
+      "opponent": "SGE",
+      "matchId": "fd6c3337-92a5-479d-aa2f-30f9fd9dab60"
+    },
+    {
+      "date": "2026-04-11",
+      "opponent": "DXG",
+      "matchId": "029ff2ba-58f2-4405-8d74-00d0c4578d02"
+    }
+  ]
+}

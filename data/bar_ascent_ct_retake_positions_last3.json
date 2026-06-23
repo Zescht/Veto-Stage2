@@ -3,6 +3,12 @@
   "side": "ct",
   "selectedMaps": [
     {
+      "date": "2026-06-22",
+      "opponent": "EP",
+      "matchId": "a997eac5-33ee-422b-8099-a18f2586bdd0",
+      "score": "8-13"
+    },
+    {
       "date": "2026-05-21",
       "opponent": "JL",
       "matchId": "0d55660d-21c9-48ee-b9e2-eb5fef677135",
@@ -17,9 +23,249 @@
   ],
   "sites": {
     "A": {
-      "roundCount": 5,
-      "pointCount": 9,
+      "roundCount": 12,
+      "pointCount": 29,
       "points": [
+        {
+          "site": "A",
+          "player": "globeX",
+          "normX": 88.1128,
+          "normY": 50.2815,
+          "roundNum": 12,
+          "plantRoundTimeMs": 45964,
+          "date": "2026-06-22",
+          "opponent": "EP",
+          "matchId": "a997eac5-33ee-422b-8099-a18f2586bdd0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "Stonezy",
+          "normX": 47.5478,
+          "normY": 19.1175,
+          "roundNum": 12,
+          "plantRoundTimeMs": 45964,
+          "date": "2026-06-22",
+          "opponent": "EP",
+          "matchId": "a997eac5-33ee-422b-8099-a18f2586bdd0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "Fit1nho",
+          "normX": 44.5728,
+          "normY": 14.8825,
+          "roundNum": 12,
+          "plantRoundTimeMs": 45964,
+          "date": "2026-06-22",
+          "opponent": "EP",
+          "matchId": "a997eac5-33ee-422b-8099-a18f2586bdd0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "globeX",
+          "normX": 44.2368,
+          "normY": 52.3465,
+          "roundNum": 13,
+          "plantRoundTimeMs": 34388,
+          "date": "2026-06-22",
+          "opponent": "EP",
+          "matchId": "a997eac5-33ee-422b-8099-a18f2586bdd0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "Guardy",
+          "normX": 58.2088,
+          "normY": 53.3825,
+          "roundNum": 13,
+          "plantRoundTimeMs": 34388,
+          "date": "2026-06-22",
+          "opponent": "EP",
+          "matchId": "a997eac5-33ee-422b-8099-a18f2586bdd0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "Fit1nho",
+          "normX": 55.4998,
+          "normY": 49.5395,
+          "roundNum": 13,
+          "plantRoundTimeMs": 34388,
+          "date": "2026-06-22",
+          "opponent": "EP",
+          "matchId": "a997eac5-33ee-422b-8099-a18f2586bdd0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "globeX",
+          "normX": 81.4978,
+          "normY": 23.6675,
+          "roundNum": 14,
+          "plantRoundTimeMs": 77015,
+          "date": "2026-06-22",
+          "opponent": "EP",
+          "matchId": "a997eac5-33ee-422b-8099-a18f2586bdd0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "Stonezy",
+          "normX": 70.4308,
+          "normY": 35.1405,
+          "roundNum": 14,
+          "plantRoundTimeMs": 77015,
+          "date": "2026-06-22",
+          "opponent": "EP",
+          "matchId": "a997eac5-33ee-422b-8099-a18f2586bdd0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "Fit1nho",
+          "normX": 66.1398,
+          "normY": 42.7355,
+          "roundNum": 14,
+          "plantRoundTimeMs": 77015,
+          "date": "2026-06-22",
+          "opponent": "EP",
+          "matchId": "a997eac5-33ee-422b-8099-a18f2586bdd0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "globeX",
+          "normX": 75.0158,
+          "normY": 19.7335,
+          "roundNum": 15,
+          "plantRoundTimeMs": 80182,
+          "date": "2026-06-22",
+          "opponent": "EP",
+          "matchId": "a997eac5-33ee-422b-8099-a18f2586bdd0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "Guardy",
+          "normX": 72.8878,
+          "normY": 31.3605,
+          "roundNum": 15,
+          "plantRoundTimeMs": 80182,
+          "date": "2026-06-22",
+          "opponent": "EP",
+          "matchId": "a997eac5-33ee-422b-8099-a18f2586bdd0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "Stonezy",
+          "normX": 51.9648,
+          "normY": 34.8045,
+          "roundNum": 15,
+          "plantRoundTimeMs": 80182,
+          "date": "2026-06-22",
+          "opponent": "EP",
+          "matchId": "a997eac5-33ee-422b-8099-a18f2586bdd0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "Fit1nho",
+          "normX": 76.1148,
+          "normY": 19.4675,
+          "roundNum": 15,
+          "plantRoundTimeMs": 80182,
+          "date": "2026-06-22",
+          "opponent": "EP",
+          "matchId": "a997eac5-33ee-422b-8099-a18f2586bdd0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "globeX",
+          "normX": 76.4928,
+          "normY": 24.2275,
+          "roundNum": 18,
+          "plantRoundTimeMs": 93193,
+          "date": "2026-06-22",
+          "opponent": "EP",
+          "matchId": "a997eac5-33ee-422b-8099-a18f2586bdd0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "Stonezy",
+          "normX": 68.3518,
+          "normY": 16.7585,
+          "roundNum": 18,
+          "plantRoundTimeMs": 93193,
+          "date": "2026-06-22",
+          "opponent": "EP",
+          "matchId": "a997eac5-33ee-422b-8099-a18f2586bdd0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "Fit1nho",
+          "normX": 75.1488,
+          "normY": 16.3735,
+          "roundNum": 18,
+          "plantRoundTimeMs": 93193,
+          "date": "2026-06-22",
+          "opponent": "EP",
+          "matchId": "a997eac5-33ee-422b-8099-a18f2586bdd0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "globeX",
+          "normX": 73.3848,
+          "normY": 36.9815,
+          "roundNum": 19,
+          "plantRoundTimeMs": 92640,
+          "date": "2026-06-22",
+          "opponent": "EP",
+          "matchId": "a997eac5-33ee-422b-8099-a18f2586bdd0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "Kajuks",
+          "normX": 59.8678,
+          "normY": 46.7745,
+          "roundNum": 19,
+          "plantRoundTimeMs": 92640,
+          "date": "2026-06-22",
+          "opponent": "EP",
+          "matchId": "a997eac5-33ee-422b-8099-a18f2586bdd0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "Stonezy",
+          "normX": 77.8578,
+          "normY": 23.1915,
+          "roundNum": 19,
+          "plantRoundTimeMs": 92640,
+          "date": "2026-06-22",
+          "opponent": "EP",
+          "matchId": "a997eac5-33ee-422b-8099-a18f2586bdd0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "Guardy",
+          "normX": 75.9118,
+          "normY": 19.3765,
+          "roundNum": 20,
+          "plantRoundTimeMs": 26163,
+          "date": "2026-06-22",
+          "opponent": "EP",
+          "matchId": "a997eac5-33ee-422b-8099-a18f2586bdd0",
+          "score": "8-13"
+        },
         {
           "site": "A",
           "player": "Stonezy",
@@ -131,9 +377,45 @@
       ]
     },
     "B": {
-      "roundCount": 1,
-      "pointCount": 1,
+      "roundCount": 3,
+      "pointCount": 4,
       "points": [
+        {
+          "site": "B",
+          "player": "Kajuks",
+          "normX": 30.3278,
+          "normY": 21.1195,
+          "roundNum": 16,
+          "plantRoundTimeMs": 94189,
+          "date": "2026-06-22",
+          "opponent": "EP",
+          "matchId": "a997eac5-33ee-422b-8099-a18f2586bdd0",
+          "score": "8-13"
+        },
+        {
+          "site": "B",
+          "player": "Kajuks",
+          "normX": 53.2388,
+          "normY": 13.8535,
+          "roundNum": 17,
+          "plantRoundTimeMs": 96840,
+          "date": "2026-06-22",
+          "opponent": "EP",
+          "matchId": "a997eac5-33ee-422b-8099-a18f2586bdd0",
+          "score": "8-13"
+        },
+        {
+          "site": "B",
+          "player": "Stonezy",
+          "normX": 49.3748,
+          "normY": 15.4635,
+          "roundNum": 17,
+          "plantRoundTimeMs": 96840,
+          "date": "2026-06-22",
+          "opponent": "EP",
+          "matchId": "a997eac5-33ee-422b-8099-a18f2586bdd0",
+          "score": "8-13"
+        },
         {
           "site": "B",
           "player": "Kajuks",
@@ -145,6 +427,260 @@
           "opponent": "GLS",
           "matchId": "6d420117-e5e0-4edc-82f6-6fd5084a6beb",
           "score": "12-14"
+        }
+      ]
+    }
+  },
+  "postPlant10_20": {
+    "A": {
+      "rounds": [
+        {
+          "roundNum": 13,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 15053,
+              "players": [
+                {
+                  "player": "globeX",
+                  "normX": 71.8938,
+                  "normY": 64.7855
+                }
+              ]
+            }
+          ],
+          "matchId": "a997eac5-33ee-422b-8099-a18f2586bdd0",
+          "date": "2026-06-22",
+          "opponent": "EP",
+          "score": "8-13"
+        },
+        {
+          "roundNum": 14,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 11855,
+              "players": [
+                {
+                  "player": "globeX",
+                  "normX": 84.8298,
+                  "normY": 22.8905
+                },
+                {
+                  "player": "Fit1nho",
+                  "normX": 66.4898,
+                  "normY": 42.5255
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15915,
+              "players": [
+                {
+                  "player": "Fit1nho",
+                  "normX": 70.6618,
+                  "normY": 37.7935
+                }
+              ]
+            }
+          ],
+          "matchId": "a997eac5-33ee-422b-8099-a18f2586bdd0",
+          "date": "2026-06-22",
+          "opponent": "EP",
+          "score": "8-13"
+        },
+        {
+          "roundNum": 15,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 15789,
+              "players": [
+                {
+                  "player": "Guardy",
+                  "normX": 79.9228,
+                  "normY": 24.9905
+                },
+                {
+                  "player": "Stonezy",
+                  "normX": 71.5648,
+                  "normY": 37.2825
+                },
+                {
+                  "player": "Fit1nho",
+                  "normX": 77.0948,
+                  "normY": 20.7485
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 17382,
+              "players": [
+                {
+                  "player": "Guardy",
+                  "normX": 77.8298,
+                  "normY": 24.1785
+                },
+                {
+                  "player": "Stonezy",
+                  "normX": 70.2698,
+                  "normY": 34.2585
+                },
+                {
+                  "player": "Fit1nho",
+                  "normX": 77.2768,
+                  "normY": 22.5125
+                }
+              ]
+            }
+          ],
+          "matchId": "a997eac5-33ee-422b-8099-a18f2586bdd0",
+          "date": "2026-06-22",
+          "opponent": "EP",
+          "score": "8-13"
+        },
+        {
+          "roundNum": 19,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 12287,
+              "players": [
+                {
+                  "player": "globeX",
+                  "normX": 67.5118,
+                  "normY": 37.1705
+                },
+                {
+                  "player": "Stonezy",
+                  "normX": 71.2498,
+                  "normY": 28.7215
+                }
+              ]
+            }
+          ],
+          "matchId": "0d55660d-21c9-48ee-b9e2-eb5fef677135",
+          "date": "2026-05-21",
+          "opponent": "JL",
+          "score": "7-13"
+        },
+        {
+          "roundNum": 18,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 14361,
+              "players": [
+                {
+                  "player": "globeX",
+                  "normX": 81.7358,
+                  "normY": 22.8905
+                },
+                {
+                  "player": "Stonezy",
+                  "normX": 61.9258,
+                  "normY": 44.3595
+                },
+                {
+                  "player": "Fit1nho",
+                  "normX": 76.8708,
+                  "normY": 24.4095
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 17392,
+              "players": [
+                {
+                  "player": "globeX",
+                  "normX": 86.1738,
+                  "normY": 23.1845
+                },
+                {
+                  "player": "Stonezy",
+                  "normX": 65.7478,
+                  "normY": 44.0445
+                },
+                {
+                  "player": "Fit1nho",
+                  "normX": 84.2348,
+                  "normY": 22.9955
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18124,
+              "players": [
+                {
+                  "player": "globeX",
+                  "normX": 86.7828,
+                  "normY": 23.2405
+                },
+                {
+                  "player": "Stonezy",
+                  "normX": 66.3568,
+                  "normY": 42.3855
+                },
+                {
+                  "player": "Fit1nho",
+                  "normX": 84.2348,
+                  "normY": 22.9955
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18437,
+              "players": [
+                {
+                  "player": "Stonezy",
+                  "normX": 66.3568,
+                  "normY": 42.3855
+                },
+                {
+                  "player": "Fit1nho",
+                  "normX": 84.2348,
+                  "normY": 22.9955
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18908,
+              "players": [
+                {
+                  "player": "Stonezy",
+                  "normX": 67.2318,
+                  "normY": 41.9865
+                },
+                {
+                  "player": "Fit1nho",
+                  "normX": 84.7598,
+                  "normY": 23.0795
+                }
+              ]
+            }
+          ],
+          "matchId": "6d420117-e5e0-4edc-82f6-6fd5084a6beb",
+          "date": "2026-05-20",
+          "opponent": "GLS",
+          "score": "12-14"
+        }
+      ]
+    },
+    "B": {
+      "rounds": [
+        {
+          "roundNum": 16,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 11860,
+              "players": [
+                {
+                  "player": "Kajuks",
+                  "normX": 26.7788,
+                  "normY": 20.8535
+                }
+              ]
+            }
+          ],
+          "matchId": "a997eac5-33ee-422b-8099-a18f2586bdd0",
+          "date": "2026-06-22",
+          "opponent": "EP",
+          "score": "8-13"
         }
       ]
     }

@@ -129,11 +129,11 @@ const TEAMS_CONFIG = {
   },
   cgn: {
     filePrefix:   "cgn",
-    mapControl:   {},
-    statMaps:     [],
-    retakeMaps:   [],
-    playerColors: {},
-    playerOrder:  [],
+    mapControl:   typeof cgnMapControlData !== "undefined" ? cgnMapControlData : {},
+    statMaps:     ["Breeze", "Fracture", "Haven", "Lotus", "Split"],
+    retakeMaps:   ["Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
+    playerColors: { "DaviH": "#1565C0", "Samed": "#F9A825", "Vince": "#C62828", "Wolfen": "#2E7D32", "Zyppan": "#E91E63" },
+    playerOrder:  ["DaviH", "Samed", "Vince", "Wolfen", "Zyppan"],
   },
   alqadsiah: {
     filePrefix:   "aqd",
@@ -166,7 +166,7 @@ const TEAM_MAP_CONTROL_DATA = Object.fromEntries(
 );
 const allDefensiveRetake = {};
 const RETAKE_DATA_VERSION = "20260520a";
-const AGENTS_DATA_VERSION = "20260612a";
+const AGENTS_DATA_VERSION = "20260615a";
 const ECONOMY_DATA_VERSION = "20260613a";
 const RETAKE_DATA_SOURCES = Object.entries(TEAMS_CONFIG).flatMap(([team, cfg]) =>
   ["ct", "t"].flatMap(side =>
@@ -612,9 +612,7 @@ function getPlayerDisplayName(playerName) {
 }
 
 function collectPlayersFromPoints(ctPoints, tPoints) {
-  return [...new Set([...ctPoints, ...tPoints].map((point) => canonicalPlayerName(point.player)).filter(Boolean))].sort((a, b) =>
-    getPlayerDisplayName(a).localeCompare(getPlayerDisplayName(b))
-  );
+  return sortByPlayerOrder([...new Set([...ctPoints, ...tPoints].map((point) => canonicalPlayerName(point.player)).filter(Boolean))]);
 }
 
 function ensurePlayerFilterState(players) {
@@ -1439,6 +1437,7 @@ function renderDefensivePanels(info) {
 
   // Normal plant-time dots
   const retakePoints = retakeAllPoints.filter((point) => retakeActiveSites.has(String(point.site || "").toUpperCase()));
+  const retakeRoundCount = new Set(retakePoints.map(pt => `${pt.matchId}|${pt.roundNum}`)).size;
   const retakePointsMarkup = retakePoints
     .map((point) => {
       const rName = canonicalPlayerName(point.player);
@@ -1465,6 +1464,7 @@ function renderDefensivePanels(info) {
   let ppSnapshotSvg = "";
   let ppSnapshotDots = "";
   let ppSnapshotLegendMarkup = "";
+  let ppRoundSet = new Set();
   if (retakePostPlantMode && retakeInfo?.postPlant10_20) {
     const ppData = retakeInfo.postPlant10_20;
     const ppPlayers = new Set();
@@ -1473,6 +1473,7 @@ function renderDefensivePanels(info) {
       const rounds = ppData[site]?.rounds ?? [];
       for (const rnd of rounds) {
         if (!passesEconomyFilter(rnd.matchId, rnd.roundNum)) continue;
+        ppRoundSet.add(`${rnd.matchId}|${rnd.roundNum}`);
         const snaps = rnd.snapshots ?? [];
         // Build per-player ordered trail for this round
         const playerTrail = {};
@@ -1527,10 +1528,15 @@ function renderDefensivePanels(info) {
 
   const activeLegendMarkup = retakePostPlantMode ? ppSnapshotLegendMarkup : retakeLegendMarkup;
 
+  const retakeMeta = retakePostPlantMode
+    ? `Rounds: ${ppRoundSet.size}`
+    : `Rounds: ${retakeRoundCount} | Points: ${retakePoints.length}`;
+
   const retakeMarkup = retakeInfo && activeSideView === "ct"
     ? `
     <article class="defensive-card">
       <div class="retake-site-chip-row">${retakeSiteChips}${ppToggleBtn}</div>
+      <p class="defensive-card-meta">${retakeMeta}</p>
       <div class="defensive-map-wrap">
         <div class="defensive-map">
           <div class="${frameClassList}" style="${frameStyle}">
@@ -1578,6 +1584,7 @@ function renderDefensivePanels(info) {
     const allPpPts = availableSites
       .filter(s => ppInlineActiveSites.has(s))
       .flatMap(s => ppInlineData.sites[s]?.points ?? []);
+    const ppInlineRoundCount = new Set(allPpPts.map(pt => `${pt.matchId}|${pt.roundNum}`)).size;
 
     const ppDotsMarkup = allPpPts.length
       ? allPpPts.map(pt => {
@@ -1606,6 +1613,7 @@ function renderDefensivePanels(info) {
     ppInlineMarkup = `
       <article class="defensive-card">
         <div class="retake-site-chip-row">${ppSiteChips}</div>
+        <p class="defensive-card-meta">Rounds: ${ppInlineRoundCount} | Points: ${allPpPts.length}</p>
         <div class="defensive-map-wrap">
           <div class="defensive-map">
             <div class="${frameClass}" style="${frameStyle}">
@@ -1651,8 +1659,12 @@ function renderDefensivePanels(info) {
         <div class="site-stats-wrap">
           <table class="site-stats-table">
             <thead><tr>
-              <th>SITE</th><th>% PLANT</th><th>% WIN</th>
-              <th>TIME TO PLANT</th><th>MIN / MAX</th><th>FK → PLANT</th>
+              <th title="Which bombsite (A, B, or C) the row refers to.">SITE</th>
+              <th title="Of all T-side rounds where a spike was planted, what % were planted at this site.">% PLANT</th>
+              <th title="Of all rounds where the spike was planted at this site, what % did the team win.">% WIN</th>
+              <th title="Average time from round start to when the spike was planted at this site.">TIME TO PLANT</th>
+              <th title="Fastest and slowest plant times recorded at this site across the sample.">MIN / MAX</th>
+              <th title="Average time between the first kill of the round and the spike plant at this site.">FK → PLANT <button class="site-stats-info-btn" data-site-stats-info type="button" title="Show games">i</button></th>
             </tr></thead>
             <tbody>${rows}</tbody>
           </table>
@@ -1684,8 +1696,11 @@ function renderDefensivePanels(info) {
         <div class="site-stats-wrap">
           <table class="site-stats-table">
             <thead><tr>
-              <th>SITE</th><th>% DEFUSE</th><th>% DEFUSEWIN</th>
-              <th>TIME TO DEFUSE</th><th>FK AFTER PLANT <button class="site-stats-info-btn" data-site-stats-info type="button" title="Show games">i</button></th>
+              <th title="Which bombsite (A, B, or C) the row refers to.">SITE</th>
+              <th title="Of all CT rounds where the spike was planted, what % of those plants happened at this site.">% DEFUSE</th>
+              <th title="Of all rounds where the spike was planted at this site, what % did the CT side win (by defuse or killing all attackers).">% DEFUSEWIN</th>
+              <th title="Average time from spike plant to successful defuse, for rounds that ended in a defuse at this site.">TIME TO DEFUSE</th>
+              <th title="Average time between the spike plant and the first kill in the post-plant phase at this site.">FK AFTER PLANT <button class="site-stats-info-btn" data-site-stats-info type="button" title="Show games">i</button></th>
             </tr></thead>
             <tbody>${rows}</tbody>
           </table>
@@ -2234,10 +2249,10 @@ function renderPostPlant() {
     ).join("");
   }
 
-  const allPlayers = [...new Set([
+  const allPlayers = sortByPlayerOrder([...new Set([
     ...Object.values(postPlantData.postPlant).flatMap(s => s.points.map(p => p.player)),
     ...Object.values(postPlantData.retake).flatMap(s => s.points.map(p => p.player)),
-  ])].sort();
+  ])]);
   renderPpLegend(allPlayers);
 
   const ppPoints = ppGetPoints("postPlant", ppActiveSite);

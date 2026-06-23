@@ -1,0 +1,685 @@
+{
+  "map": "Breeze",
+  "side": "ct",
+  "selectedMaps": [
+    {
+      "date": "2026-05-19",
+      "opponent": "NVJ",
+      "matchId": "8a599dd0-4469-4e75-9f2f-d837b14f03f7",
+      "score": "10-13"
+    },
+    {
+      "date": "2026-05-10",
+      "opponent": "FKS",
+      "matchId": "47dc41fc-26bf-40f4-8557-e20aaf70ce30",
+      "score": "13-6"
+    },
+    {
+      "date": "2026-04-26",
+      "opponent": "ATN",
+      "matchId": "b1a8268f-fa07-4829-b901-3e7244de4805",
+      "score": "13-3"
+    }
+  ],
+  "sites": {
+    "A": {
+      "roundCount": 4,
+      "pointCount": 13,
+      "points": [
+        {
+          "site": "A",
+          "player": "Samed",
+          "normX": 64.0333,
+          "normY": 17.3538,
+          "roundNum": 17,
+          "plantRoundTimeMs": 14855,
+          "date": "2026-05-10",
+          "opponent": "FKS",
+          "matchId": "47dc41fc-26bf-40f4-8557-e20aaf70ce30",
+          "score": "13-6"
+        },
+        {
+          "site": "A",
+          "player": "Wolfen",
+          "normX": 42.4383,
+          "normY": 28.6028,
+          "roundNum": 17,
+          "plantRoundTimeMs": 14855,
+          "date": "2026-05-10",
+          "opponent": "FKS",
+          "matchId": "47dc41fc-26bf-40f4-8557-e20aaf70ce30",
+          "score": "13-6"
+        },
+        {
+          "site": "A",
+          "player": "DaviH",
+          "normX": 50.8593,
+          "normY": 21.7778,
+          "roundNum": 17,
+          "plantRoundTimeMs": 14855,
+          "date": "2026-05-10",
+          "opponent": "FKS",
+          "matchId": "47dc41fc-26bf-40f4-8557-e20aaf70ce30",
+          "score": "13-6"
+        },
+        {
+          "site": "A",
+          "player": "Zyppan",
+          "normX": 74.0293,
+          "normY": 40.0408,
+          "roundNum": 18,
+          "plantRoundTimeMs": 96666,
+          "date": "2026-05-10",
+          "opponent": "FKS",
+          "matchId": "47dc41fc-26bf-40f4-8557-e20aaf70ce30",
+          "score": "13-6"
+        },
+        {
+          "site": "A",
+          "player": "DaviH",
+          "normX": 20.4653,
+          "normY": 47.8038,
+          "roundNum": 18,
+          "plantRoundTimeMs": 96666,
+          "date": "2026-05-10",
+          "opponent": "FKS",
+          "matchId": "47dc41fc-26bf-40f4-8557-e20aaf70ce30",
+          "score": "13-6"
+        },
+        {
+          "site": "A",
+          "player": "Samed",
+          "normX": 75.8703,
+          "normY": 31.8228,
+          "roundNum": 2,
+          "plantRoundTimeMs": 86909,
+          "date": "2026-04-26",
+          "opponent": "ATN",
+          "matchId": "b1a8268f-fa07-4829-b901-3e7244de4805",
+          "score": "13-3"
+        },
+        {
+          "site": "A",
+          "player": "Zyppan",
+          "normX": 69.6823,
+          "normY": 27.3568,
+          "roundNum": 2,
+          "plantRoundTimeMs": 86909,
+          "date": "2026-04-26",
+          "opponent": "ATN",
+          "matchId": "b1a8268f-fa07-4829-b901-3e7244de4805",
+          "score": "13-3"
+        },
+        {
+          "site": "A",
+          "player": "DaviH",
+          "normX": 74.4843,
+          "normY": 21.1618,
+          "roundNum": 2,
+          "plantRoundTimeMs": 86909,
+          "date": "2026-04-26",
+          "opponent": "ATN",
+          "matchId": "b1a8268f-fa07-4829-b901-3e7244de4805",
+          "score": "13-3"
+        },
+        {
+          "site": "A",
+          "player": "Vince ",
+          "normX": 48.2203,
+          "normY": 48.2378,
+          "roundNum": 7,
+          "plantRoundTimeMs": 61432,
+          "date": "2026-04-26",
+          "opponent": "ATN",
+          "matchId": "b1a8268f-fa07-4829-b901-3e7244de4805",
+          "score": "13-3"
+        },
+        {
+          "site": "A",
+          "player": "Samed",
+          "normX": 65.4263,
+          "normY": 44.8498,
+          "roundNum": 7,
+          "plantRoundTimeMs": 61432,
+          "date": "2026-04-26",
+          "opponent": "ATN",
+          "matchId": "b1a8268f-fa07-4829-b901-3e7244de4805",
+          "score": "13-3"
+        },
+        {
+          "site": "A",
+          "player": "Zyppan",
+          "normX": 73.2453,
+          "normY": 22.4148,
+          "roundNum": 7,
+          "plantRoundTimeMs": 61432,
+          "date": "2026-04-26",
+          "opponent": "ATN",
+          "matchId": "b1a8268f-fa07-4829-b901-3e7244de4805",
+          "score": "13-3"
+        },
+        {
+          "site": "A",
+          "player": "Wolfen",
+          "normX": 72.1673,
+          "normY": 36.5338,
+          "roundNum": 7,
+          "plantRoundTimeMs": 61432,
+          "date": "2026-04-26",
+          "opponent": "ATN",
+          "matchId": "b1a8268f-fa07-4829-b901-3e7244de4805",
+          "score": "13-3"
+        },
+        {
+          "site": "A",
+          "player": "DaviH",
+          "normX": 63.3963,
+          "normY": 46.0748,
+          "roundNum": 7,
+          "plantRoundTimeMs": 61432,
+          "date": "2026-04-26",
+          "opponent": "ATN",
+          "matchId": "b1a8268f-fa07-4829-b901-3e7244de4805",
+          "score": "13-3"
+        }
+      ]
+    },
+    "B": {
+      "roundCount": 4,
+      "pointCount": 15,
+      "points": [
+        {
+          "site": "B",
+          "player": "Vince ",
+          "normX": 42.3823,
+          "normY": 26.0968,
+          "roundNum": 16,
+          "plantRoundTimeMs": 34007,
+          "date": "2026-05-10",
+          "opponent": "FKS",
+          "matchId": "47dc41fc-26bf-40f4-8557-e20aaf70ce30",
+          "score": "13-6"
+        },
+        {
+          "site": "B",
+          "player": "Zyppan",
+          "normX": 45.3853,
+          "normY": 22.8208,
+          "roundNum": 16,
+          "plantRoundTimeMs": 34007,
+          "date": "2026-05-10",
+          "opponent": "FKS",
+          "matchId": "47dc41fc-26bf-40f4-8557-e20aaf70ce30",
+          "score": "13-6"
+        },
+        {
+          "site": "B",
+          "player": "Samed",
+          "normX": 29.8873,
+          "normY": 63.1688,
+          "roundNum": 16,
+          "plantRoundTimeMs": 34007,
+          "date": "2026-05-10",
+          "opponent": "FKS",
+          "matchId": "47dc41fc-26bf-40f4-8557-e20aaf70ce30",
+          "score": "13-6"
+        },
+        {
+          "site": "B",
+          "player": "Wolfen",
+          "normX": 34.9553,
+          "normY": 27.9238,
+          "roundNum": 16,
+          "plantRoundTimeMs": 34007,
+          "date": "2026-05-10",
+          "opponent": "FKS",
+          "matchId": "47dc41fc-26bf-40f4-8557-e20aaf70ce30",
+          "score": "13-6"
+        },
+        {
+          "site": "B",
+          "player": "DaviH",
+          "normX": 26.3243,
+          "normY": 9.9618,
+          "roundNum": 16,
+          "plantRoundTimeMs": 34007,
+          "date": "2026-05-10",
+          "opponent": "FKS",
+          "matchId": "47dc41fc-26bf-40f4-8557-e20aaf70ce30",
+          "score": "13-6"
+        },
+        {
+          "site": "B",
+          "player": "Vince ",
+          "normX": 46.5893,
+          "normY": 20.9308,
+          "roundNum": 3,
+          "plantRoundTimeMs": 23047,
+          "date": "2026-04-26",
+          "opponent": "ATN",
+          "matchId": "b1a8268f-fa07-4829-b901-3e7244de4805",
+          "score": "13-3"
+        },
+        {
+          "site": "B",
+          "player": "Samed",
+          "normX": 24.9383,
+          "normY": 24.8718,
+          "roundNum": 3,
+          "plantRoundTimeMs": 23047,
+          "date": "2026-04-26",
+          "opponent": "ATN",
+          "matchId": "b1a8268f-fa07-4829-b901-3e7244de4805",
+          "score": "13-3"
+        },
+        {
+          "site": "B",
+          "player": "Zyppan",
+          "normX": 31.4693,
+          "normY": 10.7458,
+          "roundNum": 3,
+          "plantRoundTimeMs": 23047,
+          "date": "2026-04-26",
+          "opponent": "ATN",
+          "matchId": "b1a8268f-fa07-4829-b901-3e7244de4805",
+          "score": "13-3"
+        },
+        {
+          "site": "B",
+          "player": "Wolfen",
+          "normX": 58.3283,
+          "normY": 46.1658,
+          "roundNum": 3,
+          "plantRoundTimeMs": 23047,
+          "date": "2026-04-26",
+          "opponent": "ATN",
+          "matchId": "b1a8268f-fa07-4829-b901-3e7244de4805",
+          "score": "13-3"
+        },
+        {
+          "site": "B",
+          "player": "DaviH",
+          "normX": 25.8343,
+          "normY": 21.7988,
+          "roundNum": 3,
+          "plantRoundTimeMs": 23047,
+          "date": "2026-04-26",
+          "opponent": "ATN",
+          "matchId": "b1a8268f-fa07-4829-b901-3e7244de4805",
+          "score": "13-3"
+        },
+        {
+          "site": "B",
+          "player": "Vince ",
+          "normX": 27.7593,
+          "normY": 27.3288,
+          "roundNum": 9,
+          "plantRoundTimeMs": 30891,
+          "date": "2026-04-26",
+          "opponent": "ATN",
+          "matchId": "b1a8268f-fa07-4829-b901-3e7244de4805",
+          "score": "13-3"
+        },
+        {
+          "site": "B",
+          "player": "Wolfen",
+          "normX": 35.6833,
+          "normY": 29.8768,
+          "roundNum": 9,
+          "plantRoundTimeMs": 30891,
+          "date": "2026-04-26",
+          "opponent": "ATN",
+          "matchId": "b1a8268f-fa07-4829-b901-3e7244de4805",
+          "score": "13-3"
+        },
+        {
+          "site": "B",
+          "player": "Vince ",
+          "normX": 92.8453,
+          "normY": 46.9008,
+          "roundNum": 10,
+          "plantRoundTimeMs": 74979,
+          "date": "2026-04-26",
+          "opponent": "ATN",
+          "matchId": "b1a8268f-fa07-4829-b901-3e7244de4805",
+          "score": "13-3"
+        },
+        {
+          "site": "B",
+          "player": "Samed",
+          "normX": 71.1103,
+          "normY": 40.2788,
+          "roundNum": 10,
+          "plantRoundTimeMs": 74979,
+          "date": "2026-04-26",
+          "opponent": "ATN",
+          "matchId": "b1a8268f-fa07-4829-b901-3e7244de4805",
+          "score": "13-3"
+        },
+        {
+          "site": "B",
+          "player": "DaviH",
+          "normX": 78.1523,
+          "normY": 31.1508,
+          "roundNum": 10,
+          "plantRoundTimeMs": 74979,
+          "date": "2026-04-26",
+          "opponent": "ATN",
+          "matchId": "b1a8268f-fa07-4829-b901-3e7244de4805",
+          "score": "13-3"
+        }
+      ]
+    }
+  },
+  "postPlant10_20": {
+    "B": {
+      "rounds": [
+        {
+          "roundNum": 16,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 10933,
+              "players": [
+                {
+                  "player": "Vince ",
+                  "normX": 38.3503,
+                  "normY": 26.8178
+                }
+              ]
+            }
+          ],
+          "matchId": "47dc41fc-26bf-40f4-8557-e20aaf70ce30",
+          "date": "2026-05-10",
+          "opponent": "FKS",
+          "score": "13-6"
+        },
+        {
+          "roundNum": 3,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 10492,
+              "players": [
+                {
+                  "player": "Vince ",
+                  "normX": 43.6633,
+                  "normY": 25.7818
+                },
+                {
+                  "player": "Samed",
+                  "normX": 15.3133,
+                  "normY": 33.8108
+                },
+                {
+                  "player": "Zyppan",
+                  "normX": 26.0863,
+                  "normY": 15.3448
+                },
+                {
+                  "player": "Wolfen",
+                  "normX": 39.3723,
+                  "normY": 35.0218
+                },
+                {
+                  "player": "DaviH",
+                  "normX": 24.9033,
+                  "normY": 19.2158
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 10863,
+              "players": [
+                {
+                  "player": "Vince ",
+                  "normX": 43.6283,
+                  "normY": 25.6068
+                },
+                {
+                  "player": "Samed",
+                  "normX": 13.7733,
+                  "normY": 35.0498
+                },
+                {
+                  "player": "Zyppan",
+                  "normX": 26.3943,
+                  "normY": 16.8848
+                },
+                {
+                  "player": "DaviH",
+                  "normX": 25.3023,
+                  "normY": 20.5598
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 11684,
+              "players": [
+                {
+                  "player": "Vince ",
+                  "normX": 43.1453,
+                  "normY": 25.2778
+                },
+                {
+                  "player": "Zyppan",
+                  "normX": 25.2673,
+                  "normY": 16.2128
+                },
+                {
+                  "player": "DaviH",
+                  "normX": 26.6813,
+                  "normY": 23.1988
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 13230,
+              "players": [
+                {
+                  "player": "Vince ",
+                  "normX": 41.9693,
+                  "normY": 26.1598
+                },
+                {
+                  "player": "Zyppan",
+                  "normX": 22.4463,
+                  "normY": 16.7098
+                },
+                {
+                  "player": "DaviH",
+                  "normX": 27.8223,
+                  "normY": 25.5438
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15378,
+              "players": [
+                {
+                  "player": "Vince ",
+                  "normX": 36.2573,
+                  "normY": 28.0778
+                },
+                {
+                  "player": "Zyppan",
+                  "normX": 17.1403,
+                  "normY": 18.3128
+                },
+                {
+                  "player": "DaviH",
+                  "normX": 26.1493,
+                  "normY": 21.6098
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 17048,
+              "players": [
+                {
+                  "player": "Vince ",
+                  "normX": 33.2963,
+                  "normY": 31.1368
+                },
+                {
+                  "player": "Zyppan",
+                  "normX": 15.4253,
+                  "normY": 19.0898
+                },
+                {
+                  "player": "DaviH",
+                  "normX": 22.3833,
+                  "normY": 19.4958
+                }
+              ]
+            }
+          ],
+          "matchId": "b1a8268f-fa07-4829-b901-3e7244de4805",
+          "date": "2026-04-26",
+          "opponent": "ATN",
+          "score": "13-3"
+        },
+        {
+          "roundNum": 9,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 14862,
+              "players": [
+                {
+                  "player": "Vince ",
+                  "normX": 9.3843,
+                  "normY": 24.6198
+                },
+                {
+                  "player": "Wolfen",
+                  "normX": 5.9263,
+                  "normY": 40.0268
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18856,
+              "players": [
+                {
+                  "player": "Vince ",
+                  "normX": 12.0023,
+                  "normY": 30.0098
+                },
+                {
+                  "player": "Wolfen",
+                  "normX": 10.0353,
+                  "normY": 37.5558
+                }
+              ]
+            }
+          ],
+          "matchId": "b1a8268f-fa07-4829-b901-3e7244de4805",
+          "date": "2026-04-26",
+          "opponent": "ATN",
+          "score": "13-3"
+        }
+      ]
+    },
+    "A": {
+      "rounds": [
+        {
+          "roundNum": 7,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 11885,
+              "players": [
+                {
+                  "player": "Vince ",
+                  "normX": 67.6453,
+                  "normY": 46.5648
+                },
+                {
+                  "player": "Samed",
+                  "normX": 77.7393,
+                  "normY": 50.1348
+                },
+                {
+                  "player": "Zyppan",
+                  "normX": 79.7483,
+                  "normY": 30.9828
+                },
+                {
+                  "player": "Wolfen",
+                  "normX": 82.8843,
+                  "normY": 42.9598
+                },
+                {
+                  "player": "DaviH",
+                  "normX": 74.3303,
+                  "normY": 47.5518
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 16736,
+              "players": [
+                {
+                  "player": "Vince ",
+                  "normX": 75.7583,
+                  "normY": 42.1898
+                },
+                {
+                  "player": "Samed",
+                  "normX": 80.7563,
+                  "normY": 58.3878
+                },
+                {
+                  "player": "Zyppan",
+                  "normX": 78.6563,
+                  "normY": 38.9768
+                },
+                {
+                  "player": "Wolfen",
+                  "normX": 83.9343,
+                  "normY": 42.0638
+                },
+                {
+                  "player": "DaviH",
+                  "normX": 76.1223,
+                  "normY": 51.6188
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18602,
+              "players": [
+                {
+                  "player": "Vince ",
+                  "normX": 81.8623,
+                  "normY": 43.2538
+                },
+                {
+                  "player": "Samed",
+                  "normX": 81.1343,
+                  "normY": 60.8588
+                },
+                {
+                  "player": "Zyppan",
+                  "normX": 82.9543,
+                  "normY": 41.9028
+                },
+                {
+                  "player": "Wolfen",
+                  "normX": 89.2753,
+                  "normY": 41.6788
+                },
+                {
+                  "player": "DaviH",
+                  "normX": 78.2783,
+                  "normY": 51.2688
+                }
+              ]
+            }
+          ],
+          "matchId": "b1a8268f-fa07-4829-b901-3e7244de4805",
+          "date": "2026-04-26",
+          "opponent": "ATN",
+          "score": "13-3"
+        }
+      ]
+    }
+  }
+}

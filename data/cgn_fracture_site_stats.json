@@ -1,0 +1,88 @@
+{
+  "t_side": {
+    "total_rounds": 43,
+    "rounds_won": 26,
+    "pct_rounds_won": 60.5,
+    "won_by_kills": 20,
+    "pct_won_by_kills": 46.5,
+    "won_by_explosion": 6,
+    "pct_won_by_explosion": 14.0,
+    "avg_fk_time": 32.4,
+    "sites": {
+      "A": {
+        "plant_count": 12,
+        "pct_plant": 46.2,
+        "pct_win": 83.3,
+        "avg_plant_time": 55.9,
+        "min_plant_time": 25.8,
+        "max_plant_time": 80.8,
+        "fk_to_plant_avg": 23.7,
+        "fk_to_plant_n": 11
+      },
+      "B": {
+        "plant_count": 14,
+        "pct_plant": 53.8,
+        "pct_win": 85.7,
+        "avg_plant_time": 53.0,
+        "min_plant_time": 20.9,
+        "max_plant_time": 81.3,
+        "fk_to_plant_avg": 32.8,
+        "fk_to_plant_n": 13
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 47,
+    "rounds_won": 25,
+    "pct_rounds_won": 53.2,
+    "won_by_kills": 12,
+    "pct_won_by_kills": 25.5,
+    "won_by_defuse": 13,
+    "pct_won_by_defuse": 27.7,
+    "avg_fk_time": 33.5,
+    "sites": {
+      "A": {
+        "plant_count": 13,
+        "defuse_count": 6,
+        "pct_defuse_win": 46.2,
+        "pct_defuse_share": 46.2,
+        "avg_defuse_time": 32.9,
+        "fk_after_plant_avg": 12.6,
+        "fk_after_plant_n": 10
+      },
+      "B": {
+        "plant_count": 18,
+        "defuse_count": 7,
+        "pct_defuse_win": 38.9,
+        "pct_defuse_share": 53.8,
+        "avg_defuse_time": 29.1,
+        "fk_after_plant_avg": 5.6,
+        "fk_after_plant_n": 12
+      }
+    }
+  },
+  "team": "CGN Esports",
+  "map": "Fracture",
+  "matches": [
+    {
+      "date": "2026-04-25",
+      "opponent": "FKS",
+      "matchId": "6cb09b8a-77ef-4431-b36a-19ba6a861425"
+    },
+    {
+      "date": "2026-04-19",
+      "opponent": "SGE",
+      "matchId": "f492d91b-bd8a-489c-b2f8-7f194783c6c6"
+    },
+    {
+      "date": "2026-04-11",
+      "opponent": "DXG",
+      "matchId": "48e0c873-6f15-41ba-bc60-591686ac968f"
+    },
+    {
+      "date": "2026-04-04",
+      "opponent": "AKA",
+      "matchId": "6ff44d58-69bb-4e4b-b33f-0ec91bd08b98"
+    }
+  ]
+}

@@ -1,0 +1,1337 @@
+{
+  "team": "CGN Esports",
+  "Bind": [
+    {
+      "agents": [
+        "Raze",
+        "Gekko",
+        "Skye",
+        "Brimstone",
+        "Viper"
+      ],
+      "agent_ids": [
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "e370fa57-4757-3604-3648-499e1f642d3f",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "9f0d8ba9-4140-b941-57d3-a7ad57c6b417",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-05-10",
+          "opponent": "FKS",
+          "matchId": "9611d0f6-08f1-4f51-a291-0905060fa032",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN DaviH",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Neon",
+        "Gekko",
+        "Skye",
+        "Viper",
+        "7c8a4701-4de6-9355-b254-e09bc2a34b72"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "e370fa57-4757-3604-3648-499e1f642d3f",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "707eab51-4836-f488-046a-cda6bf494859",
+        "7c8a4701-4de6-9355-b254-e09bc2a34b72"
+      ],
+      "games": [
+        {
+          "date": "2026-04-26",
+          "opponent": "ATN",
+          "matchId": "20234031-5a48-4109-b9a8-c9ea4de0744a",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN DaviH",
+            "CGN Wolfen",
+            "CGN Vince "
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Waylay",
+        "Gekko",
+        "Skye",
+        "Viper",
+        null
+      ],
+      "agent_ids": [
+        "df1cb487-4902-002e-5c17-d28e83e78588",
+        "e370fa57-4757-3604-3648-499e1f642d3f",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "707eab51-4836-f488-046a-cda6bf494859",
+        null
+      ],
+      "games": [
+        {
+          "date": "2026-04-07",
+          "opponent": "RZN",
+          "matchId": "f6c3a1e8-4268-4caf-8b26-463c1557640b",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN DaviH",
+            "CGN Wolfen",
+            "CGN Vince "
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Raze",
+        "Fade",
+        "Gekko",
+        "Brimstone",
+        "Viper"
+      ],
+      "agent_ids": [
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "e370fa57-4757-3604-3648-499e1f642d3f",
+        "9f0d8ba9-4140-b941-57d3-a7ad57c6b417",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-01-26",
+          "opponent": "SGE",
+          "matchId": "e22ec6fc-9c28-4ab6-af15-52d30441dfd1",
+          "players": [
+            "CGN Sayf",
+            "CGN kovaQ",
+            "CGN Zyppan",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Raze",
+        "Fade",
+        "Brimstone",
+        "Viper",
+        "Sage"
+      ],
+      "agent_ids": [
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "9f0d8ba9-4140-b941-57d3-a7ad57c6b417",
+        "707eab51-4836-f488-046a-cda6bf494859",
+        "569fdd95-4d10-43ab-ca70-79becc718b46"
+      ],
+      "games": [
+        {
+          "date": "2026-01-15",
+          "opponent": "SGE",
+          "matchId": "74b527b0-86b3-402b-9f23-21f788ea703a",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN Vince ",
+            "CGN Wolfen",
+            "CGN kovaQ"
+          ]
+        },
+        {
+          "date": "2026-01-11",
+          "opponent": "RZN",
+          "matchId": "5a3b9fd9-a5c2-4a9c-a234-491934ce785f",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN Vince ",
+            "CGN Wolfen",
+            "CGN kovaQ"
+          ]
+        }
+      ]
+    }
+  ],
+  "Haven": [
+    {
+      "agents": [
+        "Neon",
+        "Phoenix",
+        "Sova",
+        "Omen",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "eb93336a-449b-9c1b-0a54-a891f7921d69",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-05-10",
+          "opponent": "FKS",
+          "matchId": "98730662-84ef-40bc-9a8f-447f6c92b724",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN DaviH",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Neon",
+        "Breach",
+        "Sova",
+        "Omen",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "5f8d3a7f-467b-97f3-062c-13acf203c006",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-04-07",
+          "opponent": "RZN",
+          "matchId": "66514075-1283-4122-85cb-4d3a7b6e2d8a",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN DaviH",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        },
+        {
+          "date": "2026-03-08",
+          "opponent": "AX",
+          "matchId": "6e37917c-c8e6-4f2d-9827-9e73ec220e4a",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN DaviH",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        },
+        {
+          "date": "2026-02-09",
+          "opponent": "FKS",
+          "matchId": "dada73b7-50c6-4330-958e-8cbbfb175634",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN kovaQ",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        },
+        {
+          "date": "2026-02-08",
+          "opponent": "SGE",
+          "matchId": "16be809c-52f4-4f81-a309-8b777d28e5f0",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN kovaQ",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        },
+        {
+          "date": "2026-02-07",
+          "opponent": "DXG",
+          "matchId": "68abeced-bf57-4854-8a82-c16c769b3322",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN kovaQ",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        },
+        {
+          "date": "2026-01-15",
+          "opponent": "RZN",
+          "matchId": "c34e78fb-20fe-4a54-8fa4-6a259cfc2df5",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN kovaQ",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Jett",
+        "Breach",
+        "Sova",
+        "Omen",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "add6443a-41bd-e414-f6ad-e58d267f4e95",
+        "5f8d3a7f-467b-97f3-062c-13acf203c006",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-03-05",
+          "opponent": "FKS",
+          "matchId": "d655a70f-304d-4079-9a0f-7a7479bade90",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN DaviH",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        }
+      ]
+    }
+  ],
+  "Lotus": [
+    {
+      "agents": [
+        "Neon",
+        "Phoenix",
+        "Sova",
+        "Omen",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "eb93336a-449b-9c1b-0a54-a891f7921d69",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-05-10",
+          "opponent": "FKS",
+          "matchId": "b40c8902-f793-4958-b4a4-e7ae9e187a2c",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN DaviH",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        },
+        {
+          "date": "2026-05-09",
+          "opponent": "RZN",
+          "matchId": "1248737d-557e-4bad-867b-2df94aac470b",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN DaviH",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Waylay",
+        "Fade",
+        "Omen",
+        "Viper",
+        "Killjoy"
+      ],
+      "agent_ids": [
+        "df1cb487-4902-002e-5c17-d28e83e78588",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859",
+        "1e58de9c-4950-5125-93e9-a0aee9f98746"
+      ],
+      "games": [
+        {
+          "date": "2026-04-19",
+          "opponent": "SGE",
+          "matchId": "885a842b-a596-407a-b1e8-82c503ae2323",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN Vince ",
+            "CGN DaviH",
+            "CGN Wolfen"
+          ]
+        },
+        {
+          "date": "2026-04-14",
+          "opponent": "ECO",
+          "matchId": "5c14ee8e-7a28-460f-ab7b-6d22d621751c",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN Vince ",
+            "CGN DaviH",
+            "CGN Wolfen"
+          ]
+        }
+      ]
+    }
+  ],
+  "Breeze": [
+    {
+      "agents": [
+        "Neon",
+        "Phoenix",
+        "Sova",
+        "Harbor",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "eb93336a-449b-9c1b-0a54-a891f7921d69",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "95b78ed7-4637-86d9-7e41-71ba8c293152",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-05-10",
+          "opponent": "FKS",
+          "matchId": "47dc41fc-26bf-40f4-8557-e20aaf70ce30",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN DaviH",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Jett",
+        "Neon",
+        "Sova",
+        "Harbor",
+        "Omen"
+      ],
+      "agent_ids": [
+        "add6443a-41bd-e414-f6ad-e58d267f4e95",
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "95b78ed7-4637-86d9-7e41-71ba8c293152",
+        "8e253930-4c05-31dd-1b6c-968525494517"
+      ],
+      "games": [
+        {
+          "date": "2026-04-26",
+          "opponent": "ATN",
+          "matchId": "b1a8268f-fa07-4829-b901-3e7244de4805",
+          "players": [
+            "CGN Wolfen",
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN Vince ",
+            "CGN DaviH"
+          ]
+        },
+        {
+          "date": "2026-04-25",
+          "opponent": "FKS",
+          "matchId": "7547a3f3-723a-490c-af39-c21290d314bd",
+          "players": [
+            "CGN Wolfen",
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN Vince ",
+            "CGN DaviH"
+          ]
+        },
+        {
+          "date": "2026-04-19",
+          "opponent": "SGE",
+          "matchId": "fd6c3337-92a5-479d-aa2f-30f9fd9dab60",
+          "players": [
+            "CGN Wolfen",
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN Vince ",
+            "CGN DaviH"
+          ]
+        },
+        {
+          "date": "2026-04-11",
+          "opponent": "DXG",
+          "matchId": "029ff2ba-58f2-4405-8d74-00d0c4578d02",
+          "players": [
+            "CGN Wolfen",
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN Vince ",
+            "CGN DaviH"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Jett",
+        "Sova",
+        "Astra",
+        "Viper",
+        "Sage"
+      ],
+      "agent_ids": [
+        "add6443a-41bd-e414-f6ad-e58d267f4e95",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "707eab51-4836-f488-046a-cda6bf494859",
+        "569fdd95-4d10-43ab-ca70-79becc718b46"
+      ],
+      "games": [
+        {
+          "date": "2026-03-10",
+          "opponent": "FKS",
+          "matchId": "8aa84255-930a-4b1d-8481-990221a25cf4",
+          "players": [
+            "CGN Samed",
+            "CGN DaviH",
+            "CGN Vince ",
+            "CGN Wolfen",
+            "CGN Zyppan"
+          ]
+        },
+        {
+          "date": "2026-03-09",
+          "opponent": "RZN",
+          "matchId": "47bca094-569c-4fd0-b49f-49d1895202e4",
+          "players": [
+            "CGN Samed",
+            "CGN DaviH",
+            "CGN Vince ",
+            "CGN Wolfen",
+            "CGN Zyppan"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Jett",
+        "Skye",
+        "Sova",
+        "Omen",
+        "Viper"
+      ],
+      "agent_ids": [
+        "add6443a-41bd-e414-f6ad-e58d267f4e95",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-02-09",
+          "opponent": "FKS",
+          "matchId": "efb962fe-8292-4b05-8113-4a8f79fa5a8b",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN kovaQ",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        },
+        {
+          "date": "2026-02-08",
+          "opponent": "SGE",
+          "matchId": "f256a5b4-b416-436a-abe1-ab28e4c7ba17",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN kovaQ",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        }
+      ]
+    }
+  ],
+  "Split": [
+    {
+      "agents": [
+        "Raze",
+        "Fade",
+        "Omen",
+        "Cypher",
+        "Sage"
+      ],
+      "agent_ids": [
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b",
+        "569fdd95-4d10-43ab-ca70-79becc718b46"
+      ],
+      "games": [
+        {
+          "date": "2026-05-10",
+          "opponent": "FKS",
+          "matchId": "bff0ed4c-d77c-4e3b-9fb8-4d89b57d3dc9",
+          "players": [
+            "CGN Samed",
+            "CGN DaviH",
+            "CGN Vince ",
+            "CGN Wolfen",
+            "CGN Zyppan"
+          ]
+        },
+        {
+          "date": "2026-05-09",
+          "opponent": "RZN",
+          "matchId": "6ba8d834-66e3-47fa-97d2-7c4c4f5b84cb",
+          "players": [
+            "CGN Samed",
+            "CGN DaviH",
+            "CGN Vince ",
+            "CGN Wolfen",
+            "CGN Zyppan"
+          ]
+        },
+        {
+          "date": "2026-03-06",
+          "opponent": "VAL",
+          "matchId": "6f81e027-6069-4724-8dc4-c207f850406a",
+          "players": [
+            "CGN Samed",
+            "CGN DaviH",
+            "CGN Vince ",
+            "CGN Wolfen",
+            "CGN Zyppan"
+          ]
+        },
+        {
+          "date": "2026-02-07",
+          "opponent": "DXG",
+          "matchId": "637e5c21-07bd-4c6b-9170-54b034ae08b3",
+          "players": [
+            "CGN Samed",
+            "CGN kovaQ",
+            "CGN Vince ",
+            "CGN Wolfen",
+            "CGN Zyppan"
+          ]
+        },
+        {
+          "date": "2026-01-25",
+          "opponent": "FKS",
+          "matchId": "71a412d1-d670-429c-b022-77c9c007fae6",
+          "players": [
+            "CGN Sayf",
+            "CGN kovaQ",
+            "CGN Vince ",
+            "CGN Wolfen",
+            "CGN Zyppan"
+          ]
+        },
+        {
+          "date": "2026-01-19",
+          "opponent": "BDX",
+          "matchId": "76ea93a7-a2f7-4573-84da-ad14bbdd719e",
+          "players": [
+            "CGN Samed",
+            "CGN kovaQ",
+            "CGN Vince ",
+            "CGN Wolfen",
+            "CGN Zyppan"
+          ]
+        },
+        {
+          "date": "2026-01-17",
+          "opponent": "DXG",
+          "matchId": "ce12863e-5425-4459-96b8-4e096f72096a",
+          "players": [
+            "CGN Samed",
+            "CGN kovaQ",
+            "CGN Vince ",
+            "CGN Wolfen",
+            "CGN Zyppan"
+          ]
+        },
+        {
+          "date": "2026-01-15",
+          "opponent": "BDX",
+          "matchId": "9cf82844-cccb-40af-b95c-47c695c9f696",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN Vince ",
+            "CGN Wolfen",
+            "CGN kovaQ"
+          ]
+        },
+        {
+          "date": "2026-01-11",
+          "opponent": "RZN",
+          "matchId": "6b58b1af-837c-40ef-997b-1f4546acdb25",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN Vince ",
+            "CGN Wolfen",
+            "CGN kovaQ"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Raze",
+        "Fade",
+        "Skye",
+        "Cypher",
+        "7c8a4701-4de6-9355-b254-e09bc2a34b72"
+      ],
+      "agent_ids": [
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b",
+        "7c8a4701-4de6-9355-b254-e09bc2a34b72"
+      ],
+      "games": [
+        {
+          "date": "2026-04-26",
+          "opponent": "ATN",
+          "matchId": "a012662c-edd1-4104-9b5b-00f807c57ee8",
+          "players": [
+            "CGN Samed",
+            "CGN DaviH",
+            "CGN Zyppan",
+            "CGN Wolfen",
+            "CGN Vince "
+          ]
+        },
+        {
+          "date": "2026-04-25",
+          "opponent": "FKS",
+          "matchId": "2f81e93e-3c51-4ef3-82c4-b04698afc1e1",
+          "players": [
+            "CGN Samed",
+            "CGN DaviH",
+            "CGN Zyppan",
+            "CGN Wolfen",
+            "CGN Vince "
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Raze",
+        "Fade",
+        "Skye",
+        "Cypher",
+        null
+      ],
+      "agent_ids": [
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b",
+        null
+      ],
+      "games": [
+        {
+          "date": "2026-04-14",
+          "opponent": "ECO",
+          "matchId": "62705369-df99-48eb-b226-5904e659bfb0",
+          "players": [
+            "CGN Samed",
+            "CGN DaviH",
+            "CGN Zyppan",
+            "CGN Wolfen",
+            "CGN Vince "
+          ]
+        },
+        {
+          "date": "2026-04-07",
+          "opponent": "RZN",
+          "matchId": "56aec96e-d9c4-4e20-99b4-c64fd3cf8215",
+          "players": [
+            "CGN Samed",
+            "CGN DaviH",
+            "CGN Zyppan",
+            "CGN Wolfen",
+            "CGN Vince "
+          ]
+        },
+        {
+          "date": "2026-04-04",
+          "opponent": "AKA",
+          "matchId": "0a7605a8-75a9-4f7d-954e-07a4f82504b2",
+          "players": [
+            "CGN Samed",
+            "CGN DaviH",
+            "CGN Zyppan",
+            "CGN Wolfen",
+            "CGN Vince "
+          ]
+        }
+      ]
+    }
+  ],
+  "Fracture": [
+    {
+      "agents": [
+        "Raze",
+        "Breach",
+        "Tejo",
+        "Brimstone",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "5f8d3a7f-467b-97f3-062c-13acf203c006",
+        "b444168c-4e35-8076-db47-ef9bf368f384",
+        "9f0d8ba9-4140-b941-57d3-a7ad57c6b417",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-04-25",
+          "opponent": "FKS",
+          "matchId": "6cb09b8a-77ef-4431-b36a-19ba6a861425",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN DaviH",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        },
+        {
+          "date": "2026-04-19",
+          "opponent": "SGE",
+          "matchId": "f492d91b-bd8a-489c-b2f8-7f194783c6c6",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN DaviH",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        },
+        {
+          "date": "2026-04-11",
+          "opponent": "DXG",
+          "matchId": "48e0c873-6f15-41ba-bc60-591686ac968f",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN DaviH",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Raze",
+        "Breach",
+        "Fade",
+        "Cypher",
+        null
+      ],
+      "agent_ids": [
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "5f8d3a7f-467b-97f3-062c-13acf203c006",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b",
+        null
+      ],
+      "games": [
+        {
+          "date": "2026-04-04",
+          "opponent": "AKA",
+          "matchId": "6ff44d58-69bb-4e4b-b33f-0ec91bd08b98",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN DaviH",
+            "CGN Wolfen",
+            "CGN Vince "
+          ]
+        }
+      ]
+    }
+  ],
+  "Pearl": [
+    {
+      "agents": [
+        "Neon",
+        "KAY/O",
+        "Tejo",
+        "Astra",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "601dbbe7-43ce-be57-2a40-4abd24953621",
+        "b444168c-4e35-8076-db47-ef9bf368f384",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-03-10",
+          "opponent": "FKS",
+          "matchId": "f8dd4980-8525-4726-84b2-db886a5dc006",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN DaviH",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        },
+        {
+          "date": "2026-03-08",
+          "opponent": "AX",
+          "matchId": "33962ec4-953d-4293-b617-7ff30624d04e",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN DaviH",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        },
+        {
+          "date": "2026-03-05",
+          "opponent": "FKS",
+          "matchId": "9b8c5c88-2ac6-4827-b39e-3df60e1fc094",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN DaviH",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        },
+        {
+          "date": "2026-03-01",
+          "opponent": "SGE",
+          "matchId": "7ac890ea-0c7f-4dc2-898c-b35446ada8c3",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN DaviH",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Neon",
+        "Sova",
+        "Tejo",
+        "Astra",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "b444168c-4e35-8076-db47-ef9bf368f384",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-01-19",
+          "opponent": "SGE",
+          "matchId": "2618491a-4495-448c-9fdd-576d54a6c07c",
+          "players": [
+            "CGN Samed",
+            "CGN kovaQ",
+            "CGN Zyppan",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Waylay",
+        "Sova",
+        "Tejo",
+        "Astra",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "df1cb487-4902-002e-5c17-d28e83e78588",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "b444168c-4e35-8076-db47-ef9bf368f384",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-01-12",
+          "opponent": "SGE",
+          "matchId": "8b8664cc-d831-4ece-9957-f7f547c3e897",
+          "players": [
+            "CGN Samed",
+            "CGN kovaQ",
+            "CGN Zyppan",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        }
+      ]
+    }
+  ],
+  "Abyss": [
+    {
+      "agents": [
+        "Waylay",
+        "Sova",
+        "Tejo",
+        "Astra",
+        "Veto"
+      ],
+      "agent_ids": [
+        "df1cb487-4902-002e-5c17-d28e83e78588",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "b444168c-4e35-8076-db47-ef9bf368f384",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "92eeef5d-43b5-1d4a-8d03-b3927a09034b"
+      ],
+      "games": [
+        {
+          "date": "2026-03-09",
+          "opponent": "RZN",
+          "matchId": "f7213c70-f94f-4777-a49e-e7c4097e5418",
+          "players": [
+            "CGN Samed",
+            "CGN DaviH",
+            "CGN Zyppan",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        },
+        {
+          "date": "2026-03-06",
+          "opponent": "VAL",
+          "matchId": "27829932-74b8-486b-b1a3-251ad67de8dd",
+          "players": [
+            "CGN Samed",
+            "CGN DaviH",
+            "CGN Zyppan",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        },
+        {
+          "date": "2026-03-01",
+          "opponent": "SGE",
+          "matchId": "60300547-8cfb-4b51-8d7e-614318bb86e8",
+          "players": [
+            "CGN Samed",
+            "CGN DaviH",
+            "CGN Zyppan",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        },
+        {
+          "date": "2026-02-09",
+          "opponent": "FKS",
+          "matchId": "0a248793-a692-4c20-8be9-7c0bd9e056ea",
+          "players": [
+            "CGN Samed",
+            "CGN kovaQ",
+            "CGN Zyppan",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        },
+        {
+          "date": "2026-02-08",
+          "opponent": "SGE",
+          "matchId": "7e3cbe77-c025-4ace-b96a-6c50846e2b4f",
+          "players": [
+            "CGN Samed",
+            "CGN kovaQ",
+            "CGN Zyppan",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        },
+        {
+          "date": "2026-01-26",
+          "opponent": "BDX",
+          "matchId": "63a6233a-3451-4a78-a649-d2c08f6e6286",
+          "players": [
+            "CGN Sayf",
+            "CGN kovaQ",
+            "CGN Zyppan",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Waylay",
+        "Yoru",
+        "Sova",
+        "Astra",
+        "Veto"
+      ],
+      "agent_ids": [
+        "df1cb487-4902-002e-5c17-d28e83e78588",
+        "7f94d92c-4234-0a36-9646-3a87eb8b5c89",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "92eeef5d-43b5-1d4a-8d03-b3927a09034b"
+      ],
+      "games": [
+        {
+          "date": "2026-01-25",
+          "opponent": "FKS",
+          "matchId": "a1bd7228-1020-49ca-a3a1-51a7e376cfb2",
+          "players": [
+            "CGN Sayf",
+            "CGN Zyppan",
+            "CGN kovaQ",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Waylay",
+        "Yoru",
+        "Sova",
+        "Astra",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "df1cb487-4902-002e-5c17-d28e83e78588",
+        "7f94d92c-4234-0a36-9646-3a87eb8b5c89",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-01-12",
+          "opponent": "ATN",
+          "matchId": "0b67ef88-f02d-46ef-9b75-2574a8cd3339",
+          "players": [
+            "CGN Samed",
+            "CGN kovaQ",
+            "CGN Zyppan",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        }
+      ]
+    }
+  ],
+  "Corrode": [
+    {
+      "agents": [
+        "Waylay",
+        "Fade",
+        "Omen",
+        "Sage",
+        "Veto"
+      ],
+      "agent_ids": [
+        "df1cb487-4902-002e-5c17-d28e83e78588",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "569fdd95-4d10-43ab-ca70-79becc718b46",
+        "92eeef5d-43b5-1d4a-8d03-b3927a09034b"
+      ],
+      "games": [
+        {
+          "date": "2026-03-08",
+          "opponent": "AX",
+          "matchId": "9e85c282-c6ff-49e2-92be-ed08c67b6e8c",
+          "players": [
+            "CGN Samed",
+            "CGN DaviH",
+            "CGN Vince ",
+            "CGN Zyppan",
+            "CGN Wolfen"
+          ]
+        },
+        {
+          "date": "2026-03-01",
+          "opponent": "SGE",
+          "matchId": "93433244-921c-4e23-b8f9-e5c97f725946",
+          "players": [
+            "CGN Samed",
+            "CGN DaviH",
+            "CGN Vince ",
+            "CGN Zyppan",
+            "CGN Wolfen"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Neon",
+        "Phoenix",
+        "Fade",
+        "Omen",
+        "Viper"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "eb93336a-449b-9c1b-0a54-a891f7921d69",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-01-19",
+          "opponent": "DXG",
+          "matchId": "28e4bd81-d90b-4a48-aded-c112483c2abc",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN kovaQ",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        },
+        {
+          "date": "2026-01-17",
+          "opponent": "DXG",
+          "matchId": "821f1915-822b-436e-9141-bddf7c4c22ab",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN kovaQ",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Neon",
+        "Fade",
+        "Omen",
+        "Viper",
+        "Vyse"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859",
+        "efba5359-4016-a1e5-7626-b1ae76895940"
+      ],
+      "games": [
+        {
+          "date": "2026-01-12",
+          "opponent": "RZN",
+          "matchId": "07cbb861-74fd-4608-bc60-7597f8fe0783",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN Vince ",
+            "CGN Wolfen",
+            "CGN kovaQ"
+          ]
+        },
+        {
+          "date": "2026-01-11",
+          "opponent": "RZN",
+          "matchId": "8fee4e43-43e1-4d9b-8442-ff9a46dbc5db",
+          "players": [
+            "CGN Samed",
+            "CGN Zyppan",
+            "CGN Vince ",
+            "CGN Wolfen",
+            "CGN kovaQ"
+          ]
+        }
+      ]
+    }
+  ],
+  "Sunset": [
+    {
+      "agents": [
+        "Neon",
+        "KAY/O",
+        "Sova",
+        "Omen",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "601dbbe7-43ce-be57-2a40-4abd24953621",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-01-26",
+          "opponent": "6GPA",
+          "matchId": "eee6395d-a1ec-484c-b8d0-b21402b52509",
+          "players": [
+            "CGN Sayf",
+            "CGN Zyppan",
+            "CGN kovaQ",
+            "CGN Vince ",
+            "CGN Wolfen"
+          ]
+        }
+      ]
+    }
+  ]
+}

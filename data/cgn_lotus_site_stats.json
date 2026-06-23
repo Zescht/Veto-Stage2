@@ -1,0 +1,107 @@
+{
+  "t_side": {
+    "total_rounds": 48,
+    "rounds_won": 27,
+    "pct_rounds_won": 56.2,
+    "won_by_kills": 20,
+    "pct_won_by_kills": 41.7,
+    "won_by_explosion": 7,
+    "pct_won_by_explosion": 14.6,
+    "avg_fk_time": 36.6,
+    "sites": {
+      "A": {
+        "plant_count": 14,
+        "pct_plant": 40.0,
+        "pct_win": 78.6,
+        "avg_plant_time": 62.4,
+        "min_plant_time": 30.7,
+        "max_plant_time": 91.9,
+        "fk_to_plant_avg": 26.4,
+        "fk_to_plant_n": 13
+      },
+      "B": {
+        "plant_count": 5,
+        "pct_plant": 14.3,
+        "pct_win": 80.0,
+        "avg_plant_time": 79.0,
+        "min_plant_time": 46.8,
+        "max_plant_time": 99.9,
+        "fk_to_plant_avg": 28.4,
+        "fk_to_plant_n": 5
+      },
+      "C": {
+        "plant_count": 16,
+        "pct_plant": 45.7,
+        "pct_win": 68.8,
+        "avg_plant_time": 55.1,
+        "min_plant_time": 27.2,
+        "max_plant_time": 92.2,
+        "fk_to_plant_avg": 29.4,
+        "fk_to_plant_n": 14
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 28,
+    "rounds_won": 13,
+    "pct_rounds_won": 46.4,
+    "won_by_kills": 7,
+    "pct_won_by_kills": 25.0,
+    "won_by_defuse": 6,
+    "pct_won_by_defuse": 21.4,
+    "avg_fk_time": 30.9,
+    "sites": {
+      "A": {
+        "plant_count": 8,
+        "defuse_count": 2,
+        "pct_defuse_win": 25.0,
+        "pct_defuse_share": 33.3,
+        "avg_defuse_time": 24.1,
+        "fk_after_plant_avg": 3.5,
+        "fk_after_plant_n": 5
+      },
+      "B": {
+        "plant_count": 8,
+        "defuse_count": 3,
+        "pct_defuse_win": 37.5,
+        "pct_defuse_share": 50.0,
+        "avg_defuse_time": 39.1,
+        "fk_after_plant_avg": 11.2,
+        "fk_after_plant_n": 7
+      },
+      "C": {
+        "plant_count": 4,
+        "defuse_count": 1,
+        "pct_defuse_win": 25.0,
+        "pct_defuse_share": 16.7,
+        "avg_defuse_time": 25.3,
+        "fk_after_plant_avg": 2.9,
+        "fk_after_plant_n": 1
+      }
+    }
+  },
+  "team": "CGN Esports",
+  "map": "Lotus",
+  "matches": [
+    {
+      "date": "2026-05-10",
+      "opponent": "FKS",
+      "matchId": "b40c8902-f793-4958-b4a4-e7ae9e187a2c"
+    },
+    {
+      "date": "2026-05-09",
+      "opponent": "RZN",
+      "matchId": "1248737d-557e-4bad-867b-2df94aac470b"
+    },
+    {
+      "date": "2026-04-19",
+      "opponent": "SGE",
+      "matchId": "885a842b-a596-407a-b1e8-82c503ae2323"
+    },
+    {
+      "date": "2026-04-14",
+      "opponent": "ECO",
+      "matchId": "5c14ee8e-7a28-460f-ab7b-6d22d621751c"
+    }
+  ]
+}

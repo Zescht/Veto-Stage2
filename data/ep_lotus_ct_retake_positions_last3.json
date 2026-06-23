@@ -954,28 +954,47 @@
     }
   },
   "postPlant10_20": {
-    "B": {
+    "C": {
       "rounds": [
         {
-          "roundNum": 14,
+          "roundNum": 1,
           "snapshots": [
             {
-              "timeSincePlantMs": 19629,
+              "timeSincePlantMs": 17349,
               "players": [
                 {
-                  "player": "Lime",
-                  "normX": 51.1669,
-                  "normY": 43.3912
-                },
+                  "player": "kozzy",
+                  "normX": 40.5685,
+                  "normY": 79.4488
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18910,
+              "players": [
                 {
-                  "player": "MAGNUM",
-                  "normX": 48.0133,
-                  "normY": 50.4328
-                },
+                  "player": "kozzy",
+                  "normX": 39.4597,
+                  "normY": 74.6608
+                }
+              ]
+            }
+          ],
+          "matchId": "f0978843-27a9-4fdc-aae7-fc4a9977cd7d",
+          "date": "2026-05-14",
+          "opponent": "TLA",
+          "score": "9-13"
+        },
+        {
+          "roundNum": 16,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 10557,
+              "players": [
                 {
                   "player": "iluri",
-                  "normX": 53.3125,
-                  "normY": 47.56
+                  "normX": 18.9469,
+                  "normY": 40.1008
                 }
               ]
             }
@@ -985,6 +1004,53 @@
           "opponent": "TLA",
           "score": "13-9"
         },
+        {
+          "roundNum": 17,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 10802,
+              "players": [
+                {
+                  "player": "Lime",
+                  "normX": 12.8053,
+                  "normY": 36.76
+                },
+                {
+                  "player": "iluri",
+                  "normX": 31.8421,
+                  "normY": 44.1256
+                }
+              ]
+            }
+          ],
+          "matchId": "3754acb1-a8e0-4f3b-8024-75c57a73e353",
+          "date": "2026-05-05",
+          "opponent": "TLA",
+          "score": "13-9"
+        },
+        {
+          "roundNum": 1,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 17512,
+              "players": [
+                {
+                  "player": "MAGNUM",
+                  "normX": 15.0229,
+                  "normY": 45.0544
+                }
+              ]
+            }
+          ],
+          "matchId": "bd6ed93c-ab91-4106-8596-5d7a3fe6ebc4",
+          "date": "2026-04-27",
+          "opponent": "BONK",
+          "score": "14-12"
+        }
+      ]
+    },
+    "B": {
+      "rounds": [
         {
           "roundNum": 2,
           "snapshots": [
@@ -1063,6 +1129,35 @@
           "date": "2026-05-14",
           "opponent": "TLA",
           "score": "9-13"
+        },
+        {
+          "roundNum": 14,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 19629,
+              "players": [
+                {
+                  "player": "Lime",
+                  "normX": 51.1669,
+                  "normY": 43.3912
+                },
+                {
+                  "player": "MAGNUM",
+                  "normX": 48.0133,
+                  "normY": 50.4328
+                },
+                {
+                  "player": "iluri",
+                  "normX": 53.3125,
+                  "normY": 47.56
+                }
+              ]
+            }
+          ],
+          "matchId": "3754acb1-a8e0-4f3b-8024-75c57a73e353",
+          "date": "2026-05-05",
+          "opponent": "TLA",
+          "score": "13-9"
         },
         {
           "roundNum": 2,
@@ -1203,101 +1298,6 @@
                   "player": "iluri",
                   "normX": 39.3301,
                   "normY": 50.0512
-                }
-              ]
-            }
-          ],
-          "matchId": "bd6ed93c-ab91-4106-8596-5d7a3fe6ebc4",
-          "date": "2026-04-27",
-          "opponent": "BONK",
-          "score": "14-12"
-        }
-      ]
-    },
-    "C": {
-      "rounds": [
-        {
-          "roundNum": 16,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 10557,
-              "players": [
-                {
-                  "player": "iluri",
-                  "normX": 18.9469,
-                  "normY": 40.1008
-                }
-              ]
-            }
-          ],
-          "matchId": "3754acb1-a8e0-4f3b-8024-75c57a73e353",
-          "date": "2026-05-05",
-          "opponent": "TLA",
-          "score": "13-9"
-        },
-        {
-          "roundNum": 17,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 10802,
-              "players": [
-                {
-                  "player": "Lime",
-                  "normX": 12.8053,
-                  "normY": 36.76
-                },
-                {
-                  "player": "iluri",
-                  "normX": 31.8421,
-                  "normY": 44.1256
-                }
-              ]
-            }
-          ],
-          "matchId": "3754acb1-a8e0-4f3b-8024-75c57a73e353",
-          "date": "2026-05-05",
-          "opponent": "TLA",
-          "score": "13-9"
-        },
-        {
-          "roundNum": 1,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 17349,
-              "players": [
-                {
-                  "player": "kozzy",
-                  "normX": 40.5685,
-                  "normY": 79.4488
-                }
-              ]
-            },
-            {
-              "timeSincePlantMs": 18910,
-              "players": [
-                {
-                  "player": "kozzy",
-                  "normX": 39.4597,
-                  "normY": 74.6608
-                }
-              ]
-            }
-          ],
-          "matchId": "f0978843-27a9-4fdc-aae7-fc4a9977cd7d",
-          "date": "2026-05-14",
-          "opponent": "TLA",
-          "score": "9-13"
-        },
-        {
-          "roundNum": 1,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 17512,
-              "players": [
-                {
-                  "player": "MAGNUM",
-                  "normX": 15.0229,
-                  "normY": 45.0544
                 }
               ]
             }

@@ -1,69 +1,114 @@
 {
   "t_side": {
-    "total_rounds": 67,
-    "rounds_won": 48,
-    "pct_rounds_won": 71.6,
-    "won_by_kills": 32,
-    "pct_won_by_kills": 47.8,
-    "won_by_explosion": 16,
-    "pct_won_by_explosion": 23.9,
-    "avg_fk_time": 26.3,
+    "total_rounds": 166,
+    "rounds_won": 108,
+    "pct_rounds_won": 65.1,
+    "won_by_kills": 82,
+    "pct_won_by_kills": 49.4,
+    "won_by_explosion": 26,
+    "pct_won_by_explosion": 15.7,
+    "avg_fk_time": 25.0,
     "sites": {
       "A": {
-        "plant_count": 16,
-        "pct_plant": 30.2,
-        "pct_win": 87.5,
-        "avg_plant_time": 45.0,
+        "plant_count": 48,
+        "pct_plant": 39.0,
+        "pct_win": 83.3,
+        "avg_plant_time": 44.1,
         "min_plant_time": 12.0,
-        "max_plant_time": 87.5,
-        "fk_to_plant_avg": 21.5,
-        "fk_to_plant_n": 15
+        "max_plant_time": 92.3,
+        "fk_to_plant_avg": 24.7,
+        "fk_to_plant_n": 41
       },
       "B": {
-        "plant_count": 37,
-        "pct_plant": 69.8,
-        "pct_win": 91.9,
-        "avg_plant_time": 48.4,
+        "plant_count": 75,
+        "pct_plant": 61.0,
+        "pct_win": 84.0,
+        "avg_plant_time": 46.6,
         "min_plant_time": 17.0,
-        "max_plant_time": 91.1,
-        "fk_to_plant_avg": 26.4,
-        "fk_to_plant_n": 35
+        "max_plant_time": 95.3,
+        "fk_to_plant_avg": 26.5,
+        "fk_to_plant_n": 69
       }
     }
   },
   "ct_side": {
-    "total_rounds": 47,
-    "rounds_won": 31,
-    "pct_rounds_won": 66.0,
-    "won_by_kills": 25,
-    "pct_won_by_kills": 53.2,
-    "won_by_defuse": 6,
-    "pct_won_by_defuse": 12.8,
-    "avg_fk_time": 23.4,
+    "total_rounds": 137,
+    "rounds_won": 80,
+    "pct_rounds_won": 58.4,
+    "won_by_kills": 58,
+    "pct_won_by_kills": 42.3,
+    "won_by_defuse": 22,
+    "pct_won_by_defuse": 16.1,
+    "avg_fk_time": 28.9,
     "sites": {
       "A": {
-        "plant_count": 10,
-        "defuse_count": 3,
-        "pct_defuse_win": 30.0,
-        "pct_defuse_share": 50.0,
-        "avg_defuse_time": 35.2,
-        "fk_after_plant_avg": 17.2,
-        "fk_after_plant_n": 5
+        "plant_count": 39,
+        "defuse_count": 14,
+        "pct_defuse_win": 35.9,
+        "pct_defuse_share": 63.6,
+        "avg_defuse_time": 30.7,
+        "fk_after_plant_avg": 10.8,
+        "fk_after_plant_n": 28
       },
       "B": {
-        "plant_count": 11,
-        "defuse_count": 3,
-        "pct_defuse_win": 27.3,
-        "pct_defuse_share": 50.0,
-        "avg_defuse_time": 25.3,
-        "fk_after_plant_avg": 14.7,
-        "fk_after_plant_n": 10
+        "plant_count": 34,
+        "defuse_count": 8,
+        "pct_defuse_win": 23.5,
+        "pct_defuse_share": 36.4,
+        "avg_defuse_time": 24.5,
+        "fk_after_plant_avg": 13.7,
+        "fk_after_plant_n": 25
       }
     }
   },
   "team": "REBORN",
   "map": "Split",
   "matches": [
+    {
+      "date": "2026-06-24",
+      "opponent": "VCT",
+      "matchId": "547344fb-d2ba-4a75-ba99-0453f1dcd92a"
+    },
+    {
+      "date": "2026-06-22",
+      "opponent": "VCT",
+      "matchId": "03664c17-1724-4970-be9e-941d88d216a8"
+    },
+    {
+      "date": "2026-05-28",
+      "opponent": "VCT",
+      "matchId": "699415a3-26e2-4d07-815c-a018dcbf10ef"
+    },
+    {
+      "date": "2026-05-27",
+      "opponent": "VCT",
+      "matchId": "ccd134dc-0c65-4b15-88a4-bac32a9b6d25"
+    },
+    {
+      "date": "2026-05-26",
+      "opponent": "VCT",
+      "matchId": "fff346fc-1201-45fb-8e13-977e08dce903"
+    },
+    {
+      "date": "2026-05-25",
+      "opponent": "VCT",
+      "matchId": "a66e1695-0e05-4f0c-9b28-771649abe678"
+    },
+    {
+      "date": "2026-05-19",
+      "opponent": "VCT",
+      "matchId": "e719c38c-c607-48ce-a108-96d4bd6f6c83"
+    },
+    {
+      "date": "2026-05-18",
+      "opponent": "VCT",
+      "matchId": "ca617e30-d5fc-4d86-b1f4-33c2c74cdf49"
+    },
+    {
+      "date": "2026-05-14",
+      "opponent": "BJK",
+      "matchId": "2504b033-9955-4935-ba1e-f31aef5105f6"
+    },
     {
       "date": "2026-05-03",
       "opponent": "BJK",

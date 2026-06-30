@@ -50,48 +50,48 @@ const TEAMS_CONFIG = {
   enterprise: {
     filePrefix:   "ep",
     mapControl:   typeof epMapControlData !== "undefined" ? epMapControlData : {},
-    statMaps:     ["Ascent", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
-    retakeMaps:   ["Ascent", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
+    statMaps:     ["Ascent", "Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
+    retakeMaps:   ["Ascent", "Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
     playerColors: { "Lime": "#1565C0", "kozzy": "#F9A825", "Proxh": "#C62828", "iluri": "#2E7D32", "MAGNUM": "#E91E63" },
     playerOrder:  ["Lime", "kozzy", "Proxh", "iluri", "MAGNUM"],
   },
   fokus: {
     filePrefix:   "fks",
     mapControl:   typeof fksMapControlData !== "undefined" ? fksMapControlData : {},
-    statMaps:     ["Bind", "Breeze", "Fracture", "Lotus", "Pearl", "Split"],
-    retakeMaps:   ["Bind", "Breeze", "Fracture", "Lotus", "Pearl", "Split"],
+    statMaps:     ["Ascent", "Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
+    retakeMaps:   ["Ascent", "Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
     playerColors: { "MOLSI": "#e53935", "shinnok": "#f1d500", "Serial": "#00e676", "pyrolll": "#ff4dac", "pa1ze": "#1f4fd6", "cullum": "#ff7f0e" },
     playerOrder:  ["MOLSI", "shinnok", "Serial", "pyrolll", "pa1ze", "cullum"],
   },
   joblife: {
     filePrefix:   "jl",
     mapControl:   typeof jlMapControlData !== "undefined" ? jlMapControlData : {},
-    statMaps:     ["Ascent", "Breeze", "Haven", "Lotus", "Pearl", "Split"],
-    retakeMaps:   ["Ascent", "Breeze", "Haven", "Lotus", "Pearl", "Split"],
+    statMaps:     ["Ascent", "Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
+    retakeMaps:   ["Ascent", "Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
     playerColors: { "chiwa": "#1565C0", "UNFAKE": "#F9A825", "kamyk": "#C62828", "runneR": "#2E7D32", "Doma": "#E91E63" },
     playerOrder:  ["chiwa", "UNFAKE", "kamyk", "runneR", "Doma"],
   },
   mir: {
     filePrefix:   "m1r",
     mapControl:   typeof m1rMapControlData !== "undefined" ? m1rMapControlData : {},
-    statMaps:     ["Bind", "Breeze", "Fracture", "Lotus", "Pearl", "Split"],
-    retakeMaps:   ["Bind", "Breeze", "Fracture", "Lotus", "Pearl", "Split"],
+    statMaps:     ["Ascent", "Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
+    retakeMaps:   ["Ascent", "Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
     playerColors: { "Bishepss": "#1565C0", "Raz": "#F9A825", "Redgar": "#C62828", "kospa1n": "#2E7D32", "reblyik": "#E91E63" },
     playerOrder:  ["Bishepss", "Raz", "Redgar", "kospa1n", "reblyik"],
   },
   nvjunior: {
     filePrefix:   "nvj",
     mapControl:   typeof nvjMapControlData !== "undefined" ? nvjMapControlData : {},
-    statMaps:     ["Bind", "Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
-    retakeMaps:   ["Bind", "Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
+    statMaps:     ["Ascent", "Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
+    retakeMaps:   ["Ascent", "Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
     playerColors: { "Avey": "#1565C0", "Darxcio": "#F9A825", "Javelin": "#C62828", "Kolosha": "#2E7D32", "k9lyos": "#E91E63" },
     playerOrder:  ["Avey", "Darxcio", "Javelin", "Kolosha", "k9lyos"],
   },
   reborn: {
     filePrefix:   "rb",
     mapControl:   typeof rbMapControlData !== "undefined" ? rbMapControlData : {},
-    statMaps:     ["Bind", "Breeze", "Haven", "Lotus", "Split"],
-    retakeMaps:   ["Bind", "Breeze", "Haven", "Lotus", "Split"],
+    statMaps:     ["Ascent", "Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
+    retakeMaps:   ["Ascent", "Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
     playerColors: { "Deadink": "#1565C0", "Kachoww": "#F9A825", "batujnax": "#C62828", "hezacoil": "#2E7D32", "reazy": "#E91E63" },
     playerOrder:  ["Deadink", "Kachoww", "batujnax", "hezacoil", "reazy"],
   },
@@ -114,16 +114,16 @@ const TEAMS_CONFIG = {
   mandatory: {
     filePrefix:   "mdr",
     mapControl:   typeof mdrMapControlData !== "undefined" ? mdrMapControlData : {},
-    statMaps:     ["Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
-    retakeMaps:   ["Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
+    statMaps:     ["Ascent", "Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
+    retakeMaps:   ["Ascent", "Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
     playerColors: { "TakaS": "#1565C0", "nataNk": "#F9A825", "K4davra": "#C62828", "sh1n": "#2E7D32", "Sevire": "#E91E63" },
     playerOrder:  ["TakaS", "nataNk", "K4davra", "sh1n", "Sevire"],
   },
   misa: {
     filePrefix:   "misa",
     mapControl:   typeof misaMapControlData !== "undefined" ? misaMapControlData : {},
-    statMaps:     ["Haven", "Lotus", "Split"],
-    retakeMaps:   ["Haven", "Lotus", "Split"],
+    statMaps:     ["Ascent", "Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
+    retakeMaps:   ["Ascent", "Breeze", "Fracture", "Haven", "Lotus", "Pearl", "Split"],
     playerColors: { "burzzy": "#1565C0", "QutionerX": "#F9A825", "Brave": "#C62828", "Elite": "#2E7D32", "pAura": "#E91E63" },
     playerOrder:  ["burzzy", "QutionerX", "Brave", "Elite", "pAura"],
   },
@@ -166,8 +166,8 @@ const TEAM_MAP_CONTROL_DATA = Object.fromEntries(
 );
 const allDefensiveRetake = {};
 const RETAKE_DATA_VERSION = "20260520a";
-const AGENTS_DATA_VERSION = "20260623a";
-const ECONOMY_DATA_VERSION = "20260623a";
+const AGENTS_DATA_VERSION = "20260630c";
+const ECONOMY_DATA_VERSION = "20260630b";
 const RETAKE_DATA_SOURCES = Object.entries(TEAMS_CONFIG).flatMap(([team, cfg]) =>
   ["ct", "t"].flatMap(side =>
     cfg.retakeMaps.map(map => ({
@@ -214,7 +214,7 @@ const calibrationOverrides = {
   "dortmund|Haven|t": []
 };
 
-const ACTIVE_TEAMS = new Set(["barcelona", "enterprise", "joblife", "cgn"]);
+const ACTIVE_TEAMS = new Set(["fokus", "mir", "nvjunior", "misa", "reborn", "enterprise", "joblife", "mandatory"]);
 const teamOrder = Object.keys(TEAMS_CONFIG).filter((key) => allVetoHistoryData[key] && ACTIVE_TEAMS.has(key));
 let activeTeam = teamOrder[0];
 let activeView = "veto";
@@ -2392,10 +2392,7 @@ async function preloadSiteStats(teamKey) {
   await Promise.all(maps.map(async (map) => {
     try {
       const resp = await fetch(`./data/${prefix}_${map.toLowerCase()}_site_stats.json`);
-      if (!resp.ok) {
-        if (TEAMS_WITH_SITE_STATS.has(teamKey)) reportDataError(`${teamKey} site-stats/${map} (HTTP ${resp.status})`);
-        return;
-      }
+      if (!resp.ok) return;
       allSiteStats[teamKey][map] = await resp.json();
     } catch (_) {
       reportDataError(`${teamKey} site-stats/${map} (network error)`);
@@ -2420,10 +2417,7 @@ async function preloadRetakeData() {
   for (const source of RETAKE_DATA_SOURCES) {
     try {
       const resp = await fetch(source.url, { cache: "no-store" });
-      if (!resp.ok) {
-        reportDataError(`${source.team} retake/${source.side}/${source.map} (HTTP ${resp.status})`);
-        continue;
-      }
+      if (!resp.ok) continue;
       const payload = await resp.json();
       allDefensiveRetake[source.team] ||= {};
       allDefensiveRetake[source.team][source.side] ||= {};

@@ -23,9 +23,177 @@
   ],
   "sites": {
     "A": {
-      "roundCount": 12,
-      "pointCount": 32,
+      "roundCount": 17,
+      "pointCount": 46,
       "points": [
+        {
+          "site": "A",
+          "player": "reblyik",
+          "normX": 52.3369,
+          "normY": 19.7714,
+          "roundNum": 2,
+          "plantRoundTimeMs": 89865,
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "matchId": "dc3d39dc-af28-4e57-b379-bd0093ff69a0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "Raz",
+          "normX": 43.6399,
+          "normY": 23.492,
+          "roundNum": 2,
+          "plantRoundTimeMs": 89865,
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "matchId": "dc3d39dc-af28-4e57-b379-bd0093ff69a0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "Bishepss",
+          "normX": 84.5899,
+          "normY": 32.1188,
+          "roundNum": 2,
+          "plantRoundTimeMs": 89865,
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "matchId": "dc3d39dc-af28-4e57-b379-bd0093ff69a0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "Redgar",
+          "normX": 80.4325,
+          "normY": 14.0306,
+          "roundNum": 2,
+          "plantRoundTimeMs": 89865,
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "matchId": "dc3d39dc-af28-4e57-b379-bd0093ff69a0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "reblyik",
+          "normX": 51.7597,
+          "normY": 14.1476,
+          "roundNum": 5,
+          "plantRoundTimeMs": 77661,
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "matchId": "dc3d39dc-af28-4e57-b379-bd0093ff69a0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "kospa1n",
+          "normX": 64.9417,
+          "normY": 55.5344,
+          "roundNum": 5,
+          "plantRoundTimeMs": 77661,
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "matchId": "dc3d39dc-af28-4e57-b379-bd0093ff69a0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "reblyik",
+          "normX": 71.4703,
+          "normY": 14.4206,
+          "roundNum": 6,
+          "plantRoundTimeMs": 35852,
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "matchId": "dc3d39dc-af28-4e57-b379-bd0093ff69a0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "Bishepss",
+          "normX": 67.8043,
+          "normY": 14.3192,
+          "roundNum": 6,
+          "plantRoundTimeMs": 35852,
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "matchId": "dc3d39dc-af28-4e57-b379-bd0093ff69a0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "Redgar",
+          "normX": 51.5803,
+          "normY": 15.6374,
+          "roundNum": 6,
+          "plantRoundTimeMs": 35852,
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "matchId": "dc3d39dc-af28-4e57-b379-bd0093ff69a0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "Bishepss",
+          "normX": 76.6183,
+          "normY": 13.3832,
+          "roundNum": 9,
+          "plantRoundTimeMs": 47855,
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "matchId": "dc3d39dc-af28-4e57-b379-bd0093ff69a0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "reblyik",
+          "normX": 53.8735,
+          "normY": 7.7594,
+          "roundNum": 11,
+          "plantRoundTimeMs": 94431,
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "matchId": "dc3d39dc-af28-4e57-b379-bd0093ff69a0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "Raz",
+          "normX": 88.4197,
+          "normY": 61.5014,
+          "roundNum": 11,
+          "plantRoundTimeMs": 94431,
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "matchId": "dc3d39dc-af28-4e57-b379-bd0093ff69a0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "Bishepss",
+          "normX": 66.2365,
+          "normY": 75.5258,
+          "roundNum": 11,
+          "plantRoundTimeMs": 94431,
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "matchId": "dc3d39dc-af28-4e57-b379-bd0093ff69a0",
+          "score": "8-13"
+        },
+        {
+          "site": "A",
+          "player": "kospa1n",
+          "normX": 63.7405,
+          "normY": 55.0196,
+          "roundNum": 11,
+          "plantRoundTimeMs": 94431,
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "matchId": "dc3d39dc-af28-4e57-b379-bd0093ff69a0",
+          "score": "8-13"
+        },
         {
           "site": "A",
           "player": "Bishepss",
@@ -413,9 +581,177 @@
       ]
     },
     "B": {
-      "roundCount": 5,
-      "pointCount": 16,
+      "roundCount": 10,
+      "pointCount": 30,
       "points": [
+        {
+          "site": "B",
+          "player": "Raz",
+          "normX": 34.4281,
+          "normY": 27.9146,
+          "roundNum": 0,
+          "plantRoundTimeMs": 45602,
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "matchId": "dc3d39dc-af28-4e57-b379-bd0093ff69a0",
+          "score": "8-13"
+        },
+        {
+          "site": "B",
+          "player": "Bishepss",
+          "normX": 37.6339,
+          "normY": 26.4014,
+          "roundNum": 0,
+          "plantRoundTimeMs": 45602,
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "matchId": "dc3d39dc-af28-4e57-b379-bd0093ff69a0",
+          "score": "8-13"
+        },
+        {
+          "site": "B",
+          "player": "Redgar",
+          "normX": 28.1803,
+          "normY": 35.6132,
+          "roundNum": 0,
+          "plantRoundTimeMs": 45602,
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "matchId": "dc3d39dc-af28-4e57-b379-bd0093ff69a0",
+          "score": "8-13"
+        },
+        {
+          "site": "B",
+          "player": "Raz",
+          "normX": 57.1885,
+          "normY": 16.4486,
+          "roundNum": 4,
+          "plantRoundTimeMs": 28713,
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "matchId": "dc3d39dc-af28-4e57-b379-bd0093ff69a0",
+          "score": "8-13"
+        },
+        {
+          "site": "B",
+          "player": "Redgar",
+          "normX": 40.5745,
+          "normY": 21.6044,
+          "roundNum": 4,
+          "plantRoundTimeMs": 28713,
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "matchId": "dc3d39dc-af28-4e57-b379-bd0093ff69a0",
+          "score": "8-13"
+        },
+        {
+          "site": "B",
+          "player": "reblyik",
+          "normX": 61.6657,
+          "normY": 16.9088,
+          "roundNum": 7,
+          "plantRoundTimeMs": 85694,
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "matchId": "dc3d39dc-af28-4e57-b379-bd0093ff69a0",
+          "score": "8-13"
+        },
+        {
+          "site": "B",
+          "player": "Bishepss",
+          "normX": 80.2843,
+          "normY": 40.4336,
+          "roundNum": 7,
+          "plantRoundTimeMs": 85694,
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "matchId": "dc3d39dc-af28-4e57-b379-bd0093ff69a0",
+          "score": "8-13"
+        },
+        {
+          "site": "B",
+          "player": "Redgar",
+          "normX": 82.6477,
+          "normY": 42.9062,
+          "roundNum": 7,
+          "plantRoundTimeMs": 85694,
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "matchId": "dc3d39dc-af28-4e57-b379-bd0093ff69a0",
+          "score": "8-13"
+        },
+        {
+          "site": "B",
+          "player": "reblyik",
+          "normX": 67.7887,
+          "normY": 50.8622,
+          "roundNum": 8,
+          "plantRoundTimeMs": 39655,
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "matchId": "dc3d39dc-af28-4e57-b379-bd0093ff69a0",
+          "score": "8-13"
+        },
+        {
+          "site": "B",
+          "player": "Raz",
+          "normX": 29.3737,
+          "normY": 37.2746,
+          "roundNum": 8,
+          "plantRoundTimeMs": 39655,
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "matchId": "dc3d39dc-af28-4e57-b379-bd0093ff69a0",
+          "score": "8-13"
+        },
+        {
+          "site": "B",
+          "player": "Bishepss",
+          "normX": 33.5155,
+          "normY": 32.3216,
+          "roundNum": 8,
+          "plantRoundTimeMs": 39655,
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "matchId": "dc3d39dc-af28-4e57-b379-bd0093ff69a0",
+          "score": "8-13"
+        },
+        {
+          "site": "B",
+          "player": "Raz",
+          "normX": 29.3893,
+          "normY": 43.4678,
+          "roundNum": 10,
+          "plantRoundTimeMs": 37251,
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "matchId": "dc3d39dc-af28-4e57-b379-bd0093ff69a0",
+          "score": "8-13"
+        },
+        {
+          "site": "B",
+          "player": "Bishepss",
+          "normX": 67.9135,
+          "normY": 13.3286,
+          "roundNum": 10,
+          "plantRoundTimeMs": 37251,
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "matchId": "dc3d39dc-af28-4e57-b379-bd0093ff69a0",
+          "score": "8-13"
+        },
+        {
+          "site": "B",
+          "player": "Redgar",
+          "normX": 45.4261,
+          "normY": 20.4266,
+          "roundNum": 10,
+          "plantRoundTimeMs": 37251,
+          "date": "2026-05-12",
+          "opponent": "TLA",
+          "matchId": "dc3d39dc-af28-4e57-b379-bd0093ff69a0",
+          "score": "8-13"
+        },
         {
           "site": "B",
           "player": "reblyik",
@@ -866,93 +1202,6 @@
           "score": "8-13"
         },
         {
-          "roundNum": 0,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 14744,
-              "players": [
-                {
-                  "player": "reblyik",
-                  "normX": 88.4899,
-                  "normY": 22.2752
-                }
-              ]
-            },
-            {
-              "timeSincePlantMs": 16981,
-              "players": [
-                {
-                  "player": "reblyik",
-                  "normX": 87.4681,
-                  "normY": 21.6746
-                }
-              ]
-            }
-          ],
-          "matchId": "d1aa667c-b922-455d-ba80-8bbc15709eac",
-          "date": "2026-04-06",
-          "opponent": "200",
-          "score": "3-13"
-        },
-        {
-          "roundNum": 6,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 18772,
-              "players": [
-                {
-                  "player": "Raz",
-                  "normX": 89.5585,
-                  "normY": 24.4436
-                },
-                {
-                  "player": "Bishepss",
-                  "normX": 56.6815,
-                  "normY": 35.7692
-                }
-              ]
-            }
-          ],
-          "matchId": "d1aa667c-b922-455d-ba80-8bbc15709eac",
-          "date": "2026-04-06",
-          "opponent": "200",
-          "score": "3-13"
-        },
-        {
-          "roundNum": 9,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 15794,
-              "players": [
-                {
-                  "player": "reblyik",
-                  "normX": 92.7565,
-                  "normY": 29.849
-                },
-                {
-                  "player": "Raz",
-                  "normX": 78.3031,
-                  "normY": 27.1892
-                }
-              ]
-            },
-            {
-              "timeSincePlantMs": 16939,
-              "players": [
-                {
-                  "player": "reblyik",
-                  "normX": 90.5569,
-                  "normY": 26.4326
-                }
-              ]
-            }
-          ],
-          "matchId": "d1aa667c-b922-455d-ba80-8bbc15709eac",
-          "date": "2026-04-06",
-          "opponent": "200",
-          "score": "3-13"
-        },
-        {
           "roundNum": 8,
           "snapshots": [
             {
@@ -1093,6 +1342,93 @@
           "date": "2026-04-21",
           "opponent": "EP",
           "score": "13-10"
+        },
+        {
+          "roundNum": 0,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 14744,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 88.4899,
+                  "normY": 22.2752
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 16981,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 87.4681,
+                  "normY": 21.6746
+                }
+              ]
+            }
+          ],
+          "matchId": "d1aa667c-b922-455d-ba80-8bbc15709eac",
+          "date": "2026-04-06",
+          "opponent": "200",
+          "score": "3-13"
+        },
+        {
+          "roundNum": 6,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 18772,
+              "players": [
+                {
+                  "player": "Raz",
+                  "normX": 89.5585,
+                  "normY": 24.4436
+                },
+                {
+                  "player": "Bishepss",
+                  "normX": 56.6815,
+                  "normY": 35.7692
+                }
+              ]
+            }
+          ],
+          "matchId": "d1aa667c-b922-455d-ba80-8bbc15709eac",
+          "date": "2026-04-06",
+          "opponent": "200",
+          "score": "3-13"
+        },
+        {
+          "roundNum": 9,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 15794,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 92.7565,
+                  "normY": 29.849
+                },
+                {
+                  "player": "Raz",
+                  "normX": 78.3031,
+                  "normY": 27.1892
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 16939,
+              "players": [
+                {
+                  "player": "reblyik",
+                  "normX": 90.5569,
+                  "normY": 26.4326
+                }
+              ]
+            }
+          ],
+          "matchId": "d1aa667c-b922-455d-ba80-8bbc15709eac",
+          "date": "2026-04-06",
+          "opponent": "200",
+          "score": "3-13"
         }
       ]
     }

@@ -1,0 +1,24 @@
+{
+  "map": "Ascent",
+  "side": "t",
+  "selectedMaps": [
+    {
+      "date": "2026-05-20",
+      "opponent": "EP",
+      "matchId": "462a864a-e83a-45a6-8672-9c446f30544b",
+      "score": "13-10"
+    }
+  ],
+  "sites": {
+    "A": {
+      "roundCount": 0,
+      "pointCount": 0,
+      "points": []
+    },
+    "B": {
+      "roundCount": 0,
+      "pointCount": 0,
+      "points": []
+    }
+  }
+}

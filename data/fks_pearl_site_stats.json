@@ -1,69 +1,84 @@
 {
   "t_side": {
-    "total_rounds": 12,
-    "rounds_won": 7,
-    "pct_rounds_won": 58.3,
-    "won_by_kills": 4,
-    "pct_won_by_kills": 33.3,
-    "won_by_explosion": 3,
-    "pct_won_by_explosion": 25.0,
-    "avg_fk_time": 31.4,
+    "total_rounds": 49,
+    "rounds_won": 32,
+    "pct_rounds_won": 65.3,
+    "won_by_kills": 19,
+    "pct_won_by_kills": 38.8,
+    "won_by_explosion": 13,
+    "pct_won_by_explosion": 26.5,
+    "avg_fk_time": 29.5,
     "sites": {
       "A": {
-        "plant_count": 5,
+        "plant_count": 20,
         "pct_plant": 50.0,
         "pct_win": 80.0,
-        "avg_plant_time": 45.8,
+        "avg_plant_time": 51.7,
         "min_plant_time": 21.8,
         "max_plant_time": 88.1,
-        "fk_to_plant_avg": 18.5,
-        "fk_to_plant_n": 5
+        "fk_to_plant_avg": 25.5,
+        "fk_to_plant_n": 18
       },
       "B": {
-        "plant_count": 5,
+        "plant_count": 20,
         "pct_plant": 50.0,
-        "pct_win": 60.0,
-        "avg_plant_time": 72.5,
-        "min_plant_time": 52.7,
+        "pct_win": 75.0,
+        "avg_plant_time": 46.0,
+        "min_plant_time": 21.7,
         "max_plant_time": 91.6,
-        "fk_to_plant_avg": 31.6,
-        "fk_to_plant_n": 5
+        "fk_to_plant_avg": 20.0,
+        "fk_to_plant_n": 18
       }
     }
   },
   "ct_side": {
-    "total_rounds": 7,
-    "rounds_won": 6,
-    "pct_rounds_won": 85.7,
-    "won_by_kills": 2,
-    "pct_won_by_kills": 28.6,
-    "won_by_defuse": 4,
-    "pct_won_by_defuse": 57.1,
-    "avg_fk_time": 26.9,
+    "total_rounds": 39,
+    "rounds_won": 19,
+    "pct_rounds_won": 48.7,
+    "won_by_kills": 8,
+    "pct_won_by_kills": 20.5,
+    "won_by_defuse": 11,
+    "pct_won_by_defuse": 28.2,
+    "avg_fk_time": 34.8,
     "sites": {
       "A": {
-        "plant_count": 1,
-        "defuse_count": 0,
-        "pct_defuse_win": 0.0,
-        "pct_defuse_share": 0.0,
-        "avg_defuse_time": null,
-        "fk_after_plant_avg": 21.4,
-        "fk_after_plant_n": 1
+        "plant_count": 9,
+        "defuse_count": 3,
+        "pct_defuse_win": 33.3,
+        "pct_defuse_share": 27.3,
+        "avg_defuse_time": 30.4,
+        "fk_after_plant_avg": 10.6,
+        "fk_after_plant_n": 6
       },
       "B": {
-        "plant_count": 4,
-        "defuse_count": 4,
-        "pct_defuse_win": 100.0,
-        "pct_defuse_share": 100.0,
-        "avg_defuse_time": 28.2,
-        "fk_after_plant_avg": 8.3,
-        "fk_after_plant_n": 4
+        "plant_count": 20,
+        "defuse_count": 8,
+        "pct_defuse_win": 40.0,
+        "pct_defuse_share": 72.7,
+        "avg_defuse_time": 30.7,
+        "fk_after_plant_avg": 11.9,
+        "fk_after_plant_n": 17
       }
     }
   },
   "team": "FOKUS",
   "map": "Pearl",
   "matches": [
+    {
+      "date": "2026-06-29",
+      "opponent": "VCT",
+      "matchId": "250c9288-ae28-43a2-8ce5-6a6e8da77a67"
+    },
+    {
+      "date": "2026-06-25",
+      "opponent": "VCT",
+      "matchId": "03945e2e-2a83-4dcc-9f1c-84071b54db7b"
+    },
+    {
+      "date": "2026-06-23",
+      "opponent": "VCT",
+      "matchId": "1e1cb8f1-272e-494a-8736-f0776ede3a5a"
+    },
     {
       "date": "2026-05-09",
       "opponent": "SGE",

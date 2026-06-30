@@ -1,0 +1,895 @@
+{
+  "team": "Misa Esports",
+  "Breeze": [
+    {
+      "agents": [
+        "Neon",
+        "KAY/O",
+        "Sova",
+        "Astra",
+        "Viper"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "601dbbe7-43ce-be57-2a40-4abd24953621",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-04-25",
+          "opponent": "GS",
+          "matchId": "0023381c-9df9-45ed-b780-28a6161d06bb",
+          "players": [
+            "MISA QutionerX",
+            "MISA Brave",
+            "MISA pAura",
+            "MISA Elite",
+            "MISA burzzy"
+          ]
+        },
+        {
+          "date": "2026-04-04",
+          "opponent": "SCAR",
+          "matchId": "ca35a32f-70bc-4c92-8c4f-52c22dc55ce6",
+          "players": [
+            "MISA QutionerX",
+            "MISA Brave",
+            "MISA pAura",
+            "MISA Elite",
+            "MISA burzzy"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Neon",
+        "Yoru",
+        "Sova",
+        "Astra",
+        "Viper"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "7f94d92c-4234-0a36-9646-3a87eb8b5c89",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-03-08",
+          "opponent": "S2G",
+          "matchId": "5bdb43aa-e42e-4c6b-82c6-af33bf93046e",
+          "players": [
+            "MISA Brave",
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA Elite",
+            "MISA burzzy"
+          ]
+        },
+        {
+          "date": "2026-02-28",
+          "opponent": "S2G",
+          "matchId": "4dbc0f77-61f8-417c-8561-1f6dd34d0333",
+          "players": [
+            "MISA Brave",
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA Elite",
+            "MISA burzzy"
+          ]
+        }
+      ]
+    }
+  ],
+  "Haven": [
+    {
+      "agents": [
+        "Neon",
+        "Breach",
+        "Sova",
+        "Omen",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "5f8d3a7f-467b-97f3-062c-13acf203c006",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-05-03",
+          "opponent": "FA",
+          "matchId": "2de96425-189e-4552-a1ad-d2317136f9c1",
+          "players": [
+            "MISA QutionerX",
+            "MISA Brave",
+            "MISA pAura",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-04-28",
+          "opponent": "FF",
+          "matchId": "1f141797-b706-495d-a1fa-cb2cf66b21e4",
+          "players": [
+            "MISA QutionerX",
+            "MISA Brave",
+            "MISA pAura",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-04-27",
+          "opponent": "RB",
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "players": [
+            "MISA QutionerX",
+            "MISA Brave",
+            "MISA pAura",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-04-12",
+          "opponent": "BW",
+          "matchId": "ba1fb467-8299-49fc-899d-54213332ba95",
+          "players": [
+            "MISA QutionerX",
+            "MISA Brave",
+            "MISA pAura",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-04-04",
+          "opponent": "SCAR",
+          "matchId": "827b7844-7dde-411c-bfd8-d0ec79ea169a",
+          "players": [
+            "MISA QutionerX",
+            "MISA Brave",
+            "MISA pAura",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Neon",
+        "Yoru",
+        "Sova",
+        "Omen",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "7f94d92c-4234-0a36-9646-3a87eb8b5c89",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-03-26",
+          "opponent": "EP",
+          "matchId": "318a8b6e-36d6-4ba2-8024-bf8675973a65",
+          "players": [
+            "MISA Brave",
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-03-19",
+          "opponent": "SGE",
+          "matchId": "1c4f285c-f4e1-411a-94ae-48bdd9a50167",
+          "players": [
+            "MISA Brave",
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-03-08",
+          "opponent": "S2G",
+          "matchId": "46d247f5-f9e1-47e1-a319-c6650a757a1e",
+          "players": [
+            "MISA Brave",
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-02-01",
+          "opponent": "BW",
+          "matchId": "d1e2458c-3e8f-4dd2-a973-f13e2bebd0a7",
+          "players": [
+            "MISA Brave",
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-01-26",
+          "opponent": "S2G",
+          "matchId": "0bf17bae-fa0c-4ef2-96c3-e8450289bf22",
+          "players": [
+            "MISA Brave",
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-01-24",
+          "opponent": "FA",
+          "matchId": "8f731214-8702-49f2-ac84-5a8a018dbf2a",
+          "players": [
+            "MISA Brave",
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-01-19",
+          "opponent": "GS",
+          "matchId": "9c1599d5-6df5-4298-9ea8-2680d1301c3d",
+          "players": [
+            "MISA Brave",
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-01-17",
+          "opponent": "EF",
+          "matchId": "8d586f69-945c-43dc-a984-4296e18a4062",
+          "players": [
+            "MISA Brave",
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        }
+      ]
+    }
+  ],
+  "Pearl": [
+    {
+      "agents": [
+        "Waylay",
+        "KAY/O",
+        "Tejo",
+        "Astra",
+        "Killjoy"
+      ],
+      "agent_ids": [
+        "df1cb487-4902-002e-5c17-d28e83e78588",
+        "601dbbe7-43ce-be57-2a40-4abd24953621",
+        "b444168c-4e35-8076-db47-ef9bf368f384",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "1e58de9c-4950-5125-93e9-a0aee9f98746"
+      ],
+      "games": [
+        {
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "players": [
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA Brave",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-04-06",
+          "opponent": "EFP",
+          "matchId": "a8321be8-389a-47a8-823f-218c67895137",
+          "players": [
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA Brave",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-03-20",
+          "opponent": "TL",
+          "matchId": "5cadffcf-1f28-4e7e-9eaf-ed57375868b4",
+          "players": [
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA Brave",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-03-08",
+          "opponent": "S2G",
+          "matchId": "0d8633cc-9e8c-4a20-bea1-dd07d5a365da",
+          "players": [
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA Brave",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Yoru",
+        "Fade",
+        "Tejo",
+        "Astra",
+        "Cypher"
+      ],
+      "agent_ids": [
+        "7f94d92c-4234-0a36-9646-3a87eb8b5c89",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "b444168c-4e35-8076-db47-ef9bf368f384",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "117ed9e3-49f3-6512-3ccf-0cada7e3823b"
+      ],
+      "games": [
+        {
+          "date": "2026-02-07",
+          "opponent": "BJK",
+          "matchId": "da4c1a9e-6c86-480d-8340-f22bddc50924",
+          "players": [
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA Brave",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-01-26",
+          "opponent": "S2G",
+          "matchId": "883332c5-0d34-4cf9-a8df-21c064ffe853",
+          "players": [
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA Brave",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        }
+      ]
+    }
+  ],
+  "Split": [
+    {
+      "agents": [
+        "Waylay",
+        "Breach",
+        "Fade",
+        "Omen",
+        "Viper"
+      ],
+      "agent_ids": [
+        "df1cb487-4902-002e-5c17-d28e83e78588",
+        "5f8d3a7f-467b-97f3-062c-13acf203c006",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "d2a95c2f-139a-4401-8695-f2679b61f534",
+          "players": [
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA Brave",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-04-27",
+          "opponent": "RB",
+          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
+          "players": [
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA Brave",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-04-19",
+          "opponent": "BJK",
+          "matchId": "4ffed079-3f65-4fd1-a224-1bfa44c60f92",
+          "players": [
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA Brave",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-04-12",
+          "opponent": "BW",
+          "matchId": "ba634a67-5528-4347-b9e3-c80911f88da2",
+          "players": [
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA Brave",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-04-06",
+          "opponent": "EFP",
+          "matchId": "13e61144-bea6-4b94-9c8e-10ae48302720",
+          "players": [
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA Brave",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-03-26",
+          "opponent": "EP",
+          "matchId": "5d62d424-a04c-49c0-8620-9aff76e2f156",
+          "players": [
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA Brave",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-03-20",
+          "opponent": "TL",
+          "matchId": "ea6e413d-f95f-404d-a8f6-7da51c5befdf",
+          "players": [
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA Brave",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-03-19",
+          "opponent": "SGE",
+          "matchId": "0cafb898-666e-4980-a856-61772ca83ff4",
+          "players": [
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA Brave",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-03-08",
+          "opponent": "S2G",
+          "matchId": "6e60bc55-1ccd-4a49-990d-3d480a028ab3",
+          "players": [
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA Brave",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-03-01",
+          "opponent": "BJK",
+          "matchId": "90bca547-451a-492a-b390-faf1df7bec0e",
+          "players": [
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA Brave",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-02-28",
+          "opponent": "S2G",
+          "matchId": "f417419e-9803-485d-9e36-364f26debf15",
+          "players": [
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA Brave",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-01-19",
+          "opponent": "GS",
+          "matchId": "1b885050-618c-48d8-9621-1a0f0260a8a8",
+          "players": [
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA Brave",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-01-11",
+          "opponent": "FF",
+          "matchId": "94952dc8-2269-4cd3-9164-953007d5586e",
+          "players": [
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA Brave",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        }
+      ]
+    }
+  ],
+  "Abyss": [
+    {
+      "agents": [
+        "Waylay",
+        "KAY/O",
+        "Sova",
+        "Astra",
+        "Omen"
+      ],
+      "agent_ids": [
+        "df1cb487-4902-002e-5c17-d28e83e78588",
+        "601dbbe7-43ce-be57-2a40-4abd24953621",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+        "8e253930-4c05-31dd-1b6c-968525494517"
+      ],
+      "games": [
+        {
+          "date": "2026-03-26",
+          "opponent": "EP",
+          "matchId": "7bcd576f-0fe8-4777-af6b-c781cf832861",
+          "players": [
+            "MISA QutionerX",
+            "MISA Brave",
+            "MISA pAura",
+            "MISA Elite",
+            "MISA burzzy"
+          ]
+        },
+        {
+          "date": "2026-03-01",
+          "opponent": "BJK",
+          "matchId": "6e6ceaea-9299-498e-9836-04bbc5b4fb3d",
+          "players": [
+            "MISA QutionerX",
+            "MISA Brave",
+            "MISA pAura",
+            "MISA Elite",
+            "MISA burzzy"
+          ]
+        },
+        {
+          "date": "2026-01-17",
+          "opponent": "EF",
+          "matchId": "e1707685-d2c7-4da0-b8f2-57a3670043aa",
+          "players": [
+            "MISA QutionerX",
+            "MISA Brave",
+            "MISA pAura",
+            "MISA Elite",
+            "MISA burzzy"
+          ]
+        },
+        {
+          "date": "2026-01-11",
+          "opponent": "FF",
+          "matchId": "5e9b00b5-dd16-4032-bfde-959284bc4a2a",
+          "players": [
+            "MISA QutionerX",
+            "MISA Brave",
+            "MISA pAura",
+            "MISA Elite",
+            "MISA burzzy"
+          ]
+        }
+      ]
+    }
+  ],
+  "Corrode": [
+    {
+      "agents": [
+        "Waylay",
+        "Fade",
+        "KAY/O",
+        "Omen",
+        "Viper"
+      ],
+      "agent_ids": [
+        "df1cb487-4902-002e-5c17-d28e83e78588",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "601dbbe7-43ce-be57-2a40-4abd24953621",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-02-07",
+          "opponent": "BJK",
+          "matchId": "746aec80-4a0b-4877-ab59-2fcb13285b71",
+          "players": [
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA Brave",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-02-01",
+          "opponent": "BW",
+          "matchId": "e3790909-9a78-4a8a-b225-2a92cd5cc3b7",
+          "players": [
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA Brave",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-01-19",
+          "opponent": "GS",
+          "matchId": "f5011adf-7ff4-4b50-8b9b-a55138928806",
+          "players": [
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA Brave",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-01-11",
+          "opponent": "FF",
+          "matchId": "b0feeb4e-eccb-4356-8f50-9fbe7798bb2a",
+          "players": [
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA Brave",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        }
+      ]
+    }
+  ],
+  "Bind": [
+    {
+      "agents": [
+        "Waylay",
+        "Skye",
+        "Tejo",
+        "Brimstone",
+        "Viper"
+      ],
+      "agent_ids": [
+        "df1cb487-4902-002e-5c17-d28e83e78588",
+        "6f2a04ca-43e0-be17-7f36-b3908627744d",
+        "b444168c-4e35-8076-db47-ef9bf368f384",
+        "9f0d8ba9-4140-b941-57d3-a7ad57c6b417",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "fa12a604-7a7c-4249-9a3f-9959428233c2",
+          "players": [
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA Brave",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Raze",
+        "Breach",
+        "Tejo",
+        "Brimstone",
+        "Viper"
+      ],
+      "agent_ids": [
+        "f94c3b30-42be-e959-889c-5aa313dba261",
+        "5f8d3a7f-467b-97f3-062c-13acf203c006",
+        "b444168c-4e35-8076-db47-ef9bf368f384",
+        "9f0d8ba9-4140-b941-57d3-a7ad57c6b417",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-01-24",
+          "opponent": "FA",
+          "matchId": "bb17e806-2281-4062-8a6d-8011c027e1c4",
+          "players": [
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA Brave",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        }
+      ]
+    }
+  ],
+  "Lotus": [
+    {
+      "agents": [
+        "Neon",
+        "Phoenix",
+        "Fade",
+        "Omen",
+        "Viper"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "eb93336a-449b-9c1b-0a54-a891f7921d69",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "b3b7a21d-26b5-4453-9e8b-9497ef446c4c",
+          "players": [
+            "MISA Brave",
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-05-03",
+          "opponent": "FA",
+          "matchId": "7f48e509-536f-4be7-9ab5-f4eaeda859f0",
+          "players": [
+            "MISA Brave",
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-04-28",
+          "opponent": "FF",
+          "matchId": "a18c96ed-9157-4e39-88a1-948dbc61ff6a",
+          "players": [
+            "MISA Brave",
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        },
+        {
+          "date": "2026-04-25",
+          "opponent": "GS",
+          "matchId": "ae2a1cb1-6865-49a5-9c1e-fa407f292ba8",
+          "players": [
+            "MISA Brave",
+            "MISA QutionerX",
+            "MISA pAura",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Neon",
+        "Breach",
+        "Fade",
+        "Omen",
+        "Viper"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "5f8d3a7f-467b-97f3-062c-13acf203c006",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-04-19",
+          "opponent": "BJK",
+          "matchId": "6c80211a-0529-4a3e-abd5-c77b5f4f7d6f",
+          "players": [
+            "MISA QutionerX",
+            "MISA Brave",
+            "MISA pAura",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Waylay",
+        "Breach",
+        "Fade",
+        "Omen",
+        "Viper"
+      ],
+      "agent_ids": [
+        "df1cb487-4902-002e-5c17-d28e83e78588",
+        "5f8d3a7f-467b-97f3-062c-13acf203c006",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "8e253930-4c05-31dd-1b6c-968525494517",
+        "707eab51-4836-f488-046a-cda6bf494859"
+      ],
+      "games": [
+        {
+          "date": "2026-04-06",
+          "opponent": "EFP",
+          "matchId": "d58436c3-3fed-4832-8bd9-00db094adb6e",
+          "players": [
+            "MISA QutionerX",
+            "MISA Brave",
+            "MISA pAura",
+            "MISA burzzy",
+            "MISA Elite"
+          ]
+        }
+      ]
+    }
+  ]
+}

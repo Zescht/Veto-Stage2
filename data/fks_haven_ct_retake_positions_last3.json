@@ -1,0 +1,42 @@
+{
+  "map": "Haven",
+  "side": "ct",
+  "selectedMaps": [
+    {
+      "date": "2026-06-29",
+      "opponent": "UCAM",
+      "matchId": "811b8c55-e072-47fe-867d-15444b87453d",
+      "score": "13-5"
+    },
+    {
+      "date": "2026-06-25",
+      "opponent": "PXL",
+      "matchId": "ad86550a-022c-468d-8078-f7cfe2bb8d7f",
+      "score": "7-13"
+    },
+    {
+      "date": "2026-05-20",
+      "opponent": "EP",
+      "matchId": "64c11bb3-47bd-4ac3-b06e-1e1f80c122d1",
+      "score": "13-11"
+    }
+  ],
+  "sites": {
+    "A": {
+      "roundCount": 0,
+      "pointCount": 0,
+      "points": []
+    },
+    "B": {
+      "roundCount": 0,
+      "pointCount": 0,
+      "points": []
+    },
+    "C": {
+      "roundCount": 0,
+      "pointCount": 0,
+      "points": []
+    }
+  },
+  "postPlant10_20": {}
+}

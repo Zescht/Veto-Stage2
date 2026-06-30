@@ -6,6 +6,33 @@
         "Neon",
         "Phoenix",
         "Fade",
+        "Astra"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "eb93336a-449b-9c1b-0a54-a891f7921d69",
+        "dade69b4-4f5a-8528-247b-219e5a1facd6",
+        "41fb69c1-4189-7b37-f117-bcaf1e96f1bf"
+      ],
+      "games": [
+        {
+          "date": "2026-05-18",
+          "opponent": "BJK",
+          "matchId": "67be656c-b3a3-479e-890a-45b404c20bc3",
+          "players": [
+            "NVJ Darxcio",
+            "NVJ Kolosha",
+            "NVJ Javelin",
+            "NVJ Avey"
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "Neon",
+        "Phoenix",
+        "Fade",
         "Astra",
         "Cypher"
       ],
@@ -99,6 +126,33 @@
     }
   ],
   "Breeze": [
+    {
+      "agents": [
+        "Jett",
+        "Neon",
+        "Sova",
+        "Omen"
+      ],
+      "agent_ids": [
+        "add6443a-41bd-e414-f6ad-e58d267f4e95",
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "8e253930-4c05-31dd-1b6c-968525494517"
+      ],
+      "games": [
+        {
+          "date": "2026-05-18",
+          "opponent": "BJK",
+          "matchId": "ec8569ca-1b4e-4eae-a5fb-9ac8c8d23c6e",
+          "players": [
+            "NVJ Darxcio",
+            "NVJ Kolosha",
+            "NVJ Javelin",
+            "NVJ Avey"
+          ]
+        }
+      ]
+    },
     {
       "agents": [
         "Jett",
@@ -391,6 +445,33 @@
     }
   ],
   "Haven": [
+    {
+      "agents": [
+        "Neon",
+        "Phoenix",
+        "Sova",
+        "Omen"
+      ],
+      "agent_ids": [
+        "bb2a4828-46eb-8cd1-e765-15848195d751",
+        "eb93336a-449b-9c1b-0a54-a891f7921d69",
+        "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+        "8e253930-4c05-31dd-1b6c-968525494517"
+      ],
+      "games": [
+        {
+          "date": "2026-05-18",
+          "opponent": "BJK",
+          "matchId": "3b384039-fde0-4e0d-8dd8-b868f6c9735c",
+          "players": [
+            "NVJ Darxcio",
+            "NVJ Kolosha",
+            "NVJ Javelin",
+            "NVJ Avey"
+          ]
+        }
+      ]
+    },
     {
       "agents": [
         "Neon",

@@ -1,0 +1,73 @@
+{
+  "t_side": {
+    "total_rounds": 11,
+    "rounds_won": 7,
+    "pct_rounds_won": 63.6,
+    "won_by_kills": 7,
+    "pct_won_by_kills": 63.6,
+    "won_by_explosion": 0,
+    "pct_won_by_explosion": 0.0,
+    "avg_fk_time": 30.2,
+    "sites": {
+      "A": {
+        "plant_count": 5,
+        "pct_plant": 62.5,
+        "pct_win": 80.0,
+        "avg_plant_time": 52.1,
+        "min_plant_time": 39.9,
+        "max_plant_time": 80.6,
+        "fk_to_plant_avg": 29.0,
+        "fk_to_plant_n": 5
+      },
+      "B": {
+        "plant_count": 3,
+        "pct_plant": 37.5,
+        "pct_win": 100.0,
+        "avg_plant_time": 60.1,
+        "min_plant_time": 29.2,
+        "max_plant_time": 82.4,
+        "fk_to_plant_avg": 19.2,
+        "fk_to_plant_n": 3
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 12,
+    "rounds_won": 6,
+    "pct_rounds_won": 50.0,
+    "won_by_kills": 4,
+    "pct_won_by_kills": 33.3,
+    "won_by_defuse": 2,
+    "pct_won_by_defuse": 16.7,
+    "avg_fk_time": 26.7,
+    "sites": {
+      "A": {
+        "plant_count": 3,
+        "defuse_count": 0,
+        "pct_defuse_win": 0.0,
+        "pct_defuse_share": 0.0,
+        "avg_defuse_time": null,
+        "fk_after_plant_avg": 11.3,
+        "fk_after_plant_n": 1
+      },
+      "B": {
+        "plant_count": 5,
+        "defuse_count": 2,
+        "pct_defuse_win": 40.0,
+        "pct_defuse_share": 100.0,
+        "avg_defuse_time": 25.8,
+        "fk_after_plant_avg": 14.0,
+        "fk_after_plant_n": 2
+      }
+    }
+  },
+  "team": "FOKUS",
+  "map": "Ascent",
+  "matches": [
+    {
+      "date": "2026-05-20",
+      "opponent": "VCT",
+      "matchId": "462a864a-e83a-45a6-8672-9c446f30544b"
+    }
+  ]
+}

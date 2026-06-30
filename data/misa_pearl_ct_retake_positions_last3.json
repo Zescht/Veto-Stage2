@@ -1,0 +1,1343 @@
+{
+  "map": "Pearl",
+  "side": "ct",
+  "selectedMaps": [
+    {
+      "date": "2026-05-04",
+      "opponent": "BJK",
+      "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+      "score": "11-13"
+    },
+    {
+      "date": "2026-04-06",
+      "opponent": "EFP",
+      "matchId": "a8321be8-389a-47a8-823f-218c67895137",
+      "score": "13-8"
+    },
+    {
+      "date": "2026-03-20",
+      "opponent": "TL",
+      "matchId": "5cadffcf-1f28-4e7e-9eaf-ed57375868b4",
+      "score": "13-11"
+    }
+  ],
+  "sites": {
+    "A": {
+      "roundCount": 12,
+      "pointCount": 40,
+      "points": [
+        {
+          "site": "A",
+          "player": "burzzy",
+          "normX": 35.3563,
+          "normY": 27.9692,
+          "roundNum": 12,
+          "plantRoundTimeMs": 92770,
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "score": "11-13"
+        },
+        {
+          "site": "A",
+          "player": "QutionerX",
+          "normX": 83.4355,
+          "normY": 19.7948,
+          "roundNum": 12,
+          "plantRoundTimeMs": 92770,
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "score": "11-13"
+        },
+        {
+          "site": "A",
+          "player": "pAura",
+          "normX": 80.2999,
+          "normY": 15.6998,
+          "roundNum": 12,
+          "plantRoundTimeMs": 92770,
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "score": "11-13"
+        },
+        {
+          "site": "A",
+          "player": "Brave",
+          "normX": 49.8253,
+          "normY": 20.9336,
+          "roundNum": 12,
+          "plantRoundTimeMs": 92770,
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "score": "11-13"
+        },
+        {
+          "site": "A",
+          "player": "burzzy",
+          "normX": 92.7409,
+          "normY": 29.6852,
+          "roundNum": 14,
+          "plantRoundTimeMs": 86378,
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "score": "11-13"
+        },
+        {
+          "site": "A",
+          "player": "QutionerX",
+          "normX": 65.9869,
+          "normY": 15.8792,
+          "roundNum": 14,
+          "plantRoundTimeMs": 86378,
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "score": "11-13"
+        },
+        {
+          "site": "A",
+          "player": "pAura",
+          "normX": 74.9413,
+          "normY": 14.5532,
+          "roundNum": 14,
+          "plantRoundTimeMs": 86378,
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "score": "11-13"
+        },
+        {
+          "site": "A",
+          "player": "Elite",
+          "normX": 40.2937,
+          "normY": 24.1394,
+          "roundNum": 14,
+          "plantRoundTimeMs": 86378,
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "score": "11-13"
+        },
+        {
+          "site": "A",
+          "player": "Brave",
+          "normX": 74.2861,
+          "normY": 23.1956,
+          "roundNum": 14,
+          "plantRoundTimeMs": 86378,
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "score": "11-13"
+        },
+        {
+          "site": "A",
+          "player": "QutionerX",
+          "normX": 69.5281,
+          "normY": 18.0944,
+          "roundNum": 21,
+          "plantRoundTimeMs": 94452,
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "score": "11-13"
+        },
+        {
+          "site": "A",
+          "player": "pAura",
+          "normX": 57.0247,
+          "normY": 15.536,
+          "roundNum": 21,
+          "plantRoundTimeMs": 94452,
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "score": "11-13"
+        },
+        {
+          "site": "A",
+          "player": "Elite",
+          "normX": 49.6693,
+          "normY": 21.6278,
+          "roundNum": 21,
+          "plantRoundTimeMs": 94452,
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "score": "11-13"
+        },
+        {
+          "site": "A",
+          "player": "burzzy",
+          "normX": 89.2231,
+          "normY": 19.8728,
+          "roundNum": 22,
+          "plantRoundTimeMs": 72624,
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "score": "11-13"
+        },
+        {
+          "site": "A",
+          "player": "QutionerX",
+          "normX": 54.3805,
+          "normY": 16.7762,
+          "roundNum": 22,
+          "plantRoundTimeMs": 72624,
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "score": "11-13"
+        },
+        {
+          "site": "A",
+          "player": "pAura",
+          "normX": 83.2405,
+          "normY": 15.8402,
+          "roundNum": 22,
+          "plantRoundTimeMs": 72624,
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "score": "11-13"
+        },
+        {
+          "site": "A",
+          "player": "Elite",
+          "normX": 25.6141,
+          "normY": 36.401,
+          "roundNum": 22,
+          "plantRoundTimeMs": 72624,
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "score": "11-13"
+        },
+        {
+          "site": "A",
+          "player": "Elite",
+          "normX": 38.0785,
+          "normY": 25.208,
+          "roundNum": 6,
+          "plantRoundTimeMs": 55703,
+          "date": "2026-04-06",
+          "opponent": "EFP",
+          "matchId": "a8321be8-389a-47a8-823f-218c67895137",
+          "score": "13-8"
+        },
+        {
+          "site": "A",
+          "player": "QutionerX",
+          "normX": 89.5039,
+          "normY": 29.9348,
+          "roundNum": 6,
+          "plantRoundTimeMs": 55703,
+          "date": "2026-04-06",
+          "opponent": "EFP",
+          "matchId": "a8321be8-389a-47a8-823f-218c67895137",
+          "score": "13-8"
+        },
+        {
+          "site": "A",
+          "player": "burzzy",
+          "normX": 78.6385,
+          "normY": 31.9004,
+          "roundNum": 6,
+          "plantRoundTimeMs": 55703,
+          "date": "2026-04-06",
+          "opponent": "EFP",
+          "matchId": "a8321be8-389a-47a8-823f-218c67895137",
+          "score": "13-8"
+        },
+        {
+          "site": "A",
+          "player": "Elite",
+          "normX": 85.1047,
+          "normY": 18.773,
+          "roundNum": 7,
+          "plantRoundTimeMs": 47110,
+          "date": "2026-04-06",
+          "opponent": "EFP",
+          "matchId": "a8321be8-389a-47a8-823f-218c67895137",
+          "score": "13-8"
+        },
+        {
+          "site": "A",
+          "player": "Brave",
+          "normX": 85.5961,
+          "normY": 22.0724,
+          "roundNum": 7,
+          "plantRoundTimeMs": 47110,
+          "date": "2026-04-06",
+          "opponent": "EFP",
+          "matchId": "a8321be8-389a-47a8-823f-218c67895137",
+          "score": "13-8"
+        },
+        {
+          "site": "A",
+          "player": "QutionerX",
+          "normX": 93.0997,
+          "normY": 29.5058,
+          "roundNum": 7,
+          "plantRoundTimeMs": 47110,
+          "date": "2026-04-06",
+          "opponent": "EFP",
+          "matchId": "a8321be8-389a-47a8-823f-218c67895137",
+          "score": "13-8"
+        },
+        {
+          "site": "A",
+          "player": "burzzy",
+          "normX": 11.5351,
+          "normY": 59.6918,
+          "roundNum": 7,
+          "plantRoundTimeMs": 47110,
+          "date": "2026-04-06",
+          "opponent": "EFP",
+          "matchId": "a8321be8-389a-47a8-823f-218c67895137",
+          "score": "13-8"
+        },
+        {
+          "site": "A",
+          "player": "Elite",
+          "normX": 83.3419,
+          "normY": 29.6462,
+          "roundNum": 8,
+          "plantRoundTimeMs": 56398,
+          "date": "2026-04-06",
+          "opponent": "EFP",
+          "matchId": "a8321be8-389a-47a8-823f-218c67895137",
+          "score": "13-8"
+        },
+        {
+          "site": "A",
+          "player": "QutionerX",
+          "normX": 76.2907,
+          "normY": 25.6994,
+          "roundNum": 8,
+          "plantRoundTimeMs": 56398,
+          "date": "2026-04-06",
+          "opponent": "EFP",
+          "matchId": "a8321be8-389a-47a8-823f-218c67895137",
+          "score": "13-8"
+        },
+        {
+          "site": "A",
+          "player": "Elite",
+          "normX": 73.9429,
+          "normY": 18.149,
+          "roundNum": 10,
+          "plantRoundTimeMs": 62455,
+          "date": "2026-04-06",
+          "opponent": "EFP",
+          "matchId": "a8321be8-389a-47a8-823f-218c67895137",
+          "score": "13-8"
+        },
+        {
+          "site": "A",
+          "player": "pAura",
+          "normX": 86.9065,
+          "normY": 24.779,
+          "roundNum": 5,
+          "plantRoundTimeMs": 77034,
+          "date": "2026-03-20",
+          "opponent": "TL",
+          "matchId": "5cadffcf-1f28-4e7e-9eaf-ed57375868b4",
+          "score": "13-11"
+        },
+        {
+          "site": "A",
+          "player": "QutionerX",
+          "normX": 71.5483,
+          "normY": 13.2896,
+          "roundNum": 5,
+          "plantRoundTimeMs": 77034,
+          "date": "2026-03-20",
+          "opponent": "TL",
+          "matchId": "5cadffcf-1f28-4e7e-9eaf-ed57375868b4",
+          "score": "13-11"
+        },
+        {
+          "site": "A",
+          "player": "Brave",
+          "normX": 92.9047,
+          "normY": 30.8864,
+          "roundNum": 5,
+          "plantRoundTimeMs": 77034,
+          "date": "2026-03-20",
+          "opponent": "TL",
+          "matchId": "5cadffcf-1f28-4e7e-9eaf-ed57375868b4",
+          "score": "13-11"
+        },
+        {
+          "site": "A",
+          "player": "Elite",
+          "normX": 92.9281,
+          "normY": 24.1004,
+          "roundNum": 5,
+          "plantRoundTimeMs": 77034,
+          "date": "2026-03-20",
+          "opponent": "TL",
+          "matchId": "5cadffcf-1f28-4e7e-9eaf-ed57375868b4",
+          "score": "13-11"
+        },
+        {
+          "site": "A",
+          "player": "pAura",
+          "normX": 62.2741,
+          "normY": 11.2694,
+          "roundNum": 6,
+          "plantRoundTimeMs": 46761,
+          "date": "2026-03-20",
+          "opponent": "TL",
+          "matchId": "5cadffcf-1f28-4e7e-9eaf-ed57375868b4",
+          "score": "13-11"
+        },
+        {
+          "site": "A",
+          "player": "burzzy",
+          "normX": 83.9269,
+          "normY": 25.6838,
+          "roundNum": 6,
+          "plantRoundTimeMs": 46761,
+          "date": "2026-03-20",
+          "opponent": "TL",
+          "matchId": "5cadffcf-1f28-4e7e-9eaf-ed57375868b4",
+          "score": "13-11"
+        },
+        {
+          "site": "A",
+          "player": "QutionerX",
+          "normX": 92.8111,
+          "normY": 27.7976,
+          "roundNum": 6,
+          "plantRoundTimeMs": 46761,
+          "date": "2026-03-20",
+          "opponent": "TL",
+          "matchId": "5cadffcf-1f28-4e7e-9eaf-ed57375868b4",
+          "score": "13-11"
+        },
+        {
+          "site": "A",
+          "player": "Brave",
+          "normX": 93.1777,
+          "normY": 32.9846,
+          "roundNum": 6,
+          "plantRoundTimeMs": 46761,
+          "date": "2026-03-20",
+          "opponent": "TL",
+          "matchId": "5cadffcf-1f28-4e7e-9eaf-ed57375868b4",
+          "score": "13-11"
+        },
+        {
+          "site": "A",
+          "player": "Elite",
+          "normX": 72.2581,
+          "normY": 21.8228,
+          "roundNum": 6,
+          "plantRoundTimeMs": 46761,
+          "date": "2026-03-20",
+          "opponent": "TL",
+          "matchId": "5cadffcf-1f28-4e7e-9eaf-ed57375868b4",
+          "score": "13-11"
+        },
+        {
+          "site": "A",
+          "player": "QutionerX",
+          "normX": 70.3705,
+          "normY": 13.1336,
+          "roundNum": 8,
+          "plantRoundTimeMs": 36876,
+          "date": "2026-03-20",
+          "opponent": "TL",
+          "matchId": "5cadffcf-1f28-4e7e-9eaf-ed57375868b4",
+          "score": "13-11"
+        },
+        {
+          "site": "A",
+          "player": "Brave",
+          "normX": 84.7381,
+          "normY": 18.929,
+          "roundNum": 8,
+          "plantRoundTimeMs": 36876,
+          "date": "2026-03-20",
+          "opponent": "TL",
+          "matchId": "5cadffcf-1f28-4e7e-9eaf-ed57375868b4",
+          "score": "13-11"
+        },
+        {
+          "site": "A",
+          "player": "Elite",
+          "normX": 74.7307,
+          "normY": 15.3644,
+          "roundNum": 8,
+          "plantRoundTimeMs": 36876,
+          "date": "2026-03-20",
+          "opponent": "TL",
+          "matchId": "5cadffcf-1f28-4e7e-9eaf-ed57375868b4",
+          "score": "13-11"
+        },
+        {
+          "site": "A",
+          "player": "pAura",
+          "normX": 74.6917,
+          "normY": 15.1538,
+          "roundNum": 11,
+          "plantRoundTimeMs": 57233,
+          "date": "2026-03-20",
+          "opponent": "TL",
+          "matchId": "5cadffcf-1f28-4e7e-9eaf-ed57375868b4",
+          "score": "13-11"
+        },
+        {
+          "site": "A",
+          "player": "Elite",
+          "normX": 76.5715,
+          "normY": 27.1268,
+          "roundNum": 11,
+          "plantRoundTimeMs": 57233,
+          "date": "2026-03-20",
+          "opponent": "TL",
+          "matchId": "5cadffcf-1f28-4e7e-9eaf-ed57375868b4",
+          "score": "13-11"
+        }
+      ]
+    },
+    "B": {
+      "roundCount": 10,
+      "pointCount": 32,
+      "points": [
+        {
+          "site": "B",
+          "player": "QutionerX",
+          "normX": 78.5605,
+          "normY": 13.8278,
+          "roundNum": 13,
+          "plantRoundTimeMs": 89673,
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "score": "11-13"
+        },
+        {
+          "site": "B",
+          "player": "Elite",
+          "normX": 93.1465,
+          "normY": 29.2484,
+          "roundNum": 13,
+          "plantRoundTimeMs": 89673,
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "score": "11-13"
+        },
+        {
+          "site": "B",
+          "player": "burzzy",
+          "normX": 52.3993,
+          "normY": 18.2504,
+          "roundNum": 17,
+          "plantRoundTimeMs": 67622,
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "score": "11-13"
+        },
+        {
+          "site": "B",
+          "player": "QutionerX",
+          "normX": 83.8021,
+          "normY": 44.8016,
+          "roundNum": 17,
+          "plantRoundTimeMs": 67622,
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "score": "11-13"
+        },
+        {
+          "site": "B",
+          "player": "pAura",
+          "normX": 80.6353,
+          "normY": 31.292,
+          "roundNum": 17,
+          "plantRoundTimeMs": 67622,
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "score": "11-13"
+        },
+        {
+          "site": "B",
+          "player": "Elite",
+          "normX": 26.9323,
+          "normY": 43.655,
+          "roundNum": 17,
+          "plantRoundTimeMs": 67622,
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "score": "11-13"
+        },
+        {
+          "site": "B",
+          "player": "Brave",
+          "normX": 31.4953,
+          "normY": 24.7478,
+          "roundNum": 17,
+          "plantRoundTimeMs": 67622,
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "score": "11-13"
+        },
+        {
+          "site": "B",
+          "player": "burzzy",
+          "normX": 29.1787,
+          "normY": 31.9706,
+          "roundNum": 18,
+          "plantRoundTimeMs": 66256,
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "score": "11-13"
+        },
+        {
+          "site": "B",
+          "player": "pAura",
+          "normX": 32.6497,
+          "normY": 53.1944,
+          "roundNum": 18,
+          "plantRoundTimeMs": 66256,
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "score": "11-13"
+        },
+        {
+          "site": "B",
+          "player": "Elite",
+          "normX": 29.6077,
+          "normY": 53.0072,
+          "roundNum": 18,
+          "plantRoundTimeMs": 66256,
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "score": "11-13"
+        },
+        {
+          "site": "B",
+          "player": "Brave",
+          "normX": 33.4453,
+          "normY": 54.3644,
+          "roundNum": 18,
+          "plantRoundTimeMs": 66256,
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "score": "11-13"
+        },
+        {
+          "site": "B",
+          "player": "QutionerX",
+          "normX": 57.2899,
+          "normY": 15.107,
+          "roundNum": 19,
+          "plantRoundTimeMs": 68367,
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "score": "11-13"
+        },
+        {
+          "site": "B",
+          "player": "pAura",
+          "normX": 45.3871,
+          "normY": 27.3374,
+          "roundNum": 19,
+          "plantRoundTimeMs": 68367,
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "score": "11-13"
+        },
+        {
+          "site": "B",
+          "player": "Elite",
+          "normX": 56.7205,
+          "normY": 15.4268,
+          "roundNum": 19,
+          "plantRoundTimeMs": 68367,
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "score": "11-13"
+        },
+        {
+          "site": "B",
+          "player": "pAura",
+          "normX": 38.3203,
+          "normY": 26.4638,
+          "roundNum": 4,
+          "plantRoundTimeMs": 86864,
+          "date": "2026-04-06",
+          "opponent": "EFP",
+          "matchId": "a8321be8-389a-47a8-823f-218c67895137",
+          "score": "13-8"
+        },
+        {
+          "site": "B",
+          "player": "Elite",
+          "normX": 47.7271,
+          "normY": 21.6668,
+          "roundNum": 4,
+          "plantRoundTimeMs": 86864,
+          "date": "2026-04-06",
+          "opponent": "EFP",
+          "matchId": "a8321be8-389a-47a8-823f-218c67895137",
+          "score": "13-8"
+        },
+        {
+          "site": "B",
+          "player": "Brave",
+          "normX": 29.2333,
+          "normY": 42.1262,
+          "roundNum": 4,
+          "plantRoundTimeMs": 86864,
+          "date": "2026-04-06",
+          "opponent": "EFP",
+          "matchId": "a8321be8-389a-47a8-823f-218c67895137",
+          "score": "13-8"
+        },
+        {
+          "site": "B",
+          "player": "QutionerX",
+          "normX": 28.5703,
+          "normY": 36.0968,
+          "roundNum": 4,
+          "plantRoundTimeMs": 86864,
+          "date": "2026-04-06",
+          "opponent": "EFP",
+          "matchId": "a8321be8-389a-47a8-823f-218c67895137",
+          "score": "13-8"
+        },
+        {
+          "site": "B",
+          "player": "burzzy",
+          "normX": 32.8291,
+          "normY": 26.534,
+          "roundNum": 4,
+          "plantRoundTimeMs": 86864,
+          "date": "2026-04-06",
+          "opponent": "EFP",
+          "matchId": "a8321be8-389a-47a8-823f-218c67895137",
+          "score": "13-8"
+        },
+        {
+          "site": "B",
+          "player": "pAura",
+          "normX": 32.1817,
+          "normY": 54.6374,
+          "roundNum": 9,
+          "plantRoundTimeMs": 33069,
+          "date": "2026-04-06",
+          "opponent": "EFP",
+          "matchId": "a8321be8-389a-47a8-823f-218c67895137",
+          "score": "13-8"
+        },
+        {
+          "site": "B",
+          "player": "Brave",
+          "normX": 38.0083,
+          "normY": 53.6312,
+          "roundNum": 9,
+          "plantRoundTimeMs": 33069,
+          "date": "2026-04-06",
+          "opponent": "EFP",
+          "matchId": "a8321be8-389a-47a8-823f-218c67895137",
+          "score": "13-8"
+        },
+        {
+          "site": "B",
+          "player": "QutionerX",
+          "normX": 28.4611,
+          "normY": 34.5446,
+          "roundNum": 9,
+          "plantRoundTimeMs": 33069,
+          "date": "2026-04-06",
+          "opponent": "EFP",
+          "matchId": "a8321be8-389a-47a8-823f-218c67895137",
+          "score": "13-8"
+        },
+        {
+          "site": "B",
+          "player": "burzzy",
+          "normX": 43.8037,
+          "normY": 24.2564,
+          "roundNum": 9,
+          "plantRoundTimeMs": 33069,
+          "date": "2026-04-06",
+          "opponent": "EFP",
+          "matchId": "a8321be8-389a-47a8-823f-218c67895137",
+          "score": "13-8"
+        },
+        {
+          "site": "B",
+          "player": "pAura",
+          "normX": 35.5201,
+          "normY": 31.4714,
+          "roundNum": 0,
+          "plantRoundTimeMs": 93255,
+          "date": "2026-03-20",
+          "opponent": "TL",
+          "matchId": "5cadffcf-1f28-4e7e-9eaf-ed57375868b4",
+          "score": "13-11"
+        },
+        {
+          "site": "B",
+          "player": "QutionerX",
+          "normX": 23.2585,
+          "normY": 49.4192,
+          "roundNum": 0,
+          "plantRoundTimeMs": 93255,
+          "date": "2026-03-20",
+          "opponent": "TL",
+          "matchId": "5cadffcf-1f28-4e7e-9eaf-ed57375868b4",
+          "score": "13-11"
+        },
+        {
+          "site": "B",
+          "player": "Brave",
+          "normX": 32.1583,
+          "normY": 33.7724,
+          "roundNum": 0,
+          "plantRoundTimeMs": 93255,
+          "date": "2026-03-20",
+          "opponent": "TL",
+          "matchId": "5cadffcf-1f28-4e7e-9eaf-ed57375868b4",
+          "score": "13-11"
+        },
+        {
+          "site": "B",
+          "player": "Elite",
+          "normX": 43.0939,
+          "normY": 23.5934,
+          "roundNum": 0,
+          "plantRoundTimeMs": 93255,
+          "date": "2026-03-20",
+          "opponent": "TL",
+          "matchId": "5cadffcf-1f28-4e7e-9eaf-ed57375868b4",
+          "score": "13-11"
+        },
+        {
+          "site": "B",
+          "player": "burzzy",
+          "normX": 30.2863,
+          "normY": 36.8378,
+          "roundNum": 4,
+          "plantRoundTimeMs": 44841,
+          "date": "2026-03-20",
+          "opponent": "TL",
+          "matchId": "5cadffcf-1f28-4e7e-9eaf-ed57375868b4",
+          "score": "13-11"
+        },
+        {
+          "site": "B",
+          "player": "QutionerX",
+          "normX": 24.8419,
+          "normY": 34.9502,
+          "roundNum": 9,
+          "plantRoundTimeMs": 45650,
+          "date": "2026-03-20",
+          "opponent": "TL",
+          "matchId": "5cadffcf-1f28-4e7e-9eaf-ed57375868b4",
+          "score": "13-11"
+        },
+        {
+          "site": "B",
+          "player": "burzzy",
+          "normX": 40.8787,
+          "normY": 51.8606,
+          "roundNum": 10,
+          "plantRoundTimeMs": 84387,
+          "date": "2026-03-20",
+          "opponent": "TL",
+          "matchId": "5cadffcf-1f28-4e7e-9eaf-ed57375868b4",
+          "score": "13-11"
+        },
+        {
+          "site": "B",
+          "player": "QutionerX",
+          "normX": 15.6301,
+          "normY": 34.2794,
+          "roundNum": 10,
+          "plantRoundTimeMs": 84387,
+          "date": "2026-03-20",
+          "opponent": "TL",
+          "matchId": "5cadffcf-1f28-4e7e-9eaf-ed57375868b4",
+          "score": "13-11"
+        },
+        {
+          "site": "B",
+          "player": "Brave",
+          "normX": 18.6175,
+          "normY": 30.005,
+          "roundNum": 10,
+          "plantRoundTimeMs": 84387,
+          "date": "2026-03-20",
+          "opponent": "TL",
+          "matchId": "5cadffcf-1f28-4e7e-9eaf-ed57375868b4",
+          "score": "13-11"
+        }
+      ]
+    }
+  },
+  "postPlant10_20": {
+    "A": {
+      "rounds": [
+        {
+          "roundNum": 12,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 15932,
+              "players": [
+                {
+                  "player": "burzzy",
+                  "normX": 81.0175,
+                  "normY": 29.303
+                },
+                {
+                  "player": "QutionerX",
+                  "normX": 83.2951,
+                  "normY": 33.1796
+                },
+                {
+                  "player": "pAura",
+                  "normX": 85.4791,
+                  "normY": 41.2448
+                },
+                {
+                  "player": "Brave",
+                  "normX": 79.7071,
+                  "normY": 31.2998
+                }
+              ]
+            }
+          ],
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "score": "11-13"
+        },
+        {
+          "roundNum": 22,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 11614,
+              "players": [
+                {
+                  "player": "QutionerX",
+                  "normX": 81.9223,
+                  "normY": 19.3346
+                },
+                {
+                  "player": "Elite",
+                  "normX": 75.8149,
+                  "normY": 11.8544
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 12260,
+              "players": [
+                {
+                  "player": "QutionerX",
+                  "normX": 82.2499,
+                  "normY": 18.89
+                },
+                {
+                  "player": "Elite",
+                  "normX": 75.9319,
+                  "normY": 11.8544
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 12522,
+              "players": [
+                {
+                  "player": "QutionerX",
+                  "normX": 82.0471,
+                  "normY": 19.0382
+                }
+              ]
+            }
+          ],
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "score": "11-13"
+        },
+        {
+          "roundNum": 6,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 15440,
+              "players": [
+                {
+                  "player": "QutionerX",
+                  "normX": 92.1325,
+                  "normY": 28.7102
+                }
+              ]
+            }
+          ],
+          "matchId": "a8321be8-389a-47a8-823f-218c67895137",
+          "date": "2026-04-06",
+          "opponent": "EFP",
+          "score": "13-8"
+        },
+        {
+          "roundNum": 8,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 13487,
+              "players": [
+                {
+                  "player": "QutionerX",
+                  "normX": 79.9099,
+                  "normY": 29.8802
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 17290,
+              "players": [
+                {
+                  "player": "QutionerX",
+                  "normX": 85.2139,
+                  "normY": 27.9224
+                }
+              ]
+            }
+          ],
+          "matchId": "a8321be8-389a-47a8-823f-218c67895137",
+          "date": "2026-04-06",
+          "opponent": "EFP",
+          "score": "13-8"
+        },
+        {
+          "roundNum": 8,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 16449,
+              "players": [
+                {
+                  "player": "Brave",
+                  "normX": 88.2325,
+                  "normY": 26.1284
+                },
+                {
+                  "player": "Elite",
+                  "normX": 86.0563,
+                  "normY": 35.2466
+                }
+              ]
+            }
+          ],
+          "matchId": "5cadffcf-1f28-4e7e-9eaf-ed57375868b4",
+          "date": "2026-03-20",
+          "opponent": "TL",
+          "score": "13-11"
+        }
+      ]
+    },
+    "B": {
+      "rounds": [
+        {
+          "roundNum": 17,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 17612,
+              "players": [
+                {
+                  "player": "burzzy",
+                  "normX": 32.8681,
+                  "normY": 34.1156
+                },
+                {
+                  "player": "pAura",
+                  "normX": 35.1535,
+                  "normY": 26.6978
+                },
+                {
+                  "player": "Elite",
+                  "normX": 27.4783,
+                  "normY": 37.4072
+                },
+                {
+                  "player": "Brave",
+                  "normX": 30.0523,
+                  "normY": 24.2876
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 17765,
+              "players": [
+                {
+                  "player": "burzzy",
+                  "normX": 32.9227,
+                  "normY": 34.3262
+                },
+                {
+                  "player": "pAura",
+                  "normX": 34.7635,
+                  "normY": 27.392
+                },
+                {
+                  "player": "Elite",
+                  "normX": 27.7435,
+                  "normY": 37.8752
+                },
+                {
+                  "player": "Brave",
+                  "normX": 30.0523,
+                  "normY": 24.2876
+                }
+              ]
+            }
+          ],
+          "matchId": "44ac89b3-f627-4b69-9895-6e8b2c5e0bd1",
+          "date": "2026-05-04",
+          "opponent": "BJK",
+          "score": "11-13"
+        },
+        {
+          "roundNum": 4,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 10420,
+              "players": [
+                {
+                  "player": "pAura",
+                  "normX": 30.2473,
+                  "normY": 40.6364
+                },
+                {
+                  "player": "Elite",
+                  "normX": 26.5891,
+                  "normY": 34.217
+                },
+                {
+                  "player": "QutionerX",
+                  "normX": 13.2667,
+                  "normY": 46.3928
+                },
+                {
+                  "player": "burzzy",
+                  "normX": 27.6733,
+                  "normY": 37.3682
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 10613,
+              "players": [
+                {
+                  "player": "pAura",
+                  "normX": 30.3643,
+                  "normY": 39.8954
+                },
+                {
+                  "player": "Elite",
+                  "normX": 26.8309,
+                  "normY": 34.3262
+                },
+                {
+                  "player": "QutionerX",
+                  "normX": 13.9375,
+                  "normY": 46.424
+                },
+                {
+                  "player": "burzzy",
+                  "normX": 27.7747,
+                  "normY": 37.298
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 12232,
+              "players": [
+                {
+                  "player": "pAura",
+                  "normX": 27.8683,
+                  "normY": 40.0124
+                },
+                {
+                  "player": "Elite",
+                  "normX": 26.0431,
+                  "normY": 34.451
+                },
+                {
+                  "player": "QutionerX",
+                  "normX": 16.6597,
+                  "normY": 46.4084
+                },
+                {
+                  "player": "burzzy",
+                  "normX": 24.4441,
+                  "normY": 37.1966
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 12948,
+              "players": [
+                {
+                  "player": "pAura",
+                  "normX": 26.6047,
+                  "normY": 41.0966
+                },
+                {
+                  "player": "QutionerX",
+                  "normX": 16.9171,
+                  "normY": 44.786
+                },
+                {
+                  "player": "burzzy",
+                  "normX": 24.3973,
+                  "normY": 36.7442
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 14231,
+              "players": [
+                {
+                  "player": "pAura",
+                  "normX": 22.9465,
+                  "normY": 40.2932
+                },
+                {
+                  "player": "QutionerX",
+                  "normX": 20.0449,
+                  "normY": 44.2088
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15255,
+              "players": [
+                {
+                  "player": "pAura",
+                  "normX": 23.0557,
+                  "normY": 40.301
+                },
+                {
+                  "player": "QutionerX",
+                  "normX": 19.3273,
+                  "normY": 45.0512
+                }
+              ]
+            }
+          ],
+          "matchId": "a8321be8-389a-47a8-823f-218c67895137",
+          "date": "2026-04-06",
+          "opponent": "EFP",
+          "score": "13-8"
+        },
+        {
+          "roundNum": 9,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 18269,
+              "players": [
+                {
+                  "player": "Brave",
+                  "normX": 17.2057,
+                  "normY": 43.8734
+                },
+                {
+                  "player": "QutionerX",
+                  "normX": 16.3243,
+                  "normY": 38.2496
+                },
+                {
+                  "player": "burzzy",
+                  "normX": 27.5797,
+                  "normY": 39.3728
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 19704,
+              "players": [
+                {
+                  "player": "QutionerX",
+                  "normX": 17.7985,
+                  "normY": 37.181
+                },
+                {
+                  "player": "burzzy",
+                  "normX": 23.5393,
+                  "normY": 36.791
+                }
+              ]
+            }
+          ],
+          "matchId": "a8321be8-389a-47a8-823f-218c67895137",
+          "date": "2026-04-06",
+          "opponent": "EFP",
+          "score": "13-8"
+        },
+        {
+          "roundNum": 0,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 10342,
+              "players": [
+                {
+                  "player": "pAura",
+                  "normX": 17.0965,
+                  "normY": 46.0184
+                },
+                {
+                  "player": "QutionerX",
+                  "normX": 18.8281,
+                  "normY": 43.7018
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 14841,
+              "players": [
+                {
+                  "player": "pAura",
+                  "normX": 17.0965,
+                  "normY": 46.0184
+                },
+                {
+                  "player": "QutionerX",
+                  "normX": 13.1809,
+                  "normY": 44.7158
+                }
+              ]
+            }
+          ],
+          "matchId": "5cadffcf-1f28-4e7e-9eaf-ed57375868b4",
+          "date": "2026-03-20",
+          "opponent": "TL",
+          "score": "13-11"
+        }
+      ]
+    }
+  }
+}

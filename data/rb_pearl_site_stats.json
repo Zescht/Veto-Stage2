@@ -1,0 +1,73 @@
+{
+  "t_side": {
+    "total_rounds": 12,
+    "rounds_won": 11,
+    "pct_rounds_won": 91.7,
+    "won_by_kills": 8,
+    "pct_won_by_kills": 66.7,
+    "won_by_explosion": 3,
+    "pct_won_by_explosion": 25.0,
+    "avg_fk_time": 20.0,
+    "sites": {
+      "A": {
+        "plant_count": 8,
+        "pct_plant": 66.7,
+        "pct_win": 87.5,
+        "avg_plant_time": 47.8,
+        "min_plant_time": 23.9,
+        "max_plant_time": 79.9,
+        "fk_to_plant_avg": 26.3,
+        "fk_to_plant_n": 8
+      },
+      "B": {
+        "plant_count": 4,
+        "pct_plant": 33.3,
+        "pct_win": 100.0,
+        "avg_plant_time": 46.8,
+        "min_plant_time": 34.8,
+        "max_plant_time": 62.9,
+        "fk_to_plant_avg": 29.6,
+        "fk_to_plant_n": 4
+      }
+    }
+  },
+  "ct_side": {
+    "total_rounds": 8,
+    "rounds_won": 2,
+    "pct_rounds_won": 25.0,
+    "won_by_kills": 1,
+    "pct_won_by_kills": 12.5,
+    "won_by_defuse": 1,
+    "pct_won_by_defuse": 12.5,
+    "avg_fk_time": 55.5,
+    "sites": {
+      "A": {
+        "plant_count": 2,
+        "defuse_count": 0,
+        "pct_defuse_win": 0.0,
+        "pct_defuse_share": 0.0,
+        "avg_defuse_time": null,
+        "fk_after_plant_avg": 7.1,
+        "fk_after_plant_n": 1
+      },
+      "B": {
+        "plant_count": 5,
+        "defuse_count": 1,
+        "pct_defuse_win": 20.0,
+        "pct_defuse_share": 100.0,
+        "avg_defuse_time": 39.3,
+        "fk_after_plant_avg": 34.7,
+        "fk_after_plant_n": 2
+      }
+    }
+  },
+  "team": "REBORN",
+  "map": "Pearl",
+  "matches": [
+    {
+      "date": "2026-05-28",
+      "opponent": "VCT",
+      "matchId": "1ac6619a-f7b1-41ea-8e31-7a4234dcb7b2"
+    }
+  ]
+}

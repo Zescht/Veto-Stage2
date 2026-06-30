@@ -544,5 +544,346 @@
         }
       ]
     }
+  },
+  "postPlant10_20": {
+    "C": {
+      "rounds": [
+        {
+          "roundNum": 1,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 12536,
+              "players": [
+                {
+                  "player": "burzzy",
+                  "normX": 42.1825,
+                  "normY": 65.0378
+                },
+                {
+                  "player": "QutionerX",
+                  "normX": 22.405,
+                  "normY": 60.8378
+                },
+                {
+                  "player": "Brave",
+                  "normX": 41.1025,
+                  "normY": 65.9678
+                },
+                {
+                  "player": "Elite",
+                  "normX": 44.0875,
+                  "normY": 65.6753
+                }
+              ]
+            }
+          ],
+          "matchId": "2de96425-189e-4552-a1ad-d2317136f9c1",
+          "date": "2026-05-03",
+          "opponent": "FA",
+          "score": "13-11"
+        },
+        {
+          "roundNum": 5,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 10269,
+              "players": [
+                {
+                  "player": "burzzy",
+                  "normX": 41.9125,
+                  "normY": 75.7028
+                },
+                {
+                  "player": "QutionerX",
+                  "normX": 42.7975,
+                  "normY": 81.4103
+                },
+                {
+                  "player": "Brave",
+                  "normX": 33.3475,
+                  "normY": 80.7953
+                },
+                {
+                  "player": "Elite",
+                  "normX": 47.86,
+                  "normY": 61.9628
+                }
+              ]
+            }
+          ],
+          "matchId": "2de96425-189e-4552-a1ad-d2317136f9c1",
+          "date": "2026-05-03",
+          "opponent": "FA",
+          "score": "13-11"
+        },
+        {
+          "roundNum": 9,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 14369,
+              "players": [
+                {
+                  "player": "pAura",
+                  "normX": 29.695,
+                  "normY": 72.9803
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 14757,
+              "players": [
+                {
+                  "player": "pAura",
+                  "normX": 29.515,
+                  "normY": 73.7378
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15613,
+              "players": [
+                {
+                  "player": "pAura",
+                  "normX": 29.3875,
+                  "normY": 74.9453
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15918,
+              "players": [
+                {
+                  "player": "pAura",
+                  "normX": 29.3875,
+                  "normY": 74.9603
+                }
+              ]
+            }
+          ],
+          "matchId": "2de96425-189e-4552-a1ad-d2317136f9c1",
+          "date": "2026-05-03",
+          "opponent": "FA",
+          "score": "13-11"
+        },
+        {
+          "roundNum": 14,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 10880,
+              "players": [
+                {
+                  "player": "burzzy",
+                  "normX": 40.36,
+                  "normY": 72.9203
+                },
+                {
+                  "player": "QutionerX",
+                  "normX": 34.975,
+                  "normY": 84.9728
+                },
+                {
+                  "player": "pAura",
+                  "normX": 30.22,
+                  "normY": 70.9553
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 12871,
+              "players": [
+                {
+                  "player": "burzzy",
+                  "normX": 38.9575,
+                  "normY": 72.8378
+                },
+                {
+                  "player": "pAura",
+                  "normX": 31.045,
+                  "normY": 72.9728
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18223,
+              "players": [
+                {
+                  "player": "pAura",
+                  "normX": 36.8875,
+                  "normY": 76.3103
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 19973,
+              "players": [
+                {
+                  "player": "pAura",
+                  "normX": 38.6725,
+                  "normY": 74.3453
+                }
+              ]
+            }
+          ],
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "date": "2026-04-27",
+          "opponent": "RB",
+          "score": "6-13"
+        },
+        {
+          "roundNum": 17,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 14409,
+              "players": [
+                {
+                  "player": "burzzy",
+                  "normX": 35.6875,
+                  "normY": 68.4953
+                },
+                {
+                  "player": "Brave",
+                  "normX": 38.1175,
+                  "normY": 65.9603
+                },
+                {
+                  "player": "pAura",
+                  "normX": 24.67,
+                  "normY": 64.3628
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 16418,
+              "players": [
+                {
+                  "player": "burzzy",
+                  "normX": 31.03,
+                  "normY": 69.4403
+                },
+                {
+                  "player": "Brave",
+                  "normX": 30.76,
+                  "normY": 66.0653
+                },
+                {
+                  "player": "pAura",
+                  "normX": 26.68,
+                  "normY": 64.1303
+                }
+              ]
+            }
+          ],
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "date": "2026-04-27",
+          "opponent": "RB",
+          "score": "6-13"
+        }
+      ]
+    },
+    "A": {
+      "rounds": [
+        {
+          "roundNum": 3,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 18135,
+              "players": [
+                {
+                  "player": "Elite",
+                  "normX": 52.51,
+                  "normY": 14.6153
+                }
+              ]
+            }
+          ],
+          "matchId": "2de96425-189e-4552-a1ad-d2317136f9c1",
+          "date": "2026-05-03",
+          "opponent": "FA",
+          "score": "13-11"
+        }
+      ]
+    },
+    "B": {
+      "rounds": [
+        {
+          "roundNum": 16,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 14892,
+              "players": [
+                {
+                  "player": "QutionerX",
+                  "normX": 43.015,
+                  "normY": 51.3578
+                },
+                {
+                  "player": "pAura",
+                  "normX": 41.4175,
+                  "normY": 51.8453
+                },
+                {
+                  "player": "burzzy",
+                  "normX": 40.45,
+                  "normY": 53.4728
+                },
+                {
+                  "player": "Brave",
+                  "normX": 45.07,
+                  "normY": 52.0853
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 16960,
+              "players": [
+                {
+                  "player": "QutionerX",
+                  "normX": 43.54,
+                  "normY": 53.0603
+                },
+                {
+                  "player": "pAura",
+                  "normX": 41.4175,
+                  "normY": 51.8453
+                },
+                {
+                  "player": "burzzy",
+                  "normX": 40.5175,
+                  "normY": 53.8628
+                },
+                {
+                  "player": "Brave",
+                  "normX": 45.325,
+                  "normY": 52.1078
+                }
+              ]
+            }
+          ],
+          "matchId": "1f141797-b706-495d-a1fa-cb2cf66b21e4",
+          "date": "2026-04-28",
+          "opponent": "FF",
+          "score": "13-6"
+        },
+        {
+          "roundNum": 13,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 16183,
+              "players": [
+                {
+                  "player": "Elite",
+                  "normX": 35.26,
+                  "normY": 47.5103
+                }
+              ]
+            }
+          ],
+          "matchId": "fb6c383a-b6dc-4f93-b325-57cd5bdb8207",
+          "date": "2026-04-27",
+          "opponent": "RB",
+          "score": "6-13"
+        }
+      ]
+    }
   }
 }

@@ -3,368 +3,940 @@
   "side": "ct",
   "selectedMaps": [
     {
-      "date": "2026-05-03",
-      "opponent": "BJK",
-      "matchId": "e1f54e6b-43b4-41dd-a73c-ccfac39795d9",
-      "score": "13-5"
-    },
-    {
-      "date": "2026-04-27",
+      "date": "2026-06-24",
       "opponent": "MISA",
-      "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
-      "score": "14-12"
+      "matchId": "547344fb-d2ba-4a75-ba99-0453f1dcd92a",
+      "score": "13-8"
     },
     {
-      "date": "2026-04-19",
-      "opponent": "GS",
-      "matchId": "5276db2e-6ea4-4dbc-ae9e-159d66959ad3",
+      "date": "2026-06-22",
+      "opponent": "GLS",
+      "matchId": "03664c17-1724-4970-be9e-941d88d216a8",
       "score": "13-3"
+    },
+    {
+      "date": "2026-05-28",
+      "opponent": "NVJ",
+      "matchId": "699415a3-26e2-4d07-815c-a018dcbf10ef",
+      "score": "10-13"
     }
   ],
   "sites": {
     "A": {
-      "roundCount": 3,
-      "pointCount": 6,
+      "roundCount": 6,
+      "pointCount": 16,
       "points": [
         {
           "site": "A",
           "player": "Kachoww",
-          "normX": 21.4912,
-          "normY": 35.8746,
-          "roundNum": 12,
-          "plantRoundTimeMs": 64098,
-          "date": "2026-05-03",
-          "opponent": "BJK",
-          "matchId": "e1f54e6b-43b4-41dd-a73c-ccfac39795d9",
-          "score": "13-5"
-        },
-        {
-          "site": "A",
-          "player": "reazy",
-          "normX": 70.3192,
-          "normY": 24.549,
-          "roundNum": 12,
-          "plantRoundTimeMs": 64098,
-          "date": "2026-05-03",
-          "opponent": "BJK",
-          "matchId": "e1f54e6b-43b4-41dd-a73c-ccfac39795d9",
-          "score": "13-5"
+          "normX": 24.1042,
+          "normY": 33.6438,
+          "roundNum": 16,
+          "plantRoundTimeMs": 30563,
+          "date": "2026-06-24",
+          "opponent": "MISA",
+          "matchId": "547344fb-d2ba-4a75-ba99-0453f1dcd92a",
+          "score": "13-8"
         },
         {
           "site": "A",
           "player": "Deadink",
-          "normX": 75.2878,
-          "normY": 34.7514,
-          "roundNum": 12,
-          "plantRoundTimeMs": 64098,
-          "date": "2026-05-03",
-          "opponent": "BJK",
-          "matchId": "e1f54e6b-43b4-41dd-a73c-ccfac39795d9",
-          "score": "13-5"
+          "normX": 31.99,
+          "normY": 36.4596,
+          "roundNum": 16,
+          "plantRoundTimeMs": 30563,
+          "date": "2026-06-24",
+          "opponent": "MISA",
+          "matchId": "547344fb-d2ba-4a75-ba99-0453f1dcd92a",
+          "score": "13-8"
+        },
+        {
+          "site": "A",
+          "player": "hezacoil",
+          "normX": 25.6486,
+          "normY": 29.5332,
+          "roundNum": 19,
+          "plantRoundTimeMs": 87266,
+          "date": "2026-06-24",
+          "opponent": "MISA",
+          "matchId": "547344fb-d2ba-4a75-ba99-0453f1dcd92a",
+          "score": "13-8"
         },
         {
           "site": "A",
           "player": "reazy",
-          "normX": 32.8714,
-          "normY": 27.7704,
-          "roundNum": 14,
-          "plantRoundTimeMs": 72652,
-          "date": "2026-04-27",
+          "normX": 61.8562,
+          "normY": 22.053,
+          "roundNum": 19,
+          "plantRoundTimeMs": 87266,
+          "date": "2026-06-24",
           "opponent": "MISA",
-          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
-          "score": "14-12"
+          "matchId": "547344fb-d2ba-4a75-ba99-0453f1dcd92a",
+          "score": "13-8"
+        },
+        {
+          "site": "A",
+          "player": "Kachoww",
+          "normX": 37.45,
+          "normY": 35.508,
+          "roundNum": 4,
+          "plantRoundTimeMs": 16735,
+          "date": "2026-06-22",
+          "opponent": "GLS",
+          "matchId": "03664c17-1724-4970-be9e-941d88d216a8",
+          "score": "13-3"
+        },
+        {
+          "site": "A",
+          "player": "reazy",
+          "normX": 22.006,
+          "normY": 40.6404,
+          "roundNum": 4,
+          "plantRoundTimeMs": 16735,
+          "date": "2026-06-22",
+          "opponent": "GLS",
+          "matchId": "03664c17-1724-4970-be9e-941d88d216a8",
+          "score": "13-3"
+        },
+        {
+          "site": "A",
+          "player": "Deadink",
+          "normX": 36.4438,
+          "normY": 34.5642,
+          "roundNum": 4,
+          "plantRoundTimeMs": 16735,
+          "date": "2026-06-22",
+          "opponent": "GLS",
+          "matchId": "03664c17-1724-4970-be9e-941d88d216a8",
+          "score": "13-3"
         },
         {
           "site": "A",
           "player": "batujnax",
-          "normX": 24.2524,
-          "normY": 20.1264,
-          "roundNum": 14,
-          "plantRoundTimeMs": 72652,
-          "date": "2026-04-27",
-          "opponent": "MISA",
-          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
-          "score": "14-12"
+          "normX": 45.679,
+          "normY": 32.6532,
+          "roundNum": 4,
+          "plantRoundTimeMs": 16735,
+          "date": "2026-06-22",
+          "opponent": "GLS",
+          "matchId": "03664c17-1724-4970-be9e-941d88d216a8",
+          "score": "13-3"
+        },
+        {
+          "site": "A",
+          "player": "hezacoil",
+          "normX": 31.2412,
+          "normY": 13.0752,
+          "roundNum": 7,
+          "plantRoundTimeMs": 98425,
+          "date": "2026-06-22",
+          "opponent": "GLS",
+          "matchId": "03664c17-1724-4970-be9e-941d88d216a8",
+          "score": "13-3"
+        },
+        {
+          "site": "A",
+          "player": "hezacoil",
+          "normX": 18.0826,
+          "normY": 22.6068,
+          "roundNum": 12,
+          "plantRoundTimeMs": 56899,
+          "date": "2026-05-28",
+          "opponent": "NVJ",
+          "matchId": "699415a3-26e2-4d07-815c-a018dcbf10ef",
+          "score": "10-13"
+        },
+        {
+          "site": "A",
+          "player": "Kachoww",
+          "normX": 28.4176,
+          "normY": 23.9094,
+          "roundNum": 12,
+          "plantRoundTimeMs": 56899,
+          "date": "2026-05-28",
+          "opponent": "NVJ",
+          "matchId": "699415a3-26e2-4d07-815c-a018dcbf10ef",
+          "score": "10-13"
         },
         {
           "site": "A",
           "player": "Deadink",
-          "normX": 42.7072,
-          "normY": 67.4334,
+          "normX": 26.4052,
+          "normY": 22.8954,
+          "roundNum": 12,
+          "plantRoundTimeMs": 56899,
+          "date": "2026-05-28",
+          "opponent": "NVJ",
+          "matchId": "699415a3-26e2-4d07-815c-a018dcbf10ef",
+          "score": "10-13"
+        },
+        {
+          "site": "A",
+          "player": "batujnax",
+          "normX": 26.491,
+          "normY": 21.8892,
+          "roundNum": 12,
+          "plantRoundTimeMs": 56899,
+          "date": "2026-05-28",
+          "opponent": "NVJ",
+          "matchId": "699415a3-26e2-4d07-815c-a018dcbf10ef",
+          "score": "10-13"
+        },
+        {
+          "site": "A",
+          "player": "hezacoil",
+          "normX": 24.1042,
+          "normY": 36.912,
           "roundNum": 14,
-          "plantRoundTimeMs": 61405,
-          "date": "2026-04-19",
-          "opponent": "GS",
-          "matchId": "5276db2e-6ea4-4dbc-ae9e-159d66959ad3",
-          "score": "13-3"
+          "plantRoundTimeMs": 34849,
+          "date": "2026-05-28",
+          "opponent": "NVJ",
+          "matchId": "699415a3-26e2-4d07-815c-a018dcbf10ef",
+          "score": "10-13"
+        },
+        {
+          "site": "A",
+          "player": "Kachoww",
+          "normX": 37.0366,
+          "normY": 39.4392,
+          "roundNum": 14,
+          "plantRoundTimeMs": 34849,
+          "date": "2026-05-28",
+          "opponent": "NVJ",
+          "matchId": "699415a3-26e2-4d07-815c-a018dcbf10ef",
+          "score": "10-13"
+        },
+        {
+          "site": "A",
+          "player": "Deadink",
+          "normX": 18.3322,
+          "normY": 20.6334,
+          "roundNum": 14,
+          "plantRoundTimeMs": 34849,
+          "date": "2026-05-28",
+          "opponent": "NVJ",
+          "matchId": "699415a3-26e2-4d07-815c-a018dcbf10ef",
+          "score": "10-13"
         }
       ]
     },
     "B": {
-      "roundCount": 6,
-      "pointCount": 13,
+      "roundCount": 7,
+      "pointCount": 21,
       "points": [
         {
           "site": "B",
           "player": "hezacoil",
-          "normX": 38.1442,
-          "normY": 73.0962,
-          "roundNum": 16,
-          "plantRoundTimeMs": 37748,
-          "date": "2026-05-03",
-          "opponent": "BJK",
-          "matchId": "e1f54e6b-43b4-41dd-a73c-ccfac39795d9",
-          "score": "13-5"
-        },
-        {
-          "site": "B",
-          "player": "Deadink",
-          "normX": 23.0668,
-          "normY": 78.8292,
-          "roundNum": 16,
-          "plantRoundTimeMs": 37748,
-          "date": "2026-05-03",
-          "opponent": "BJK",
-          "matchId": "e1f54e6b-43b4-41dd-a73c-ccfac39795d9",
-          "score": "13-5"
-        },
-        {
-          "site": "B",
-          "player": "hezacoil",
-          "normX": 23.6362,
-          "normY": 70.9278,
+          "normX": 21.0934,
+          "normY": 46.5606,
           "roundNum": 12,
-          "plantRoundTimeMs": 67915,
-          "date": "2026-04-27",
+          "plantRoundTimeMs": 94487,
+          "date": "2026-06-24",
           "opponent": "MISA",
-          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
-          "score": "14-12"
+          "matchId": "547344fb-d2ba-4a75-ba99-0453f1dcd92a",
+          "score": "13-8"
         },
         {
           "site": "B",
           "player": "reazy",
-          "normX": 43.5496,
-          "normY": 87.0426,
-          "roundNum": 15,
-          "plantRoundTimeMs": 92283,
-          "date": "2026-04-27",
+          "normX": 23.7922,
+          "normY": 71.5518,
+          "roundNum": 12,
+          "plantRoundTimeMs": 94487,
+          "date": "2026-06-24",
           "opponent": "MISA",
-          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
-          "score": "14-12"
+          "matchId": "547344fb-d2ba-4a75-ba99-0453f1dcd92a",
+          "score": "13-8"
         },
         {
           "site": "B",
           "player": "Deadink",
-          "normX": 38.1442,
-          "normY": 69.7032,
-          "roundNum": 15,
-          "plantRoundTimeMs": 92283,
-          "date": "2026-04-27",
-          "opponent": "MISA",
-          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
-          "score": "14-12"
-        },
-        {
-          "site": "B",
-          "player": "batujnax",
-          "normX": 24.4708,
-          "normY": 70.6626,
-          "roundNum": 15,
-          "plantRoundTimeMs": 92283,
-          "date": "2026-04-27",
-          "opponent": "MISA",
-          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
-          "score": "14-12"
-        },
-        {
-          "site": "B",
-          "player": "reazy",
           "normX": 33.472,
-          "normY": 66.2322,
-          "roundNum": 17,
-          "plantRoundTimeMs": 32420,
-          "date": "2026-04-27",
+          "normY": 66.747,
+          "roundNum": 12,
+          "plantRoundTimeMs": 94487,
+          "date": "2026-06-24",
           "opponent": "MISA",
-          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
-          "score": "14-12"
+          "matchId": "547344fb-d2ba-4a75-ba99-0453f1dcd92a",
+          "score": "13-8"
         },
         {
           "site": "B",
           "player": "batujnax",
-          "normX": 21.07,
-          "normY": 76.5282,
-          "roundNum": 17,
-          "plantRoundTimeMs": 32420,
-          "date": "2026-04-27",
+          "normX": 33.1678,
+          "normY": 62.0592,
+          "roundNum": 12,
+          "plantRoundTimeMs": 94487,
+          "date": "2026-06-24",
           "opponent": "MISA",
-          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
-          "score": "14-12"
+          "matchId": "547344fb-d2ba-4a75-ba99-0453f1dcd92a",
+          "score": "13-8"
         },
         {
           "site": "B",
           "player": "hezacoil",
-          "normX": 31.8886,
-          "normY": 61.8486,
-          "roundNum": 18,
-          "plantRoundTimeMs": 68523,
-          "date": "2026-04-27",
+          "normX": 38.8696,
+          "normY": 69.5862,
+          "roundNum": 14,
+          "plantRoundTimeMs": 39892,
+          "date": "2026-06-24",
           "opponent": "MISA",
-          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
-          "score": "14-12"
+          "matchId": "547344fb-d2ba-4a75-ba99-0453f1dcd92a",
+          "score": "13-8"
         },
         {
           "site": "B",
-          "player": "reazy",
-          "normX": 34.408,
-          "normY": 63.9858,
-          "roundNum": 18,
-          "plantRoundTimeMs": 68523,
-          "date": "2026-04-27",
+          "player": "Deadink",
+          "normX": 48.7522,
+          "normY": 62.4102,
+          "roundNum": 14,
+          "plantRoundTimeMs": 39892,
+          "date": "2026-06-24",
           "opponent": "MISA",
-          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
-          "score": "14-12"
+          "matchId": "547344fb-d2ba-4a75-ba99-0453f1dcd92a",
+          "score": "13-8"
+        },
+        {
+          "site": "B",
+          "player": "batujnax",
+          "normX": 34.3846,
+          "normY": 63.9702,
+          "roundNum": 14,
+          "plantRoundTimeMs": 39892,
+          "date": "2026-06-24",
+          "opponent": "MISA",
+          "matchId": "547344fb-d2ba-4a75-ba99-0453f1dcd92a",
+          "score": "13-8"
+        },
+        {
+          "site": "B",
+          "player": "hezacoil",
+          "normX": 29.9464,
+          "normY": 62.3166,
+          "roundNum": 2,
+          "plantRoundTimeMs": 77613,
+          "date": "2026-06-22",
+          "opponent": "GLS",
+          "matchId": "03664c17-1724-4970-be9e-941d88d216a8",
+          "score": "13-3"
         },
         {
           "site": "B",
           "player": "Kachoww",
-          "normX": 31.8574,
-          "normY": 62.3322,
-          "roundNum": 23,
-          "plantRoundTimeMs": 66432,
-          "date": "2026-04-27",
-          "opponent": "MISA",
-          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
-          "score": "14-12"
+          "normX": 64.0402,
+          "normY": 63.5802,
+          "roundNum": 2,
+          "plantRoundTimeMs": 77613,
+          "date": "2026-06-22",
+          "opponent": "GLS",
+          "matchId": "03664c17-1724-4970-be9e-941d88d216a8",
+          "score": "13-3"
         },
         {
           "site": "B",
-          "player": "hezacoil",
-          "normX": 19.432,
-          "normY": 34.494,
-          "roundNum": 23,
-          "plantRoundTimeMs": 66432,
-          "date": "2026-04-27",
-          "opponent": "MISA",
-          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
-          "score": "14-12"
+          "player": "Deadink",
+          "normX": 28.597,
+          "normY": 61.8408,
+          "roundNum": 2,
+          "plantRoundTimeMs": 77613,
+          "date": "2026-06-22",
+          "opponent": "GLS",
+          "matchId": "03664c17-1724-4970-be9e-941d88d216a8",
+          "score": "13-3"
         },
         {
           "site": "B",
           "player": "batujnax",
-          "normX": 35.461,
-          "normY": 66.5286,
-          "roundNum": 23,
-          "plantRoundTimeMs": 66432,
-          "date": "2026-04-27",
-          "opponent": "MISA",
-          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
-          "score": "14-12"
+          "normX": 27.8716,
+          "normY": 60.2886,
+          "roundNum": 2,
+          "plantRoundTimeMs": 77613,
+          "date": "2026-06-22",
+          "opponent": "GLS",
+          "matchId": "03664c17-1724-4970-be9e-941d88d216a8",
+          "score": "13-3"
+        },
+        {
+          "site": "B",
+          "player": "hezacoil",
+          "normX": 45.328,
+          "normY": 55.3668,
+          "roundNum": 3,
+          "plantRoundTimeMs": 19533,
+          "date": "2026-06-22",
+          "opponent": "GLS",
+          "matchId": "03664c17-1724-4970-be9e-941d88d216a8",
+          "score": "13-3"
+        },
+        {
+          "site": "B",
+          "player": "Kachoww",
+          "normX": 38.152,
+          "normY": 71.115,
+          "roundNum": 3,
+          "plantRoundTimeMs": 19533,
+          "date": "2026-06-22",
+          "opponent": "GLS",
+          "matchId": "03664c17-1724-4970-be9e-941d88d216a8",
+          "score": "13-3"
+        },
+        {
+          "site": "B",
+          "player": "reazy",
+          "normX": 20.0014,
+          "normY": 72.207,
+          "roundNum": 3,
+          "plantRoundTimeMs": 19533,
+          "date": "2026-06-22",
+          "opponent": "GLS",
+          "matchId": "03664c17-1724-4970-be9e-941d88d216a8",
+          "score": "13-3"
+        },
+        {
+          "site": "B",
+          "player": "Deadink",
+          "normX": 20.9374,
+          "normY": 43.074,
+          "roundNum": 3,
+          "plantRoundTimeMs": 19533,
+          "date": "2026-06-22",
+          "opponent": "GLS",
+          "matchId": "03664c17-1724-4970-be9e-941d88d216a8",
+          "score": "13-3"
+        },
+        {
+          "site": "B",
+          "player": "batujnax",
+          "normX": 33.5812,
+          "normY": 62.6364,
+          "roundNum": 3,
+          "plantRoundTimeMs": 19533,
+          "date": "2026-06-22",
+          "opponent": "GLS",
+          "matchId": "03664c17-1724-4970-be9e-941d88d216a8",
+          "score": "13-3"
+        },
+        {
+          "site": "B",
+          "player": "hezacoil",
+          "normX": 22.7704,
+          "normY": 72.5346,
+          "roundNum": 11,
+          "plantRoundTimeMs": 58705,
+          "date": "2026-06-22",
+          "opponent": "GLS",
+          "matchId": "03664c17-1724-4970-be9e-941d88d216a8",
+          "score": "13-3"
+        },
+        {
+          "site": "B",
+          "player": "Deadink",
+          "normX": 24.9544,
+          "normY": 57.192,
+          "roundNum": 11,
+          "plantRoundTimeMs": 58705,
+          "date": "2026-06-22",
+          "opponent": "GLS",
+          "matchId": "03664c17-1724-4970-be9e-941d88d216a8",
+          "score": "13-3"
+        },
+        {
+          "site": "B",
+          "player": "batujnax",
+          "normX": 21.6238,
+          "normY": 76.068,
+          "roundNum": 13,
+          "plantRoundTimeMs": 39904,
+          "date": "2026-05-28",
+          "opponent": "NVJ",
+          "matchId": "699415a3-26e2-4d07-815c-a018dcbf10ef",
+          "score": "10-13"
+        },
+        {
+          "site": "B",
+          "player": "hezacoil",
+          "normX": 56.1154,
+          "normY": 85.5216,
+          "roundNum": 22,
+          "plantRoundTimeMs": 66286,
+          "date": "2026-05-28",
+          "opponent": "NVJ",
+          "matchId": "699415a3-26e2-4d07-815c-a018dcbf10ef",
+          "score": "10-13"
+        },
+        {
+          "site": "B",
+          "player": "Deadink",
+          "normX": 29.4004,
+          "normY": 60.8658,
+          "roundNum": 22,
+          "plantRoundTimeMs": 66286,
+          "date": "2026-05-28",
+          "opponent": "NVJ",
+          "matchId": "699415a3-26e2-4d07-815c-a018dcbf10ef",
+          "score": "10-13"
         }
       ]
     }
   },
   "postPlant10_20": {
-    "B": {
+    "A": {
       "rounds": [
-        {
-          "roundNum": 12,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 12485,
-              "players": [
-                {
-                  "player": "hezacoil",
-                  "normX": 31.2412,
-                  "normY": 88.9146
-                }
-              ]
-            }
-          ],
-          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
-          "date": "2026-04-27",
-          "opponent": "MISA",
-          "score": "14-12"
-        },
-        {
-          "roundNum": 18,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 17779,
-              "players": [
-                {
-                  "player": "hezacoil",
-                  "normX": 38.3158,
-                  "normY": 70.3428
-                },
-                {
-                  "player": "reazy",
-                  "normX": 29.3848,
-                  "normY": 87.5964
-                }
-              ]
-            }
-          ],
-          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
-          "date": "2026-04-27",
-          "opponent": "MISA",
-          "score": "14-12"
-        },
         {
           "roundNum": 16,
           "snapshots": [
             {
-              "timeSincePlantMs": 10103,
-              "players": [
-                {
-                  "player": "hezacoil",
-                  "normX": 39.3532,
-                  "normY": 76.1382
-                },
-                {
-                  "player": "Deadink",
-                  "normX": 25.8748,
-                  "normY": 80.5218
-                }
-              ]
-            }
-          ],
-          "matchId": "e1f54e6b-43b4-41dd-a73c-ccfac39795d9",
-          "date": "2026-05-03",
-          "opponent": "BJK",
-          "score": "13-5"
-        }
-      ]
-    },
-    "A": {
-      "rounds": [
-        {
-          "roundNum": 12,
-          "snapshots": [
-            {
-              "timeSincePlantMs": 16208,
+              "timeSincePlantMs": 11279,
               "players": [
                 {
                   "player": "Kachoww",
-                  "normX": 17.989,
-                  "normY": 20.3214
-                },
-                {
-                  "player": "reazy",
-                  "normX": 44.7898,
-                  "normY": 23.9718
-                },
-                {
-                  "player": "Deadink",
-                  "normX": 49.0018,
-                  "normY": 18.387
+                  "normX": 30.1492,
+                  "normY": 27.591
                 }
               ]
             }
           ],
-          "matchId": "e1f54e6b-43b4-41dd-a73c-ccfac39795d9",
-          "date": "2026-05-03",
-          "opponent": "BJK",
-          "score": "13-5"
+          "matchId": "547344fb-d2ba-4a75-ba99-0453f1dcd92a",
+          "date": "2026-06-24",
+          "opponent": "MISA",
+          "score": "13-8"
+        },
+        {
+          "roundNum": 19,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 10133,
+              "players": [
+                {
+                  "player": "hezacoil",
+                  "normX": 30.1882,
+                  "normY": 29.8842
+                },
+                {
+                  "player": "reazy",
+                  "normX": 44.0176,
+                  "normY": 20.1732
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15457,
+              "players": [
+                {
+                  "player": "hezacoil",
+                  "normX": 33.3394,
+                  "normY": 27.1152
+                },
+                {
+                  "player": "reazy",
+                  "normX": 37.5202,
+                  "normY": 15.4698
+                }
+              ]
+            }
+          ],
+          "matchId": "547344fb-d2ba-4a75-ba99-0453f1dcd92a",
+          "date": "2026-06-24",
+          "opponent": "MISA",
+          "score": "13-8"
+        },
+        {
+          "roundNum": 4,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 15671,
+              "players": [
+                {
+                  "player": "Kachoww",
+                  "normX": 37.8166,
+                  "normY": 9.5184
+                },
+                {
+                  "player": "reazy",
+                  "normX": 29.767,
+                  "normY": 28.8936
+                },
+                {
+                  "player": "Deadink",
+                  "normX": 34.6498,
+                  "normY": 17.2092
+                },
+                {
+                  "player": "batujnax",
+                  "normX": 37.6216,
+                  "normY": 15.2982
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 16918,
+              "players": [
+                {
+                  "player": "Kachoww",
+                  "normX": 38.2066,
+                  "normY": 5.8602
+                },
+                {
+                  "player": "reazy",
+                  "normX": 28.1836,
+                  "normY": 25.758
+                },
+                {
+                  "player": "Deadink",
+                  "normX": 25.5706,
+                  "normY": 6.5622
+                },
+                {
+                  "player": "batujnax",
+                  "normX": 35.188,
+                  "normY": 12.0612
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 18740,
+              "players": [
+                {
+                  "player": "Kachoww",
+                  "normX": 37.5748,
+                  "normY": 5.985
+                },
+                {
+                  "player": "reazy",
+                  "normX": 24.5332,
+                  "normY": 25.7502
+                },
+                {
+                  "player": "Deadink",
+                  "normX": 39.5326,
+                  "normY": 20.4852
+                },
+                {
+                  "player": "batujnax",
+                  "normX": 27.9496,
+                  "normY": 12.1236
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 19211,
+              "players": [
+                {
+                  "player": "Kachoww",
+                  "normX": 34.8994,
+                  "normY": 5.6106
+                },
+                {
+                  "player": "reazy",
+                  "normX": 24.1588,
+                  "normY": 25.7502
+                },
+                {
+                  "player": "Deadink",
+                  "normX": 39.5326,
+                  "normY": 20.4852
+                },
+                {
+                  "player": "batujnax",
+                  "normX": 27.8716,
+                  "normY": 11.5854
+                }
+              ]
+            }
+          ],
+          "matchId": "03664c17-1724-4970-be9e-941d88d216a8",
+          "date": "2026-06-22",
+          "opponent": "GLS",
+          "score": "13-3"
+        },
+        {
+          "roundNum": 14,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 14043,
+              "players": [
+                {
+                  "player": "hezacoil",
+                  "normX": 17.0452,
+                  "normY": 22.1076
+                },
+                {
+                  "player": "Kachoww",
+                  "normX": 28.636,
+                  "normY": 26.1402
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 14709,
+              "players": [
+                {
+                  "player": "hezacoil",
+                  "normX": 18.0904,
+                  "normY": 20.9298
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15708,
+              "players": [
+                {
+                  "player": "hezacoil",
+                  "normX": 21.0856,
+                  "normY": 21.0234
+                }
+              ]
+            }
+          ],
+          "matchId": "699415a3-26e2-4d07-815c-a018dcbf10ef",
+          "date": "2026-05-28",
+          "opponent": "NVJ",
+          "score": "10-13"
+        }
+      ]
+    },
+    "B": {
+      "rounds": [
+        {
+          "roundNum": 2,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 19868,
+              "players": [
+                {
+                  "player": "Kachoww",
+                  "normX": 51.7786,
+                  "normY": 86.8242
+                },
+                {
+                  "player": "Deadink",
+                  "normX": 39.3142,
+                  "normY": 71.9652
+                },
+                {
+                  "player": "batujnax",
+                  "normX": 45.9052,
+                  "normY": 72.6828
+                }
+              ]
+            }
+          ],
+          "matchId": "03664c17-1724-4970-be9e-941d88d216a8",
+          "date": "2026-06-22",
+          "opponent": "GLS",
+          "score": "13-3"
+        },
+        {
+          "roundNum": 3,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 13361,
+              "players": [
+                {
+                  "player": "hezacoil",
+                  "normX": 47.7226,
+                  "normY": 70.569
+                },
+                {
+                  "player": "Kachoww",
+                  "normX": 41.2564,
+                  "normY": 75.9588
+                },
+                {
+                  "player": "reazy",
+                  "normX": 24.5098,
+                  "normY": 70.179
+                },
+                {
+                  "player": "Deadink",
+                  "normX": 37.9102,
+                  "normY": 76.8402
+                },
+                {
+                  "player": "batujnax",
+                  "normX": 38.425,
+                  "normY": 70.7562
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 14271,
+              "players": [
+                {
+                  "player": "hezacoil",
+                  "normX": 46.3342,
+                  "normY": 70.5924
+                },
+                {
+                  "player": "Kachoww",
+                  "normX": 40.3204,
+                  "normY": 76.7622
+                },
+                {
+                  "player": "Deadink",
+                  "normX": 37.8244,
+                  "normY": 77.5734
+                },
+                {
+                  "player": "batujnax",
+                  "normX": 38.815,
+                  "normY": 72.8934
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 14898,
+              "players": [
+                {
+                  "player": "hezacoil",
+                  "normX": 47.3092,
+                  "normY": 70.5924
+                },
+                {
+                  "player": "Kachoww",
+                  "normX": 39.7822,
+                  "normY": 77.4096
+                },
+                {
+                  "player": "Deadink",
+                  "normX": 37.528,
+                  "normY": 80.1162
+                },
+                {
+                  "player": "batujnax",
+                  "normX": 38.1988,
+                  "normY": 73.338
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15903,
+              "players": [
+                {
+                  "player": "hezacoil",
+                  "normX": 45.796,
+                  "normY": 70.5924
+                },
+                {
+                  "player": "Kachoww",
+                  "normX": 38.8072,
+                  "normY": 79.0554
+                },
+                {
+                  "player": "Deadink",
+                  "normX": 34.876,
+                  "normY": 81.567
+                },
+                {
+                  "player": "batujnax",
+                  "normX": 36.9664,
+                  "normY": 74.7654
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 17218,
+              "players": [
+                {
+                  "player": "hezacoil",
+                  "normX": 40.882,
+                  "normY": 71.1774
+                },
+                {
+                  "player": "Kachoww",
+                  "normX": 34.525,
+                  "normY": 82.0272
+                },
+                {
+                  "player": "Deadink",
+                  "normX": 38.0818,
+                  "normY": 73.0026
+                },
+                {
+                  "player": "batujnax",
+                  "normX": 32.7778,
+                  "normY": 74.8824
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 19920,
+              "players": [
+                {
+                  "player": "hezacoil",
+                  "normX": 38.5264,
+                  "normY": 75.2256
+                },
+                {
+                  "player": "Kachoww",
+                  "normX": 30.0868,
+                  "normY": 87.183
+                },
+                {
+                  "player": "batujnax",
+                  "normX": 35.0788,
+                  "normY": 75.3192
+                }
+              ]
+            }
+          ],
+          "matchId": "03664c17-1724-4970-be9e-941d88d216a8",
+          "date": "2026-06-22",
+          "opponent": "GLS",
+          "score": "13-3"
+        },
+        {
+          "roundNum": 11,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 14215,
+              "players": [
+                {
+                  "player": "hezacoil",
+                  "normX": 29.3224,
+                  "normY": 81.3642
+                },
+                {
+                  "player": "Deadink",
+                  "normX": 45.718,
+                  "normY": 75.2022
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 17052,
+              "players": [
+                {
+                  "player": "Deadink",
+                  "normX": 44.8756,
+                  "normY": 79.7574
+                }
+              ]
+            }
+          ],
+          "matchId": "03664c17-1724-4970-be9e-941d88d216a8",
+          "date": "2026-06-22",
+          "opponent": "GLS",
+          "score": "13-3"
+        },
+        {
+          "roundNum": 22,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 10405,
+              "players": [
+                {
+                  "player": "hezacoil",
+                  "normX": 51.0142,
+                  "normY": 88.9302
+                }
+              ]
+            }
+          ],
+          "matchId": "699415a3-26e2-4d07-815c-a018dcbf10ef",
+          "date": "2026-05-28",
+          "opponent": "NVJ",
+          "score": "10-13"
         }
       ]
     }

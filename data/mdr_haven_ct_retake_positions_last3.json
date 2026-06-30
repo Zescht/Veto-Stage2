@@ -544,5 +544,216 @@
         }
       ]
     }
+  },
+  "postPlant10_20": {
+    "A": {
+      "rounds": [
+        {
+          "roundNum": 6,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 10319,
+              "players": [
+                {
+                  "player": "K4davra",
+                  "normX": 29.6575,
+                  "normY": 15.7853
+                },
+                {
+                  "player": "TakaS",
+                  "normX": 34.6825,
+                  "normY": 54.8528
+                },
+                {
+                  "player": "Sevire",
+                  "normX": 22.7575,
+                  "normY": 27.8678
+                },
+                {
+                  "player": "sh1n",
+                  "normX": 38.8825,
+                  "normY": 38.2178
+                },
+                {
+                  "player": "nataNk",
+                  "normX": 36.9175,
+                  "normY": 37.6028
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 12135,
+              "players": [
+                {
+                  "player": "K4davra",
+                  "normX": 29.89,
+                  "normY": 15.4253
+                },
+                {
+                  "player": "TakaS",
+                  "normX": 43.39,
+                  "normY": 51.0203
+                },
+                {
+                  "player": "Sevire",
+                  "normX": 23.905,
+                  "normY": 29.1128
+                },
+                {
+                  "player": "sh1n",
+                  "normX": 38.2225,
+                  "normY": 36.5903
+                },
+                {
+                  "player": "nataNk",
+                  "normX": 36.1375,
+                  "normY": 33.9278
+                }
+              ]
+            }
+          ],
+          "matchId": "6819a3cd-d017-4b80-b757-d9bd072689e5",
+          "date": "2026-05-03",
+          "opponent": "F9",
+          "score": "13-6"
+        }
+      ]
+    },
+    "B": {
+      "rounds": [
+        {
+          "roundNum": 15,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 17904,
+              "players": [
+                {
+                  "player": "TakaS",
+                  "normX": 41.125,
+                  "normY": 66.8303
+                },
+                {
+                  "player": "K4davra",
+                  "normX": 35.9725,
+                  "normY": 30.0953
+                }
+              ]
+            }
+          ],
+          "matchId": "d8a9e186-8e8b-47ef-b77a-9582d1851cf6",
+          "date": "2026-04-26",
+          "opponent": "JL",
+          "score": "13-6"
+        }
+      ]
+    },
+    "C": {
+      "rounds": [
+        {
+          "roundNum": 18,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 13301,
+              "players": [
+                {
+                  "player": "TakaS",
+                  "normX": 43.72,
+                  "normY": 63.9353
+                },
+                {
+                  "player": "sh1n",
+                  "normX": 56.815,
+                  "normY": 83.6603
+                },
+                {
+                  "player": "K4davra",
+                  "normX": 39.31,
+                  "normY": 56.5778
+                },
+                {
+                  "player": "nataNk",
+                  "normX": 26.5825,
+                  "normY": 63.9803
+                },
+                {
+                  "player": "Sevire",
+                  "normX": 62.44,
+                  "normY": 82.2353
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 14541,
+              "players": [
+                {
+                  "player": "sh1n",
+                  "normX": 56.5975,
+                  "normY": 83.1878
+                },
+                {
+                  "player": "K4davra",
+                  "normX": 37.8475,
+                  "normY": 56.9303
+                },
+                {
+                  "player": "nataNk",
+                  "normX": 27.4525,
+                  "normY": 64.3778
+                },
+                {
+                  "player": "Sevire",
+                  "normX": 61.39,
+                  "normY": 80.5778
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15074,
+              "players": [
+                {
+                  "player": "K4davra",
+                  "normX": 37.42,
+                  "normY": 58.1078
+                },
+                {
+                  "player": "nataNk",
+                  "normX": 27.58,
+                  "normY": 64.3328
+                },
+                {
+                  "player": "Sevire",
+                  "normX": 60.52,
+                  "normY": 81.0353
+                }
+              ]
+            },
+            {
+              "timeSincePlantMs": 15171,
+              "players": [
+                {
+                  "player": "K4davra",
+                  "normX": 37.39,
+                  "normY": 58.3928
+                },
+                {
+                  "player": "nataNk",
+                  "normX": 27.58,
+                  "normY": 64.3328
+                },
+                {
+                  "player": "Sevire",
+                  "normX": 60.2875,
+                  "normY": 81.1178
+                }
+              ]
+            }
+          ],
+          "matchId": "d8a9e186-8e8b-47ef-b77a-9582d1851cf6",
+          "date": "2026-04-26",
+          "opponent": "JL",
+          "score": "13-6"
+        }
+      ]
+    }
   }
 }

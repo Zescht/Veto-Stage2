@@ -334,5 +334,102 @@
         }
       ]
     }
+  },
+  "postPlant10_20": {
+    "B": {
+      "rounds": [
+        {
+          "roundNum": 0,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 19598,
+              "players": [
+                {
+                  "player": "Brave",
+                  "normX": 32.5048,
+                  "normY": 74.976
+                },
+                {
+                  "player": "pAura",
+                  "normX": 39.7744,
+                  "normY": 76.809
+                }
+              ]
+            }
+          ],
+          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
+          "date": "2026-04-27",
+          "opponent": "RB",
+          "score": "12-14"
+        },
+        {
+          "roundNum": 2,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 11209,
+              "players": [
+                {
+                  "player": "pAura",
+                  "normX": 36.5764,
+                  "normY": 66.4038
+                }
+              ]
+            }
+          ],
+          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
+          "date": "2026-04-27",
+          "opponent": "RB",
+          "score": "12-14"
+        },
+        {
+          "roundNum": 5,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 18597,
+              "players": [
+                {
+                  "player": "Brave",
+                  "normX": 38.0428,
+                  "normY": 66.2712
+                },
+                {
+                  "player": "QutionerX",
+                  "normX": 41.2798,
+                  "normY": 65.9904
+                },
+                {
+                  "player": "pAura",
+                  "normX": 22.435,
+                  "normY": 77.7216
+                }
+              ]
+            }
+          ],
+          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
+          "date": "2026-04-27",
+          "opponent": "RB",
+          "score": "12-14"
+        },
+        {
+          "roundNum": 11,
+          "snapshots": [
+            {
+              "timeSincePlantMs": 15862,
+              "players": [
+                {
+                  "player": "Brave",
+                  "normX": 44.1034,
+                  "normY": 84.8274
+                }
+              ]
+            }
+          ],
+          "matchId": "a3f5e5e6-0737-48e0-961c-801788a21bf4",
+          "date": "2026-04-27",
+          "opponent": "RB",
+          "score": "12-14"
+        }
+      ]
+    }
   }
 }
